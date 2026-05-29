@@ -1,0 +1,1525 @@
+<!-- ===== BLOQUE: Unità 1 — Gramática ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-title em { font-style: italic; color: var(--red); }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--red); font-style: italic; }
+
+  /* ===== Rule box ===== */
+  .ipp-rule {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--mc);
+    margin-bottom: 1.2rem;
+  }
+  .ipp-rule__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.08rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.85rem;
+  }
+  .ipp-rule p { margin: 0 0 0.5rem; line-height: 1.65; font-size: clamp(0.88rem, 2.2vw, 0.92rem); }
+  .ipp-rule p:last-child { margin-bottom: 0; }
+  .ipp-rule em { font-style: italic; color: var(--red); }
+  .ipp-rule strong { color: var(--mc-dk); }
+
+  .ipp-warn {
+    display: flex; gap: 0.55rem; align-items: flex-start;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: #555; line-height: 1.6;
+    padding: 0.6rem 0;
+  }
+  .ipp-warn .ph { color: #c89500; font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+  .ipp-warn strong { color: var(--mc-text); }
+
+  /* ===== Tablas ===== */
+  .ipp-table { width: 100%; border-collapse: collapse; font-size: clamp(0.86rem, 2.2vw, 0.92rem); }
+  .ipp-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.55rem 1rem; text-align: left;
+    font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-table th:first-child { border-radius: 8px 0 0 0; }
+  .ipp-table th:last-child  { border-radius: 0 8px 0 0; }
+  .ipp-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-table tr:last-child td { border-bottom: none; }
+  .ipp-table tr:nth-child(even) td { background: var(--cream); }
+  .ipp-table .it { font-style: italic; color: #555; }
+  .ipp-table .pro { font-weight: 700; color: var(--mc-dk); }
+  .ipp-table .pro em { font-size: 0.75rem; font-weight: 400; color: #888; }
+  .ipp-table .refl { color: var(--red); font-weight: 700; }
+  .ipp-table .stem { color: var(--black); }
+  .ipp-table .end  { color: var(--teal); font-weight: 700; }
+  .ipp-table .row-formal td { background: rgba(82,142,116,0.07); }
+
+  .ipp-conj-note {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #666; padding: 0.7rem 0 0;
+    line-height: 1.65;
+  }
+  .ipp-conj-note .dot {
+    display: inline-block; width: 9px; height: 9px;
+    border-radius: 50%; margin-right: 6px; vertical-align: 1px;
+  }
+  .ipp-conj-note .dot.red  { background: var(--red); }
+  .ipp-conj-note .dot.teal { background: var(--teal); }
+
+  /* ===== Alfabeto ===== */
+  .ipp-alfa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 0.5rem; margin-bottom: 0.85rem;
+  }
+  .ipp-alfa__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .ipp-alfa__cell.foreign { background: #fdf3d0; border: 1px dashed #c89500; }
+  .ipp-alfa__ltr {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--mc-dk);
+    min-width: 24px;
+  }
+  .ipp-alfa__sep { font-size: 0.7rem; color: #aaa; }
+  .ipp-alfa__cit { font-size: 0.85rem; font-weight: 500; }
+  .ipp-alfa__legend {
+    font-size: 0.8rem; color: #888;
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.45rem;
+  }
+  .ipp-alfa__legend i.swatch {
+    display: inline-block; width: 14px; height: 14px;
+    background: #fdf3d0; border: 1px dashed #c89500;
+    border-radius: 3px;
+  }
+
+  /* ===== Saludos ===== */
+  .ipp-greet {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.85rem; margin-bottom: 1rem;
+  }
+  .ipp-greet__card {
+    background: var(--cream); border-radius: var(--r);
+    padding: 1rem 1.2rem;
+  }
+  .ipp-greet__head {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin: 0 0 0.7rem;
+  }
+  .ipp-greet__head.informal { color: var(--mc); }
+  .ipp-greet__head.formal   { color: var(--teal); }
+  .ipp-greet__head.neutro   { color: #c89500; }
+  .ipp-greet__row {
+    display: flex; flex-direction: column;
+    padding: 0.38rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-greet__row:last-child { border-bottom: none; }
+  .ipp-greet__it { font-weight: 700; color: var(--black); font-size: 0.88rem; }
+  .ipp-greet__es { color: #777; font-style: italic; font-size: 0.78rem; line-height: 1.4; }
+  .ipp-greet__es em { font-size: 0.75em; color: #999; }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.5rem;
+  }
+  .ipp-nums__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.5rem; text-align: center;
+  }
+  .ipp-nums__n {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--mc-dk);
+  }
+  .ipp-nums__w { font-size: 0.78rem; color: #555; margin-top: 0.1rem; }
+
+  /* ===== Expresiones ===== */
+  .ipp-espr { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ipp-espr__item {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.8rem 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center; gap: 1rem;
+  }
+  .ipp-espr__it { font-weight: 700; font-size: 0.92rem; color: var(--mc-dk); }
+  .ipp-espr__es { font-style: italic; font-size: 0.87rem; color: #666; }
+  .ipp-espr__audio {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+    padding: 0.25rem 0.7rem; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .ipp-espr__audio:hover { background: var(--mc-bg); }
+  .ipp-espr__audio .ph { font-size: 1rem; }
+
+  /* ===== Ejercicios ===== */
+  .ipp-ex { margin-top: 1.75rem; }
+  .ipp-ex__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+  }
+  .ipp-ex__desc {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 0.8rem;
+  }
+  .ipp-ex__card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+
+  /* Fila genérica de ejercicio */
+  .ipp-row {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.91rem; line-height: 1.65;
+  }
+  .ipp-row:last-child { margin-bottom: 0; }
+  .ipp-row__num {
+    font-size: 0.75rem; color: #aaa;
+    min-width: 20px; margin-right: 0.35rem;
+  }
+  .ipp-row__pron {
+    color: var(--mc-dk); font-weight: 700;
+    margin-right: 0.4rem;
+  }
+  .ipp-row__pron em { font-size: 0.75rem; font-weight: 400; color: #888; font-style: italic; }
+  .ipp-row em { font-style: italic; }
+
+  /* Inputs */
+  .ipp-input {
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    padding: 0.22rem 0.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    background: var(--white); text-align: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-input:focus { outline: none; border-color: var(--mc); }
+  .ipp-input.sm   { width: 54px; }
+  .ipp-input.md   { min-width: 110px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.lg   { width: 100%; max-width: 320px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.ok   { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-input.err  { border-color: var(--red);   background: var(--err-bg); }
+
+  /* Botones de opción */
+  .ipp-opt {
+    padding: 0.32rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 30px; background: var(--white);
+    font-family: inherit; font-size: 0.84rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+    color: var(--black);
+  }
+  .ipp-opt:hover:not(.disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-opt.correct  { background: var(--ok-bg);  border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-opt.wrong    { background: var(--err-bg); border-color: var(--red);   color: #7a1f14; }
+  .ipp-opt.disabled { pointer-events: none; opacity: 0.6; }
+
+  /* Botón verificar */
+  .ipp-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.4rem; border: none; border-radius: 30px;
+    background: var(--mc-dk); color: var(--white);
+    font-family: inherit; font-size: 0.87rem; font-weight: 700;
+    cursor: pointer; transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc); }
+  .ipp-btn.ghost {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+  }
+  .ipp-btn.ghost:hover { background: var(--mc-bg); }
+  .ipp-btn-row {
+    display: flex; flex-wrap: wrap; gap: 0.55rem;
+    margin-top: 0.85rem;
+  }
+
+  /* Reintentar */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* Feedback */
+  .ipp-fb {
+    font-size: 0.82rem; margin-top: 0.3rem;
+    font-weight: 500; display: none;
+    line-height: 1.5;
+  }
+  .ipp-fb.ok  { color: var(--ok-tx);  display: block; }
+  .ipp-fb.err { color: var(--red);    display: block; }
+  .ipp-fb .ph { vertical-align: -2px; }
+
+  .ipp-result { margin-top: 0.75rem; font-size: 0.87rem; font-weight: 600; display: none; }
+  .ipp-result.ok  { color: var(--ok-tx); display: block; }
+  .ipp-result.err { color: var(--red);   display: block; }
+
+  /* V/F y Saludos rows */
+  .ipp-judge {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--cream); border-radius: var(--r);
+    margin-bottom: 0.5rem;
+    gap: 1rem; font-size: 0.91rem;
+    flex-wrap: wrap;
+  }
+  .ipp-judge__txt { flex: 1; line-height: 1.5; min-width: 180px; }
+  .ipp-judge__btns { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+  /* Situaciones */
+  .ipp-situ {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.65rem;
+  }
+  .ipp-situ__ctx {
+    font-size: 0.86rem; color: #555;
+    margin: 0 0 0.45rem; font-style: italic; line-height: 1.5;
+  }
+
+  /* Ordenar */
+  .ipp-orden__row {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-orden__sel {
+    padding: 0.3rem 0.4rem;
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    font-family: inherit; font-size: 0.86rem;
+    background: var(--white);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-orden__sel:focus { outline: none; border-color: var(--mc); }
+  .ipp-orden__txt { font-size: 0.91rem; font-style: italic; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg), var(--cream-dk));
+    border-top: 3px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.2rem, 3.5vw, 1.6rem) clamp(1.1rem, 3.5vw, 1.75rem);
+    margin-top: 0.5rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.05rem, 2.7vw, 1.15rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-culture p {
+    font-size: clamp(0.86rem, 2.2vw, 0.9rem);
+    line-height: 1.7; color: #555; margin: 0;
+  }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 20px; right: 20px; z-index: 9999;
+    background: var(--cream-dk); color: var(--black);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-greet { grid-template-columns: 1fr; }
+    .ipp-espr__item { grid-template-columns: 1fr 1fr; }
+    .ipp-espr__audio { grid-column: span 2; justify-self: start; }
+    .ipp-table { font-size: 0.83rem; }
+    .ipp-table th, .ipp-table td { padding: 0.5rem 0.7rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-rule { padding: 1rem 0.9rem; }
+    .ipp-ex__card { padding: 1rem 0.9rem; }
+    .ipp-row { padding: 0.7rem 0.85rem; }
+  }
+</style>
+
+<!-- ===== STOP FAB ===== -->
+<button id="ippStopFab" class="ipp-stop-fab" onclick="if(window.ippStop)window.ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-book-open-text ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 1 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Come ti chiami?</h1>
+    <p class="ipp-hero__subtitle">Fase expositiva · Las reglas confirmadas</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- INTRO SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p>En la etapa anterior <strong>descubriste las reglas por tu cuenta</strong>. Ahora las confirmamos y completamos.</p>
+        <p>Esta etapa es para <strong>leer, escuchar y fijar</strong>. Al final hay ejercicios.</p>
+      </div>
+    </div>
+
+    <!-- ① ALFABETO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">L'alfabeto italiano</h2>
+      <p class="ipp-sub">21 letras propias + 5 "straniere" — las que viste en el video</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Las 21 letras del alfabeto italiano</h3>
+        <p class="ipp-alfa__legend">
+          <i class="swatch" aria-hidden="true"></i>
+          Letras extranjeras (usadas en palabras importadas como <em>jeans, weekend, taxi</em>)
+        </p>
+        <div class="ipp-alfa" id="alfaFull"></div>
+
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>Letras que no existen en italiano:</strong> J · K · W · X · Y. Son "lettere straniere" — aparecen sólo en préstamos del inglés, francés y alemán.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>La H es muda:</strong> no se pronuncia sola. Aparece en <em>ho, hai, ha, hanno</em> (verbo avere) y en combinaciones como <em>ch</em> y <em>gh</em>.</span>
+        </div>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">¿Cómo se dice? — Pronunciación clave</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Letra / Combo</th><th>Suena como…</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>C + a/o/u</strong></td><td>K (come Como)</td><td class="it">casa, cosa, cura</td></tr>
+            <tr><td><strong>C + e/i</strong></td><td>CH de "chico"</td><td class="it">ciao, cinema</td></tr>
+            <tr><td><strong>G + a/o/u</strong></td><td>G de "gato"</td><td class="it">gatto, gonna</td></tr>
+            <tr><td><strong>G + e/i</strong></td><td>Y de "yo" (suave)</td><td class="it">gelato, giro</td></tr>
+            <tr><td><strong>CH</strong></td><td>K (come Como)</td><td class="it">che, chi</td></tr>
+            <tr><td><strong>GH</strong></td><td>G de "gato"</td><td class="it">ghiaccio</td></tr>
+            <tr><td><strong>SC + e/i</strong></td><td>SH de "show"</td><td class="it">scena, sci</td></tr>
+            <tr><td><strong>GL + i</strong></td><td>LL de "llave"</td><td class="it">gli, famiglia</td></tr>
+            <tr><td><strong>GN</strong></td><td>Ñ de "año"</td><td class="it">gnocchi, bagno</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Ejercicio A -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">A · El alfabeto — completá con la ciudad correcta</h3>
+        <p class="ipp-ex__desc">Escribí la ciudad que corresponde a cada letra según la tabla de arriba.</p>
+        <div class="ipp-ex__card">
+          <div id="exAlfa"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkExAlfa()"><i class="ph ph-check-circle"></i> Verificar</button>
+            <button class="ipp-btn ghost" onclick="revealExAlfa()"><i class="ph ph-eye"></i> Ver solución</button>
+          </div>
+          <div class="ipp-result" id="exAlfaRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio B -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">B · Verdadero o Falso — las letras</h3>
+        <p class="ipp-ex__desc">¿Son correctas estas afirmaciones sobre el alfabeto italiano?</p>
+        <div class="ipp-ex__card" id="exVF"></div>
+      </div>
+    </section>
+
+    <!-- ② CHIAMARSI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Il verbo <em>chiamarsi</em></h2>
+      <p class="ipp-sub">El verbo reflexivo para decir cómo te llamás — el primero que aprendés en italiano. ¿Por qué reflexivo? Porque se refleja en uno mismo. Los verbos reflexivos siempre van acompañados de su pronombre: <em>mi · ti · si · ci · vi · si</em>.</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Conjugación completa</h3>
+        <p><em>Chiamarsi</em> es un verbo reflexivo: la partícula (mi/ti/si…) cambia con cada persona y va <strong>antes</strong> del verbo.</p>
+
+        <table class="ipp-table" style="margin-top:0.85rem;">
+          <thead><tr><th>Pronombre</th><th>Forma completa</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td class="pro">io</td>      <td><span class="refl">mi</span> <span class="stem">chiam</span><span class="end">o</span></td>    <td class="it">Io mi chiamo Sofia.</td></tr>
+            <tr><td class="pro">tu</td>      <td><span class="refl">ti</span> <span class="stem">chiam</span><span class="end">i</span></td>    <td class="it">Tu ti chiami Marco.</td></tr>
+            <tr><td class="pro">lui/lei</td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Lei si chiama Anna.</td></tr>
+            <tr class="row-formal"><td class="pro">Lei <em>(formal)</em></td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Signora, come si chiama?</td></tr>
+            <tr><td class="pro">noi</td>     <td><span class="refl">ci</span> <span class="stem">chiam</span><span class="end">iamo</span></td> <td class="it">Noi ci chiamiamo Sofia e Graziana.</td></tr>
+            <tr><td class="pro">voi</td>     <td><span class="refl">vi</span> <span class="stem">chiam</span><span class="end">ate</span></td>  <td class="it">Come vi chiamate?</td></tr>
+            <tr><td class="pro">loro</td>    <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">ano</span></td>  <td class="it">Si chiamano Paolo e Luca.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="ipp-conj-note">
+          <span class="dot red"></span>La partícula reflexiva (<em>mi, ti, si, ci, vi, si</em>) es la parte que cambia.<br>
+          <span class="dot teal"></span>La raíz <em>chiam-</em> es siempre la misma. Las desinencias (-o, -i, -a…) son las de los verbos en -ARE.
+        </p>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Preguntas y respuestas</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Pregunta</th><th>Respuesta</th></tr></thead>
+          <tbody>
+            <tr><td class="it">Come ti chiami? <em style="color:#888;">(informal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama? <em style="color:#888;">(formal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama lui/lei?</td><td class="it">Si chiama [nombre].</td></tr>
+            <tr><td class="it">Come vi chiamate?</td><td class="it">Ci chiamiamo [nombres].</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.84rem;color:#666;margin-top:0.7rem;font-style:italic;">
+          ¿Notaste que para la forma formal el verbo va en tercera persona? Igual que en castellano cuando usás "usted".
+        </p>
+      </div>
+
+      <!-- Ejercicio C -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">C · Chiamarsi — completá con mi / ti / si / ci / vi</h3>
+        <p class="ipp-ex__desc">Escribí la partícula reflexiva correcta para cada oración.</p>
+        <div class="ipp-ex__card" id="exChiamarsi"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllChi()"><i class="ph ph-check-circle"></i> Verificar todo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ SALUTI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">I saluti</h2>
+      <p class="ipp-sub">Saludos formales e informales — la diferencia importa en Italia</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-greet">
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head informal">Informale — amigos y familia</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Ciao!</span><span class="ipp-greet__es">¡Hola! / ¡Chau!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come stai?</span><span class="ipp-greet__es">¿Cómo estás?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Bene, grazie!</span><span class="ipp-greet__es">¡Bien, gracias!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">A presto!</span><span class="ipp-greet__es">¡Hasta pronto!</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head formal">Formale — adultos y desconocidos</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come sta?</span><span class="ipp-greet__es">¿Cómo está usted?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">ArrivederLa</span><span class="ipp-greet__es">Hasta luego (muy formal)</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head neutro">Neutro — válido en cualquier contexto</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Salve!</span><span class="ipp-greet__es">¡Hola! (seguro siempre)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Arrivederci</span><span class="ipp-greet__es">Hasta luego</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonanotte</span><span class="ipp-greet__es">Buenas noches (antes de dormir)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Piacere!</span><span class="ipp-greet__es">¡Mucho gusto!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buongiorno</span><span class="ipp-greet__es">Buenos días <em>(al llegar o al irse)</em></span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buon pomeriggio</span><span class="ipp-greet__es">Buenas tardes</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonasera</span><span class="ipp-greet__es">Buenas tardes-noche (desde las 16h) <em>(al llegar o al irse)</em></span></div>
+          </div>
+        </div>
+        <div class="ipp-warn" style="margin-top:0.4rem;">
+          <i class="ph ph-lightbulb"></i>
+          <span>¿Dudás entre formal e informal? Usá <strong>Salve</strong> — es la opción segura en cualquier situación.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio D -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D · Saludos — ¿formal, informal o neutro?</h3>
+        <p class="ipp-ex__desc">Clasificá cada saludo según el contexto en que se usa.</p>
+        <div class="ipp-ex__card" id="exSaluti"></div>
+      </div>
+
+      <!-- Ejercicio D2 -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D2 · ¿Qué decís en esta situación?</h3>
+        <p class="ipp-ex__desc">Dado el contexto, escribí el saludo italiano correcto.</p>
+        <div class="ipp-ex__card" id="exSituaciones"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllSitu()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exSituRes"></div>
+      </div>
+    </section>
+
+    <!-- ④ NUMERI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title">I numeri — da 1 a 30</h2>
+      <p class="ipp-sub">Fundamentales para dar tu número de teléfono y tu edad</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-nums" id="numGrid"></div>
+        <div class="ipp-warn" style="margin-top:0.9rem;">
+          <i class="ph ph-warning"></i>
+          <span><em>uno → un / una</em> según el género.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><em>Ventuno, ventotto</em> — se pierde la vocal cuando el número termina en vocal + <em>uno/otto</em>.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio E -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">E · Números — ¿cómo se escribe?</h3>
+        <p class="ipp-ex__desc">Elegí la forma correcta de cada número o resultado.</p>
+        <div class="ipp-ex__card" id="exNumeri"></div>
+      </div>
+    </section>
+
+    <!-- ⑤ ESPRESSIONI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title">Espressioni utili</h2>
+      <p class="ipp-sub">Frases que ya podés usar desde hoy. Tocá el botón para escucharlas.</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-espr" id="esprList"></div>
+      </div>
+    </section>
+
+    <!-- INTEGRADOR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Integrador</div>
+      <h2 class="ipp-title">Esercizio integrador</h2>
+      <p class="ipp-sub">Combiná todo lo aprendido</p>
+
+      <!-- Ejercicio F -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">F · Ordenar el diálogo</h3>
+        <p class="ipp-ex__desc">Numerá estas frases del 1 al 5 para reconstruir una presentación correcta.</p>
+        <div class="ipp-ex__card">
+          <div id="ordenLines"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkOrden()"><i class="ph ph-check-circle"></i> Verificar orden</button>
+          </div>
+          <div class="ipp-result" id="exOrdenRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio G -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">G · Expresiones — ¿qué dirías en estas situaciones?</h3>
+        <p class="ipp-ex__desc">Escribí la expresión italiana correcta para cada contexto.</p>
+        <div class="ipp-ex__card" id="exGExpr"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllGExpr()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exGExprRes"></div>
+      </div>
+    </section>
+
+    <!-- CULTURA -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head">
+        <i class="ph ph-globe"></i>
+        Nota culturale — Come si scrive il tuo nome?
+      </h3>
+      <p>
+        En Italia, cuando das tu nombre por teléfono o en una ventanilla, siempre deletreás usando las ciudades del alfabeto fonético. Esta costumbre viene de los años en que las comunicaciones eran poco claras y había que evitar confusiones entre letras que suenan parecido (M/N, B/P, D/T). Una forma habitual de pedir que deletreen es <strong>FARE LO SPELLING</strong>, una expresión del inglés instalada en la cultura italiana.
+        <strong>Tip práctico:</strong> aprendé de memoria al menos 10 ciudades — te van a salir naturalmente muy pronto.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ── IPP Voice Preloader ── */
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+window.IPP_VOICE = window.IPP_VOICE || {
+  lang: 'it-IT', rate: 0.82, pitch: 1.10,
+  preferFemale: true, preferGoogle: true
+};
+
+(function() {
+  /* ═══ DATA ═══ */
+  const ALFA = [
+    ['A','Ancona'],['B','Bologna'],['C','Como'],['D','Domodossola'],['E','Empoli'],
+    ['F','Firenze'],['G','Genova'],['H','Hotel'],['I','Imola'],['L','Livorno'],
+    ['M','Milano'],['N','Napoli'],['O','Otranto'],['P','Palermo'],['Q','Quarto'],
+    ['R','Roma'],['S','Savona'],['T','Torino'],['U','Udine'],['V','Venezia'],['Z','Zara'],
+  ];
+  const NUMS = [
+    [1,'uno'],[2,'due'],[3,'tre'],[4,'quattro'],[5,'cinque'],
+    [6,'sei'],[7,'sette'],[8,'otto'],[9,'nove'],[10,'dieci'],
+    [11,'undici'],[12,'dodici'],[13,'tredici'],[14,'quattordici'],[15,'quindici'],
+    [16,'sedici'],[17,'diciassette'],[18,'diciotto'],[19,'diciannove'],[20,'venti'],
+    [21,'ventuno'],[22,'ventidue'],[23,'ventitré'],[24,'ventiquattro'],[25,'venticinque'],
+    [26,'ventisei'],[27,'ventisette'],[28,'ventotto'],[29,'ventinove'],[30,'trenta'],
+  ];
+  const ESPR = [
+    ['Come ti chiami?',     '¿Cómo te llamás?'],
+    ['Mi chiamo…',          'Me llamo…'],
+    ['Come si scrive?',     '¿Cómo se escribe?'],
+    ['Che significa?',      '¿Qué significa?'],
+    ['Piacere!',            '¡Mucho gusto!'],
+    ['Di dove sei?',        '¿De dónde sos?'],
+    ['Sono di…',            'Soy de…'],
+    ['Quanti anni hai?',    '¿Cuántos años tenés?'],
+    ['Ho 25 anni.',         'Tengo 25 años.'],
+    ['Scusa / Scusi',       'Perdón (inf./form.)'],
+  ];
+
+  /* ═══ BUILDS ═══ */
+  function buildAlfaFull() {
+    const all = [...ALFA.map(([l,c]) => [l,c,false])];
+    [['J','Jersey'],['K','Kursaal'],['W','Washington'],['X','Xilofono'],['Y','York']].forEach(([l,c]) => all.push([l,c,true]));
+    all.sort((a,b) => a[0].localeCompare(b[0]));
+    const grid = document.getElementById('alfaFull');
+    all.forEach(([ltr, city, isForeign]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-alfa__cell' + (isForeign ? ' foreign' : '');
+      div.innerHTML = '<span class="ipp-alfa__ltr">'+ltr+'</span><span class="ipp-alfa__sep">·</span><span class="ipp-alfa__cit">'+city+'</span>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildNums() {
+    const grid = document.getElementById('numGrid');
+    NUMS.forEach(([n, w]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-nums__cell';
+      div.innerHTML = '<div class="ipp-nums__n">'+n+'</div><div class="ipp-nums__w">'+w+'</div>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildEspr() {
+    const list = document.getElementById('esprList');
+    ESPR.forEach(([it, es]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-espr__item';
+      div.innerHTML =
+        '<span class="ipp-espr__it">'+it+'</span>'+
+        '<span class="ipp-espr__es">'+es+'</span>'+
+        '<button class="ipp-espr__audio" onclick="ippAudio(\''+it.replace(/'/g,"\\'")+'\')">'+
+          '<i class="ph ph-speaker-high"></i> Escuchar</button>';
+      list.appendChild(div);
+    });
+  }
+
+  /* ═══ AUDIO TTS ═══ */
+  function _ippPickVoice(voices, cfg) {
+    var it = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+    if (!it.length) return voices[0] || null;
+    var gFem = it.filter(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    var gAny = it.filter(function(v) { return /google/i.test(v.name); });
+    var fem  = it.filter(function(v) { return /elsa|alice|giulia|female/i.test(v.name); });
+    var nonLocal = it.filter(function(v) { return !v.localService; });
+    if (cfg.preferGoogle && cfg.preferFemale && gFem.length) return gFem[0];
+    if (cfg.preferGoogle && gAny.length) return gAny[0];
+    if (cfg.preferFemale && fem.length) return fem[0];
+    if (nonLocal.length) return nonLocal[0];
+    return it[0];
+  }
+  function _fabShow(v) {
+    var f = document.getElementById('ippStopFab');
+    if (f) f.style.display = v ? 'inline-flex' : 'none';
+  }
+  function ippStop() {
+    try { window.speechSynthesis.cancel(); } catch(e) {}
+    _fabShow(false);
+  }
+  function ippAudio(text) {
+    if (!window.speechSynthesis) return;
+    try {
+      window.speechSynthesis.cancel();
+      var cfg = window.IPP_VOICE || {};
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang   = cfg.lang  || 'it-IT';
+      utt.rate   = cfg.rate  !== undefined ? cfg.rate  : 0.82;
+      utt.pitch  = cfg.pitch !== undefined ? cfg.pitch : 1.10;
+      utt.volume = 1;
+      var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+      var v = _ippPickVoice(voices, cfg);
+      if (v) utt.voice = v;
+      utt.onend = function() { _fabShow(false); };
+      utt.onerror = function() { _fabShow(false); };
+      (function(u){ setTimeout(function(){ try { _fabShow(true); speechSynthesis.speak(u); } catch(e){ _fabShow(false); } }, 60); })(utt);
+    } catch(e) { console.warn('SpeechSynthesis error:', e); }
+  }
+
+  /* ═══ RETRY HELPER ═══ */
+  function ippRetry(container, resetFn) {
+    var old = container.querySelector('.ipp-retry');
+    if (old) old.remove();
+    var rb = document.createElement('button');
+    rb.className = 'ipp-retry';
+    rb.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    rb.onclick = function() { rb.remove(); resetFn(); };
+    container.appendChild(rb);
+  }
+
+  /* ═══ EJ A: FILL ALFA ═══ */
+  const exAlfaData = [
+    ['C','Como'],['D','Domodossola'],['E','Empoli'],['F','Firenze'],['G','Genova'],
+    ['L','Livorno'],['Q','Quarto'],['S','Savona'],['U','Udine'],['Z','Zara'],
+  ];
+  function buildExAlfa() {
+    const rows = document.getElementById('exAlfa');
+    if (!rows) return;
+    rows.innerHTML = '';
+    const shuffled = [...exAlfaData].sort(() => Math.random() - 0.5);
+    shuffled.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'ipp-row';
+      row.id = 'alfa-row-' + i;
+      row.dataset.letter = item[0];
+      row.dataset.city = item[1];
+      row.style.cssText = 'display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;';
+      row.innerHTML =
+        '<span class="ipp-row__num">'+(i+1)+'.</span>'+
+        '<span><strong>'+item[0]+'</strong> come</span>'+
+        '<input class="ipp-input md" id="exAlfa-'+i+'" placeholder="ciudad…"'+
+        ' onkeypress="if(event.key===\'Enter\') checkExAlfa()">'+
+        '<span class="alfa-icon" id="alfa-icon-'+i+'"></span>';
+      rows.appendChild(row);
+    });
+  }
+  function checkExAlfa() {
+    if (!document.getElementById('exAlfa')) return;
+    let ok = 0, total = 0;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (!inp) return;
+      total++;
+      const val = (inp.value || '').trim().toLowerCase();
+      const correct = row.dataset.city.toLowerCase();
+      if (val === correct) {
+        inp.classList.add('ok'); inp.classList.remove('err');
+        if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);font-weight:700;"></i>';
+        ok++;
+      } else {
+        inp.classList.add('err'); inp.classList.remove('ok');
+        if (icon) icon.innerHTML = '<span style="color:var(--red);font-size:0.78rem;font-weight:600;"><i class="ph ph-x"></i> '+row.dataset.city+'</span>';
+      }
+    });
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    if (ok === total) {
+      res.className = 'ipp-result ok';
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Bravissimo/a! '+total+'/'+total+' correctas.';
+    } else {
+      res.className = 'ipp-result err';
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+total+' correctas. Las incorrectas muestran la respuesta correcta en rojo.';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        buildExAlfa();
+      });
+    }
+  }
+  function revealExAlfa() {
+    const sorted = [...exAlfaData].sort((a,b) => a[0].localeCompare(b[0]));
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    let html = '<strong>Solución</strong><br>';
+    sorted.forEach((item, i) => {
+      html += '<span style="display:inline-block;min-width:170px;margin:0.2rem 0.5rem 0 0;">'+(i+1)+'. '+item[0]+' come '+item[1]+'</span>';
+      if ((i+1) % 3 === 0) html += '<br>';
+    });
+    res.className = 'ipp-result ok';
+    res.innerHTML = html;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (inp) { inp.value = row.dataset.city; inp.classList.add('ok'); inp.classList.remove('err'); }
+      if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);"></i>';
+    });
+  }
+
+  /* ═══ EJ B: V/F ═══ */
+  const vfData = [
+    ['En el alfabeto fonético se usan siempre las mismas ciudades.', false,
+      'Las ciudades pueden cambiar — lo importante es saber que un italiano puede deletrearte nombrando ciudades.'],
+    ['La H en italiano suena fuerte y aspirada, como en inglés.', false,
+      'La H italiana es completamente muda. Aparece en ho/hai/ha y en CH y GH, pero nunca suena sola.'],
+    ['La combinación CH en italiano suena como la CH de "chico" en español.', false,
+      'En italiano CH suena como K (dura). Es al revés que en español. Ejemplo: "che" = KE, "chi" = KI.'],
+    ['La combinación SC + e/i en italiano suena como SH en inglés ("show").', true,
+      'Correcto — "scena", "sci", "lasciare" llevan ese sonido SH. Ante a/o/u suena simplemente SK.'],
+    ['En italiano "gli" se pronuncia igual que "gl" + "i" por separado.', false,
+      '"GL+i" es un sonido único, similar a la LL del español rioplatense. Ejemplo: "figlio", "aglio".'],
+    ['En italiano "gnocchi" lleva el sonido Ñ de "año".', true,
+      'GN se pronuncia exactamente como la Ñ española. "Lasagna", "gnocchi", "bagno".'],
+    ['Las consonantes dobles en italiano se pronuncian igual que las simples.', false,
+      'Las dobles se mantienen más tiempo y a veces cambian el significado. "Nono" (noveno) ≠ "nonno" (abuelo).'],
+    ['La combinación QU en italiano siempre suena como KU (con U pronunciada).', true,
+      '"quando", "questo", "qui" se pronuncian con la U audible: KWAN-do, KWES-to.'],
+    ['La letra Z existe en el alfabeto italiano original.', true,
+      'Z come Zara es parte del alfabeto de 21 letras. Puede sonar como TS ("pizza") o DS ("zero").'],
+  ];
+  function buildExVF() {
+    const card = document.getElementById('exVF');
+    vfData.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.id = 'exvf-' + i;
+      row.className = 'ipp-judge';
+      row.innerHTML =
+        '<span class="ipp-judge__txt">'+(i+1)+'. '+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+item[1]+')">V</button>'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+(!item[1])+')">F</button>'+
+        '</div>';
+      card.appendChild(row);
+    });
+  }
+  function checkExVF(i, btn, isCorrect) {
+    const msg = vfData[i][2];
+    const row = document.getElementById('exvf-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      const fb = document.createElement('p');
+      fb.className = 'ipp-fb ok';
+      fb.style.cssText = 'width:100%;margin-top:0.4rem;';
+      fb.innerHTML = '<i class="ph ph-check"></i> '+msg;
+      row.appendChild(fb);
+    } else {
+      row.querySelectorAll('.ipp-opt').forEach(b => { if (b !== btn) b.classList.add('correct'); });
+    }
+    ippRetry(row, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      const oldFb = row.querySelector('.ipp-fb');
+      if (oldFb) oldFb.remove();
+    });
+  }
+
+  /* ═══ EJ C: CHIAMARSI ═══ */
+  const chiData = [
+    { sentence: '_____ chiamo Lucia. Sono di Milano.',        blank:'mi', pronoun:'io',      note:'io → <strong>mi</strong> chiamo. 1ª pers. sing.' },
+    { sentence: 'Come _____ chiami? Non ho capito bene!',     blank:'ti', pronoun:'tu',      note:'tu → <strong>ti</strong> chiami. 2ª pers. sing.' },
+    { sentence: 'Il professore _____ chiama Rossi.',          blank:'si', pronoun:'lui/lei', note:'lui/lei → <strong>si</strong> chiama. 3ª pers. sing.' },
+    { sentence: 'Come _____ chiamate, ragazzi?',              blank:'vi', pronoun:'voi',     note:'voi → <strong>vi</strong> chiamate. 2ª pers. pl.' },
+    { sentence: 'Noi _____ chiamiamo "Il Circolo Italiano".', blank:'ci', pronoun:'noi',     note:'noi → <strong>ci</strong> chiamiamo. 1ª pers. pl.' },
+    { sentence: 'Loro _____ chiamano Marco e Giulia.',        blank:'si', pronoun:'loro',    note:'loro → <strong>si</strong> chiamano. 3ª pers. pl.' },
+    { sentence: 'Signora, Lei come _____ chiama?',            blank:'si', pronoun:'Lei',     note:'Lei → forma formal (3ª pers. sing.).' },
+  ];
+  function buildExChiamarsi() {
+    const card = document.getElementById('exChiamarsi');
+    if (!card) return;
+    card.innerHTML = '';
+    chiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exchi-' + i;
+      div.className = 'ipp-row';
+      div.innerHTML =
+        '<span class="ipp-row__pron">('+item.pronoun+')</span>'+
+        '<em>'+item.sentence.replace('_____',
+          '<input class="ipp-input sm" id="chi-inp-'+i+'" placeholder="?" maxlength="3" autocomplete="off"'+
+          ' onkeypress="if(event.key===\'Enter\')checkChiInput('+i+')">'
+        )+'</em>'+
+        '<div class="ipp-fb" id="exchi-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkChiInput(i) {
+    var inp = document.getElementById('chi-inp-' + i);
+    var fb  = document.getElementById('exchi-fb-' + i);
+    var container = document.getElementById('exchi-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase();
+    var ok = val === chiData[i].blank;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + chiData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> No es correcto. Pista: <em>mi · ti · si · ci · vi · si</em>';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete container.dataset.done;
+      inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+  function checkAllChi() {
+    chiData.forEach(function(_, i) { checkChiInput(i); });
+  }
+
+  /* ═══ EJ D: SALUTI ═══ */
+  const salutiData = [
+    ['Buongiorno!',  'N', 'Saludo de mañana, siempre con adultos o desconocidos.'],
+    ['Ciao!',        'I', 'Entre amigos y familia, a cualquier hora.'],
+    ['Buonasera!',   'N', 'Saludo de tarde-noche desde las 18h, con desconocidos.'],
+    ['Come stai?',   'I', '¿Cómo estás? — solo entre personas de confianza.'],
+    ['Come sta?',    'F', '¿Cómo está usted? — forma de respeto.'],
+    ['ArrivederLa!', 'F', 'La forma más respetuosa de despedirse. La L mayúscula corresponde a Lei.'],
+    ['A presto!',    'I', '¡Hasta pronto! — entre amigos.'],
+    ['Salve!',       'N', 'Funciona en cualquier contexto — la opción segura.'],
+    ['Arrivederci',  'N', 'Despedida universal — formal e informal.'],
+    ['Buonanotte!',  'N', 'Al irse a dormir — válido con cualquier persona.'],
+  ];
+  function buildExSaluti() {
+    const card = document.getElementById('exSaluti');
+    salutiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exsal-' + i;
+      div.className = 'ipp-judge';
+      div.innerHTML =
+        '<span class="ipp-judge__txt" style="font-style:italic;font-weight:600;">'+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'F\')">Formal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'I\')">Informal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'N\')">Neutro</button>'+
+        '</div>'+
+        '<div class="ipp-fb" id="exsal-fb-'+i+'" style="width:100%;"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSaluto(i, btn, pressed) {
+    const correct = salutiData[i][1];
+    const note = salutiData[i][2];
+    const row = document.getElementById('exsal-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    const ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      const map = { 'Formal':'F', 'Informal':'I', 'Neutro':'N' };
+      row.querySelectorAll('.ipp-opt').forEach(b => {
+        if (map[b.textContent.trim()] === correct) b.classList.add('correct');
+      });
+    }
+    const fb = document.getElementById('exsal-fb-' + i);
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+
+  /* ═══ EJ D2: SITUACIONES ═══ */
+  const situData = [
+    {
+      ctx: 'Son las 9:30 de la mañana. Entrás a una farmacia y la farmacéutica te mira.',
+      accepted: ['buongiorno','buon giorno','salve'],
+      note: 'Buongiorno y Salve funcionan — saludo de mañana, contexto formal con desconocida.'
+    },
+    {
+      ctx: 'Tu amigo Marco te manda un mensaje por WhatsApp a las 15hs.',
+      accepted: ['ciao'],
+      note: 'Ciao! — entre amigos, cualquier hora, siempre informal.'
+    },
+    {
+      ctx: 'Llegás a las 20hs a una cena de trabajo. Tu jefa te recibe en la puerta.',
+      accepted: ['buonasera','buona sera'],
+      note: 'Buonasera! — saludo de tarde-noche, contexto formal.'
+    },
+    {
+      ctx: 'Es la 1 de la madrugada. Le decís buenas noches a tu compañera de piso.',
+      accepted: ['buonanotte','buona notte'],
+      note: 'Buonanotte! — sólo al irse a dormir, formal o informal.'
+    },
+    {
+      ctx: 'Tu profesora de italiano termina la clase. Te despedís con respeto.',
+      accepted: ['arrivederla','arrivederci','salve'],
+      note: 'ArrivederLa es lo más respetuoso. Arrivederci también es válido.'
+    },
+    {
+      ctx: 'Ves a tu amiga Sofia y querés saber cómo está.',
+      accepted: ['come stai','come stai?'],
+      note: 'Come stai? — informal. La formal sería "Come sta?"'
+    },
+  ];
+  function buildExSituaciones() {
+    const card = document.getElementById('exSituaciones');
+    if (!card) return;
+    card.innerHTML = '';
+    situData.forEach(function(item, i) {
+      const div = document.createElement('div');
+      div.id = 'situ-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="situ-inp-'+i+'" placeholder="Escribí el saludo en italiano…" maxlength="30"'+
+        ' onkeypress="if(event.key===\'Enter\')checkSitu('+i+')">'+
+        '<div class="ipp-fb" id="situ-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSitu(i) {
+    var inp = document.getElementById('situ-inp-' + i);
+    var fb = document.getElementById('situ-fb-' + i);
+    var container = document.getElementById('situ-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g,'');
+    var ok = situData[i].accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + situData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: ' + situData[i].note;
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllSitu() {
+    situData.forEach(function(_, i) {
+      var container = document.getElementById('situ-' + i);
+      if (container && !container.dataset.done) checkSitu(i);
+    });
+    var total = situData.length;
+    var done = document.querySelectorAll('#exSituaciones [data-done]').length;
+    var res = document.getElementById('exSituRes');
+    if (!res) return;
+    if (done === total) {
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Perfetto! '+done+'/'+total+' correctas.';
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+done+'/'+total+' correctas — revisá las marcadas en rojo.';
+      res.className = 'ipp-result err';
+    }
+  }
+
+  /* ═══ EJ E: NUMERI ═══ */
+  const numExData = [
+    ['11',     'undici',      ['undecio','undize','oundici'],         '11 = undici — UN-di-ci (3 sílabas).'],
+    ['16',     'sedici',      ['seidici','diciasei','dicisei'],        '16 = sedici. "sei" → "sedi" al combinarse.'],
+    ['17',     'diciassette', ['diciasette','dichasette','dicciasette'],'17 = diciassette. Doble S obligatoria.'],
+    ['21',     'ventuno',     ['ventiuno','veintiuno','ventuono'],    '21 = ventuno. La I se pierde: no "ventiuno".'],
+    ['23',     'ventitré',    ['ventitre','ventitres','ventirés'],    '23 = ventitré. El acento en É es obligatorio.'],
+    ['28',     'ventotto',    ['ventiotto','ventoto','ventocto'],     '28 = ventotto. La I se pierde: no "ventiotto".'],
+    ['14',     'quattordici', ['quatordici','quattordeci','quattrodici'],'14 = quattordici. Doble T: quaTTordici.'],
+    ['8 + 5',  'tredici',     ['terdici','fridici','tredeci'],        '8+5=13 = tredici. tre + dici.'],
+    ['20 − 3', 'diciassette', ['diciasette','diciasete','diceassette'],'20−3=17 = diciassette. Doble S — error clásico.'],
+    ['4 × 4',  'sedici',      ['seidici','diecisei','sedize'],       '4×4=16 = sedici.'],
+  ];
+  function buildExNumeri() {
+    var card = document.getElementById('exNumeri');
+    card.innerHTML = '';
+    numExData.forEach(function(item, i) {
+      var label = item[0];
+      var correct = item[1];
+      var wrongs = item[2];
+      var allOpts = [correct].concat(wrongs).sort(function() { return Math.random() - 0.5; });
+      var isOp = /[+−×]/.test(label);
+      var question = isOp
+        ? '<strong style="color:var(--mc-dk);">Quanto fa ' + label + '?</strong>'
+        : '<strong>'+(i+1)+'.</strong> ¿Cómo se escribe <strong style="font-size:1.05rem;">'+label+'</strong> en italiano?';
+      var div = document.createElement('div');
+      div.id = 'exnum-' + i;
+      div.className = 'ipp-row';
+      div.style.cssText = 'padding:0.8rem 1rem;';
+      div.innerHTML =
+        '<p style="font-size:0.91rem;margin:0 0 0.55rem;">'+question+'</p>'+
+        '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.4rem;" id="exnum-opts-'+i+'">'+
+        allOpts.map(function(opt) {
+          return '<button class="ipp-opt" onclick="checkNumOpt('+i+',this,\''+opt.replace(/'/g,"\\'")+'\')">'+opt+'</button>';
+        }).join('')+
+        '</div>'+
+        '<div class="ipp-fb" id="exnum-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkNumOpt(i, btn, pressed) {
+    var correct = numExData[i][1];
+    var container = document.getElementById('exnum-' + i);
+    var fb = document.getElementById('exnum-fb-' + i);
+    if (container.dataset.done) return;
+    container.dataset.done = '1';
+    container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.add('disabled'); });
+    var ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      container.querySelectorAll('.ipp-opt').forEach(function(b) {
+        if (b.textContent.trim() === correct) b.classList.add('correct');
+      });
+    }
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + numExData[i][3];
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.remove('disabled','correct','wrong'); });
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+
+  /* ═══ EJ F: ORDENAR ═══ */
+  const ordenData = [
+    { text: 'Piacere, Marco! Io mi chiamo Sofia.', correct: 3 },
+    { text: 'Ciao! Come ti chiami?', correct: 1 },
+    { text: 'Mi chiamo Marco. E tu?', correct: 2 },
+    { text: 'Come si scrive, Sofia?', correct: 4 },
+    { text: 'S come Savona, O come Otranto, F come Firenze, I come Imola, A come Ancona.', correct: 5 },
+  ];
+  const shuffledOrden = [...ordenData].sort(() => Math.random() - 0.5);
+  function buildOrden() {
+    const cont = document.getElementById('ordenLines');
+    shuffledOrden.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-orden__row';
+      div.innerHTML =
+        '<select class="ipp-orden__sel" id="ord-sel-'+i+'">'+
+          '<option value="">—</option>'+
+          [1,2,3,4,5].map(n => '<option value="'+n+'">'+n+'</option>').join('')+
+        '</select>'+
+        '<span class="ipp-orden__txt">'+item.text+'</span>';
+      cont.appendChild(div);
+    });
+  }
+  function checkOrden() {
+    let ok = 0;
+    shuffledOrden.forEach((item, i) => {
+      const sel = document.getElementById('ord-sel-' + i);
+      const val = parseInt(sel.value);
+      const correct = val === item.correct;
+      sel.style.borderColor = correct ? 'var(--ok-bd)' : 'var(--red)';
+      sel.style.background = correct ? 'var(--ok-bg)' : 'var(--err-bg)';
+      if (correct) ok++;
+    });
+    const res = document.getElementById('exOrdenRes');
+    if (ok === shuffledOrden.length) {
+      const sorted = ordenData.slice().sort((a,b) => a.correct - b.correct);
+      const lista = sorted.map(item => item.correct + ' → ' + item.text).join('<br>');
+      res.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfetto!</strong><br>'+lista;
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+shuffledOrden.length+' correctas.';
+      res.className = 'ipp-result err';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        shuffledOrden.forEach(function(_, i) {
+          const sel = document.getElementById('ord-sel-' + i);
+          if (sel) { sel.value = ''; sel.style.borderColor = ''; sel.style.background = ''; }
+        });
+      });
+    }
+  }
+
+  /* ═══ EJ G: EXPRESIONES ═══ */
+  const gExprData = [
+    {
+      ctx: 'No sabés qué quiere decir una palabra.',
+      accepted: ['che significa','che significa?'],
+      note: 'Che significa? = ¿Qué significa?'
+    },
+    {
+      ctx: 'No sabés cómo se escribe el nombre de tu amigo.',
+      accepted: ['come si scrive','come si scrive?'],
+      note: 'Come si scrive? = ¿Cómo se escribe?'
+    },
+    {
+      ctx: 'Conocés a una persona nueva y querés saber su nombre.',
+      accepted: ['come ti chiami','come ti chiami?'],
+      note: 'Come ti chiami? = ¿Cómo te llamás? (informal)'
+    },
+    {
+      ctx: 'Querés saber cómo se dice algo en italiano.',
+      accepted: ['come si dice in italiano','come si dice in italiano?','come si dice','come si dice?'],
+      note: 'Come si dice in italiano? = ¿Cómo se dice en italiano?'
+    },
+    {
+      ctx: '¿Cómo le preguntás a alguien de dónde es?',
+      accepted: ['di dove sei','di dove sei?'],
+      note: 'Di dove sei? = ¿De dónde sos? (informal)'
+    },
+  ];
+  function buildExGExpr() {
+    var card = document.getElementById('exGExpr');
+    if (!card) return;
+    card.innerHTML = '';
+    gExprData.forEach(function(item, i) {
+      var div = document.createElement('div');
+      div.id = 'gexpr-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="gexpr-inp-'+i+'" placeholder="Escribí la expresión en italiano…" maxlength="40"'+
+        ' onkeypress="if(event.key===\'Enter\')checkGExpr('+i+')">'+
+        '<div class="ipp-fb" id="gexpr-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkGExpr(i) {
+    var inp = document.getElementById('gexpr-inp-' + i);
+    var fb = document.getElementById('gexpr-fb-' + i);
+    var container = document.getElementById('gexpr-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g, '');
+    var accepted = gExprData[i].accepted.map(function(a){ return a.replace(/[!?.,]/g,''); });
+    var ok = accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + gExprData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: <em>' + gExprData[i].accepted[0] + '</em>';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.textContent = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllGExpr() {
+    var ok = 0;
+    gExprData.forEach(function(_, i) {
+      var inp = document.getElementById('gexpr-inp-' + i);
+      var container = document.getElementById('gexpr-' + i);
+      if (!container.dataset.done && inp && inp.value.trim()) checkGExpr(i);
+      if (container.dataset.done) ok++;
+    });
+    var res = document.getElementById('exGExprRes');
+    if (res) {
+      res.innerHTML = ok === gExprData.length
+        ? '<i class="ph ph-check-circle"></i> ¡Perfetto! Conocés todas las expresiones.'
+        : '<i class="ph ph-x-circle"></i> '+ok+'/'+gExprData.length+' correctas.';
+      res.className = 'ipp-result ' + (ok === gExprData.length ? 'ok' : 'err');
+    }
+  }
+
+  /* ═══ INIT — exponer + builds con try-catch ═══ */
+  window.ippAudio     = ippAudio;
+  window.ippStop      = ippStop;
+  window.ippRetry     = ippRetry;
+  window.checkExAlfa  = checkExAlfa;
+  window.revealExAlfa = revealExAlfa;
+  window.checkExVF    = checkExVF;
+  window.checkChiInput= checkChiInput;
+  window.checkAllChi  = checkAllChi;
+  window.checkSaluto  = checkSaluto;
+  window.checkSitu    = checkSitu;
+  window.checkAllSitu = checkAllSitu;
+  window.checkNumOpt  = checkNumOpt;
+  window.checkOrden   = checkOrden;
+  window.checkGExpr   = checkGExpr;
+  window.checkAllGExpr= checkAllGExpr;
+
+  var builds = [
+    buildAlfaFull, buildNums, buildEspr,
+    buildExAlfa, buildExVF, buildExChiamarsi,
+    buildExSaluti, buildExSituaciones, buildExNumeri,
+    buildOrden, buildExGExpr
+  ];
+  builds.forEach(function(fn) {
+    try { fn(); } catch(e) { console.warn('[IPP build error]', fn.name, e); }
+  });
+})();
+</script>
+<!-- ===== /BLOQUE Unità 1 — Gramática ===== -->

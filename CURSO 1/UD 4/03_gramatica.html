@@ -1,0 +1,1547 @@
+<!-- ===== BLOQUE: Unità 4 — Gramática · Che ore sono? ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #e5ab07;
+    --mc-dk:    #c8940a;
+    --mc-text:  #7a5500;
+    --mc-bg:    #fdf5e0;
+    --amber-light: #fffae6;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.92; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sección ===== */
+  .ipp-section {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-section__head {
+    display: flex; align-items: center; gap: 0.85rem;
+    margin-bottom: 1rem; padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--mc-bg);
+    flex-wrap: wrap;
+  }
+  .ipp-section__label {
+    width: 38px; height: 38px;
+    background: var(--mc); color: var(--white);
+    border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    line-height: 1.2; margin: 0;
+    font-weight: 700;
+  }
+  .ipp-section__title em { color: var(--red); font-style: italic; }
+  .ipp-section__sub {
+    font-size: 0.8rem; color: #777;
+    margin: 0.15rem 0 0; line-height: 1.5;
+  }
+
+  /* ===== Tablas ===== */
+  .ipp-tbl {
+    width: 100%; border-collapse: collapse;
+    margin: 0.5rem 0;
+    font-size: clamp(0.84rem, 2.1vw, 0.92rem);
+  }
+  .ipp-tbl th {
+    background: var(--mc); color: var(--white);
+    padding: 0.6rem 0.85rem;
+    text-align: left;
+    font-weight: 700; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-tbl td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-tbl tr:last-child td { border-bottom: none; }
+  .ipp-tbl tr:nth-child(even) td { background: var(--cream); }
+  .ipp-tbl tr.highlight td { background: var(--amber-light) !important; }
+  .ipp-tbl tr.highlight .it { color: var(--mc-dk); }
+  .ipp-tbl .it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text);
+  }
+  .ipp-tbl .time {
+    font-weight: 700; color: var(--mc-text);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .ipp-tbl .star::before { content: '⭐ '; }
+  .ipp-tbl .play-btn {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .ipp-tbl .play-btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-tbl em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-tbl strong { color: var(--mc-dk); }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: var(--mc-text); line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-callout strong { color: var(--mc-dk); }
+
+  /* ===== Sub-header (dentro de secciones) ===== */
+  .ipp-subhead {
+    font-size: 0.82rem; font-weight: 700;
+    color: var(--mc-text);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 1.25rem 0 0.55rem;
+  }
+
+  /* ===== Ejercicios card ===== */
+  .ipp-ex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--mc);
+  }
+  .ipp-ex--inline {
+    border-top: none; box-shadow: none;
+    background: var(--cream);
+    margin-top: 1rem; margin-bottom: 0;
+    padding: 1rem 1.15rem;
+  }
+  .ipp-ex__head {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .ipp-ex__num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-ex__title {
+    font-weight: 700;
+    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+    color: var(--mc-text);
+  }
+  .ipp-ex__title em { font-style: italic; color: var(--red); }
+  .ipp-ex__sub {
+    font-size: 0.82rem; color: #777;
+    margin-top: 0.2rem;
+  }
+
+  /* Fill inputs */
+  .ipp-fill {
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    width: 100%; max-width: 280px;
+    transition: all 0.2s;
+    background: var(--white);
+    color: var(--mc-text);
+    font-style: italic; font-weight: 600;
+    outline: none;
+  }
+  .ipp-fill:focus { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fill.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-fill.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+
+  /* MC item */
+  .ipp-mc {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-mc:first-child { padding-top: 0; }
+  .ipp-mc:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-mc__q {
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.2vw, 0.95rem);
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
+    color: var(--mc-text);
+  }
+  .ipp-mc__q em { color: var(--red); font-style: italic; }
+  .ipp-mc__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-mc__opts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .ipp-mcbtn {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    background: var(--cream);
+    font-family: inherit;
+    font-size: 0.83rem; font-weight: 500;
+    cursor: pointer; transition: all 0.18s;
+    color: var(--black);
+  }
+  .ipp-mcbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-mcbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-mcbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); font-weight: 700; }
+  .ipp-mcbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* V/F */
+  .ipp-vf {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-vf:first-child { padding-top: 0; }
+  .ipp-vf:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-vf__stmt {
+    font-size: 0.94rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .ipp-vf__stmt em { color: var(--mc-text); font-style: italic; font-weight: 600; }
+  .ipp-vf__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-vf__btns { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .ipp-vfbtn {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    padding: 0.35rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px; background: var(--cream);
+    font-family: inherit;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-vfbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-vfbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-vfbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-vfbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* Feedback */
+  .ipp-fb {
+    margin-top: 0.6rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.83rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 3px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 3px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+  .ipp-fb strong { font-weight: 700; }
+
+  /* Action buttons */
+  .ipp-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.85rem;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc-dk); }
+
+  /* === Reintentar (botón pequeño que aparece tras responder) === */
+  .ipp-retry-mini {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none;
+    border: 1.5px solid var(--mc);
+    color: var(--mc-dk);
+    border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.6rem; margin-left: 0.55rem;
+    transition: all 0.18s;
+  }
+  .ipp-retry-mini:hover { background: var(--mc-bg); }
+  .ipp-retry-mini .ph { font-size: 0.85rem; }
+
+  /* Sort exercise */
+  .ipp-sort {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed var(--cream-dk);
+  }
+  .ipp-sort:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .ipp-sort__label {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--mc-text); margin-bottom: 0.55rem;
+  }
+  .ipp-sort__pool {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sortbtn {
+    padding: 0.35rem 0.85rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--mc-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-sortbtn:hover:not(.used) { background: var(--mc); color: var(--white); }
+  .ipp-sortbtn.used { opacity: 0.3; pointer-events: none; }
+  .ipp-sort__zone {
+    min-height: 44px;
+    background: var(--cream);
+    border: 2px dashed var(--cream-dk);
+    border-radius: 8px;
+    padding: 0.5rem 0.7rem;
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sort__placed {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer;
+  }
+  .ipp-sort__placed:hover { background: var(--mc-dk); }
+  .ipp-sort__placed::after { content: ' ×'; opacity: 0.7; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg) 0%, var(--cream) 100%);
+    border-top: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.15rem; font-weight: 700;
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.55rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); }
+  .ipp-culture p {
+    font-size: 0.9rem; color: #444;
+    line-height: 1.75; margin: 0 0 0.65rem;
+  }
+  .ipp-culture p:last-child { margin-bottom: 0; }
+  .ipp-culture em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .ipp-tbl { font-size: 0.78rem; }
+    .ipp-tbl th, .ipp-tbl td { padding: 0.45rem 0.55rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-mc__opts { flex-direction: column; align-items: stretch; }
+    .ipp-mcbtn { text-align: left; }
+  }
+</style>
+
+<button class="ipp-stop-fab" id="ippStopFab" onclick="ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-clock-countdown ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 4 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Che ore sono?</h1>
+    <p class="ipp-hero__subtitle">Gramática completa — <em>la hora, los saludos, las preposiciones, los artículos y las conjunciones</em></p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- ════ A — COME SI DICE L'ORA ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">A</div>
+        <div>
+          <h2 class="ipp-section__title">Come si dice <em>l'ora</em> — regla fundamental</h2>
+          <p class="ipp-section__sub">Cómo se dice la hora en italiano</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Italiano</th><th>Español</th><th>Clave</th><th>▶</th></tr>
+        </thead>
+        <tbody id="oraBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Expresiones clave:</strong> <em>in punto / spaccate</em> = en punto exacto · <em>e mezza</em> = y media · <em>e un quarto</em> = y cuarto · <em>meno un quarto</em> = menos cuarto · <em>circa / verso</em> = aproximadamente
+      </div>
+    </section>
+
+    <!-- ════ B — ORARIO 24h vs 12h ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">B</div>
+        <div>
+          <h2 class="ipp-section__title">Orario 24h vs 12h</h2>
+          <p class="ipp-section__sub">Formal (24h) en transporte y oficinas · informal (12h) en la calle</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Formal (24h)</th><th>▶</th><th>Informal (12h)</th><th>▶</th></tr>
+        </thead>
+        <tbody id="confrBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Escribí la hora en italiano</div>
+            <div class="ipp-ex__sub">Hay varias formas válidas para algunas — escribí una</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>Hora</th><th>Tu respuesta</th></tr></thead>
+          <tbody id="scriviBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkScrivi()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+    </section>
+
+    <!-- ════ C — SALUTI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">C</div>
+        <div>
+          <h2 class="ipp-section__title">I saluti della giornata</h2>
+          <p class="ipp-section__sub">Saludos del día — cuándo usar cada uno</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Saludo</th><th>Horario</th><th>Español</th><th>Regla / Atención</th><th>▶</th></tr>
+        </thead>
+        <tbody id="salutiBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ D — PREPOSIZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">D</div>
+        <div>
+          <h2 class="ipp-section__title">Le preposizioni di tempo</h2>
+          <p class="ipp-section__sub">Para situar eventos en el tiempo</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Preposición</th><th>Uso</th><th>Ejemplo italiano</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="prepBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ E — ARTICOLI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">E</div>
+        <div>
+          <h2 class="ipp-section__title">Articoli determinativi e indeterminativi</h2>
+          <p class="ipp-section__sub">Los artículos del italiano en singular</p>
+        </div>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos determinativos — "el / la" (cosa conocida o específica)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos del módulo</th></tr>
+        </thead>
+        <tbody id="detBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo determinativo</div>
+            <div class="ipp-ex__sub">il / lo / l' / la — 12 ítems</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="detExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkDetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos indeterminativos — "un / una" (cosa nueva, no conocida)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos</th></tr>
+        </thead>
+        <tbody id="indetBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Determinativo vs Indeterminativo:</strong><br>
+        <em>Ho una riunione</em> (cualquiera, nueva info) → <strong>indeterminativo</strong> · <em>La riunione è alle tre</em> (esa específica) → <strong>determinativo</strong>
+      </div>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo indeterminativo</div>
+            <div class="ipp-ex__sub">un / uno / una / un' — 12 ítems · ojo con el apóstrofo</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="indetExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkIndetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+        <div class="ipp-callout" style="margin-top: 1rem;">
+          <strong>Regla de oro:</strong> el apóstrofo (<em>un'</em>) <strong>SOLO</strong> se usa con palabras <strong>femeninas</strong> que empiezan con vocal (<em>un'amica</em>). Si es masculino, siempre queda como <em>un</em> (<em>un aeroporto</em>).
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ F — CONGIUNZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">F</div>
+        <div>
+          <h2 class="ipp-section__title">Congiunzioni coordinate</h2>
+          <p class="ipp-section__sub">Las conjunciones que conectan palabras y oraciones</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Conjunción</th><th>Significado</th><th>Ejemplo</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="conjBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Nota: <em>e → ed</em> antes de vocal.</strong> Cuando la palabra siguiente empieza con <em>e</em>, se puede escribir <em>ed</em> para sonar más fluido: <em>«Sono le due ed è tardi»</em>. No es obligatorio pero es frecuente.
+      </div>
+    </section>
+
+    <!-- ════ G — EJERCICIOS ════ -->
+    <section class="ipp-section" style="padding:1rem; background:transparent; box-shadow:none;">
+      <h2 style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-size:clamp(1.5rem,4vw,1.85rem); color:var(--mc-text); margin:0 0 0.85rem; padding-bottom:0.5rem; border-bottom:3px solid var(--mc-bg);">G — Esercizi</h2>
+    </section>
+
+    <!-- Ej 1: Escribe la hora en palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">1</div>
+        <div>
+          <div class="ipp-ex__title">Escribí la hora en palabras</div>
+          <div class="ipp-ex__sub">Completá cómo se dice cada hora en italiano</div>
+        </div>
+      </div>
+      <table class="ipp-tbl">
+        <thead><tr><th>Hora</th><th>Completá</th></tr></thead>
+        <tbody id="ex1Body"></tbody>
+      </table>
+      <button class="ipp-btn" onclick="checkEx1()"><i class="ph ph-check-circle"></i> Verificar</button>
+    </div>
+
+    <!-- Ej 2: ¿Cómo se dice? MC -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">2</div>
+        <div>
+          <div class="ipp-ex__title">¿Cómo se dice?</div>
+          <div class="ipp-ex__sub">Elegí la opción correcta · selección múltiple</div>
+        </div>
+      </div>
+      <div id="ex2"></div>
+    </div>
+
+    <!-- Ej 3: Preposiciones fill -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">3</div>
+        <div>
+          <div class="ipp-ex__title">Completá con la preposición correcta</div>
+          <div class="ipp-ex__sub">Usá: <em>alle · dalle…alle · verso · fino alle · tra</em></div>
+        </div>
+      </div>
+      <div id="ex3"></div>
+    </div>
+
+    <!-- Ej 4: Completa diálogo barzelletta -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">4</div>
+        <div>
+          <div class="ipp-ex__title">Completá el diálogo de la <em>barzelletta</em></div>
+          <div class="ipp-ex__sub">Elegí la palabra correcta para cada espacio</div>
+        </div>
+      </div>
+      <div class="ipp-callout">
+        <strong>Uomo 1:</strong> Mi (1)___, mi sa (2)___ l'ora per favore?<br>
+        <strong>Uomo 2:</strong> Le (3)___.<br>
+        <strong>Uomo 1:</strong> Ma è (4)___?<br>
+        <strong>Uomo 2:</strong> Sì. Grazie.<br>
+        <strong>Uomo 1:</strong> Sono le 7:15 (5)___! Incredibile!
+      </div>
+      <div id="ex4"></div>
+    </div>
+
+    <!-- Ej 5: Saludos -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">5</div>
+        <div>
+          <div class="ipp-ex__title">¿Qué saludo corresponde?</div>
+          <div class="ipp-ex__sub">Son las… ¿qué decís según la situación?</div>
+        </div>
+      </div>
+      <div id="ex5"></div>
+    </div>
+
+    <!-- Ej 6: Ordena palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">6</div>
+        <div>
+          <div class="ipp-ex__title">Ordená las palabras</div>
+          <div class="ipp-ex__sub">Tocá las palabras en orden. Tocá una colocada para quitarla</div>
+        </div>
+      </div>
+      <div id="ex6"></div>
+    </div>
+
+    <!-- Ej 7: Mini diálogo preposiciones -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">7</div>
+        <div>
+          <div class="ipp-ex__title">Mini diálogo — ¿a qué hora?</div>
+          <div class="ipp-ex__sub">Seleccioná la preposición lógica</div>
+        </div>
+      </div>
+      <div id="ex7"></div>
+    </div>
+
+    <!-- Ej 8: V/F reglas -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">8</div>
+        <div>
+          <div class="ipp-ex__title">Vero o Falso — reglas gramaticales</div>
+          <div class="ipp-ex__sub">Poné a prueba tu comprensión de las reglas</div>
+        </div>
+      </div>
+      <div id="ex8"></div>
+    </div>
+
+    <!-- Ej 9: Artículo determinativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">9</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>determinativo</em></div>
+          <div class="ipp-ex__sub">il / lo / l' / la — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex9"></div>
+    </div>
+
+    <!-- Ej 10: Artículo indeterminativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">10</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>indeterminativo</em></div>
+          <div class="ipp-ex__sub">un / uno / una / un' — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex10"></div>
+    </div>
+
+    <!-- ════ CULTURA ════ -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head"><i class="ph ph-globe-hemisphere-west"></i> Cultura italiana — Il <em>campanile</em>: el reloj de todos</h3>
+      <p>Antes de los relojes de pulsera, los italianos usaban los repiques del campanario (<em>rintocchi del campanile</em>) para saber la hora. Cada pueblo tenía su campanario, y las campanas sonaban para marcar los momentos del día: la <em>sveglia al mattino</em>, il <em>pranzo a mezzogiorno</em>, il <em>vespro la sera</em>.</p>
+      <p>En muchos pueblos italianos esta tradición sigue viva. A veces, caminando por un pueblo toscano o umbro, se escucha el campanario dar las <em>«dodici spaccate»</em> al mediodía. ¡Justo como en la <em>barzelletta</em>!</p>
+      <p><strong>Curiosidad:</strong> La palabra <em>campanile</em> viene de <em>campana</em>. ¡El campanario más famoso del mundo es probablemente el de Pisa — la <strong>Torre pendente</strong> (inclinada)!</p>
+      <p><strong>Dato cultural:</strong> Italia tiene una larga tradición oral de <em>barzellette</em> (chistes). Se cuentan en familia, en el bar, en el trabajo. El humor juega con situaciones cotidianas — como pedir la hora — llevadas al absurdo. <em>È un classico!</em></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m4_g__) {
+window.__ipp_m4_g__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) {
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.05;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+
+/* ═══ Normalizar acentos ═══ */
+function _norm(s) {
+  return (s || '').toLowerCase().trim()
+    .replace(/['']/g, "'")
+    .replace(/[àá]/g, 'a').replace(/[éè]/g, 'e')
+    .replace(/[íì]/g, 'i').replace(/[óò]/g, 'o').replace(/[úù]/g, 'u')
+    .replace(/\s+/g, ' ');
+}
+function _esc(s) { return String(s).replace(/'/g, "\\'"); }
+
+/* ═══ DATA ═══ */
+var ORA = [
+  ['1:00',  "È l'una",                       'Es la una',                       '⭐ È (singular) — solo para la 1', false],
+  ['1:15',  "È l'una e un quarto",           'Es la una y cuarto',              '', false],
+  ['1:30',  "È l'una e mezza",               'Es la una y media',               '', false],
+  ['2:00',  'Sono le due',                    'Son las dos',                     'Sono (plural) para el resto', false],
+  ['3:20',  'Sono le tre e venti',            'Son las tres y veinte',           '', false],
+  ['4:45',  'Sono le cinque meno un quarto',  'Son las cinco menos cuarto',      'hora siguiente − <em>meno quarto</em>', false],
+  ['7:15',  'Sono le sette e un quarto',      'Son las siete y cuarto (del video)', '', false],
+  ['10:50', 'Sono le undici meno dieci',      'Son las once menos diez',         '', false],
+  ['12:00', 'È mezzogiorno',                  'Es mediodía / son las doce',      '⭐ Especial — È (singular)', true],
+  ['0:00',  'È mezzanotte',                   'Es medianoche',                   '⭐ Especial — È (singular)', true]
+];
+
+var CONFRONTO = [
+  ['7:15',  'le sette e quindici',         'le sette e un quarto'],
+  ['14:30', 'le quattordici e trenta',     'le due e mezza (del pomeriggio)'],
+  ['16:45', 'le sedici e quarantacinque',  'le cinque meno un quarto'],
+  ['20:45', 'le venti e quarantacinque',   'le nove meno un quarto (di sera)'],
+  ['22:00', 'le ventidue',                 'le dieci di sera']
+];
+
+/* Escribí la hora — multiple answers allowed */
+var SCRIVI = [
+  ['3:40',  ['tre e quaranta', 'le tre e quaranta', 'sono le tre e quaranta', 'quattro meno venti', 'le quattro meno venti']],
+  ['12:00', ['dodici', 'le dodici', 'mezzogiorno', 'è mezzogiorno', 'sono le dodici']],
+  ['8:20',  ['otto e venti', 'le otto e venti', 'sono le otto e venti']],
+  ['7:15',  ['sette e quindici', 'sette e un quarto', 'le sette e un quarto', 'sono le sette e un quarto']],
+  ['2:00',  ['due', 'le due', 'sono le due', 'quattordici', 'le quattordici']],
+  ['9:30',  ['nove e trenta', 'nove e mezza', 'le nove e mezza', 'sono le nove e mezza']]
+];
+
+var SALUTI = [
+  ['Buongiorno!',     '6:00 – 12:00',  'Buenos días',            'Al llegar y al despedirse por la mañana', 'f'],
+  ['Buon pomeriggio!','12:00 – 17:00', 'Buenas tardes',          'Menos común — más formal', 'f'],
+  ['Buonasera!',      '17:00 – 22:00', 'Buenas tardes/noches',   'Al <strong>LLEGAR Y al MARCHARSE</strong> por la tarde. También como despedida al salir de un restaurante de noche.', 'f'],
+  ['Buonanotte!',     '22:00 – 6:00',  'Buenas noches',          '⚠ <strong>EXCLUSIVO</strong> para despedirse antes de dormir. Nunca al llegar.', 'f'],
+  ['Salve!',          'todo el día',   'Hola (formal)',          'Válido a cualquier hora — formal y neutro', 'f']
+];
+
+var PREP = [
+  ['alle',         'a las (hora exacta)',          'Il treno parte alle otto.',                'El tren sale a las ocho.', 'f'],
+  ['verso',        'hacia / alrededor de',         'Arrivo verso le dieci.',                   'Llego hacia las diez.', 'f'],
+  ['fino alle',    'hasta las',                    'Il negozio è aperto fino alle venti.',     'La tienda está abierta hasta las 20:00.', 'f'],
+  ['dalle…alle',   'de… a… (horario)',             'Il museo è aperto dalle nove alle diciotto.', 'El museo está abierto de 9 a 18.', 'f'],
+  ['tra',          'dentro de (futuro)',           "Ci vediamo tra un'ora.",                   'Nos vemos en una hora.', 'f'],
+  ['prima di',     'antes de',                     'Mangio prima delle otto.',                 'Como antes de las ocho.', 'f'],
+  ['dopo',         'después de',                   'Vado al bar dopo il lavoro.',              'Voy al bar después del trabajo.', 'm']
+];
+
+var DET = [
+  ['il', 'Masc. singular — consonante (excepto s+cons., z, gn, ps, x, y)', 'il treno, il bar, il campanile, il caffè'],
+  ['lo', 'Masc. singular — s+cons., z, gn, ps, x, y',                       'lo zaino, lo studente, lo gnocco'],
+  ["l'", 'Masc. o Fem. singular — empieza con vocal (a, e, i, o, u)',       "l'ora, l'amico, l'amica, l'aeroporto"],
+  ['la', 'Fem. singular — consonante',                                       'la piazza, la sera, la metro, la donna']
+];
+
+var DET_EX = [
+  ['sport',     'lo',  's+cons. → lo'],
+  ['foto',      'la',  'fem.'],
+  ['film',      'il',  'masc., consonante'],
+  ['bambino',   'il',  'masc., consonante'],
+  ['amica',     "l'",  'fem. + vocal → elide'],
+  ['soluzione', 'la',  'fem.'],
+  ['casa',      'la',  'fem.'],
+  ['bar',       'il',  'masc., consonante'],
+  ['treno',     'il',  'masc., consonante'],
+  ['aeroporto', "l'",  'masc. + vocal → elide'],
+  ['albergo',   "l'",  'masc. + vocal → elide'],
+  ['colazione', 'la',  'fem.']
+];
+
+var INDET = [
+  ['un',  'Masc. singular — todos excepto s+cons., z, gn',  'un treno, un bar, un caffè, un amico'],
+  ['uno', 'Masc. singular — s+cons., z, gn, ps, x, y',      'uno zaino, uno studente, uno gnocco'],
+  ['una', 'Fem. singular — consonante',                      'una riunione, una sera, una donna, una piazza'],
+  ["un'", 'Fem. singular — empieza con vocal',               "un'ora, un'amica, un'idea, un'estate"]
+];
+
+var INDET_EX = [
+  ['sport',     'uno',  ''],
+  ['foto',      'una',  ''],
+  ['film',      'un',   ''],
+  ['bambino',   'un',   ''],
+  ['amica',     "un'",  "se usa <em>un'</em> con apóstrofo porque es femenino y empieza con vocal"],
+  ['soluzione', 'una',  ''],
+  ['casa',      'una',  ''],
+  ['bar',       'un',   ''],
+  ['treno',     'un',   ''],
+  ['aeroporto', 'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['albergo',   'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['colazione', 'una',  '']
+];
+
+var CONJ = [
+  ['e',     'y — une elementos',     'Sono le tre e un quarto.',                     'Son las tres y cuarto.', 'f'],
+  ['o',     'o — alternativas',      'Arrivi alle otto o alle nove?',                '¿Llegás a las ocho o a las nueve?', 'f'],
+  ['ma',    'pero — contraste',      'Voglio uscire, ma è tardi.',                   'Quiero salir, pero es tarde.', 'm'],
+  ['però',  'sin embargo',           'Il bar è aperto, però la cucina è chiusa.',    'El bar está abierto, sin embargo la cocina está cerrada.', 'f'],
+  ['quindi','entonces / así que',    'È tardi, quindi devo sbrigarmi.',              'Es tarde, así que debo apurarme.', 'm'],
+  ['anche', 'también',               'Vengo anche io alle sette.',                   'Yo también voy a las siete.', 'm']
+];
+
+/* === Datos de los 10 ejercicios H === */
+
+var EX1 = [
+  { hora: '3:00',  prefix: 'Sono le ___',         answers: ['tre', 'le tre', 'sono le tre'],                       pista: '<em>Sono le</em> + número' },
+  { hora: '7:15',  prefix: 'Sono le sette e ___', answers: ['un quarto', 'quindici', 'e un quarto', 'e quindici'], pista: '<em>e un quarto</em> = y cuarto' },
+  { hora: '12:00', prefix: 'È ___',                answers: ['mezzogiorno', 'è mezzogiorno'],                       pista: 'Especial — È mezzogiorno' },
+  { hora: '2:30',  prefix: 'Sono le due e ___',   answers: ['mezza', 'e mezza', 'trenta'],                          pista: '<em>e mezza</em> = y media' },
+  { hora: '9:45',  prefix: 'Sono le dieci meno ___', answers: ['un quarto', 'quindici', 'meno un quarto'],          pista: '<em>meno un quarto</em> = menos cuarto' }
+];
+
+var EX2 = [
+  { q: '¿Cómo se dice "son las 2 y media"?',
+    opts: ['sono le due mezza', 'sono le due e mezza', 'è le due e mezza', 'è due e mezza'],
+    ok:  'sono le due e mezza',
+    fb:  'Plural + <em>e</em> + mezza es la fórmula correcta.' },
+  { q: '¿Cómo se dice "es la una"?',
+    opts: ["è l'una", 'sono le una', 'è la una', "sono l'una"],
+    ok:  "è l'una",
+    fb:  'Singular con elisión: <em>È l\'una</em> (la 1 es la única que usa <em>è</em>).' },
+  { q: '¿Cuál expresa "aproximadamente las 3"?',
+    opts: ['alle tre in punto', 'dalle tre', 'verso le tre', 'fino alle tre'],
+    ok:  'verso le tre',
+    fb:  '<em>Verso</em> = hacia, alrededor de.' }
+];
+
+var EX3 = [
+  { q: '1. Il museo è aperto ___ 9 ___ 17.',
+    opts: ['alle 9 alle 17', 'dalle 9 alle 17', 'tra 9 e 17'],
+    ok:  'dalle 9 alle 17',
+    fb:  '<em>dalle…alle</em> = de…a (rango).' },
+  { q: '2. Il treno parte ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'tra'],
+    ok:  'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta).' },
+  { q: "3. Ci vediamo ___ un'ora. <em>(dentro de una hora)</em>",
+    opts: ['alle', 'verso', 'tra'],
+    ok:  'tra',
+    fb:  '<em>Tra</em> = dentro de (tiempo futuro).' },
+  { q: '4. Arrivo ___ le undici. <em>(aproximadamente las 11)</em>',
+    opts: ['alle', 'verso', 'fino alle'],
+    ok:  'verso',
+    fb:  '<em>Verso</em> indica aproximación.' }
+];
+
+var EX4 = [
+  { q: '(1) Mi ___ <em>(disculpe)</em>',
+    opts: ['scusi', 'sento', 'chiamo'], ok: 'scusi',
+    fb:  '<em>Mi scusi</em> = disculpe (formal).' },
+  { q: "(2) mi sa ___ l'ora <em>(decir)</em>",
+    opts: ['fare', 'dire', 'leggere'], ok: 'dire',
+    fb:  '<em>Dire</em> = decir.' },
+  { q: '(3) Le ___ <em>(5:35)</em>',
+    opts: ['tre e trenta', 'sette e quindici', 'cinque e trentacinque'], ok: 'cinque e trentacinque',
+    fb:  '5:35 = <em>cinque e trentacinque</em>.' },
+  { q: '(4) Ma è ___? <em>(¿está seguro?)</em>',
+    opts: ['sicuro', 'pronto', 'certo'], ok: 'sicuro',
+    fb:  '<em>Sicuro</em> = seguro.' },
+  { q: '(5) Sono le 7:15 ___! <em>(en punto exacto)</em>',
+    opts: ['circa', 'quasi', 'spaccate'], ok: 'spaccate',
+    fb:  '<em>Spaccate</em> = exactas, en punto (italiano coloquial).' }
+];
+
+var EX5 = [
+  { q: 'Son las <strong>9:00</strong> de la mañana. Llegás a la oficina. Decís:',
+    opts: ['Buongiorno!', 'Buonanotte!', 'Buonasera!'], ok: 'Buongiorno!',
+    fb:  '<em>Buongiorno</em> = 6:00–12:00, al llegar por la mañana.' },
+  { q: 'Son las <strong>19:30</strong>. Entrás a un restaurante. Decís:',
+    opts: ['Buongiorno!', 'Buon pomeriggio!', 'Buonasera!'], ok: 'Buonasera!',
+    fb:  '<em>Buonasera</em> = 17:00–22:00, al llegar por la tarde/noche.' },
+  { q: 'Son las <strong>23:00</strong>. Te vas a dormir. Le decís a tu compañero:',
+    opts: ['Buonasera!', 'Buonanotte!', 'Buongiorno!'], ok: 'Buonanotte!',
+    fb:  '⚠ <em>Buonanotte</em> = SOLO para despedirse antes de dormir.' }
+];
+
+var EX6 = [
+  { label: '',
+    pool: ['sono', 'che', 'ore', 'dire', 'mi', 'sa', '?'],
+    answer: ['mi', 'sa', 'dire', 'che', 'ore', 'sono', '?'] },
+  { label: '',
+    pool: ['diciotto', 'aperto', 'nove', 'museo', 'dalle', 'Il', 'alle', 'è'],
+    answer: ['Il', 'museo', 'è', 'aperto', 'dalle', 'nove', 'alle', 'diciotto'] },
+  { label: '',
+    pool: ['alle 11', 'colazione', 'dalle 7', 'la', 'serviamo'],
+    answer: ['serviamo', 'la', 'colazione', 'dalle 7', 'alle 11'] },
+  { label: '',
+    pool: ['otto e trenta', 'apre', 'banca', 'alle', 'la'],
+    answer: ['la', 'banca', 'apre', 'alle', 'otto e trenta'] },
+  { label: '',
+    pool: ['il check-out', 'ora', 'è', 'a', 'che', '?'],
+    answer: ['a', 'che', 'ora', 'è', 'il check-out', '?'] }
+];
+
+var EX7 = [
+  { q: '— A che ora apre la farmacia? — Apre ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'fino alle'], ok: 'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta de apertura).' },
+  { q: '— Fino a che ora servite la colazione? — ___ undici.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'fino alle',
+    fb:  '<em>Fino alle</em> = hasta las.' },
+  { q: '— A che ora arrivi? — Arrivo ___ le tre, non sono sicuro.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'verso',
+    fb:  '<em>Verso</em> = aproximadamente (cuando no es seguro).' },
+  { q: '— Da che ora è la colazione? — È ___ sette.',
+    opts: ['alle', 'dalle', 'verso'], ok: 'dalle',
+    fb:  '<em>Dalle</em> = desde las (inicio del horario).' }
+];
+
+var EX8 = [
+  { stmt: 'Para la 1:00 se dice <em>"Sono l\'una"</em>.',
+    ans: false,
+    fb:  'La forma correcta es <em>"È l\'una"</em> — la 1 usa <em>essere</em> singular.' },
+  { stmt: '<em>"Verso le cinque"</em> significa "alrededor de las 5".',
+    ans: true,
+    fb:  '<em>Verso</em> = hacia / alrededor de. Se usa para horarios aproximados.' },
+  { stmt: '<em>"Buonanotte"</em> se puede usar al llegar a un lugar por la noche.',
+    ans: false,
+    fb:  '<em>Buonanotte</em> es SOLO para despedirse antes de dormir. Para llegar de noche: <em>Buonasera</em>.' },
+  { stmt: 'El horario de 24h se usa en estaciones y aeropuertos.',
+    ans: true,
+    fb:  'El horario de 24h es estándar en transporte, hospitales y oficinas.' },
+  { stmt: '<em>"Spaccate"</em> y <em>"in punto"</em> significan lo mismo: en punto exacto.',
+    ans: true,
+    fb:  'Son sinónimos — ambos expresan exactitud. <em>Spaccate</em> es más coloquial e italiano típico.' }
+];
+
+var EX9 = [
+  { q: '___ treno <em>(el tren — masc., consonante)</em>',
+    opts: ['il treno', 'lo treno', 'la treno'], ok: 'il treno' },
+  { q: '___ ora <em>(la hora — fem., vocal)</em>',
+    opts: ['la ora', 'il ora', "l'ora"], ok: "l'ora" },
+  { q: '___ studente <em>(el estudiante — masc., empieza con st-)</em>',
+    opts: ['il studente', 'lo studente', "l'studente"], ok: 'lo studente' },
+  { q: '___ piazza <em>(la plaza — fem., consonante)</em>',
+    opts: ['la piazza', 'il piazza', "l'piazza"], ok: 'la piazza' },
+  { q: '___ amico <em>(el amigo — masc., vocal)</em>',
+    opts: ['il amico', 'lo amico', "l'amico"], ok: "l'amico" },
+  { q: '___ sera <em>(la tarde — fem., consonante)</em>',
+    opts: ['la sera', 'il sera', "l'sera"], ok: 'la sera' }
+];
+
+var EX10 = [
+  { q: '___ caffè <em>(un café — masc., consonante)</em>',
+    opts: ['un caffè', 'uno caffè', 'una caffè'], ok: 'un caffè' },
+  { q: '___ riunione <em>(una reunión — fem., consonante)</em>',
+    opts: ['un riunione', 'uno riunione', 'una riunione'], ok: 'una riunione' },
+  { q: '___ zaino <em>(una mochila — masc., empieza con z)</em>',
+    opts: ['un zaino', 'uno zaino', 'una zaino'], ok: 'uno zaino' },
+  { q: '___ ora <em>(una hora — fem., vocal)</em>',
+    opts: ['una ora', 'un ora', "un'ora"], ok: "un'ora" },
+  { q: '___ amica <em>(una amiga — fem., vocal)</em>',
+    opts: ["un'amica", 'una amica', 'un amica'], ok: "un'amica" },
+  { q: '___ bar <em>(un bar — masc., consonante)</em>',
+    opts: ['un bar', 'uno bar', 'una bar'], ok: 'un bar' }
+];
+
+/* ═══ BUILDERS ═══ */
+
+function buildOra() {
+  var html = '';
+  ORA.forEach(function(o) {
+    var cls = o[4] ? 'highlight' : '';
+    var clave = o[3] ? '<span class="star">'+o[3].replace('⭐ ','')+'</span>' : '';
+    html += '<tr class="'+cls+'">'+
+              '<td class="time">'+o[0]+'</td>'+
+              '<td class="it">'+o[1]+'</td>'+
+              '<td>'+o[2]+'</td>'+
+              '<td>'+clave+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(o[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('oraBody').innerHTML = html;
+}
+
+function buildConfr() {
+  var html = '';
+  CONFRONTO.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="time">'+c[0]+'</td>'+
+              '<td class="it">'+c[1]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('confrBody').innerHTML = html;
+}
+
+function buildScrivi() {
+  var html = '';
+  SCRIVI.forEach(function(s, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+s[0]+'</td>'+
+              '<td><input class="ipp-fill" type="text" placeholder="escribí…" data-idx="'+i+'"></td>'+
+            '</tr>';
+  });
+  document.getElementById('scriviBody').innerHTML = html;
+}
+
+function buildSaluti() {
+  var html = '';
+  SALUTI.forEach(function(s) {
+    html += '<tr>'+
+              '<td class="it">'+s[0]+'</td>'+
+              '<td>'+s[1]+'</td>'+
+              '<td>'+s[2]+'</td>'+
+              '<td>'+s[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(s[0])+'\',0.85,\''+s[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('salutiBody').innerHTML = html;
+}
+
+function buildPrep() {
+  var html = '';
+  PREP.forEach(function(p) {
+    html += '<tr>'+
+              '<td class="it" style="font-weight:700;">'+p[0]+'</td>'+
+              '<td>'+p[1]+'</td>'+
+              '<td class="it">'+p[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+p[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(p[2])+'\',0.82,\''+p[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('prepBody').innerHTML = html;
+}
+
+function buildDet() {
+  var html = '';
+  DET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('detBody').innerHTML = html;
+}
+
+function buildIndet() {
+  var html = '';
+  INDET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetBody').innerHTML = html;
+}
+
+function buildDetEx() {
+  var html = '';
+  DET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="il">il</option>'+
+                  '<option value="lo">lo</option>'+
+                  "<option value=\"l'\">l'</option>"+
+                  '<option value="la">la</option>'+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('detExBody').innerHTML = html;
+}
+
+function buildIndetEx() {
+  var html = '';
+  INDET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="un">un</option>'+
+                  '<option value="uno">uno</option>'+
+                  '<option value="una">una</option>'+
+                  "<option value=\"un'\">un'</option>"+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetExBody').innerHTML = html;
+}
+
+function buildConj() {
+  var html = '';
+  CONJ.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.1rem;font-weight:700;">'+c[0]+'</td>'+
+              '<td>'+c[1]+'</td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+c[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\''+c[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('conjBody').innerHTML = html;
+}
+
+function buildEx1() {
+  var html = '';
+  EX1.forEach(function(e, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+e.hora+'</td>'+
+              '<td>'+e.prefix.replace('___', '<input class="ipp-fill" type="text" data-idx="'+i+'" placeholder="…">')+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('ex1Body').innerHTML = html;
+}
+
+function buildMC(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-mc" data-idx="'+i+'" data-ok="'+item.ok.replace(/"/g,'&quot;')+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-mc__q"><span class="ipp-mc__num">'+(i+1)+'</span>'+item.q+'</div>'+
+              '<div class="ipp-mc__opts">';
+    item.opts.forEach(function(opt) {
+      html += '<button class="ipp-mcbtn" onclick="pickMC(this)">'+opt+'</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildVF(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-vf" data-idx="'+i+'" data-ans="'+item.ans+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-vf__stmt"><span class="ipp-vf__num">'+(i+1)+'</span>'+item.stmt+'</div>'+
+              '<div class="ipp-vf__btns">'+
+                '<button class="ipp-vfbtn" data-pick="true" onclick="pickVF(this)"><i class="ph ph-check"></i> Verdadero</button>'+
+                '<button class="ipp-vfbtn" data-pick="false" onclick="pickVF(this)"><i class="ph ph-x"></i> Falso</button>'+
+              '</div>'+
+              '<div class="ipp-fb"></div>'+
+            '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildSort(data, containerId) {
+  var html = '';
+  data.forEach(function(s, i) {
+    var labelText = s.label ? (i+1)+'. '+s.label : (i+1)+'.';
+    html += '<div class="ipp-sort" data-idx="'+i+'" data-answer="'+s.answer.join('|')+'">'+
+              '<div class="ipp-sort__label">'+labelText+'</div>'+
+              '<div class="ipp-sort__pool">';
+    s.pool.forEach(function(w) {
+      html += '<button class="ipp-sortbtn" onclick="pickSort(this)">'+w+'</button>';
+    });
+    html += '</div>'+
+            '<div class="ipp-sort__zone"></div>'+
+            '<button class="ipp-btn" onclick="checkSort(this)" style="margin-top:0.4rem;font-size:0.78rem;padding:0.4rem 0.95rem;"><i class="ph ph-check-circle"></i> Verificar</button>'+
+            '<div class="ipp-fb" style="margin-top:0.5rem;"></div>'+
+          '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+/* ═══ INTERACTION ═══ */
+/* Helper: agrega un botón "Reintentar" al container que ejecuta resetFn() */
+function _addRetry(container, resetFn) {
+  var old = container.querySelector(':scope > .ipp-retry-mini');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry-mini';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+function pickMC(btn) {
+  var item = btn.closest('.ipp-mc');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var correct = item.dataset.ok;
+  var pickFb = item.dataset.fb;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+    b.disabled = true;
+    if (b.textContent.trim() === correct && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickVF(btn) {
+  var item = btn.closest('.ipp-vf');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var ans = item.dataset.ans === 'true';
+  var picked = btn.dataset.pick === 'true';
+  var ok = picked === ans;
+  var pickFb = item.dataset.fb;
+  item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+    b.disabled = true;
+    if ((b.dataset.pick === 'true') === ans && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickSort(btn) {
+  if (btn.classList.contains('used')) return;
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  btn.classList.add('used');
+  var placed = document.createElement('span');
+  placed.className = 'ipp-sort__placed';
+  placed.textContent = btn.textContent;
+  placed.dataset.word = btn.textContent;
+  placed.onclick = function() {
+    btn.classList.remove('used');
+    placed.remove();
+  };
+  zone.appendChild(placed);
+}
+
+function checkSort(btn) {
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  var fb = sort.querySelector('.ipp-fb');
+  var answer = sort.dataset.answer.split('|');
+  var placed = Array.from(zone.querySelectorAll('.ipp-sort__placed')).map(function(p) { return p.dataset.word; });
+  var ok = placed.length === answer.length && placed.every(function(w, i) { return w === answer[i]; });
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfecto!</strong> La frase es correcta.';
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> <strong>No exactamente.</strong> Orden correcto: <em>"' + answer.join(' ') + '"</em>.';
+    fb.className = 'ipp-fb err';
+  }
+  _addRetry(sort, function() {
+    zone.innerHTML = '';
+    sort.querySelectorAll('.ipp-sortbtn').forEach(function(b) { b.classList.remove('used'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+/* Inputs check */
+function checkInputs(rows, getAnswers) {
+  var anyEmpty = false;
+  rows.forEach(function(row, i) {
+    var inp = row.querySelector('input.ipp-fill, select.ipp-fill');
+    if (!inp) return;
+    var val = inp.value;
+    inp.classList.remove('ok','err');
+    if (!val || val.trim() === '') { anyEmpty = true; return; }
+    var answers = getAnswers(i);
+    var found = answers.some(function(a) {
+      return _norm(val) === _norm(a);
+    });
+    inp.classList.add(found ? 'ok' : 'err');
+  });
+}
+
+function checkScrivi() {
+  var rows = document.querySelectorAll('#scriviBody tr');
+  checkInputs(rows, function(i) { return SCRIVI[i][1]; });
+  var inlineEx = document.getElementById('scriviBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkEx1() {
+  var rows = document.querySelectorAll('#ex1Body tr');
+  checkInputs(rows, function(i) { return EX1[i].answers; });
+  var ex = document.getElementById('ex1Body').closest('.ipp-ex');
+  _addRetry(ex, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkDetEx() {
+  var rows = document.querySelectorAll('#detExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === DET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('detExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkIndetEx() {
+  var rows = document.querySelectorAll('#indetExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === INDET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('indetExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+window.ippStop = ippStop;
+window.pickMC = pickMC;
+window.pickVF = pickVF;
+window.pickSort = pickSort;
+window.checkSort = checkSort;
+window.checkScrivi = checkScrivi;
+window.checkEx1 = checkEx1;
+window.checkDetEx = checkDetEx;
+window.checkIndetEx = checkIndetEx;
+
+buildOra();
+buildConfr();
+buildScrivi();
+buildSaluti();
+buildPrep();
+buildDet();
+buildDetEx();
+buildIndet();
+buildIndetEx();
+buildConj();
+buildEx1();
+buildMC(EX2, 'ex2');
+buildMC(EX3, 'ex3');
+buildMC(EX4, 'ex4');
+buildMC(EX5, 'ex5');
+buildSort(EX6, 'ex6');
+buildMC(EX7, 'ex7');
+buildVF(EX8, 'ex8');
+buildMC(EX9, 'ex9');
+buildMC(EX10, 'ex10');
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 4 — Gramática ===== -->

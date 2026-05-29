@@ -1,0 +1,1451 @@
+<!-- ===== BLOQUE: Unità 3 — Descubrimiento · Una notte a Roma ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(120,166,186,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0;
+    flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.88rem;
+    color: var(--mc-text); line-height: 1.65;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Vocab grid ===== */
+  .ipp-vocab {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-vocab__chip {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: var(--r);
+    padding: 0.95rem 0.75rem 0.85rem;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.35rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__chip:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120,166,186,0.2);
+  }
+  .ipp-vocab__icon {
+    font-size: 1.5rem;
+    color: var(--mc);
+  }
+  .ipp-vocab__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    text-align: center; line-height: 1.3;
+  }
+  .ipp-vocab__es {
+    font-size: 0.74rem; color: #777;
+    text-align: center; line-height: 1.4;
+  }
+  .ipp-vocab__btn {
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--mc-bg);
+    border: 1px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.7rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Frases ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 10px rgba(120,166,186,0.18); }
+  .ipp-frase.spk-m { border-left-color: var(--m-spk); }
+  .ipp-frase__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+  }
+  .ipp-frase.spk-m .ipp-frase__icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.93rem; font-weight: 600;
+    color: var(--mc-text); line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.77rem; color: #888;
+    font-style: italic; line-height: 1.4;
+  }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-frase.spk-m .ipp-frase__btn { border-color: var(--m-spk); color: var(--m-spk); background: var(--m-bg); }
+  .ipp-frase.spk-m .ipp-frase__btn:hover { background: var(--m-spk); color: var(--white); }
+
+  /* ===== Controles "Escuchar todo" / "Detener" ===== */
+  .ipp-seq-intro {
+    background: #e8f5ec;
+    border-left: 3px solid var(--ok-bd);
+    border-radius: 6px;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--ok-tx);
+    line-height: 1.55;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .ipp-seq-intro .ph { color: var(--ok-bd); flex-shrink: 0; margin-top: 2px; font-size: 1rem; }
+  .ipp-seq-intro strong { color: var(--ok-tx); }
+  .ipp-seq-ctrl {
+    display: flex; gap: 0.55rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: var(--cream);
+    border-radius: var(--r);
+  }
+  .ipp-seq-btn {
+    padding: 0.55rem 1.15rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 700;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.18s;
+    border: 2px solid var(--mc);
+  }
+  .ipp-seq-btn--play { background: var(--mc); color: var(--white); }
+  .ipp-seq-btn--play:hover { background: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop { background: transparent; color: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop:hover { background: var(--mc-bg); }
+
+  /* Estado "activo" (línea siendo reproducida en secuencia) */
+  .ipp-frase.is-playing,
+  .ipp-dial__row.is-playing {
+    outline: 2px solid var(--mc);
+    outline-offset: 3px;
+    background: var(--mc-bg);
+    transition: outline 0.25s, background 0.25s;
+  }
+  .ipp-dial__row.is-playing .ipp-dial__bubble {
+    box-shadow: 0 0 0 2px var(--mc);
+  }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-num {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+    cursor: pointer; transition: all 0.2s;
+    position: relative;
+  }
+  .ipp-num:hover {
+    border-color: var(--mc);
+    box-shadow: 0 3px 10px rgba(120,166,186,0.18);
+    transform: translateY(-2px);
+  }
+  .ipp-num__big {
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--mc); display: block;
+    line-height: 1.1;
+  }
+  .ipp-num__it {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--mc-text); font-style: italic;
+    margin: 0.25rem 0 0.15rem;
+  }
+  .ipp-num__note {
+    font-size: 0.68rem; color: var(--mc-dk);
+    line-height: 1.3;
+  }
+
+  /* ===== Días ===== */
+  .ipp-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+  .ipp-day {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.5rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-day:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(120,166,186,0.18);
+  }
+  .ipp-day__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ipp-day__it {
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    display: block;
+  }
+  .ipp-day__es { font-size: 0.7rem; color: #888; margin-top: 0.15rem; }
+
+  /* Día activity */
+  .ipp-day-act {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-day-act__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--mc-text); margin: 0 0 0.5rem;
+  }
+  .ipp-day-act__sub {
+    font-size: 0.8rem; color: #777; margin: 0 0 0.85rem;
+  }
+  .ipp-day-pool { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+  .ipp-day-opt {
+    padding: 0.4rem 0.95rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-text);
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-day-opt:hover { background: var(--mc); color: var(--white); }
+  .ipp-day-opt.selected { background: var(--mc); color: var(--white); opacity: 0.5; cursor: not-allowed; }
+  .ipp-day-zone {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    min-height: 48px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.55rem;
+    margin-bottom: 0.85rem;
+    border: 2px dashed var(--mc-bg);
+  }
+  .ipp-day-tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc); color: var(--white);
+    border-radius: 16px;
+    font-size: 0.82rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-day-tag__close {
+    cursor: pointer; font-size: 0.95rem;
+    line-height: 1; opacity: 0.8;
+  }
+  .ipp-day-tag__close:hover { opacity: 1; }
+
+  /* ===== Diálogo ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+  .ipp-dial__sub {
+    font-size: 0.8rem; color: #888; margin: 0 0 1rem;
+  }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 1rem;
+  }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon {
+    background: var(--m-bg); color: var(--m-spk);
+  }
+  .ipp-dial__bubble {
+    padding: 0.7rem 1rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 85%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.92rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.55;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.76rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.25rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Plurales ===== */
+  .ipp-plurals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .ipp-plural {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.9rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-plural:focus-within { border-color: var(--mc); }
+  .ipp-plural__sing {
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    margin-bottom: 0.45rem;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .ipp-plural__sing .ph { color: var(--mc); font-size: 1.1rem; }
+  .ipp-plural__inp {
+    width: 100%;
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-family: inherit; font-size: 0.88rem;
+    color: var(--black); background: var(--cream);
+    outline: none; transition: border 0.2s;
+  }
+  .ipp-plural__inp:focus { border-color: var(--mc); background: var(--white); }
+  .ipp-plural__inp.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-plural__inp.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-plural__note {
+    font-size: 0.72rem; color: #888;
+    margin-top: 0.35rem; font-style: italic;
+    line-height: 1.4;
+    display: none;
+  }
+  .ipp-plural__note.show { display: block; }
+
+  .ipp-check-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.65rem 1.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer;
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s;
+  }
+  .ipp-check-btn:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.86rem; line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid #c89500; }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+
+  /* ===== Fonética ===== */
+  .ipp-fon-intro {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--mc-bg);
+    margin-bottom: 1rem;
+    font-size: 0.88rem; color: #555;
+    line-height: 1.65;
+  }
+  .ipp-fon-intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    border: 1.5px solid var(--mc-bg);
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+  .ipp-fon-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+    text-align: left;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-fon-table td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-fon-table tr:last-child td { border-bottom: none; }
+  .ipp-fon-table tr:nth-child(even) td { background: #f5fafb; }
+  .ipp-fon-table td:first-child {
+    font-weight: 700; color: var(--mc-text); font-style: italic;
+  }
+  .ipp-fon-table td em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-sound {
+    display: inline-block;
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.15rem 0.65rem;
+    border-radius: 12px;
+    font-weight: 700; font-size: 0.82rem;
+  }
+  .ipp-fon-play {
+    padding: 0.2rem 0.6rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* Fonética: ejercicio botones [k]/[g] o [tʃ]/[dʒ] */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 0.45rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.82rem; color: #777;
+    margin: 0 0 1rem; line-height: 1.55;
+  }
+  .ipp-fonex__list {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-fonex__item {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__score {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 0.95rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-vocab { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-fon-table { font-size: 0.78rem; }
+    .ipp-fon-table th, .ipp-fon-table td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+</style>
+
+<!-- Stop fab -->
+<button class="ipp-stop-fab" id="ippStopFab" onclick="ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-buildings ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 3 · A1 · Descubrimiento</div>
+    <h1 class="ipp-hero__title">Una notte a Roma</h1>
+    <p class="ipp-hero__subtitle">Acabas de ver el check-in en el <em>Casalunga Golf Resort</em>. Ahora vas a explorar el vocabulario, las frases y los sonidos de esa escena — todo a tu ritmo.</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- SOFIA BIENVENIDA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <h3 class="ipp-sofia__head">Benvenuti!</h3>
+        <p>En el video que viste, Giulia recibe a los señores Baldini con una frase que lo dice todo: <em>«Benvenuti al Casalunga Golf Resort!»</em> — y ahí empieza todo. Un check-in en italiano es una pequeña obra de teatro: hay cortesía, preguntas precisas, números exactos y mil cosas que aprender.</p>
+        <p>En esta etapa vas a <strong>explorar todo ese vocabulario</strong>, escuchar las frases reales del video, descubrir cómo funcionan los números grandes (150 euros, habitación 1001…) y notar algunos patrones del italiano que aparecen una y otra vez.</p>
+        <p>¡No hay apuro! Andá al ritmo que quieras. Hacé clic en los botones de audio, jugá con los ejercicios. ¿Listo?</p>
+      </div>
+    </div>
+
+    <!-- ① VOCABULARIO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title"><i class="ph ph-house"></i> Vocabolario dell'hotel</h2>
+      <p class="ipp-sub">17 palabras clave del check-in. Hacé clic en cada tarjeta para escuchar la pronunciación.</p>
+      <div class="ipp-vocab" id="vocabGrid"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ② FRASES REALES -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title"><i class="ph ph-film-strip"></i> Frasi reali dal video</h2>
+      <p class="ipp-sub">Las 10 frases más importantes del check-in, tal cual las escuchaste. Notar el ritmo del italiano es tan importante como entender las palabras.</p>
+
+      <div class="ipp-seq-intro">
+        <i class="ph ph-info"></i>
+        <span>¿Cómo funciona? Clic en <i class="ph ph-play"></i> junto a cada frase para escucharla. Clic en <strong>"Escuchar todo"</strong> para reproducir desde el inicio.</span>
+      </div>
+      <div class="ipp-seq-ctrl">
+        <button class="ipp-seq-btn ipp-seq-btn--play" onclick="playAllSeq('FRASES','frasesList')"><i class="ph ph-play"></i> Escuchar todo</button>
+        <button class="ipp-seq-btn ipp-seq-btn--stop" onclick="stopAllSeq()"><i class="ph ph-stop-circle"></i> Detener</button>
+      </div>
+
+      <div class="ipp-frases" id="frasesList"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ③ NÚMEROS -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title"><i class="ph ph-currency-eur"></i> Numeri grandi — i prezzi dell'hotel</h2>
+      <p class="ipp-sub">Hacé clic en cada número para escuchar cómo se dice en italiano. Las notas señalan los números que aparecen en el video.</p>
+      <div class="ipp-nums" id="numsGrid"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ④ DÍAS -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title"><i class="ph ph-calendar"></i> Giorni della settimana</h2>
+      <p class="ipp-sub">Cuando reservás un hotel, los días importan mucho. Hacé clic en cada día para escucharlo.</p>
+      <div class="ipp-days" id="daysGrid"></div>
+
+      <div class="ipp-day-act">
+        <h4 class="ipp-day-act__head">¿Podés ordenar los días de la semana?</h4>
+        <p class="ipp-day-act__sub">Seleccioná los días en el orden correcto (de lunes a domingo). Hacé clic para agregar, tocá la × para quitar.</p>
+        <div class="ipp-day-pool" id="dayPool"></div>
+        <div class="ipp-day-zone" id="dayZone"></div>
+        <button class="ipp-check-btn" onclick="checkDays()"><i class="ph ph-check-circle"></i> Verificar orden</button>
+        <div class="ipp-fb" id="daysFb"></div>
+      </div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑤ DIÁLOGO COMPLETO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title"><i class="ph ph-chats-circle"></i> Il check-in completo — diálogo del video</h2>
+      <p class="ipp-sub">El diálogo entre Giulia y los señores Baldini.</p>
+
+      <div class="ipp-seq-intro">
+        <i class="ph ph-info"></i>
+        <span>¿Cómo funciona? Clic en <i class="ph ph-play"></i> junto a cada línea para escuchar esa parte. Clic en <strong>"Escuchar todo"</strong> para reproducir desde el inicio.</span>
+      </div>
+      <div class="ipp-seq-ctrl">
+        <button class="ipp-seq-btn ipp-seq-btn--play" onclick="playAllSeq('DIALOG','dialLines')"><i class="ph ph-play"></i> Escuchar todo</button>
+        <button class="ipp-seq-btn ipp-seq-btn--stop" onclick="stopAllSeq()"><i class="ph ph-stop-circle"></i> Detener</button>
+      </div>
+
+      <div class="ipp-dial">
+        <div class="ipp-dial__head">Check-in en el Casalunga Golf Resort</div>
+        <p class="ipp-dial__sub">Conversación formal · hotel</p>
+        <div id="dialLines"></div>
+      </div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑥ PLURALES -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑥</div>
+      <h2 class="ipp-title"><i class="ph ph-pencil-line"></i> Singular → Plural</h2>
+      <p class="ipp-sub">¿Cómo cambian las palabras cuando hay más de uno? Completá los plurales basándote en las frases que escuchaste en el video.</p>
+
+      <div class="ipp-plurals" id="pluralsGrid"></div>
+      <button class="ipp-check-btn" onclick="checkPlurals()"><i class="ph ph-check-circle"></i> Verificar plurales</button>
+      <div class="ipp-fb" id="pluralsFb"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑦ FONÉTICA -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑦</div>
+      <h2 class="ipp-title"><i class="ph ph-music-note"></i> I suoni del italiano</h2>
+      <p class="ipp-sub">Descubrí cómo suenan la <em>C</em> y la <em>G</em> en italiano.</p>
+
+      <div class="ipp-fon-intro">
+        El italiano tiene algo curioso: la misma letra puede sonar diferente según qué letra viene después. Escuchá estos pares de palabras del video y fijate si suenan igual o diferente. No hace falta memorizar reglas — ¡el oído lo capta solo!
+      </div>
+
+      <table class="ipp-fon-table">
+        <thead>
+          <tr><th>Letra + vocal</th><th>Sonido</th><th>Ejemplo del hotel</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ca / co / cu</td><td><span class="ipp-fon-sound">[k] como "k"</span></td><td><em>camera, colazione, culla</em></td><td><button class="ipp-fon-play" onclick="ippAudio('camera, colazione, culla', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+          <tr><td>ce / ci</td><td><span class="ipp-fon-sound">[tʃ] como "ch"</span></td><td><em>certamente, ci ricorda</em></td><td><button class="ipp-fon-play" onclick="ippAudio('certamente, ci ricorda', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+          <tr><td>che / chi</td><td><span class="ipp-fon-sound">[k] como "k"</span></td><td><em>chiavi, che fortuna</em></td><td><button class="ipp-fon-play" onclick="ippAudio('chiavi, che fortuna', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+          <tr><td>ga / go / gu</td><td><span class="ipp-fon-sound">[g] como "g" en "gato"</span></td><td><em>garage, grazie</em></td><td><button class="ipp-fon-play" onclick="ippAudio('garage, grazie', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+          <tr><td>ge / gi</td><td><span class="ipp-fon-sound">[dʒ] como "y" rioplatense</span></td><td><em>Giulia, giorno</em></td><td><button class="ipp-fon-play" onclick="ippAudio('Giulia, buongiorno', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+          <tr><td>ghe / ghi</td><td><span class="ipp-fon-sound">[g] como "g" en "gato"</span></td><td><em>spaghetti, ghiaccio</em></td><td><button class="ipp-fon-play" onclick="ippAudio('spaghetti, ghiaccio', 0.75, 'f')"><i class="ph ph-speaker-high"></i></button></td></tr>
+        </tbody>
+      </table>
+
+      <div class="ipp-fonex">
+        <h4 class="ipp-fonex__head">Clasificá estas palabras según su sonido</h4>
+        <p class="ipp-fonex__sub">Marcá <strong>[k] [g]</strong> o <strong>[tʃ] [dʒ]</strong> para cada palabra. Hacé clic en <i class="ph ph-speaker-high"></i> para escucharla primero.</p>
+        <div class="ipp-fonex__list" id="fonexList"></div>
+        <div class="ipp-fonex__score" id="fonexScore"></div>
+        <div class="ipp-fb" id="fonexFb"></div>
+      </div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑧ FRASES ÚTILES -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑧</div>
+      <h2 class="ipp-title"><i class="ph ph-chat-circle-dots"></i> Frasi utili in hotel</h2>
+      <p class="ipp-sub">Estas son las frases que vas a necesitar cuando viajes a Italia.</p>
+      <div class="ipp-vocab" id="utilsList"></div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m3_e2__) {
+window.__ipp_m3_e2__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) {
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.10;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  if (typeof _seqState !== 'undefined') _seqState = null;
+  document.querySelectorAll('.is-playing').forEach(function(e) { e.classList.remove('is-playing'); });
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+function ippRetry(container, resetFn) {
+  var old = container.querySelector('.ipp-retry');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+/* ═══ DATA ═══ */
+var VOCAB = [
+  ['ph-house',              'albergo',           'hotel',                       'f'],
+  ['ph-house-line',         'pensione',          'pensión / hostal',            'f'],
+  ['ph-bed',                'camera singola',    'habitación individual',       'f'],
+  ['ph-bed',                'camera doppia',     'habitación doble',            'f'],
+  ['ph-coffee',             'colazione',         'desayuno',                    'f'],
+  ['ph-baby',               'culla',             'cuna (para bebé)',            'f'],
+  ['ph-key',                'chiavi',            'llaves',                      'f'],
+  ['ph-phone',              'portineria',        'recepción / conserjería',     'f'],
+  ['ph-car',                'garage / parcheggio','garage / estacionamiento',   'f'],
+  ['ph-identification-card','documenti',         'documentos / DNI',            'f'],
+  ['ph-pen-nib',            'firma',             'firma',                       'f'],
+  ['ph-currency-eur',       'supplemento',       'suplemento / cargo extra',    'f'],
+  ['ph-hand-waving',        'benvenuti',         'bienvenidos',                 'f'],
+  ['ph-umbrella-simple',    'soggiorno',         'estancia / estadía',          'f'],
+  ['ph-suitcase-rolling',   'partenza',          'salida / partida',            'f'],
+  ['ph-clipboard-text',     'prenotazione',      'reserva',                     'f'],
+  ['ph-traffic-cone',       'traffico',          'tráfico',                     'f']
+];
+
+var FRASES = [
+  ['f','Buongiorno, come posso esservi utile?',                    '¿Buenos días, en qué les puedo ayudar?'],
+  ['m','Abbiamo prenotato una camera a nome Baldini.',             'Reservamos una habitación a nombre de Baldini.'],
+  ['f','Benvenuti al Casalunga Golf Resort!',                      '¡Bienvenidos al Casalunga Golf Resort!'],
+  ['f','È andato bene il viaggio?',                                '¿Fue bien el viaje?'],
+  ['f','Il prezzo è di 150 euro a notte, comprensivo di prima colazione.', 'El precio es de 150 euros por noche, incluyendo el desayuno.'],
+  ['f','Cortesemente, potrei avere i vostri documenti?',           '¿Podría tener sus documentos, por favor?'],
+  ['f','Non si preoccupi.',                                        'No se preocupe.'],
+  ['f','Potete pagare tutto alla vostra partenza.',                'Pueden pagar todo al momento de su salida.'],
+  ['f','Vi auguro un buon soggiorno!',                             '¡Les deseo una buena estadía!'],
+  ['f','Per qualsiasi cosa chiamate in portineria, tasto 9.',      'Para cualquier cosa llamen a la conserjería, tecla 9.']
+];
+
+var NUMS = [
+  [100,  'cento',           ''],
+  [150,  'centocinquanta',  '→ precio habitación'],
+  [200,  'duecento',        ''],
+  [300,  'trecento',        ''],
+  [400,  'quattrocento',    ''],
+  [500,  'cinquecento',     ''],
+  [600,  'seicento',        ''],
+  [700,  'settecento',      ''],
+  [800,  'ottocento',       ''],
+  [900,  'novecento',       ''],
+  [1000, 'mille',           ''],
+  [1001, 'milleuno',        '→ número de habitación'],
+  [15,   'quindici',        '→ suplemento garage'],
+  [3,    'tre',             '→ tassa di soggiorno']
+];
+
+var DAYS = [
+  [1,'lunedì',    'lunes'],
+  [2,'martedì',   'martes'],
+  [3,'mercoledì', 'miércoles'],
+  [4,'giovedì',   'jueves'],
+  [5,'venerdì',   'viernes'],
+  [6,'sabato',    'sábado'],
+  [7,'domenica',  'domingo']
+];
+
+/* Diálogo — 14 turnos consolidados según PDF del cliente */
+var DIALOG = [
+  ['f','Giulia',      'Buongiorno, come posso esservi utile?',  'Buenos días, ¿en qué les puedo ayudar?'],
+  ['m','Sig. Baldini','Abbiamo prenotato una camera a nome Baldini.',  'Reservamos una habitación a nombre de Baldini.'],
+  ['f','Giulia',      'Buongiorno signori Baldini, benvenuti al Casalunga Golf Resort. Il mio nome è Giulia. È andato bene il viaggio?',  'Buenos días señores Baldini, bienvenidos al Casalunga Golf Resort. Mi nombre es Giulia. ¿Fue bien el viaje?'],
+  ['m','Sig. Baldini','Sì, grazie. Non abbiamo trovato traffico.',  'Sí, gracias. No encontramos tráfico.'],
+  ['f','Giulia',      'Che fortuna! Abbiamo riservato per voi una junior suite per due notti con trattamento camera e colazione. Abbiamo aggiunto una culla per vostro figlio.',  '¡Qué suerte! Hemos reservado para ustedes una junior suite por dos noches con habitación y desayuno. Hemos añadido una cuna para su hijo.'],
+  ['m','Sig. Baldini','Grazie. Ci ricorda il prezzo, gentilmente?',  'Gracias. ¿Nos recuerda el precio, gentilmente?'],
+  ['f','Giulia',      'Certamente. Il prezzo è di 150 euro a notte, comprensivo di prima colazione. È da aggiungere l\'imposta di soggiorno di 3 euro al giorno a persona, naturalmente solo per gli adulti.',  'Por supuesto. El precio es de 150 euros por noche, incluyendo el desayuno. Se añade el impuesto de estancia de 3 euros al día por persona, naturalmente solo para los adultos.'],
+  ['f','Giulia',      'Cortesemente, potrei avere i vostri documenti?',  '¿Podría tener sus documentos, por favor?'],
+  ['m','Sig. Baldini','Sì, certamente. Ecco qua. C\'è anche la carta d\'identità di nostro figlio.',  'Sí, por supuesto. Aquí está. También está el documento de identidad de nuestro hijo.'],
+  ['f','Giulia',      'Se necessario, disponiamo di un garage custodito 24 ore su 24, con un supplemento di 15 euro al giorno. Potete tranquillamente lasciare lì la macchina.',  'Si es necesario, disponemos de un garaje vigilado las 24 horas, con un suplemento de 15 euros al día. Pueden dejar allí el coche tranquilamente.'],
+  ['m','Sig. Baldini','Va bene, sì.',  'Está bien, sí.'],
+  ['f','Giulia',      'Ecco a voi le vostre chiavi. Potete pagare tutto alla vostra partenza. Vi auguro un buon soggiorno!',  'Aquí están sus llaves. Pueden pagar todo al momento de su salida. ¡Les deseo una buena estadía!'],
+  ['m','Sig. Baldini','Grazie mille.',  'Muchas gracias.'],
+  ['f','Giulia',      'Prego! La colazione è servita ogni giorno dalle 7 alle 11 nel nostro ristorante al piano terra. Per qualsiasi cosa chiamate in portineria, tasto 9.',  '¡De nada! El desayuno se sirve todos los días de 7 a 11 en nuestro restaurante en la planta baja. Para cualquier cosa llamen a la conserjería, tecla 9.']
+];
+
+var PLURALS = [
+  ['documento','documenti','«i vostri documenti»'],
+  ['adulto',   'adulti',   '«solo per gli adulti»'],
+  ['notte',    'notti',    '«per due notti»'],
+  ['chiave',   'chiavi',   '«le vostre chiavi»'],
+  ['camera',   'camere',   '«le camere del resort»'],
+  ['servizio', 'servizi',  '«i servizi dell\'hotel sono molti»'],
+  ['città',    'città',    '⚠️ invariable']
+];
+
+/* Fonética: 10 palabras a clasificar — k = [k]/[g], ch = [tʃ]/[dʒ] */
+var FONEX = [
+  ['camera',     'k'],
+  ['certamente', 'ch'],
+  ['chiavi',     'k'],
+  ['Giulia',     'ch'],
+  ['colazione',  'k'],
+  ['giorno',     'ch'],
+  ['che fortuna','k'],
+  ['ci ricorda', 'ch'],
+  ['gatto',      'k'],
+  ['spaghetti',  'k']
+];
+
+var UTILS = [
+  ['ph-question',     'Avete una camera libera?',     '¿Tienen una habitación disponible?',   'huésped',  'm'],
+  ['ph-question',     'Vorrei prenotare una camera.', 'Quisiera reservar una habitación.',    'huésped',  'm'],
+  ['ph-clock',        'A che ora è il check-out?',    '¿A qué hora es el check-out?',         'huéspeda', 'f'],
+  ['ph-elevator',     "Dov'è l'ascensore?",           '¿Dónde está el ascensor?',             'huésped',  'm'],
+  ['ph-taxi',         'Mi può chiamare un taxi?',     '¿Me puede llamar un taxi?',            'huéspeda', 'f'],
+  ['ph-translate',    'Come si dice… in italiano?',   '¿Cómo se dice… en italiano?',          'estudiante','m']
+];
+
+/* ═══ BUILDERS ═══ */
+function _esc(s) { return String(s).replace(/'/g, "\\'"); }
+
+function buildVocab() {
+  var html = '';
+  VOCAB.forEach(function(v) {
+    html += '<div class="ipp-vocab__chip" onclick="ippAudio(\''+_esc(v[1])+'\',0.82,\''+v[3]+'\')">'+
+              '<i class="ph '+v[0]+' ipp-vocab__icon"></i>'+
+              '<div class="ipp-vocab__it">'+v[1]+'</div>'+
+              '<div class="ipp-vocab__es">'+v[2]+'</div>'+
+              '<button class="ipp-vocab__btn" onclick="event.stopPropagation();ippAudio(\''+_esc(v[1])+'\',0.82,\''+v[3]+'\')">'+
+                '<i class="ph ph-speaker-high"></i> escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById('vocabGrid').innerHTML = html;
+}
+
+function buildFrases() {
+  var html = '';
+  FRASES.forEach(function(f, i) {
+    var icon = f[0] === 'm' ? 'ph-user' : 'ph-user-circle';
+    html += '<div class="ipp-frase'+(f[0]==='m'?' spk-m':'')+'" data-idx="'+i+'">'+
+              '<div class="ipp-frase__icon"><i class="ph '+icon+'"></i></div>'+
+              '<div class="ipp-frase__text">'+
+                '<div class="ipp-frase__it">'+f[1]+'</div>'+
+                '<div class="ipp-frase__es">'+f[2]+'</div>'+
+              '</div>'+
+              '<button class="ipp-frase__btn" onclick="ippAudio(\''+_esc(f[1])+'\',0.82,\''+f[0]+'\')">'+
+                '<i class="ph ph-speaker-high"></i> Escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById('frasesList').innerHTML = html;
+}
+
+function buildNums() {
+  var html = '';
+  NUMS.forEach(function(n) {
+    var pron = n[0] === 1001 ? 'milleuno' : n[1];
+    html += '<div class="ipp-num" onclick="ippAudio(\''+_esc(pron)+'\',0.82,\'f\')">'+
+              '<span class="ipp-num__big">'+n[0]+'</span>'+
+              '<div class="ipp-num__it">'+n[1]+'</div>'+
+              (n[2] ? '<div class="ipp-num__note">'+n[2]+'</div>' : '')+
+            '</div>';
+  });
+  document.getElementById('numsGrid').innerHTML = html;
+}
+
+function buildDays() {
+  var html = '';
+  DAYS.forEach(function(d) {
+    html += '<div class="ipp-day" onclick="ippAudio(\''+_esc(d[1])+'\',0.82,\'f\')">'+
+              '<div class="ipp-day__num">'+d[0]+'</div>'+
+              '<span class="ipp-day__it">'+d[1]+'</span>'+
+              '<div class="ipp-day__es">'+d[2]+'</div>'+
+            '</div>';
+  });
+  document.getElementById('daysGrid').innerHTML = html;
+
+  // Day pool: orden mezclado
+  var shuffled = ['domenica','mercoledì','venerdì','lunedì','sabato','martedì','giovedì'];
+  var poolHTML = '';
+  shuffled.forEach(function(d) {
+    poolHTML += '<button class="ipp-day-opt" data-day="'+d+'" onclick="addDay(this)">'+d+'</button>';
+  });
+  document.getElementById('dayPool').innerHTML = poolHTML;
+}
+
+function buildDialog() {
+  var html = '';
+  DIALOG.forEach(function(d, i) {
+    var side = d[0] === 'm' ? 'right spk-m' : '';
+    var icon = d[0] === 'm' ? 'ph-user' : 'ph-user-circle';
+    html += '<div class="ipp-dial__row '+side+'" data-idx="'+i+'">'+
+              '<div class="ipp-dial__spk">'+
+                '<div class="ipp-dial__spk-icon"><i class="ph '+icon+'"></i></div>'+
+                '<span class="ipp-dial__spk-name">'+d[1]+'</span>'+
+              '</div>'+
+              '<div class="ipp-dial__bubble">'+
+                '<div class="ipp-dial__it">'+d[2]+'</div>'+
+                '<div class="ipp-dial__es">'+d[3]+'</div>'+
+              '</div>'+
+              '<button class="ipp-dial__playbtn" onclick="ippAudio(\''+_esc(d[2])+'\',0.82,\''+d[0]+'\')">'+
+                '<i class="ph ph-play"></i> Escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById('dialLines').innerHTML = html;
+}
+
+function buildPlurals() {
+  var html = '';
+  PLURALS.forEach(function(p, i) {
+    html += '<div class="ipp-plural">'+
+              '<div class="ipp-plural__sing"><i class="ph ph-arrow-right"></i> '+p[0]+'</div>'+
+              '<input class="ipp-plural__inp" type="text" placeholder="plural…" data-idx="'+i+'" data-answer="'+p[1]+'">'+
+              '<div class="ipp-plural__note">'+p[2]+'</div>'+
+            '</div>';
+  });
+  document.getElementById('pluralsGrid').innerHTML = html;
+}
+
+function buildFonex() {
+  var html = '';
+  FONEX.forEach(function(f, i) {
+    html += '<div class="ipp-fonex__item" data-idx="'+i+'" data-correct="'+f[1]+'">'+
+              '<button class="ipp-fonex__audio" onclick="ippAudio(\''+_esc(f[0])+'\',0.82,\'f\')" title="Escuchar"><i class="ph ph-speaker-high"></i></button>'+
+              '<span class="ipp-fonex__word">'+f[0]+'</span>'+
+              '<div class="ipp-fonex__btns">'+
+                '<button class="ipp-fonex__btn" data-pick="k" onclick="pickFon(this)">[k] [g]</button>'+
+                '<button class="ipp-fonex__btn" data-pick="ch" onclick="pickFon(this)">[tʃ] [dʒ]</button>'+
+              '</div>'+
+            '</div>';
+  });
+  document.getElementById('fonexList').innerHTML = html;
+}
+
+function buildUtils() {
+  var html = '';
+  UTILS.forEach(function(u) {
+    html += '<div class="ipp-vocab__chip" onclick="ippAudio(\''+_esc(u[1])+'\',0.82,\''+u[4]+'\')">'+
+              '<i class="ph '+u[0]+' ipp-vocab__icon"></i>'+
+              '<div class="ipp-vocab__it">'+u[1]+'</div>'+
+              '<div class="ipp-vocab__es">'+u[2]+'</div>'+
+              '<div style="font-size:0.66rem;color:#aaa;margin-top:0.1rem;">'+u[3]+'</div>'+
+              '<button class="ipp-vocab__btn" onclick="event.stopPropagation();ippAudio(\''+_esc(u[1])+'\',0.82,\''+u[4]+'\')">'+
+                '<i class="ph ph-speaker-high"></i> escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById('utilsList').innerHTML = html;
+}
+
+/* ═══ DÍAS — ordenar ═══ */
+var DAY_ORDER = ['lunedì','martedì','mercoledì','giovedì','venerdì','sabato','domenica'];
+var selectedDays = [];
+
+function addDay(btn) {
+  if (btn.classList.contains('selected')) return;
+  var day = btn.dataset.day;
+  selectedDays.push(day);
+  btn.classList.add('selected');
+  ippAudio(day, 0.82, 'f');
+
+  var zone = document.getElementById('dayZone');
+  var tag = document.createElement('span');
+  tag.className = 'ipp-day-tag';
+  tag.textContent = day;
+  var x = document.createElement('span');
+  x.className = 'ipp-day-tag__close';
+  x.innerHTML = '×';
+  x.onclick = function() {
+    tag.remove();
+    var idx = selectedDays.indexOf(day);
+    if (idx > -1) selectedDays.splice(idx, 1);
+    btn.classList.remove('selected');
+  };
+  tag.appendChild(x);
+  zone.appendChild(tag);
+}
+
+function checkDays() {
+  var fb = document.getElementById('daysFb');
+  if (selectedDays.length < 7) {
+    fb.innerHTML = '<i class="ph ph-warning-circle"></i> Todavía faltan días. ¡Agregá los 7 días de la semana!';
+    fb.className = 'ipp-fb err';
+    return;
+  }
+  var ok = selectedDays.every(function(d, i) { return d === DAY_ORDER[i]; });
+  var act = fb.closest('.ipp-day-act');
+  var resetDays = function() {
+    selectedDays = [];
+    document.getElementById('dayZone').innerHTML = '';
+    document.querySelectorAll('.ipp-day-opt').forEach(function(b) { b.classList.remove('selected'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  };
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> ¡Perfetto! <em>Lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica</em> — ¡los sabés!';
+    fb.className = 'ipp-fb ok';
+    ippRetry(act, resetDays);
+  } else {
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> El orden no es correcto. El orden correcto es: <strong>' + DAY_ORDER.join(' → ') + '</strong>';
+    fb.className = 'ipp-fb err';
+    ippRetry(act, resetDays);
+  }
+}
+
+/* ═══ PLURALES ═══ */
+function checkPlurals() {
+  var inputs = document.querySelectorAll('.ipp-plural__inp');
+  var correct = 0;
+  inputs.forEach(function(inp) {
+    var answer = inp.dataset.answer.toLowerCase().trim();
+    var val = inp.value.toLowerCase().trim();
+    inp.classList.remove('ok','err');
+    // Comparación EXACTA — los acentos son obligatorios (ej: città ≠ citta)
+    if (val === answer) {
+      inp.classList.add('ok');
+      correct++;
+    } else if (val.length > 0) {
+      inp.classList.add('err');
+      inp.value = inp.value + ' › ' + inp.dataset.answer;
+    } else {
+      inp.classList.add('err');
+      inp.value = inp.dataset.answer;
+    }
+  });
+  document.querySelectorAll('.ipp-plural__note').forEach(function(n) { n.classList.add('show'); });
+  var fb = document.getElementById('pluralsFb');
+  var section = fb.closest('.ipp-section');
+  var resetPlurals = function() {
+    inputs.forEach(function(inp) { inp.value = ''; inp.classList.remove('ok','err'); });
+    document.querySelectorAll('.ipp-plural__note').forEach(function(n) { n.classList.remove('show'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  };
+  if (correct === PLURALS.length) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfetto!</strong> Todos los plurales son correctos.<br><br>Nota especial: <em>città</em> no cambia: las palabras que terminan en vocal acentuada son invariables.';
+    fb.className = 'ipp-fb ok';
+    ippRetry(section, resetPlurals);
+  } else {
+    fb.innerHTML = '<i class="ph ph-info"></i> <strong>Bien!</strong> Acertaste ' + correct + ' de ' + PLURALS.length + '. Las en rojo muestran la respuesta correcta después del ›. Revisalas.';
+    fb.className = 'ipp-fb partial';
+    ippRetry(section, resetPlurals);
+  }
+}
+
+/* ═══ FONÉTICA ejercicio ═══ */
+function pickFon(btn) {
+  var item = btn.closest('.ipp-fonex__item');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var pick = btn.dataset.pick;
+  var correct = item.dataset.correct;
+  var ok = pick === correct;
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    item.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+      if (b.dataset.pick === correct) b.classList.add('correct');
+    });
+  }
+  item.querySelectorAll('.ipp-fonex__btn').forEach(function(b) { b.disabled = true; });
+  _updateFonScore();
+}
+function _updateFonScore() {
+  var items = document.querySelectorAll('.ipp-fonex__item');
+  var done = 0, ok = 0;
+  items.forEach(function(it) {
+    if (it.dataset.done) {
+      done++;
+      if (!it.querySelector('.ipp-fonex__btn.wrong')) ok++;
+    }
+  });
+  var score = document.getElementById('fonexScore');
+  var fb = document.getElementById('fonexFb');
+  if (done < items.length) {
+    score.textContent = done + ' / ' + items.length + ' clasificadas';
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  } else {
+    score.textContent = '';
+    var section = fb.closest('.ipp-fonex');
+    var resetFon = function() {
+      items.forEach(function(it) {
+        delete it.dataset.done;
+        it.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+          b.disabled = false; b.classList.remove('correct','wrong');
+        });
+      });
+      fb.innerHTML = ''; fb.className = 'ipp-fb';
+      score.textContent = '';
+    };
+    if (ok === items.length) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Excelente oído!</strong>';
+      fb.className = 'ipp-fb ok';
+      ippRetry(section, resetFon);
+    } else {
+      fb.innerHTML = '<i class="ph ph-info"></i> Acertaste ' + ok + ' de ' + items.length + '.';
+      fb.className = 'ipp-fb partial';
+      ippRetry(section, resetFon);
+    }
+  }
+}
+
+/* ═══ Reproducción secuencial — "Escuchar todo" + "Detener" ═══ */
+var _seqState = null;
+
+function playAllSeq(arrayName, scopeId) {
+  stopAllSeq();
+  var arr = (arrayName === 'FRASES') ? FRASES : (arrayName === 'DIALOG') ? DIALOG : null;
+  if (!arr) return;
+  _seqState = { arr: arr, idx: 0, scopeId: scopeId };
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  _seqPlayNext();
+}
+
+function _seqPlayNext() {
+  if (!_seqState) return;
+  if (_seqState.idx >= _seqState.arr.length) {
+    stopAllSeq();
+    return;
+  }
+  var item = _seqState.arr[_seqState.idx];
+  // FRASES: [gender, text, es] → text en [1]
+  // DIALOG: [gender, name, text, es] → text en [2]
+  var gender, text;
+  if (item.length === 3) { gender = item[0]; text = item[1]; }
+  else { gender = item[0]; text = item[2]; }
+
+  _seqHighlight(_seqState.scopeId, _seqState.idx);
+
+  var utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'it-IT'; utt.rate = 0.82; utt.pitch = 1.05;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() {
+    if (!_seqState) return;
+    _seqState.idx++;
+    setTimeout(_seqPlayNext, 280);
+  };
+  utt.onerror = function() {
+    if (!_seqState) return;
+    _seqState.idx++;
+    setTimeout(_seqPlayNext, 280);
+  };
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  setTimeout(function() { try { speechSynthesis.speak(utt); } catch(e) {} }, 80);
+}
+
+function stopAllSeq() {
+  _seqState = null;
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  _seqClearHighlights();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+
+function _seqHighlight(scopeId, idx) {
+  _seqClearHighlights();
+  var scope = document.getElementById(scopeId);
+  if (!scope) return;
+  var line = scope.querySelector('[data-idx="'+idx+'"]');
+  if (line) {
+    line.classList.add('is-playing');
+    line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function _seqClearHighlights() {
+  document.querySelectorAll('.is-playing').forEach(function(e) {
+    e.classList.remove('is-playing');
+  });
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+window.ippStop = ippStop;
+window.addDay = addDay;
+window.checkDays = checkDays;
+window.checkPlurals = checkPlurals;
+window.pickFon = pickFon;
+window.playAllSeq = playAllSeq;
+window.stopAllSeq = stopAllSeq;
+
+var builds = [buildVocab, buildFrases, buildNums, buildDays, buildDialog, buildPlurals, buildFonex, buildUtils];
+builds.forEach(function(fn) {
+  try { fn(); } catch(e) { console.warn('[IPP build error]', e); }
+});
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 3 — Descubrimiento ===== -->

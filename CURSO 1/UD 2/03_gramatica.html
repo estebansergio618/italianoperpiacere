@@ -1,0 +1,1377 @@
+<!-- ===== BLOQUE: Unità 2 — Gramática ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --m-bg:     #e8f0fd;
+    --m-tx:     #1a3a6b;
+    --f-bg:     #fde8f0;
+    --f-tx:     #6b1a3a;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1;
+    padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 2.75rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem; line-height: 1.2;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-sub {
+    font-size: clamp(0.84rem, 2vw, 0.88rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-sub strong { color: var(--mc-text); }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg); border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.25rem);
+    font-size: clamp(0.86rem, 2.2vw, 0.9rem);
+    color: var(--mc-text); line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-callout p { margin: 0 0 0.45rem; }
+  .ipp-callout p:last-child { margin-bottom: 0; }
+  .ipp-callout strong { color: var(--mc-dk); }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-callout__line {
+    display: flex; align-items: flex-start; gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-callout__line:last-child { margin-bottom: 0; }
+  .ipp-callout__line .ph { color: var(--mc-dk); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+  .ipp-callout__line .ph.warn { color: #c89500; }
+
+  /* ===== Conjugación ===== */
+  .ipp-conj {
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-conj__head {
+    background: var(--mc); color: var(--white);
+    padding: 0.85rem 1.1rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; font-size: 1.05rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-conj__playall {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: var(--white); border-radius: 14px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.74rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: background 0.2s;
+  }
+  .ipp-conj__playall:hover { background: rgba(255,255,255,0.35); }
+  .ipp-conj table { width: 100%; border-collapse: collapse; }
+  .ipp-conj td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--cream-dk);
+    font-size: 0.92rem;
+    vertical-align: middle;
+  }
+  .ipp-conj tr:last-child td { border-bottom: none; }
+  .ipp-conj tr:nth-child(even) td { background: var(--cream); }
+  .ipp-conj td.pro { color: #888; font-size: 0.82rem; width: 75px; }
+  .ipp-conj td.form { font-weight: 700; color: var(--mc-text); font-style: italic; }
+  .ipp-conj td.trad { color: #666; font-size: 0.82rem; }
+  .ipp-conj td.ex { color: #555; font-style: italic; font-size: 0.85rem; }
+  .ipp-conj__play {
+    background: none; border: 1.5px solid var(--mc);
+    color: var(--mc); border-radius: 50%;
+    width: 28px; height: 28px;
+    padding: 0; cursor: pointer; font-size: 0.72rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.2s;
+  }
+  .ipp-conj__play:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Nomi (maschile/femminile) ===== */
+  .ipp-nomi { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .ipp-nomi__card {
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-nomi__head {
+    padding: 0.75rem 1rem;
+    font-weight: 700; font-size: 0.86rem;
+    letter-spacing: 0.04em;
+  }
+  .ipp-nomi__head.m { background: var(--m-bg); color: var(--m-tx); }
+  .ipp-nomi__head.f { background: var(--f-bg); color: var(--f-tx); }
+  .ipp-nomi__body { padding: 0.85rem 1rem 1rem; }
+  .ipp-nomi__row {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+    font-size: 0.9rem;
+  }
+  .ipp-nomi__row:last-of-type { border-bottom: none; }
+  .ipp-nomi__it {
+    font-style: italic; font-weight: 600;
+    color: var(--mc-text); flex: 1;
+  }
+  .ipp-nomi__es {
+    font-size: 0.78rem; color: #888; flex: 1;
+  }
+  .ipp-nomi__audio {
+    background: var(--mc-bg); border: none;
+    color: var(--mc-text); border-radius: 10px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    margin-left: auto; flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-nomi__audio:hover { background: var(--mc); color: var(--white); }
+  .ipp-nomi__note {
+    margin-top: 0.7rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+  }
+  .ipp-nomi__note.m { background: var(--mc-bg); color: var(--mc-text); }
+  .ipp-nomi__note.f { background: var(--f-bg); color: var(--f-tx); }
+  .ipp-nomi__note strong { font-weight: 700; }
+
+  /* ===== Verbi -ARE table ===== */
+  .ipp-are {
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-are__head {
+    background: var(--mc); color: var(--white);
+    padding: 0.85rem 1.2rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; font-size: 1.05rem;
+  }
+  .ipp-are__body { padding: 1rem 1.2rem; }
+  .ipp-are table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+  .ipp-are th {
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.55rem 0.85rem;
+    font-size: 0.78rem; text-align: left;
+    font-weight: 700;
+  }
+  .ipp-are td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+  .ipp-are tr:last-child td { border-bottom: none; }
+  .ipp-are td.pro { color: #888; font-size: 0.82rem; width: 75px; }
+  .ipp-are td.form { font-weight: 700; color: var(--mc-text); font-style: italic; }
+  .ipp-are__play {
+    background: var(--mc-bg); border: none;
+    color: var(--mc-text); border-radius: 10px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.72rem; cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-are__play:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Dialog ===== */
+  .ipp-dial {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.2rem, 3.5vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__row {
+    display: flex; align-items: flex-start;
+    gap: 0.65rem; margin-bottom: 0.85rem;
+  }
+  .ipp-dial__row.right { flex-direction: row-reverse; }
+  .ipp-dial__who {
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--mc-text); min-width: 60px;
+    padding-top: 0.55rem; flex-shrink: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__who {
+    color: var(--m-tx); text-align: right;
+  }
+  .ipp-dial__bubble {
+    background: var(--cream);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: 0.65rem 0.9rem;
+    font-style: italic; font-size: 0.93rem;
+    line-height: 1.65; flex: 1; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__bubble strong {
+    font-style: normal; font-weight: 700;
+    color: var(--mc-dk);
+  }
+  .ipp-dial__row.right .ipp-dial__bubble strong { color: var(--m-tx); }
+  .ipp-dial__bubble mark.ipp-hl {
+    background: #ffe24d;
+    color: inherit;
+    font-style: normal; font-weight: 700;
+    border-radius: 3px; padding: 0 0.15em;
+  }
+  .ipp-dial__note {
+    font-size: 0.76rem; color: #888;
+    padding: 0 0 0.6rem 4.5rem;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .ipp-dial__row.right + .ipp-dial__note {
+    text-align: right; padding: 0 4.5rem 0.6rem 0;
+  }
+  .ipp-dial__note em { color: var(--mc-dk); font-weight: 600; }
+
+  /* ===== Ejercicios ===== */
+  .ipp-exwrap {
+    background: var(--cream);
+    border-radius: var(--r);
+    padding: clamp(1rem, 3vw, 1.25rem);
+    margin: 1.2rem 0;
+  }
+  .ipp-exhead {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-dk);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 1rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--mc-bg);
+    display: flex; align-items: center; gap: 0.45rem;
+  }
+  .ipp-exhead .ph { color: var(--mc); font-size: 1.1rem; }
+
+  .ipp-ex {
+    background: var(--white); border-radius: var(--r);
+    border: 1px solid var(--cream-dk);
+    padding: clamp(1rem, 2.8vw, 1.2rem);
+    margin-bottom: 0.75rem;
+  }
+  .ipp-ex:last-child { margin-bottom: 0; }
+  .ipp-ex__q {
+    font-size: 0.94rem; font-weight: 600;
+    color: var(--mc-text); margin: 0 0 0.85rem;
+    line-height: 1.55;
+  }
+  .ipp-ex__q em { color: var(--red); font-style: italic; }
+  .ipp-ex__q strong { color: var(--mc-dk); }
+  .ipp-ex__q small { color: #888; font-weight: 400; font-size: 0.84rem; }
+
+  .ipp-opts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ipp-opts.four { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .ipp-opt {
+    border: 2px solid var(--cream-dk);
+    background: var(--cream); color: var(--black);
+    border-radius: 8px;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.87rem; font-weight: 600;
+    cursor: pointer; transition: all 0.18s;
+    font-family: inherit; text-align: left;
+  }
+  .ipp-opt:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-opt:disabled { cursor: default; opacity: 0.7; }
+  .ipp-opt.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-opt.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+
+  .ipp-fill {
+    border: none; border-bottom: 2px solid var(--mc);
+    background: transparent; font-family: inherit;
+    font-size: 0.92rem; font-style: italic;
+    color: var(--mc-text); font-weight: 600;
+    padding: 0.15rem 0.35rem; outline: none;
+  }
+  .ipp-fill:focus { background: var(--mc-bg); border-radius: 4px; }
+  .ipp-fill.ok { border-bottom-color: var(--ok-bd); background: var(--ok-bg); border-radius: 4px; color: var(--ok-tx); }
+  .ipp-fill.err { border-bottom-color: var(--red); background: var(--err-bg); border-radius: 4px; }
+
+  .ipp-ta {
+    width: 100%; max-width: 540px;
+    min-height: 80px;
+    border: 2px solid var(--mc);
+    border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    font-family: inherit; font-size: 0.92rem;
+    background: var(--white); color: var(--black);
+    resize: vertical; outline: none;
+  }
+
+  .ipp-check {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 18px;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.83rem; font-weight: 700;
+    cursor: pointer; margin-top: 0.5rem;
+    font-family: inherit;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-check:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    font-size: 0.87rem; margin-top: 0.65rem;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    display: none;
+    line-height: 1.65;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb strong { font-weight: 700; }
+  .ipp-fb em { font-style: italic; }
+
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Ejercicio 4: clasificación M/F ===== */
+  .ipp-classify {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-classify__item {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-classify__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.95rem;
+    flex: 1; min-width: 90px;
+  }
+  .ipp-classify__btns { display: flex; gap: 0.35rem; }
+  .ipp-classify__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    min-width: 38px;
+    transition: all 0.18s;
+  }
+  .ipp-classify__btn.m:hover { border-color: var(--m-tx); background: var(--m-bg); color: var(--m-tx); }
+  .ipp-classify__btn.f:hover { border-color: var(--f-tx); background: var(--f-bg); color: var(--f-tx); }
+  .ipp-classify__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-classify__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-classify__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-classify__score {
+    margin-top: 0.85rem;
+    font-size: 0.86rem; color: #555;
+    text-align: center;
+  }
+
+  /* ===== Cierre ===== */
+  .ipp-close {
+    text-align: center;
+    padding: 2rem 1rem 0.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px dashed var(--cream-dk);
+  }
+  .ipp-close p {
+    font-size: 0.92rem; color: #555;
+    line-height: 1.7; margin: 0;
+  }
+  .ipp-close em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--cream-dk); color: var(--black);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-nomi { grid-template-columns: 1fr; }
+    .ipp-opts.four { grid-template-columns: 1fr; }
+    .ipp-conj td.ex { display: none; }
+    .ipp-are td:last-child { display: none; }
+    .ipp-are th:last-child { display: none; }
+  }
+  @media (max-width: 540px) {
+    .ipp-dial__row { flex-wrap: wrap; }
+    .ipp-dial__who { min-width: auto; padding-top: 0; }
+    .ipp-dial__note { padding-left: 0; padding-right: 0; }
+    .ipp-dial__row.right + .ipp-dial__note { text-align: left; }
+    .ipp-classify__item { padding: 0.5rem 0.7rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-ex { padding: 0.9rem; }
+    .ipp-exwrap { padding: 0.9rem; }
+  }
+</style>
+
+<!-- Stop fab -->
+<button class="ipp-stop-fab" id="ippStopFab" data-stop="1">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-book-open-text ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 2 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Di dove sei?</h1>
+    <p class="ipp-hero__subtitle"><em>Essere · Andare · Avere</em> y los verbos en <em>-ARE</em> — las herramientas para presentarte.</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- ① ESSERE -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">Il verbo <em>essere</em> — ser / estar</h2>
+      <p class="ipp-sub">El verbo más importante del italiano. Lo usás para decir quién sos, de dónde sos.</p>
+
+      <div class="ipp-callout">
+        <p><strong>Usá essere para:</strong></p>
+        <p><em>Di dove sei?</em> → <em>Sono di Roma.</em></p>
+        <p><em>Lui è italiano.</em></p>
+        <div class="ipp-callout__line" style="margin-top:0.65rem;">
+          <i class="ph ph-warning warn"></i>
+          <span><strong>¡Atención!</strong> Para estados de ánimo se usa el verbo STARE: <em>Come stai? → Sto bene.</em></span>
+        </div>
+      </div>
+
+      <div class="ipp-conj">
+        <div class="ipp-conj__head">
+          <span>essere — ser / estar</span>
+          <button class="ipp-conj__playall" data-audio="io sono, tu sei, lui lei è, noi siamo, voi siete, loro sono" data-rate="0.78" data-gender="f">
+            <i class="ph ph-speaker-high"></i> escuchar todo
+          </button>
+        </div>
+        <table>
+          <tbody>
+            <tr><td class="pro">io</td><td class="form">sono</td><td class="trad">soy / estoy</td><td class="ex">Sono di Ushuaia. Sono a Roma.</td><td><button class="ipp-conj__play" data-audio="io sono di Ushuaia. Sono a Roma." data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">tu</td><td class="form">sei</td><td class="trad">sos / estás</td><td class="ex">Sei italiano? Sei a casa?</td><td><button class="ipp-conj__play" data-audio="tu sei italiano? Sei a casa?" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">lui/lei</td><td class="form">è</td><td class="trad">es / está</td><td class="ex">Lei è di Roma. Lei è a Napoli.</td><td><button class="ipp-conj__play" data-audio="lei è di Roma. Lei è a Napoli." data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">noi</td><td class="form">siamo</td><td class="trad">somos / estamos</td><td class="ex">Siamo italiani. Siamo a Firenze in vacanza.</td><td><button class="ipp-conj__play" data-audio="noi siamo italiani. Siamo a Firenze in vacanza." data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">voi</td><td class="form">siete</td><td class="trad">son / están (ustedes)</td><td class="ex">Voi siete di Milano? Siete in vacanza?</td><td><button class="ipp-conj__play" data-audio="voi siete di Milano? Siete in vacanza?" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">loro</td><td class="form">sono</td><td class="trad">son / están</td><td class="ex">Loro sono argentini. Sono in Sicilia in vacanza.</td><td><button class="ipp-conj__play" data-audio="loro sono argentini. Sono in Sicilia in vacanza." data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ipp-callout" style="margin-top:1rem;">
+        <div class="ipp-callout__line">
+          <i class="ph ph-lightbulb"></i>
+          <span><strong>Atención:</strong> El pronombre personal (IO, TU, LUI, LEI, NOI, VOI, LORO) es opcional en italiano — <em>Sono di Roma</em> (sin "io") es igual de correcto. El verbo ya indica la persona.</span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-warning warn"></i>
+          <span><strong>Negación:</strong> <em>non</em> va justo antes del verbo → <em>Non sono di Milano.</em> / <em>Non è italiana.</em> (como en castellano)</span>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Ejercicio 1 · Esercizi — essere</h4>
+        <div id="exE1"></div>
+      </div>
+    </section>
+
+    <!-- ② ANDARE -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Il verbo <em>andare</em> — ir</h2>
+      <p class="ipp-sub">Para decir adónde vas. Es irregular en las primeras personas — prestá atención a las formas.</p>
+
+      <div class="ipp-conj">
+        <div class="ipp-conj__head">
+          <span>andare — ir</span>
+          <button class="ipp-conj__playall" data-audio="io vado, tu vai, lui lei va, noi andiamo, voi andate, loro vanno" data-rate="0.78" data-gender="f">
+            <i class="ph ph-speaker-high"></i> escuchar todo
+          </button>
+        </div>
+        <table>
+          <tbody>
+            <tr><td class="pro">io</td><td class="form">vado</td><td class="trad">voy</td><td class="ex">Vado a Roma.</td><td><button class="ipp-conj__play" data-audio="vado a Roma" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">tu</td><td class="form">vai</td><td class="trad">vas</td><td class="ex">Dove vai?</td><td><button class="ipp-conj__play" data-audio="dove vai?" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">lui/lei</td><td class="form">va</td><td class="trad">va</td><td class="ex">Va a Napoli domani.</td><td><button class="ipp-conj__play" data-audio="va a Napoli domani" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">noi</td><td class="form">andiamo</td><td class="trad">vamos</td><td class="ex">Andiamo alla stazione.</td><td><button class="ipp-conj__play" data-audio="andiamo alla stazione" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">voi</td><td class="form">andate</td><td class="trad">van / vais</td><td class="ex">Andate a Venezia?</td><td><button class="ipp-conj__play" data-audio="andate a Venezia?" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">loro</td><td class="form">vanno</td><td class="trad">van</td><td class="ex">Vanno in vacanza a Firenze.</td><td><button class="ipp-conj__play" data-audio="vanno in vacanza a Firenze" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ipp-callout" style="margin-top:1rem;">
+        <div class="ipp-callout__line">
+          <i class="ph ph-lightbulb"></i>
+          <span><strong>Andare + a + ciudad:</strong> <em>Vado a Roma · Vai a Venezia · Va a Milano</em></span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-lightbulb"></i>
+          <span><strong>Andare + in + país o región:</strong> <em>Vado in Italia · Vai in Sicilia</em></span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-info"></i>
+          <span><strong>Ante artículo determinado</strong> → preposición articulada (contracción): <em>Vado all'aeroporto · Vai alla stazione · Va al museo</em>. Se junta la preposición A con el artículo (que veremos más adelante).</span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-warning warn"></i>
+          <span><strong>¡Con ciudades siempre «a»!</strong> Nunca «in» con nombres de ciudad: <em>Vado a Milano</em> ✓ — <em>Vado in Milano</em> ✗</span>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Ejercicio 2 · Esercizi — andare</h4>
+        <div id="exE2"></div>
+      </div>
+    </section>
+
+    <!-- ③ AVERE -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">Il verbo <em>avere</em> — tener</h2>
+      <p class="ipp-sub">Para expresar edad, posesión y más. La <strong>h</strong> en ho/hai/ha es completamente muda.</p>
+
+      <div class="ipp-conj">
+        <div class="ipp-conj__head">
+          <span>avere — tener</span>
+          <button class="ipp-conj__playall" data-audio="io ho, tu hai, lui lei ha, noi abbiamo, voi avete, loro hanno" data-rate="0.78" data-gender="f">
+            <i class="ph ph-speaker-high"></i> escuchar todo
+          </button>
+        </div>
+        <table>
+          <tbody>
+            <tr><td class="pro">io</td><td class="form">ho</td><td class="trad">tengo</td><td class="ex">Ho venticinque anni.</td><td><button class="ipp-conj__play" data-audio="io ho venticinque anni" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">tu</td><td class="form">hai</td><td class="trad">tenés</td><td class="ex">Quanti anni hai?</td><td><button class="ipp-conj__play" data-audio="quanti anni hai?" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">lui/lei</td><td class="form">ha</td><td class="trad">tiene</td><td class="ex">Lei ha ventidue anni.</td><td><button class="ipp-conj__play" data-audio="lei ha ventidue anni" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">noi</td><td class="form">abbiamo</td><td class="trad">tenemos</td><td class="ex">Noi abbiamo un problema.</td><td><button class="ipp-conj__play" data-audio="noi abbiamo un problema" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">voi</td><td class="form">avete</td><td class="trad">tienen / tenéis</td><td class="ex">Voi avete il passaporto?</td><td><button class="ipp-conj__play" data-audio="voi avete il passaporto?" data-rate="0.82" data-gender="f"><i class="ph ph-play"></i></button></td></tr>
+            <tr><td class="pro">loro</td><td class="form">hanno</td><td class="trad">tienen</td><td class="ex">Loro hanno trent'anni.</td><td><button class="ipp-conj__play" data-audio="loro hanno trent'anni" data-rate="0.82" data-gender="m"><i class="ph ph-play"></i></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ipp-callout" style="margin-top:1rem;">
+        <div class="ipp-callout__line">
+          <i class="ph ph-lightbulb"></i>
+          <span><strong>La edad en italiano usa avere:</strong> <em>Ho vent'anni</em> — Tengo 20 años.</span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-warning warn"></i>
+          <span><strong>H muda:</strong> <em>ho, hai, ha, hanno</em> — la H solo sirve para distinguirlos de <em>o</em> (o), <em>ai</em> (a los), <em>a</em> (a), <em>anno</em> (año).</span>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Ejercicio 3 · Esercizi — avere</h4>
+        <div id="exE3"></div>
+      </div>
+    </section>
+
+    <!-- ④ I NOMI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title">I nomi — los sustantivos</h2>
+      <p class="ipp-sub">En italiano todos los sustantivos tienen género (<em>maschile</em> o <em>femminile</em>). ¡Aprendé siempre el artículo junto con la palabra!</p>
+
+      <div class="ipp-nomi">
+        <div class="ipp-nomi__card">
+          <div class="ipp-nomi__head m">MASCHILE — il / un</div>
+          <div class="ipp-nomi__body">
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">il treno</span><span class="ipp-nomi__es">el tren</span><button class="ipp-nomi__audio" data-audio="il treno" data-rate="0.85" data-gender="m"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">il binario</span><span class="ipp-nomi__es">el andén</span><button class="ipp-nomi__audio" data-audio="il binario" data-rate="0.85" data-gender="m"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">il passaporto</span><span class="ipp-nomi__es">el pasaporte</span><button class="ipp-nomi__audio" data-audio="il passaporto" data-rate="0.85" data-gender="m"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">il nome</span><span class="ipp-nomi__es">el nombre</span><button class="ipp-nomi__audio" data-audio="il nome" data-rate="0.85" data-gender="m"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">il numero</span><span class="ipp-nomi__es">el número</span><button class="ipp-nomi__audio" data-audio="il numero" data-rate="0.85" data-gender="m"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__note m">Generalmente terminan en <strong>-o</strong></div>
+          </div>
+        </div>
+        <div class="ipp-nomi__card">
+          <div class="ipp-nomi__head f">FEMMINILE — la / una</div>
+          <div class="ipp-nomi__body">
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">la stazione</span><span class="ipp-nomi__es">la estación</span><button class="ipp-nomi__audio" data-audio="la stazione" data-rate="0.85" data-gender="f"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">la città</span><span class="ipp-nomi__es">la ciudad</span><button class="ipp-nomi__audio" data-audio="la città" data-rate="0.85" data-gender="f"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">la valigia</span><span class="ipp-nomi__es">la maleta</span><button class="ipp-nomi__audio" data-audio="la valigia" data-rate="0.85" data-gender="f"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">la nazionalità</span><span class="ipp-nomi__es">la nacionalidad</span><button class="ipp-nomi__audio" data-audio="la nazionalità" data-rate="0.85" data-gender="f"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__row"><span class="ipp-nomi__it">la partenza</span><span class="ipp-nomi__es">la salida</span><button class="ipp-nomi__audio" data-audio="la partenza" data-rate="0.85" data-gender="f"><i class="ph ph-speaker-high"></i></button></div>
+            <div class="ipp-nomi__note f">Generalmente terminan en <strong>-a</strong> o <strong>-ione</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ipp-callout" style="margin-top:1rem;">
+        <div class="ipp-callout__line">
+          <i class="ph ph-lightbulb"></i>
+          <span><strong>Atención:</strong> En general, cuando la palabra termina en <strong>-e</strong>, el género coincide con el español (<em>il mare, la stazione</em>). ¡Claro que como siempre en italiano hay excepciones! (<em>il miele, il sale, il fiore</em>)</span>
+        </div>
+        <div class="ipp-callout__line">
+          <i class="ph ph-info"></i>
+          <span>Ante vocal: el artículo se apostrofa → <em>l'aeroporto</em> (m) · <em>l'amica</em> (f).</span>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Ejercicio 4 · Esercizi — i nomi</h4>
+        <div class="ipp-ex">
+          <p class="ipp-ex__q" style="font-weight:700;">Maschile o Femminile?</p>
+          <p style="font-size:0.9rem;color:#555;margin:0 0 0.85rem;line-height:1.55;">Antes de aprender las reglas del plural y de los artículos, vamos a ver si podés identificar el género de estas palabras. <strong>Marcá M o F</strong> para cada palabra.</p>
+          <div class="ipp-classify" id="classifyList"></div>
+          <div class="ipp-classify__score" id="classifyScore"></div>
+          <div class="ipp-fb" id="classifyFb"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ VERBI -ARE -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title">I verbi in <em>-ARE</em></h2>
+      <p class="ipp-sub">Los verbos regulares en -ARE siguen siempre el mismo patrón. Si sabés conjugar uno, sabés todos.</p>
+
+      <div class="ipp-callout">
+        <p style="margin-bottom:0.5rem;">Quitás <em>-ARE</em> y agregás la terminación según la persona:</p>
+        <p style="margin-bottom:0.5rem;"><em>-o → io</em> · <em>-i → tu</em> · <em>-a → lui/lei</em> · <em>-iamo → noi</em> · <em>-ate → voi</em> · <em>-ano → loro</em></p>
+        <div class="ipp-callout__line">
+          <i class="ph ph-warning warn"></i>
+          <span><strong>Atención:</strong> los verbos conjugados con <em>loro</em> cambian el acento y se vuelven esdrújulas (ej: <em>abítano</em>).</span>
+        </div>
+      </div>
+
+      <div class="ipp-are">
+        <div class="ipp-are__head">Verbi in -ARE — patrón regular</div>
+        <div class="ipp-are__body">
+          <table>
+            <thead>
+              <tr><th>Persona</th><th>abitare</th><th>parlare</th><th>lavorare</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="pro">io</td><td class="form">abito</td><td class="form">parlo</td><td class="form">lavoro</td><td><button class="ipp-are__play" data-audio="io abito a Milano, io parlo italiano, io lavoro" data-rate="0.82" data-gender="f"><i class="ph ph-speaker-high"></i></button></td></tr>
+              <tr><td class="pro">tu</td><td class="form">abiti</td><td class="form">parli</td><td class="form">lavori</td><td><button class="ipp-are__play" data-audio="tu abiti a Roma, tu parli inglese, tu lavori molto" data-rate="0.82" data-gender="m"><i class="ph ph-speaker-high"></i></button></td></tr>
+              <tr><td class="pro">lui/lei</td><td class="form">abita</td><td class="form">parla</td><td class="form">lavora</td><td><button class="ipp-are__play" data-audio="lei abita a Napoli, lui parla bene, lei lavora a Milano" data-rate="0.82" data-gender="f"><i class="ph ph-speaker-high"></i></button></td></tr>
+              <tr><td class="pro">noi</td><td class="form">abitiamo</td><td class="form">parliamo</td><td class="form">lavoriamo</td><td><button class="ipp-are__play" data-audio="noi abitiamo a Torino, parliamo italiano, lavoriamo insieme" data-rate="0.82" data-gender="f"><i class="ph ph-speaker-high"></i></button></td></tr>
+              <tr><td class="pro">voi</td><td class="form">abitate</td><td class="form">parlate</td><td class="form">lavorate</td><td><button class="ipp-are__play" data-audio="voi abitate qui? voi parlate italiano? voi lavorate molto" data-rate="0.82" data-gender="m"><i class="ph ph-speaker-high"></i></button></td></tr>
+              <tr><td class="pro">loro</td><td class="form">abitano</td><td class="form">parlano</td><td class="form">lavorano</td><td><button class="ipp-are__play" data-audio="loro abitano a Venezia, parlano tre lingue, lavorano a Milano" data-rate="0.82" data-gender="f"><i class="ph ph-speaker-high"></i></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Ejercicio 5 · Esercizi — verbi in -ARE</h4>
+        <div id="exE5"></div>
+      </div>
+    </section>
+
+    <!-- ⑥ DIÁLOGO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑥</div>
+      <h2 class="ipp-title">Il dialogo — Marco e Sofia alla stazione</h2>
+      <p class="ipp-sub">Identificá <em>essere, andare, avere</em> y los verbos <em>-ARE</em> que aparecen en cada línea.</p>
+
+      <div class="ipp-dial">
+        <div class="ipp-dial__row">
+          <div class="ipp-dial__who">Marco</div>
+          <div class="ipp-dial__bubble">Ciao! <strong>Di dove sei?</strong></div>
+        </div>
+        <div class="ipp-dial__note">→ <em>essere</em>: sei (tu/vos sos)</div>
+
+        <div class="ipp-dial__row right">
+          <div class="ipp-dial__who">Sofia</div>
+          <div class="ipp-dial__bubble"><mark class="ipp-hl">Sono</mark> di Roma, ma <mark class="ipp-hl">abito</mark> a Milano. E tu?</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>essere</em>: sono (yo soy) · <em>abitare -ARE</em>: abito (yo vivo)</div>
+
+        <div class="ipp-dial__row">
+          <div class="ipp-dial__who">Marco</div>
+          <div class="ipp-dial__bubble">Io <mark class="ipp-hl">sono</mark> di Napoli. <mark class="ipp-hl">Vado</mark> a Venezia per il fine settimana.</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>essere</em>: sono · <em>andare</em>: vado (yo voy)</div>
+
+        <div class="ipp-dial__row right">
+          <div class="ipp-dial__who">Sofia</div>
+          <div class="ipp-dial__bubble">Ah, bella città! Quanti anni <mark class="ipp-hl">hai</mark>?</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>avere</em>: hai (vos tenés)</div>
+
+        <div class="ipp-dial__row">
+          <div class="ipp-dial__who">Marco</div>
+          <div class="ipp-dial__bubble"><mark class="ipp-hl">Ho</mark> trent'anni. E tu?</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>avere</em>: ho (yo tengo)</div>
+
+        <div class="ipp-dial__row right">
+          <div class="ipp-dial__who">Sofia</div>
+          <div class="ipp-dial__bubble"><mark class="ipp-hl">Ho</mark> venticinque anni. <mark class="ipp-hl">Lavoro</mark> come guida turistica.</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>avere</em>: ho · <em>lavorare -ARE</em>: lavoro (yo trabajo)</div>
+
+        <div class="ipp-dial__row">
+          <div class="ipp-dial__who">Marco</div>
+          <div class="ipp-dial__bubble">Interessante! Come <mark class="ipp-hl">ti chiami</mark>?</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>chiamarsi -ARE reflexivo</em>: ti chiami</div>
+
+        <div class="ipp-dial__row right">
+          <div class="ipp-dial__who">Sofia</div>
+          <div class="ipp-dial__bubble"><mark class="ipp-hl">Mi chiamo</mark> Sofia. Piacere!</div>
+        </div>
+        <div class="ipp-dial__note">→ <em>chiamarsi -ARE reflexivo</em>: mi chiamo</div>
+
+        <div class="ipp-dial__row">
+          <div class="ipp-dial__who">Marco</div>
+          <div class="ipp-dial__bubble">Piacere, Sofia! Io <mark class="ipp-hl">mi chiamo</mark> Marco. Arrivederci!</div>
+        </div>
+      </div>
+
+      <div class="ipp-exwrap">
+        <h4 class="ipp-exhead"><i class="ph ph-pencil-line"></i> Comprensione del dialogo</h4>
+        <div id="exDial"></div>
+      </div>
+    </section>
+
+    <!-- ⑦ INTEGRADORES -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑦</div>
+      <h2 class="ipp-title">Esercizi integratori</h2>
+      <p class="ipp-sub">Combiná <em>essere · andare · avere</em> y los verbos <em>-ARE</em>. Mezclan todos los contenidos del módulo.</p>
+
+      <div class="ipp-exwrap">
+        <div id="exInt"></div>
+      </div>
+
+      <div class="ipp-close">
+        <p>¡<em>Bravissimo/a!</em> Completaste la gramática del Módulo 2.<br>Ahora practicá todo en los ejercicios interactivos.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+window.IPP_VOICE = window.IPP_VOICE || {
+  lang: 'it-IT', rate: 0.82, pitch: 1.10,
+  preferFemale: true, preferGoogle: true
+};
+
+if (!window.__ipp_m2_g__) {
+window.__ipp_m2_g__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) {
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.10;
+  var voice = ippVoice(gender);
+  if (voice) utt.voice = voice;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+
+/* ═══ Retry helper ═══ */
+function ippRetry(container, resetFn) {
+  var old = container.querySelector('.ipp-retry');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+/* ═══ Quiz: MCQ ═══ */
+function _lockEx(ex) {
+  ex.dataset.done = '1';
+  ex.querySelectorAll('.ipp-opt').forEach(function(b) { b.disabled = true; });
+}
+function _resetEx(ex) {
+  delete ex.dataset.done;
+  ex.querySelectorAll('.ipp-opt').forEach(function(b) {
+    b.disabled = false; b.classList.remove('correct','wrong');
+  });
+  var fb = ex.querySelector('.ipp-fb');
+  if (fb) { fb.innerHTML = ''; fb.className = 'ipp-fb'; }
+  var inp = ex.querySelector('.ipp-fill, .ipp-ta');
+  if (inp) { inp.value = ''; inp.disabled = false; inp.classList.remove('ok','err'); }
+}
+function checkMC(btn) {
+  var ex = btn.closest('.ipp-ex');
+  if (ex.dataset.done) return;
+  _lockEx(ex);
+  var ok = btn.dataset.ok === '1';
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) ex.querySelectorAll('.ipp-opt[data-ok="1"]').forEach(function(b) { b.classList.add('correct'); });
+  var fb = ex.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + (btn.dataset.fb || '');
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  ippRetry(ex, function() { _resetEx(ex); });
+}
+
+/* ═══ Texto libre ═══ */
+function _normalize(s) {
+  return (s || '').trim().toLowerCase()
+    .replace(/['']/g, "'")
+    .replace(/[!?.,;:]/g, '')
+    .replace(/[àá]/g, 'a').replace(/[éè]/g, 'e')
+    .replace(/[íì]/g, 'i').replace(/[óò]/g, 'o').replace(/[ú]/g, 'u')
+    .replace(/\s+/g, ' ');
+}
+function checkFree(btn) {
+  var ex = btn.closest('.ipp-ex');
+  if (ex.dataset.done) return;
+  var inp = ex.querySelector('.ipp-fill, .ipp-ta');
+  if (!inp) return;
+  var accepted = JSON.parse(btn.dataset.accepted || '[]');
+  var hint = btn.dataset.hint || '';
+  var val = _normalize(inp.value);
+  var ok = accepted.some(function(a) { return _normalize(a) === val; });
+  var fb = ex.querySelector('.ipp-fb');
+  if (ok) {
+    ex.dataset.done = '1';
+    inp.disabled = true; inp.classList.add('ok');
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfetto!</strong> Respuesta correcta: <em>' + accepted[0] + '</em>';
+    fb.className = 'ipp-fb ok';
+  } else {
+    inp.classList.add('err');
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> <strong>Revisá:</strong> ' + hint + '<br><small style="opacity:0.75;">Forma correcta: <em>' + accepted[0] + '</em></small>';
+    fb.className = 'ipp-fb err';
+    ippRetry(ex, function() { _resetEx(ex); });
+  }
+}
+
+/* ═══ Presentación libre (int5) ═══ */
+function checkPresentation(btn) {
+  var ex = btn.closest('.ipp-ex');
+  if (ex.dataset.done) return;
+  var ta = ex.querySelector('.ipp-ta');
+  var fb = ex.querySelector('.ipp-fb');
+  var val = (ta.value || '').toLowerCase();
+  var checks = {
+    essere:  /\b(sono|sei|è|siamo|siete)\b/.test(val),
+    abitare: /\babito\b/.test(val),
+    avere:   /\bho\b.*anni|anni.*\bho\b/.test(val),
+    name:    /\bmi chiamo\b/.test(val)
+  };
+  var missing = [];
+  if (!checks.essere)  missing.push('<em>essere</em> (sono di…)');
+  if (!checks.abitare) missing.push('<em>abitare</em> (abito a…)');
+  if (!checks.avere)   missing.push('<em>avere</em> + anni (ho … anni)');
+  if (!checks.name)    missing.push('<em>chiamarsi</em> (mi chiamo…)');
+  if (missing.length === 0) {
+    ex.dataset.done = '1'; ta.disabled = true;
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Bravissimo/a!</strong> Tu presentación incluye todos los elementos: essere, abitare, avere y chiamarsi. ¡Estructura perfecta!';
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> <strong>Falta incluir:</strong> ' + missing.join(' · ') + '.<br><small>Revisá que cada verbo aparezca en tu texto.</small>';
+    fb.className = 'ipp-fb err';
+    ippRetry(ex, function() { _resetEx(ex); });
+  }
+}
+
+/* ═══ Ejercicio 4: clasificación M/F ═══ */
+var CLASSIFY_DATA = [
+  ['treno','m'],['stazione','f'],['aeroporto','m'],['città','f'],
+  ['biglietto','m'],['valigia','f'],['casa','f'],['gatto','m'],
+  ['gelato','m'],['notte','f'],['giorno','m'],['sera','f']
+];
+function buildClassify() {
+  var html = '';
+  CLASSIFY_DATA.forEach(function(w, i) {
+    html += '<div class="ipp-classify__item" data-idx="'+i+'" data-correct="'+w[1]+'">'+
+              '<span class="ipp-classify__word">'+w[0]+'</span>'+
+              '<div class="ipp-classify__btns">'+
+                '<button class="ipp-classify__btn m" data-pick="m" data-idx="'+i+'">M</button>'+
+                '<button class="ipp-classify__btn f" data-pick="f" data-idx="'+i+'">F</button>'+
+              '</div>'+
+            '</div>';
+  });
+  document.getElementById('classifyList').innerHTML = html;
+}
+function pickClassify(btn) {
+  var item = btn.closest('.ipp-classify__item');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var pick = btn.dataset.pick;
+  var correct = item.dataset.correct;
+  var ok = pick === correct;
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    item.querySelectorAll('.ipp-classify__btn').forEach(function(b) {
+      if (b.dataset.pick === correct) b.classList.add('correct');
+    });
+  }
+  item.querySelectorAll('.ipp-classify__btn').forEach(function(b) { b.disabled = true; });
+  _updateClassifyScore();
+}
+function _updateClassifyScore() {
+  var items = document.querySelectorAll('.ipp-classify__item');
+  var done = 0, ok = 0;
+  items.forEach(function(it) {
+    if (it.dataset.done) {
+      done++;
+      var hasCorrect = it.querySelector('.ipp-classify__btn[data-pick]');
+      // si el botón clickeado tiene .correct directo (no fue revelado por error), es acierto
+      var picked = it.querySelector('.ipp-classify__btn.correct, .ipp-classify__btn.wrong');
+      // Detectar: si el primer botón pulsado fue correcto
+      var wrongPicked = it.querySelector('.ipp-classify__btn.wrong');
+      if (!wrongPicked) ok++;
+    }
+  });
+  var score = document.getElementById('classifyScore');
+  var fb = document.getElementById('classifyFb');
+  if (done < items.length) {
+    score.textContent = done + ' / ' + items.length + ' clasificadas';
+  } else {
+    score.textContent = '';
+    if (ok === items.length) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto! ¡Muy bien!</strong> Recordá la regla básica: la mayoría de las palabras que terminan en <strong>-o</strong> son masculinas (<em>treno, biglietto, gatto, giorno</em>), y las que terminan en <strong>-a</strong> son femeninas (<em>valigia, casa, sera</em>).<br><br><strong>¡Cuidado con las terminaciones especiales!</strong> Las palabras terminadas en <strong>-tà</strong> siempre son femeninas (<em>città</em>). Y atención con las que terminan en <strong>-e</strong>, que hay que memorizarlas: <em>stazione</em> y <em>notte</em> son femeninas — en general coinciden con el género del castellano.';
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '<i class="ph ph-info"></i> Clasificaste ' + ok + ' / ' + items.length + ' correctamente.<br><br><strong>Repaso:</strong><br>🔵 <strong>Maschile:</strong> treno · aeroporto · biglietto · gatto · gelato · giorno<br>🔴 <strong>Femminile:</strong> stazione · città · valigia · casa · sera · notte<br><br><em>¡Cuidado con las terminadas en -e (stazione, notte) — hay que memorizarlas!</em>';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+        score.textContent = '';
+        buildClassify();
+      });
+    }
+  }
+}
+
+/* ═══ DATA: EJERCICIOS ═══ */
+var EX_E1 = [
+  { type:'mc', q:'1. Completá la respuesta: <em>— Di dove sei? — _____ di Napoli, ma abito a Roma.</em>',
+    opts:[
+      ['Vai',0,'«Vai» es de andare — ir. Para responder di dove sei usás essere: sono.'],
+      ['Sono',1,'¡Perfetto! La respuesta a «Di dove sei?» usa siempre essere: Sono di…'],
+      ['Ho',0,'«Ho» es de avere — tener. Para el origen usás essere.'],
+      ['Abito',0,'«Abito» significa «vivo/habito» — ya está en la oración. Falta essere.']
+    ]},
+  { type:'free', q:'2. Escribí en italiano: <em>"Soy de Buenos Aires."</em>',
+    placeholder:'escribe aquí…',
+    accepted:['Sono di Buenos Aires','Io sono di Buenos Aires'],
+    hint:'Usá «Sono di» + ciudad.' },
+  { type:'mc', q:'3. <em>Giulia _____ italiana e _____ di Firenze.</em> ¿Cuál par completa correctamente?',
+    opts:[
+      ['sei / sei',0,'«sei / sei» es para tu (segunda persona). Giulia es tercera persona singular.'],
+      ['sono / sono',0,'«sono / sono» es para io o loro. Giulia es lui/lei → è.'],
+      ['è / è',1,'¡Esatto! lui/lei → è. Ambos huecos son essere, tercera persona singular.'],
+      ['è / sta',0,'«è / sta» mezcla essere con stare. Aquí ambos son essere: è / è.']
+    ]},
+  { type:'mc', q:'4. ¿Cuál pregunta significa exactamente <em>"¿De dónde sos?"</em>?',
+    opts:[
+      ['Come sei?',0,'«Come sei?» = ¿Cómo sos? — pregunta por carácter o apariencia, no por origen.'],
+      ['Dove sei?',0,'«Dove sei?» = ¿Dónde estás? — pregunta por ubicación actual, no por origen.'],
+      ['Di dove sei?',1,'¡Sì! «Di dove sei?» — la preposición «di» indica origen. Sin ella la pregunta significaría «dónde estás».'],
+      ['Di dove è?',0,'«Di dove è?» pregunta por el origen de una tercera persona (él/ella/usted formal), no de «vos».']
+    ]},
+  { type:'free', q:'5. Escribí en italiano la pregunta formal: <em>"¿De dónde es usted?"</em>',
+    placeholder:'escribe aquí…',
+    accepted:["Di dove è?","Di dove è lei?","Di dov'è?","Di dov'è lei?","Lei di dove è?","Lei di dov'è?"],
+    hint:'Forma formal de essere para «lei/usted» = è. «Di dove è?»' },
+  { type:'mc', q:'⭐ Avanzado — Completá el párrafo: <em>«___ di Buenos Aires. La mia amica ___ di Córdoba. Noi ___ argentine. Voi, di dove ___?»</em>',
+    opts:[
+      ['sono / sei / siamo / siete',0,'«sei» es de tu. La amica es tercera persona (lei) → è.'],
+      ['sono / è / siamo / siete',1,'¡Perfetto! io→sono · lei (amica)→è · noi→siamo · voi→siete. Las cuatro personas de essere en una sola oración.'],
+      ['sono / sono / sono / sono',0,'«sono» es solo para io y loro. La amica (lei) necesita «è», y noi necesita «siamo».'],
+      ['sono / è / siete / siamo',0,'Invierte noi y voi. noi→siamo, voi→siete, no al revés.']
+    ]},
+  { type:'free', q:'⭐⭐ Avanzado — Traducí esta conversación:<br><em>"— ¿De dónde sos? — Soy de Roma, pero estoy en Milán. — ¿Y él? — Él es de Nápoles."</em>',
+    placeholder:'Di dove sei? Sono di Roma…', wide:true,
+    accepted:["Di dove sei? Sono di Roma ma sono a Milano. E lui? È di Napoli.","Di dove sei? Sono di Roma ma sono a Milano. E lui? E di Napoli.","Di dove sei? Sono di Roma, ma sono a Milano. E lui? E di Napoli.","Di dove sei? Sono di Roma ma sono a Milano. E lui? Lui è di Napoli."],
+    hint:'«Di dove sei?» · «Sono di Roma» · «sono a Milano» · «È di Napoli»' }
+];
+
+var EX_E2 = [
+  { type:'mc', q:'1. ¿Cuál de estas frases tiene un <strong>error</strong>?',
+    opts:[
+      ['Vado a Roma.',0,'«Vado a Roma» es correcto — andare + a + ciudad.'],
+      ['Andiamo alla stazione.',0,'«Andiamo alla stazione» es correcto — alla = a + la.'],
+      ['Vado in Venezia.',1,'¡Errore! Con ciudades siempre «a», nunca «in»: debe ser «Vado a Venezia».'],
+      ['Vanno in vacanza.',0,'«Vanno in vacanza» es correcto — «in vacanza» es una expresión fija.']
+    ]},
+  { type:'mc', q:'2. <em>Marco _____ a Milano in treno domani.</em>',
+    opts:[
+      ['vado',0,'«Vado» es primera persona singular (io). Marco es tercera persona.'],
+      ['andare',0,'«Andare» es el infinitivo. Con Marco (lui) necesitás la conjugación de tercera persona.'],
+      ['vai',0,'«Vai» es segunda persona (tu). Marco es tercera persona.'],
+      ['va',1,'¡Sì! «Va» — lui/lei, tercera persona singular de andare.']
+    ]},
+  { type:'free', q:'3. Escribí en italiano: <em>"Nosotros vamos a Venezia."</em>',
+    placeholder:'escribe aquí…',
+    accepted:['Andiamo a Venezia','Noi andiamo a Venezia'],
+    hint:'noi → andiamo. Con ciudades siempre «a».' },
+  { type:'mc', q:'4. <em>Vado _____ stazione.</em> ¿Qué preposición articulada es correcta?',
+    opts:[
+      ['al',0,'«al» = a + il — se usa con sustantivos masculinos (al museo, al treno). «Stazione» es femenino.'],
+      ['alla',1,'¡Esatto! «alla» = a + la — «stazione» es femenino. «Vado alla stazione.»'],
+      ['a la',0,'«a la» no existe en italiano — las preposiciones y artículos se fusionan: a + la = alla.'],
+      ["all'",0,'«all\'» = a + l\' — se usa ante vocal. «Stazione» empieza con consonante.']
+    ]},
+  { type:'free', q:'5. Escribí en italiano la pregunta: <em>"¿A dónde vas?"</em> (informal)',
+    placeholder:'escribe aquí…',
+    accepted:['Dove vai?','Dove vai'],
+    hint:'«Dove» = dónde. «Vai» = vas (tu). ¡No confundir con «Di dove sei?» — ahí se pregunta por el origen.' },
+  { type:'mc', q:'⭐ Avanzado — ¿Cuál de estas opciones está <strong>completamente correcta</strong> (verbos Y preposiciones)?',
+    opts:[
+      ["Io va alla stazione e loro andate all'aeroporto.",0,'«Io va» — error: io→vado, no va. «va» es de lui/lei.'],
+      ['Noi andiamo in Roma ogni estate.',0,'«andiamo in Roma» — error: con ciudades siempre «a», nunca «in».'],
+      ["Tu vai a Milano, loro vanno alla stazione e io vado all'aeroporto.",1,"¡Esatto! vai a Milano (ciudad→a) · vanno alla stazione (a+la, femenino) · vado all'aeroporto (a+l', ante vocal). Verbos y preposiciones perfectos."],
+      ['Voi andate al museo ma lei vai a casa.',0,'«lei vai» — error: lei→va, no vai. «Vai» es de tu (segunda persona singular).']
+    ]},
+  { type:'free', q:'⭐⭐ Avanzado — Completá con la forma correcta de <em>andare</em> y la preposición:<br><em>«Domani io ___ ___ stazione. Marco ___ ___ aeroporto. Noi ___ ___ Firenze insieme.»</em><br><small>Escribí los 6 elementos en orden, separados por barra.</small>',
+    placeholder:"vado / alla / va / all'aeroporto / andiamo / a", wide:true,
+    accepted:["vado / alla / va / all'aeroporto / andiamo / a","vado/alla/va/all'aeroporto/andiamo/a"],
+    hint:"io→vado · stazione(f)→alla · lui→va · aeroporto(ante vocal)→all'aeroporto · noi→andiamo · ciudad→a Firenze" }
+];
+
+var EX_E3 = [
+  { type:'mc', q:'1. ¿Cómo se dice correctamente <em>"Yo tengo 25 años"</em> en italiano?',
+    opts:[
+      ['Sono 25 anni.',0,'«Sono 25 anni» es incorrecto. En italiano la edad no usa essere sino avere.'],
+      ['Ho 25 anni.',1,'¡Perfetto! La edad se expresa con avere, nunca con essere: «Ho 25 anni».'],
+      ['Ha 25 anni.',0,'«Ha» es tercera persona (lui/lei). Para «yo» usás «ho».'],
+      ['Sono di 25 anni.',0,'«Sono di 25 anni» mezcla essere con la edad — en italiano no existe esta construcción.']
+    ]},
+  { type:'mc', q:'2. <em>Giulia _____ una sorella che si chiama Anna.</em>',
+    opts:[
+      ['ho',0,'«Ho» es primera persona (io tengo). Giulia = lui/lei → ha.'],
+      ['hai',0,'«Hai» es segunda persona (tu tenés). Giulia = lui/lei → ha.'],
+      ['ha',1,'¡Sì! «Ha» — lui/lei, tercera persona singular de avere.'],
+      ['è',0,'«È» es essere (ser/estar), no avere (tener). Falta el verbo avere aquí.']
+    ]},
+  { type:'free', q:'3. Escribí en italiano la pregunta: <em>"¿Cuántos años tenés?"</em>',
+    placeholder:'escribe aquí…',
+    accepted:['Quanti anni hai?','Quanti anni hai'],
+    hint:'«Quanti» = cuántos. «Anni» = años. «Hai» = tenés (tu/vos).' },
+  { type:'mc', q:'4. Te preguntan <em>«Quanti anni hai?»</em> — respondés en primera persona: <em>«_____ trent\'anni.»</em>',
+    opts:[
+      ['Hai',0,'«Hai» es segunda persona (tu tenés) — pero la pregunta te la hacen a vos: respondés en primera persona.'],
+      ['Ho',1,'¡Esatto! Respondés en primera persona: «Ho trent\'anni» — yo tengo 30 años.'],
+      ['Ha',0,'«Ha» es tercera persona (él/ella tiene). Para «yo» usás «ho».'],
+      ['Sono',0,'«Sono» es essere, no avere. La edad siempre con avere: «Ho…anni».']
+    ]},
+  { type:'free', q:'5. Escribí en italiano: <em>"Ella tiene 22 años."</em> (usá el número en palabras)',
+    placeholder:'escribe aquí…',
+    accepted:['Ha ventidue anni','Lei ha ventidue anni','Ha 22 anni','Lei ha 22 anni'],
+    hint:'lui/lei → ha. 22 = ventidue. «Ha ventidue anni.»' },
+  { type:'mc', q:'⭐ Avanzado — ¿Cuál usa <em>avere</em> correctamente en <strong>TODAS</strong> las frases?',
+    opts:[
+      ['Io sono 25 anni. Tu hai un fratello. Noi abbiamo molti amici.',0,'«Io sono 25 anni» — error grave: la edad usa SIEMPRE avere, nunca essere.'],
+      ["Lei ho trent'anni. Voi avete il passaporto? Loro hanno fame.",0,'«Lei ho» — error: lei→ha, no ho. «Ho» es exclusivamente de io.'],
+      ["Ho fame. Tu hai sete? Marco ha vent'anni e abita a Roma.",1,'¡Perfetto! ho (io) · hai (tu) · ha (lui/lei) — todas correctas y la H muda está bien escrita en los tres casos.'],
+      ['Noi abbiamo anni trenta. Voi avete un cane? Loro hanno ragione.',0,'«abbiamo anni trenta» — el orden es incorrecto: debe ser «abbiamo trent\'anni», nunca «anni trenta».']
+    ]},
+  { type:'free', q:'⭐⭐ Avanzado — Traducí al italiano:<br><em>"Yo tengo 28 años. Mi hermano tiene 30 años. ¿Cuántos años tenés vos?"</em><br><small>Usá los números en letras.</small>',
+    placeholder:'Ho… anni. Mio fratello ha… Quanti anni hai?', wide:true,
+    accepted:["Io ho ventotto anni. Mio fratello ha trenta anni. Tu quanti anni hai?","Ho ventotto anni. Mio fratello ha trenta anni. Tu quanti anni hai?","Io ho ventotto anni. Mio fratello ha trent'anni. Tu quanti anni hai?","Ho ventotto anni. Mio fratello ha trent'anni. Tu quanti anni hai?","Io ho ventotto anni. Mio fratello ha trenta anni. Quanti anni hai?","Ho ventotto anni. Mio fratello ha trenta anni. Quanti anni hai?"],
+    hint:'io→ho · fratello→ha · pregunta→Quanti anni hai? La forma más natural: Io ho ventotto anni. Mio fratello ha trenta anni. Tu quanti anni hai?' }
+];
+
+var EX_E5 = [
+  { type:'mc', q:'1. ¿Cuál es la terminación de un verbo -ARE para <em>tu</em>?',
+    opts:[
+      ['-o',0,'«-o» es la terminación de io (primera persona): parlo, abito, lavoro.'],
+      ['-i',1,'¡Correcto! Tu + -ARE → -i. Ejemplos: parli, abiti, lavori, chiami.'],
+      ['-a',0,'«-a» es la terminación de lui/lei (tercera persona): parla, abita, lavora.'],
+      ['-iamo',0,'«-iamo» es la terminación de noi (primera persona plural).']
+    ]},
+  { type:'free', q:'2. Conjugá el verbo <em>lavorare</em> para <em>io</em>.',
+    placeholder:'io ______', accepted:['lavoro'],
+    hint:'Quitás -ARE → lavor- · Agregás -o para io: lavoro.' },
+  { type:'mc', q:'3. <em>Sofia _____ italiano molto bene.</em> (parlare)',
+    opts:[
+      ['parlo',0,'«Parlo» es primera persona (io). Sofia = lui/lei.'],
+      ['parli',0,'«Parli» es segunda persona (tu). Sofia = lui/lei.'],
+      ['parlate',0,'«Parlate» es segunda persona plural (voi). Sofia = lui/lei.'],
+      ['parla',1,'¡Sì! lui/lei + -ARE → parla. «Sofia parla italiano molto bene.»']
+    ]},
+  { type:'free', q:'4. Conjugá <em>abitare</em> para <em>noi</em>.',
+    placeholder:'noi ______', accepted:['abitiamo'],
+    hint:'Quitás -ARE → abit- · Agregás -iamo para noi: abitiamo.' },
+  { type:'mc', q:'5. ¿Cuál de estas frases tiene un <strong>error</strong> de conjugación?',
+    opts:[
+      ['Io abito a Roma.',0,'«Io abito a Roma» es correcto — io + -ARE → -o.'],
+      ['Tu lavori molto.',0,'«Tu lavori molto» es correcto — tu + -ARE → -i.'],
+      ['Loro parlate italiano.',1,'¡Errore! «Loro parlate» es incorrecto — loro + -ARE → parlano, no -ate. «Parlate» es para voi.'],
+      ['Lei parla bene.',0,'«Lei parla bene» es correcto — lui/lei + -ARE → -a.']
+    ]},
+  { type:'mc', q:'⭐ Avanzado — ¿Cuál conjuga <strong>correctamente todos</strong> los verbos -ARE?',
+    opts:[
+      ['Io parlo italiano. Tu abiti a Roma. Loro parlate molto.',0,'«Loro parlate» — error: loro + -ARE → -ano: «parlano».'],
+      ['Sofia parla bene. Noi lavorate insieme. Voi abitate qui.',0,'«Noi lavorate» — error: noi + -ARE → -iamo: «lavoriamo».'],
+      ['Io mi chiamo Marco. Tu chiamate Sofia. Lei lavora a Milano.',0,'«Tu chiamate» — error: tu + -ARE → -i: «chiami», no «chiamate».'],
+      ['Io parlo, tu parli, lei parla, noi parliamo, voi parlate, loro parlano.',1,'¡Perfetto! parlo (io,-o) · parli (tu,-i) · parla (lui/lei,-a) · parliamo (noi,-iamo) · parlate (voi,-ate) · parlano (loro,-ano).']
+    ]}
+];
+
+var EX_DIAL = [
+  { type:'mc', q:'1. ¿En qué ciudad vive Sofia, aunque sea de Roma?',
+    opts:[
+      ['Roma',0,'Roma es de dónde es, pero no donde vive. Revisá: «Sono di Roma, ma abito a ____».'],
+      ['Milano',1,'¡Correcto! «Sono di Roma, ma abito a Milano.» — Es de Roma pero vive en Milán.'],
+      ['Venezia',0,'Venezia es adonde va Marco para el fin de semana, no donde vive Sofia.'],
+      ['Napoli',0,'Napoli es de donde es Marco, no Sofia.']
+    ]},
+  { type:'mc', q:'2. ¿Con qué verbo expresa Sofia su profesión en el diálogo?',
+    opts:[
+      ['sono',0,'«Sono» es essere — se usa para decir quién sos. Sofia podría también usarlo, pero en el diálogo usa otro.'],
+      ['vado',0,'«Vado» es andare — ir. Sofia no menciona adónde va.'],
+      ['lavoro',1,'¡Sì! Sofia dice «Lavoro come guida turistica» — verbo lavorare (-ARE), primera persona: lavoro.'],
+      ['ho',0,'«Ho» es avere. Sofia usa avere para su edad, no para su profesión.']
+    ]},
+  { type:'free', q:'3. Escribí en italiano la presentación completa de Marco: origen, destino y edad.',
+    placeholder:'Sono di… Vado a… Ho… anni.', wide:true,
+    accepted:["Sono di Napoli. Vado a Venezia. Ho trent'anni.","Sono di Napoli, vado a Venezia, ho trent'anni","Sono di Napoli. Vado a Venezia. Ho trenta anni.","Sono di Napoli, vado a Venezia, ho trenta anni","Sono di Napoli. Vado a Venezia per il fine settimana. Ho trent'anni.","Sono di Napoli. Vado a Venezia per il fine settimana. Ho trenta anni."],
+    hint:"«Sono di Napoli. Vado a Venezia. Ho trent'anni.» — se usa apóstrofo cuando una palabra termina en vocal y la siguiente empieza con la misma vocal." }
+];
+
+var EX_INT = [
+  { type:'mc', q:'1. <em>Giulia _____ di Firenze, _____ ventisei anni e _____ come insegnante.</em><br><small>(essere / avere / lavorare)</small>',
+    opts:[
+      ['sei / hai / lavori',0,'«sei / hai / lavori» son las formas de tu. Giulia es lui/lei → tercera persona.'],
+      ['è / ha / lavora',1,'¡Perfetto! lui/lei → è (essere) · ha (avere) · lavora (lavorare -ARE).'],
+      ['sono / ho / lavoro',0,'«sono / ho / lavoro» son las formas de io (primera persona).'],
+      ['è / ha / lavorare',0,'«lavorare» es el infinitivo, no la conjugación. Necesitás «lavora».']
+    ]},
+  { type:'free', q:'2. Traducí al italiano:<br><em>"Sofia es de Roma pero vive en Milán. Tiene 25 años y habla italiano muy bien."</em>',
+    placeholder:'escribe las dos oraciones…', wide:true,
+    accepted:['Sofia è di Roma ma abita a Milano. Ha 25 anni e parla italiano molto bene.','Sofia è di Roma ma abita a Milano. Ha venticinque anni e parla italiano molto bene.','Sofia è di Roma, ma abita a Milano. Ha 25 anni e parla italiano molto bene.'],
+    hint:'essere (è) · abitare -ARE (abita) · avere (ha) · parlare -ARE (parla). «e» = "y", «ma» = "pero".' },
+  { type:'mc', q:'3. ¿Cuál de estas opciones está <strong>completamente correcta</strong>?',
+    opts:[
+      ['Vai in Roma ogni estate.',0,'«Vai in Roma» tiene error: con ciudades se usa «a» no «in». → «Vai a Roma».'],
+      ['Loro vanno al stazione.',0,'«al stazione» no existe: stazione es femenino → «alla stazione».'],
+      ["Vado all'aeroporto alle otto.",1,"¡Perfetto! «Vado all'aeroporto» — all' = a + l' (ante vocal, masculino)."],
+      ['Andiamo a la pizzeria.',0,'«a la» no existe en italiano: a + la se fusiona en «alla».']
+    ]},
+  { type:'mc', q:'4. ¿Cuál es la negación correcta de <em>"Sono italiano"</em>?',
+    opts:[
+      ['No sono italiano.',0,'En italiano la negación usa «non» antes del verbo, no «no» como en español.'],
+      ['Non sono italiano.',1,'¡Sì! «Non» va justo antes del verbo: «Non sono italiano.» «No» solo se usa como respuesta corta.'],
+      ['Sono non italiano.',0,'«Sono non italiano» no es correcto — el «non» va antes del verbo.'],
+      ['Non sei italiano.',0,'«Non sei italiano» es la negación de «tu sei italiano», no de «io sono».']
+    ]},
+  { type:'pres', q:'5. Escribí tu propia presentación en italiano (3 oraciones mínimo).<br><small>Incluí: de dónde sos, dónde vivís, cuántos años tenés. Usá <em>essere, abitare, avere</em> y <em>chiamarsi</em>.</small>',
+    placeholder:'Mi chiamo… Sono di… Abito a… Ho… anni.' },
+  { type:'mc', q:'⭐ Avanzado — ¿Cuál de estas presentaciones es <strong>completamente correcta</strong>?',
+    opts:[
+      ['Mi chiamo Luca. Sono di Torino e sono di 30 anni. Vai a lavorare a Milano.',0,'«sono di 30 anni» — error: la edad usa avere (ho 30 anni). «Vai» mal: io → vado.'],
+      ['Mi chiamo Giulia. Sono di Roma ma abito in Napoli. Ho 28 anni e parlo bene italiano.',0,'«abito in Napoli» — error: con ciudades siempre «a», nunca «in».'],
+      ["Si chiama Marco. È di Napoli ma abita a Milano. Ha trent'anni e lavora come ingegnere.",1,"¡Perfetto! essere (è di) · abitare (abita a, ciudad con a) · avere (ha trent'anni) · lavorare (lavora). Todo correcto."],
+      ['Ha nome Sofia. È di Venezia. Ho 22 anni e abita a Firenze con la famiglia.',0,'«Ha nome Sofia» no existe en italiano: se dice «Si chiama Sofia». Además mezcla personas.']
+    ]},
+  { type:'free', q:'⭐⭐ Avanzado — Traducí este párrafo al italiano:<br><em>"Me llamo Valentina. Soy de Córdoba, Argentina, pero vivo en Roma. Tengo 27 años. Trabajo como profesora y hablo italiano y español."</em>',
+    placeholder:'Mi chiamo Valentina. Sono di…', wide:true,
+    accepted:['Mi chiamo Valentina. Sono di Cordoba, Argentina, ma abito a Roma. Ho ventisette anni. Lavoro come insegnante e parlo italiano e spagnolo.','Mi chiamo Valentina. Sono di Cordoba, Argentina, ma abito a Roma. Ho 27 anni. Lavoro come insegnante e parlo italiano e spagnolo.','Mi chiamo Valentina. Sono di Cordoba ma abito a Roma. Ho ventisette anni. Lavoro come insegnante e parlo italiano e spagnolo.'],
+    hint:'chiamarsi→Mi chiamo · essere→Sono di · abitare→abito a · avere→Ho … anni · lavorare→Lavoro come · parlare→parlo. Ciudad con «a», no «in».' }
+];
+
+/* ═══ BUILDERS ═══ */
+function _esc(s) { return String(s).replace(/"/g, '&quot;'); }
+function buildEx(data, containerId) {
+  var html = '';
+  data.forEach(function(item) {
+    html += '<div class="ipp-ex">';
+    html += '<p class="ipp-ex__q">' + item.q + '</p>';
+    if (item.type === 'mc') {
+      var cls = item.opts.length === 4 ? 'ipp-opts four' : 'ipp-opts';
+      html += '<div class="' + cls + '">';
+      item.opts.forEach(function(o) {
+        html += '<button class="ipp-opt"' + (o[1] === 1 ? ' data-ok="1"' : '') +
+                ' data-fb="' + _esc(o[2]) + '"' +
+                ' onclick="ippCheckMC(this)">' + o[0] + '</button>';
+      });
+      html += '</div>';
+    } else if (item.type === 'free') {
+      var width = item.wide ? 'width:100%;max-width:540px;' : 'width:280px;';
+      html += '<div style="margin-bottom:0.4rem;">';
+      html += '<input class="ipp-fill" type="text" placeholder="' + _esc(item.placeholder) + '" style="' + width + '">';
+      html += '</div>';
+      html += '<button class="ipp-check" data-accepted="' + _esc(JSON.stringify(item.accepted)) + '" data-hint="' + _esc(item.hint) + '" onclick="ippCheckFree(this)">';
+      html += '<i class="ph ph-check-circle"></i> Verificar</button>';
+    } else if (item.type === 'pres') {
+      html += '<textarea class="ipp-ta" placeholder="' + _esc(item.placeholder) + '"></textarea>';
+      html += '<button class="ipp-check" onclick="ippCheckPres(this)" style="margin-top:0.7rem;">';
+      html += '<i class="ph ph-check-circle"></i> Verificar estructura</button>';
+    }
+    html += '<div class="ipp-fb"></div></div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+window.ippStop = ippStop;
+window.ippCheckMC = checkMC;
+window.ippCheckFree = checkFree;
+window.ippCheckPres = checkPresentation;
+window.ippPickClassify = pickClassify;
+
+document.addEventListener('click', function(e) {
+  var ab = e.target.closest('[data-audio]');
+  if (ab) { ippAudio(ab.dataset.audio, parseFloat(ab.dataset.rate || '0.82'), ab.dataset.gender || 'f'); return; }
+  var sb = e.target.closest('[data-stop]');
+  if (sb) { ippStop(); return; }
+  var cb = e.target.closest('.ipp-classify__btn');
+  if (cb) { pickClassify(cb); return; }
+});
+document.addEventListener('keypress', function(e) {
+  if (e.key !== 'Enter') return;
+  var inp = e.target.closest('.ipp-fill');
+  if (!inp) return;
+  var btn = inp.closest('.ipp-ex').querySelector('.ipp-check');
+  if (btn) btn.click();
+});
+
+var builds = [
+  function(){ buildEx(EX_E1, 'exE1'); },
+  function(){ buildEx(EX_E2, 'exE2'); },
+  function(){ buildEx(EX_E3, 'exE3'); },
+  buildClassify,
+  function(){ buildEx(EX_E5, 'exE5'); },
+  function(){ buildEx(EX_DIAL, 'exDial'); },
+  function(){ buildEx(EX_INT, 'exInt'); }
+];
+builds.forEach(function(fn) {
+  try { fn(); } catch(e) { console.warn('[IPP build error]', e); }
+});
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 2 — Gramática ===== -->

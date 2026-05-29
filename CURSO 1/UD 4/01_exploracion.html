@@ -1,0 +1,586 @@
+<!-- ===== BLOQUE: Unità 4 — Exploración · Tutti in piazza! ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #e5ab07;
+    --mc-dk:    #c8940a;
+    --mc-text:  #7a5500;
+    --mc-bg:    #fdf5e0;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.98rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1;
+    padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(229,171,7,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75; min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+
+  /* ===== Video ===== */
+  .ipp-video {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    overflow: hidden; border-radius: var(--r);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 1.5rem;
+  }
+  .ipp-video iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+
+  /* ===== Task box ===== */
+  .ipp-task {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: clamp(0.9rem, 2.8vw, 1.1rem) clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-task__head {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--mc-text); font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 700; margin-bottom: 0.65rem;
+  }
+  .ipp-task__head .ph { font-size: 1.1rem; }
+  .ipp-task__list {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .ipp-task__list li {
+    font-size: clamp(0.88rem, 2.2vw, 0.94rem);
+    color: #333; line-height: 1.55;
+    padding-left: 1.25rem; position: relative;
+  }
+  .ipp-task__list li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--mc); font-weight: 700;
+  }
+  .ipp-task__list li em { color: var(--red); font-style: italic; }
+
+  /* ===== Joke note ===== */
+  .ipp-joke {
+    background: linear-gradient(135deg, var(--mc-bg) 0%, var(--cream) 100%);
+    border: 1px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(0.95rem, 2.8vw, 1.15rem) clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(0.88rem, 2.2vw, 0.92rem);
+    line-height: 1.7;
+  }
+  .ipp-joke__head {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--mc-text);
+    font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 700; margin-bottom: 0.55rem;
+  }
+  .ipp-joke__head .ph { font-size: 1.1rem; color: var(--mc-dk); }
+  .ipp-joke em { color: var(--red); font-style: italic; }
+  .ipp-joke strong { color: var(--mc-text); }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(1.75rem, 4.5vw, 2.5rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.1rem; line-height: 1.55;
+  }
+
+  /* ===== Ejercicio card ===== */
+  .ipp-ex {
+    background: var(--white); border-radius: var(--r);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+  }
+
+  /* ===== Items V/F ===== */
+  .ipp-vf {
+    padding: clamp(0.85rem, 2.5vw, 1rem) 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-vf:first-child { padding-top: 0; }
+  .ipp-vf:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-vf__stmt {
+    font-size: clamp(0.92rem, 2.3vw, 0.97rem);
+    margin-bottom: 0.6rem;
+    line-height: 1.55;
+  }
+  .ipp-vf__stmt em { color: var(--mc-text); font-style: italic; font-weight: 600; }
+  .ipp-vf__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.78rem; font-weight: 700;
+    margin-right: 0.5rem; vertical-align: -2px;
+  }
+  .ipp-vf__btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .ipp-vfbtn {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px; background: var(--cream);
+    font-family: inherit;
+    font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-vfbtn:hover:not(:disabled) { border-color: var(--mc); color: var(--mc-text); }
+  .ipp-vfbtn:disabled { cursor: default; opacity: 0.65; }
+  .ipp-vfbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-vfbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+  .ipp-vfbtn .ph { font-size: 0.95rem; }
+
+  /* ===== Items MC ===== */
+  .ipp-mc {
+    padding: clamp(0.9rem, 2.5vw, 1.1rem) 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-mc:first-child { padding-top: 0; }
+  .ipp-mc:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-mc__q {
+    font-weight: 600;
+    font-size: clamp(0.92rem, 2.3vw, 0.97rem);
+    margin-bottom: 0.65rem;
+    line-height: 1.55;
+  }
+  .ipp-mc__q em { color: var(--mc-text); font-style: italic; }
+  .ipp-mc__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.78rem; font-weight: 700;
+    margin-right: 0.5rem; vertical-align: -2px;
+  }
+  .ipp-mc__opts { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .ipp-mcbtn {
+    padding: 0.45rem 1rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px; background: var(--cream);
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 500;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-mcbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-mcbtn:disabled { cursor: default; opacity: 0.65; }
+  .ipp-mcbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); font-weight: 700; }
+  .ipp-mcbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* ===== Feedback ===== */
+  .ipp-fb {
+    font-size: 0.84rem;
+    margin-top: 0.6rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 3px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 3px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+  .ipp-fb strong { font-weight: 700; }
+
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid var(--mc-dk);
+    color: var(--mc-dk); border-radius: 16px;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.4rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: var(--mc-bg); color: var(--black); }
+
+  /* ===== Score bar ===== */
+  .ipp-score {
+    background: var(--mc-bg);
+    border-radius: var(--r);
+    padding: 0.85rem 1.15rem;
+    margin-top: 1.2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .ipp-score__label {
+    font-weight: 600; font-size: clamp(0.84rem, 2.1vw, 0.92rem);
+    color: var(--mc-text);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-score__num {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-weight: 700; color: var(--mc-text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-mc__opts { flex-direction: column; align-items: stretch; }
+    .ipp-mcbtn { text-align: left; }
+  }
+  @media (max-width: 380px) {
+    .ipp-ex { padding: 1rem; }
+  }
+</style>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-clock-countdown ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 4 · A1 · Exploración</div>
+    <h1 class="ipp-hero__title">Che ore sono</h1>
+    <p class="ipp-hero__subtitle">Una <em>barzelletta</em> italiana — aprendé a preguntar la hora</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        ¡Hoy aprenderemos a preguntar la hora… con una <strong><em>barzelletta</em></strong> italiana! Una <em>barzelletta</em> es un chiste en italiano. Este video es muy corto pero <em>molto divertente</em> (muy divertido). Los italianos tienen una larga tradición de contar chistes con muchos gestos y teatralidad. <strong>¡Prepárate para reír y aprender al mismo tiempo!</strong>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="ipp-video">
+      <iframe src="https://www.youtube.com/embed/7mi5_TnIORo" allowfullscreen="" title="Le barzellette — L'asino (Che ore sono?)"></iframe>
+    </div>
+
+    <!-- TASK BOX -->
+    <div class="ipp-task">
+      <div class="ipp-task__head"><i class="ph ph-target"></i> Mientras ves el video, presta atención a…</div>
+      <ul class="ipp-task__list">
+        <li>¿Cómo pide la hora el hombre? ¿Qué palabras exactas usa?</li>
+        <li>¿Qué horas se mencionan durante el chiste?</li>
+        <li>¿Cuál es el chiste? ¿Qué hay debajo del <em>Ciuchino</em> (burrito)?</li>
+      </ul>
+    </div>
+
+    <!-- JOKE NOTE -->
+    <div class="ipp-joke">
+      <div class="ipp-joke__head"><i class="ph ph-lightbulb"></i> ¿No entendiste el chiste?</div>
+      El segundo hombre dice que lee la hora en <em>«le palle del Ciuchino»</em> (las bolas del burrito). Cuando las levanta… ¡debajo hay un <strong><em>campanile</em></strong>, un campanario! Los campanarios en los pueblos italianos históricamente eran el reloj público de toda la comunidad. El absurdo cómico es que alguien lleve un campanario escondido ahí. ¡Ahora el chiste tiene mucha más gracia!
+    </div>
+
+    <!-- ① VERO O FALSO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Ejercicio ①</div>
+      <h2 class="ipp-title">Vero o Falso?</h2>
+      <p class="ipp-sub">Basado en la <em>barzelletta</em> que acabás de ver · 5 ítems</p>
+
+      <div class="ipp-ex" id="exVF"></div>
+
+      <div class="ipp-score">
+        <span class="ipp-score__label"><i class="ph ph-check-circle"></i> Respuestas correctas</span>
+        <span class="ipp-score__num" id="scoreVF">0 / 5</span>
+      </div>
+    </section>
+
+    <!-- ② SELECCIÓN MÚLTIPLE -->
+    <section class="ipp-section">
+      <div class="ipp-label">Ejercicio ②</div>
+      <h2 class="ipp-title">Selección múltiple</h2>
+      <p class="ipp-sub">Elegí la respuesta correcta para cada pregunta · 4 preguntas</p>
+
+      <div class="ipp-ex" id="exMC"></div>
+
+      <div class="ipp-score">
+        <span class="ipp-score__label"><i class="ph ph-check-circle"></i> Respuestas correctas</span>
+        <span class="ipp-score__num" id="scoreMC">0 / 4</span>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+if (!window.__ipp_m4_e1__) {
+window.__ipp_m4_e1__ = true;
+
+/* ═══ DATA — del PDF del cliente con feedback específico ═══ */
+var EX_VF = [
+  { stmt: 'El hombre empieza con <em>«Mi scusi»</em> para llamar la atención.',
+    ans: true,
+    fb: '<em>«Mi scusi»</em> es la fórmula cortés para llamar la atención de un desconocido en italiano.' },
+  { stmt: 'La primera hora que escucha el hombre son las 3:35.',
+    ans: false,
+    fb: 'La primera respuesta es <em>«Le 5:35»</em> (cinque e trentacinque), no las 3:35.' },
+  { stmt: 'Al final del chiste el hombre dice <em>«sono le 7:15 spaccate»</em>.',
+    ans: true,
+    fb: 'La frase exacta al final es <em>«Sono le 7:15 spaccate!»</em> — <em>spaccate</em> = exactas, en punto.' },
+  { stmt: 'El segundo personaje lee la hora en un reloj de pulsera.',
+    ans: false,
+    fb: 'Lee la hora en <em>«le palle del Ciuchino»</em> (el burrito) — que esconde un <em>campanile</em> debajo.' },
+  { stmt: 'Debajo del burrito (<em>il Ciuchino</em>) hay un <em>campanile</em>.',
+    ans: true,
+    fb: 'Ese es el chiste. Debajo hay un campanario (<em>campanile</em>) — que históricamente era el reloj público del pueblo.' }
+];
+
+var EX_MC = [
+  { q: '¿Cómo pide la hora el hombre en la barzelletta?',
+    opts: ["Mi sa dire l'ora?", 'Che lavoro fai?', 'Come ti chiami?', 'Dove sei?'],
+    ok: "Mi sa dire l'ora?",
+    fb: '<em>«Mi sa dire l\'ora?»</em> es la forma formal y cortés para pedir la hora a un desconocido.' },
+  { q: '¿Qué hora exacta dice el segundo hombre al final del chiste?',
+    opts: ['7:15', '5:35', '8:00', '9:00'],
+    ok: '7:15',
+    fb: '<em>«Le sette e quindici spaccate»</em> — 7:15 exactas, justo al final del chiste.' },
+  { q: '¿Qué hay debajo de las <em>palle del Ciuchino</em>?',
+    opts: ['Un campanile (campanario)', 'Un orologio (reloj)', 'Una chiesa (iglesia)', 'Un palazzo (palacio)'],
+    ok: 'Un campanile (campanario)',
+    fb: 'Y ahí está el chiste: ¡el burrito esconde un <em>campanile</em> debajo!' },
+  { q: 'En italiano, ¿qué significa <em>«spaccate»</em> al hablar de la hora?',
+    opts: ['En punto exacto', 'Más o menos', 'Y cuarto', 'Y media'],
+    ok: 'En punto exacto',
+    fb: '<em>«Spaccate»</em> = exactas, en punto. Literalmente "partidas" (en el instante exacto).' }
+];
+
+/* ═══ STATE ═══ */
+var vfScores = {};
+var mcScores = {};
+
+/* ═══ BUILDERS ═══ */
+function buildVF() {
+  var html = '';
+  EX_VF.forEach(function(item, i) {
+    html += '<div class="ipp-vf" data-idx="' + i + '" data-ans="' + item.ans + '">' +
+              '<div class="ipp-vf__stmt"><span class="ipp-vf__num">' + (i+1) + '</span>' + item.stmt + '</div>' +
+              '<div class="ipp-vf__btns">' +
+                '<button class="ipp-vfbtn" data-pick="true" onclick="ippPickVF(this)"><i class="ph ph-check"></i> Verdadero</button>' +
+                '<button class="ipp-vfbtn" data-pick="false" onclick="ippPickVF(this)"><i class="ph ph-x"></i> Falso</button>' +
+              '</div>' +
+              '<div class="ipp-fb"></div>' +
+            '</div>';
+  });
+  document.getElementById('exVF').innerHTML = html;
+}
+
+function buildMC() {
+  var html = '';
+  EX_MC.forEach(function(item, i) {
+    html += '<div class="ipp-mc" data-idx="' + i + '" data-ok="' + item.ok.replace(/"/g,'&quot;') + '">' +
+              '<div class="ipp-mc__q"><span class="ipp-mc__num">' + (i+1) + '</span>' + item.q + '</div>' +
+              '<div class="ipp-mc__opts">';
+    item.opts.forEach(function(o) {
+      html += '<button class="ipp-mcbtn" onclick="ippPickMC(this)">' + o + '</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById('exMC').innerHTML = html;
+}
+
+/* ═══ Retry helper ═══ */
+function ippRetry(container, resetFn) {
+  var old = container.querySelector('.ipp-retry');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+/* ═══ V/F ═══ */
+function ippPickVF(btn) {
+  var item = btn.closest('.ipp-vf');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var correctBool = item.dataset.ans === 'true';
+  var pickedBool = btn.dataset.pick === 'true';
+  var ok = pickedBool === correctBool;
+  var btns = item.querySelectorAll('.ipp-vfbtn');
+  btns.forEach(function(b) { b.disabled = true; });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    btns.forEach(function(b) {
+      if ((b.dataset.pick === 'true') === correctBool) b.classList.add('correct');
+    });
+  }
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + EX_VF[idx].fb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  vfScores[idx] = ok ? 1 : 0;
+  _updateScore('vf');
+  ippRetry(item, function() {
+    delete item.dataset.done;
+    btns.forEach(function(b) { b.disabled = false; b.classList.remove('correct','wrong'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+    delete vfScores[idx]; _updateScore('vf');
+  });
+}
+
+/* ═══ MC ═══ */
+function ippPickMC(btn) {
+  var item = btn.closest('.ipp-mc');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var correct = item.dataset.ok;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  var btns = item.querySelectorAll('.ipp-mcbtn');
+  btns.forEach(function(b) { b.disabled = true; });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    btns.forEach(function(b) {
+      if (b.textContent.trim() === correct) b.classList.add('correct');
+    });
+  }
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + EX_MC[idx].fb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  mcScores[idx] = ok ? 1 : 0;
+  _updateScore('mc');
+  ippRetry(item, function() {
+    delete item.dataset.done;
+    btns.forEach(function(b) { b.disabled = false; b.classList.remove('correct','wrong'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+    delete mcScores[idx]; _updateScore('mc');
+  });
+}
+
+function _updateScore(kind) {
+  if (kind === 'vf') {
+    var total = 0; Object.values(vfScores).forEach(function(v) { total += v; });
+    document.getElementById('scoreVF').textContent = total + ' / ' + EX_VF.length;
+  } else {
+    var total = 0; Object.values(mcScores).forEach(function(v) { total += v; });
+    document.getElementById('scoreMC').textContent = total + ' / ' + EX_MC.length;
+  }
+}
+
+/* ═══ INIT ═══ */
+window.ippPickVF = ippPickVF;
+window.ippPickMC = ippPickMC;
+
+buildVF();
+buildMC();
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 4 — Exploración ===== -->

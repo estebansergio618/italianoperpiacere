@@ -1,0 +1,1242 @@
+<!-- ===== BLOQUE: Unità 4 — Descubrimiento · Che ore sono? ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #e5ab07;
+    --mc-dk:    #c8940a;
+    --mc-text:  #7a5500;
+    --mc-bg:    #fdf5e0;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.09;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.92; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(229,171,7,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0; flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Tablas generales ===== */
+  .ipp-tbl {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    font-size: clamp(0.84rem, 2.1vw, 0.92rem);
+  }
+  .ipp-tbl th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    text-align: left;
+    font-weight: 700; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-tbl td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-tbl tr:last-child td { border-bottom: none; }
+  .ipp-tbl tr:nth-child(even) td { background: var(--cream); }
+  .ipp-tbl tr.highlight td { background: var(--mc-bg) !important; }
+  .ipp-tbl em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-tbl .it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text);
+  }
+  .ipp-tbl .star {
+    color: var(--mc-dk); font-weight: 600;
+    font-size: 0.83rem;
+  }
+  .ipp-tbl .star::before { content: '⭐ '; }
+  .ipp-tbl .time {
+    font-weight: 700; color: var(--mc-text);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .ipp-tbl .play-btn {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .ipp-tbl .play-btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-tbl .play-btn .ph { font-size: 0.95rem; }
+
+  /* ===== Frases reales ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.85rem 1.1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 12px rgba(229,171,7,0.18); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.95rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.8rem; color: #888;
+    line-height: 1.45; margin-bottom: 0.2rem;
+  }
+  .ipp-frase__note {
+    font-size: 0.74rem; color: var(--mc-dk);
+    font-style: italic; line-height: 1.45;
+  }
+  .ipp-frase__note em { font-style: italic; font-weight: 700; }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Diálogos ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-dial__head .ph { color: var(--mc); }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 0.9rem;
+  }
+  .ipp-dial__row:last-child { margin-bottom: 0; }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.4rem;
+    margin-bottom: 0.3rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 24px; height: 24px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-dial__bubble {
+    padding: 0.65rem 0.95rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 88%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.9rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.5;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.75rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.2rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.35rem;
+    padding: 0.25rem 0.7rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Actividad (MC) ===== */
+  .ipp-act-card {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.95rem 1.15rem;
+    margin-bottom: 0.7rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-act-card:hover { border-color: var(--mc-bg); }
+  .ipp-act__q {
+    font-size: clamp(0.92rem, 2.3vw, 0.96rem);
+    font-weight: 600; color: var(--mc-text);
+    margin-bottom: 0.65rem;
+    line-height: 1.55;
+    display: flex; align-items: flex-start; gap: 0.45rem;
+  }
+  .ipp-act__q em { color: var(--red); font-style: italic; }
+  .ipp-act__q .ph {
+    color: var(--mc); font-size: 1.1rem;
+    margin-top: 1px; flex-shrink: 0;
+  }
+  .ipp-act__opts { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .ipp-actbtn {
+    padding: 0.4rem 0.95rem;
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    background: var(--white); color: var(--mc-dk);
+    font-family: inherit;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-actbtn:hover:not(:disabled) { background: var(--mc-bg); }
+  .ipp-actbtn:disabled { cursor: default; opacity: 0.65; }
+  .ipp-actbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-actbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* ===== Feedback ===== */
+  .ipp-fb {
+    margin-top: 0.6rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 3px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 3px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+
+  /* ===== Espressioni & artículos ===== */
+  .ipp-expr { display: flex; flex-direction: column; gap: 0.55rem; }
+  .ipp-expr__row {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.7rem 1rem;
+    display: grid;
+    grid-template-columns: 36px 1fr 1fr;
+    gap: 0.85rem;
+    align-items: center;
+  }
+  .ipp-expr__btn {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-expr__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-expr__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+  }
+  .ipp-expr__es {
+    font-size: 0.81rem; color: #666;
+    line-height: 1.45;
+  }
+  .ipp-expr__es em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Fonética actividad ===== */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.35rem);
+    border: 1.5px solid var(--cream-dk);
+    margin-top: 1rem;
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.02rem; font-weight: 700;
+    margin: 0 0 0.4rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.81rem; color: #777;
+    margin: 0 0 0.95rem; line-height: 1.55;
+  }
+  .ipp-fonex__list { display: flex; flex-direction: column; gap: 0.45rem; }
+  .ipp-fonex__row {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__num {
+    color: var(--mc-dk); font-weight: 700;
+    font-size: 0.85rem; min-width: 22px;
+  }
+  .ipp-fonex__audio {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 28px; height: 28px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-fonex__audio:hover { background: var(--mc); color: var(--white); }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    padding: 0.28rem 0.95rem;
+    color: var(--mc-dk);
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s; min-width: 50px;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__fb {
+    font-size: 0.78rem; font-weight: 600;
+    margin-left: auto;
+  }
+  .ipp-fonex__fb.ok { color: var(--ok-tx); }
+  .ipp-fonex__fb.err { color: var(--err-tx); }
+
+  /* === Reintentar (botón pequeño que aparece tras responder) === */
+  .ipp-retry-mini {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none;
+    border: 1.5px solid var(--mc);
+    color: var(--mc-dk);
+    border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.18s;
+  }
+  .ipp-retry-mini:hover { background: var(--mc-bg); }
+  .ipp-retry-mini .ph { font-size: 0.85rem; }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-tbl { font-size: 0.78rem; }
+    .ipp-tbl th, .ipp-tbl td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-expr__row {
+      grid-template-columns: 32px 1fr;
+      gap: 0.5rem 0.8rem;
+    }
+    .ipp-expr__es { grid-column: 1 / -1; padding-left: 2.5rem; margin-top: -0.3rem; }
+    .ipp-act__opts { flex-direction: row; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+</style>
+
+<!-- Stop fab -->
+<button class="ipp-stop-fab" id="ippStopFab" onclick="ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-clock-countdown ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 4 · A1 · Descubrimiento</div>
+    <h1 class="ipp-hero__title">Che ore sono?</h1>
+    <p class="ipp-hero__subtitle">Descubrí cómo los italianos preguntan y dicen la hora — sin memorizar reglas, solo escuchando y observando.</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <h3 class="ipp-sofia__head">Bienvenida a la etapa</h3>
+        <p>¿Cuántas veces preguntamos la hora al día? En italiano hay formas muy específicas de decirla… y una forma muy divertida de aprenderlas: <strong>¡con una barzelletta!</strong></p>
+        <p>En el video escuchamos <em>«Mi sa dire l'ora?»</em> y <em>«Sono le sette e quindici spaccate!»</em> — ¿notaste esas frases? En esta etapa las vamos a explorar juntos, pasito a pasito.</p>
+        <p>Ah, y si pensás que el chiste era sobre un burro y un campanario… pues sí. ¡Y resulta que los italianos usaban los campanarios como relojes!</p>
+      </div>
+    </div>
+
+    <!-- ① FRASI REALI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title"><i class="ph ph-film-strip"></i> Frasi reali della <em>barzelletta</em></h2>
+      <p class="ipp-sub">Las frases exactas del video. Hacé clic en cada botón para escucharlas tal como suenan.</p>
+      <div class="ipp-frases" id="frasesList"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ② L'ORA -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title"><i class="ph ph-clock"></i> L'ora</h2>
+      <p class="ipp-sub">Las 12 horas + mediodía y medianoche. Hacé clic en cada una para escucharla. ¿Notás algo raro en la 1?</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Italiano</th><th>Español</th><th>Nota especial</th><th>▶</th></tr>
+        </thead>
+        <tbody id="oraBody"></tbody>
+      </table>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ③ PATRONES -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title"><i class="ph ph-puzzle-piece"></i> ¿Cómo se construye la hora? — Patrones</h2>
+      <p class="ipp-sub">Escuchá los ejemplos y observá el patrón. No hay que memorizar nada — el patrón se revela solo.</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>En italiano</th><th>Parte que se agrega</th><th>Patrón</th><th>▶</th></tr>
+        </thead>
+        <tbody id="patrBody"></tbody>
+      </table>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ④ SISTEMI A CONFRONTO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title"><i class="ph ph-arrows-left-right"></i> Sistemi a confronto: 24h e 12h</h2>
+      <p class="ipp-sub">En estaciones de tren y aeropuertos se usa el horario de 24h. En la calle, el informal de 12h. Escuchá ambas versiones.</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Forma 24h</th><th>▶</th><th>Forma 12h</th><th>▶</th></tr>
+        </thead>
+        <tbody id="confrBody"></tbody>
+      </table>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑤ SALUTI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title"><i class="ph ph-hand-waving"></i> Saluti della giornata</h2>
+      <p class="ipp-sub">El saludo cambia según la hora del día. Hacé clic en cada uno para escucharlo.</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Saludo</th><th>Horario</th><th>Español</th><th>Uso / Nota</th><th>▶</th></tr>
+        </thead>
+        <tbody id="salutiBody"></tbody>
+      </table>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑥ DIÁLOGOS -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑥</div>
+      <h2 class="ipp-title"><i class="ph ph-chats-circle"></i> Diálogos — pedir la hora</h2>
+      <p class="ipp-sub">Dos conversaciones cortas en la calle. Hacé clic en <i class="ph ph-play"></i> de cada línea para escucharla.</p>
+
+      <div class="ipp-dial">
+        <div class="ipp-dial__head"><i class="ph ph-users"></i> Diálogo 1 — <em>Due uomini</em></div>
+        <button class="ipp-frase__btn" style="margin:0 0 0.85rem;" onclick="playDialAll(1)"><i class="ph ph-play-circle"></i> Escuchar todo el diálogo</button>
+        <div id="dial1Lines"></div>
+      </div>
+
+      <div class="ipp-dial">
+        <div class="ipp-dial__head"><i class="ph ph-users"></i> Diálogo 2 — <em>Donna e Uomo</em></div>
+        <button class="ipp-frase__btn" style="margin:0 0 0.85rem;" onclick="playDialAll(2)"><i class="ph ph-play-circle"></i> Escuchar todo el diálogo</button>
+        <div id="dial2Lines"></div>
+      </div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑦ ¿A QUÉ HORA? -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑦</div>
+      <h2 class="ipp-title"><i class="ph ph-storefront"></i> ¿A qué hora…? — <em>Vita italiana</em></h2>
+      <p class="ipp-sub">¿Sabés a qué hora pasan las cosas en Italia? Elegí la hora correcta. ¡Los horarios italianos tienen su lógica!</p>
+      <div id="actGrid"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑧ ESPRESSIONI DI TEMPO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑧</div>
+      <h2 class="ipp-title"><i class="ph ph-clock-clockwise"></i> Espressioni di tempo</h2>
+      <p class="ipp-sub">Más allá de decir la hora exacta, los italianos usan estas expresiones constantemente. Escuchalas.</p>
+      <div class="ipp-expr" id="exprList"></div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑨ FONÉTICA -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑨</div>
+      <h2 class="ipp-title"><i class="ph ph-music-note"></i> Fonetica — <em>i suoni L e R</em></h2>
+      <p class="ipp-sub">La <em>L</em> y la <em>R</em> en italiano suenan muy diferentes. La R italiana es vibrante (rolada), como la doble R del español. Practicá escuchando estos pares reales.</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Con L</th><th>▶</th><th>Con R</th><th>▶</th><th>Español (L / R)</th><th>Nota</th></tr>
+        </thead>
+        <tbody id="fonBody"></tbody>
+      </table>
+
+      <div class="ipp-fonex">
+        <h4 class="ipp-fonex__head">¿L o R? — Escuchá y decidí</h4>
+        <p class="ipp-fonex__sub">Hacé clic en <i class="ph ph-speaker-high"></i> para escuchar la palabra, después elegí si empieza con L o con R.</p>
+        <div class="ipp-fonex__list" id="fonexList"></div>
+      </div>
+    </section>
+
+    <hr class="ipp-divider">
+
+    <!-- ⑩ ARTÍCULOS -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑩</div>
+      <h2 class="ipp-title"><i class="ph ph-tag"></i> Artículos — primer contacto</h2>
+      <p class="ipp-sub">Actividad de descubrimiento.</p>
+
+      <div class="ipp-sofia" style="margin-bottom: 1.2rem;">
+        <div class="ipp-sofia__col">
+          <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+          <div class="ipp-sofia__name">Sofia</div>
+        </div>
+        <div class="ipp-sofia__bubble">
+          <p>Mirá estas frases del módulo: <em>«il campanile»</em>, <em>«l'ora»</em>, <em>«la piazza»</em>… esas palabritas antes de los sustantivos le dicen al italiano si la cosa es masculina o femenina, conocida o nueva.</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl" style="margin-bottom: 1.2rem;">
+        <thead>
+          <tr><th>Artículo</th><th>Ejemplo del módulo</th><th>Tipo</th><th>Feedback / regla</th><th>▶</th></tr>
+        </thead>
+        <tbody id="artBody"></tbody>
+      </table>
+
+      <h4 style="font-family:'Playfair Display',Georgia,serif; font-style:italic; color:var(--mc-text); font-size:1rem; font-weight:700; margin: 1.25rem 0 0.65rem;">¿Qué artículo le toca? — Elegí el correcto</h4>
+      <p style="font-size: 0.82rem; color: #777; margin-bottom: 0.95rem;">Basate en lo que observaste arriba. No hay trampas — el patrón es suficiente.</p>
+      <div id="artActivity"></div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m4_e2__) {
+window.__ipp_m4_e2__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) {
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.05;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+function playDialAll(which) {
+  if (!window.speechSynthesis) return;
+  var data = which === 2 ? DIAL2 : DIAL1;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var i = 0;
+  function next() {
+    if (i >= data.length) { if (fab) fab.style.display = 'none'; return; }
+    var line = data[i]; i++;
+    var u = new SpeechSynthesisUtterance(String(line[2]));
+    u.lang = 'it-IT'; u.rate = 0.82; u.pitch = 1.05;
+    var v = ippVoice(line[0]);
+    if (v) u.voice = v;
+    u.onend = next;
+    u.onerror = function() { if (fab) fab.style.display = 'none'; };
+    try { speechSynthesis.speak(u); } catch(e) { if (fab) fab.style.display = 'none'; }
+  }
+  next();
+}
+
+/* ═══ Helpers ═══ */
+function _esc(s) { return String(s).replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
+
+/* ═══ DATA ═══ */
+var FRASES = [
+  ['Mi scusi, mi sa dire l\'ora per favore?', 'Disculpe, ¿me puede decir la hora por favor?', 'Formal — <em>mi scusi</em> para llamar la atención', 'm'],
+  ['Le 5:35.',                                 'Las 5:35.',                                       'Respuesta directa — solo la hora', 'm'],
+  ['Ma è sicuro?',                             '¿Pero está seguro?',                              'Duda graciosa del chiste', 'm'],
+  ['Sono le 7:15 spaccate!',                   '¡Son las 7:15 en punto!',                         '<em>spaccate</em> = exactas, en punto ✓', 'm'],
+  ['Sotto c\'è il campanile!',                 '¡Abajo está el campanario!',                      '¡El remate del chiste!', 'm']
+];
+// Para audio: convertir "Le 5:35" a "Le cinque e trentacinque" y similares
+var FRASES_TTS = [
+  'Mi scusi, mi sa dire l\'ora per favore?',
+  'Le cinque e trentacinque.',
+  'Ma è sicuro?',
+  'Sono le sette e quindici spaccate!',
+  'Sotto c\'è il campanile!'
+];
+
+var ORA = [
+  ['1:00',  "È l'una",       '',                '⭐ SINGULAR — È (no <em>Sono</em>). ¡La única en singular!', true],
+  ['2:00',  'Sono le due',     '', '', false],
+  ['3:00',  'Sono le tre',     '', '', false],
+  ['4:00',  'Sono le quattro', '', '', false],
+  ['5:00',  'Sono le cinque',  '', '', false],
+  ['6:00',  'Sono le sei',     '', '', false],
+  ['7:00',  'Sono le sette',   '', '', false],
+  ['8:00',  'Sono le otto',    '', '', false],
+  ['9:00',  'Sono le nove',    '', '', false],
+  ['10:00', 'Sono le dieci',   '', '', false],
+  ['11:00', 'Sono le undici',  '', '', false],
+  ['12:00', 'Sono le dodici',  'Son las doce', '', false],
+  ['12:00', 'È mezzogiorno',   'Es mediodía',   '⭐ SINGULAR — È. Especial.', true],
+  ['0:00',  'È mezzanotte',    'Es medianoche', '⭐ SINGULAR — È. Especial.', true]
+];
+
+var PATRONES = [
+  ['7:00', 'Sono le sette',                'solo la hora',               'Base: <em>Sono le</em> + número',          false],
+  ['7:15', 'Sono le sette e un quarto',    '+ <em>e un quarto</em>',     'y cuarto → <em>e un quarto</em>',          false],
+  ['7:30', 'Sono le sette e mezza',        '+ <em>e mezza</em>',         'y media → <em>e mezza</em>',               false],
+  ['7:40', 'Sono le sette e quaranta',     '+ <em>e</em> + minutos',     'y + minutos exactos',                       false],
+  ['7:45', 'Sono le otto meno un quarto',  'hora siguiente − <em>quarto</em>', 'menos cuarto → <em>meno un quarto</em>', false],
+  ['7:50', 'Sono le otto meno dieci',      'hora siguiente − minutos',   'menos X minutos → <em>meno X</em>',         false],
+  ['Especial', 'Sono le tre in punto / spaccate', '+ <em>in punto / spaccate</em>', 'en punto exacto',          true]
+];
+
+var CONFRONTO = [
+  ['7:15',  'le sette e quindici',         'le sette e un quarto'],
+  ['14:30', 'le quattordici e trenta',     'le due e mezza (del pomeriggio)'],
+  ['16:45', 'le sedici e quarantacinque',  'le cinque meno un quarto'],
+  ['20:45', 'le venti e quarantacinque',   'le nove meno un quarto (di sera)'],
+  ['22:00', 'le ventidue',                 'le dieci di sera'],
+  ['0:00',  'le zero / le ventiquattro',   'mezzanotte']
+];
+
+var SALUTI = [
+  ['Buongiorno!',     '6:00 – 12:00',  'Buenos días',           'Al llegar y al despedirse por la mañana', 'f'],
+  ['Buon pomeriggio!','12:00 – 17:00', 'Buenas tardes',         'Menos común, más formal', 'f'],
+  ['Buonasera!',      '17:00 – 22:00', 'Buenas tardes/noches',  'Al <strong>LLEGAR</strong> y al <strong>DESPEDIRSE</strong> por la tarde/noche', 'f'],
+  ['Buonanotte!',     '22:00 – 6:00',  'Buenas noches',         '⚠ <strong>SOLO</strong> para despedirse antes de dormir. Nunca al llegar.', 'f'],
+  ['Salve!',          'todo el día',   'Hola (formal)',         'Formal e informal, válido a cualquier hora <strong>SOLO AL LLEGAR</strong>', 'f']
+];
+
+var DIAL1 = [
+  ['m', 'Uomo 1', 'Scusi, mi sa dire che ore sono?',   'Disculpe, ¿me puede decir qué hora es?'],
+  ['m', 'Uomo 2', 'Certo! Sono le dieci e mezza.',     '¡Claro! Son las diez y media.'],
+  ['m', 'Uomo 1', 'Grazie mille!',                      '¡Muchas gracias!'],
+  ['m', 'Uomo 2', 'Prego, buona giornata!',             '¡De nada, buen día!']
+];
+
+var DIAL2 = [
+  ['f', 'Donna', 'Mi scusi, sa dirmi l\'ora per favore?', '¿Me disculpa, me puede decir la hora por favor?'],
+  ['m', 'Uomo',  'Sì, certo! Sono le tre e un quarto.',  '¡Sí, claro! Son las tres y cuarto.'],
+  ['f', 'Donna', 'Perfetto, grazie!',                     '¡Perfecto, gracias!'],
+  ['m', 'Uomo',  'Figurati!',                             '¡No hay de qué! (informal)']
+];
+
+var ACT = [
+  { icon: 'ph-coffee',     q: 'Il bar apre alle…',                   trans: '(El bar / café abre a las…)',                  ok: '7:00',  opts: ['7:00','8:00','9:00'],
+    ok_fb: 'La mayoría de los bares italianos abren muy temprano para el <em>espresso matutino</em>.',
+    no_fb: 'Los bares italianos abren a las <strong>7:00</strong>.' },
+  { icon: 'ph-fork-knife', q: 'Il pranzo è a…',                       trans: '(El almuerzo es a las…)',                      ok: '13:00', opts: ['12:00','13:00','14:00'],
+    ok_fb: 'El <em>pranzo</em> italiano es entre la 1 y las 2 del mediodía.',
+    no_fb: 'En Italia el almuerzo es a las <strong>13:00</strong> (la una).' },
+  { icon: 'ph-fork-knife', q: 'La cena è a…',                         trans: '(La cena es a las…)',                          ok: '20:00', opts: ['19:00','20:00','21:00'],
+    ok_fb: 'La cena italiana es entre las <strong>20:00 y las 21:00</strong>. Sin embargo, en el norte cenan más temprano y en el sur más tarde.',
+    no_fb: 'Los italianos cenan alrededor de las <strong>20:00</strong>. En el norte cenan más temprano y en el sur más tarde.' },
+  { icon: 'ph-bank',       q: 'Il museo chiude alle…',                trans: '(El museo cierra a las…)',                     ok: '18:00', opts: ['17:00','18:00','19:00'],
+    ok_fb: 'La mayoría de museos cierran a las <strong>18:00</strong>.',
+    no_fb: 'Los museos suelen cerrar a las <strong>18:00</strong>.' },
+  { icon: 'ph-briefcase',  q: "L'ufficio apre alle…",                 trans: '(La oficina abre a las…)',                     ok: '9:00',  opts: ['8:00','9:00','10:00'],
+    ok_fb: 'Las oficinas italianas abren generalmente a las <strong>9:00</strong>.',
+    no_fb: 'Las oficinas italianas abren generalmente a las <strong>9:00</strong>.' }
+];
+
+var ESPR = [
+  ['alle otto',              'a las ocho',                'Hora exacta — la más común',                                                                  'f'],
+  ['verso le dieci',         'hacia/alrededor de las diez','Aproximado — ¡clave cultural! Los italianos rara vez son puntuales al minuto.',              'm'],
+  ['dalle sette alle undici','de las siete a las once',   'Para indicar un horario o rango',                                                            'f'],
+  ["tra un'ora",             'en una hora (en el futuro)','<em>tra</em> = dentro de',                                                                    'm'],
+  ['a mezzogiorno',          'a las 12',                  '<em>in punto</em> refuerza la exactitud',                                                     'f'],
+  ['prima di cena',          'antes de cenar',            '<em>prima di</em> + sustantivo',                                                              'm'],
+  ['dopo pranzo',            'después del almuerzo',      '<em>dopo</em> + sustantivo',                                                                  'f']
+];
+
+var FON = [
+  ['male',  'mare',  'mal / mar',         'L: lengua en paladar — igual al español'],
+  ['letto', 'retto', 'cama / recto',      'R italiana: vibrante, como "rr" española'],
+  ['velo',  'vero',  'velo / verdadero',  ''],
+  ['lana',  'rana',  'lana / rana',       ''],
+  ['molto', 'morto', 'mucho / muerto',    '']
+];
+
+var FONEX = [
+  ['lago',  'L', 'lago → L (la + go, sonido /l/)'],
+  ['rana',  'R', 'rana → R (vibrante)'],
+  ['letto', 'L', 'letto → L'],
+  ['rosa',  'R', 'rosa → R'],
+  ['luna',  'L', 'luna → L']
+];
+
+var ART = [
+  ['il',  'il campanile',  'Masc. sing. / consonante → <strong>il</strong>',     'il treno — masculino, consonante → il',         'm'],
+  ["l'",  "l'ora",          "Vocal → <strong>l'</strong> (elide)",                "l'amica / l'amico — empieza con vocal → l'",    'f'],
+  ['la',  'la piazza',     'Fem. sing. / consonante → <strong>la</strong>',     'la sera — femenino, consonante → la',            'f'],
+  ['un',  'un caffè',      'Masc. sing. indefinido / consonante',                'un treno, un bar, un caffè — masc., consonante', 'm'],
+  ['una', 'una riunione',  'Fem. sing. indefinido / consonante',                 'una sera, una donna — fem., consonante',        'f']
+];
+
+var ART_ACT = [
+  { q: '1. ___ treno <em>(el tren — masculino, consonante)</em>', ok: 'il',  opts: ['il','la',"l'"], hint: 'masculino + consonante' },
+  { q: '2. ___ amica <em>(la amiga — femenino, empieza con vocal)</em>', ok: "l'", opts: ['la',"l'",'il'], hint: 'vocal → elide' },
+  { q: '3. ___ sera <em>(la tarde — femenino, consonante)</em>', ok: 'la',  opts: ['il',"l'",'la'], hint: 'femenino + consonante' },
+  { q: '4. ___ amico <em>(el amigo — masculino, empieza con vocal)</em>', ok: "l'", opts: ['il',"l'",'la'], hint: 'vocal → elide' },
+  { q: '5. ___ caffè <em>(el café — masculino, consonante)</em>', ok: 'il',  opts: ['il','la',"l'"], hint: 'masculino + consonante' }
+];
+
+/* ═══ BUILDERS ═══ */
+function buildFrases() {
+  var html = '';
+  FRASES.forEach(function(f, i) {
+    html += '<div class="ipp-frase">'+
+              '<div class="ipp-frase__text">'+
+                '<div class="ipp-frase__it">'+f[0]+'</div>'+
+              '</div>'+
+              '<button class="ipp-frase__btn" onclick="ippAudio(\''+_esc(FRASES_TTS[i])+'\',0.82,\''+f[3]+'\')">'+
+                '<i class="ph ph-speaker-high"></i> Escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById('frasesList').innerHTML = html;
+}
+
+function buildOra() {
+  var html = '';
+  ORA.forEach(function(o) {
+    var cls = o[4] ? 'highlight' : '';
+    var nota = o[3] ? '<span class="star">'+ o[3].replace('⭐ ', '') +'</span>' : '';
+    html += '<tr class="'+cls+'">'+
+              '<td class="time">'+o[0]+'</td>'+
+              '<td class="it">'+o[1]+'</td>'+
+              '<td>'+(o[2]||'')+'</td>'+
+              '<td>'+nota+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(o[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('oraBody').innerHTML = html;
+}
+
+function buildPatr() {
+  var html = '';
+  PATRONES.forEach(function(p) {
+    var cls = p[4] ? 'highlight' : '';
+    html += '<tr class="'+cls+'">'+
+              '<td class="time">'+p[0]+'</td>'+
+              '<td class="it">'+p[1]+'</td>'+
+              '<td>'+p[2]+'</td>'+
+              '<td>'+p[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(p[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('patrBody').innerHTML = html;
+}
+
+function buildConfr() {
+  var html = '';
+  CONFRONTO.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="time">'+c[0]+'</td>'+
+              '<td class="it">'+c[1]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('confrBody').innerHTML = html;
+}
+
+function buildSaluti() {
+  var html = '';
+  SALUTI.forEach(function(s) {
+    html += '<tr>'+
+              '<td class="it">'+s[0]+'</td>'+
+              '<td>'+s[1]+'</td>'+
+              '<td>'+s[2]+'</td>'+
+              '<td>'+s[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(s[0])+'\',0.82,\''+s[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('salutiBody').innerHTML = html;
+}
+
+function buildDialog(data, containerId) {
+  var html = '';
+  data.forEach(function(d) {
+    var side = d[0] === 'm' && d[1].indexOf('Uomo') === 0 && (data === DIAL1) ?
+               (d[1] === 'Uomo 2' ? 'right spk-m' : '') :
+               (data === DIAL2 && d[0] === 'm' ? 'right spk-m' : '');
+    var icon = d[0] === 'm' ? 'ph-user' : 'ph-user-circle';
+    html += '<div class="ipp-dial__row '+side+'">'+
+              '<div class="ipp-dial__spk">'+
+                '<div class="ipp-dial__spk-icon"><i class="ph '+icon+'"></i></div>'+
+                '<span class="ipp-dial__spk-name">'+d[1]+'</span>'+
+              '</div>'+
+              '<div class="ipp-dial__bubble">'+
+                '<div class="ipp-dial__it">'+d[2]+'</div>'+
+              '</div>'+
+              '<button class="ipp-dial__playbtn" onclick="ippAudio(\''+_esc(d[2])+'\',0.82,\''+d[0]+'\')">'+
+                '<i class="ph ph-play"></i> Escuchar</button>'+
+            '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildActivities() {
+  var html = '';
+  ACT.forEach(function(a, i) {
+    html += '<div class="ipp-act-card" data-idx="'+i+'" data-ok="'+a.ok+'">'+
+              '<div class="ipp-act__q"><i class="ph '+a.icon+'"></i><span><em>'+a.q+'</em></span></div>'+
+              '<div class="ipp-act__opts">';
+    a.opts.forEach(function(opt) {
+      html += '<button class="ipp-actbtn" onclick="pickAct(this)">'+opt+'</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById('actGrid').innerHTML = html;
+}
+
+function buildExpr() {
+  var html = '';
+  ESPR.forEach(function(e) {
+    html += '<div class="ipp-expr__row">'+
+              '<button class="ipp-expr__btn" onclick="ippAudio(\''+_esc(e[0])+'\',0.82,\''+e[3]+'\')"><i class="ph ph-play"></i></button>'+
+              '<div><div class="ipp-expr__it">'+e[0]+'</div></div>'+
+              '<div class="ipp-expr__es">'+e[2]+'</div>'+
+            '</div>';
+  });
+  document.getElementById('exprList').innerHTML = html;
+}
+
+function buildFon() {
+  var html = '';
+  FON.forEach(function(f) {
+    html += '<tr>'+
+              '<td class="it" style="color:var(--mc-dk);">'+f[0]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(f[0])+'\',0.78,\'m\')"><i class="ph ph-play"></i></button></td>'+
+              '<td class="it" style="color:var(--red);">'+f[1]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(f[1])+'\',0.78,\'m\')"><i class="ph ph-play"></i></button></td>'+
+              '<td>'+f[2]+'</td>'+
+              '<td style="font-size:0.78rem;color:#888;font-style:italic;">'+(f[3]||'')+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('fonBody').innerHTML = html;
+}
+
+function buildFonex() {
+  var html = '';
+  FONEX.forEach(function(f, i) {
+    html += '<div class="ipp-fonex__row" data-idx="'+i+'" data-correct="'+f[1]+'">'+
+              '<span class="ipp-fonex__num">'+(i+1)+'.</span>'+
+              '<button class="ipp-fonex__audio" onclick="ippAudio(\''+_esc(f[0])+'\',0.8,\'m\')"><i class="ph ph-speaker-high"></i></button>'+
+              '<div class="ipp-fonex__btns">'+
+                '<button class="ipp-fonex__btn" data-pick="L" onclick="pickFon(this)">L</button>'+
+                '<button class="ipp-fonex__btn" data-pick="R" onclick="pickFon(this)">R</button>'+
+              '</div>'+
+              '<span class="ipp-fonex__fb"></span>'+
+            '</div>';
+  });
+  document.getElementById('fonexList').innerHTML = html;
+}
+
+function buildArt() {
+  var html = '';
+  ART.forEach(function(a) {
+    html += '<tr>'+
+              '<td class="it" style="font-weight:700;">'+a[0]+'</td>'+
+              '<td class="it">'+a[1]+'</td>'+
+              '<td>'+a[2]+'</td>'+
+              '<td style="font-size:0.82rem;color:#666;">'+a[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(a[1])+'\',0.82,\''+a[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('artBody').innerHTML = html;
+}
+
+function buildArtAct() {
+  var html = '';
+  ART_ACT.forEach(function(a, i) {
+    html += '<div class="ipp-act-card" data-idx="art'+i+'" data-ok="'+a.ok.replace(/"/g,'&quot;').replace(/'/g,'&#39;')+'">'+
+              '<div class="ipp-act__q"><i class="ph ph-question"></i><span>'+a.q+'</span></div>'+
+              '<div class="ipp-act__opts">';
+    a.opts.forEach(function(opt) {
+      html += '<button class="ipp-actbtn" onclick="pickArt(this)">'+opt+'</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById('artActivity').innerHTML = html;
+}
+
+/* ═══ INTERACTION ═══ */
+/* Helper: agrega un botón "Reintentar" al container que ejecuta resetFn() */
+function _addRetry(container, resetFn) {
+  var old = container.querySelector('.ipp-retry-mini');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry-mini';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+function pickAct(btn) {
+  var card = btn.closest('.ipp-act-card');
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  var idx = parseInt(card.dataset.idx, 10);
+  var correct = card.dataset.ok;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  card.querySelectorAll('.ipp-actbtn').forEach(function(b) {
+    b.disabled = true;
+    if (b.textContent.trim() === correct && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = card.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + ACT[idx].ok_fb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(card, function() {
+    delete card.dataset.done;
+    card.querySelectorAll('.ipp-actbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickArt(btn) {
+  var card = btn.closest('.ipp-act-card');
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  var artIdx = parseInt(card.dataset.idx.replace('art',''), 10);
+  var correct = card.dataset.ok.replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  card.querySelectorAll('.ipp-actbtn').forEach(function(b) {
+    b.disabled = true;
+    if (b.textContent.trim() === correct && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = card.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Sí!</strong> ' + ART_ACT[artIdx].hint;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(card, function() {
+    delete card.dataset.done;
+    card.querySelectorAll('.ipp-actbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickFon(btn) {
+  var row = btn.closest('.ipp-fonex__row');
+  if (row.dataset.done) return;
+  row.dataset.done = '1';
+  var idx = parseInt(row.dataset.idx, 10);
+  var correct = row.dataset.correct;
+  var pick = btn.dataset.pick;
+  var ok = pick === correct;
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    row.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+      if (b.dataset.pick === correct) b.classList.add('correct');
+    });
+  }
+  row.querySelectorAll('.ipp-fonex__btn').forEach(function(b) { b.disabled = true; });
+  var fb = row.querySelector('.ipp-fonex__fb');
+  fb.textContent = ok ? '✓ ' + FONEX[idx][2] : '✗ Era ' + correct;
+  fb.className = 'ipp-fonex__fb ' + (ok ? 'ok' : 'err');
+  _addRetry(row, function() {
+    delete row.dataset.done;
+    row.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.textContent = ''; fb.className = 'ipp-fonex__fb';
+  });
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+window.ippStop = ippStop;
+window.playDialAll = playDialAll;
+window.pickAct = pickAct;
+window.pickArt = pickArt;
+window.pickFon = pickFon;
+
+buildFrases();
+buildOra();
+buildPatr();
+buildConfr();
+buildSaluti();
+buildDialog(DIAL1, 'dial1Lines');
+buildDialog(DIAL2, 'dial2Lines');
+buildActivities();
+buildExpr();
+buildFon();
+buildFonex();
+buildArt();
+buildArtAct();
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 4 — Descubrimiento ===== -->

@@ -1,0 +1,1418 @@
+<!-- ===== BLOQUE: Unità 3 — Gramática · Una notte a Roma ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --green:    #528e74;
+    --amber:    #d4a017;
+    --amber-bg: #fffae6;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1;
+    padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sección ===== */
+  .ipp-section {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-section__head {
+    display: flex; align-items: center; gap: 0.85rem;
+    margin-bottom: 1rem; padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--mc-bg);
+    flex-wrap: wrap;
+  }
+  .ipp-section__label {
+    width: 38px; height: 38px;
+    background: var(--mc); color: var(--white);
+    border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    line-height: 1.2; margin: 0;
+    font-weight: 700;
+  }
+  .ipp-section__title em { color: var(--red); font-style: italic; }
+  .ipp-section__sub {
+    font-size: 0.8rem; color: #777;
+    margin: 0.15rem 0 0; line-height: 1.5;
+  }
+  .ipp-section__intro {
+    font-size: clamp(0.88rem, 2.2vw, 0.93rem);
+    color: #444; line-height: 1.65;
+    margin: 0 0 0.85rem;
+  }
+  .ipp-section__intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Tablas ===== */
+  .ipp-tbl {
+    width: 100%; border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: clamp(0.82rem, 2.1vw, 0.91rem);
+  }
+  .ipp-tbl th {
+    background: var(--mc); color: var(--white);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-tbl td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-tbl tr:last-child td { border-bottom: none; }
+  .ipp-tbl tr:nth-child(even) td { background: var(--cream); }
+  .ipp-tbl tr.highlight td { background: var(--amber-bg) !important; }
+  .ipp-tbl .end-o { color: var(--red); font-weight: 800; }
+  .ipp-tbl .term {
+    color: var(--mc-text); font-weight: 700;
+    font-style: italic;
+  }
+  .ipp-tbl em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-tbl .warn-cell { color: var(--amber); font-weight: 600; font-size: 0.82rem; }
+  .ipp-tbl .warn-cell::before { content: '⚠ '; }
+
+  /* ===== Conj tabla (raíz coloreada) ===== */
+  .ipp-conj {
+    width: 100%; border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: clamp(0.85rem, 2.2vw, 0.93rem);
+  }
+  .ipp-conj th {
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--mc);
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-conj td {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-conj .pron {
+    color: #888; font-style: italic; font-size: 0.82rem;
+    font-weight: 700;
+    width: 70px;
+  }
+  .ipp-conj .ending { color: var(--red); font-weight: 800; }
+  .ipp-conj .note { color: var(--amber); font-size: 0.78rem; font-weight: 600; }
+  .ipp-conj tr.noi  td { background: var(--mc-bg); }
+  .ipp-conj tr.voi  td { background: var(--mc-bg); }
+  .ipp-conj tr.loro td { background: var(--mc-bg); }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: var(--mc-text); line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-callout strong { color: var(--mc-dk); }
+  .ipp-callout p { margin: 0 0 0.4rem; }
+  .ipp-callout p:last-child { margin-bottom: 0; }
+
+  .ipp-info-line {
+    font-size: 0.86rem;
+    color: #555;
+    margin: 0.85rem 0;
+    line-height: 1.65;
+  }
+  .ipp-info-line em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-info-line strong { color: var(--mc-text); }
+
+  /* ===== Fonética cards ===== */
+  .ipp-fon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin: 1rem 0;
+  }
+  .ipp-fon-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    border: 2px solid var(--cream-dk);
+  }
+  .ipp-fon-card.k { border-color: var(--mc); }
+  .ipp-fon-card.ch { border-color: var(--red); }
+  .ipp-fon-card.g { border-color: var(--green); }
+  .ipp-fon-card.dj { border-color: var(--amber); }
+  .ipp-fon-card__head {
+    font-size: 0.9rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.4rem; flex-wrap: wrap;
+  }
+  .ipp-fon-card__sym {
+    font-size: 1.5rem; font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+  }
+  .ipp-fon-card.k .ipp-fon-card__sym { color: var(--mc-text); }
+  .ipp-fon-card.ch .ipp-fon-card__sym { color: var(--red); }
+  .ipp-fon-card.g .ipp-fon-card__sym { color: var(--green); }
+  .ipp-fon-card.dj .ipp-fon-card__sym { color: var(--amber); }
+  .ipp-fon-card__desc {
+    font-size: 0.78rem; color: #666;
+    margin-bottom: 0.55rem; font-style: italic;
+  }
+  .ipp-fon-ex {
+    display: flex; align-items: center; gap: 0.55rem;
+    background: var(--cream); border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+  .ipp-fon-ex:last-child { margin-bottom: 0; }
+  .ipp-fon-ex__word {
+    font-style: italic; font-weight: 600;
+    color: var(--mc-text); flex: 1;
+    font-size: 0.86rem;
+  }
+  .ipp-fon-play {
+    background: none;
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    padding: 0.15rem 0.55rem;
+    color: var(--mc); font-size: 0.78rem;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.2rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Ejercicios card ===== */
+  .ipp-ex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-ex__head {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .ipp-ex__num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-ex__title {
+    font-weight: 700;
+    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+    color: var(--mc-text);
+  }
+  .ipp-ex__title em { font-style: italic; color: var(--red); }
+  .ipp-ex__sub {
+    font-size: 0.82rem; color: #777;
+    margin-top: 0.2rem;
+  }
+
+  /* Inline fill */
+  .ipp-fill {
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    width: 160px;
+    transition: all 0.2s;
+    background: var(--white);
+    color: var(--black);
+    font-style: italic;
+    font-weight: 600;
+  }
+  .ipp-fill:focus { border-color: var(--mc); outline: none; background: var(--mc-bg); }
+  .ipp-fill.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-fill.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-fill-wide { width: 100%; max-width: 420px; }
+
+  .ipp-fill-row {
+    margin-bottom: 0.85rem;
+    font-size: clamp(0.88rem, 2.2vw, 0.93rem);
+    line-height: 1.9;
+  }
+  .ipp-fill-row:last-child { margin-bottom: 0; }
+  .ipp-fill-row em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fill-row .hint {
+    display: block;
+    font-size: 0.74rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 0.15rem;
+    margin-left: 0;
+    line-height: 1.4;
+  }
+  .ipp-fill-fb {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-left: 0.55rem;
+    color: var(--ok-tx);
+  }
+
+  /* Conj grid (input) */
+  .ipp-conj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.65rem;
+    margin: 0.5rem 0;
+  }
+  .ipp-conj-item {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.65rem 0.8rem;
+  }
+  .ipp-conj-item.noi  { background: var(--mc-bg); }
+  .ipp-conj-item.voi  { background: var(--mc-bg); }
+  .ipp-conj-item.loro { background: var(--mc-bg); }
+  .ipp-conj-item__pron {
+    font-size: 0.75rem; color: #666;
+    font-style: italic; font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .ipp-conj-item input {
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.35rem 0.55rem;
+    font-family: inherit;
+    font-size: 0.88rem;
+    width: 100%;
+    background: var(--white);
+    color: var(--mc-text);
+    font-style: italic;
+    font-weight: 700;
+    outline: none;
+    transition: all 0.2s;
+  }
+  .ipp-conj-item input:focus { border-color: var(--mc); }
+  .ipp-conj-item input.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-conj-item input.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+
+  /* MC options */
+  .ipp-mc {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-mc:first-child { padding-top: 0; }
+  .ipp-mc:last-child { border-bottom: none; padding-bottom: 0; }
+  .ipp-mc__q {
+    font-size: 0.93rem;
+    font-weight: 600;
+    margin-bottom: 0.55rem;
+    color: var(--mc-text);
+    line-height: 1.5;
+  }
+  .ipp-mc__q em { font-style: italic; color: var(--red); }
+  .ipp-mc__opts { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .ipp-mcbtn {
+    padding: 0.4rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    background: var(--cream);
+    font-family: inherit;
+    font-size: 0.83rem; font-weight: 500;
+    cursor: pointer; transition: all 0.18s;
+    color: var(--black);
+  }
+  .ipp-mcbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-mcbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-mcbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); font-weight: 700; }
+  .ipp-mcbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* Fonex (clasificación por palabra) */
+  .ipp-fonex {
+    display: grid; gap: 0.45rem;
+  }
+  .ipp-fonex__row {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream);
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text);
+    font-size: 0.95rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 1rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+    min-width: 75px;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.6; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__reason {
+    font-size: 0.74rem;
+    color: var(--mc-dk);
+    margin-top: 0.25rem;
+    flex-basis: 100%;
+    font-style: italic;
+    display: none;
+  }
+  .ipp-fonex__reason.show { display: block; }
+
+  /* Botones acción */
+  .ipp-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.85rem;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc-dk); }
+
+  /* Feedback */
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid var(--amber); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid var(--amber);
+    color: var(--amber); border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem; margin-left: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: var(--amber-bg); }
+
+  /* Sub-bloque (mini sección dentro de F) */
+  .ipp-sub-ex {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--cream-dk);
+  }
+  .ipp-sub-ex__head {
+    font-size: 0.92rem; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.65rem;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg) 0%, var(--cream) 100%);
+    border-top: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.15rem; font-weight: 700;
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.55rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); }
+  .ipp-culture p {
+    font-size: 0.9rem; color: #444;
+    line-height: 1.75; margin: 0 0 0.55rem;
+  }
+  .ipp-culture p:last-child { margin-bottom: 0; }
+  .ipp-culture em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Pills inline */
+  .ipp-pills {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin: 0.65rem 0;
+  }
+  .ipp-pill {
+    background: var(--mc-bg);
+    color: var(--mc-text);
+    border-radius: 16px;
+    padding: 0.25rem 0.8rem;
+    font-size: 0.82rem;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .ipp-pill em { font-style: italic; }
+
+  /* Wordbank inline */
+  .ipp-wordbank {
+    background: var(--mc-bg);
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.84rem;
+    color: var(--mc-text);
+  }
+  .ipp-wordbank em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-wordbank strong { color: var(--mc-dk); }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .ipp-fon-grid { grid-template-columns: 1fr; }
+    .ipp-conj-grid { grid-template-columns: 1fr 1fr; }
+    .ipp-tbl { font-size: 0.78rem; }
+    .ipp-tbl th, .ipp-tbl td { padding: 0.45rem 0.5rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-conj-grid { grid-template-columns: 1fr; }
+    .ipp-mc__opts { flex-direction: column; align-items: stretch; }
+    .ipp-mcbtn { text-align: left; }
+    .ipp-tbl thead { display: none; }
+    .ipp-tbl tr {
+      display: block;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .ipp-tbl td {
+      display: block;
+      padding: 0.2rem 0.6rem;
+      border: none;
+    }
+    .ipp-conj { font-size: 0.85rem; }
+  }
+</style>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-book-open-text ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 3 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Una notte a Roma</h1>
+    <p class="ipp-hero__subtitle">Gramática — <em>nomi, plurale, verbi, fonetica</em></p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- ════ A — I NOMI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">A</div>
+        <div>
+          <h2 class="ipp-section__title">I nomi — <em>el género de los sustantivos</em></h2>
+          <p class="ipp-section__sub">Masculino y femenino en italiano</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">En italiano, cada sustantivo tiene género (masculino o femenino). La terminación nos da una pista importante:</p>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Terminación</th><th>Género</th><th>Ejemplo del hotel</th><th>Significado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="term">-o</td><td>Maschile</td><td><em>albergo, documento, prezzo, soggiorno</em></td><td>hotel, documento, precio, estadía</td></tr>
+          <tr><td class="term">-a</td><td>Femminile</td><td><em>camera, colazione, firma, culla</em></td><td>habitación, desayuno, firma, cuna</td></tr>
+          <tr><td class="term">-e</td><td>Masc. o Fem.</td><td><em>chiave (f), nome (m), notte (f)</em></td><td>llave, nombre, noche</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ════ B — PLURALE ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">B</div>
+        <div>
+          <h2 class="ipp-section__title">Singolare e plurale</h2>
+          <p class="ipp-section__sub">Cómo formar el plural — y las excepciones</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">¿Lo descubriste en la etapa anterior? Aquí está la regla completa:</p>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Singular</th><th>Plural</th><th>Ejemplo</th><th>Del video</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>-<span class="end-o">o</span> (masc.)</td><td>-<span class="end-o">i</span></td><td><em>documento → documenti</em></td><td>«i vostri documenti»</td></tr>
+          <tr><td>-<span class="end-o">a</span> (fem.)</td><td>-<span class="end-o">e</span></td><td><em>camera → camere</em></td><td>«le camere del resort»</td></tr>
+          <tr><td>-<span class="end-o">e</span> (m/f)</td><td>-<span class="end-o">i</span></td><td><em>chiave → chiavi, notte → notti</em></td><td>«le vostre chiavi», «due notti»</td></tr>
+          <tr><td>-<span class="end-o">co/-go</span></td><td>-<span class="end-o">chi/-ghi</span></td><td><em>albergo → alberghi, parco → parchi</em></td><td>conserva sonido /k/, /g/</td></tr>
+          <tr class="highlight"><td>-<span class="end-o">à</span></td><td>sin cambio</td><td><em>città → città</em></td><td>¡No cambia!</td></tr>
+        </tbody>
+      </table>
+      <p class="ipp-info-line">Todas las palabras con la última vocal acentuada y las palabras extranjeras son <strong>invariables</strong>: <em>il garage → i garage · il bar → i bar · il computer → i computer</em>.</p>
+    </section>
+
+    <!-- ════ C — VERBI -ARE ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">C</div>
+        <div>
+          <h2 class="ipp-section__title">Verbi regolari in <em>-ARE</em></h2>
+          <p class="ipp-section__sub">Modelo: <em>prenotare</em> (reservar)</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">Los verbos en <em>-are</em> son los más comunes en italiano y siguen este patrón regular:</p>
+      <table class="ipp-conj">
+        <thead><tr><th>Pronombre</th><th>Forma</th><th>Traducción</th><th>Nota</th></tr></thead>
+        <tbody>
+          <tr><td class="pron">io</td><td>prenot<span class="ending">o</span></td><td>yo reservo</td><td></td></tr>
+          <tr><td class="pron">tu</td><td>prenot<span class="ending">i</span></td><td>tú reservas</td><td></td></tr>
+          <tr><td class="pron">lui/lei</td><td>prenot<span class="ending">a</span></td><td>él/ella reserva</td><td></td></tr>
+          <tr class="noi"><td class="pron">noi</td><td>prenot<span class="ending">iamo</span></td><td>nosotros reservamos</td><td></td></tr>
+          <tr class="voi"><td class="pron">voi</td><td>prenot<span class="ending">ate</span></td><td>vosotros reserváis</td><td></td></tr>
+          <tr class="loro"><td class="pron">loro</td><td>prenot<span class="ending">ano</span></td><td>ellos reservan</td><td class="note">acento esdrújulo <em>preNÓtano</em></td></tr>
+        </tbody>
+      </table>
+      <p class="ipp-info-line"><strong>Más verbos -are del módulo:</strong> <em>chiamare</em> (llamar) · <em>pagare</em> (pagar) · <em>lasciare</em> (dejar) · <em>trovare</em> (encontrar) · <em>augurare</em> (desear).</p>
+    </section>
+
+    <!-- ════ D — VERBI -ERE ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">D</div>
+        <div>
+          <h2 class="ipp-section__title">Verbi regolari in <em>-ERE</em></h2>
+          <p class="ipp-section__sub">Modelo: <em>prendere</em> (tomar) — y <em>leggere</em> (leer)</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">Los verbos en <em>-ere</em> siguen este patrón:</p>
+      <table class="ipp-conj">
+        <thead><tr><th>Pronombre</th><th>prendere</th><th>leggere</th><th>Diferencia vs -ARE</th></tr></thead>
+        <tbody>
+          <tr><td class="pron">io</td><td>prend<span class="ending">o</span></td><td>legg<span class="ending">o</span></td><td></td></tr>
+          <tr><td class="pron">tu</td><td>prend<span class="ending">i</span></td><td>legg<span class="ending">i</span></td><td></td></tr>
+          <tr><td class="pron">lui/lei</td><td>prend<span class="ending">e</span></td><td>legg<span class="ending">e</span></td><td class="note">-e (no -a)</td></tr>
+          <tr class="noi"><td class="pron">noi</td><td>prend<span class="ending">iamo</span></td><td>legg<span class="ending">iamo</span></td><td></td></tr>
+          <tr class="voi"><td class="pron">voi</td><td>prend<span class="ending">ete</span></td><td>legg<span class="ending">ete</span></td><td class="note">-ete (no -ate)</td></tr>
+          <tr class="loro"><td class="pron">loro</td><td>prend<span class="ending">ono</span></td><td>legg<span class="ending">ono</span></td><td class="note">-ono (no -ano)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ════ E — VERBI -IRE ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">E</div>
+        <div>
+          <h2 class="ipp-section__title">Verbi regolari in <em>-IRE</em></h2>
+          <p class="ipp-section__sub"><em>partire</em> (partir) y <em>finire</em> (terminar, con -isco)</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">Hay dos grupos de verbos -ire:</p>
+      <table class="ipp-conj">
+        <thead><tr><th>Pronombre</th><th>partire</th><th>finire (-isco)</th><th>Nota</th></tr></thead>
+        <tbody>
+          <tr><td class="pron">io</td><td>part<span class="ending">o</span></td><td>fin<span class="ending">isco</span></td><td></td></tr>
+          <tr><td class="pron">tu</td><td>part<span class="ending">i</span></td><td>fin<span class="ending">isci</span></td><td></td></tr>
+          <tr><td class="pron">lui/lei</td><td>part<span class="ending">e</span></td><td>fin<span class="ending">isce</span></td><td></td></tr>
+          <tr class="noi"><td class="pron">noi</td><td>part<span class="ending">iamo</span></td><td>fin<span class="ending">iamo</span></td><td class="note">iguales (sin -isc-)</td></tr>
+          <tr class="voi"><td class="pron">voi</td><td>part<span class="ending">ite</span></td><td>fin<span class="ending">ite</span></td><td class="note">iguales (sin -isc-)</td></tr>
+          <tr class="loro"><td class="pron">loro</td><td>part<span class="ending">ono</span></td><td>fin<span class="ending">iscono</span></td><td class="note">vuelve el -isc-</td></tr>
+        </tbody>
+      </table>
+      <p class="ipp-info-line"><strong>Verbos -isco del módulo:</strong> <em>finire · capire · preferire · pulire</em>.</p>
+
+      <div class="ipp-sub-ex">
+        <h4 class="ipp-sub-ex__head"><i class="ph ph-pencil-line"></i> Ejercicio: completa con el presente — los tres grupos</h4>
+        <div id="exE"></div>
+        <button class="ipp-btn" onclick="revealEx('exE', ['abitano','aumenta','finisce','lavoriamo','parlano','parte','prendono'])">
+          <i class="ph ph-check-circle"></i> Ver respuestas
+        </button>
+      </div>
+    </section>
+
+    <!-- ════ F — ESSERE / AVERE / ANDARE ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">F</div>
+        <div>
+          <h2 class="ipp-section__title">Essere · Avere · Andare</h2>
+          <p class="ipp-section__sub">Verbos irregulares esenciales</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">Estos tres verbos son irregulares y muy frecuentes:</p>
+      <table class="ipp-conj">
+        <thead><tr><th>Pronombre</th><th>essere</th><th>avere</th><th>andare</th></tr></thead>
+        <tbody>
+          <tr><td class="pron">io</td><td>sono</td><td>ho</td><td>vado</td></tr>
+          <tr><td class="pron">tu</td><td>sei</td><td>hai</td><td>vai</td></tr>
+          <tr><td class="pron">lui/lei</td><td>è</td><td>ha</td><td>va</td></tr>
+          <tr class="noi"><td class="pron">noi</td><td>siamo</td><td>abbiamo</td><td>andiamo</td></tr>
+          <tr class="voi"><td class="pron">voi</td><td>siete</td><td>avete</td><td>andate</td></tr>
+          <tr class="loro"><td class="pron">loro</td><td>sono</td><td>hanno</td><td>vanno</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <p><strong>Raíz + desinencia:</strong> el verbo está compuesto por <em>raíz</em> y <em>desinencia</em>. Ej: <em>am-</em> (raíz) + <em>-are</em> (desinencia).</p>
+        <p>Los verbos <strong>regulares</strong> mantienen su raíz a lo largo de toda la conjugación, no cambia.</p>
+        <p>Los verbos <strong>irregulares</strong> en cambio pueden cambiar su raíz en algunas personas, o en todas (mirá <em>essere</em>: <em>sono / sei / è / siamo / siete / sono</em>).</p>
+      </div>
+
+      <div class="ipp-sub-ex">
+        <h4 class="ipp-sub-ex__head"><i class="ph ph-pencil-line"></i> Completa con el verbo <em>essere</em></h4>
+        <div id="exFEssere"></div>
+        <button class="ipp-btn" onclick="revealEx('exFEssere', ['è','sono','siamo','siete','sei','sono'])">
+          <i class="ph ph-check-circle"></i> Ver respuestas
+        </button>
+      </div>
+
+      <div class="ipp-sub-ex">
+        <h4 class="ipp-sub-ex__head"><i class="ph ph-pencil-line"></i> Completa con el verbo <em>avere</em></h4>
+        <div id="exFAvere"></div>
+        <button class="ipp-btn" onclick="revealEx('exFAvere', ['ho','ha','ha','hai'])">
+          <i class="ph ph-check-circle"></i> Ver respuestas
+        </button>
+      </div>
+
+      <div class="ipp-sub-ex">
+        <h4 class="ipp-sub-ex__head"><i class="ph ph-pencil-line"></i> Pasá las frases anteriores al plural</h4>
+        <div id="exFPlural"></div>
+        <button class="ipp-btn" onclick="revealEx('exFPlural', ['abbiamo','hanno','hanno','avete'])">
+          <i class="ph ph-check-circle"></i> Ver respuestas
+        </button>
+      </div>
+
+      <div class="ipp-sub-ex">
+        <h4 class="ipp-sub-ex__head"><i class="ph ph-pencil-line"></i> Completa con el verbo <em>andare</em></h4>
+        <div id="exFAndare"></div>
+        <button class="ipp-btn" onclick="revealEx('exFAndare', ['vado','vanno','andate','andiamo'])">
+          <i class="ph ph-check-circle"></i> Ver respuestas
+        </button>
+      </div>
+    </section>
+
+    <!-- ════ G — FONÉTICA ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">G</div>
+        <div>
+          <h2 class="ipp-section__title">Fonetica — <em>C e G</em></h2>
+          <p class="ipp-section__sub">ca/co/cu vs. ce/ci · ga/go/gu vs. ge/gi</p>
+        </div>
+      </div>
+      <p class="ipp-section__intro">En italiano, la <em>C</em> y la <em>G</em> tienen dos sonidos según la vocal que sigue. ¡Esta es la clave para pronunciar bien!</p>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Combinación</th><th>Sonido</th><th>Ejemplo</th><th>Pronunciación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="term">C + a, o, u</td><td>/k/</td><td><em>camera, colazione</em></td><td>como "k" en "casa"</td></tr>
+          <tr><td class="term">C + e, i</td><td>/tʃ/</td><td><em>certamente, piacere</em></td><td>como "ch" en español</td></tr>
+          <tr><td class="term">C + he, hi</td><td>/k/</td><td><em>chiavi, che fortuna</em></td><td>como "k" — la H "endurece"</td></tr>
+          <tr><td class="term">G + a, o, u</td><td>/g/</td><td><em>gatto, spaghetti</em></td><td>como "g" en "gato"</td></tr>
+          <tr><td class="term">G + e, i</td><td>/dʒ/</td><td><em>Giulia, giorno, viaggio</em></td><td>como "y" rioplatense en "yo"</td></tr>
+          <tr><td class="term">G + he, hi</td><td>/g/</td><td><em>spaghetti, ghiaccio</em></td><td>la H "endurece"</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ipp-fon-grid">
+        <div class="ipp-fon-card k">
+          <div class="ipp-fon-card__head"><span>Sonido /k/</span><span class="ipp-fon-card__sym">/k/</span></div>
+          <div class="ipp-fon-card__desc">C + a/o/u o C + h. Como "k" en "casa".</div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">camera</span><button class="ipp-fon-play" onclick="ippAudio('camera',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">colazione</span><button class="ipp-fon-play" onclick="ippAudio('colazione',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">chiavi</span><button class="ipp-fon-play" onclick="ippAudio('chiavi',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">che fortuna</span><button class="ipp-fon-play" onclick="ippAudio('che fortuna',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+        </div>
+        <div class="ipp-fon-card ch">
+          <div class="ipp-fon-card__head"><span>Sonido /tʃ/</span><span class="ipp-fon-card__sym">/tʃ/</span></div>
+          <div class="ipp-fon-card__desc">C + e/i. Como "ch" en español.</div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">certamente</span><button class="ipp-fon-play" onclick="ippAudio('certamente',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">piacere</span><button class="ipp-fon-play" onclick="ippAudio('piacere',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">ciao</span><button class="ipp-fon-play" onclick="ippAudio('ciao',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">cioccolato</span><button class="ipp-fon-play" onclick="ippAudio('cioccolato',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+        </div>
+        <div class="ipp-fon-card g">
+          <div class="ipp-fon-card__head"><span>Sonido /g/</span><span class="ipp-fon-card__sym">/g/</span></div>
+          <div class="ipp-fon-card__desc">G + a/o/u o G + h. Como "g" en "gato".</div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">gatto</span><button class="ipp-fon-play" onclick="ippAudio('gatto',0.82,'m')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">spaghetti</span><button class="ipp-fon-play" onclick="ippAudio('spaghetti',0.82,'m')"><i class="ph ph-speaker-high"></i></button></div>
+        </div>
+        <div class="ipp-fon-card dj">
+          <div class="ipp-fon-card__head"><span>Sonido /dʒ/</span><span class="ipp-fon-card__sym">/dʒ/</span></div>
+          <div class="ipp-fon-card__desc">G + e/i. Como "y" rioplatense en "yo".</div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">Giulia</span><button class="ipp-fon-play" onclick="ippAudio('Giulia',0.82,'f')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">viaggio</span><button class="ipp-fon-play" onclick="ippAudio('viaggio',0.82,'m')"><i class="ph ph-speaker-high"></i></button></div>
+          <div class="ipp-fon-ex"><span class="ipp-fon-ex__word">giorno</span><button class="ipp-fon-play" onclick="ippAudio('giorno',0.82,'m')"><i class="ph ph-speaker-high"></i></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ H — EJERCICIOS ════ -->
+    <section class="ipp-section" style="padding:1rem; background:transparent; box-shadow:none;">
+      <h2 style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-size:clamp(1.5rem,4vw,1.85rem); color:var(--mc-text); margin:0 0 0.85rem; padding-bottom:0.5rem; border-bottom:3px solid var(--mc-bg);">H — Esercizi</h2>
+    </section>
+
+    <!-- Ej 1: Singular → Plural -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">1</div>
+        <div>
+          <div class="ipp-ex__title">Singular → Plural</div>
+          <div class="ipp-ex__sub">Escribí el plural de cada sustantivo</div>
+        </div>
+      </div>
+      <table class="ipp-tbl">
+        <thead><tr><th>Singular</th><th>Plural</th></tr></thead>
+        <tbody>
+          <tr><td><em>camera</em></td><td><input class="ipp-fill" type="text" data-answer="camere" oninput="checkFill(this)"></td></tr>
+          <tr><td><em>notte</em></td><td><input class="ipp-fill" type="text" data-answer="notti" oninput="checkFill(this)"></td></tr>
+          <tr class="highlight"><td><em>città</em></td><td><input class="ipp-fill" type="text" data-answer="città" oninput="checkFill(this)"></td></tr>
+          <tr><td><em>documento</em></td><td><input class="ipp-fill" type="text" data-answer="documenti" oninput="checkFill(this)"></td></tr>
+          <tr><td><em>albergo</em></td><td><input class="ipp-fill" type="text" data-answer="alberghi" oninput="checkFill(this)"></td></tr>
+          <tr><td><em>chiave</em></td><td><input class="ipp-fill" type="text" data-answer="chiavi" oninput="checkFill(this)"></td></tr>
+        </tbody>
+      </table>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 2: Coniuga prenotare -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">2</div>
+        <div>
+          <div class="ipp-ex__title">Coniuga <em>prenotare</em></div>
+          <div class="ipp-ex__sub">Escribí la forma correcta del verbo</div>
+        </div>
+      </div>
+      <div class="ipp-conj-grid">
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="prenoto" placeholder="io…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="prenoti" placeholder="tu…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="prenota" placeholder="lui/lei…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="prenotiamo" placeholder="noi…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="prenotate" placeholder="voi…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="prenotano" placeholder="loro…" oninput="checkConj(this)"></div>
+      </div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 3: Coniuga prendere -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">3</div>
+        <div>
+          <div class="ipp-ex__title">Coniuga <em>prendere</em></div>
+          <div class="ipp-ex__sub">Completá la conjugación completa</div>
+        </div>
+      </div>
+      <div class="ipp-conj-grid">
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="prendo" placeholder="io…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="prendi" placeholder="tu…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item"><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="prende" placeholder="lui/lei…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="prendiamo" placeholder="noi…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="prendete" placeholder="voi…" oninput="checkConj(this)"></div>
+        <div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="prendono" placeholder="loro…" oninput="checkConj(this)"></div>
+      </div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 4: Completa las frases del hotel -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">4</div>
+        <div>
+          <div class="ipp-ex__title">Completá las frases del hotel</div>
+          <div class="ipp-ex__sub">Usá la forma correcta del verbo entre paréntesis</div>
+        </div>
+      </div>
+      <div id="ex4"></div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 5: MC -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">5</div>
+        <div>
+          <div class="ipp-ex__title">Forma correcta del verbo</div>
+          <div class="ipp-ex__sub">Elegí la opción gramaticalmente correcta</div>
+        </div>
+      </div>
+      <div id="ex5"></div>
+    </div>
+
+    <!-- Ej 6: Fonética C -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">6</div>
+        <div>
+          <div class="ipp-ex__title">Fonetica: <em>C</em> — ¿sonido [k] o [tʃ]?</div>
+          <div class="ipp-ex__sub">Marcá <strong>[k]</strong> o <strong>[tʃ]</strong> para cada palabra</div>
+        </div>
+      </div>
+      <div class="ipp-fonex" id="ex6"></div>
+      <div id="ex6Fb" class="ipp-fb"></div>
+    </div>
+
+    <!-- Ej 7: Fonética G -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">7</div>
+        <div>
+          <div class="ipp-ex__title">Fonetica: <em>G</em> — ¿sonido [g] o [dʒ]?</div>
+          <div class="ipp-ex__sub">Marcá <strong>[g]</strong> o <strong>[dʒ]</strong> para cada palabra</div>
+        </div>
+      </div>
+      <div class="ipp-fonex" id="ex7"></div>
+      <div id="ex7Fb" class="ipp-fb"></div>
+    </div>
+
+    <!-- Ej 8: Ordenar -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">8</div>
+        <div>
+          <div class="ipp-ex__title">Ordená las palabras</div>
+          <div class="ipp-ex__sub">Formá frases correctas del contexto del hotel</div>
+        </div>
+      </div>
+      <div id="ex8"></div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 9: Diálogo reserva -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">9</div>
+        <div>
+          <div class="ipp-ex__title">Completá el diálogo de reserva</div>
+          <div class="ipp-ex__sub">Rellená los espacios con las palabras del banco</div>
+        </div>
+      </div>
+      <div class="ipp-wordbank">
+        <strong>Banco de palabras:</strong> <em>colazione · pagare · camera doppia · documenti · prenotare · tre notti</em>
+      </div>
+      <div id="ex9"></div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- Ej 10: Singular → plural en oraciones -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">10</div>
+        <div>
+          <div class="ipp-ex__title">Transformá al plural</div>
+          <div class="ipp-ex__sub">Reescribí cada oración poniendo el sujeto y el verbo en plural</div>
+        </div>
+      </div>
+      <div id="ex10"></div>
+      <button class="ipp-btn" onclick="resetEx(this)">
+        <i class="ph ph-arrow-counter-clockwise"></i> Reintentar
+      </button>
+    </div>
+
+    <!-- ════ CULTURA ════ -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head"><i class="ph ph-globe-hemisphere-west"></i> Cultura italiana — La tassa di soggiorno</h3>
+      <p>Si alguna vez te hospedás en Italia, notarás que además del precio del hotel hay un pequeño cargo extra: la <strong><em>tassa di soggiorno</em></strong> (impuesto de estancia). Es un tributo municipal que pagan los turistas y varía según la ciudad y la categoría del hotel.</p>
+      <p>En el video, Giulia lo explica perfectamente: <em>«3 euro al giorno a persona, naturalmente solo per gli adulti»</em>. En Roma este impuesto puede ser de 3 a 7 euros por noche según el tipo de alojamiento.</p>
+      <p><strong>Dato útil:</strong> si vas a Venezia, la <em>tassa di soggiorno</em> puede llegar a 5-6 euros por noche. ¡Tenelo en cuenta cuando reserves!</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m3_g__) {
+window.__ipp_m3_g__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) {
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.10;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+
+/* ═══ Normalizar — los acentos son obligatorios (ej: città ≠ citta) ═══ */
+function _norm(s) {
+  return (s || '').toLowerCase().trim()
+    .replace(/['']/g, "'")
+    .replace(/\s+/g, ' ');
+}
+
+/* ═══ Check fill inputs ═══ */
+function checkFill(input) {
+  var ans = input.dataset.answer || '';
+  var val = input.value;
+  if (val.trim() === '') {
+    input.classList.remove('ok','err');
+    return;
+  }
+  if (_norm(val) === _norm(ans)) {
+    input.classList.remove('err');
+    input.classList.add('ok');
+  } else {
+    input.classList.remove('ok');
+    input.classList.add('err');
+  }
+}
+function checkConj(input) { checkFill(input); }
+
+/* ═══ Reveal answers ═══ */
+function revealFills(btn, answers) {
+  var card = btn.closest('.ipp-ex, .ipp-sub-ex, .ipp-section');
+  var inputs = card.querySelectorAll('input.ipp-fill, input[type="text"]:not([class*="ipp-fonex"])');
+  inputs.forEach(function(inp, i) {
+    if (answers[i] !== undefined) {
+      inp.value = answers[i];
+      inp.classList.remove('err');
+      inp.classList.add('ok');
+    }
+  });
+}
+function revealConj(btn, answers) {
+  var card = btn.closest('.ipp-ex');
+  var inputs = card.querySelectorAll('input[type="text"]');
+  inputs.forEach(function(inp, i) {
+    if (answers[i] !== undefined) {
+      inp.value = answers[i];
+      inp.classList.remove('err');
+      inp.classList.add('ok');
+    }
+  });
+}
+function revealEx(containerId, answers) {
+  var card = document.getElementById(containerId);
+  var inputs = card.querySelectorAll('input[type="text"]');
+  inputs.forEach(function(inp, i) {
+    if (answers[i] !== undefined) {
+      inp.value = answers[i];
+      inp.classList.remove('err');
+      inp.classList.add('ok');
+    }
+  });
+}
+
+/* ═══ Reintentar — limpia los campos del ejercicio ═══ */
+function resetEx(btn) {
+  var card = btn.closest('.ipp-ex');
+  if (!card) return;
+  card.querySelectorAll('input[type="text"]').forEach(function(inp) {
+    inp.value = '';
+    inp.classList.remove('ok','err');
+  });
+}
+
+/* ═══ Data ═══ */
+var EX_E = [
+  ['Dove (abitare) ____ Francesco e Antonella?',  'abitano'],
+  ['In estate (aumentare) ____ la temperatura.',   'aumenta'],
+  ['Marco (finire) ____ gli esercizi.',            'finisce'],
+  ['(noi · lavorare) ____ molto.',                 'lavoriamo'],
+  ['Sono molto bravi, (parlare) ____ molto bene la lingua.', 'parlano'],
+  ['L\'aereo (partire) ____ in orario.',           'parte'],
+  ['Loro (prendere) ____ il treno a Roma.',        'prendono']
+];
+
+var EX_F_ESS = [
+  ['Il libro ____ sul tavolo.',                   'è'],
+  ['Claudio e Teresa ____ a Roma.',               'sono'],
+  ['(Noi) ____ amici.',                            'siamo'],
+  ['(Voi) ____ simpatici.',                        'siete'],
+  ['(Tu) ____ bella.',                             'sei'],
+  ['(Io) ____ spagnolo.',                          'sono']
+];
+
+var EX_F_AV = [
+  ['Io ____ un cane.',                            'ho'],
+  ['Lara ____ una macchina nuova.',               'ha'],
+  ['Luca ____ una piccola casa a Venezia.',       'ha'],
+  ['Tu ____ un lavoro interessante.',             'hai']
+];
+
+var EX_F_PL = [
+  ['Io e Luca (noi) ____ un cane.',                       'abbiamo'],
+  ['Lara e suo marito ____ una macchina nuova.',           'hanno'],
+  ['Luca e Carolina ____ una piccola casa a Venezia.',     'hanno'],
+  ['Tu e tuo fratello ____ un lavoro interessante.',       'avete']
+];
+
+var EX_F_AND = [
+  ['Io ____ a Venezia per 5 giorni.',              'vado'],
+  ['Marina e Andrea ____ a teatro a vedere l\'opera.', 'vanno'],
+  ['— Dove ____ (voi) stasera?',                   'andate'],
+  ['— (Noi) ____ al cinema!',                      'andiamo']
+];
+
+var EX_4 = [
+  ['1. Noi ____ <em>(prenotare)</em> una camera per due notti.', 'prenotiamo'],
+  ['2. Voi ____ <em>(pagare)</em> alla partenza.',                'pagate'],
+  ['3. Loro ____ <em>(servire)</em> la colazione dalle 7 alle 11.', 'servono'],
+  ['4. Noi ____ <em>(avere)</em> bisogno delle chiavi.',          'abbiamo']
+];
+
+var EX_5 = [
+  { q:'1. Noi ____ la colazione dalle 7 alle 11. <em>(servire)</em>',
+    opts:['servite','serviamo','servono','servo'], ok:'serviamo' },
+  { q:'2. Voi ____ alla partenza. <em>(pagare)</em>',
+    opts:['pagano','paghiamo','pagate','pagato'], ok:'pagate' },
+  { q:'3. I signori Baldini ____ in camera. <em>(andare)</em>',
+    opts:['andate','vanno','andiamo','vai'], ok:'vanno' },
+  { q:'4. Voi ____ stanchi dopo il viaggio. <em>(essere)</em>',
+    opts:['sono','siamo','siete','sei'], ok:'siete' }
+];
+
+var EX_6 = [
+  ['casa',       'k',  'ca → [k]'],
+  ['chiesa',     'k',  'chi → [k] (la H endurece)'],
+  ['cena',       'ch', 'ce → [tʃ]'],
+  ['chiamate',   'k',  'chi → [k] (la H endurece)'],
+  ['colazione',  'k',  'co → [k]'],
+  ['certamente', 'ch', 'ce → [tʃ]']
+];
+
+var EX_7 = [
+  ['gatto',     'g',  'ga → [g]'],
+  ['giorno',    'dj', 'gi → [dʒ]'],
+  ['ghiaccio',  'g',  'ghi → [g] (la H endurece)'],
+  ['gente',     'dj', 'ge → [dʒ]'],
+  ['garage',    'g',  'ga → [g]'],
+  ['viaggio',   'dj', 'ggi → [dʒ]']
+];
+
+var EX_8 = [
+  ['1. <em>notte / euro / 150 / a / è / il prezzo / di</em>',  'il prezzo è di 150 euro a notte'],
+  ['2. <em>le / chiavi / ecco / vostre / a voi</em>',          'ecco a voi le vostre chiavi'],
+  ['3. <em>colazione / serviamo / alle 11 / dalle 7 / la</em>','serviamo la colazione dalle 7 alle 11']
+];
+
+var EX_9 = [
+  ['— Buongiorno, vorrei <FILL> una camera, per favore.',  'prenotare',    'infinitivo'],
+  ['— Certamente! Una <FILL>?',                             'camera doppia','tipo de habitación'],
+  ['— Sì, per <FILL>.',                                     'tre notti',    'duración'],
+  ['— Il prezzo include la <FILL>.',                        'colazione',    'desayuno'],
+  ['— Possiamo <FILL> alla partenza?',                      'pagare',       'pagar']
+];
+
+var EX_10 = [
+  ['1. <em>«La camera è bella.»</em> →',  'le camere sono belle',          false],
+  ['2. <em>«Il documento è importante.»</em> →', 'i documenti sono importanti', false],
+  ['3. <em>«La chiave è qui.»</em> →',          'le chiavi sono qui',             false],
+  ['4. <em>«La città è bella.»</em> →',       'le città sono belle',            true]
+];
+
+/* ═══ BUILDERS ═══ */
+function buildFillRows(data, containerId, wide) {
+  var html = '';
+  data.forEach(function(item) {
+    html += '<div class="ipp-fill-row">'+ item[0] +' <input class="ipp-fill'+(wide?' ipp-fill-wide':'')+'" type="text" data-answer="'+item[1].replace(/"/g,'&quot;')+'" oninput="checkFill(this)"></div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildEx5() {
+  var html = '';
+  EX_5.forEach(function(item, i) {
+    html += '<div class="ipp-mc" data-idx="'+i+'" data-ok="'+item.ok+'">';
+    html += '<div class="ipp-mc__q">'+ item.q +'</div>';
+    html += '<div class="ipp-mc__opts">';
+    item.opts.forEach(function(o) {
+      html += '<button class="ipp-mcbtn" onclick="pickMC5(this)">'+o+'</button>';
+    });
+    html += '</div></div>';
+  });
+  document.getElementById('ex5').innerHTML = html;
+}
+
+function buildFonex(data, containerId, fbId, allCorrectMsg) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-fonex__row" data-idx="'+i+'" data-correct="'+item[1]+'">';
+    html += '<button class="ipp-fonex__audio" onclick="ippAudio(\''+item[0]+'\',0.82,\'f\')" title="Escuchar"><i class="ph ph-speaker-high"></i></button>';
+    html += '<span class="ipp-fonex__word">'+item[0]+'</span>';
+    html += '<div class="ipp-fonex__btns">';
+    var labels = containerId === 'ex6' ? ['[k]','[tʃ]'] : ['[g]','[dʒ]'];
+    var picks = containerId === 'ex6' ? ['k','ch'] : ['g','dj'];
+    html += '<button class="ipp-fonex__btn" data-pick="'+picks[0]+'" onclick="pickFon(this,\''+fbId+'\')">'+labels[0]+'</button>';
+    html += '<button class="ipp-fonex__btn" data-pick="'+picks[1]+'" onclick="pickFon(this,\''+fbId+'\')">'+labels[1]+'</button>';
+    html += '</div>';
+    html += '<div class="ipp-fonex__reason">'+item[2]+'</div>';
+    html += '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+  document.getElementById(containerId).dataset.allmsg = allCorrectMsg;
+}
+
+function buildEx9() {
+  var html = '';
+  EX_9.forEach(function(item) {
+    var input = '<input class="ipp-fill" type="text" data-answer="'+item[1].replace(/"/g,'&quot;')+'" oninput="checkFill(this)" style="width:160px;">';
+    html += '<div class="ipp-fill-row">'+ item[0].replace('<FILL>', input) +'</div>';
+  });
+  document.getElementById('ex9').innerHTML = html;
+}
+
+function buildEx10() {
+  var html = '';
+  EX_10.forEach(function(item) {
+    html += '<div class="ipp-fill-row'+(item[2]?' ipp-fill-row-highlight':'')+'" style="'+(item[2]?'background:var(--amber-bg);padding:0.55rem 0.85rem;border-radius:8px;':'')+'">';
+    html += item[0] + ' <br><input class="ipp-fill ipp-fill-wide" style="margin-top:0.3rem;" type="text" data-answer="'+item[1].replace(/"/g,'&quot;')+'" oninput="checkFill(this)">';
+    html += '</div>';
+  });
+  document.getElementById('ex10').innerHTML = html;
+}
+
+/* ═══ MC pick ═══ */
+function pickMC5(btn) {
+  var item = btn.closest('.ipp-mc');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var correct = item.dataset.ok;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+      if (b.textContent.trim() === correct) b.classList.add('correct');
+    });
+  }
+  item.querySelectorAll('.ipp-mcbtn').forEach(function(b) { b.disabled = true; });
+  var oldRetry = item.querySelector('.ipp-retry');
+  if (oldRetry) oldRetry.remove();
+  var rb = document.createElement('button');
+  rb.className = 'ipp-retry';
+  rb.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  rb.onclick = function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+      b.disabled = false; b.classList.remove('correct','wrong');
+    });
+    rb.remove();
+  };
+  item.appendChild(rb);
+}
+
+/* ═══ Fonex pick ═══ */
+function pickFon(btn, fbId) {
+  var row = btn.closest('.ipp-fonex__row');
+  if (row.dataset.done) return;
+  row.dataset.done = '1';
+  var pick = btn.dataset.pick;
+  var correct = row.dataset.correct;
+  var ok = pick === correct;
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) {
+    row.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+      if (b.dataset.pick === correct) b.classList.add('correct');
+    });
+  }
+  row.querySelectorAll('.ipp-fonex__btn').forEach(function(b) { b.disabled = true; });
+  var reason = row.querySelector('.ipp-fonex__reason');
+  if (reason) reason.classList.add('show');
+  _checkFonAll(row.closest('.ipp-fonex'), fbId);
+}
+function _checkFonAll(container, fbId) {
+  var rows = container.querySelectorAll('.ipp-fonex__row');
+  var done = 0, ok = 0;
+  rows.forEach(function(r) {
+    if (r.dataset.done) {
+      done++;
+      if (!r.querySelector('.ipp-fonex__btn.wrong')) ok++;
+    }
+  });
+  if (done < rows.length) return;
+  var fb = document.getElementById(fbId);
+  if (ok === rows.length) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfecto!</strong> Acertaste las ' + rows.length + ' palabras.';
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '<i class="ph ph-info"></i> Acertaste ' + ok + ' / ' + rows.length + '. Mirá la razón debajo de cada palabra.';
+    fb.className = 'ipp-fb partial';
+    var ex = container.closest('.ipp-ex');
+    var oldRetry = ex.querySelector('.ipp-retry');
+    if (oldRetry) oldRetry.remove();
+    var btn = document.createElement('button');
+    btn.className = 'ipp-retry';
+    btn.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    btn.onclick = function() {
+      rows.forEach(function(r) {
+        delete r.dataset.done;
+        r.querySelectorAll('.ipp-fonex__btn').forEach(function(b) {
+          b.disabled = false; b.classList.remove('correct','wrong');
+        });
+        var reason = r.querySelector('.ipp-fonex__reason');
+        if (reason) reason.classList.remove('show');
+      });
+      fb.innerHTML = ''; fb.className = 'ipp-fb';
+      btn.remove();
+    };
+    fb.appendChild(btn);
+  }
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+window.checkFill = checkFill;
+window.checkConj = checkConj;
+window.revealFills = revealFills;
+window.revealConj = revealConj;
+window.revealEx = revealEx;
+window.pickMC5 = pickMC5;
+window.pickFon = pickFon;
+
+buildFillRows(EX_E,     'exE');
+buildFillRows(EX_F_ESS, 'exFEssere');
+buildFillRows(EX_F_AV,  'exFAvere');
+buildFillRows(EX_F_PL,  'exFPlural');
+buildFillRows(EX_F_AND, 'exFAndare');
+buildFillRows(EX_4,     'ex4');
+buildEx5();
+buildFonex(EX_6, 'ex6', 'ex6Fb');
+buildFonex(EX_7, 'ex7', 'ex7Fb');
+buildFillRows(EX_8, 'ex8', true);
+buildEx9();
+buildEx10();
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 3 — Gramática ===== -->
