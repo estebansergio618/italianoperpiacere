@@ -1,0 +1,59 @@
+{
+ "home__view567.xml": {
+  "url": "/",
+  "page_id": 4,
+  "view_id": 567,
+  "key": "website.homepage",
+  "activa": true,
+  "pub": true,
+  "chars": 109175,
+  "precios": [
+   "$45.000",
+   "$65.000",
+   "$79.000",
+   "$45.000",
+   "$65.000",
+   "$79.000"
+  ]
+ },
+ "servicios__view2790.xml": {
+  "url": "/servicios",
+  "page_id": 11,
+  "view_id": 2790,
+  "key": "website.servicios-2",
+  "activa": true,
+  "pub": true,
+  "chars": 81561,
+  "precios": [
+   "$45.000",
+   "$79.000",
+   "$65.000",
+   "$45.000",
+   "$79.000",
+   "$65.000"
+  ]
+ },
+ "clases-presenciales__view2908.xml": {
+  "url": "/clases-presenciales",
+  "page_id": 12,
+  "view_id": 2908,
+  "key": "website.clases-presenciales",
+  "activa": true,
+  "pub": true,
+  "chars": 42776,
+  "precios": [
+   "$75.000",
+   "$75.000"
+  ]
+ },
+ "home__view559.xml": {
+  "url": "/",
+  "page_id": 2,
+  "view_id": 559,
+  "key": "website.homepage",
+  "activa": true,
+  "pub": true,
+  "chars": 213,
+  "precios": []
+ }
+}

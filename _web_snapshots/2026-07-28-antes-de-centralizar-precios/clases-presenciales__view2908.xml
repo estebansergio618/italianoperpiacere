@@ -1,0 +1,607 @@
+<t t-name="website.clases-presenciales">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty"><section class="s_embed_code o_colored_level pt0 pb0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><!-- Phosphor Icons + Google Fonts -->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<style>
+.cp-wrap {
+  --ipp-cream:#e9e6d5; --ipp-gold:#EFCF7F; --ipp-amber:#e5ab07; --ipp-red:#cc4736;
+  --ipp-teal:#78a6ba; --ipp-green:#528e74; --ipp-black:#1a1a18; --ipp-white:#ffffff;
+  --head:'Playfair Display',Georgia,serif; --body:'Outfit',system-ui,sans-serif;
+  font-family:var(--body); color:var(--ipp-black); line-height:1.65;
+}
+.cp-wrap *,.cp-wrap *::before,.cp-wrap *::after { box-sizing:border-box; }
+.cp-wrap img { max-width:100%; height:auto; }
+
+/* HERO */
+.cp-hero { background:var(--ipp-green); padding:4.5rem 2rem; text-align:center; position:relative; overflow:hidden; }
+.cp-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.cp-hero&gt;* { position:relative; z-index:1; }
+.cp-eyebrow { display:inline-block; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ipp-gold); font-weight:700; background:rgba(239,207,127,.12); padding:.5rem 1.2rem; border-radius:4px; margin-bottom:1.2rem; }
+.cp-hero h1 { font-family:var(--head); font-size:clamp(2rem,5vw,3.2rem); font-weight:900; line-height:1.1; color:var(--ipp-white); margin:0 0 1rem; }
+.cp-hero h1 em { color:var(--ipp-gold); font-style:italic; }
+.cp-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+.cp-hero-accent { font-size:1.1rem; color:var(--ipp-gold); font-style:italic; font-weight:500; margin-top:.8rem; }
+
+/* SECTIONS */
+.cp-section { padding:4.5rem 1.5rem; }
+.cp-container { max-width:940px; margin:0 auto; }
+.cp-label { display:inline-block; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:.8rem; }
+
+/* DIVIDERS */
+.cp-div { height:3px; }
+
+/* IMAGE */
+.cp-img-section { padding:0 1.5rem; margin-top:-2rem; position:relative; z-index:2; }
+.cp-img-card { max-width:940px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.15); }
+.cp-img-card img { width:100%; height:auto; display:block; object-fit:cover; max-height:420px; }
+
+/* FEATURES */
+.cp-features { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+.cp-feat { display:flex; gap:1rem; align-items:flex-start; padding:1.5rem; border-radius:12px; background:var(--ipp-white); box-shadow:0 2px 12px rgba(0,0,0,.05); transition:transform .2s,box-shadow .2s; }
+.cp-feat:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.cp-feat-icon { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+.cp-feat h3 { font-family:var(--head); font-size:1rem; font-weight:700; color:var(--ipp-black); margin:0 0 .3rem; }
+.cp-feat p { font-size:.88rem; color:#666; margin:0; line-height:1.55; }
+
+/* INFO BOX */
+.cp-info { background:var(--ipp-teal); color:var(--ipp-white); padding:4.5rem 1.5rem; }
+.cp-info-inner { max-width:940px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:center; }
+.cp-info-left h2 { font-family:var(--head); font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:900; margin:0 0 1rem; color:var(--ipp-white); }
+.cp-info-left h2 em { color:var(--ipp-gold); }
+.cp-info-detail { display:flex; align-items:center; gap:.7rem; margin:.6rem 0; font-size:.92rem; color:rgba(255,255,255,.9); }
+.cp-info-detail i { font-size:1.1rem; color:var(--ipp-gold); flex-shrink:0; }
+.cp-info-right { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:2.5rem 2rem; text-align:center; }
+.cp-info-price { font-family:var(--head); font-size:2.8rem; font-weight:900; color:var(--ipp-gold); line-height:1; margin:0; }
+.cp-info-price-sub { font-size:.78rem; color:rgba(255,255,255,.7); margin:.4rem 0 0; font-style:italic; }
+
+/* PROF CARD */
+.cp-prof { background:var(--ipp-white); border-radius:12px; padding:1.8rem; margin-top:1.5rem; color:var(--ipp-black); display:flex; align-items:center; gap:1.2rem; }
+.cp-prof-icon { width:48px; height:48px; background:var(--ipp-green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:#fff; flex-shrink:0; }
+.cp-prof-label { font-size:.7rem; color:#999; text-transform:uppercase; letter-spacing:1px; margin:0 0 2px; }
+.cp-prof-name { font-family:var(--head); font-size:1rem; font-weight:700; color:var(--ipp-black); margin:0 0 2px; }
+.cp-prof-desc { font-size:.8rem; color:#666; margin:0; line-height:1.4; }
+
+/* VIAJES */
+.cp-viajes { text-align:center; }
+.cp-viajes h2 { font-family:var(--head); font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:900; color:var(--ipp-black); margin:0 0 1rem; }
+.cp-viajes h2 em { color:var(--ipp-green); }
+.cp-viajes p { font-size:1rem; color:#555; max-width:600px; margin:0 auto 2rem; line-height:1.75; }
+.cp-viajes-highlight { display:inline-flex; align-items:center; gap:.6rem; background:var(--ipp-green); color:#fff; padding:.8rem 1.6rem; border-radius:8px; font-weight:600; font-size:.9rem; }
+
+/* LEVELS */
+.cp-levels { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.cp-level { text-align:center; padding:1.8rem 1rem; border-radius:12px; transition:transform .2s,box-shadow .2s; position:relative; overflow:hidden; }
+.cp-level:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.cp-level-code { font-family:var(--head); font-size:1.8rem; font-weight:900; line-height:1; margin:0 0 .5rem; }
+.cp-level-name { font-size:.82rem; font-weight:600; margin:0; text-transform:uppercase; letter-spacing:.05em; }
+
+/* LEVELS v2 */
+.cp-levels-v2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; }
+.cp-level-v2 { background:var(--ipp-white); border:1px solid rgba(0,0,0,.06); border-radius:12px; padding:1.5rem 1.4rem; transition:transform .2s,box-shadow .2s; }
+.cp-level-v2:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(0,0,0,.1); }
+.cp-level-v2-head { display:flex; align-items:center; gap:.7rem; margin-bottom:.7rem; }
+.cp-level-v2-code { font-family:var(--head); font-size:1.6rem; font-weight:900; line-height:1; }
+.cp-level-v2-tag { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.25rem .7rem; border-radius:4px; }
+.cp-level-v2 p { font-size:.86rem; color:#666; margin:0 0 .8rem; line-height:1.55; }
+.cp-level-v2-tags { display:flex; gap:.5rem; flex-wrap:wrap; }
+.cp-level-v2-tags span { display:inline-flex; align-items:center; gap:.3rem; font-size:.72rem; font-weight:600; color:#888; background:rgba(0,0,0,.03); padding:.3rem .6rem; border-radius:4px; }
+.cp-level-v2-tags i { font-size:.82rem; }
+
+/* CTA */
+.cp-cta-section { background:var(--ipp-red); color:#fff; padding:4rem 2rem; text-align:center; }
+.cp-cta-section h2 { font-family:var(--head); font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; margin:0 0 .8rem; line-height:1.2; }
+.cp-cta-section h2 em { color:var(--ipp-gold); }
+.cp-cta-section p { font-size:.95rem; opacity:.85; font-weight:300; margin:0 0 2rem; }
+.cp-btn { display:inline-flex; align-items:center; gap:.5rem; padding:.95rem 2.2rem; border-radius:4px; font-family:var(--body); font-size:.92rem; font-weight:700; text-decoration:none; border:none; cursor:pointer; transition:transform .2s,box-shadow .2s; }
+.cp-btn:hover { transform:scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,.15); }
+.cp-btn-gold { background:var(--ipp-amber); color:var(--ipp-black); }
+.cp-btn-white { background:var(--ipp-white); color:var(--ipp-black); }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .cp-features { grid-template-columns:1fr; }
+  .cp-info-inner { grid-template-columns:1fr; }
+  .cp-levels-v2 { grid-template-columns:1fr; }
+  .cp-prof { flex-direction:column; text-align:center; }
+}
+@media(max-width:480px) {
+  .cp-section { padding:3rem 1rem; }
+  .cp-levels-v2 { grid-template-columns:1fr; }
+  .cp-btn { width:100%; justify-content:center; }
+}
+</style>
+
+<div class="cp-wrap">
+
+<!-- ========== HERO ========== -->
+<div class="cp-hero">
+  <div class="cp-eyebrow">Clases Presenciales</div>
+  <h1>Un viaje a través<br/><em>del idioma</em></h1>
+  <p>Aprendé italiano de una forma diferente. Mis clases están diseñadas para adultos que buscan disfrutar del proceso, priorizando la comunicación y la creatividad por sobre la gramática tradicional.</p>
+  <p class="cp-hero-accent">¡Porque se aprende mejor cuando nos divertimos!</p>
+</div>
+
+<!-- ========== IMAGEN ========== -->
+<div class="cp-img-section">
+  <div class="cp-img-card">
+    <img src="https://github.com/estebansergio618/italianoperpiacere/blob/main/clases_1.jpeg?raw=true" alt="Clase presencial de italiano" loading="lazy"/>
+  </div>
+</div>
+
+<!-- ========== CÓMO SON LAS CLASES ========== -->
+<div class="cp-section" style="background:var(--ipp-cream);padding-top:5rem;">
+  <div class="cp-container">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="cp-label" style="color:var(--ipp-green);">Nuestra propuesta</div>
+      <h2 style="font-family:var(--head);font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--ipp-black);margin:0;">¿Cómo son <em style="color:var(--ipp-green);">las clases</em>?</h2>
+    </div>
+    <div class="cp-features">
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(82,142,116,.1);color:var(--ipp-green);"><i class="ph ph-palette"/></div>
+        <div>
+          <h3>Enfoque Creativo-Comunicativo</h3>
+          <p>Clases dinámicas centradas en el uso real del idioma.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(120,166,186,.1);color:var(--ipp-teal);"><i class="ph ph-users-three"/></div>
+        <div>
+          <h3>Grupos Reducidos</h3>
+          <p>Máximo 12 alumnos para garantizar una participación activa.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(229,171,7,.1);color:var(--ipp-amber);"><i class="ph ph-book-open-text"/></div>
+        <div>
+          <h3>Material Exclusivo</h3>
+          <p>Trabajamos con un libro guía y materiales complementarios.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(204,71,54,.1);color:var(--ipp-red);"><i class="ph ph-cooking-pot"/></div>
+        <div>
+          <h3>Experiencias Culturales</h3>
+          <p>Actividades gastronómicas y culturales para vivir la "italianidad" en el aula.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-amber);"/>
+
+<!-- ========== INFO DEL CURSO ========== -->
+<div class="cp-info">
+  <div class="cp-info-inner">
+    <div class="cp-info-left">
+      <div class="cp-label" style="color:var(--ipp-gold);">Ciclo 2026</div>
+      <h2>Información <em>del Curso</em></h2>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Incluye todas las fotocopias y materiales</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Materiales para talleres culturales</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Máximo 12 alumnos por grupo</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Clases dinámicas con enfoque comunicativo</div>
+    </div>
+    <div class="cp-info-right">
+      <p style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.6);margin:0 0 .8rem;font-weight:700;">Inversión mensual</p>
+      <p class="cp-info-price">$75.000</p>
+      <p class="cp-info-price-sub">pesos argentinos</p>
+      <div style="width:40px;height:2px;background:var(--ipp-gold);margin:1.5rem auto;border-radius:2px;"/>
+      <a href="https://italianoperpiacere.com/events" class="cp-btn cp-btn-gold" style="width:100%;justify-content:center;margin-top:.5rem;" target="_blank"><i class="ph ph-calendar-check"/> Inscribite →</a>
+      <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20clases%20presenciales" class="cp-btn" style="width:100%;justify-content:center;margin-top:.6rem;background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultá por WhatsApp</a>
+    </div>
+  </div>
+  <!-- Prof card full-width below -->
+  <div style="max-width:940px;margin:2rem auto 0;">
+    <div style="background:var(--ipp-white);border-radius:14px;padding:2rem 2.5rem;color:var(--ipp-black);display:flex;gap:2rem;align-items:center;flex-wrap:wrap;">
+      <!-- Foto -->
+      <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/carolina.png&amp;w=120&amp;h=120&amp;fit=cover&amp;a=attention&amp;q=88&amp;output=webp" alt="Carolina Carizza" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--ipp-green);flex-shrink:0;"/>
+      <!-- Info -->
+      <div style="flex:1;min-width:200px;">
+        <p class="cp-prof-label">Docente a cargo</p>
+        <p class="cp-prof-name" style="font-size:1.15rem;">Prof. Carolina Carizza</p>
+        <p class="cp-prof-desc">Magíster en Didáctica y Promoción de la Lengua y Cultura Italiana · Università Ca' Foscari, Venezia</p>
+        <div style="display:flex;gap:.5rem;margin-top:.3rem;flex-wrap:wrap;">
+          <span style="font-size:.72rem;background:rgba(82,142,116,.1);color:var(--ipp-green);padding:.2rem .6rem;border-radius:3px;font-weight:600;">Master Ca' Foscari 2018</span>
+          <span style="font-size:.72rem;background:rgba(120,166,186,.1);color:var(--ipp-teal);padding:.2rem .6rem;border-radius:3px;font-weight:600;">Comodoro Rivadavia</span>
+          <span style="font-size:.72rem;background:rgba(229,171,7,.08);color:var(--ipp-amber);padding:.2rem .6rem;border-radius:3px;font-weight:600;">+15 años de experiencia</span>
+        </div>
+      </div>
+      <!-- Diplomas -->
+      <div style="display:flex;gap:.6rem;flex-shrink:0;">
+        <a href="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Diploma.png&amp;w=1200&amp;q=90&amp;output=webp" target="_blank" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;width:80px;">
+          <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Diploma.png&amp;w=160&amp;q=85&amp;output=webp" alt="Diploma" style="width:100%;height:auto;display:block;" loading="lazy"/>
+          <div style="text-align:center;padding:4px;font-size:.6rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.04em;">Diploma</div>
+        </a>
+        <a href="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/titulo.png&amp;w=1200&amp;q=90&amp;output=webp" target="_blank" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;width:80px;">
+          <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/titulo.png&amp;w=160&amp;q=85&amp;output=webp" alt="Título" style="width:100%;height:auto;display:block;" loading="lazy"/>
+          <div style="text-align:center;padding:4px;font-size:.6rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.04em;">Título</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-green);"/>
+
+<!-- ========== VIAJES ========== -->
+<div class="cp-section" style="background:var(--ipp-cream);">
+  <div class="cp-container cp-viajes">
+    <div class="cp-label" style="color:var(--ipp-teal);">Más allá del aula</div>
+    <h2>Viajes de <em>Estudio</em> a Italia</h2>
+    <p>Periódicamente organizamos viajes grupales de estudio a Italia saliendo desde Comodoro Rivadavia. Una oportunidad única para poner en práctica todo lo aprendido y sumergirte en la cultura local con tus compañeros de clase.</p>
+    <div class="cp-viajes-highlight"><i class="ph ph-airplane-takeoff"/> Próxima salida: Septiembre 2026 · Salerno</div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-teal);"/>
+
+<!-- ========== NIVELES ========== -->
+<div class="cp-section" style="background:var(--ipp-white);">
+  <div class="cp-container">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="cp-label" style="color:var(--ipp-red);">Niveles disponibles</div>
+      <h2 style="font-family:var(--head);font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ipp-black);margin:0 0 .5rem;">Elegí tu <em style="color:var(--ipp-green);">camino</em> al italiano</h2>
+      <p style="color:#666;font-size:.95rem;max-width:520px;margin:0 auto;">Cada nivel te acerca más. Desde las primeras palabras hasta conversar con fluidez.</p>
+    </div>
+    <div class="cp-levels-v2">
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-green);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-green);">A1</span>
+          <span class="cp-level-v2-tag" style="background:rgba(82,142,116,.1);color:var(--ipp-green);">Elementare</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Elementare</h3>
+        <p>Arrancás desde cero. Saludos, presentaciones, pedir en un café y contar qué hiciste ayer.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-game-controller"/> Lúdico</span><span><i class="ph ph-monitor-play"/> Online + Presencial</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-teal);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-teal);">A2</span>
+          <span class="cp-level-v2-tag" style="background:rgba(120,166,186,.1);color:var(--ipp-teal);">Pre-intermedio</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Pre-intermedio</h3>
+        <p>Expandí tu vocabulario con Tabú, Pictionary y dinámicas grupales. Aprender con risa incluida.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-dice-five"/> Juegos</span><span><i class="ph ph-users"/> Grupal</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-amber);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-amber);">B1</span>
+          <span class="cp-level-v2-tag" style="background:rgba(229,171,7,.08);color:var(--ipp-amber);">Intermedio</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Intermedio</h3>
+        <p>Conversación fluida, debates, cine italiano y música. Empezás a pensar en italiano.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-film-slate"/> Cine</span><span><i class="ph ph-music-notes"/> Música</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-red);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-red);">B2</span>
+          <span class="cp-level-v2-tag" style="background:rgba(204,71,54,.08);color:var(--ipp-red);">Avanzato</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Avanzato</h3>
+        <p>Dominá matices, humor, expresiones idiomáticas. El italiano ya es tuyo.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-chat-teardrop-text"/> Expresión</span><span><i class="ph ph-trophy"/> Avanzado</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== CTA FINAL ========== -->
+<div class="cp-cta-section">
+  <h2>Tu italiano empieza hoy.<br/><em>¿Qué estás esperando?</em></h2>
+  <p>Elegí tu nivel, conocé a Carolina y sumate a una comunidad que aprende disfrutando.</p>
+  <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;">
+    <a href="https://italianoperpiacere.com/events" class="cp-btn cp-btn-gold"><i class="ph ph-calendar-check"/> Inscribite al próximo ciclo →</a>
+    <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20clases%20presenciales" class="cp-btn cp-btn-white" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultá por WhatsApp</a>
+  </div>
+  <p style="font-size:.8rem;opacity:.6;margin-top:1.2rem;">Los cupos son limitados.</p>
+</div>
+
+</div><!-- /cp-wrap --></template>
+        <div class="s_embed_code_embedded o_not_editable container"><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+.cp-wrap {
+  --ipp-cream:#e9e6d5; --ipp-gold:#EFCF7F; --ipp-amber:#e5ab07; --ipp-red:#cc4736;
+  --ipp-teal:#78a6ba; --ipp-green:#528e74; --ipp-black:#1a1a18; --ipp-white:#ffffff;
+  --head:'Playfair Display',Georgia,serif; --body:'Outfit',system-ui,sans-serif;
+  font-family:var(--body); color:var(--ipp-black); line-height:1.65;
+}
+.cp-wrap *,.cp-wrap *::before,.cp-wrap *::after { box-sizing:border-box; }
+.cp-wrap img { max-width:100%; height:auto; }
+
+/* HERO */
+.cp-hero { background:var(--ipp-green); padding:4.5rem 2rem; text-align:center; position:relative; overflow:hidden; }
+.cp-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.cp-hero&gt;* { position:relative; z-index:1; }
+.cp-eyebrow { display:inline-block; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ipp-gold); font-weight:700; background:rgba(239,207,127,.12); padding:.5rem 1.2rem; border-radius:4px; margin-bottom:1.2rem; }
+.cp-hero h1 { font-family:var(--head); font-size:clamp(2rem,5vw,3.2rem); font-weight:900; line-height:1.1; color:var(--ipp-white); margin:0 0 1rem; }
+.cp-hero h1 em { color:var(--ipp-gold); font-style:italic; }
+.cp-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+.cp-hero-accent { font-size:1.1rem; color:var(--ipp-gold); font-style:italic; font-weight:500; margin-top:.8rem; }
+
+/* SECTIONS */
+.cp-section { padding:4.5rem 1.5rem; }
+.cp-container { max-width:940px; margin:0 auto; }
+.cp-label { display:inline-block; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:.8rem; }
+
+/* DIVIDERS */
+.cp-div { height:3px; }
+
+/* IMAGE */
+.cp-img-section { padding:0 1.5rem; margin-top:-2rem; position:relative; z-index:2; }
+.cp-img-card { max-width:940px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.15); }
+.cp-img-card img { width:100%; height:auto; display:block; object-fit:cover; max-height:420px; }
+
+/* FEATURES */
+.cp-features { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+.cp-feat { display:flex; gap:1rem; align-items:flex-start; padding:1.5rem; border-radius:12px; background:var(--ipp-white); box-shadow:0 2px 12px rgba(0,0,0,.05); transition:transform .2s,box-shadow .2s; }
+.cp-feat:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.cp-feat-icon { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+.cp-feat h3 { font-family:var(--head); font-size:1rem; font-weight:700; color:var(--ipp-black); margin:0 0 .3rem; }
+.cp-feat p { font-size:.88rem; color:#666; margin:0; line-height:1.55; }
+
+/* INFO BOX */
+.cp-info { background:var(--ipp-teal); color:var(--ipp-white); padding:4.5rem 1.5rem; }
+.cp-info-inner { max-width:940px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:center; }
+.cp-info-left h2 { font-family:var(--head); font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:900; margin:0 0 1rem; color:var(--ipp-white); }
+.cp-info-left h2 em { color:var(--ipp-gold); }
+.cp-info-detail { display:flex; align-items:center; gap:.7rem; margin:.6rem 0; font-size:.92rem; color:rgba(255,255,255,.9); }
+.cp-info-detail i { font-size:1.1rem; color:var(--ipp-gold); flex-shrink:0; }
+.cp-info-right { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:2.5rem 2rem; text-align:center; }
+.cp-info-price { font-family:var(--head); font-size:2.8rem; font-weight:900; color:var(--ipp-gold); line-height:1; margin:0; }
+.cp-info-price-sub { font-size:.78rem; color:rgba(255,255,255,.7); margin:.4rem 0 0; font-style:italic; }
+
+/* PROF CARD */
+.cp-prof { background:var(--ipp-white); border-radius:12px; padding:1.8rem; margin-top:1.5rem; color:var(--ipp-black); display:flex; align-items:center; gap:1.2rem; }
+.cp-prof-icon { width:48px; height:48px; background:var(--ipp-green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:#fff; flex-shrink:0; }
+.cp-prof-label { font-size:.7rem; color:#999; text-transform:uppercase; letter-spacing:1px; margin:0 0 2px; }
+.cp-prof-name { font-family:var(--head); font-size:1rem; font-weight:700; color:var(--ipp-black); margin:0 0 2px; }
+.cp-prof-desc { font-size:.8rem; color:#666; margin:0; line-height:1.4; }
+
+/* VIAJES */
+.cp-viajes { text-align:center; }
+.cp-viajes h2 { font-family:var(--head); font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:900; color:var(--ipp-black); margin:0 0 1rem; }
+.cp-viajes h2 em { color:var(--ipp-green); }
+.cp-viajes p { font-size:1rem; color:#555; max-width:600px; margin:0 auto 2rem; line-height:1.75; }
+.cp-viajes-highlight { display:inline-flex; align-items:center; gap:.6rem; background:var(--ipp-green); color:#fff; padding:.8rem 1.6rem; border-radius:8px; font-weight:600; font-size:.9rem; }
+
+/* LEVELS */
+.cp-levels { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.cp-level { text-align:center; padding:1.8rem 1rem; border-radius:12px; transition:transform .2s,box-shadow .2s; position:relative; overflow:hidden; }
+.cp-level:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.cp-level-code { font-family:var(--head); font-size:1.8rem; font-weight:900; line-height:1; margin:0 0 .5rem; }
+.cp-level-name { font-size:.82rem; font-weight:600; margin:0; text-transform:uppercase; letter-spacing:.05em; }
+
+/* LEVELS v2 */
+.cp-levels-v2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; }
+.cp-level-v2 { background:var(--ipp-white); border:1px solid rgba(0,0,0,.06); border-radius:12px; padding:1.5rem 1.4rem; transition:transform .2s,box-shadow .2s; }
+.cp-level-v2:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(0,0,0,.1); }
+.cp-level-v2-head { display:flex; align-items:center; gap:.7rem; margin-bottom:.7rem; }
+.cp-level-v2-code { font-family:var(--head); font-size:1.6rem; font-weight:900; line-height:1; }
+.cp-level-v2-tag { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.25rem .7rem; border-radius:4px; }
+.cp-level-v2 p { font-size:.86rem; color:#666; margin:0 0 .8rem; line-height:1.55; }
+.cp-level-v2-tags { display:flex; gap:.5rem; flex-wrap:wrap; }
+.cp-level-v2-tags span { display:inline-flex; align-items:center; gap:.3rem; font-size:.72rem; font-weight:600; color:#888; background:rgba(0,0,0,.03); padding:.3rem .6rem; border-radius:4px; }
+.cp-level-v2-tags i { font-size:.82rem; }
+
+/* CTA */
+.cp-cta-section { background:var(--ipp-red); color:#fff; padding:4rem 2rem; text-align:center; }
+.cp-cta-section h2 { font-family:var(--head); font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; margin:0 0 .8rem; line-height:1.2; }
+.cp-cta-section h2 em { color:var(--ipp-gold); }
+.cp-cta-section p { font-size:.95rem; opacity:.85; font-weight:300; margin:0 0 2rem; }
+.cp-btn { display:inline-flex; align-items:center; gap:.5rem; padding:.95rem 2.2rem; border-radius:4px; font-family:var(--body); font-size:.92rem; font-weight:700; text-decoration:none; border:none; cursor:pointer; transition:transform .2s,box-shadow .2s; }
+.cp-btn:hover { transform:scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,.15); }
+.cp-btn-gold { background:var(--ipp-amber); color:var(--ipp-black); }
+.cp-btn-white { background:var(--ipp-white); color:var(--ipp-black); }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .cp-features { grid-template-columns:1fr; }
+  .cp-info-inner { grid-template-columns:1fr; }
+  .cp-levels-v2 { grid-template-columns:1fr; }
+  .cp-prof { flex-direction:column; text-align:center; }
+}
+@media(max-width:480px) {
+  .cp-section { padding:3rem 1rem; }
+  .cp-levels-v2 { grid-template-columns:1fr; }
+  .cp-btn { width:100%; justify-content:center; }
+}
+</style><div class="cp-wrap">
+
+<!-- ========== HERO ========== -->
+<div class="cp-hero">
+  <div class="cp-eyebrow">Clases Presenciales</div>
+  <h1>Un viaje a través<br/><em>del idioma</em></h1>
+  <p>Aprendé italiano de una forma diferente. Mis clases están diseñadas para adultos que buscan disfrutar del proceso, priorizando la comunicación y la creatividad por sobre la gramática tradicional.</p>
+  <p class="cp-hero-accent">¡Porque se aprende mejor cuando nos divertimos!</p>
+</div>
+
+<!-- ========== IMAGEN ========== -->
+<div class="cp-img-section">
+  <div class="cp-img-card">
+    <img src="https://github.com/estebansergio618/italianoperpiacere/blob/main/clases_1.jpeg?raw=true" alt="Clase presencial de italiano" loading="lazy"/>
+  </div>
+</div>
+
+<!-- ========== CÓMO SON LAS CLASES ========== -->
+<div class="cp-section" style="background:var(--ipp-cream);padding-top:5rem;">
+  <div class="cp-container">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="cp-label" style="color:var(--ipp-green);">Nuestra propuesta</div>
+      <h2 style="font-family:var(--head);font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--ipp-black);margin:0;">¿Cómo son <em style="color:var(--ipp-green);">las clases</em>?</h2>
+    </div>
+    <div class="cp-features">
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(82,142,116,.1);color:var(--ipp-green);"><i class="ph ph-palette"/></div>
+        <div>
+          <h3>Enfoque Creativo-Comunicativo</h3>
+          <p>Clases dinámicas centradas en el uso real del idioma.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(120,166,186,.1);color:var(--ipp-teal);"><i class="ph ph-users-three"/></div>
+        <div>
+          <h3>Grupos Reducidos</h3>
+          <p>Máximo 12 alumnos para garantizar una participación activa.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(229,171,7,.1);color:var(--ipp-amber);"><i class="ph ph-book-open-text"/></div>
+        <div>
+          <h3>Material Exclusivo</h3>
+          <p>Trabajamos con un libro guía y materiales complementarios.</p>
+        </div>
+      </div>
+      <div class="cp-feat">
+        <div class="cp-feat-icon" style="background:rgba(204,71,54,.1);color:var(--ipp-red);"><i class="ph ph-cooking-pot"/></div>
+        <div>
+          <h3>Experiencias Culturales</h3>
+          <p>Actividades gastronómicas y culturales para vivir la "italianidad" en el aula.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-amber);"/>
+
+<!-- ========== INFO DEL CURSO ========== -->
+<div class="cp-info">
+  <div class="cp-info-inner">
+    <div class="cp-info-left">
+      <div class="cp-label" style="color:var(--ipp-gold);">Ciclo 2026</div>
+      <h2>Información <em>del Curso</em></h2>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Incluye todas las fotocopias y materiales</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Materiales para talleres culturales</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Máximo 12 alumnos por grupo</div>
+      <div class="cp-info-detail"><i class="ph ph-check-circle"/> Clases dinámicas con enfoque comunicativo</div>
+    </div>
+    <div class="cp-info-right">
+      <p style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.6);margin:0 0 .8rem;font-weight:700;">Inversión mensual</p>
+      <p class="cp-info-price">$75.000</p>
+      <p class="cp-info-price-sub">pesos argentinos</p>
+      <div style="width:40px;height:2px;background:var(--ipp-gold);margin:1.5rem auto;border-radius:2px;"/>
+      <a href="https://italianoperpiacere.com/events" class="cp-btn cp-btn-gold" style="width:100%;justify-content:center;margin-top:.5rem;" target="_blank"><i class="ph ph-calendar-check"/> Inscribite →</a>
+      <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20clases%20presenciales" class="cp-btn" style="width:100%;justify-content:center;margin-top:.6rem;background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultá por WhatsApp</a>
+    </div>
+  </div>
+  <!-- Prof card full-width below -->
+  <div style="max-width:940px;margin:2rem auto 0;">
+    <div style="background:var(--ipp-white);border-radius:14px;padding:2rem 2.5rem;color:var(--ipp-black);display:flex;gap:2rem;align-items:center;flex-wrap:wrap;">
+      <!-- Foto -->
+      <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/carolina.png&amp;w=120&amp;h=120&amp;fit=cover&amp;a=attention&amp;q=88&amp;output=webp" alt="Carolina Carizza" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--ipp-green);flex-shrink:0;"/>
+      <!-- Info -->
+      <div style="flex:1;min-width:200px;">
+        <p class="cp-prof-label">Docente a cargo</p>
+        <p class="cp-prof-name" style="font-size:1.15rem;">Prof. Carolina Carizza</p>
+        <p class="cp-prof-desc">Magíster en Didáctica y Promoción de la Lengua y Cultura Italiana · Università Ca' Foscari, Venezia</p>
+        <div style="display:flex;gap:.5rem;margin-top:.3rem;flex-wrap:wrap;">
+          <span style="font-size:.72rem;background:rgba(82,142,116,.1);color:var(--ipp-green);padding:.2rem .6rem;border-radius:3px;font-weight:600;">Master Ca' Foscari 2018</span>
+          <span style="font-size:.72rem;background:rgba(120,166,186,.1);color:var(--ipp-teal);padding:.2rem .6rem;border-radius:3px;font-weight:600;">Comodoro Rivadavia</span>
+          <span style="font-size:.72rem;background:rgba(229,171,7,.08);color:var(--ipp-amber);padding:.2rem .6rem;border-radius:3px;font-weight:600;">+15 años de experiencia</span>
+        </div>
+      </div>
+      <!-- Diplomas -->
+      <div style="display:flex;gap:.6rem;flex-shrink:0;">
+        <a href="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Diploma.png&amp;w=1200&amp;q=90&amp;output=webp" target="_blank" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;width:80px;">
+          <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Diploma.png&amp;w=160&amp;q=85&amp;output=webp" alt="Diploma" style="width:100%;height:auto;display:block;" loading="lazy"/>
+          <div style="text-align:center;padding:4px;font-size:.6rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.04em;">Diploma</div>
+        </a>
+        <a href="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/titulo.png&amp;w=1200&amp;q=90&amp;output=webp" target="_blank" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;width:80px;">
+          <img src="https://wsrv.nl/?url=raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/titulo.png&amp;w=160&amp;q=85&amp;output=webp" alt="Título" style="width:100%;height:auto;display:block;" loading="lazy"/>
+          <div style="text-align:center;padding:4px;font-size:.6rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.04em;">Título</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-green);"/>
+
+<!-- ========== VIAJES ========== -->
+<div class="cp-section" style="background:var(--ipp-cream);">
+  <div class="cp-container cp-viajes">
+    <div class="cp-label" style="color:var(--ipp-teal);">Más allá del aula</div>
+    <h2>Viajes de <em>Estudio</em> a Italia</h2>
+    <p>Periódicamente organizamos viajes grupales de estudio a Italia saliendo desde Comodoro Rivadavia. Una oportunidad única para poner en práctica todo lo aprendido y sumergirte en la cultura local con tus compañeros de clase.</p>
+    <div class="cp-viajes-highlight"><i class="ph ph-airplane-takeoff"/> Próxima salida: Septiembre 2026 · Salerno</div>
+  </div>
+</div>
+
+<div class="cp-div" style="background:var(--ipp-teal);"/>
+
+<!-- ========== NIVELES ========== -->
+<div class="cp-section" style="background:var(--ipp-white);">
+  <div class="cp-container">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="cp-label" style="color:var(--ipp-red);">Niveles disponibles</div>
+      <h2 style="font-family:var(--head);font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ipp-black);margin:0 0 .5rem;">Elegí tu <em style="color:var(--ipp-green);">camino</em> al italiano</h2>
+      <p style="color:#666;font-size:.95rem;max-width:520px;margin:0 auto;">Cada nivel te acerca más. Desde las primeras palabras hasta conversar con fluidez.</p>
+    </div>
+    <div class="cp-levels-v2">
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-green);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-green);">A1</span>
+          <span class="cp-level-v2-tag" style="background:rgba(82,142,116,.1);color:var(--ipp-green);">Elementare</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Elementare</h3>
+        <p>Arrancás desde cero. Saludos, presentaciones, pedir en un café y contar qué hiciste ayer.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-game-controller"/> Lúdico</span><span><i class="ph ph-monitor-play"/> Online + Presencial</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-teal);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-teal);">A2</span>
+          <span class="cp-level-v2-tag" style="background:rgba(120,166,186,.1);color:var(--ipp-teal);">Pre-intermedio</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Pre-intermedio</h3>
+        <p>Expandí tu vocabulario con Tabú, Pictionary y dinámicas grupales. Aprender con risa incluida.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-dice-five"/> Juegos</span><span><i class="ph ph-users"/> Grupal</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-amber);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-amber);">B1</span>
+          <span class="cp-level-v2-tag" style="background:rgba(229,171,7,.08);color:var(--ipp-amber);">Intermedio</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Intermedio</h3>
+        <p>Conversación fluida, debates, cine italiano y música. Empezás a pensar en italiano.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-film-slate"/> Cine</span><span><i class="ph ph-music-notes"/> Música</span></div>
+      </div>
+
+      <div class="cp-level-v2" style="border-left:4px solid var(--ipp-red);">
+        <div class="cp-level-v2-head">
+          <span class="cp-level-v2-code" style="color:var(--ipp-red);">B2</span>
+          <span class="cp-level-v2-tag" style="background:rgba(204,71,54,.08);color:var(--ipp-red);">Avanzato</span>
+        </div>
+        <h3 style="font-family:var(--head);font-size:1.1rem;color:var(--ipp-black);margin:0 0 .4rem;">Livello Avanzato</h3>
+        <p>Dominá matices, humor, expresiones idiomáticas. El italiano ya es tuyo.</p>
+        <div class="cp-level-v2-tags"><span><i class="ph ph-chat-teardrop-text"/> Expresión</span><span><i class="ph ph-trophy"/> Avanzado</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== CTA FINAL ========== -->
+<div class="cp-cta-section">
+  <h2>Tu italiano empieza hoy.<br/><em>¿Qué estás esperando?</em></h2>
+  <p>Elegí tu nivel, conocé a Carolina y sumate a una comunidad que aprende disfrutando.</p>
+  <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;">
+    <a href="https://italianoperpiacere.com/events" class="cp-btn cp-btn-gold"><i class="ph ph-calendar-check"/> Inscribite al próximo ciclo →</a>
+    <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20clases%20presenciales" class="cp-btn cp-btn-white" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultá por WhatsApp</a>
+  </div>
+  <p style="font-size:.8rem;opacity:.6;margin-top:1.2rem;">Los cupos son limitados.</p>
+</div>
+
+</div></div>
+    </section></div>
+    </t>
+</t>

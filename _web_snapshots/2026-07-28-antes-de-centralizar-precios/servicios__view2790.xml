@@ -1,0 +1,1108 @@
+<t t-name="website.servicios-2">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty"><section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código" style="position: relative;">
+        <template class="s_embed_code_saved"><!-- Phosphor Icons + Google Fonts -->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<style>
+/* === VARIABLES === */
+.sv-wrap {
+  --ipp-cream:#e9e6d5; --ipp-gold:#EFCF7F; --ipp-amber:#e5ab07; --ipp-red:#cc4736;
+  --ipp-teal:#78a6ba; --ipp-green:#528e74; --ipp-black:#1a1a18; --ipp-white:#ffffff;
+  --ipp-head:'Playfair Display',Georgia,serif; --ipp-body:'Outfit',system-ui,sans-serif;
+  font-family: var(--ipp-body); color: var(--ipp-black); line-height:1.65;
+}
+.sv-wrap *, .sv-wrap *::before, .sv-wrap *::after { box-sizing:border-box; }
+.sv-wrap img { max-width:100%; height:auto; }
+
+/* === HERO === */
+.sv-hero { background:var(--ipp-green); padding:4.5rem 2rem; text-align:center; position:relative; overflow:hidden; border-radius:0; }
+.sv-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.sv-hero &gt; * { position:relative; z-index:1; }
+.sv-eyebrow { display:inline-block; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ipp-gold); font-weight:700; background:rgba(239,207,127,.12); padding:.5rem 1.2rem; border-radius:4px; margin-bottom:1.2rem; }
+.sv-hero h1 { font-family:var(--ipp-head); font-size:clamp(2rem,5vw,3.2rem); font-weight:900; line-height:1.1; color:var(--ipp-white); margin:0 0 1rem; }
+.sv-hero h1 em { color:var(--ipp-gold); font-style:italic; }
+.sv-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+
+/* === URGENCY === */
+.sv-urgency { background:var(--ipp-red); color:#fff; padding:.9rem 2rem; text-align:center; font-weight:700; font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
+.sv-urgency span { color:var(--ipp-gold); }
+
+/* === SECTIONS === */
+.sv-section { padding:5rem 1.5rem; }
+.sv-container { max-width:1040px; margin:0 auto; }
+.sv-label { display:inline-block; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:1rem; }
+.sv-section-head { margin-bottom:3rem; }
+.sv-section-head h2 { font-family:var(--ipp-head); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; line-height:1.12; margin:0 0 1rem; letter-spacing:-.01em; }
+.sv-section-head p { font-size:1rem; font-weight:300; max-width:640px; line-height:1.8; color:#555; }
+
+/* === OVERVIEW CARDS === */
+.sv-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.8rem; margin-top:3rem; }
+.sv-card { position:relative; border-radius:16px; overflow:hidden; min-height:400px; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .3s,box-shadow .3s; }
+.sv-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(0,0,0,.2); }
+.sv-card-bg { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .4s; }
+.sv-card:hover .sv-card-bg { transform:scale(1.04); }
+.sv-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,26,24,.88) 0%,rgba(26,26,24,.2) 55%,transparent 100%); }
+.sv-card-info { position:relative; z-index:2; padding:2rem 1.5rem; }
+.sv-card-info h3 { font-family:var(--ipp-head); font-size:1.45rem; font-weight:900; color:#fff; margin:0 0 .5rem; line-height:1.15; }
+.sv-card-info p { font-size:.86rem; color:rgba(255,255,255,.8); margin:0 0 .7rem; line-height:1.55; }
+.sv-card-price { font-size:.76rem; font-weight:700; color:var(--ipp-gold); letter-spacing:.04em; margin-bottom:1rem; display:block; }
+.sv-card-btns { display:flex; gap:.6rem; flex-wrap:wrap; }
+.sv-card-btn { display:inline-flex; align-items:center; gap:.4rem; background:var(--ipp-amber); color:var(--ipp-black); padding:.55rem 1.2rem; border-radius:4px; font-weight:700; font-size:.8rem; text-decoration:none; transition:background .2s,transform .2s; }
+.sv-card-btn:hover { background:var(--ipp-gold); transform:scale(1.03); }
+.sv-card-btn-ghost { background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.35); }
+.sv-card-btn-ghost:hover { background:rgba(255,255,255,.28); }
+
+/* === PRICING BLOCK === */
+.sv-pricing { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; padding:2.5rem; border-radius:10px; background:var(--ipp-white); box-shadow:0 2px 20px rgba(0,0,0,.07); margin-bottom:3rem; }
+.sv-pricing-left h3 { font-family:var(--ipp-head); font-size:1.2rem; margin:0 0 1.4rem; line-height:1.35; }
+.sv-pricing-detail { display:flex; align-items:flex-start; gap:.8rem; margin:.75rem 0; font-size:.92rem; line-height:1.6; }
+.sv-pricing-detail i { font-size:1.15rem; flex-shrink:0; margin-top:2px; }
+.sv-pricing-right { display:flex; flex-direction:column; justify-content:center; text-align:right; }
+.sv-price-big { font-family:var(--ipp-head); font-size:2.5rem; font-weight:900; line-height:1; }
+.sv-price-sub { font-size:.76rem; margin-top:.4rem; opacity:.6; font-style:italic; }
+.sv-price-cupos { font-size:.84rem; margin-top:.6rem; font-weight:700; }
+
+/* === BUTTONS === */
+.sv-btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 2rem; border-radius:4px; font-family:var(--ipp-body); font-size:.88rem; font-weight:700; text-decoration:none; border:none; cursor:pointer; transition:transform .2s,box-shadow .2s; min-height:48px; }
+.sv-btn:hover { transform:scale(1.03); box-shadow:0 8px 24px rgba(0,0,0,.12); }
+.sv-btn-red { background:var(--ipp-red); color:#fff; }
+.sv-btn-gold { background:var(--ipp-amber); color:var(--ipp-black); }
+.sv-btn-teal { background:var(--ipp-teal); color:#fff; }
+.sv-btn-outline { background:transparent; border:2px solid; }
+
+/* === MOSAIC === */
+.sv-mosaic { display:grid; gap:12px; margin-bottom:1rem; }
+.sv-mosaic-4 { grid-template-columns:1fr 1.2fr 1fr; grid-template-rows:280px 200px; }
+.sv-mosaic-4 .sm1 { grid-column:1/2; grid-row:1/3; }
+.sv-mosaic-4 .sm2 { grid-column:2/4; grid-row:1/2; }
+.sv-mosaic-4 .sm3 { grid-column:2/3; grid-row:2/3; }
+.sv-mosaic-4 .sm4 { grid-column:3/4; grid-row:2/3; }
+.sv-tile { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+.sv-tile img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; transition:transform .4s; }
+.sv-tile:hover img { transform:scale(1.06); }
+.sv-tile::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0); transition:background .3s; }
+.sv-tile:hover::after { background:rgba(0,0,0,.15); }
+.sv-tile-badge { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(26,26,24,.45); }
+.sv-tile-badge-num { font-family:var(--ipp-head); font-size:2.8rem; font-weight:900; color:#fff; line-height:1; }
+.sv-tile-badge-text { font-size:.78rem; font-weight:700; text-transform:uppercase; color:#fff; margin-top:.3rem; }
+
+/* === SCHOOLS === */
+.sv-schools { margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid rgba(255,255,255,.15); }
+.sv-schools h4 { font-family:var(--ipp-head); font-style:italic; font-size:1.35rem; margin:0 0 1.8rem; color:var(--ipp-gold); text-align:center; }
+.sv-schools-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.sv-school-card { background:var(--ipp-cream); border-radius:14px; padding:1.8rem 1.5rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:.8rem; transition:transform .2s; }
+.sv-school-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.2); }
+.sv-school-card img { max-height:56px; max-width:160px; object-fit:contain; }
+.sv-school-card h5 { font-family:var(--ipp-head); font-style:italic; font-size:1.05rem; color:var(--ipp-black); font-weight:700; margin:0; }
+.sv-school-card p { font-size:.8rem; color:#555; line-height:1.5; flex:1; margin:0; }
+.sv-school-card a { display:inline-block; padding:.5rem 1.2rem; background:var(--ipp-teal); color:#fff; border-radius:99px; font-size:.78rem; font-weight:700; text-decoration:none; transition:background .2s; }
+.sv-school-card a:hover { background:#5a8ea0; }
+
+/* === ONLINE BADGE === */
+.sv-badge { display:inline-flex; align-items:center; gap:.5rem; background:var(--ipp-amber); color:var(--ipp-black); padding:.4rem 1rem; border-radius:99px; font-size:.74rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; margin-top:1rem; }
+
+/* === CONTACT === */
+.sv-contact { background:var(--ipp-green); color:#fff; padding:5rem 1.5rem; }
+.sv-contact-head { text-align:center; margin-bottom:3.5rem; }
+.sv-contact-head h2 { font-family:var(--ipp-head); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; margin:0 0 .6rem; }
+.sv-contact-head p { font-size:1rem; opacity:.85; font-weight:300; }
+.sv-contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.5rem; max-width:1040px; margin:0 auto; }
+.sv-contact-card { background:rgba(255,255,255,.12); padding:2rem 1.5rem; border-radius:8px; border:1px solid rgba(255,255,255,.2); text-align:center; display:flex; flex-direction:column; align-items:center; transition:transform .2s,background .2s; }
+.sv-contact-card:hover { transform:translateY(-4px); background:rgba(255,255,255,.2); }
+.sv-contact-icon { width:52px; height:52px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.18); border:1.5px solid rgba(255,255,255,.3); border-radius:50%; margin-bottom:1rem; font-size:1.4rem; color:#fff; }
+.sv-contact-card h3 { font-family:var(--ipp-head); font-size:1.05rem; margin:0 0 .5rem; color:#fff; }
+.sv-contact-card p { font-size:.85rem; opacity:.75; line-height:1.5; flex:1; margin:0 0 1.2rem; }
+.sv-contact-link { display:inline-flex; align-items:center; justify-content:center; background:var(--ipp-amber); color:var(--ipp-black); padding:.7rem 1.4rem; border-radius:4px; text-decoration:none; font-weight:700; font-size:.82rem; width:100%; margin-top:auto; min-height:42px; transition:background .2s; }
+.sv-contact-link:hover { background:var(--ipp-gold); }
+
+/* === DATES LIST === */
+.sv-dates { list-style:none; padding:0; margin:0 0 1.2rem; text-align:left; width:100%; font-size:.8rem; }
+.sv-dates li { display:flex; align-items:baseline; gap:.45rem; padding:.4rem 0; border-bottom:1px solid rgba(255,255,255,.1); }
+.sv-dates li:last-child { border-bottom:none; }
+.sv-dates-dot { width:7px; height:7px; border-radius:50%; background:var(--ipp-gold); flex-shrink:0; margin-top:3px; }
+.sv-dates strong { color:var(--ipp-gold); font-weight:700; }
+.sv-dates span { color:rgba(255,255,255,.7); }
+
+/* === TESTIMONIOS === */
+.sv-testimonios { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.sv-vid { position:relative; border-radius:14px; overflow:hidden; aspect-ratio:9/12; background:#e0ddd0; box-shadow:0 6px 24px rgba(0,0,0,.12); cursor:pointer; transition:transform .3s,box-shadow .3s; }
+.sv-vid:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.18); }
+.sv-vid img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+.sv-vid-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 50%); }
+.sv-vid-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.sv-vid-btn { width:52px; height:52px; background:rgba(255,255,255,.92); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 14px rgba(0,0,0,.2); transition:transform .2s; }
+.sv-vid:hover .sv-vid-btn { transform:scale(1.1); }
+
+@media(max-width:600px) {
+  .sv-testimonios { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:8px; }
+  .sv-vid { flex:0 0 70vw; scroll-snap-align:center; aspect-ratio:9/14; }
+  .sv-testimonios::-webkit-scrollbar { height:4px; }
+  .sv-testimonios::-webkit-scrollbar-thumb { background:rgba(0,0,0,.15); border-radius:4px; }
+}
+
+/* === DIVIDERS === */
+.sv-div { height:3px; }
+.sv-div-amber { background:var(--ipp-amber); }
+.sv-div-green { background:var(--ipp-green); }
+.sv-div-teal { background:var(--ipp-teal); }
+.sv-div-red { background:var(--ipp-red); }
+
+/* === LIGHTBOX === */
+.sv-lb { display:none; position:fixed; inset:0; background:rgba(26,26,24,.92); z-index:99999; align-items:center; justify-content:center; cursor:pointer; }
+.sv-lb.active { display:flex; }
+.sv-lb img { max-width:90vw; max-height:85vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,.5); cursor:default; }
+.sv-lb-close { position:absolute; top:1.2rem; right:1.5rem; background:var(--ipp-red); color:#fff; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100000; font-family:var(--ipp-body); }
+
+/* === VIDEO MODAL === */
+.sv-vlb { display:none; position:fixed; inset:0; background:rgba(233,230,213,.97); z-index:99999; align-items:center; justify-content:center; flex-direction:column; }
+.sv-vlb.active { display:flex; }
+
+/* === RESPONSIVE === */
+@media(max-width:768px) {
+  .sv-pricing { grid-template-columns:1fr; padding:1.5rem; }
+  .sv-pricing-right { text-align:left; margin-top:.5rem; }
+  .sv-price-big { font-size:2rem; }
+  .sv-mosaic-4 { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+  .sv-mosaic-4 .sm1,.sv-mosaic-4 .sm2,.sv-mosaic-4 .sm3,.sv-mosaic-4 .sm4 { grid-column:auto; grid-row:auto; height:200px; }
+  .sv-contact-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:480px) {
+  .sv-section { padding:3.5rem 1rem; }
+  .sv-mosaic-4 { grid-template-columns:1fr; }
+  .sv-mosaic-4 .sm1,.sv-mosaic-4 .sm2,.sv-mosaic-4 .sm3,.sv-mosaic-4 .sm4 { height:200px; }
+  .sv-btn { width:100%; }
+  .sv-contact-grid { grid-template-columns:1fr; }
+  .sv-contact .sv-contact-card { min-width:0; }
+  .sv-cards { grid-template-columns:1fr; }
+  .sv-schools-grid { grid-template-columns:1fr; }
+}
+
+/* Contact 3-col responsive */
+@media(max-width:700px) {
+  .sv-contact &gt; div &gt; div:last-child { grid-template-columns:1fr !important; }
+}
+</style>
+
+<div class="sv-wrap">
+
+<!-- ========== URGENCY ========== -->
+<div class="sv-urgency">
+  <span>PRÓXIMAS EXPERIENCIAS CON CUPOS LIMITADOS</span> · Reservá ahora
+</div>
+
+<!-- ========== HERO ========== -->
+<div class="sv-hero">
+  <div class="sv-eyebrow">Experiencias presenciales</div>
+  <h1>Aprendé italiano<br/><em>viviéndolo de verdad</em></h1>
+  <p>Cine, gastronomía, juegos y viajes. Cada experiencia está diseñada para que el idioma se te quede en el cuerpo.</p>
+</div>
+
+<!-- ========== OVERVIEW CARDS ========== -->
+<div class="sv-section" style="background:var(--ipp-white);">
+  <div class="sv-container" style="text-align:center;">
+    <div class="sv-label" style="color:var(--ipp-green);">Experiencias únicas</div>
+    <h2 style="font-family:var(--ipp-head);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--ipp-black);line-height:1.2;margin:0 0 .8rem;">El italiano también <em style="color:var(--ipp-red);">se come, se ve y se juega</em></h2>
+    <p style="color:#555;font-size:1rem;max-width:600px;margin:0 auto;line-height:1.7;">No son clases. Son noches que se quedan. Con película italiana, copa en mano, pasta recién hecha y el idioma saliendo solo.<br/><strong>Eventos presenciales en Comodoro Rivadavia, Patagonia Argentina.</strong></p>
+
+    <div class="sv-cards">
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/marialaura-gionfriddo-II3Vo7MJ9Z0-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Cine Debate<br/>en Italiano</h3>
+          <p>Venís, te sentás, escuchás, participás. Y cuando termina, ya hablás más de lo que pensabas.</p>
+          <span class="sv-card-price">5 de Junio · ~3 hs · Aperitivo incluido</span>
+          <div class="sv-card-btns">
+            <a href="#sv-cine" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar%20el%20Cine%20Debate" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/antonia-meier-i-fG9pCzhJs-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Aperigiochi</h3>
+          <p>Pictionary, Tabú y juegos de mesa en italiano — con aperitivo premium de por medio.</p>
+          <span class="sv-card-price">Verano 2027 · ~1.5 hs · Niveles A1 y avanzado</span>
+          <div class="sv-card-btns">
+            <a href="#sv-giochi" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20Aperigiochi" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/nicoletta-spinozzi-XzNjT642udI-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Sapori d'Italia</h3>
+          <p>Cocinamos salsas icónicas, desarmamos mitos y conversamos en italiano.</p>
+          <span class="sv-card-price">25 de Mayo · 4 hs · Ingredientes incluidos</span>
+          <div class="sv-card-btns">
+            <a href="#sv-sapori" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar%20Sapori%20d'Italia" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <p style="color:#666;font-size:.92rem;margin-bottom:1rem;">📅 Los cupos son limitados y se agotan rápido.</p>
+      <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-gold" target="_blank"><i class="ph ph-calendar-check"/> Ver fechas y reservar tu lugar →</a>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-amber"/>
+
+<!-- ========== TESTIMONIOS ========== -->
+<div class="sv-section" style="background:var(--ipp-cream);">
+  <div class="sv-container" style="max-width:860px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div style="display:inline-block;background:var(--ipp-white);color:var(--ipp-green);padding:.3rem .9rem;border-radius:2px;border-left:3px solid var(--ipp-green);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem;">Testimonios reales</div>
+      <h2 style="font-family:var(--ipp-head);font-size:clamp(1.6rem,2.8vw,2.2rem);color:var(--ipp-black);margin:.4rem 0 0;">Lo que dicen <em style="color:var(--ipp-green);">quienes ya lo vivieron</em></h2>
+      <p style="color:#555;font-size:.92rem;margin-top:.5rem;">Sin guión, sin edición. La experiencia en sus propias palabras.</p>
+    </div>
+    <div class="sv-testimonios">
+      <div class="sv-vid" data-vid="30NX-ziXYbw">
+        <img src="https://img.youtube.com/vi/30NX-ziXYbw/hqdefault.jpg" alt="Testimonio 1" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+      <div class="sv-vid" data-vid="YJCL4SfxxjU">
+        <img src="https://img.youtube.com/vi/YJCL4SfxxjU/hqdefault.jpg" alt="Testimonio 2" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+      <div class="sv-vid" data-vid="4AUP2tqaSFo">
+        <img src="https://img.youtube.com/vi/4AUP2tqaSFo/hqdefault.jpg" alt="Testimonio 3" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-red"/>
+
+<!-- ========== EXP 01: CINE DEBATE ========== -->
+<div class="sv-section" id="sv-cine" style="background:var(--ipp-cream);">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-red);">Experiencia 01</div>
+      <h2><em style="color:var(--ipp-green);">Cine Debate</em> en Italiano</h2>
+      <p>Aprendé sin darte cuenta. Venís, te sentás, escuchás, participás. Y cuando termina, ya hablás más de lo que pensabas. La mejor inversión en tu italiano.</p>
+    </div>
+    <div class="sv-pricing">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-green);">Próxima fecha: 5 de Junio · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-calendar-dots" style="color:var(--ipp-green);"/> 5 de Junio · 3 horas · todos los niveles</div>
+        <div class="sv-pricing-detail"><i class="ph ph-wine" style="color:var(--ipp-green);"/> Aperitivo y picada incluidos</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-green);"/> Máximo 15 participantes</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-red);">$45.000</div>
+        <div class="sv-price-sub">pesos argentinos · incluye picada y copa de vino</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-red);">Solo 15 cupos</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-red" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20el%20Cine%20Debate" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-red);color:var(--ipp-red);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/62298E6D-5C70-4CCA-9A32-68A5C23ED3C0.JPEG" alt="Cine debate italiano" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/78315850_1648707218625104_9028489845713928192_n.jpg" alt="Debate grupal" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/IMG_8897.JPG" alt="Aperitivo" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/cine_faltante.png" alt="Cine debate" loading="lazy"/><div class="sv-tile-badge"><div class="sv-tile-badge-num">2×</div><div class="sv-tile-badge-text">al año</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-green"/>
+
+<!-- ========== EXP 02: SAPORI ========== -->
+<div class="sv-section" id="sv-sapori" style="background:var(--ipp-teal);color:#fff;">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-cream);">Experiencia 02</div>
+      <h2 style="color:#fff;"><em style="color:var(--ipp-gold);">Sapori</em> d'Italia</h2>
+      <p style="color:rgba(255,255,255,.9);">No mirás. Participás. Carolina te guía por una cata de comida italiana auténtica. Cocinamos salsas icónicas, probamos, comentamos, aprendemos vocabulario real. Y te vas con las recetas y con el paladar italiano bien despierto.</p>
+    </div>
+    <div class="sv-pricing" style="color:var(--ipp-black);">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-amber);">Próxima edición: 25 de Mayo · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-calendar-dots" style="color:var(--ipp-amber);"/> 25 de Mayo · 4 horas · ingredientes incluidos</div>
+        <div class="sv-pricing-detail"><i class="ph ph-cooking-pot" style="color:var(--ipp-amber);"/> Cocinamos salsas icónicas y comemos juntos en italiano</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-amber);"/> Máximo 10 participantes · mesa íntima</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-amber);">$79.000</div>
+        <div class="sv-price-sub">pesos argentinos · todo incluido</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-amber);">Solo 10 cupos</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-gold" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20Sapori%20d'Italia" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-amber);color:var(--ipp-amber);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_1949.JPG" alt="Cata italiana" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_2032.JPG" alt="Degustación" loading="lazy" style="object-position:center 45%;"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_7539.JPG" alt="Cocina italiana" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_1961.JPG" alt="Ingredientes italianos" loading="lazy"/></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-amber"/>
+
+<!-- ========== EXP 03: APERIGIOCHI ========== -->
+<div class="sv-section" id="sv-giochi" style="background:var(--ipp-cream);">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-red);">Experiencia 03</div>
+      <h2>Aperi<em style="color:var(--ipp-green);">giochi</em> en Italiano</h2>
+      <p>Juegos de mesa en italiano. Risas. Competencia sana. Te olvidás que estás aprendiendo. Y cuando te dás cuenta, ya estás pensando en italiano y querés volver.</p>
+      <div class="sv-badge"><i class="ph ph-globe"/> Próximamente también online</div>
+    </div>
+    <div class="sv-pricing">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-red);">Próxima edición: Verano 2027 · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-hourglass-medium" style="color:var(--ipp-red);"/> 90 minutos · juegos de ingenio en italiano</div>
+        <div class="sv-pricing-detail"><i class="ph ph-martini" style="color:var(--ipp-red);"/> Aperitivo premium incluido · todos los niveles</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-red);"/> Grupos muy reducidos · máximo 15 participantes</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-red);">$65.000</div>
+        <div class="sv-price-sub">pesos argentinos</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-red);">Máximo 15 participantes</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-red" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20Aperigiochi" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-red);color:var(--ipp-red);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/42213378_1303937446435418_1986167962012221440_n.jpg" alt="Aperigiochi" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/505987492_3329461390549670_1192455747204861764_n.jpg" alt="Juegos en italiano" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/IMG_0414.JPG" alt="Aperitivo italiano" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/IMG_0416.JPEG" alt="Participantes" loading="lazy"/></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-teal"/>
+
+<!-- ========== EXP 04: VIAJES ========== -->
+<div class="sv-section" id="sv-viajes" style="background:var(--ipp-green);color:#fff;">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-gold);">Experiencia 04</div>
+      <h2 style="color:#fff;"><em style="color:var(--ipp-gold);">Viajes</em> a Italia</h2>
+      <p style="color:rgba(255,255,255,.85);">No es un tour, ¡es tu vida en italiano! Caminás por la historia y vivís el pulso real de Italia. Hablás con los locales en el mercado, aprendés los secretos de cada ciudad y además… ¡tenés clases de italiano todos los días!</p>
+    </div>
+    <div class="sv-pricing" style="color:var(--ipp-black);">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-teal);">Próxima salida grupal: 20 de Septiembre 2026 — Accademia Italiana · Salerno</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-graduation-cap" style="color:var(--ipp-teal);"/> Clases de italiano en destino · lunes a viernes</div>
+        <div class="sv-pricing-detail"><i class="ph ph-fork-knife" style="color:var(--ipp-teal);"/> Cocina, vino y cultura italiana en vivo</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-teal);"/> 15 cupos · salidas grupales con guía</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-teal);">Consultar</div>
+        <div class="sv-price-sub">precio según programa</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-teal);">15 cupos por edición</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-teal" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20el%20viaje%20a%20Italia%202026" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-teal);color:var(--ipp-teal);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/5f691064-bc0e-4330-97f0-de732105153f.JPEG" alt="Viaje a Italia" loading="lazy" style="object-position:center 35%;"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/viaje_faltante.png" alt="Grupo en Italia" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/503744225_3319065074922635_4413123522491839290_n.jpg" alt="Viajeros" loading="lazy" style="object-position:center 60%;"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/cine_faltante2.png" alt="Viajeros en Italia" loading="lazy"/></div>
+    </div>
+
+    <!-- Escuelas -->
+    <div class="sv-schools">
+      <h4>Escuelas con las que trabajamos</h4>
+      <div class="sv-schools-grid">
+        <div class="sv-school-card">
+          <img src="https://accademia-italiana.it/wp-content/uploads/2024/04/logo-accademia-semplice-01-Photoroom.png-Photoroom.svg" alt="Accademia Italiana" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Accademia Italiana</h5>
+          <p>Salerno · Florencia · Roma · Nápoles. Más de 40 años formando estudiantes de todo el mundo.</p>
+          <a href="https://accademia-italiana.it/" target="_blank">Conocer más →</a>
+        </div>
+        <div class="sv-school-card">
+          <img src="https://www.campusmagnolie.it/wp-content/uploads/2026/01/nuovo-header-sito-1.png" alt="Campus Magnolie" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Campus Magnolie</h5>
+          <p>Castelraimondo, Macerata. Una escuela única en el corazón de las Marcas.</p>
+          <a href="https://www.campusmagnolie.it/?lang=es" target="_blank">Conocer más →</a>
+        </div>
+        <div class="sv-school-card">
+          <img src="https://www.scuoladantealighieri.org/wp-content/uploads/2020/01/logo-dante.png" alt="Scuola Dante Alighieri" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Scuola Dante Alighieri</h5>
+          <p>Recanati, Marche. Institución centenaria dedicada a la difusión del italiano en el mundo.</p>
+          <a href="https://www.scuoladantealighieri.org/ar/arg/" target="_blank">Conocer más →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTACTO ========== -->
+<div class="sv-contact">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="sv-contact-head">
+      <h2>¿Hablamos?</h2>
+      <p>Reservá, consultá o seguinos — estamos acá y respondemos rápido.</p>
+    </div>
+
+    <!-- WhatsApp Hero -->
+    <div style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:2.5rem 2rem;text-align:center;margin-bottom:2rem;">
+      <div style="width:64px;height:64px;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:1.8rem;color:#fff;"><i class="ph ph-whatsapp-logo"/></div>
+      <h3 style="font-family:var(--ipp-head);font-size:1.4rem;color:#fff;margin:0 0 .4rem;">Escribile a Carolina</h3>
+      <p style="font-size:.95rem;color:rgba(255,255,255,.75);margin:0 0 .3rem;">Reserva rápida. Respuesta inmediata.</p>
+      <p style="font-size:1.15rem;font-weight:700;color:var(--ipp-gold);margin:0 0 1.5rem;">+54 9 2975 20-3210</p>
+      <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar" class="sv-contact-link" style="max-width:340px;margin:0 auto;font-size:.95rem;padding:.85rem 2rem;" target="_blank"><i class="ph ph-whatsapp-logo" style="font-size:1.1rem;"/>  Escribí ahora por WhatsApp →</a>
+    </div>
+
+    <!-- Grid 3 cols -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+
+      <!-- Email -->
+      <div class="sv-contact-card">
+        <div class="sv-contact-icon"><i class="ph ph-envelope-simple"/></div>
+        <h3>Email</h3>
+        <p>Escribinos cuando quieras.<br/><strong style="color:var(--ipp-gold);font-size:.85rem;">itaperpiacere@gmail.com</strong></p>
+        <a href="mailto:itaperpiacere@gmail.com" class="sv-contact-link">Enviar email →</a>
+      </div>
+
+      <!-- Redes -->
+      <div class="sv-contact-card">
+        <div style="display:flex;gap:.7rem;justify-content:center;margin-bottom:1rem;">
+          <div class="sv-contact-icon" style="margin-bottom:0;"><i class="ph ph-instagram-logo"/></div>
+          <div class="sv-contact-icon" style="margin-bottom:0;"><i class="ph ph-facebook-logo"/></div>
+        </div>
+        <h3>Seguinos</h3>
+        <p>Fotos de eventos, novedades y la comunidad italiana.</p>
+        <div style="display:flex;gap:.6rem;width:100%;margin-top:auto;">
+          <a href="https://www.instagram.com/italiano_per_piacere/" class="sv-contact-link" style="flex:1;" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/italianort" class="sv-contact-link" style="flex:1;" target="_blank">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Fechas -->
+      <div class="sv-contact-card">
+        <div class="sv-contact-icon"><i class="ph ph-calendar-check"/></div>
+        <h3>Próximas fechas</h3>
+        <ul class="sv-dates">
+          <li><span class="sv-dates-dot"/><div><strong>Cine Debate</strong> <span>— 5 Jun</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Sapori d'Italia</strong> <span>— 25 May</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Aperigiochi</strong> <span>— Verano '27</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Viaje a Italia</strong> <span>— Sep '26</span></div></li>
+        </ul>
+        <a href="#sv-cine" class="sv-contact-link">Ver todos →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== CTA FINAL ========== -->
+<div style="background:var(--ipp-red);color:#fff;padding:4.5rem 2rem;text-align:center;">
+  <h2 style="font-family:var(--ipp-head);font-size:clamp(1.7rem,4vw,2.8rem);font-weight:900;margin:0 0 1rem;line-height:1.2;">La próxima vez que escuches italiano…<br/><em style="color:var(--ipp-gold);">¿vas a entenderlo o te vas a quedar mirando?</em></h2>
+  <p style="font-size:1rem;opacity:.85;margin:0 0 2rem;font-weight:300;">Reservá tu lugar ahora. Cupos limitados.</p>
+  <a href="https://wa.me/5492975203210?text=Quiero%20reservar%20mi%20lugar%20AHORA" class="sv-btn sv-btn-gold" style="font-size:1rem;padding:1rem 2.5rem;"><i class="ph ph-whatsapp-logo"/> Reservar ahora por WhatsApp →</a>
+</div>
+
+<!-- ========== LIGHTBOX IMÁGENES ========== -->
+<div class="sv-lb" id="sv-lightbox" onclick="this.classList.remove('active');">
+  <button class="sv-lb-close" onclick="document.getElementById('sv-lightbox').classList.remove('active');">✕</button>
+  <img id="sv-lb-img" src="" alt="Vista ampliada" onclick="event.stopPropagation();"/>
+</div>
+
+<!-- ========== VIDEO MODAL ========== -->
+<div class="sv-vlb" id="sv-video-lb" onclick="this.classList.remove('active');document.getElementById('sv-vframe').src='';">
+  <button class="sv-lb-close" onclick="document.getElementById('sv-video-lb').classList.remove('active');document.getElementById('sv-vframe').src='';">✕</button>
+  <iframe id="sv-vframe" src="" width="360" height="640" style="border:none;border-radius:12px;max-width:90vw;max-height:80vh;" allow="autoplay;fullscreen" allowfullscreen="" onclick="event.stopPropagation();"/>
+</div>
+
+</div><!-- /sv-wrap -->
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+// Lightbox para imágenes del mosaic
+document.querySelectorAll('.sv-tile').forEach(function(tile){
+  tile.addEventListener('click', function(){
+    var img = this.querySelector('img');
+    if(img){
+      document.getElementById('sv-lb-img').src = img.src;
+      document.getElementById('sv-lightbox').classList.add('active');
+    }
+  });
+});
+// Video modal
+document.querySelectorAll('.sv-vid').forEach(function(v){
+  v.addEventListener('click', function(){
+    document.getElementById('sv-vframe').src = 'https://www.youtube.com/embed/' + this.getAttribute('data-vid') + '?autoplay=1&amp;rel=0';
+    document.getElementById('sv-video-lb').classList.add('active');
+  });
+});
+// Smooth scroll
+document.querySelectorAll('.sv-wrap a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script></template>
+        <div class="s_embed_code_embedded o_not_editable container"><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+/* === VARIABLES === */
+.sv-wrap {
+  --ipp-cream:#e9e6d5; --ipp-gold:#EFCF7F; --ipp-amber:#e5ab07; --ipp-red:#cc4736;
+  --ipp-teal:#78a6ba; --ipp-green:#528e74; --ipp-black:#1a1a18; --ipp-white:#ffffff;
+  --ipp-head:'Playfair Display',Georgia,serif; --ipp-body:'Outfit',system-ui,sans-serif;
+  font-family: var(--ipp-body); color: var(--ipp-black); line-height:1.65;
+}
+.sv-wrap *, .sv-wrap *::before, .sv-wrap *::after { box-sizing:border-box; }
+.sv-wrap img { max-width:100%; height:auto; }
+
+/* === HERO === */
+.sv-hero { background:var(--ipp-green); padding:4.5rem 2rem; text-align:center; position:relative; overflow:hidden; border-radius:0; }
+.sv-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.sv-hero &gt; * { position:relative; z-index:1; }
+.sv-eyebrow { display:inline-block; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ipp-gold); font-weight:700; background:rgba(239,207,127,.12); padding:.5rem 1.2rem; border-radius:4px; margin-bottom:1.2rem; }
+.sv-hero h1 { font-family:var(--ipp-head); font-size:clamp(2rem,5vw,3.2rem); font-weight:900; line-height:1.1; color:var(--ipp-white); margin:0 0 1rem; }
+.sv-hero h1 em { color:var(--ipp-gold); font-style:italic; }
+.sv-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+
+/* === URGENCY === */
+.sv-urgency { background:var(--ipp-red); color:#fff; padding:.9rem 2rem; text-align:center; font-weight:700; font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
+.sv-urgency span { color:var(--ipp-gold); }
+
+/* === SECTIONS === */
+.sv-section { padding:5rem 1.5rem; }
+.sv-container { max-width:1040px; margin:0 auto; }
+.sv-label { display:inline-block; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:1rem; }
+.sv-section-head { margin-bottom:3rem; }
+.sv-section-head h2 { font-family:var(--ipp-head); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; line-height:1.12; margin:0 0 1rem; letter-spacing:-.01em; }
+.sv-section-head p { font-size:1rem; font-weight:300; max-width:640px; line-height:1.8; color:#555; }
+
+/* === OVERVIEW CARDS === */
+.sv-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.8rem; margin-top:3rem; }
+.sv-card { position:relative; border-radius:16px; overflow:hidden; min-height:400px; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .3s,box-shadow .3s; }
+.sv-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(0,0,0,.2); }
+.sv-card-bg { position:absolute; inset:0; background-size:cover; background-position:center; transition:transform .4s; }
+.sv-card:hover .sv-card-bg { transform:scale(1.04); }
+.sv-card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,26,24,.88) 0%,rgba(26,26,24,.2) 55%,transparent 100%); }
+.sv-card-info { position:relative; z-index:2; padding:2rem 1.5rem; }
+.sv-card-info h3 { font-family:var(--ipp-head); font-size:1.45rem; font-weight:900; color:#fff; margin:0 0 .5rem; line-height:1.15; }
+.sv-card-info p { font-size:.86rem; color:rgba(255,255,255,.8); margin:0 0 .7rem; line-height:1.55; }
+.sv-card-price { font-size:.76rem; font-weight:700; color:var(--ipp-gold); letter-spacing:.04em; margin-bottom:1rem; display:block; }
+.sv-card-btns { display:flex; gap:.6rem; flex-wrap:wrap; }
+.sv-card-btn { display:inline-flex; align-items:center; gap:.4rem; background:var(--ipp-amber); color:var(--ipp-black); padding:.55rem 1.2rem; border-radius:4px; font-weight:700; font-size:.8rem; text-decoration:none; transition:background .2s,transform .2s; }
+.sv-card-btn:hover { background:var(--ipp-gold); transform:scale(1.03); }
+.sv-card-btn-ghost { background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.35); }
+.sv-card-btn-ghost:hover { background:rgba(255,255,255,.28); }
+
+/* === PRICING BLOCK === */
+.sv-pricing { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; padding:2.5rem; border-radius:10px; background:var(--ipp-white); box-shadow:0 2px 20px rgba(0,0,0,.07); margin-bottom:3rem; }
+.sv-pricing-left h3 { font-family:var(--ipp-head); font-size:1.2rem; margin:0 0 1.4rem; line-height:1.35; }
+.sv-pricing-detail { display:flex; align-items:flex-start; gap:.8rem; margin:.75rem 0; font-size:.92rem; line-height:1.6; }
+.sv-pricing-detail i { font-size:1.15rem; flex-shrink:0; margin-top:2px; }
+.sv-pricing-right { display:flex; flex-direction:column; justify-content:center; text-align:right; }
+.sv-price-big { font-family:var(--ipp-head); font-size:2.5rem; font-weight:900; line-height:1; }
+.sv-price-sub { font-size:.76rem; margin-top:.4rem; opacity:.6; font-style:italic; }
+.sv-price-cupos { font-size:.84rem; margin-top:.6rem; font-weight:700; }
+
+/* === BUTTONS === */
+.sv-btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 2rem; border-radius:4px; font-family:var(--ipp-body); font-size:.88rem; font-weight:700; text-decoration:none; border:none; cursor:pointer; transition:transform .2s,box-shadow .2s; min-height:48px; }
+.sv-btn:hover { transform:scale(1.03); box-shadow:0 8px 24px rgba(0,0,0,.12); }
+.sv-btn-red { background:var(--ipp-red); color:#fff; }
+.sv-btn-gold { background:var(--ipp-amber); color:var(--ipp-black); }
+.sv-btn-teal { background:var(--ipp-teal); color:#fff; }
+.sv-btn-outline { background:transparent; border:2px solid; }
+
+/* === MOSAIC === */
+.sv-mosaic { display:grid; gap:12px; margin-bottom:1rem; }
+.sv-mosaic-4 { grid-template-columns:1fr 1.2fr 1fr; grid-template-rows:280px 200px; }
+.sv-mosaic-4 .sm1 { grid-column:1/2; grid-row:1/3; }
+.sv-mosaic-4 .sm2 { grid-column:2/4; grid-row:1/2; }
+.sv-mosaic-4 .sm3 { grid-column:2/3; grid-row:2/3; }
+.sv-mosaic-4 .sm4 { grid-column:3/4; grid-row:2/3; }
+.sv-tile { position:relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+.sv-tile img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; transition:transform .4s; }
+.sv-tile:hover img { transform:scale(1.06); }
+.sv-tile::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0); transition:background .3s; }
+.sv-tile:hover::after { background:rgba(0,0,0,.15); }
+.sv-tile-badge { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(26,26,24,.45); }
+.sv-tile-badge-num { font-family:var(--ipp-head); font-size:2.8rem; font-weight:900; color:#fff; line-height:1; }
+.sv-tile-badge-text { font-size:.78rem; font-weight:700; text-transform:uppercase; color:#fff; margin-top:.3rem; }
+
+/* === SCHOOLS === */
+.sv-schools { margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid rgba(255,255,255,.15); }
+.sv-schools h4 { font-family:var(--ipp-head); font-style:italic; font-size:1.35rem; margin:0 0 1.8rem; color:var(--ipp-gold); text-align:center; }
+.sv-schools-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.sv-school-card { background:var(--ipp-cream); border-radius:14px; padding:1.8rem 1.5rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:.8rem; transition:transform .2s; }
+.sv-school-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.2); }
+.sv-school-card img { max-height:56px; max-width:160px; object-fit:contain; }
+.sv-school-card h5 { font-family:var(--ipp-head); font-style:italic; font-size:1.05rem; color:var(--ipp-black); font-weight:700; margin:0; }
+.sv-school-card p { font-size:.8rem; color:#555; line-height:1.5; flex:1; margin:0; }
+.sv-school-card a { display:inline-block; padding:.5rem 1.2rem; background:var(--ipp-teal); color:#fff; border-radius:99px; font-size:.78rem; font-weight:700; text-decoration:none; transition:background .2s; }
+.sv-school-card a:hover { background:#5a8ea0; }
+
+/* === ONLINE BADGE === */
+.sv-badge { display:inline-flex; align-items:center; gap:.5rem; background:var(--ipp-amber); color:var(--ipp-black); padding:.4rem 1rem; border-radius:99px; font-size:.74rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; margin-top:1rem; }
+
+/* === CONTACT === */
+.sv-contact { background:var(--ipp-green); color:#fff; padding:5rem 1.5rem; }
+.sv-contact-head { text-align:center; margin-bottom:3.5rem; }
+.sv-contact-head h2 { font-family:var(--ipp-head); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; margin:0 0 .6rem; }
+.sv-contact-head p { font-size:1rem; opacity:.85; font-weight:300; }
+.sv-contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.5rem; max-width:1040px; margin:0 auto; }
+.sv-contact-card { background:rgba(255,255,255,.12); padding:2rem 1.5rem; border-radius:8px; border:1px solid rgba(255,255,255,.2); text-align:center; display:flex; flex-direction:column; align-items:center; transition:transform .2s,background .2s; }
+.sv-contact-card:hover { transform:translateY(-4px); background:rgba(255,255,255,.2); }
+.sv-contact-icon { width:52px; height:52px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.18); border:1.5px solid rgba(255,255,255,.3); border-radius:50%; margin-bottom:1rem; font-size:1.4rem; color:#fff; }
+.sv-contact-card h3 { font-family:var(--ipp-head); font-size:1.05rem; margin:0 0 .5rem; color:#fff; }
+.sv-contact-card p { font-size:.85rem; opacity:.75; line-height:1.5; flex:1; margin:0 0 1.2rem; }
+.sv-contact-link { display:inline-flex; align-items:center; justify-content:center; background:var(--ipp-amber); color:var(--ipp-black); padding:.7rem 1.4rem; border-radius:4px; text-decoration:none; font-weight:700; font-size:.82rem; width:100%; margin-top:auto; min-height:42px; transition:background .2s; }
+.sv-contact-link:hover { background:var(--ipp-gold); }
+
+/* === DATES LIST === */
+.sv-dates { list-style:none; padding:0; margin:0 0 1.2rem; text-align:left; width:100%; font-size:.8rem; }
+.sv-dates li { display:flex; align-items:baseline; gap:.45rem; padding:.4rem 0; border-bottom:1px solid rgba(255,255,255,.1); }
+.sv-dates li:last-child { border-bottom:none; }
+.sv-dates-dot { width:7px; height:7px; border-radius:50%; background:var(--ipp-gold); flex-shrink:0; margin-top:3px; }
+.sv-dates strong { color:var(--ipp-gold); font-weight:700; }
+.sv-dates span { color:rgba(255,255,255,.7); }
+
+/* === TESTIMONIOS === */
+.sv-testimonios { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.sv-vid { position:relative; border-radius:14px; overflow:hidden; aspect-ratio:9/12; background:#e0ddd0; box-shadow:0 6px 24px rgba(0,0,0,.12); cursor:pointer; transition:transform .3s,box-shadow .3s; }
+.sv-vid:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.18); }
+.sv-vid img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+.sv-vid-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 50%); }
+.sv-vid-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.sv-vid-btn { width:52px; height:52px; background:rgba(255,255,255,.92); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 14px rgba(0,0,0,.2); transition:transform .2s; }
+.sv-vid:hover .sv-vid-btn { transform:scale(1.1); }
+
+@media(max-width:600px) {
+  .sv-testimonios { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:8px; }
+  .sv-vid { flex:0 0 70vw; scroll-snap-align:center; aspect-ratio:9/14; }
+  .sv-testimonios::-webkit-scrollbar { height:4px; }
+  .sv-testimonios::-webkit-scrollbar-thumb { background:rgba(0,0,0,.15); border-radius:4px; }
+}
+
+/* === DIVIDERS === */
+.sv-div { height:3px; }
+.sv-div-amber { background:var(--ipp-amber); }
+.sv-div-green { background:var(--ipp-green); }
+.sv-div-teal { background:var(--ipp-teal); }
+.sv-div-red { background:var(--ipp-red); }
+
+/* === LIGHTBOX === */
+.sv-lb { display:none; position:fixed; inset:0; background:rgba(26,26,24,.92); z-index:99999; align-items:center; justify-content:center; cursor:pointer; }
+.sv-lb.active { display:flex; }
+.sv-lb img { max-width:90vw; max-height:85vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,.5); cursor:default; }
+.sv-lb-close { position:absolute; top:1.2rem; right:1.5rem; background:var(--ipp-red); color:#fff; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100000; font-family:var(--ipp-body); }
+
+/* === VIDEO MODAL === */
+.sv-vlb { display:none; position:fixed; inset:0; background:rgba(233,230,213,.97); z-index:99999; align-items:center; justify-content:center; flex-direction:column; }
+.sv-vlb.active { display:flex; }
+
+/* === RESPONSIVE === */
+@media(max-width:768px) {
+  .sv-pricing { grid-template-columns:1fr; padding:1.5rem; }
+  .sv-pricing-right { text-align:left; margin-top:.5rem; }
+  .sv-price-big { font-size:2rem; }
+  .sv-mosaic-4 { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+  .sv-mosaic-4 .sm1,.sv-mosaic-4 .sm2,.sv-mosaic-4 .sm3,.sv-mosaic-4 .sm4 { grid-column:auto; grid-row:auto; height:200px; }
+  .sv-contact-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:480px) {
+  .sv-section { padding:3.5rem 1rem; }
+  .sv-mosaic-4 { grid-template-columns:1fr; }
+  .sv-mosaic-4 .sm1,.sv-mosaic-4 .sm2,.sv-mosaic-4 .sm3,.sv-mosaic-4 .sm4 { height:200px; }
+  .sv-btn { width:100%; }
+  .sv-contact-grid { grid-template-columns:1fr; }
+  .sv-contact .sv-contact-card { min-width:0; }
+  .sv-cards { grid-template-columns:1fr; }
+  .sv-schools-grid { grid-template-columns:1fr; }
+}
+
+/* Contact 3-col responsive */
+@media(max-width:700px) {
+  .sv-contact &gt; div &gt; div:last-child { grid-template-columns:1fr !important; }
+}
+</style><div class="sv-wrap">
+
+<!-- ========== URGENCY ========== -->
+<div class="sv-urgency">
+  <span>PRÓXIMAS EXPERIENCIAS CON CUPOS LIMITADOS</span> · Reservá ahora
+</div>
+
+<!-- ========== HERO ========== -->
+<div class="sv-hero">
+  <div class="sv-eyebrow">Experiencias presenciales</div>
+  <h1>Aprendé italiano<br/><em>viviéndolo de verdad</em></h1>
+  <p>Cine, gastronomía, juegos y viajes. Cada experiencia está diseñada para que el idioma se te quede en el cuerpo.</p>
+</div>
+
+<!-- ========== OVERVIEW CARDS ========== -->
+<div class="sv-section" style="background:var(--ipp-white);">
+  <div class="sv-container" style="text-align:center;">
+    <div class="sv-label" style="color:var(--ipp-green);">Experiencias únicas</div>
+    <h2 style="font-family:var(--ipp-head);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--ipp-black);line-height:1.2;margin:0 0 .8rem;">El italiano también <em style="color:var(--ipp-red);">se come, se ve y se juega</em></h2>
+    <p style="color:#555;font-size:1rem;max-width:600px;margin:0 auto;line-height:1.7;">No son clases. Son noches que se quedan. Con película italiana, copa en mano, pasta recién hecha y el idioma saliendo solo.<br/><strong>Eventos presenciales en Comodoro Rivadavia, Patagonia Argentina.</strong></p>
+
+    <div class="sv-cards">
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/marialaura-gionfriddo-II3Vo7MJ9Z0-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Cine Debate<br/>en Italiano</h3>
+          <p>Venís, te sentás, escuchás, participás. Y cuando termina, ya hablás más de lo que pensabas.</p>
+          <span class="sv-card-price">5 de Junio · ~3 hs · Aperitivo incluido</span>
+          <div class="sv-card-btns">
+            <a href="#sv-cine" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar%20el%20Cine%20Debate" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/antonia-meier-i-fG9pCzhJs-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Aperigiochi</h3>
+          <p>Pictionary, Tabú y juegos de mesa en italiano — con aperitivo premium de por medio.</p>
+          <span class="sv-card-price">Verano 2027 · ~1.5 hs · Niveles A1 y avanzado</span>
+          <div class="sv-card-btns">
+            <a href="#sv-giochi" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20info%20sobre%20Aperigiochi" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sv-card">
+        <div class="sv-card-bg" style="background-image:url('https://wsrv.nl/?url=raw.githubusercontent.com/estebansergio618/italianoperpiacere/main/nicoletta-spinozzi-XzNjT642udI-unsplash.jpg&amp;w=800&amp;q=80&amp;output=webp')"/>
+        <div class="sv-card-overlay"/>
+        <div class="sv-card-info">
+          <h3>Sapori d'Italia</h3>
+          <p>Cocinamos salsas icónicas, desarmamos mitos y conversamos en italiano.</p>
+          <span class="sv-card-price">25 de Mayo · 4 hs · Ingredientes incluidos</span>
+          <div class="sv-card-btns">
+            <a href="#sv-sapori" class="sv-card-btn">Ver detalle →</a>
+            <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar%20Sapori%20d'Italia" class="sv-card-btn sv-card-btn-ghost" target="_blank">Reservar →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <p style="color:#666;font-size:.92rem;margin-bottom:1rem;">📅 Los cupos son limitados y se agotan rápido.</p>
+      <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-gold" target="_blank"><i class="ph ph-calendar-check"/> Ver fechas y reservar tu lugar →</a>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-amber"/>
+
+<!-- ========== TESTIMONIOS ========== -->
+<div class="sv-section" style="background:var(--ipp-cream);">
+  <div class="sv-container" style="max-width:860px;">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div style="display:inline-block;background:var(--ipp-white);color:var(--ipp-green);padding:.3rem .9rem;border-radius:2px;border-left:3px solid var(--ipp-green);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem;">Testimonios reales</div>
+      <h2 style="font-family:var(--ipp-head);font-size:clamp(1.6rem,2.8vw,2.2rem);color:var(--ipp-black);margin:.4rem 0 0;">Lo que dicen <em style="color:var(--ipp-green);">quienes ya lo vivieron</em></h2>
+      <p style="color:#555;font-size:.92rem;margin-top:.5rem;">Sin guión, sin edición. La experiencia en sus propias palabras.</p>
+    </div>
+    <div class="sv-testimonios">
+      <div class="sv-vid" data-vid="30NX-ziXYbw">
+        <img src="https://img.youtube.com/vi/30NX-ziXYbw/hqdefault.jpg" alt="Testimonio 1" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+      <div class="sv-vid" data-vid="YJCL4SfxxjU">
+        <img src="https://img.youtube.com/vi/YJCL4SfxxjU/hqdefault.jpg" alt="Testimonio 2" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+      <div class="sv-vid" data-vid="4AUP2tqaSFo">
+        <img src="https://img.youtube.com/vi/4AUP2tqaSFo/hqdefault.jpg" alt="Testimonio 3" loading="lazy"/>
+        <div class="sv-vid-overlay"/>
+        <div class="sv-vid-play"><div class="sv-vid-btn"><i class="ph-bold ph-play" style="font-size:18px;color:var(--ipp-red);margin-left:2px;"/></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-red"/>
+
+<!-- ========== EXP 01: CINE DEBATE ========== -->
+<div class="sv-section" id="sv-cine" style="background:var(--ipp-cream);">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-red);">Experiencia 01</div>
+      <h2><em style="color:var(--ipp-green);">Cine Debate</em> en Italiano</h2>
+      <p>Aprendé sin darte cuenta. Venís, te sentás, escuchás, participás. Y cuando termina, ya hablás más de lo que pensabas. La mejor inversión en tu italiano.</p>
+    </div>
+    <div class="sv-pricing">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-green);">Próxima fecha: 5 de Junio · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-calendar-dots" style="color:var(--ipp-green);"/> 5 de Junio · 3 horas · todos los niveles</div>
+        <div class="sv-pricing-detail"><i class="ph ph-wine" style="color:var(--ipp-green);"/> Aperitivo y picada incluidos</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-green);"/> Máximo 15 participantes</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-red);">$45.000</div>
+        <div class="sv-price-sub">pesos argentinos · incluye picada y copa de vino</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-red);">Solo 15 cupos</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-red" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20el%20Cine%20Debate" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-red);color:var(--ipp-red);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/62298E6D-5C70-4CCA-9A32-68A5C23ED3C0.JPEG" alt="Cine debate italiano" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/78315850_1648707218625104_9028489845713928192_n.jpg" alt="Debate grupal" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Cine%20debate/IMG_8897.JPG" alt="Aperitivo" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/cine_faltante.png" alt="Cine debate" loading="lazy"/><div class="sv-tile-badge"><div class="sv-tile-badge-num">2×</div><div class="sv-tile-badge-text">al año</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-green"/>
+
+<!-- ========== EXP 02: SAPORI ========== -->
+<div class="sv-section" id="sv-sapori" style="background:var(--ipp-teal);color:#fff;">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-cream);">Experiencia 02</div>
+      <h2 style="color:#fff;"><em style="color:var(--ipp-gold);">Sapori</em> d'Italia</h2>
+      <p style="color:rgba(255,255,255,.9);">No mirás. Participás. Carolina te guía por una cata de comida italiana auténtica. Cocinamos salsas icónicas, probamos, comentamos, aprendemos vocabulario real. Y te vas con las recetas y con el paladar italiano bien despierto.</p>
+    </div>
+    <div class="sv-pricing" style="color:var(--ipp-black);">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-amber);">Próxima edición: 25 de Mayo · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-calendar-dots" style="color:var(--ipp-amber);"/> 25 de Mayo · 4 horas · ingredientes incluidos</div>
+        <div class="sv-pricing-detail"><i class="ph ph-cooking-pot" style="color:var(--ipp-amber);"/> Cocinamos salsas icónicas y comemos juntos en italiano</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-amber);"/> Máximo 10 participantes · mesa íntima</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-amber);">$79.000</div>
+        <div class="sv-price-sub">pesos argentinos · todo incluido</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-amber);">Solo 10 cupos</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-gold" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20Sapori%20d'Italia" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-amber);color:var(--ipp-amber);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_1949.JPG" alt="Cata italiana" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_2032.JPG" alt="Degustación" loading="lazy" style="object-position:center 45%;"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_7539.JPG" alt="Cocina italiana" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Sapori%20di%20italia/IMG_1961.JPG" alt="Ingredientes italianos" loading="lazy"/></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-amber"/>
+
+<!-- ========== EXP 03: APERIGIOCHI ========== -->
+<div class="sv-section" id="sv-giochi" style="background:var(--ipp-cream);">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-red);">Experiencia 03</div>
+      <h2>Aperi<em style="color:var(--ipp-green);">giochi</em> en Italiano</h2>
+      <p>Juegos de mesa en italiano. Risas. Competencia sana. Te olvidás que estás aprendiendo. Y cuando te dás cuenta, ya estás pensando en italiano y querés volver.</p>
+      <div class="sv-badge"><i class="ph ph-globe"/> Próximamente también online</div>
+    </div>
+    <div class="sv-pricing">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-red);">Próxima edición: Verano 2027 · Lugar a confirmar</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-hourglass-medium" style="color:var(--ipp-red);"/> 90 minutos · juegos de ingenio en italiano</div>
+        <div class="sv-pricing-detail"><i class="ph ph-martini" style="color:var(--ipp-red);"/> Aperitivo premium incluido · todos los niveles</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-red);"/> Grupos muy reducidos · máximo 15 participantes</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-red);">$65.000</div>
+        <div class="sv-price-sub">pesos argentinos</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-red);">Máximo 15 participantes</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-red" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20Aperigiochi" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-red);color:var(--ipp-red);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/42213378_1303937446435418_1986167962012221440_n.jpg" alt="Aperigiochi" loading="lazy"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/505987492_3329461390549670_1192455747204861764_n.jpg" alt="Juegos en italiano" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/IMG_0414.JPG" alt="Aperitivo italiano" loading="lazy"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Clases/IMG_0416.JPEG" alt="Participantes" loading="lazy"/></div>
+    </div>
+  </div>
+</div>
+
+<div class="sv-div sv-div-teal"/>
+
+<!-- ========== EXP 04: VIAJES ========== -->
+<div class="sv-section" id="sv-viajes" style="background:var(--ipp-green);color:#fff;">
+  <div class="sv-container">
+    <div class="sv-section-head">
+      <div class="sv-label" style="color:var(--ipp-gold);">Experiencia 04</div>
+      <h2 style="color:#fff;"><em style="color:var(--ipp-gold);">Viajes</em> a Italia</h2>
+      <p style="color:rgba(255,255,255,.85);">No es un tour, ¡es tu vida en italiano! Caminás por la historia y vivís el pulso real de Italia. Hablás con los locales en el mercado, aprendés los secretos de cada ciudad y además… ¡tenés clases de italiano todos los días!</p>
+    </div>
+    <div class="sv-pricing" style="color:var(--ipp-black);">
+      <div class="sv-pricing-left">
+        <h3 style="color:var(--ipp-teal);">Próxima salida grupal: 20 de Septiembre 2026 — Accademia Italiana · Salerno</h3>
+        <div class="sv-pricing-detail"><i class="ph ph-graduation-cap" style="color:var(--ipp-teal);"/> Clases de italiano en destino · lunes a viernes</div>
+        <div class="sv-pricing-detail"><i class="ph ph-fork-knife" style="color:var(--ipp-teal);"/> Cocina, vino y cultura italiana en vivo</div>
+        <div class="sv-pricing-detail"><i class="ph ph-users" style="color:var(--ipp-teal);"/> 15 cupos · salidas grupales con guía</div>
+      </div>
+      <div class="sv-pricing-right">
+        <div class="sv-price-big" style="color:var(--ipp-teal);">Consultar</div>
+        <div class="sv-price-sub">precio según programa</div>
+        <div class="sv-price-cupos" style="color:var(--ipp-teal);">15 cupos por edición</div>
+        <a href="https://italianoperpiacere.com/events" class="sv-btn sv-btn-teal" style="margin-top:1.2rem;width:100%;" target="_blank">Ver fechas y reservar →</a>
+        <a href="https://wa.me/5492975203210?text=Quiero%20consultar%20sobre%20el%20viaje%20a%20Italia%202026" class="sv-btn sv-btn-outline" style="margin-top:.5rem;width:100%;border-color:var(--ipp-teal);color:var(--ipp-teal);" target="_blank"><i class="ph ph-whatsapp-logo"/> Consultas por WhatsApp</a>
+      </div>
+    </div>
+    <div class="sv-mosaic sv-mosaic-4">
+      <div class="sv-tile sm1"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/5f691064-bc0e-4330-97f0-de732105153f.JPEG" alt="Viaje a Italia" loading="lazy" style="object-position:center 35%;"/></div>
+      <div class="sv-tile sm2"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/viaje_faltante.png" alt="Grupo en Italia" loading="lazy"/></div>
+      <div class="sv-tile sm3"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/Viajes%20a%20ITALIA/503744225_3319065074922635_4413123522491839290_n.jpg" alt="Viajeros" loading="lazy" style="object-position:center 60%;"/></div>
+      <div class="sv-tile sm4"><img src="https://raw.githubusercontent.com/renzo-felix/italianoperpiacere/main/cine_faltante2.png" alt="Viajeros en Italia" loading="lazy"/></div>
+    </div>
+
+    <!-- Escuelas -->
+    <div class="sv-schools">
+      <h4>Escuelas con las que trabajamos</h4>
+      <div class="sv-schools-grid">
+        <div class="sv-school-card">
+          <img src="https://accademia-italiana.it/wp-content/uploads/2024/04/logo-accademia-semplice-01-Photoroom.png-Photoroom.svg" alt="Accademia Italiana" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Accademia Italiana</h5>
+          <p>Salerno · Florencia · Roma · Nápoles. Más de 40 años formando estudiantes de todo el mundo.</p>
+          <a href="https://accademia-italiana.it/" target="_blank">Conocer más →</a>
+        </div>
+        <div class="sv-school-card">
+          <img src="https://www.campusmagnolie.it/wp-content/uploads/2026/01/nuovo-header-sito-1.png" alt="Campus Magnolie" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Campus Magnolie</h5>
+          <p>Castelraimondo, Macerata. Una escuela única en el corazón de las Marcas.</p>
+          <a href="https://www.campusmagnolie.it/?lang=es" target="_blank">Conocer más →</a>
+        </div>
+        <div class="sv-school-card">
+          <img src="https://www.scuoladantealighieri.org/wp-content/uploads/2020/01/logo-dante.png" alt="Scuola Dante Alighieri" onerror="this.style.display='none'" loading="lazy"/>
+          <h5>Scuola Dante Alighieri</h5>
+          <p>Recanati, Marche. Institución centenaria dedicada a la difusión del italiano en el mundo.</p>
+          <a href="https://www.scuoladantealighieri.org/ar/arg/" target="_blank">Conocer más →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTACTO ========== -->
+<div class="sv-contact">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="sv-contact-head">
+      <h2>¿Hablamos?</h2>
+      <p>Reservá, consultá o seguinos — estamos acá y respondemos rápido.</p>
+    </div>
+
+    <!-- WhatsApp Hero -->
+    <div style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:2.5rem 2rem;text-align:center;margin-bottom:2rem;">
+      <div style="width:64px;height:64px;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:1.8rem;color:#fff;"><i class="ph ph-whatsapp-logo"/></div>
+      <h3 style="font-family:var(--ipp-head);font-size:1.4rem;color:#fff;margin:0 0 .4rem;">Escribile a Carolina</h3>
+      <p style="font-size:.95rem;color:rgba(255,255,255,.75);margin:0 0 .3rem;">Reserva rápida. Respuesta inmediata.</p>
+      <p style="font-size:1.15rem;font-weight:700;color:var(--ipp-gold);margin:0 0 1.5rem;">+54 9 2975 20-3210</p>
+      <a href="https://wa.me/5492975203210?text=Hola%20Carolina%2C%20quiero%20reservar" class="sv-contact-link" style="max-width:340px;margin:0 auto;font-size:.95rem;padding:.85rem 2rem;" target="_blank"><i class="ph ph-whatsapp-logo" style="font-size:1.1rem;"/>&amp;nbsp; Escribí ahora por WhatsApp →</a>
+    </div>
+
+    <!-- Grid 3 cols -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+
+      <!-- Email -->
+      <div class="sv-contact-card">
+        <div class="sv-contact-icon"><i class="ph ph-envelope-simple"/></div>
+        <h3>Email</h3>
+        <p>Escribinos cuando quieras.<br/><strong style="color:var(--ipp-gold);font-size:.85rem;">itaperpiacere@gmail.com</strong></p>
+        <a href="mailto:itaperpiacere@gmail.com" class="sv-contact-link">Enviar email →</a>
+      </div>
+
+      <!-- Redes -->
+      <div class="sv-contact-card">
+        <div style="display:flex;gap:.7rem;justify-content:center;margin-bottom:1rem;">
+          <div class="sv-contact-icon" style="margin-bottom:0;"><i class="ph ph-instagram-logo"/></div>
+          <div class="sv-contact-icon" style="margin-bottom:0;"><i class="ph ph-facebook-logo"/></div>
+        </div>
+        <h3>Seguinos</h3>
+        <p>Fotos de eventos, novedades y la comunidad italiana.</p>
+        <div style="display:flex;gap:.6rem;width:100%;margin-top:auto;">
+          <a href="https://www.instagram.com/italiano_per_piacere/" class="sv-contact-link" style="flex:1;" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/italianort" class="sv-contact-link" style="flex:1;" target="_blank">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Fechas -->
+      <div class="sv-contact-card">
+        <div class="sv-contact-icon"><i class="ph ph-calendar-check"/></div>
+        <h3>Próximas fechas</h3>
+        <ul class="sv-dates">
+          <li><span class="sv-dates-dot"/><div><strong>Cine Debate</strong> <span>— 5 Jun</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Sapori d'Italia</strong> <span>— 25 May</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Aperigiochi</strong> <span>— Verano '27</span></div></li>
+          <li><span class="sv-dates-dot"/><div><strong>Viaje a Italia</strong> <span>— Sep '26</span></div></li>
+        </ul>
+        <a href="#sv-cine" class="sv-contact-link">Ver todos →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== CTA FINAL ========== -->
+<div style="background:var(--ipp-red);color:#fff;padding:4.5rem 2rem;text-align:center;">
+  <h2 style="font-family:var(--ipp-head);font-size:clamp(1.7rem,4vw,2.8rem);font-weight:900;margin:0 0 1rem;line-height:1.2;">La próxima vez que escuches italiano…<br/><em style="color:var(--ipp-gold);">¿vas a entenderlo o te vas a quedar mirando?</em></h2>
+  <p style="font-size:1rem;opacity:.85;margin:0 0 2rem;font-weight:300;">Reservá tu lugar ahora. Cupos limitados.</p>
+  <a href="https://wa.me/5492975203210?text=Quiero%20reservar%20mi%20lugar%20AHORA" class="sv-btn sv-btn-gold" style="font-size:1rem;padding:1rem 2.5rem;"><i class="ph ph-whatsapp-logo"/> Reservar ahora por WhatsApp →</a>
+</div>
+
+<!-- ========== LIGHTBOX IMÁGENES ========== -->
+<div class="sv-lb" id="sv-lightbox" onclick="this.classList.remove('active');">
+  <button class="sv-lb-close" onclick="document.getElementById('sv-lightbox').classList.remove('active');">✕</button>
+  <img id="sv-lb-img" src="" alt="Vista ampliada" onclick="event.stopPropagation();"/>
+</div>
+
+<!-- ========== VIDEO MODAL ========== -->
+<div class="sv-vlb" id="sv-video-lb" onclick="this.classList.remove('active');document.getElementById('sv-vframe').src='';">
+  <button class="sv-lb-close" onclick="document.getElementById('sv-video-lb').classList.remove('active');document.getElementById('sv-vframe').src='';">✕</button>
+  <iframe id="sv-vframe" src="" width="360" height="640" style="border:none;border-radius:12px;max-width:90vw;max-height:80vh;" allow="autoplay;fullscreen" allowfullscreen="" onclick="event.stopPropagation();"/>
+</div>
+
+</div><script>
+// Lightbox para imágenes del mosaic
+document.querySelectorAll('.sv-tile').forEach(function(tile){
+  tile.addEventListener('click', function(){
+    var img = this.querySelector('img');
+    if(img){
+      document.getElementById('sv-lb-img').src = img.src;
+      document.getElementById('sv-lightbox').classList.add('active');
+    }
+  });
+});
+// Video modal
+document.querySelectorAll('.sv-vid').forEach(function(v){
+  v.addEventListener('click', function(){
+    document.getElementById('sv-vframe').src = 'https://www.youtube.com/embed/' + this.getAttribute('data-vid') + '?autoplay=1&amp;rel=0';
+    document.getElementById('sv-video-lb').classList.add('active');
+  });
+});
+// Smooth scroll
+document.querySelectorAll('.sv-wrap a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script></div>
+    </section></div>
+    </t>
+</t>
