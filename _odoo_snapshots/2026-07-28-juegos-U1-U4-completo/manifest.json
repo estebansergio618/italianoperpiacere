@@ -1,5 +1,5 @@
 {
- "label": "2026-07-28-juegos-U1-U3",
+ "label": "2026-07-28-juegos-U1-U4-completo",
  "units": {
   "1": {
    "estado": "APROBADA (frozen)",
@@ -7,7 +7,7 @@
     "exploracion": {
      "slide_id": 141,
      "name": "Exploración",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "19cf239937fb562c",
      "chars": 28142,
      "file": "u1_exploracion_141.html"
@@ -15,7 +15,7 @@
     "descubrimiento": {
      "slide_id": 142,
      "name": "Descubrimiento",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "845140344edc29f9",
      "chars": 229249,
      "file": "u1_descubrimiento_142.html"
@@ -23,7 +23,7 @@
     "gramatica": {
      "slide_id": 143,
      "name": " Gramática",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "6eba6bea2cdbd675",
      "chars": 189993,
      "file": "u1_gramatica_143.html"
@@ -31,7 +31,7 @@
     "juegos": {
      "slide_id": 179,
      "name": "Juegos",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "4fc17b1ca87c1ea5",
      "chars": 69953,
      "file": "u1_juegos_179.html"
@@ -44,7 +44,7 @@
     "exploracion": {
      "slide_id": 145,
      "name": "Exploración",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "25ceaaf0807a47a1",
      "chars": 50410,
      "file": "u2_exploracion_145.html"
@@ -52,7 +52,7 @@
     "descubrimiento": {
      "slide_id": 146,
      "name": " Descubrimiento",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "6e06fc63170c5b18",
      "chars": 197943,
      "file": "u2_descubrimiento_146.html"
@@ -60,7 +60,7 @@
     "gramatica": {
      "slide_id": 148,
      "name": " Gramática",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "6e36d9b943fdf89f",
      "chars": 203776,
      "file": "u2_gramatica_148.html"
@@ -68,7 +68,7 @@
     "juegos": {
      "slide_id": 180,
      "name": "Juegos",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "b4cacebda4aab263",
      "chars": 70043,
      "file": "u2_juegos_180.html"
@@ -81,7 +81,7 @@
     "exploracion": {
      "slide_id": 150,
      "name": " Exploración",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "09acfdc58ade8405",
      "chars": 40195,
      "file": "u3_exploracion_150.html"
@@ -89,7 +89,7 @@
     "descubrimiento": {
      "slide_id": 151,
      "name": " Descubrimiento",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "ec58c6bf2d547690",
      "chars": 173487,
      "file": "u3_descubrimiento_151.html"
@@ -97,7 +97,7 @@
     "gramatica": {
      "slide_id": 152,
      "name": "Gramática",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "9135498ec27de395",
      "chars": 177497,
      "file": "u3_gramatica_152.html"
@@ -105,7 +105,7 @@
     "juegos": {
      "slide_id": 181,
      "name": "Juegos",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "cc26b63c77f3ff27",
      "chars": 69977,
      "file": "u3_juegos_181.html"
@@ -118,7 +118,7 @@
     "exploracion": {
      "slide_id": 155,
      "name": " Exploración",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "08c3745c8ecb384d",
      "chars": 44673,
      "file": "u4_exploracion_155.html"
@@ -126,7 +126,7 @@
     "descubrimiento": {
      "slide_id": 156,
      "name": " Descubrimiento",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "7c311718b8a5c23a",
      "chars": 159147,
      "file": "u4_descubrimiento_156.html"
@@ -134,10 +134,18 @@
     "gramatica": {
      "slide_id": 157,
      "name": " Gramática",
-     "write_date": "2026-07-28 19:36:07",
+     "write_date": "2026-07-28 19:41:03",
      "sha256": "1f4fa9079c5b2dd2",
      "chars": 179129,
      "file": "u4_gramatica_157.html"
+    },
+    "juegos": {
+     "slide_id": 182,
+     "name": "Juegos",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "5e4bbb453281b1cb",
+     "chars": 70077,
+     "file": "u4_juegos_182.html"
     }
    }
   }
