@@ -1,0 +1,3164 @@
+<section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><!-- ===== BLOQUE: Unità 1 — Gramática ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-title em { font-style: italic; color: var(--red); }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--red); font-style: italic; }
+
+  /* ===== Rule box ===== */
+  .ipp-rule {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--mc);
+    margin-bottom: 1.2rem;
+  }
+  .ipp-rule__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.08rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.85rem;
+  }
+  .ipp-rule p { margin: 0 0 0.5rem; line-height: 1.65; font-size: clamp(0.88rem, 2.2vw, 0.92rem); }
+  .ipp-rule p:last-child { margin-bottom: 0; }
+  .ipp-rule em { font-style: italic; color: var(--red); }
+  .ipp-rule strong { color: var(--mc-dk); }
+
+  .ipp-warn {
+    display: flex; gap: 0.55rem; align-items: flex-start;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: #555; line-height: 1.6;
+    padding: 0.6rem 0;
+  }
+  .ipp-warn .ph { color: #c89500; font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+  .ipp-warn strong { color: var(--mc-text); }
+
+  /* ===== Tablas ===== */
+  .ipp-table { width: 100%; border-collapse: collapse; font-size: clamp(0.86rem, 2.2vw, 0.92rem); }
+  .ipp-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.55rem 1rem; text-align: left;
+    font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-table th:first-child { border-radius: 8px 0 0 0; }
+  .ipp-table th:last-child  { border-radius: 0 8px 0 0; }
+  .ipp-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-table tr:last-child td { border-bottom: none; }
+  .ipp-table tr:nth-child(even) td { background: var(--cream); }
+  .ipp-table .it { font-style: italic; color: #555; }
+  .ipp-table .pro { font-weight: 700; color: var(--mc-dk); }
+  .ipp-table .pro em { font-size: 0.75rem; font-weight: 400; color: #888; }
+  .ipp-table .refl { color: var(--red); font-weight: 700; }
+  .ipp-table .stem { color: var(--black); }
+  .ipp-table .end  { color: var(--teal); font-weight: 700; }
+  .ipp-table .row-formal td { background: rgba(82,142,116,0.07); }
+
+  .ipp-conj-note {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #666; padding: 0.7rem 0 0;
+    line-height: 1.65;
+  }
+  .ipp-conj-note .dot {
+    display: inline-block; width: 9px; height: 9px;
+    border-radius: 50%; margin-right: 6px; vertical-align: 1px;
+  }
+  .ipp-conj-note .dot.red  { background: var(--red); }
+  .ipp-conj-note .dot.teal { background: var(--teal); }
+
+  /* ===== Alfabeto ===== */
+  .ipp-alfa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 0.5rem; margin-bottom: 0.85rem;
+  }
+  .ipp-alfa__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .ipp-alfa__cell.foreign { background: #fdf3d0; border: 1px dashed #c89500; }
+  .ipp-alfa__ltr {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--mc-dk);
+    min-width: 24px;
+  }
+  .ipp-alfa__sep { font-size: 0.7rem; color: #aaa; }
+  .ipp-alfa__cit { font-size: 0.85rem; font-weight: 500; }
+  .ipp-alfa__legend {
+    font-size: 0.8rem; color: #888;
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.45rem;
+  }
+  .ipp-alfa__legend i.swatch {
+    display: inline-block; width: 14px; height: 14px;
+    background: #fdf3d0; border: 1px dashed #c89500;
+    border-radius: 3px;
+  }
+
+  /* ===== Saludos ===== */
+  .ipp-greet {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.85rem; margin-bottom: 1rem;
+  }
+  .ipp-greet__card {
+    background: var(--cream); border-radius: var(--r);
+    padding: 1rem 1.2rem;
+  }
+  .ipp-greet__head {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin: 0 0 0.7rem;
+  }
+  .ipp-greet__head.informal { color: var(--mc); }
+  .ipp-greet__head.formal   { color: var(--teal); }
+  .ipp-greet__head.neutro   { color: #c89500; }
+  .ipp-greet__row {
+    display: flex; flex-direction: column;
+    padding: 0.38rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-greet__row:last-child { border-bottom: none; }
+  .ipp-greet__it { font-weight: 700; color: var(--black); font-size: 0.88rem; }
+  .ipp-greet__es { color: #777; font-style: italic; font-size: 0.78rem; line-height: 1.4; }
+  .ipp-greet__es em { font-size: 0.75em; color: #999; }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.5rem;
+  }
+  .ipp-nums__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.5rem; text-align: center;
+  }
+  .ipp-nums__n {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--mc-dk);
+  }
+  .ipp-nums__w { font-size: 0.78rem; color: #555; margin-top: 0.1rem; }
+
+  /* ===== Expresiones ===== */
+  .ipp-espr { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ipp-espr__item {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.8rem 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center; gap: 1rem;
+  }
+  .ipp-espr__it { font-weight: 700; font-size: 0.92rem; color: var(--mc-dk); }
+  .ipp-espr__es { font-style: italic; font-size: 0.87rem; color: #666; }
+  .ipp-espr__audio {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+    padding: 0.25rem 0.7rem; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .ipp-espr__audio:hover { background: var(--mc-bg); }
+  .ipp-espr__audio .ph { font-size: 1rem; }
+
+  /* ===== Ejercicios ===== */
+  .ipp-ex { margin-top: 1.75rem; }
+  .ipp-ex__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+  }
+  .ipp-ex__desc {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 0.8rem;
+  }
+  .ipp-ex__card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+
+  /* Fila genérica de ejercicio */
+  .ipp-row {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.91rem; line-height: 1.65;
+  }
+  .ipp-row:last-child { margin-bottom: 0; }
+  .ipp-row__num {
+    font-size: 0.75rem; color: #aaa;
+    min-width: 20px; margin-right: 0.35rem;
+  }
+  .ipp-row__pron {
+    color: var(--mc-dk); font-weight: 700;
+    margin-right: 0.4rem;
+  }
+  .ipp-row__pron em { font-size: 0.75rem; font-weight: 400; color: #888; font-style: italic; }
+  .ipp-row em { font-style: italic; }
+
+  /* Inputs */
+  .ipp-input {
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    padding: 0.22rem 0.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    background: var(--white); text-align: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-input:focus { outline: none; border-color: var(--mc); }
+  .ipp-input.sm   { width: 54px; }
+  .ipp-input.md   { min-width: 110px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.lg   { width: 100%; max-width: 320px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.ok   { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-input.err  { border-color: var(--red);   background: var(--err-bg); }
+
+  /* Botones de opción */
+  .ipp-opt {
+    padding: 0.32rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 30px; background: var(--white);
+    font-family: inherit; font-size: 0.84rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+    color: var(--black);
+  }
+  .ipp-opt:hover:not(.disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-opt.correct  { background: var(--ok-bg);  border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-opt.wrong    { background: var(--err-bg); border-color: var(--red);   color: #7a1f14; }
+  .ipp-opt.disabled { pointer-events: none; opacity: 0.6; }
+
+  /* Botón verificar */
+  .ipp-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.4rem; border: none; border-radius: 30px;
+    background: var(--mc-dk); color: var(--white);
+    font-family: inherit; font-size: 0.87rem; font-weight: 700;
+    cursor: pointer; transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc); }
+  .ipp-btn.ghost {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+  }
+  .ipp-btn.ghost:hover { background: var(--mc-bg); }
+  .ipp-btn-row {
+    display: flex; flex-wrap: wrap; gap: 0.55rem;
+    margin-top: 0.85rem;
+  }
+
+  /* Reintentar */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* Feedback */
+  .ipp-fb {
+    font-size: 0.82rem; margin-top: 0.3rem;
+    font-weight: 500; display: none;
+    line-height: 1.5;
+  }
+  .ipp-fb.ok  { color: var(--ok-tx);  display: block; }
+  .ipp-fb.err { color: var(--red);    display: block; }
+  .ipp-fb .ph { vertical-align: -2px; }
+
+  .ipp-result { margin-top: 0.75rem; font-size: 0.87rem; font-weight: 600; display: none; }
+  .ipp-result.ok  { color: var(--ok-tx); display: block; }
+  .ipp-result.err { color: var(--red);   display: block; }
+
+  /* V/F y Saludos rows */
+  .ipp-judge {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--cream); border-radius: var(--r);
+    margin-bottom: 0.5rem;
+    gap: 1rem; font-size: 0.91rem;
+    flex-wrap: wrap;
+  }
+  .ipp-judge__txt { flex: 1; line-height: 1.5; min-width: 180px; }
+  .ipp-judge__btns { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+  /* Situaciones */
+  .ipp-situ {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.65rem;
+  }
+  .ipp-situ__ctx {
+    font-size: 0.86rem; color: #555;
+    margin: 0 0 0.45rem; font-style: italic; line-height: 1.5;
+  }
+
+  /* Ordenar */
+  .ipp-orden__row {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-orden__sel {
+    padding: 0.3rem 0.4rem;
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    font-family: inherit; font-size: 0.86rem;
+    background: var(--white);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-orden__sel:focus { outline: none; border-color: var(--mc); }
+  .ipp-orden__txt { font-size: 0.91rem; font-style: italic; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg), var(--cream-dk));
+    border-top: 3px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.2rem, 3.5vw, 1.6rem) clamp(1.1rem, 3.5vw, 1.75rem);
+    margin-top: 0.5rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.05rem, 2.7vw, 1.15rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-culture p {
+    font-size: clamp(0.86rem, 2.2vw, 0.9rem);
+    line-height: 1.7; color: #555; margin: 0;
+  }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 20px; right: 20px; z-index: 9999;
+    background: var(--cream-dk); color: var(--black);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-greet { grid-template-columns: 1fr; }
+    .ipp-espr__item { grid-template-columns: 1fr 1fr; }
+    .ipp-espr__audio { grid-column: span 2; justify-self: start; }
+    .ipp-table { font-size: 0.83rem; }
+    .ipp-table th, .ipp-table td { padding: 0.5rem 0.7rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-rule { padding: 1rem 0.9rem; }
+    .ipp-ex__card { padding: 1rem 0.9rem; }
+    .ipp-row { padding: 0.7rem 0.85rem; }
+  }
+</style>
+
+<!-- ===== STOP FAB ===== -->
+<button id="ippStopFab" class="ipp-stop-fab" onclick="if(window.ippStop)window.ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-book-open-text ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 1 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Come ti chiami?</h1>
+    <p class="ipp-hero__subtitle">Fase expositiva · Las reglas confirmadas</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- INTRO SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p>En la etapa anterior <strong>descubriste las reglas por tu cuenta</strong>. Ahora las confirmamos y completamos.</p>
+        <p>Esta etapa es para <strong>leer, escuchar y fijar</strong>. Al final hay ejercicios.</p>
+      </div>
+    </div>
+
+    <!-- ① ALFABETO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">L'alfabeto italiano</h2>
+      <p class="ipp-sub">21 letras propias + 5 "straniere" — las que viste en el video</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Las 21 letras del alfabeto italiano</h3>
+        <p class="ipp-alfa__legend">
+          <i class="swatch" aria-hidden="true"></i>
+          Letras extranjeras (usadas en palabras importadas como <em>jeans, weekend, taxi</em>)
+        </p>
+        <div class="ipp-alfa" id="alfaFull"></div>
+
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>Letras que no existen en italiano:</strong> J · K · W · X · Y. Son "lettere straniere" — aparecen sólo en préstamos del inglés, francés y alemán.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>La H es muda:</strong> no se pronuncia sola. Aparece en <em>ho, hai, ha, hanno</em> (verbo avere) y en combinaciones como <em>ch</em> y <em>gh</em>.</span>
+        </div>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">¿Cómo se dice? — Pronunciación clave</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Letra / Combo</th><th>Suena como…</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>C + a/o/u</strong></td><td>K (come Como)</td><td class="it">casa, cosa, cura</td></tr>
+            <tr><td><strong>C + e/i</strong></td><td>CH de "chico"</td><td class="it">ciao, cinema</td></tr>
+            <tr><td><strong>G + a/o/u</strong></td><td>G de "gato"</td><td class="it">gatto, gonna</td></tr>
+            <tr><td><strong>G + e/i</strong></td><td>Y de "yo" (suave)</td><td class="it">gelato, giro</td></tr>
+            <tr><td><strong>CH</strong></td><td>K (come Como)</td><td class="it">che, chi</td></tr>
+            <tr><td><strong>GH</strong></td><td>G de "gato"</td><td class="it">ghiaccio</td></tr>
+            <tr><td><strong>SC + e/i</strong></td><td>SH de "show"</td><td class="it">scena, sci</td></tr>
+            <tr><td><strong>GL + i</strong></td><td>LL de "llave"</td><td class="it">gli, famiglia</td></tr>
+            <tr><td><strong>GN</strong></td><td>Ñ de "año"</td><td class="it">gnocchi, bagno</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Ejercicio A -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">A · El alfabeto — completá con la ciudad correcta</h3>
+        <p class="ipp-ex__desc">Escribí la ciudad que corresponde a cada letra según la tabla de arriba.</p>
+        <div class="ipp-ex__card">
+          <div id="exAlfa"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkExAlfa()"><i class="ph ph-check-circle"></i> Verificar</button>
+            <button class="ipp-btn ghost" onclick="revealExAlfa()"><i class="ph ph-eye"></i> Ver solución</button>
+          </div>
+          <div class="ipp-result" id="exAlfaRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio B -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">B · Verdadero o Falso — las letras</h3>
+        <p class="ipp-ex__desc">¿Son correctas estas afirmaciones sobre el alfabeto italiano?</p>
+        <div class="ipp-ex__card" id="exVF"></div>
+      </div>
+    </section>
+
+    <!-- ② CHIAMARSI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Il verbo <em>chiamarsi</em></h2>
+      <p class="ipp-sub">El verbo reflexivo para decir cómo te llamás — el primero que aprendés en italiano. ¿Por qué reflexivo? Porque se refleja en uno mismo. Los verbos reflexivos siempre van acompañados de su pronombre: <em>mi · ti · si · ci · vi · si</em>.</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Conjugación completa</h3>
+        <p><em>Chiamarsi</em> es un verbo reflexivo: la partícula (mi/ti/si…) cambia con cada persona y va <strong>antes</strong> del verbo.</p>
+
+        <table class="ipp-table" style="margin-top:0.85rem;">
+          <thead><tr><th>Pronombre</th><th>Forma completa</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td class="pro">io</td>      <td><span class="refl">mi</span> <span class="stem">chiam</span><span class="end">o</span></td>    <td class="it">Io mi chiamo Sofia.</td></tr>
+            <tr><td class="pro">tu</td>      <td><span class="refl">ti</span> <span class="stem">chiam</span><span class="end">i</span></td>    <td class="it">Tu ti chiami Marco.</td></tr>
+            <tr><td class="pro">lui/lei</td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Lei si chiama Anna.</td></tr>
+            <tr class="row-formal"><td class="pro">Lei <em>(formal)</em></td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Signora, come si chiama?</td></tr>
+            <tr><td class="pro">noi</td>     <td><span class="refl">ci</span> <span class="stem">chiam</span><span class="end">iamo</span></td> <td class="it">Noi ci chiamiamo Sofia e Graziana.</td></tr>
+            <tr><td class="pro">voi</td>     <td><span class="refl">vi</span> <span class="stem">chiam</span><span class="end">ate</span></td>  <td class="it">Come vi chiamate?</td></tr>
+            <tr><td class="pro">loro</td>    <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">ano</span></td>  <td class="it">Si chiamano Paolo e Luca.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="ipp-conj-note">
+          <span class="dot red"></span>La partícula reflexiva (<em>mi, ti, si, ci, vi, si</em>) es la parte que cambia.<br>
+          <span class="dot teal"></span>La raíz <em>chiam-</em> es siempre la misma. Las desinencias (-o, -i, -a…) son las de los verbos en -ARE.
+        </p>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Preguntas y respuestas</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Pregunta</th><th>Respuesta</th></tr></thead>
+          <tbody>
+            <tr><td class="it">Come ti chiami? <em style="color:#888;">(informal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama? <em style="color:#888;">(formal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama lui/lei?</td><td class="it">Si chiama [nombre].</td></tr>
+            <tr><td class="it">Come vi chiamate?</td><td class="it">Ci chiamiamo [nombres].</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.84rem;color:#666;margin-top:0.7rem;font-style:italic;">
+          ¿Notaste que para la forma formal el verbo va en tercera persona? Igual que en castellano cuando usás "usted".
+        </p>
+      </div>
+
+      <!-- Ejercicio C -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">C · Chiamarsi — completá con mi / ti / si / ci / vi</h3>
+        <p class="ipp-ex__desc">Escribí la partícula reflexiva correcta para cada oración.</p>
+        <div class="ipp-ex__card" id="exChiamarsi"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllChi()"><i class="ph ph-check-circle"></i> Verificar todo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ SALUTI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">I saluti</h2>
+      <p class="ipp-sub">Saludos formales e informales — la diferencia importa en Italia</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-greet">
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head informal">Informale — amigos y familia</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Ciao!</span><span class="ipp-greet__es">¡Hola! / ¡Chau!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come stai?</span><span class="ipp-greet__es">¿Cómo estás?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Bene, grazie!</span><span class="ipp-greet__es">¡Bien, gracias!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">A presto!</span><span class="ipp-greet__es">¡Hasta pronto!</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head formal">Formale — adultos y desconocidos</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come sta?</span><span class="ipp-greet__es">¿Cómo está usted?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">ArrivederLa</span><span class="ipp-greet__es">Hasta luego (muy formal)</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head neutro">Neutro — válido en cualquier contexto</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Salve!</span><span class="ipp-greet__es">¡Hola! (seguro siempre)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Arrivederci</span><span class="ipp-greet__es">Hasta luego</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonanotte</span><span class="ipp-greet__es">Buenas noches (antes de dormir)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Piacere!</span><span class="ipp-greet__es">¡Mucho gusto!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buongiorno</span><span class="ipp-greet__es">Buenos días <em>(al llegar o al irse)</em></span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buon pomeriggio</span><span class="ipp-greet__es">Buenas tardes</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonasera</span><span class="ipp-greet__es">Buenas tardes-noche (desde las 16h) <em>(al llegar o al irse)</em></span></div>
+          </div>
+        </div>
+        <div class="ipp-warn" style="margin-top:0.4rem;">
+          <i class="ph ph-lightbulb"></i>
+          <span>¿Dudás entre formal e informal? Usá <strong>Salve</strong> — es la opción segura en cualquier situación.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio D -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D · Saludos — ¿formal, informal o neutro?</h3>
+        <p class="ipp-ex__desc">Clasificá cada saludo según el contexto en que se usa.</p>
+        <div class="ipp-ex__card" id="exSaluti"></div>
+      </div>
+
+      <!-- Ejercicio D2 -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D2 · ¿Qué decís en esta situación?</h3>
+        <p class="ipp-ex__desc">Dado el contexto, escribí el saludo italiano correcto.</p>
+        <div class="ipp-ex__card" id="exSituaciones"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllSitu()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exSituRes"></div>
+      </div>
+    </section>
+
+    <!-- ④ NUMERI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title">I numeri — da 1 a 30</h2>
+      <p class="ipp-sub">Fundamentales para dar tu número de teléfono y tu edad</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-nums" id="numGrid"></div>
+        <div class="ipp-warn" style="margin-top:0.9rem;">
+          <i class="ph ph-warning"></i>
+          <span><em>uno → un / una</em> según el género.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><em>Ventuno, ventotto</em> — se pierde la vocal cuando el número termina en vocal + <em>uno/otto</em>.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio E -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">E · Números — ¿cómo se escribe?</h3>
+        <p class="ipp-ex__desc">Elegí la forma correcta de cada número o resultado.</p>
+        <div class="ipp-ex__card" id="exNumeri"></div>
+      </div>
+    </section>
+
+    <!-- ⑤ ESPRESSIONI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title">Espressioni utili</h2>
+      <p class="ipp-sub">Frases que ya podés usar desde hoy. Tocá el botón para escucharlas.</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-espr" id="esprList"></div>
+      </div>
+    </section>
+
+    <!-- INTEGRADOR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Integrador</div>
+      <h2 class="ipp-title">Esercizio integrador</h2>
+      <p class="ipp-sub">Combiná todo lo aprendido</p>
+
+      <!-- Ejercicio F -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">F · Ordenar el diálogo</h3>
+        <p class="ipp-ex__desc">Numerá estas frases del 1 al 5 para reconstruir una presentación correcta.</p>
+        <div class="ipp-ex__card">
+          <div id="ordenLines"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkOrden()"><i class="ph ph-check-circle"></i> Verificar orden</button>
+          </div>
+          <div class="ipp-result" id="exOrdenRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio G -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">G · Expresiones — ¿qué dirías en estas situaciones?</h3>
+        <p class="ipp-ex__desc">Escribí la expresión italiana correcta para cada contexto.</p>
+        <div class="ipp-ex__card" id="exGExpr"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllGExpr()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exGExprRes"></div>
+      </div>
+    </section>
+
+    <!-- CULTURA -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head">
+        <i class="ph ph-globe"></i>
+        Nota culturale — Come si scrive il tuo nome?
+      </h3>
+      <p>
+        En Italia, cuando das tu nombre por teléfono o en una ventanilla, siempre deletreás usando las ciudades del alfabeto fonético. Esta costumbre viene de los años en que las comunicaciones eran poco claras y había que evitar confusiones entre letras que suenan parecido (M/N, B/P, D/T). Una forma habitual de pedir que deletreen es <strong>FARE LO SPELLING</strong>, una expresión del inglés instalada en la cultura italiana.
+        <strong>Tip práctico:</strong> aprendé de memoria al menos 10 ciudades — te van a salir naturalmente muy pronto.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ── IPP Voice Preloader ── */
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+window.IPP_VOICE = window.IPP_VOICE || {
+  lang: 'it-IT', rate: 0.82, pitch: 1.10,
+  preferFemale: true, preferGoogle: true
+};
+
+(function() {
+  /* ═══ DATA ═══ */
+  const ALFA = [
+    ['A','Ancona'],['B','Bologna'],['C','Como'],['D','Domodossola'],['E','Empoli'],
+    ['F','Firenze'],['G','Genova'],['H','Hotel'],['I','Imola'],['L','Livorno'],
+    ['M','Milano'],['N','Napoli'],['O','Otranto'],['P','Palermo'],['Q','Quarto'],
+    ['R','Roma'],['S','Savona'],['T','Torino'],['U','Udine'],['V','Venezia'],['Z','Zara'],
+  ];
+  const NUMS = [
+    [1,'uno'],[2,'due'],[3,'tre'],[4,'quattro'],[5,'cinque'],
+    [6,'sei'],[7,'sette'],[8,'otto'],[9,'nove'],[10,'dieci'],
+    [11,'undici'],[12,'dodici'],[13,'tredici'],[14,'quattordici'],[15,'quindici'],
+    [16,'sedici'],[17,'diciassette'],[18,'diciotto'],[19,'diciannove'],[20,'venti'],
+    [21,'ventuno'],[22,'ventidue'],[23,'ventitré'],[24,'ventiquattro'],[25,'venticinque'],
+    [26,'ventisei'],[27,'ventisette'],[28,'ventotto'],[29,'ventinove'],[30,'trenta'],
+  ];
+  const ESPR = [
+    ['Come ti chiami?',     '¿Cómo te llamás?'],
+    ['Mi chiamo…',          'Me llamo…'],
+    ['Come si scrive?',     '¿Cómo se escribe?'],
+    ['Che significa?',      '¿Qué significa?'],
+    ['Piacere!',            '¡Mucho gusto!'],
+    ['Di dove sei?',        '¿De dónde sos?'],
+    ['Sono di…',            'Soy de…'],
+    ['Quanti anni hai?',    '¿Cuántos años tenés?'],
+    ['Ho 25 anni.',         'Tengo 25 años.'],
+    ['Scusa / Scusi',       'Perdón (inf./form.)'],
+  ];
+
+  /* ═══ BUILDS ═══ */
+  function buildAlfaFull() {
+    const all = [...ALFA.map(([l,c]) => [l,c,false])];
+    [['J','Jersey'],['K','Kursaal'],['W','Washington'],['X','Xilofono'],['Y','York']].forEach(([l,c]) => all.push([l,c,true]));
+    all.sort((a,b) => a[0].localeCompare(b[0]));
+    const grid = document.getElementById('alfaFull');
+    all.forEach(([ltr, city, isForeign]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-alfa__cell' + (isForeign ? ' foreign' : '');
+      div.innerHTML = '<span class="ipp-alfa__ltr">'+ltr+'</span><span class="ipp-alfa__sep">·</span><span class="ipp-alfa__cit">'+city+'</span>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildNums() {
+    const grid = document.getElementById('numGrid');
+    NUMS.forEach(([n, w]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-nums__cell';
+      div.innerHTML = '<div class="ipp-nums__n">'+n+'</div><div class="ipp-nums__w">'+w+'</div>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildEspr() {
+    const list = document.getElementById('esprList');
+    ESPR.forEach(([it, es]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-espr__item';
+      div.innerHTML =
+        '<span class="ipp-espr__it">'+it+'</span>'+
+        '<span class="ipp-espr__es">'+es+'</span>'+
+        '<button class="ipp-espr__audio" onclick="ippAudio(\''+it.replace(/'/g,"\\'")+'\')">'+
+          '<i class="ph ph-speaker-high"></i> Escuchar</button>';
+      list.appendChild(div);
+    });
+  }
+
+  /* ═══ AUDIO TTS ═══ */
+  function _ippPickVoice(voices, cfg) {
+    var it = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+    if (!it.length) return voices[0] || null;
+    var gFem = it.filter(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    var gAny = it.filter(function(v) { return /google/i.test(v.name); });
+    var fem  = it.filter(function(v) { return /elsa|alice|giulia|female/i.test(v.name); });
+    var nonLocal = it.filter(function(v) { return !v.localService; });
+    if (cfg.preferGoogle && cfg.preferFemale && gFem.length) return gFem[0];
+    if (cfg.preferGoogle && gAny.length) return gAny[0];
+    if (cfg.preferFemale && fem.length) return fem[0];
+    if (nonLocal.length) return nonLocal[0];
+    return it[0];
+  }
+  function _fabShow(v) {
+    var f = document.getElementById('ippStopFab');
+    if (f) f.style.display = v ? 'inline-flex' : 'none';
+  }
+  function ippStop() {
+    try { window.speechSynthesis.cancel(); } catch(e) {}
+    _fabShow(false);
+  }
+  function ippAudio(text) { /*IPP_G*/ try{var _g='f';for(var _i=0;_i<arguments.length;_i++){if(arguments[_i]==='m'||arguments[_i]==='f')_g=arguments[_i];}window.__ippG=_g;}catch(_e){}
+    if (!window.speechSynthesis) return;
+    try {
+      window.speechSynthesis.cancel();
+      var cfg = window.IPP_VOICE || {};
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang   = cfg.lang  || 'it-IT';
+      utt.rate   = cfg.rate  !== undefined ? cfg.rate  : 0.82;
+      utt.pitch  = cfg.pitch !== undefined ? cfg.pitch : 1.10;
+      utt.volume = 1;
+      var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+      var v = _ippPickVoice(voices, cfg);
+      if (v) utt.voice = v;
+      utt.onend = function() { _fabShow(false); };
+      utt.onerror = function() { _fabShow(false); };
+      (function(u){ setTimeout(function(){ try { _fabShow(true); speechSynthesis.speak(u); } catch(e){ _fabShow(false); } }, 60); })(utt);
+    } catch(e) { console.warn('SpeechSynthesis error:', e); }
+  }
+
+  /* ═══ RETRY HELPER ═══ */
+  function ippRetry(container, resetFn) {
+    var old = container.querySelector('.ipp-retry');
+    if (old) old.remove();
+    var rb = document.createElement('button');
+    rb.className = 'ipp-retry';
+    rb.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    rb.onclick = function() { rb.remove(); resetFn(); };
+    container.appendChild(rb);
+  }
+
+  /* ═══ EJ A: FILL ALFA ═══ */
+  const exAlfaData = [
+    ['C','Como'],['D','Domodossola'],['E','Empoli'],['F','Firenze'],['G','Genova'],
+    ['L','Livorno'],['Q','Quarto'],['S','Savona'],['U','Udine'],['Z','Zara'],
+  ];
+  function buildExAlfa() {
+    const rows = document.getElementById('exAlfa');
+    if (!rows) return;
+    rows.innerHTML = '';
+    const shuffled = [...exAlfaData].sort(() => Math.random() - 0.5);
+    shuffled.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'ipp-row';
+      row.id = 'alfa-row-' + i;
+      row.dataset.letter = item[0];
+      row.dataset.city = item[1];
+      row.style.cssText = 'display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;';
+      row.innerHTML =
+        '<span class="ipp-row__num">'+(i+1)+'.</span>'+
+        '<span><strong>'+item[0]+'</strong> come</span>'+
+        '<input class="ipp-input md" id="exAlfa-'+i+'" placeholder="ciudad…"'+
+        ' onkeypress="if(event.key===\'Enter\') checkExAlfa()">'+
+        '<span class="alfa-icon" id="alfa-icon-'+i+'"></span>';
+      rows.appendChild(row);
+    });
+  }
+  function checkExAlfa() {
+    if (!document.getElementById('exAlfa')) return;
+    let ok = 0, total = 0;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (!inp) return;
+      total++;
+      const val = (inp.value || '').trim().toLowerCase();
+      const correct = row.dataset.city.toLowerCase();
+      if (val === correct) {
+        inp.classList.add('ok'); inp.classList.remove('err');
+        if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);font-weight:700;"></i>';
+        ok++;
+      } else {
+        inp.classList.add('err'); inp.classList.remove('ok');
+        if (icon) icon.innerHTML = '<span style="color:var(--red);font-size:0.78rem;font-weight:600;"><i class="ph ph-x"></i> '+row.dataset.city+'</span>';
+      }
+    });
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    if (ok === total) {
+      res.className = 'ipp-result ok';
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Bravissimo/a! '+total+'/'+total+' correctas.';
+    } else {
+      res.className = 'ipp-result err';
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+total+' correctas. Las incorrectas muestran la respuesta correcta en rojo.';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        buildExAlfa();
+      });
+    }
+  }
+  function revealExAlfa() {
+    const sorted = [...exAlfaData].sort((a,b) => a[0].localeCompare(b[0]));
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    let html = '<strong>Solución</strong><br>';
+    sorted.forEach((item, i) => {
+      html += '<span style="display:inline-block;min-width:170px;margin:0.2rem 0.5rem 0 0;">'+(i+1)+'. '+item[0]+' come '+item[1]+'</span>';
+      if ((i+1) % 3 === 0) html += '<br>';
+    });
+    res.className = 'ipp-result ok';
+    res.innerHTML = html;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (inp) { inp.value = row.dataset.city; inp.classList.add('ok'); inp.classList.remove('err'); }
+      if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);"></i>';
+    });
+  }
+
+  /* ═══ EJ B: V/F ═══ */
+  const vfData = [
+    ['En el alfabeto fonético se usan siempre las mismas ciudades.', false,
+      'Las ciudades pueden cambiar — lo importante es saber que un italiano puede deletrearte nombrando ciudades.'],
+    ['La H en italiano suena fuerte y aspirada, como en inglés.', false,
+      'La H italiana es completamente muda. Aparece en ho/hai/ha y en CH y GH, pero nunca suena sola.'],
+    ['La combinación CH en italiano suena como la CH de "chico" en español.', false,
+      'En italiano CH suena como K (dura). Es al revés que en español. Ejemplo: "che" = KE, "chi" = KI.'],
+    ['La combinación SC + e/i en italiano suena como SH en inglés ("show").', true,
+      'Correcto — "scena", "sci", "lasciare" llevan ese sonido SH. Ante a/o/u suena simplemente SK.'],
+    ['En italiano "gli" se pronuncia igual que "gl" + "i" por separado.', false,
+      '"GL+i" es un sonido único, similar a la LL del español rioplatense. Ejemplo: "figlio", "aglio".'],
+    ['En italiano "gnocchi" lleva el sonido Ñ de "año".', true,
+      'GN se pronuncia exactamente como la Ñ española. "Lasagna", "gnocchi", "bagno".'],
+    ['Las consonantes dobles en italiano se pronuncian igual que las simples.', false,
+      'Las dobles se mantienen más tiempo y a veces cambian el significado. "Nono" (noveno) ≠ "nonno" (abuelo).'],
+    ['La combinación QU en italiano siempre suena como KU (con U pronunciada).', true,
+      '"quando", "questo", "qui" se pronuncian con la U audible: KWAN-do, KWES-to.'],
+    ['La letra Z existe en el alfabeto italiano original.', true,
+      'Z come Zara es parte del alfabeto de 21 letras. Puede sonar como TS ("pizza") o DS ("zero").'],
+  ];
+  function buildExVF() {
+    const card = document.getElementById('exVF');
+    vfData.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.id = 'exvf-' + i;
+      row.className = 'ipp-judge';
+      row.innerHTML =
+        '<span class="ipp-judge__txt">'+(i+1)+'. '+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+item[1]+')">V</button>'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+(!item[1])+')">F</button>'+
+        '</div>';
+      card.appendChild(row);
+    });
+  }
+  function checkExVF(i, btn, isCorrect) {
+    const msg = vfData[i][2];
+    const row = document.getElementById('exvf-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      const fb = document.createElement('p');
+      fb.className = 'ipp-fb ok';
+      fb.style.cssText = 'width:100%;margin-top:0.4rem;';
+      fb.innerHTML = '<i class="ph ph-check"></i> '+msg;
+      row.appendChild(fb);
+    } else {
+      row.querySelectorAll('.ipp-opt').forEach(b => { if (b !== btn) b.classList.add('correct'); });
+    }
+    ippRetry(row, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      const oldFb = row.querySelector('.ipp-fb');
+      if (oldFb) oldFb.remove();
+    });
+  }
+
+  /* ═══ EJ C: CHIAMARSI ═══ */
+  const chiData = [
+    { sentence: '_____ chiamo Lucia. Sono di Milano.',        blank:'mi', pronoun:'io',      note:'io → <strong>mi</strong> chiamo. 1ª pers. sing.' },
+    { sentence: 'Come _____ chiami? Non ho capito bene!',     blank:'ti', pronoun:'tu',      note:'tu → <strong>ti</strong> chiami. 2ª pers. sing.' },
+    { sentence: 'Il professore _____ chiama Rossi.',          blank:'si', pronoun:'lui/lei', note:'lui/lei → <strong>si</strong> chiama. 3ª pers. sing.' },
+    { sentence: 'Come _____ chiamate, ragazzi?',              blank:'vi', pronoun:'voi',     note:'voi → <strong>vi</strong> chiamate. 2ª pers. pl.' },
+    { sentence: 'Noi _____ chiamiamo "Il Circolo Italiano".', blank:'ci', pronoun:'noi',     note:'noi → <strong>ci</strong> chiamiamo. 1ª pers. pl.' },
+    { sentence: 'Loro _____ chiamano Marco e Giulia.',        blank:'si', pronoun:'loro',    note:'loro → <strong>si</strong> chiamano. 3ª pers. pl.' },
+    { sentence: 'Signora, Lei come _____ chiama?',            blank:'si', pronoun:'Lei',     note:'Lei → forma formal (3ª pers. sing.).' },
+  ];
+  function buildExChiamarsi() {
+    const card = document.getElementById('exChiamarsi');
+    if (!card) return;
+    card.innerHTML = '';
+    chiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exchi-' + i;
+      div.className = 'ipp-row';
+      div.innerHTML =
+        '<span class="ipp-row__pron">('+item.pronoun+')</span>'+
+        '<em>'+item.sentence.replace('_____',
+          '<input class="ipp-input sm" id="chi-inp-'+i+'" placeholder="?" maxlength="3" autocomplete="off"'+
+          ' onkeypress="if(event.key===\'Enter\')checkChiInput('+i+')">'
+        )+'</em>'+
+        '<div class="ipp-fb" id="exchi-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkChiInput(i) {
+    var inp = document.getElementById('chi-inp-' + i);
+    var fb  = document.getElementById('exchi-fb-' + i);
+    var container = document.getElementById('exchi-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase();
+    var ok = val === chiData[i].blank;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + chiData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> No es correcto. Pista: <em>mi · ti · si · ci · vi · si</em>';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete container.dataset.done;
+      inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+  function checkAllChi() {
+    chiData.forEach(function(_, i) { checkChiInput(i); });
+  }
+
+  /* ═══ EJ D: SALUTI ═══ */
+  const salutiData = [
+    ['Buongiorno!',  'N', 'Saludo de mañana, siempre con adultos o desconocidos.'],
+    ['Ciao!',        'I', 'Entre amigos y familia, a cualquier hora.'],
+    ['Buonasera!',   'N', 'Saludo de tarde-noche desde las 18h, con desconocidos.'],
+    ['Come stai?',   'I', '¿Cómo estás? — solo entre personas de confianza.'],
+    ['Come sta?',    'F', '¿Cómo está usted? — forma de respeto.'],
+    ['ArrivederLa!', 'F', 'La forma más respetuosa de despedirse. La L mayúscula corresponde a Lei.'],
+    ['A presto!',    'I', '¡Hasta pronto! — entre amigos.'],
+    ['Salve!',       'N', 'Funciona en cualquier contexto — la opción segura.'],
+    ['Arrivederci',  'N', 'Despedida universal — formal e informal.'],
+    ['Buonanotte!',  'N', 'Al irse a dormir — válido con cualquier persona.'],
+  ];
+  function buildExSaluti() {
+    const card = document.getElementById('exSaluti');
+    salutiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exsal-' + i;
+      div.className = 'ipp-judge';
+      div.innerHTML =
+        '<span class="ipp-judge__txt" style="font-style:italic;font-weight:600;">'+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'F\')">Formal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'I\')">Informal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'N\')">Neutro</button>'+
+        '</div>'+
+        '<div class="ipp-fb" id="exsal-fb-'+i+'" style="width:100%;"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSaluto(i, btn, pressed) {
+    const correct = salutiData[i][1];
+    const note = salutiData[i][2];
+    const row = document.getElementById('exsal-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    const ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      const map = { 'Formal':'F', 'Informal':'I', 'Neutro':'N' };
+      row.querySelectorAll('.ipp-opt').forEach(b => {
+        if (map[b.textContent.trim()] === correct) b.classList.add('correct');
+      });
+    }
+    const fb = document.getElementById('exsal-fb-' + i);
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+
+  /* ═══ EJ D2: SITUACIONES ═══ */
+  const situData = [
+    {
+      ctx: 'Son las 9:30 de la mañana. Entrás a una farmacia y la farmacéutica te mira.',
+      accepted: ['buongiorno','buon giorno','salve'],
+      note: 'Buongiorno y Salve funcionan — saludo de mañana, contexto formal con desconocida.'
+    },
+    {
+      ctx: 'Tu amigo Marco te manda un mensaje por WhatsApp a las 15hs.',
+      accepted: ['ciao'],
+      note: 'Ciao! — entre amigos, cualquier hora, siempre informal.'
+    },
+    {
+      ctx: 'Llegás a las 20hs a una cena de trabajo. Tu jefa te recibe en la puerta.',
+      accepted: ['buonasera','buona sera'],
+      note: 'Buonasera! — saludo de tarde-noche, contexto formal.'
+    },
+    {
+      ctx: 'Es la 1 de la madrugada. Le decís buenas noches a tu compañera de piso.',
+      accepted: ['buonanotte','buona notte'],
+      note: 'Buonanotte! — sólo al irse a dormir, formal o informal.'
+    },
+    {
+      ctx: 'Tu profesora de italiano termina la clase. Te despedís con respeto.',
+      accepted: ['arrivederla','arrivederci','salve'],
+      note: 'ArrivederLa es lo más respetuoso. Arrivederci también es válido.'
+    },
+    {
+      ctx: 'Ves a tu amiga Sofia y querés saber cómo está.',
+      accepted: ['come stai','come stai?'],
+      note: 'Come stai? — informal. La formal sería "Come sta?"'
+    },
+  ];
+  function buildExSituaciones() {
+    const card = document.getElementById('exSituaciones');
+    if (!card) return;
+    card.innerHTML = '';
+    situData.forEach(function(item, i) {
+      const div = document.createElement('div');
+      div.id = 'situ-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="situ-inp-'+i+'" placeholder="Escribí el saludo en italiano…" maxlength="30"'+
+        ' onkeypress="if(event.key===\'Enter\')checkSitu('+i+')">'+
+        '<div class="ipp-fb" id="situ-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSitu(i) {
+    var inp = document.getElementById('situ-inp-' + i);
+    var fb = document.getElementById('situ-fb-' + i);
+    var container = document.getElementById('situ-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g,'');
+    var ok = situData[i].accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + situData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: ' + situData[i].note;
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllSitu() {
+    situData.forEach(function(_, i) {
+      var container = document.getElementById('situ-' + i);
+      if (container && !container.dataset.done) checkSitu(i);
+    });
+    var total = situData.length;
+    var done = document.querySelectorAll('#exSituaciones [data-done]').length;
+    var res = document.getElementById('exSituRes');
+    if (!res) return;
+    if (done === total) {
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Perfetto! '+done+'/'+total+' correctas.';
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+done+'/'+total+' correctas — revisá las marcadas en rojo.';
+      res.className = 'ipp-result err';
+    }
+  }
+
+  /* ═══ EJ E: NUMERI ═══ */
+  const numExData = [
+    ['11',     'undici',      ['undecio','undize','oundici'],         '11 = undici — UN-di-ci (3 sílabas).'],
+    ['16',     'sedici',      ['seidici','diciasei','dicisei'],        '16 = sedici. "sei" → "sedi" al combinarse.'],
+    ['17',     'diciassette', ['diciasette','dichasette','dicciasette'],'17 = diciassette. Doble S obligatoria.'],
+    ['21',     'ventuno',     ['ventiuno','veintiuno','ventuono'],    '21 = ventuno. La I se pierde: no "ventiuno".'],
+    ['23',     'ventitré',    ['ventitre','ventitres','ventirés'],    '23 = ventitré. El acento en É es obligatorio.'],
+    ['28',     'ventotto',    ['ventiotto','ventoto','ventocto'],     '28 = ventotto. La I se pierde: no "ventiotto".'],
+    ['14',     'quattordici', ['quatordici','quattordeci','quattrodici'],'14 = quattordici. Doble T: quaTTordici.'],
+    ['8 + 5',  'tredici',     ['terdici','fridici','tredeci'],        '8+5=13 = tredici. tre + dici.'],
+    ['20 − 3', 'diciassette', ['diciasette','diciasete','diceassette'],'20−3=17 = diciassette. Doble S — error clásico.'],
+    ['4 × 4',  'sedici',      ['seidici','diecisei','sedize'],       '4×4=16 = sedici.'],
+  ];
+  function buildExNumeri() {
+    var card = document.getElementById('exNumeri');
+    card.innerHTML = '';
+    numExData.forEach(function(item, i) {
+      var label = item[0];
+      var correct = item[1];
+      var wrongs = item[2];
+      var allOpts = [correct].concat(wrongs).sort(function() { return Math.random() - 0.5; });
+      var isOp = /[+−×]/.test(label);
+      var question = isOp
+        ? '<strong style="color:var(--mc-dk);">Quanto fa ' + label + '?</strong>'
+        : '<strong>'+(i+1)+'.</strong> ¿Cómo se escribe <strong style="font-size:1.05rem;">'+label+'</strong> en italiano?';
+      var div = document.createElement('div');
+      div.id = 'exnum-' + i;
+      div.className = 'ipp-row';
+      div.style.cssText = 'padding:0.8rem 1rem;';
+      div.innerHTML =
+        '<p style="font-size:0.91rem;margin:0 0 0.55rem;">'+question+'</p>'+
+        '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.4rem;" id="exnum-opts-'+i+'">'+
+        allOpts.map(function(opt) {
+          return '<button class="ipp-opt" onclick="checkNumOpt('+i+',this,\''+opt.replace(/'/g,"\\'")+'\')">'+opt+'</button>';
+        }).join('')+
+        '</div>'+
+        '<div class="ipp-fb" id="exnum-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkNumOpt(i, btn, pressed) {
+    var correct = numExData[i][1];
+    var container = document.getElementById('exnum-' + i);
+    var fb = document.getElementById('exnum-fb-' + i);
+    if (container.dataset.done) return;
+    container.dataset.done = '1';
+    container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.add('disabled'); });
+    var ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      container.querySelectorAll('.ipp-opt').forEach(function(b) {
+        if (b.textContent.trim() === correct) b.classList.add('correct');
+      });
+    }
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + numExData[i][3];
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.remove('disabled','correct','wrong'); });
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+
+  /* ═══ EJ F: ORDENAR ═══ */
+  const ordenData = [
+    { text: 'Piacere, Marco! Io mi chiamo Sofia.', correct: 3 },
+    { text: 'Ciao! Come ti chiami?', correct: 1 },
+    { text: 'Mi chiamo Marco. E tu?', correct: 2 },
+    { text: 'Come si scrive, Sofia?', correct: 4 },
+    { text: 'S come Savona, O come Otranto, F come Firenze, I come Imola, A come Ancona.', correct: 5 },
+  ];
+  const shuffledOrden = [...ordenData].sort(() => Math.random() - 0.5);
+  function buildOrden() {
+    const cont = document.getElementById('ordenLines');
+    shuffledOrden.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-orden__row';
+      div.innerHTML =
+        '<select class="ipp-orden__sel" id="ord-sel-'+i+'">'+
+          '<option value="">—</option>'+
+          [1,2,3,4,5].map(n => '<option value="'+n+'">'+n+'</option>').join('')+
+        '</select>'+
+        '<span class="ipp-orden__txt">'+item.text+'</span>';
+      cont.appendChild(div);
+    });
+  }
+  function checkOrden() {
+    let ok = 0;
+    shuffledOrden.forEach((item, i) => {
+      const sel = document.getElementById('ord-sel-' + i);
+      const val = parseInt(sel.value);
+      const correct = val === item.correct;
+      sel.style.borderColor = correct ? 'var(--ok-bd)' : 'var(--red)';
+      sel.style.background = correct ? 'var(--ok-bg)' : 'var(--err-bg)';
+      if (correct) ok++;
+    });
+    const res = document.getElementById('exOrdenRes');
+    if (ok === shuffledOrden.length) {
+      const sorted = ordenData.slice().sort((a,b) => a.correct - b.correct);
+      const lista = sorted.map(item => item.correct + ' → ' + item.text).join('<br>');
+      res.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfetto!</strong><br>'+lista;
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+shuffledOrden.length+' correctas.';
+      res.className = 'ipp-result err';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        shuffledOrden.forEach(function(_, i) {
+          const sel = document.getElementById('ord-sel-' + i);
+          if (sel) { sel.value = ''; sel.style.borderColor = ''; sel.style.background = ''; }
+        });
+      });
+    }
+  }
+
+  /* ═══ EJ G: EXPRESIONES ═══ */
+  const gExprData = [
+    {
+      ctx: 'No sabés qué quiere decir una palabra.',
+      accepted: ['che significa','che significa?'],
+      note: 'Che significa? = ¿Qué significa?'
+    },
+    {
+      ctx: 'No sabés cómo se escribe el nombre de tu amigo.',
+      accepted: ['come si scrive','come si scrive?'],
+      note: 'Come si scrive? = ¿Cómo se escribe?'
+    },
+    {
+      ctx: 'Conocés a una persona nueva y querés saber su nombre.',
+      accepted: ['come ti chiami','come ti chiami?'],
+      note: 'Come ti chiami? = ¿Cómo te llamás? (informal)'
+    },
+    {
+      ctx: 'Querés saber cómo se dice algo en italiano.',
+      accepted: ['come si dice in italiano','come si dice in italiano?','come si dice','come si dice?'],
+      note: 'Come si dice in italiano? = ¿Cómo se dice en italiano?'
+    },
+    {
+      ctx: '¿Cómo le preguntás a alguien de dónde es?',
+      accepted: ['di dove sei','di dove sei?'],
+      note: 'Di dove sei? = ¿De dónde sos? (informal)'
+    },
+  ];
+  function buildExGExpr() {
+    var card = document.getElementById('exGExpr');
+    if (!card) return;
+    card.innerHTML = '';
+    gExprData.forEach(function(item, i) {
+      var div = document.createElement('div');
+      div.id = 'gexpr-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="gexpr-inp-'+i+'" placeholder="Escribí la expresión en italiano…" maxlength="40"'+
+        ' onkeypress="if(event.key===\'Enter\')checkGExpr('+i+')">'+
+        '<div class="ipp-fb" id="gexpr-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkGExpr(i) {
+    var inp = document.getElementById('gexpr-inp-' + i);
+    var fb = document.getElementById('gexpr-fb-' + i);
+    var container = document.getElementById('gexpr-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g, '');
+    var accepted = gExprData[i].accepted.map(function(a){ return a.replace(/[!?.,]/g,''); });
+    var ok = accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + gExprData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: <em>' + gExprData[i].accepted[0] + '</em>';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.textContent = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllGExpr() {
+    var ok = 0;
+    gExprData.forEach(function(_, i) {
+      var inp = document.getElementById('gexpr-inp-' + i);
+      var container = document.getElementById('gexpr-' + i);
+      if (!container.dataset.done && inp && inp.value.trim()) checkGExpr(i);
+      if (container.dataset.done) ok++;
+    });
+    var res = document.getElementById('exGExprRes');
+    if (res) {
+      res.innerHTML = ok === gExprData.length
+        ? '<i class="ph ph-check-circle"></i> ¡Perfetto! Conocés todas las expresiones.'
+        : '<i class="ph ph-x-circle"></i> '+ok+'/'+gExprData.length+' correctas.';
+      res.className = 'ipp-result ' + (ok === gExprData.length ? 'ok' : 'err');
+    }
+  }
+
+  /* ═══ INIT — exponer + builds con try-catch ═══ */
+  window.ippAudio     = ippAudio;
+
+/*IPP_MP3_SHIM_v3*/
+(function(){
+  if (window.__ippMp3Init) return; window.__ippMp3Init = true;
+  window.IPP_AUDIO = {"53681472":"https://italianoperpiacere.com/web/content/1614","63630357":"https://italianoperpiacere.com/web/content/1690","75290130":"https://italianoperpiacere.com/web/content/1786","78395944":"https://italianoperpiacere.com/web/content/1772","86591899":"https://italianoperpiacere.com/web/content/1633","89080474":"https://italianoperpiacere.com/web/content/1720","95406883":"https://italianoperpiacere.com/web/content/1617","a86fca61":"https://italianoperpiacere.com/web/content/1567","4348cdd3":"https://italianoperpiacere.com/web/content/1566","09ad1c8b":"https://italianoperpiacere.com/web/content/1568","0fa6409c":"https://italianoperpiacere.com/web/content/1569","6cd1646d":"https://italianoperpiacere.com/web/content/1570","e8576a28":"https://italianoperpiacere.com/web/content/1571","3fdd34b1":"https://italianoperpiacere.com/web/content/1572","51e39f0d":"https://italianoperpiacere.com/web/content/1573","a318859d":"https://italianoperpiacere.com/web/content/1574","24a8ee7f":"https://italianoperpiacere.com/web/content/1575","dccf3877":"https://italianoperpiacere.com/web/content/1576","3158fd81":"https://italianoperpiacere.com/web/content/1577","fed85b3c":"https://italianoperpiacere.com/web/content/1578","4870815e":"https://italianoperpiacere.com/web/content/1579","528d9e8c":"https://italianoperpiacere.com/web/content/1580","fee9bdcb":"https://italianoperpiacere.com/web/content/1581","34ba50d0":"https://italianoperpiacere.com/web/content/1582","3c2846f2":"https://italianoperpiacere.com/web/content/1583","6e229311":"https://italianoperpiacere.com/web/content/1584","489a1b10":"https://italianoperpiacere.com/web/content/1585","58b4f894":"https://italianoperpiacere.com/web/content/1586","c4f8871e":"https://italianoperpiacere.com/web/content/1587","11677de4":"https://italianoperpiacere.com/web/content/1588","5d2c43bb":"https://italianoperpiacere.com/web/content/1589","af20d591":"https://italianoperpiacere.com/web/content/1590","90c7edb2":"https://italianoperpiacere.com/web/content/1591","46ae6b6e":"https://italianoperpiacere.com/web/content/1592","59e384ef":"https://italianoperpiacere.com/web/content/1593","60b06410":"https://italianoperpiacere.com/web/content/1594","99ac3e50":"https://italianoperpiacere.com/web/content/1595","73b014fe":"https://italianoperpiacere.com/web/content/1596","35e6a54b":"https://italianoperpiacere.com/web/content/1597","c1198fab":"https://italianoperpiacere.com/web/content/1600","5972c5ef":"https://italianoperpiacere.com/web/content/1598","d476c527":"https://italianoperpiacere.com/web/content/1599","faf5c8ab":"https://italianoperpiacere.com/web/content/1601","a892ed22":"https://italianoperpiacere.com/web/content/1604","cc1c6462":"https://italianoperpiacere.com/web/content/1603","f4332b56":"https://italianoperpiacere.com/web/content/1602","614d2f8f":"https://italianoperpiacere.com/web/content/1606","4a4f3ef4":"https://italianoperpiacere.com/web/content/1605","e830d761":"https://italianoperpiacere.com/web/content/1607","e2a5c5c8":"https://italianoperpiacere.com/web/content/1608","795180ae":"https://italianoperpiacere.com/web/content/1609","2b06b03b":"https://italianoperpiacere.com/web/content/1611","56c77741":"https://italianoperpiacere.com/web/content/1612","0977161f":"https://italianoperpiacere.com/web/content/1610","629bff3f":"https://italianoperpiacere.com/web/content/1615","7cffa02f":"https://italianoperpiacere.com/web/content/1613","7c5dc5f2":"https://italianoperpiacere.com/web/content/1616","f821f079":"https://italianoperpiacere.com/web/content/1618","c5e72407":"https://italianoperpiacere.com/web/content/1620","1b642b02":"https://italianoperpiacere.com/web/content/1619","5ee29bb2":"https://italianoperpiacere.com/web/content/1621","3493c841":"https://italianoperpiacere.com/web/content/1622","97cfff31":"https://italianoperpiacere.com/web/content/1623","bc864dea":"https://italianoperpiacere.com/web/content/1624","568ea28c":"https://italianoperpiacere.com/web/content/1625","1029a385":"https://italianoperpiacere.com/web/content/1626","92f0b447":"https://italianoperpiacere.com/web/content/1628","8d8f4928":"https://italianoperpiacere.com/web/content/1627","eeed7fe5":"https://italianoperpiacere.com/web/content/1629","126065e4":"https://italianoperpiacere.com/web/content/1630","c512a01b":"https://italianoperpiacere.com/web/content/1631","1a7a9ec0":"https://italianoperpiacere.com/web/content/1632","5ab60786":"https://italianoperpiacere.com/web/content/1634","bd12cefe":"https://italianoperpiacere.com/web/content/1635","077e09f1":"https://italianoperpiacere.com/web/content/1636","ae5a7e6e":"https://italianoperpiacere.com/web/content/1637","6e6f2496":"https://italianoperpiacere.com/web/content/1638","fbd3f596":"https://italianoperpiacere.com/web/content/1639","3070e3f2":"https://italianoperpiacere.com/web/content/1640","e4a34598":"https://italianoperpiacere.com/web/content/1641","38ffe613":"https://italianoperpiacere.com/web/content/1642","a7593639":"https://italianoperpiacere.com/web/content/1643","1e3d0c2c":"https://italianoperpiacere.com/web/content/1644","784c7cd9":"https://italianoperpiacere.com/web/content/1645","b2f39625":"https://italianoperpiacere.com/web/content/1647","725a332a":"https://italianoperpiacere.com/web/content/1648","22316e3f":"https://italianoperpiacere.com/web/content/1646","a0a9f745":"https://italianoperpiacere.com/web/content/1650","bd2558c8":"https://italianoperpiacere.com/web/content/1649","aed44cc3":"https://italianoperpiacere.com/web/content/1651","3c36ac3e":"https://italianoperpiacere.com/web/content/1652","ba353236":"https://italianoperpiacere.com/web/content/1653","f3c702ba":"https://italianoperpiacere.com/web/content/1655","5afb877b":"https://italianoperpiacere.com/web/content/1654","0477e27d":"https://italianoperpiacere.com/web/content/1656","fbbacb46":"https://italianoperpiacere.com/web/content/1657","428fa5a2":"https://italianoperpiacere.com/web/content/1658","0bc86086":"https://italianoperpiacere.com/web/content/1659","0e4e36b7":"https://italianoperpiacere.com/web/content/1660","2f9fd2d0":"https://italianoperpiacere.com/web/content/1661","1c488b2c":"https://italianoperpiacere.com/web/content/1662","acd6c47a":"https://italianoperpiacere.com/web/content/1663","9bd6f478":"https://italianoperpiacere.com/web/content/1664","26ae2b10":"https://italianoperpiacere.com/web/content/1665","6d0db316":"https://italianoperpiacere.com/web/content/1666","fa69145c":"https://italianoperpiacere.com/web/content/1667","6b11094a":"https://italianoperpiacere.com/web/content/1668","df283d04":"https://italianoperpiacere.com/web/content/1669","38d0f6c5":"https://italianoperpiacere.com/web/content/1670","ce898da8":"https://italianoperpiacere.com/web/content/1671","5b7c836e":"https://italianoperpiacere.com/web/content/1672","15a028c6":"https://italianoperpiacere.com/web/content/1673","f49e85b0":"https://italianoperpiacere.com/web/content/1674","a8c5543e":"https://italianoperpiacere.com/web/content/1675","91fa62d0":"https://italianoperpiacere.com/web/content/1676","3f1aa1c1":"https://italianoperpiacere.com/web/content/1677","53196dee":"https://italianoperpiacere.com/web/content/1680","f2c464b1":"https://italianoperpiacere.com/web/content/1678","a72e8f2a":"https://italianoperpiacere.com/web/content/1679","b74d5aa6":"https://italianoperpiacere.com/web/content/1681","07f4c121":"https://italianoperpiacere.com/web/content/1683","1177503c":"https://italianoperpiacere.com/web/content/1682","3cd8b1b8":"https://italianoperpiacere.com/web/content/1684","63e60973":"https://italianoperpiacere.com/web/content/1685","18775b41":"https://italianoperpiacere.com/web/content/1687","f6acd6dd":"https://italianoperpiacere.com/web/content/1686","eb064d08":"https://italianoperpiacere.com/web/content/1688","a4c11bb1":"https://italianoperpiacere.com/web/content/1689","3b608498":"https://italianoperpiacere.com/web/content/1691","1307d43b":"https://italianoperpiacere.com/web/content/1692","803a6067":"https://italianoperpiacere.com/web/content/1693","2137090c":"https://italianoperpiacere.com/web/content/1696","44dd6b9c":"https://italianoperpiacere.com/web/content/1698","e6d77c7f":"https://italianoperpiacere.com/web/content/1694","fa8082fb":"https://italianoperpiacere.com/web/content/1699","202f38eb":"https://italianoperpiacere.com/web/content/1695","9b8c0008":"https://italianoperpiacere.com/web/content/1697","266ad017":"https://italianoperpiacere.com/web/content/1700","c1700f93":"https://italianoperpiacere.com/web/content/1701","5c08a584":"https://italianoperpiacere.com/web/content/1702","30a46446":"https://italianoperpiacere.com/web/content/1704","929d2557":"https://italianoperpiacere.com/web/content/1703","ed421789":"https://italianoperpiacere.com/web/content/1705","b8ebc7ab":"https://italianoperpiacere.com/web/content/1706","985791bc":"https://italianoperpiacere.com/web/content/1707","c1cc84f5":"https://italianoperpiacere.com/web/content/1708","87445f96":"https://italianoperpiacere.com/web/content/1709","d7806d1e":"https://italianoperpiacere.com/web/content/1710","25e2f906":"https://italianoperpiacere.com/web/content/1711","32bcccb6":"https://italianoperpiacere.com/web/content/1712","1e28de8d":"https://italianoperpiacere.com/web/content/1713","9b127a4e":"https://italianoperpiacere.com/web/content/1714","abcfdb05":"https://italianoperpiacere.com/web/content/1715","cdcc7b0e":"https://italianoperpiacere.com/web/content/1716","bda7dc11":"https://italianoperpiacere.com/web/content/1717","c6fa6d01":"https://italianoperpiacere.com/web/content/1718","95c694f3":"https://italianoperpiacere.com/web/content/1719","d81af5c0":"https://italianoperpiacere.com/web/content/1721","14e7cc62":"https://italianoperpiacere.com/web/content/1722","becb0391":"https://italianoperpiacere.com/web/content/1723","2737b2a0":"https://italianoperpiacere.com/web/content/1725","1c45f1e1":"https://italianoperpiacere.com/web/content/1724","1866d385":"https://italianoperpiacere.com/web/content/1726","ad8141bb":"https://italianoperpiacere.com/web/content/1727","81db4635":"https://italianoperpiacere.com/web/content/1728","62bd07d2":"https://italianoperpiacere.com/web/content/1729","e444f489":"https://italianoperpiacere.com/web/content/1730","d88917de":"https://italianoperpiacere.com/web/content/1731","84a77709":"https://italianoperpiacere.com/web/content/1732","470cdfb2":"https://italianoperpiacere.com/web/content/1733","3b744d98":"https://italianoperpiacere.com/web/content/1734","5b07b7fa":"https://italianoperpiacere.com/web/content/1735","55dcf781":"https://italianoperpiacere.com/web/content/1736","d82ac51a":"https://italianoperpiacere.com/web/content/1737","92a032bd":"https://italianoperpiacere.com/web/content/1738","1b6a264e":"https://italianoperpiacere.com/web/content/1739","df03d88a":"https://italianoperpiacere.com/web/content/1740","015cc3c6":"https://italianoperpiacere.com/web/content/1741","1208feb1":"https://italianoperpiacere.com/web/content/1742","5af97a54":"https://italianoperpiacere.com/web/content/1743","a57ea68d":"https://italianoperpiacere.com/web/content/1744","936b5c50":"https://italianoperpiacere.com/web/content/1745","77e69b74":"https://italianoperpiacere.com/web/content/1746","3e339851":"https://italianoperpiacere.com/web/content/1747","fc87f496":"https://italianoperpiacere.com/web/content/1748","34bf9775":"https://italianoperpiacere.com/web/content/1749","3cdba654":"https://italianoperpiacere.com/web/content/1751","df657ad0":"https://italianoperpiacere.com/web/content/1750","7df5f047":"https://italianoperpiacere.com/web/content/1752","0476e78a":"https://italianoperpiacere.com/web/content/1753","004136d9":"https://italianoperpiacere.com/web/content/1754","b7f678a0":"https://italianoperpiacere.com/web/content/1755","2659fa52":"https://italianoperpiacere.com/web/content/1756","40c225ea":"https://italianoperpiacere.com/web/content/1757","4999a9eb":"https://italianoperpiacere.com/web/content/1758","3c5eef09":"https://italianoperpiacere.com/web/content/1759","4dcfca31":"https://italianoperpiacere.com/web/content/1760","eabedb56":"https://italianoperpiacere.com/web/content/1761","ed465c2a":"https://italianoperpiacere.com/web/content/1762","a7fdd363":"https://italianoperpiacere.com/web/content/1763","5ab7d1f3":"https://italianoperpiacere.com/web/content/1764","69d7dfd2":"https://italianoperpiacere.com/web/content/1765","1eb9a508":"https://italianoperpiacere.com/web/content/1766","163823ba":"https://italianoperpiacere.com/web/content/1767","c845d0b1":"https://italianoperpiacere.com/web/content/1768","a402df3c":"https://italianoperpiacere.com/web/content/1769","419ffd05":"https://italianoperpiacere.com/web/content/1770","c6055a7f":"https://italianoperpiacere.com/web/content/1771","ee1e5b47":"https://italianoperpiacere.com/web/content/1773","94ca6ea1":"https://italianoperpiacere.com/web/content/1774","fffb2458":"https://italianoperpiacere.com/web/content/1775","72e319f6":"https://italianoperpiacere.com/web/content/1776","49b0f73d":"https://italianoperpiacere.com/web/content/1777","0717becb":"https://italianoperpiacere.com/web/content/1778","2ca003f8":"https://italianoperpiacere.com/web/content/1779","4ccc43a9":"https://italianoperpiacere.com/web/content/1780","dc6134ac":"https://italianoperpiacere.com/web/content/1781","86b299ca":"https://italianoperpiacere.com/web/content/1782","f2968bb2":"https://italianoperpiacere.com/web/content/1783","a90d5ea0":"https://italianoperpiacere.com/web/content/1784","024c6a4c":"https://italianoperpiacere.com/web/content/1785","d28f8b68":"https://italianoperpiacere.com/web/content/1787","aa56941b":"https://italianoperpiacere.com/web/content/1788","9e0c57ca":"https://italianoperpiacere.com/web/content/1789","c4979b85":"https://italianoperpiacere.com/web/content/1790","e98727c0":"https://italianoperpiacere.com/web/content/1791","7544e120":"https://italianoperpiacere.com/web/content/1794","2baebb13":"https://italianoperpiacere.com/web/content/1793","dea9b641":"https://italianoperpiacere.com/web/content/1792","d4dd6a26":"https://italianoperpiacere.com/web/content/1795","2541071d":"https://italianoperpiacere.com/web/content/1796","65ffed0a":"https://italianoperpiacere.com/web/content/1797","5036c560":"https://italianoperpiacere.com/web/content/1798","97af351a":"https://italianoperpiacere.com/web/content/1799","a43e64ee":"https://italianoperpiacere.com/web/content/1800","fbe3524e":"https://italianoperpiacere.com/web/content/1802","6fadb46f":"https://italianoperpiacere.com/web/content/1801","e45fb480":"https://italianoperpiacere.com/web/content/1803","bc236443":"https://italianoperpiacere.com/web/content/1804","78f25908":"https://italianoperpiacere.com/web/content/1805","d6022f65":"https://italianoperpiacere.com/web/content/1806","46cb7b97":"https://italianoperpiacere.com/web/content/1807","218a14e8":"https://italianoperpiacere.com/web/content/1808","5237297e":"https://italianoperpiacere.com/web/content/1809","d7dc5436":"https://italianoperpiacere.com/web/content/1810","fdccfcda":"https://italianoperpiacere.com/web/content/1811","edf9d16f":"https://italianoperpiacere.com/web/content/1812","0c5e3374":"https://italianoperpiacere.com/web/content/1813","3becadf4":"https://italianoperpiacere.com/web/content/1814","2450a252":"https://italianoperpiacere.com/web/content/1815","c1255ec7":"https://italianoperpiacere.com/web/content/1816","2eb904d6":"https://italianoperpiacere.com/web/content/1817","56e2705a":"https://italianoperpiacere.com/web/content/1818","2372ed29":"https://italianoperpiacere.com/web/content/1819","4c2964db":"https://italianoperpiacere.com/web/content/1820","6e285cee":"https://italianoperpiacere.com/web/content/1821","6ef3886f":"https://italianoperpiacere.com/web/content/1822","ac228fb6":"https://italianoperpiacere.com/web/content/1823","427c5b75":"https://italianoperpiacere.com/web/content/1824","f5ad8540":"https://italianoperpiacere.com/web/content/1825","b3f612cb":"https://italianoperpiacere.com/web/content/1826","95d629d4":"https://italianoperpiacere.com/web/content/1827","34ada081":"https://italianoperpiacere.com/web/content/1828","ef64c20e":"https://italianoperpiacere.com/web/content/1829","6c5b93e8":"https://italianoperpiacere.com/web/content/1830","132bbb31":"https://italianoperpiacere.com/web/content/1831","0bc7d589":"https://italianoperpiacere.com/web/content/1834","1a68cb5f":"https://italianoperpiacere.com/web/content/1832","481b3add":"https://italianoperpiacere.com/web/content/1833","9e22e919":"https://italianoperpiacere.com/web/content/1835","722b6efc":"https://italianoperpiacere.com/web/content/1836","4a958b81":"https://italianoperpiacere.com/web/content/1837","0d389b12":"https://italianoperpiacere.com/web/content/1838","7620c2cb":"https://italianoperpiacere.com/web/content/1839","b1d04a64":"https://italianoperpiacere.com/web/content/1840","a66b9d0f":"https://italianoperpiacere.com/web/content/1841","73a479ea":"https://italianoperpiacere.com/web/content/1842","9c877ce4":"https://italianoperpiacere.com/web/content/1843","09c1c224":"https://italianoperpiacere.com/web/content/1844","a52b5c47":"https://italianoperpiacere.com/web/content/1845","dd2d77b5":"https://italianoperpiacere.com/web/content/1846","c4b29ee3":"https://italianoperpiacere.com/web/content/1847","789b9fbd":"https://italianoperpiacere.com/web/content/1848","e11668a1":"https://italianoperpiacere.com/web/content/1849","5fe8174d":"https://italianoperpiacere.com/web/content/1850","3dc99283":"https://italianoperpiacere.com/web/content/1851","eb273dbc":"https://italianoperpiacere.com/web/content/1852","4b962946":"https://italianoperpiacere.com/web/content/1853","e2b91004":"https://italianoperpiacere.com/web/content/1855","ab79f9a7":"https://italianoperpiacere.com/web/content/1854","d120411a":"https://italianoperpiacere.com/web/content/1856","6b3864ed":"https://italianoperpiacere.com/web/content/1858","f732e09c":"https://italianoperpiacere.com/web/content/1857","ceb37fb2":"https://italianoperpiacere.com/web/content/1859","4cf52061":"https://italianoperpiacere.com/web/content/1860","bf715484":"https://italianoperpiacere.com/web/content/1861","822997ff":"https://italianoperpiacere.com/web/content/1863","d793291c":"https://italianoperpiacere.com/web/content/1862","e888126b":"https://italianoperpiacere.com/web/content/1864","bb67026c":"https://italianoperpiacere.com/web/content/1865","625c4543":"https://italianoperpiacere.com/web/content/1866","4399143e":"https://italianoperpiacere.com/web/content/1867","064adddd":"https://italianoperpiacere.com/web/content/1868","6f399b0a":"https://italianoperpiacere.com/web/content/1869","3b103f50":"https://italianoperpiacere.com/web/content/1870","dcf90237":"https://italianoperpiacere.com/web/content/1872","624fc175":"https://italianoperpiacere.com/web/content/1871","c5772bb1":"https://italianoperpiacere.com/web/content/1873","8b016034":"https://italianoperpiacere.com/web/content/1874","a5cd91d3":"https://italianoperpiacere.com/web/content/1875","642733c8":"https://italianoperpiacere.com/web/content/1876","d6c171c4":"https://italianoperpiacere.com/web/content/1878","18f64889":"https://italianoperpiacere.com/web/content/1877","75f04bcf":"https://italianoperpiacere.com/web/content/1879","e479c3ff":"https://italianoperpiacere.com/web/content/1880","8a55ad83":"https://italianoperpiacere.com/web/content/1881","b60f665d":"https://italianoperpiacere.com/web/content/1882","797671d6":"https://italianoperpiacere.com/web/content/1883","18b82bcd":"https://italianoperpiacere.com/web/content/1884","c2955888":"https://italianoperpiacere.com/web/content/1885","fbf68dee":"https://italianoperpiacere.com/web/content/1886","b32520e6":"https://italianoperpiacere.com/web/content/1887","087d35c3":"https://italianoperpiacere.com/web/content/1888","7bf17097":"https://italianoperpiacere.com/web/content/1889","b213d47c":"https://italianoperpiacere.com/web/content/1890","e8dd5d37":"https://italianoperpiacere.com/web/content/1891","a72bc901":"https://italianoperpiacere.com/web/content/1892","d2b93022":"https://italianoperpiacere.com/web/content/1894","ede3f7b5":"https://italianoperpiacere.com/web/content/1893","2a2a23a8":"https://italianoperpiacere.com/web/content/1896","6c29e3c0":"https://italianoperpiacere.com/web/content/1895","d2b36e18":"https://italianoperpiacere.com/web/content/1897","15bae672":"https://italianoperpiacere.com/web/content/1898","6bb7d64d":"https://italianoperpiacere.com/web/content/1899","a56d39a3":"https://italianoperpiacere.com/web/content/1901","2c7a4533":"https://italianoperpiacere.com/web/content/1900","e6ffc982":"https://italianoperpiacere.com/web/content/1902","f272f922":"https://italianoperpiacere.com/web/content/1903","548f2d53":"https://italianoperpiacere.com/web/content/1904","c8ebaab4":"https://italianoperpiacere.com/web/content/1905","12d9d065":"https://italianoperpiacere.com/web/content/1906","cf4eaf13":"https://italianoperpiacere.com/web/content/1907","ea56d27f":"https://italianoperpiacere.com/web/content/1908","4e1f2e02":"https://italianoperpiacere.com/web/content/1909","65787fec":"https://italianoperpiacere.com/web/content/1910","bc91f3c4":"https://italianoperpiacere.com/web/content/1911","dee3ba92":"https://italianoperpiacere.com/web/content/1912","92d91b1a":"https://italianoperpiacere.com/web/content/1913","60f182fd":"https://italianoperpiacere.com/web/content/1914","a41ac701":"https://italianoperpiacere.com/web/content/1916","182c6593":"https://italianoperpiacere.com/web/content/1915","f7e956ba":"https://italianoperpiacere.com/web/content/1917","754a1b74":"https://italianoperpiacere.com/web/content/1918","be7fec9d":"https://italianoperpiacere.com/web/content/1919","73bb6d18":"https://italianoperpiacere.com/web/content/1920","ae66619b":"https://italianoperpiacere.com/web/content/1921","9c69d2d0":"https://italianoperpiacere.com/web/content/1922","638357ea":"https://italianoperpiacere.com/web/content/1923","5eeb0276":"https://italianoperpiacere.com/web/content/1924","8cc95370":"https://italianoperpiacere.com/web/content/1925","45e1515f":"https://italianoperpiacere.com/web/content/1926","b01877a6":"https://italianoperpiacere.com/web/content/1930","59f23b8b":"https://italianoperpiacere.com/web/content/1931","7364a2e2":"https://italianoperpiacere.com/web/content/1932","5f17fa53":"https://italianoperpiacere.com/web/content/1933","695619c0":"https://italianoperpiacere.com/web/content/1934","83abce7e":"https://italianoperpiacere.com/web/content/1935","dcf3b41e":"https://italianoperpiacere.com/web/content/1936","8fc0d7c7":"https://italianoperpiacere.com/web/content/1937","46341c52":"https://italianoperpiacere.com/web/content/1938","68df9af4":"https://italianoperpiacere.com/web/content/1939","1964e450":"https://italianoperpiacere.com/web/content/1940","59ce30b8":"https://italianoperpiacere.com/web/content/1941","c1135499":"https://italianoperpiacere.com/web/content/1942","66fb5bda":"https://italianoperpiacere.com/web/content/1943","ae9b8b1e":"https://italianoperpiacere.com/web/content/1944","33e003f0":"https://italianoperpiacere.com/web/content/1945","ed3f913e":"https://italianoperpiacere.com/web/content/1946","fd99b59f":"https://italianoperpiacere.com/web/content/1947","b6f6f8cd":"https://italianoperpiacere.com/web/content/1948","639dca80":"https://italianoperpiacere.com/web/content/1949","08fea238":"https://italianoperpiacere.com/web/content/1950"};
+  function _norm(s){ return String(s).replace(/\s+/g,' ').trim(); }
+  function _hash(s){ var h=0x811c9dc5; for(var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=(h+((h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24)))>>>0; } return ('0000000'+h.toString(16)).slice(-8); }
+  window.__ippKey = function(t,g){ return _hash((g==='m'?'m':'f')+'|'+_norm(t)); };
+  // ── Reproductor único + desbloqueo en el primer gesto (clave para móvil/iOS) ──
+  var SILENT = 'data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
+  var player = new Audio(); player.preload = 'auto';
+  var unlocked = false, playing = false, curEnd = null, curFail = null;
+  function unlock(){
+    if (unlocked) return; unlocked = true;
+    try { player.src = SILENT; var pp = player.play();
+      if (pp && pp.then) pp.then(function(){ try{ player.pause(); player.currentTime=0; }catch(e){} }).catch(function(){ unlocked = false; });
+    } catch(e){ unlocked = false; }
+  }
+  ['pointerdown','touchstart','mousedown','keydown','click'].forEach(function(ev){
+    document.addEventListener(ev, unlock, { capture:true, passive:true });
+  });
+  player.addEventListener('ended', function(){ playing=false; var f=curEnd; curEnd=null; curFail=null; if(f) f(); });
+  player.addEventListener('error', function(){ if(!playing) return; playing=false; var f=curFail||curEnd; curEnd=null; curFail=null; if(f) f(); });
+  window.__ippStopUrl = function(){ try{ player.pause(); }catch(e){} playing=false; curEnd=null; curFail=null; };
+  window.__ippPlayUrl = function(url, onstart, onend, onfail){
+    try{ player.pause(); }catch(e){}
+    curEnd = onend || null; curFail = onfail || null; playing = true;
+    try{ player.src = url; player.currentTime = 0; }catch(e){}
+    if (onstart) { try{ onstart(); }catch(e){} }
+    var pp = player.play();
+    if (pp && pp.catch) pp.catch(function(){ playing=false; var f=curFail; curEnd=null; curFail=null; if(f) f(); });
+  };
+
+  var ss = window.speechSynthesis; if(!ss) return;
+  var _speak = ss.speak.bind(ss), _cancel = ss.cancel.bind(ss);
+  try{ Object.defineProperty(ss,'speaking',{configurable:true,get:function(){ return playing; }}); }catch(e){}
+  ss.cancel = function(){ window.__ippStopUrl(); try{ _cancel(); }catch(e){} };
+  ss.speak = function(u){
+    try{
+      var text = (u && u.text!=null) ? String(u.text) : '';
+      var g = (window.__ippG==='m') ? 'm' : 'f';
+      // busca con el género actual; si no hay (p.ej. "reproducir todo" que no setea género), prueba el otro
+      var url = window.IPP_AUDIO[window.__ippKey(text,g)] || window.IPP_AUDIO[window.__ippKey(text, g==='m'?'f':'m')];
+      if(url){
+        window.__ippPlayUrl(url,
+          function(){ if(u&&typeof u.onstart==='function'){ try{u.onstart();}catch(e){} } },
+          function(){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(e){} } },
+          function(){ try{ _speak(u); }catch(e){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(_){} } } });
+        return;
+      }
+    }catch(e){}
+    try{ _speak(u); }catch(e){}
+  };
+})();
+
+
+  window.ippStop      = ippStop;
+  window.ippRetry     = ippRetry;
+  window.checkExAlfa  = checkExAlfa;
+  window.revealExAlfa = revealExAlfa;
+  window.checkExVF    = checkExVF;
+  window.checkChiInput= checkChiInput;
+  window.checkAllChi  = checkAllChi;
+  window.checkSaluto  = checkSaluto;
+  window.checkSitu    = checkSitu;
+  window.checkAllSitu = checkAllSitu;
+  window.checkNumOpt  = checkNumOpt;
+  window.checkOrden   = checkOrden;
+  window.checkGExpr   = checkGExpr;
+  window.checkAllGExpr= checkAllGExpr;
+
+  var builds = [
+    buildAlfaFull, buildNums, buildEspr,
+    buildExAlfa, buildExVF, buildExChiamarsi,
+    buildExSaluti, buildExSituaciones, buildExNumeri,
+    buildOrden, buildExGExpr
+  ];
+  builds.forEach(function(fn) {
+    try { fn(); } catch(e) { console.warn('[IPP build error]', fn.name, e); }
+  });
+})();
+</script>
+<!-- ===== /BLOQUE Unità 1 — Gramática ===== --></template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><!-- ===== BLOQUE: Unità 1 — Gramática ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-title em { font-style: italic; color: var(--red); }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--red); font-style: italic; }
+
+  /* ===== Rule box ===== */
+  .ipp-rule {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--mc);
+    margin-bottom: 1.2rem;
+  }
+  .ipp-rule__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.08rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.85rem;
+  }
+  .ipp-rule p { margin: 0 0 0.5rem; line-height: 1.65; font-size: clamp(0.88rem, 2.2vw, 0.92rem); }
+  .ipp-rule p:last-child { margin-bottom: 0; }
+  .ipp-rule em { font-style: italic; color: var(--red); }
+  .ipp-rule strong { color: var(--mc-dk); }
+
+  .ipp-warn {
+    display: flex; gap: 0.55rem; align-items: flex-start;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: #555; line-height: 1.6;
+    padding: 0.6rem 0;
+  }
+  .ipp-warn .ph { color: #c89500; font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+  .ipp-warn strong { color: var(--mc-text); }
+
+  /* ===== Tablas ===== */
+  .ipp-table { width: 100%; border-collapse: collapse; font-size: clamp(0.86rem, 2.2vw, 0.92rem); }
+  .ipp-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.55rem 1rem; text-align: left;
+    font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-table th:first-child { border-radius: 8px 0 0 0; }
+  .ipp-table th:last-child  { border-radius: 0 8px 0 0; }
+  .ipp-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-table tr:last-child td { border-bottom: none; }
+  .ipp-table tr:nth-child(even) td { background: var(--cream); }
+  .ipp-table .it { font-style: italic; color: #555; }
+  .ipp-table .pro { font-weight: 700; color: var(--mc-dk); }
+  .ipp-table .pro em { font-size: 0.75rem; font-weight: 400; color: #888; }
+  .ipp-table .refl { color: var(--red); font-weight: 700; }
+  .ipp-table .stem { color: var(--black); }
+  .ipp-table .end  { color: var(--teal); font-weight: 700; }
+  .ipp-table .row-formal td { background: rgba(82,142,116,0.07); }
+
+  .ipp-conj-note {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #666; padding: 0.7rem 0 0;
+    line-height: 1.65;
+  }
+  .ipp-conj-note .dot {
+    display: inline-block; width: 9px; height: 9px;
+    border-radius: 50%; margin-right: 6px; vertical-align: 1px;
+  }
+  .ipp-conj-note .dot.red  { background: var(--red); }
+  .ipp-conj-note .dot.teal { background: var(--teal); }
+
+  /* ===== Alfabeto ===== */
+  .ipp-alfa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 0.5rem; margin-bottom: 0.85rem;
+  }
+  .ipp-alfa__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .ipp-alfa__cell.foreign { background: #fdf3d0; border: 1px dashed #c89500; }
+  .ipp-alfa__ltr {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--mc-dk);
+    min-width: 24px;
+  }
+  .ipp-alfa__sep { font-size: 0.7rem; color: #aaa; }
+  .ipp-alfa__cit { font-size: 0.85rem; font-weight: 500; }
+  .ipp-alfa__legend {
+    font-size: 0.8rem; color: #888;
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.45rem;
+  }
+  .ipp-alfa__legend i.swatch {
+    display: inline-block; width: 14px; height: 14px;
+    background: #fdf3d0; border: 1px dashed #c89500;
+    border-radius: 3px;
+  }
+
+  /* ===== Saludos ===== */
+  .ipp-greet {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.85rem; margin-bottom: 1rem;
+  }
+  .ipp-greet__card {
+    background: var(--cream); border-radius: var(--r);
+    padding: 1rem 1.2rem;
+  }
+  .ipp-greet__head {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin: 0 0 0.7rem;
+  }
+  .ipp-greet__head.informal { color: var(--mc); }
+  .ipp-greet__head.formal   { color: var(--teal); }
+  .ipp-greet__head.neutro   { color: #c89500; }
+  .ipp-greet__row {
+    display: flex; flex-direction: column;
+    padding: 0.38rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-greet__row:last-child { border-bottom: none; }
+  .ipp-greet__it { font-weight: 700; color: var(--black); font-size: 0.88rem; }
+  .ipp-greet__es { color: #777; font-style: italic; font-size: 0.78rem; line-height: 1.4; }
+  .ipp-greet__es em { font-size: 0.75em; color: #999; }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.5rem;
+  }
+  .ipp-nums__cell {
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.5rem; text-align: center;
+  }
+  .ipp-nums__n {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--mc-dk);
+  }
+  .ipp-nums__w { font-size: 0.78rem; color: #555; margin-top: 0.1rem; }
+
+  /* ===== Expresiones ===== */
+  .ipp-espr { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ipp-espr__item {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.8rem 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center; gap: 1rem;
+  }
+  .ipp-espr__it { font-weight: 700; font-size: 0.92rem; color: var(--mc-dk); }
+  .ipp-espr__es { font-style: italic; font-size: 0.87rem; color: #666; }
+  .ipp-espr__audio {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+    padding: 0.25rem 0.7rem; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .ipp-espr__audio:hover { background: var(--mc-bg); }
+  .ipp-espr__audio .ph { font-size: 1rem; }
+
+  /* ===== Ejercicios ===== */
+  .ipp-ex { margin-top: 1.75rem; }
+  .ipp-ex__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+  }
+  .ipp-ex__desc {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 0.8rem;
+  }
+  .ipp-ex__card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+
+  /* Fila genérica de ejercicio */
+  .ipp-row {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.91rem; line-height: 1.65;
+  }
+  .ipp-row:last-child { margin-bottom: 0; }
+  .ipp-row__num {
+    font-size: 0.75rem; color: #aaa;
+    min-width: 20px; margin-right: 0.35rem;
+  }
+  .ipp-row__pron {
+    color: var(--mc-dk); font-weight: 700;
+    margin-right: 0.4rem;
+  }
+  .ipp-row__pron em { font-size: 0.75rem; font-weight: 400; color: #888; font-style: italic; }
+  .ipp-row em { font-style: italic; }
+
+  /* Inputs */
+  .ipp-input {
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    padding: 0.22rem 0.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    background: var(--white); text-align: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-input:focus { outline: none; border-color: var(--mc); }
+  .ipp-input.sm   { width: 54px; }
+  .ipp-input.md   { min-width: 110px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.lg   { width: 100%; max-width: 320px; text-align: left; padding-left: 0.55rem; }
+  .ipp-input.ok   { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-input.err  { border-color: var(--red);   background: var(--err-bg); }
+
+  /* Botones de opción */
+  .ipp-opt {
+    padding: 0.32rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 30px; background: var(--white);
+    font-family: inherit; font-size: 0.84rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+    color: var(--black);
+  }
+  .ipp-opt:hover:not(.disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-opt.correct  { background: var(--ok-bg);  border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-opt.wrong    { background: var(--err-bg); border-color: var(--red);   color: #7a1f14; }
+  .ipp-opt.disabled { pointer-events: none; opacity: 0.6; }
+
+  /* Botón verificar */
+  .ipp-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.4rem; border: none; border-radius: 30px;
+    background: var(--mc-dk); color: var(--white);
+    font-family: inherit; font-size: 0.87rem; font-weight: 700;
+    cursor: pointer; transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc); }
+  .ipp-btn.ghost {
+    background: none; border: 1.5px solid var(--mc-dk); color: var(--mc-dk);
+  }
+  .ipp-btn.ghost:hover { background: var(--mc-bg); }
+  .ipp-btn-row {
+    display: flex; flex-wrap: wrap; gap: 0.55rem;
+    margin-top: 0.85rem;
+  }
+
+  /* Reintentar */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* Feedback */
+  .ipp-fb {
+    font-size: 0.82rem; margin-top: 0.3rem;
+    font-weight: 500; display: none;
+    line-height: 1.5;
+  }
+  .ipp-fb.ok  { color: var(--ok-tx);  display: block; }
+  .ipp-fb.err { color: var(--red);    display: block; }
+  .ipp-fb .ph { vertical-align: -2px; }
+
+  .ipp-result { margin-top: 0.75rem; font-size: 0.87rem; font-weight: 600; display: none; }
+  .ipp-result.ok  { color: var(--ok-tx); display: block; }
+  .ipp-result.err { color: var(--red);   display: block; }
+
+  /* V/F y Saludos rows */
+  .ipp-judge {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--cream); border-radius: var(--r);
+    margin-bottom: 0.5rem;
+    gap: 1rem; font-size: 0.91rem;
+    flex-wrap: wrap;
+  }
+  .ipp-judge__txt { flex: 1; line-height: 1.5; min-width: 180px; }
+  .ipp-judge__btns { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+  /* Situaciones */
+  .ipp-situ {
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.65rem;
+  }
+  .ipp-situ__ctx {
+    font-size: 0.86rem; color: #555;
+    margin: 0 0 0.45rem; font-style: italic; line-height: 1.5;
+  }
+
+  /* Ordenar */
+  .ipp-orden__row {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: var(--cream); border-radius: var(--r);
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-orden__sel {
+    padding: 0.3rem 0.4rem;
+    border: 2px solid var(--cream-dk); border-radius: 6px;
+    font-family: inherit; font-size: 0.86rem;
+    background: var(--white);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .ipp-orden__sel:focus { outline: none; border-color: var(--mc); }
+  .ipp-orden__txt { font-size: 0.91rem; font-style: italic; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg), var(--cream-dk));
+    border-top: 3px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.2rem, 3.5vw, 1.6rem) clamp(1.1rem, 3.5vw, 1.75rem);
+    margin-top: 0.5rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.05rem, 2.7vw, 1.15rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-culture p {
+    font-size: clamp(0.86rem, 2.2vw, 0.9rem);
+    line-height: 1.7; color: #555; margin: 0;
+  }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 20px; right: 20px; z-index: 9999;
+    background: var(--cream-dk); color: var(--black);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-greet { grid-template-columns: 1fr; }
+    .ipp-espr__item { grid-template-columns: 1fr 1fr; }
+    .ipp-espr__audio { grid-column: span 2; justify-self: start; }
+    .ipp-table { font-size: 0.83rem; }
+    .ipp-table th, .ipp-table td { padding: 0.5rem 0.7rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-rule { padding: 1rem 0.9rem; }
+    .ipp-ex__card { padding: 1rem 0.9rem; }
+    .ipp-row { padding: 0.7rem 0.85rem; }
+  }
+</style>
+
+<!-- ===== STOP FAB ===== -->
+<button id="ippStopFab" class="ipp-stop-fab" onclick="if(window.ippStop)window.ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-book-open-text ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 1 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Come ti chiami?</h1>
+    <p class="ipp-hero__subtitle">Fase expositiva · Las reglas confirmadas</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- INTRO SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p>En la etapa anterior <strong>descubriste las reglas por tu cuenta</strong>. Ahora las confirmamos y completamos.</p>
+        <p>Esta etapa es para <strong>leer, escuchar y fijar</strong>. Al final hay ejercicios.</p>
+      </div>
+    </div>
+
+    <!-- ① ALFABETO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">L'alfabeto italiano</h2>
+      <p class="ipp-sub">21 letras propias + 5 "straniere" — las que viste en el video</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Las 21 letras del alfabeto italiano</h3>
+        <p class="ipp-alfa__legend">
+          <i class="swatch" aria-hidden="true"></i>
+          Letras extranjeras (usadas en palabras importadas como <em>jeans, weekend, taxi</em>)
+        </p>
+        <div class="ipp-alfa" id="alfaFull"></div>
+
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>Letras que no existen en italiano:</strong> J · K · W · X · Y. Son "lettere straniere" — aparecen sólo en préstamos del inglés, francés y alemán.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><strong>La H es muda:</strong> no se pronuncia sola. Aparece en <em>ho, hai, ha, hanno</em> (verbo avere) y en combinaciones como <em>ch</em> y <em>gh</em>.</span>
+        </div>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">¿Cómo se dice? — Pronunciación clave</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Letra / Combo</th><th>Suena como…</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>C + a/o/u</strong></td><td>K (come Como)</td><td class="it">casa, cosa, cura</td></tr>
+            <tr><td><strong>C + e/i</strong></td><td>CH de "chico"</td><td class="it">ciao, cinema</td></tr>
+            <tr><td><strong>G + a/o/u</strong></td><td>G de "gato"</td><td class="it">gatto, gonna</td></tr>
+            <tr><td><strong>G + e/i</strong></td><td>Y de "yo" (suave)</td><td class="it">gelato, giro</td></tr>
+            <tr><td><strong>CH</strong></td><td>K (come Como)</td><td class="it">che, chi</td></tr>
+            <tr><td><strong>GH</strong></td><td>G de "gato"</td><td class="it">ghiaccio</td></tr>
+            <tr><td><strong>SC + e/i</strong></td><td>SH de "show"</td><td class="it">scena, sci</td></tr>
+            <tr><td><strong>GL + i</strong></td><td>LL de "llave"</td><td class="it">gli, famiglia</td></tr>
+            <tr><td><strong>GN</strong></td><td>Ñ de "año"</td><td class="it">gnocchi, bagno</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Ejercicio A -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">A · El alfabeto — completá con la ciudad correcta</h3>
+        <p class="ipp-ex__desc">Escribí la ciudad que corresponde a cada letra según la tabla de arriba.</p>
+        <div class="ipp-ex__card">
+          <div id="exAlfa"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkExAlfa()"><i class="ph ph-check-circle"></i> Verificar</button>
+            <button class="ipp-btn ghost" onclick="revealExAlfa()"><i class="ph ph-eye"></i> Ver solución</button>
+          </div>
+          <div class="ipp-result" id="exAlfaRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio B -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">B · Verdadero o Falso — las letras</h3>
+        <p class="ipp-ex__desc">¿Son correctas estas afirmaciones sobre el alfabeto italiano?</p>
+        <div class="ipp-ex__card" id="exVF"></div>
+      </div>
+    </section>
+
+    <!-- ② CHIAMARSI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Il verbo <em>chiamarsi</em></h2>
+      <p class="ipp-sub">El verbo reflexivo para decir cómo te llamás — el primero que aprendés en italiano. ¿Por qué reflexivo? Porque se refleja en uno mismo. Los verbos reflexivos siempre van acompañados de su pronombre: <em>mi · ti · si · ci · vi · si</em>.</p>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Conjugación completa</h3>
+        <p><em>Chiamarsi</em> es un verbo reflexivo: la partícula (mi/ti/si…) cambia con cada persona y va <strong>antes</strong> del verbo.</p>
+
+        <table class="ipp-table" style="margin-top:0.85rem;">
+          <thead><tr><th>Pronombre</th><th>Forma completa</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td class="pro">io</td>      <td><span class="refl">mi</span> <span class="stem">chiam</span><span class="end">o</span></td>    <td class="it">Io mi chiamo Sofia.</td></tr>
+            <tr><td class="pro">tu</td>      <td><span class="refl">ti</span> <span class="stem">chiam</span><span class="end">i</span></td>    <td class="it">Tu ti chiami Marco.</td></tr>
+            <tr><td class="pro">lui/lei</td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Lei si chiama Anna.</td></tr>
+            <tr class="row-formal"><td class="pro">Lei <em>(formal)</em></td> <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">a</span></td>    <td class="it">Signora, come si chiama?</td></tr>
+            <tr><td class="pro">noi</td>     <td><span class="refl">ci</span> <span class="stem">chiam</span><span class="end">iamo</span></td> <td class="it">Noi ci chiamiamo Sofia e Graziana.</td></tr>
+            <tr><td class="pro">voi</td>     <td><span class="refl">vi</span> <span class="stem">chiam</span><span class="end">ate</span></td>  <td class="it">Come vi chiamate?</td></tr>
+            <tr><td class="pro">loro</td>    <td><span class="refl">si</span> <span class="stem">chiam</span><span class="end">ano</span></td>  <td class="it">Si chiamano Paolo e Luca.</td></tr>
+          </tbody>
+        </table>
+
+        <p class="ipp-conj-note">
+          <span class="dot red"></span>La partícula reflexiva (<em>mi, ti, si, ci, vi, si</em>) es la parte que cambia.<br>
+          <span class="dot teal"></span>La raíz <em>chiam-</em> es siempre la misma. Las desinencias (-o, -i, -a…) son las de los verbos en -ARE.
+        </p>
+      </div>
+
+      <div class="ipp-rule">
+        <h3 class="ipp-rule__head">Preguntas y respuestas</h3>
+        <table class="ipp-table">
+          <thead><tr><th>Pregunta</th><th>Respuesta</th></tr></thead>
+          <tbody>
+            <tr><td class="it">Come ti chiami? <em style="color:#888;">(informal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama? <em style="color:#888;">(formal)</em></td><td class="it">Mi chiamo [nombre].</td></tr>
+            <tr><td class="it">Come si chiama lui/lei?</td><td class="it">Si chiama [nombre].</td></tr>
+            <tr><td class="it">Come vi chiamate?</td><td class="it">Ci chiamiamo [nombres].</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.84rem;color:#666;margin-top:0.7rem;font-style:italic;">
+          ¿Notaste que para la forma formal el verbo va en tercera persona? Igual que en castellano cuando usás "usted".
+        </p>
+      </div>
+
+      <!-- Ejercicio C -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">C · Chiamarsi — completá con mi / ti / si / ci / vi</h3>
+        <p class="ipp-ex__desc">Escribí la partícula reflexiva correcta para cada oración.</p>
+        <div class="ipp-ex__card" id="exChiamarsi"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllChi()"><i class="ph ph-check-circle"></i> Verificar todo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ SALUTI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">I saluti</h2>
+      <p class="ipp-sub">Saludos formales e informales — la diferencia importa en Italia</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-greet">
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head informal">Informale — amigos y familia</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Ciao!</span><span class="ipp-greet__es">¡Hola! / ¡Chau!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come stai?</span><span class="ipp-greet__es">¿Cómo estás?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Bene, grazie!</span><span class="ipp-greet__es">¡Bien, gracias!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">A presto!</span><span class="ipp-greet__es">¡Hasta pronto!</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head formal">Formale — adultos y desconocidos</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Come sta?</span><span class="ipp-greet__es">¿Cómo está usted?</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">ArrivederLa</span><span class="ipp-greet__es">Hasta luego (muy formal)</span></div>
+          </div>
+          <div class="ipp-greet__card">
+            <h4 class="ipp-greet__head neutro">Neutro — válido en cualquier contexto</h4>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Salve!</span><span class="ipp-greet__es">¡Hola! (seguro siempre)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Arrivederci</span><span class="ipp-greet__es">Hasta luego</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonanotte</span><span class="ipp-greet__es">Buenas noches (antes de dormir)</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Piacere!</span><span class="ipp-greet__es">¡Mucho gusto!</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buongiorno</span><span class="ipp-greet__es">Buenos días <em>(al llegar o al irse)</em></span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buon pomeriggio</span><span class="ipp-greet__es">Buenas tardes</span></div>
+            <div class="ipp-greet__row"><span class="ipp-greet__it">Buonasera</span><span class="ipp-greet__es">Buenas tardes-noche (desde las 16h) <em>(al llegar o al irse)</em></span></div>
+          </div>
+        </div>
+        <div class="ipp-warn" style="margin-top:0.4rem;">
+          <i class="ph ph-lightbulb"></i>
+          <span>¿Dudás entre formal e informal? Usá <strong>Salve</strong> — es la opción segura en cualquier situación.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio D -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D · Saludos — ¿formal, informal o neutro?</h3>
+        <p class="ipp-ex__desc">Clasificá cada saludo según el contexto en que se usa.</p>
+        <div class="ipp-ex__card" id="exSaluti"></div>
+      </div>
+
+      <!-- Ejercicio D2 -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">D2 · ¿Qué decís en esta situación?</h3>
+        <p class="ipp-ex__desc">Dado el contexto, escribí el saludo italiano correcto.</p>
+        <div class="ipp-ex__card" id="exSituaciones"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllSitu()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exSituRes"></div>
+      </div>
+    </section>
+
+    <!-- ④ NUMERI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ④</div>
+      <h2 class="ipp-title">I numeri — da 1 a 30</h2>
+      <p class="ipp-sub">Fundamentales para dar tu número de teléfono y tu edad</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-nums" id="numGrid"></div>
+        <div class="ipp-warn" style="margin-top:0.9rem;">
+          <i class="ph ph-warning"></i>
+          <span><em>uno → un / una</em> según el género.</span>
+        </div>
+        <div class="ipp-warn">
+          <i class="ph ph-warning"></i>
+          <span><em>Ventuno, ventotto</em> — se pierde la vocal cuando el número termina en vocal + <em>uno/otto</em>.</span>
+        </div>
+      </div>
+
+      <!-- Ejercicio E -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">E · Números — ¿cómo se escribe?</h3>
+        <p class="ipp-ex__desc">Elegí la forma correcta de cada número o resultado.</p>
+        <div class="ipp-ex__card" id="exNumeri"></div>
+      </div>
+    </section>
+
+    <!-- ⑤ ESPRESSIONI -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ⑤</div>
+      <h2 class="ipp-title">Espressioni utili</h2>
+      <p class="ipp-sub">Frases que ya podés usar desde hoy. Tocá el botón para escucharlas.</p>
+
+      <div class="ipp-rule">
+        <div class="ipp-espr" id="esprList"></div>
+      </div>
+    </section>
+
+    <!-- INTEGRADOR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Integrador</div>
+      <h2 class="ipp-title">Esercizio integrador</h2>
+      <p class="ipp-sub">Combiná todo lo aprendido</p>
+
+      <!-- Ejercicio F -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">F · Ordenar el diálogo</h3>
+        <p class="ipp-ex__desc">Numerá estas frases del 1 al 5 para reconstruir una presentación correcta.</p>
+        <div class="ipp-ex__card">
+          <div id="ordenLines"></div>
+          <div class="ipp-btn-row">
+            <button class="ipp-btn" onclick="checkOrden()"><i class="ph ph-check-circle"></i> Verificar orden</button>
+          </div>
+          <div class="ipp-result" id="exOrdenRes"></div>
+        </div>
+      </div>
+
+      <!-- Ejercicio G -->
+      <div class="ipp-ex">
+        <h3 class="ipp-ex__title">G · Expresiones — ¿qué dirías en estas situaciones?</h3>
+        <p class="ipp-ex__desc">Escribí la expresión italiana correcta para cada contexto.</p>
+        <div class="ipp-ex__card" id="exGExpr"></div>
+        <div class="ipp-btn-row">
+          <button class="ipp-btn" onclick="checkAllGExpr()"><i class="ph ph-check-circle"></i> Verificar</button>
+        </div>
+        <div class="ipp-result" id="exGExprRes"></div>
+      </div>
+    </section>
+
+    <!-- CULTURA -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head">
+        <i class="ph ph-globe"></i>
+        Nota culturale — Come si scrive il tuo nome?
+      </h3>
+      <p>
+        En Italia, cuando das tu nombre por teléfono o en una ventanilla, siempre deletreás usando las ciudades del alfabeto fonético. Esta costumbre viene de los años en que las comunicaciones eran poco claras y había que evitar confusiones entre letras que suenan parecido (M/N, B/P, D/T). Una forma habitual de pedir que deletreen es <strong>FARE LO SPELLING</strong>, una expresión del inglés instalada en la cultura italiana.
+        <strong>Tip práctico:</strong> aprendé de memoria al menos 10 ciudades — te van a salir naturalmente muy pronto.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ── IPP Voice Preloader ── */
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+window.IPP_VOICE = window.IPP_VOICE || {
+  lang: 'it-IT', rate: 0.82, pitch: 1.10,
+  preferFemale: true, preferGoogle: true
+};
+
+(function() {
+  /* ═══ DATA ═══ */
+  const ALFA = [
+    ['A','Ancona'],['B','Bologna'],['C','Como'],['D','Domodossola'],['E','Empoli'],
+    ['F','Firenze'],['G','Genova'],['H','Hotel'],['I','Imola'],['L','Livorno'],
+    ['M','Milano'],['N','Napoli'],['O','Otranto'],['P','Palermo'],['Q','Quarto'],
+    ['R','Roma'],['S','Savona'],['T','Torino'],['U','Udine'],['V','Venezia'],['Z','Zara'],
+  ];
+  const NUMS = [
+    [1,'uno'],[2,'due'],[3,'tre'],[4,'quattro'],[5,'cinque'],
+    [6,'sei'],[7,'sette'],[8,'otto'],[9,'nove'],[10,'dieci'],
+    [11,'undici'],[12,'dodici'],[13,'tredici'],[14,'quattordici'],[15,'quindici'],
+    [16,'sedici'],[17,'diciassette'],[18,'diciotto'],[19,'diciannove'],[20,'venti'],
+    [21,'ventuno'],[22,'ventidue'],[23,'ventitré'],[24,'ventiquattro'],[25,'venticinque'],
+    [26,'ventisei'],[27,'ventisette'],[28,'ventotto'],[29,'ventinove'],[30,'trenta'],
+  ];
+  const ESPR = [
+    ['Come ti chiami?',     '¿Cómo te llamás?'],
+    ['Mi chiamo…',          'Me llamo…'],
+    ['Come si scrive?',     '¿Cómo se escribe?'],
+    ['Che significa?',      '¿Qué significa?'],
+    ['Piacere!',            '¡Mucho gusto!'],
+    ['Di dove sei?',        '¿De dónde sos?'],
+    ['Sono di…',            'Soy de…'],
+    ['Quanti anni hai?',    '¿Cuántos años tenés?'],
+    ['Ho 25 anni.',         'Tengo 25 años.'],
+    ['Scusa / Scusi',       'Perdón (inf./form.)'],
+  ];
+
+  /* ═══ BUILDS ═══ */
+  function buildAlfaFull() {
+    const all = [...ALFA.map(([l,c]) => [l,c,false])];
+    [['J','Jersey'],['K','Kursaal'],['W','Washington'],['X','Xilofono'],['Y','York']].forEach(([l,c]) => all.push([l,c,true]));
+    all.sort((a,b) => a[0].localeCompare(b[0]));
+    const grid = document.getElementById('alfaFull');
+    all.forEach(([ltr, city, isForeign]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-alfa__cell' + (isForeign ? ' foreign' : '');
+      div.innerHTML = '<span class="ipp-alfa__ltr">'+ltr+'</span><span class="ipp-alfa__sep">·</span><span class="ipp-alfa__cit">'+city+'</span>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildNums() {
+    const grid = document.getElementById('numGrid');
+    NUMS.forEach(([n, w]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-nums__cell';
+      div.innerHTML = '<div class="ipp-nums__n">'+n+'</div><div class="ipp-nums__w">'+w+'</div>';
+      grid.appendChild(div);
+    });
+  }
+
+  function buildEspr() {
+    const list = document.getElementById('esprList');
+    ESPR.forEach(([it, es]) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-espr__item';
+      div.innerHTML =
+        '<span class="ipp-espr__it">'+it+'</span>'+
+        '<span class="ipp-espr__es">'+es+'</span>'+
+        '<button class="ipp-espr__audio" onclick="ippAudio(\''+it.replace(/'/g,"\\'")+'\')">'+
+          '<i class="ph ph-speaker-high"></i> Escuchar</button>';
+      list.appendChild(div);
+    });
+  }
+
+  /* ═══ AUDIO TTS ═══ */
+  function _ippPickVoice(voices, cfg) {
+    var it = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+    if (!it.length) return voices[0] || null;
+    var gFem = it.filter(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    var gAny = it.filter(function(v) { return /google/i.test(v.name); });
+    var fem  = it.filter(function(v) { return /elsa|alice|giulia|female/i.test(v.name); });
+    var nonLocal = it.filter(function(v) { return !v.localService; });
+    if (cfg.preferGoogle && cfg.preferFemale && gFem.length) return gFem[0];
+    if (cfg.preferGoogle && gAny.length) return gAny[0];
+    if (cfg.preferFemale && fem.length) return fem[0];
+    if (nonLocal.length) return nonLocal[0];
+    return it[0];
+  }
+  function _fabShow(v) {
+    var f = document.getElementById('ippStopFab');
+    if (f) f.style.display = v ? 'inline-flex' : 'none';
+  }
+  function ippStop() {
+    try { window.speechSynthesis.cancel(); } catch(e) {}
+    _fabShow(false);
+  }
+  function ippAudio(text) { /*IPP_G*/ try{var _g='f';for(var _i=0;_i<arguments.length;_i++){if(arguments[_i]==='m'||arguments[_i]==='f')_g=arguments[_i];}window.__ippG=_g;}catch(_e){}
+    if (!window.speechSynthesis) return;
+    try {
+      window.speechSynthesis.cancel();
+      var cfg = window.IPP_VOICE || {};
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang   = cfg.lang  || 'it-IT';
+      utt.rate   = cfg.rate  !== undefined ? cfg.rate  : 0.82;
+      utt.pitch  = cfg.pitch !== undefined ? cfg.pitch : 1.10;
+      utt.volume = 1;
+      var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+      var v = _ippPickVoice(voices, cfg);
+      if (v) utt.voice = v;
+      utt.onend = function() { _fabShow(false); };
+      utt.onerror = function() { _fabShow(false); };
+      (function(u){ setTimeout(function(){ try { _fabShow(true); speechSynthesis.speak(u); } catch(e){ _fabShow(false); } }, 60); })(utt);
+    } catch(e) { console.warn('SpeechSynthesis error:', e); }
+  }
+
+  /* ═══ RETRY HELPER ═══ */
+  function ippRetry(container, resetFn) {
+    var old = container.querySelector('.ipp-retry');
+    if (old) old.remove();
+    var rb = document.createElement('button');
+    rb.className = 'ipp-retry';
+    rb.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    rb.onclick = function() { rb.remove(); resetFn(); };
+    container.appendChild(rb);
+  }
+
+  /* ═══ EJ A: FILL ALFA ═══ */
+  const exAlfaData = [
+    ['C','Como'],['D','Domodossola'],['E','Empoli'],['F','Firenze'],['G','Genova'],
+    ['L','Livorno'],['Q','Quarto'],['S','Savona'],['U','Udine'],['Z','Zara'],
+  ];
+  function buildExAlfa() {
+    const rows = document.getElementById('exAlfa');
+    if (!rows) return;
+    rows.innerHTML = '';
+    const shuffled = [...exAlfaData].sort(() => Math.random() - 0.5);
+    shuffled.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'ipp-row';
+      row.id = 'alfa-row-' + i;
+      row.dataset.letter = item[0];
+      row.dataset.city = item[1];
+      row.style.cssText = 'display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;';
+      row.innerHTML =
+        '<span class="ipp-row__num">'+(i+1)+'.</span>'+
+        '<span><strong>'+item[0]+'</strong> come</span>'+
+        '<input class="ipp-input md" id="exAlfa-'+i+'" placeholder="ciudad…"'+
+        ' onkeypress="if(event.key===\'Enter\') checkExAlfa()">'+
+        '<span class="alfa-icon" id="alfa-icon-'+i+'"></span>';
+      rows.appendChild(row);
+    });
+  }
+  function checkExAlfa() {
+    if (!document.getElementById('exAlfa')) return;
+    let ok = 0, total = 0;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (!inp) return;
+      total++;
+      const val = (inp.value || '').trim().toLowerCase();
+      const correct = row.dataset.city.toLowerCase();
+      if (val === correct) {
+        inp.classList.add('ok'); inp.classList.remove('err');
+        if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);font-weight:700;"></i>';
+        ok++;
+      } else {
+        inp.classList.add('err'); inp.classList.remove('ok');
+        if (icon) icon.innerHTML = '<span style="color:var(--red);font-size:0.78rem;font-weight:600;"><i class="ph ph-x"></i> '+row.dataset.city+'</span>';
+      }
+    });
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    if (ok === total) {
+      res.className = 'ipp-result ok';
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Bravissimo/a! '+total+'/'+total+' correctas.';
+    } else {
+      res.className = 'ipp-result err';
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+total+' correctas. Las incorrectas muestran la respuesta correcta en rojo.';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        buildExAlfa();
+      });
+    }
+  }
+  function revealExAlfa() {
+    const sorted = [...exAlfaData].sort((a,b) => a[0].localeCompare(b[0]));
+    const res = document.getElementById('exAlfaRes');
+    if (!res) return;
+    let html = '<strong>Solución</strong><br>';
+    sorted.forEach((item, i) => {
+      html += '<span style="display:inline-block;min-width:170px;margin:0.2rem 0.5rem 0 0;">'+(i+1)+'. '+item[0]+' come '+item[1]+'</span>';
+      if ((i+1) % 3 === 0) html += '<br>';
+    });
+    res.className = 'ipp-result ok';
+    res.innerHTML = html;
+    const rows = document.getElementById('exAlfa').querySelectorAll('.ipp-row');
+    rows.forEach((row, i) => {
+      const inp = document.getElementById('exAlfa-' + i);
+      const icon = document.getElementById('alfa-icon-' + i);
+      if (inp) { inp.value = row.dataset.city; inp.classList.add('ok'); inp.classList.remove('err'); }
+      if (icon) icon.innerHTML = '<i class="ph ph-check" style="color:var(--ok-bd);"></i>';
+    });
+  }
+
+  /* ═══ EJ B: V/F ═══ */
+  const vfData = [
+    ['En el alfabeto fonético se usan siempre las mismas ciudades.', false,
+      'Las ciudades pueden cambiar — lo importante es saber que un italiano puede deletrearte nombrando ciudades.'],
+    ['La H en italiano suena fuerte y aspirada, como en inglés.', false,
+      'La H italiana es completamente muda. Aparece en ho/hai/ha y en CH y GH, pero nunca suena sola.'],
+    ['La combinación CH en italiano suena como la CH de "chico" en español.', false,
+      'En italiano CH suena como K (dura). Es al revés que en español. Ejemplo: "che" = KE, "chi" = KI.'],
+    ['La combinación SC + e/i en italiano suena como SH en inglés ("show").', true,
+      'Correcto — "scena", "sci", "lasciare" llevan ese sonido SH. Ante a/o/u suena simplemente SK.'],
+    ['En italiano "gli" se pronuncia igual que "gl" + "i" por separado.', false,
+      '"GL+i" es un sonido único, similar a la LL del español rioplatense. Ejemplo: "figlio", "aglio".'],
+    ['En italiano "gnocchi" lleva el sonido Ñ de "año".', true,
+      'GN se pronuncia exactamente como la Ñ española. "Lasagna", "gnocchi", "bagno".'],
+    ['Las consonantes dobles en italiano se pronuncian igual que las simples.', false,
+      'Las dobles se mantienen más tiempo y a veces cambian el significado. "Nono" (noveno) ≠ "nonno" (abuelo).'],
+    ['La combinación QU en italiano siempre suena como KU (con U pronunciada).', true,
+      '"quando", "questo", "qui" se pronuncian con la U audible: KWAN-do, KWES-to.'],
+    ['La letra Z existe en el alfabeto italiano original.', true,
+      'Z come Zara es parte del alfabeto de 21 letras. Puede sonar como TS ("pizza") o DS ("zero").'],
+  ];
+  function buildExVF() {
+    const card = document.getElementById('exVF');
+    vfData.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.id = 'exvf-' + i;
+      row.className = 'ipp-judge';
+      row.innerHTML =
+        '<span class="ipp-judge__txt">'+(i+1)+'. '+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+item[1]+')">V</button>'+
+          '<button class="ipp-opt" onclick="checkExVF('+i+',this,'+(!item[1])+')">F</button>'+
+        '</div>';
+      card.appendChild(row);
+    });
+  }
+  function checkExVF(i, btn, isCorrect) {
+    const msg = vfData[i][2];
+    const row = document.getElementById('exvf-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    btn.classList.add(isCorrect ? 'correct' : 'wrong');
+    if (isCorrect) {
+      const fb = document.createElement('p');
+      fb.className = 'ipp-fb ok';
+      fb.style.cssText = 'width:100%;margin-top:0.4rem;';
+      fb.innerHTML = '<i class="ph ph-check"></i> '+msg;
+      row.appendChild(fb);
+    } else {
+      row.querySelectorAll('.ipp-opt').forEach(b => { if (b !== btn) b.classList.add('correct'); });
+    }
+    ippRetry(row, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      const oldFb = row.querySelector('.ipp-fb');
+      if (oldFb) oldFb.remove();
+    });
+  }
+
+  /* ═══ EJ C: CHIAMARSI ═══ */
+  const chiData = [
+    { sentence: '_____ chiamo Lucia. Sono di Milano.',        blank:'mi', pronoun:'io',      note:'io → <strong>mi</strong> chiamo. 1ª pers. sing.' },
+    { sentence: 'Come _____ chiami? Non ho capito bene!',     blank:'ti', pronoun:'tu',      note:'tu → <strong>ti</strong> chiami. 2ª pers. sing.' },
+    { sentence: 'Il professore _____ chiama Rossi.',          blank:'si', pronoun:'lui/lei', note:'lui/lei → <strong>si</strong> chiama. 3ª pers. sing.' },
+    { sentence: 'Come _____ chiamate, ragazzi?',              blank:'vi', pronoun:'voi',     note:'voi → <strong>vi</strong> chiamate. 2ª pers. pl.' },
+    { sentence: 'Noi _____ chiamiamo "Il Circolo Italiano".', blank:'ci', pronoun:'noi',     note:'noi → <strong>ci</strong> chiamiamo. 1ª pers. pl.' },
+    { sentence: 'Loro _____ chiamano Marco e Giulia.',        blank:'si', pronoun:'loro',    note:'loro → <strong>si</strong> chiamano. 3ª pers. pl.' },
+    { sentence: 'Signora, Lei come _____ chiama?',            blank:'si', pronoun:'Lei',     note:'Lei → forma formal (3ª pers. sing.).' },
+  ];
+  function buildExChiamarsi() {
+    const card = document.getElementById('exChiamarsi');
+    if (!card) return;
+    card.innerHTML = '';
+    chiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exchi-' + i;
+      div.className = 'ipp-row';
+      div.innerHTML =
+        '<span class="ipp-row__pron">('+item.pronoun+')</span>'+
+        '<em>'+item.sentence.replace('_____',
+          '<input class="ipp-input sm" id="chi-inp-'+i+'" placeholder="?" maxlength="3" autocomplete="off"'+
+          ' onkeypress="if(event.key===\'Enter\')checkChiInput('+i+')">'
+        )+'</em>'+
+        '<div class="ipp-fb" id="exchi-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkChiInput(i) {
+    var inp = document.getElementById('chi-inp-' + i);
+    var fb  = document.getElementById('exchi-fb-' + i);
+    var container = document.getElementById('exchi-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase();
+    var ok = val === chiData[i].blank;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + chiData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> No es correcto. Pista: <em>mi · ti · si · ci · vi · si</em>';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete container.dataset.done;
+      inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+  function checkAllChi() {
+    chiData.forEach(function(_, i) { checkChiInput(i); });
+  }
+
+  /* ═══ EJ D: SALUTI ═══ */
+  const salutiData = [
+    ['Buongiorno!',  'N', 'Saludo de mañana, siempre con adultos o desconocidos.'],
+    ['Ciao!',        'I', 'Entre amigos y familia, a cualquier hora.'],
+    ['Buonasera!',   'N', 'Saludo de tarde-noche desde las 18h, con desconocidos.'],
+    ['Come stai?',   'I', '¿Cómo estás? — solo entre personas de confianza.'],
+    ['Come sta?',    'F', '¿Cómo está usted? — forma de respeto.'],
+    ['ArrivederLa!', 'F', 'La forma más respetuosa de despedirse. La L mayúscula corresponde a Lei.'],
+    ['A presto!',    'I', '¡Hasta pronto! — entre amigos.'],
+    ['Salve!',       'N', 'Funciona en cualquier contexto — la opción segura.'],
+    ['Arrivederci',  'N', 'Despedida universal — formal e informal.'],
+    ['Buonanotte!',  'N', 'Al irse a dormir — válido con cualquier persona.'],
+  ];
+  function buildExSaluti() {
+    const card = document.getElementById('exSaluti');
+    salutiData.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.id = 'exsal-' + i;
+      div.className = 'ipp-judge';
+      div.innerHTML =
+        '<span class="ipp-judge__txt" style="font-style:italic;font-weight:600;">'+item[0]+'</span>'+
+        '<div class="ipp-judge__btns">'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'F\')">Formal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'I\')">Informal</button>'+
+          '<button class="ipp-opt" onclick="checkSaluto('+i+',this,\'N\')">Neutro</button>'+
+        '</div>'+
+        '<div class="ipp-fb" id="exsal-fb-'+i+'" style="width:100%;"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSaluto(i, btn, pressed) {
+    const correct = salutiData[i][1];
+    const note = salutiData[i][2];
+    const row = document.getElementById('exsal-' + i);
+    if (row.dataset.done) return;
+    row.dataset.done = '1';
+    row.querySelectorAll('.ipp-opt').forEach(b => b.classList.add('disabled'));
+    const ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      const map = { 'Formal':'F', 'Informal':'I', 'Neutro':'N' };
+      row.querySelectorAll('.ipp-opt').forEach(b => {
+        if (map[b.textContent.trim()] === correct) b.classList.add('correct');
+      });
+    }
+    const fb = document.getElementById('exsal-fb-' + i);
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+    }
+    ippRetry(fb, function() {
+      delete row.dataset.done;
+      row.querySelectorAll('.ipp-opt').forEach(b => b.classList.remove('disabled','correct','wrong'));
+      fb.textContent = ''; fb.className = 'ipp-fb';
+    });
+  }
+
+  /* ═══ EJ D2: SITUACIONES ═══ */
+  const situData = [
+    {
+      ctx: 'Son las 9:30 de la mañana. Entrás a una farmacia y la farmacéutica te mira.',
+      accepted: ['buongiorno','buon giorno','salve'],
+      note: 'Buongiorno y Salve funcionan — saludo de mañana, contexto formal con desconocida.'
+    },
+    {
+      ctx: 'Tu amigo Marco te manda un mensaje por WhatsApp a las 15hs.',
+      accepted: ['ciao'],
+      note: 'Ciao! — entre amigos, cualquier hora, siempre informal.'
+    },
+    {
+      ctx: 'Llegás a las 20hs a una cena de trabajo. Tu jefa te recibe en la puerta.',
+      accepted: ['buonasera','buona sera'],
+      note: 'Buonasera! — saludo de tarde-noche, contexto formal.'
+    },
+    {
+      ctx: 'Es la 1 de la madrugada. Le decís buenas noches a tu compañera de piso.',
+      accepted: ['buonanotte','buona notte'],
+      note: 'Buonanotte! — sólo al irse a dormir, formal o informal.'
+    },
+    {
+      ctx: 'Tu profesora de italiano termina la clase. Te despedís con respeto.',
+      accepted: ['arrivederla','arrivederci','salve'],
+      note: 'ArrivederLa es lo más respetuoso. Arrivederci también es válido.'
+    },
+    {
+      ctx: 'Ves a tu amiga Sofia y querés saber cómo está.',
+      accepted: ['come stai','come stai?'],
+      note: 'Come stai? — informal. La formal sería "Come sta?"'
+    },
+  ];
+  function buildExSituaciones() {
+    const card = document.getElementById('exSituaciones');
+    if (!card) return;
+    card.innerHTML = '';
+    situData.forEach(function(item, i) {
+      const div = document.createElement('div');
+      div.id = 'situ-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="situ-inp-'+i+'" placeholder="Escribí el saludo en italiano…" maxlength="30"'+
+        ' onkeypress="if(event.key===\'Enter\')checkSitu('+i+')">'+
+        '<div class="ipp-fb" id="situ-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkSitu(i) {
+    var inp = document.getElementById('situ-inp-' + i);
+    var fb = document.getElementById('situ-fb-' + i);
+    var container = document.getElementById('situ-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g,'');
+    var ok = situData[i].accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + situData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: ' + situData[i].note;
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllSitu() {
+    situData.forEach(function(_, i) {
+      var container = document.getElementById('situ-' + i);
+      if (container && !container.dataset.done) checkSitu(i);
+    });
+    var total = situData.length;
+    var done = document.querySelectorAll('#exSituaciones [data-done]').length;
+    var res = document.getElementById('exSituRes');
+    if (!res) return;
+    if (done === total) {
+      res.innerHTML = '<i class="ph ph-check-circle"></i> ¡Perfetto! '+done+'/'+total+' correctas.';
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+done+'/'+total+' correctas — revisá las marcadas en rojo.';
+      res.className = 'ipp-result err';
+    }
+  }
+
+  /* ═══ EJ E: NUMERI ═══ */
+  const numExData = [
+    ['11',     'undici',      ['undecio','undize','oundici'],         '11 = undici — UN-di-ci (3 sílabas).'],
+    ['16',     'sedici',      ['seidici','diciasei','dicisei'],        '16 = sedici. "sei" → "sedi" al combinarse.'],
+    ['17',     'diciassette', ['diciasette','dichasette','dicciasette'],'17 = diciassette. Doble S obligatoria.'],
+    ['21',     'ventuno',     ['ventiuno','veintiuno','ventuono'],    '21 = ventuno. La I se pierde: no "ventiuno".'],
+    ['23',     'ventitré',    ['ventitre','ventitres','ventirés'],    '23 = ventitré. El acento en É es obligatorio.'],
+    ['28',     'ventotto',    ['ventiotto','ventoto','ventocto'],     '28 = ventotto. La I se pierde: no "ventiotto".'],
+    ['14',     'quattordici', ['quatordici','quattordeci','quattrodici'],'14 = quattordici. Doble T: quaTTordici.'],
+    ['8 + 5',  'tredici',     ['terdici','fridici','tredeci'],        '8+5=13 = tredici. tre + dici.'],
+    ['20 − 3', 'diciassette', ['diciasette','diciasete','diceassette'],'20−3=17 = diciassette. Doble S — error clásico.'],
+    ['4 × 4',  'sedici',      ['seidici','diecisei','sedize'],       '4×4=16 = sedici.'],
+  ];
+  function buildExNumeri() {
+    var card = document.getElementById('exNumeri');
+    card.innerHTML = '';
+    numExData.forEach(function(item, i) {
+      var label = item[0];
+      var correct = item[1];
+      var wrongs = item[2];
+      var allOpts = [correct].concat(wrongs).sort(function() { return Math.random() - 0.5; });
+      var isOp = /[+−×]/.test(label);
+      var question = isOp
+        ? '<strong style="color:var(--mc-dk);">Quanto fa ' + label + '?</strong>'
+        : '<strong>'+(i+1)+'.</strong> ¿Cómo se escribe <strong style="font-size:1.05rem;">'+label+'</strong> en italiano?';
+      var div = document.createElement('div');
+      div.id = 'exnum-' + i;
+      div.className = 'ipp-row';
+      div.style.cssText = 'padding:0.8rem 1rem;';
+      div.innerHTML =
+        '<p style="font-size:0.91rem;margin:0 0 0.55rem;">'+question+'</p>'+
+        '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.4rem;" id="exnum-opts-'+i+'">'+
+        allOpts.map(function(opt) {
+          return '<button class="ipp-opt" onclick="checkNumOpt('+i+',this,\''+opt.replace(/'/g,"\\'")+'\')">'+opt+'</button>';
+        }).join('')+
+        '</div>'+
+        '<div class="ipp-fb" id="exnum-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkNumOpt(i, btn, pressed) {
+    var correct = numExData[i][1];
+    var container = document.getElementById('exnum-' + i);
+    var fb = document.getElementById('exnum-fb-' + i);
+    if (container.dataset.done) return;
+    container.dataset.done = '1';
+    container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.add('disabled'); });
+    var ok = pressed === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      container.querySelectorAll('.ipp-opt').forEach(function(b) {
+        if (b.textContent.trim() === correct) b.classList.add('correct');
+      });
+    }
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + numExData[i][3];
+      fb.className = 'ipp-fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        container.querySelectorAll('.ipp-opt').forEach(function(b) { b.classList.remove('disabled','correct','wrong'); });
+        fb.innerHTML = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+
+  /* ═══ EJ F: ORDENAR ═══ */
+  const ordenData = [
+    { text: 'Piacere, Marco! Io mi chiamo Sofia.', correct: 3 },
+    { text: 'Ciao! Come ti chiami?', correct: 1 },
+    { text: 'Mi chiamo Marco. E tu?', correct: 2 },
+    { text: 'Come si scrive, Sofia?', correct: 4 },
+    { text: 'S come Savona, O come Otranto, F come Firenze, I come Imola, A come Ancona.', correct: 5 },
+  ];
+  const shuffledOrden = [...ordenData].sort(() => Math.random() - 0.5);
+  function buildOrden() {
+    const cont = document.getElementById('ordenLines');
+    shuffledOrden.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'ipp-orden__row';
+      div.innerHTML =
+        '<select class="ipp-orden__sel" id="ord-sel-'+i+'">'+
+          '<option value="">—</option>'+
+          [1,2,3,4,5].map(n => '<option value="'+n+'">'+n+'</option>').join('')+
+        '</select>'+
+        '<span class="ipp-orden__txt">'+item.text+'</span>';
+      cont.appendChild(div);
+    });
+  }
+  function checkOrden() {
+    let ok = 0;
+    shuffledOrden.forEach((item, i) => {
+      const sel = document.getElementById('ord-sel-' + i);
+      const val = parseInt(sel.value);
+      const correct = val === item.correct;
+      sel.style.borderColor = correct ? 'var(--ok-bd)' : 'var(--red)';
+      sel.style.background = correct ? 'var(--ok-bg)' : 'var(--err-bg)';
+      if (correct) ok++;
+    });
+    const res = document.getElementById('exOrdenRes');
+    if (ok === shuffledOrden.length) {
+      const sorted = ordenData.slice().sort((a,b) => a.correct - b.correct);
+      const lista = sorted.map(item => item.correct + ' → ' + item.text).join('<br>');
+      res.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfetto!</strong><br>'+lista;
+      res.className = 'ipp-result ok';
+    } else {
+      res.innerHTML = '<i class="ph ph-x-circle"></i> '+ok+'/'+shuffledOrden.length+' correctas.';
+      res.className = 'ipp-result err';
+      ippRetry(res, function() {
+        res.className = 'ipp-result'; res.textContent = '';
+        shuffledOrden.forEach(function(_, i) {
+          const sel = document.getElementById('ord-sel-' + i);
+          if (sel) { sel.value = ''; sel.style.borderColor = ''; sel.style.background = ''; }
+        });
+      });
+    }
+  }
+
+  /* ═══ EJ G: EXPRESIONES ═══ */
+  const gExprData = [
+    {
+      ctx: 'No sabés qué quiere decir una palabra.',
+      accepted: ['che significa','che significa?'],
+      note: 'Che significa? = ¿Qué significa?'
+    },
+    {
+      ctx: 'No sabés cómo se escribe el nombre de tu amigo.',
+      accepted: ['come si scrive','come si scrive?'],
+      note: 'Come si scrive? = ¿Cómo se escribe?'
+    },
+    {
+      ctx: 'Conocés a una persona nueva y querés saber su nombre.',
+      accepted: ['come ti chiami','come ti chiami?'],
+      note: 'Come ti chiami? = ¿Cómo te llamás? (informal)'
+    },
+    {
+      ctx: 'Querés saber cómo se dice algo en italiano.',
+      accepted: ['come si dice in italiano','come si dice in italiano?','come si dice','come si dice?'],
+      note: 'Come si dice in italiano? = ¿Cómo se dice en italiano?'
+    },
+    {
+      ctx: '¿Cómo le preguntás a alguien de dónde es?',
+      accepted: ['di dove sei','di dove sei?'],
+      note: 'Di dove sei? = ¿De dónde sos? (informal)'
+    },
+  ];
+  function buildExGExpr() {
+    var card = document.getElementById('exGExpr');
+    if (!card) return;
+    card.innerHTML = '';
+    gExprData.forEach(function(item, i) {
+      var div = document.createElement('div');
+      div.id = 'gexpr-' + i;
+      div.className = 'ipp-situ';
+      div.innerHTML =
+        '<p class="ipp-situ__ctx">'+item.ctx+'</p>'+
+        '<input class="ipp-input lg" id="gexpr-inp-'+i+'" placeholder="Escribí la expresión en italiano…" maxlength="40"'+
+        ' onkeypress="if(event.key===\'Enter\')checkGExpr('+i+')">'+
+        '<div class="ipp-fb" id="gexpr-fb-'+i+'"></div>';
+      card.appendChild(div);
+    });
+  }
+  function checkGExpr(i) {
+    var inp = document.getElementById('gexpr-inp-' + i);
+    var fb = document.getElementById('gexpr-fb-' + i);
+    var container = document.getElementById('gexpr-' + i);
+    if (!inp || container.dataset.done) return;
+    var val = (inp.value || '').trim().toLowerCase().replace(/[!?.,]/g, '');
+    var accepted = gExprData[i].accepted.map(function(a){ return a.replace(/[!?.,]/g,''); });
+    var ok = accepted.indexOf(val) !== -1;
+    if (ok) {
+      container.dataset.done = '1';
+      inp.classList.add('ok'); inp.classList.remove('err');
+      inp.disabled = true;
+      fb.innerHTML = '<i class="ph ph-check"></i> ' + gExprData[i].note;
+      fb.className = 'ipp-fb ok';
+    } else {
+      inp.classList.add('err'); inp.classList.remove('ok');
+      fb.innerHTML = '<i class="ph ph-x"></i> Era: <em>' + gExprData[i].accepted[0] + '</em>';
+      fb.className = 'ipp-fb err';
+      ippRetry(fb, function() {
+        delete container.dataset.done;
+        inp.value = ''; inp.classList.remove('ok','err'); inp.disabled = false;
+        fb.textContent = ''; fb.className = 'ipp-fb';
+      });
+    }
+  }
+  function checkAllGExpr() {
+    var ok = 0;
+    gExprData.forEach(function(_, i) {
+      var inp = document.getElementById('gexpr-inp-' + i);
+      var container = document.getElementById('gexpr-' + i);
+      if (!container.dataset.done && inp && inp.value.trim()) checkGExpr(i);
+      if (container.dataset.done) ok++;
+    });
+    var res = document.getElementById('exGExprRes');
+    if (res) {
+      res.innerHTML = ok === gExprData.length
+        ? '<i class="ph ph-check-circle"></i> ¡Perfetto! Conocés todas las expresiones.'
+        : '<i class="ph ph-x-circle"></i> '+ok+'/'+gExprData.length+' correctas.';
+      res.className = 'ipp-result ' + (ok === gExprData.length ? 'ok' : 'err');
+    }
+  }
+
+  /* ═══ INIT — exponer + builds con try-catch ═══ */
+  window.ippAudio     = ippAudio;
+
+/*IPP_MP3_SHIM_v3*/
+(function(){
+  if (window.__ippMp3Init) return; window.__ippMp3Init = true;
+  window.IPP_AUDIO = {"53681472":"https://italianoperpiacere.com/web/content/1614","63630357":"https://italianoperpiacere.com/web/content/1690","75290130":"https://italianoperpiacere.com/web/content/1786","78395944":"https://italianoperpiacere.com/web/content/1772","86591899":"https://italianoperpiacere.com/web/content/1633","89080474":"https://italianoperpiacere.com/web/content/1720","95406883":"https://italianoperpiacere.com/web/content/1617","a86fca61":"https://italianoperpiacere.com/web/content/1567","4348cdd3":"https://italianoperpiacere.com/web/content/1566","09ad1c8b":"https://italianoperpiacere.com/web/content/1568","0fa6409c":"https://italianoperpiacere.com/web/content/1569","6cd1646d":"https://italianoperpiacere.com/web/content/1570","e8576a28":"https://italianoperpiacere.com/web/content/1571","3fdd34b1":"https://italianoperpiacere.com/web/content/1572","51e39f0d":"https://italianoperpiacere.com/web/content/1573","a318859d":"https://italianoperpiacere.com/web/content/1574","24a8ee7f":"https://italianoperpiacere.com/web/content/1575","dccf3877":"https://italianoperpiacere.com/web/content/1576","3158fd81":"https://italianoperpiacere.com/web/content/1577","fed85b3c":"https://italianoperpiacere.com/web/content/1578","4870815e":"https://italianoperpiacere.com/web/content/1579","528d9e8c":"https://italianoperpiacere.com/web/content/1580","fee9bdcb":"https://italianoperpiacere.com/web/content/1581","34ba50d0":"https://italianoperpiacere.com/web/content/1582","3c2846f2":"https://italianoperpiacere.com/web/content/1583","6e229311":"https://italianoperpiacere.com/web/content/1584","489a1b10":"https://italianoperpiacere.com/web/content/1585","58b4f894":"https://italianoperpiacere.com/web/content/1586","c4f8871e":"https://italianoperpiacere.com/web/content/1587","11677de4":"https://italianoperpiacere.com/web/content/1588","5d2c43bb":"https://italianoperpiacere.com/web/content/1589","af20d591":"https://italianoperpiacere.com/web/content/1590","90c7edb2":"https://italianoperpiacere.com/web/content/1591","46ae6b6e":"https://italianoperpiacere.com/web/content/1592","59e384ef":"https://italianoperpiacere.com/web/content/1593","60b06410":"https://italianoperpiacere.com/web/content/1594","99ac3e50":"https://italianoperpiacere.com/web/content/1595","73b014fe":"https://italianoperpiacere.com/web/content/1596","35e6a54b":"https://italianoperpiacere.com/web/content/1597","c1198fab":"https://italianoperpiacere.com/web/content/1600","5972c5ef":"https://italianoperpiacere.com/web/content/1598","d476c527":"https://italianoperpiacere.com/web/content/1599","faf5c8ab":"https://italianoperpiacere.com/web/content/1601","a892ed22":"https://italianoperpiacere.com/web/content/1604","cc1c6462":"https://italianoperpiacere.com/web/content/1603","f4332b56":"https://italianoperpiacere.com/web/content/1602","614d2f8f":"https://italianoperpiacere.com/web/content/1606","4a4f3ef4":"https://italianoperpiacere.com/web/content/1605","e830d761":"https://italianoperpiacere.com/web/content/1607","e2a5c5c8":"https://italianoperpiacere.com/web/content/1608","795180ae":"https://italianoperpiacere.com/web/content/1609","2b06b03b":"https://italianoperpiacere.com/web/content/1611","56c77741":"https://italianoperpiacere.com/web/content/1612","0977161f":"https://italianoperpiacere.com/web/content/1610","629bff3f":"https://italianoperpiacere.com/web/content/1615","7cffa02f":"https://italianoperpiacere.com/web/content/1613","7c5dc5f2":"https://italianoperpiacere.com/web/content/1616","f821f079":"https://italianoperpiacere.com/web/content/1618","c5e72407":"https://italianoperpiacere.com/web/content/1620","1b642b02":"https://italianoperpiacere.com/web/content/1619","5ee29bb2":"https://italianoperpiacere.com/web/content/1621","3493c841":"https://italianoperpiacere.com/web/content/1622","97cfff31":"https://italianoperpiacere.com/web/content/1623","bc864dea":"https://italianoperpiacere.com/web/content/1624","568ea28c":"https://italianoperpiacere.com/web/content/1625","1029a385":"https://italianoperpiacere.com/web/content/1626","92f0b447":"https://italianoperpiacere.com/web/content/1628","8d8f4928":"https://italianoperpiacere.com/web/content/1627","eeed7fe5":"https://italianoperpiacere.com/web/content/1629","126065e4":"https://italianoperpiacere.com/web/content/1630","c512a01b":"https://italianoperpiacere.com/web/content/1631","1a7a9ec0":"https://italianoperpiacere.com/web/content/1632","5ab60786":"https://italianoperpiacere.com/web/content/1634","bd12cefe":"https://italianoperpiacere.com/web/content/1635","077e09f1":"https://italianoperpiacere.com/web/content/1636","ae5a7e6e":"https://italianoperpiacere.com/web/content/1637","6e6f2496":"https://italianoperpiacere.com/web/content/1638","fbd3f596":"https://italianoperpiacere.com/web/content/1639","3070e3f2":"https://italianoperpiacere.com/web/content/1640","e4a34598":"https://italianoperpiacere.com/web/content/1641","38ffe613":"https://italianoperpiacere.com/web/content/1642","a7593639":"https://italianoperpiacere.com/web/content/1643","1e3d0c2c":"https://italianoperpiacere.com/web/content/1644","784c7cd9":"https://italianoperpiacere.com/web/content/1645","b2f39625":"https://italianoperpiacere.com/web/content/1647","725a332a":"https://italianoperpiacere.com/web/content/1648","22316e3f":"https://italianoperpiacere.com/web/content/1646","a0a9f745":"https://italianoperpiacere.com/web/content/1650","bd2558c8":"https://italianoperpiacere.com/web/content/1649","aed44cc3":"https://italianoperpiacere.com/web/content/1651","3c36ac3e":"https://italianoperpiacere.com/web/content/1652","ba353236":"https://italianoperpiacere.com/web/content/1653","f3c702ba":"https://italianoperpiacere.com/web/content/1655","5afb877b":"https://italianoperpiacere.com/web/content/1654","0477e27d":"https://italianoperpiacere.com/web/content/1656","fbbacb46":"https://italianoperpiacere.com/web/content/1657","428fa5a2":"https://italianoperpiacere.com/web/content/1658","0bc86086":"https://italianoperpiacere.com/web/content/1659","0e4e36b7":"https://italianoperpiacere.com/web/content/1660","2f9fd2d0":"https://italianoperpiacere.com/web/content/1661","1c488b2c":"https://italianoperpiacere.com/web/content/1662","acd6c47a":"https://italianoperpiacere.com/web/content/1663","9bd6f478":"https://italianoperpiacere.com/web/content/1664","26ae2b10":"https://italianoperpiacere.com/web/content/1665","6d0db316":"https://italianoperpiacere.com/web/content/1666","fa69145c":"https://italianoperpiacere.com/web/content/1667","6b11094a":"https://italianoperpiacere.com/web/content/1668","df283d04":"https://italianoperpiacere.com/web/content/1669","38d0f6c5":"https://italianoperpiacere.com/web/content/1670","ce898da8":"https://italianoperpiacere.com/web/content/1671","5b7c836e":"https://italianoperpiacere.com/web/content/1672","15a028c6":"https://italianoperpiacere.com/web/content/1673","f49e85b0":"https://italianoperpiacere.com/web/content/1674","a8c5543e":"https://italianoperpiacere.com/web/content/1675","91fa62d0":"https://italianoperpiacere.com/web/content/1676","3f1aa1c1":"https://italianoperpiacere.com/web/content/1677","53196dee":"https://italianoperpiacere.com/web/content/1680","f2c464b1":"https://italianoperpiacere.com/web/content/1678","a72e8f2a":"https://italianoperpiacere.com/web/content/1679","b74d5aa6":"https://italianoperpiacere.com/web/content/1681","07f4c121":"https://italianoperpiacere.com/web/content/1683","1177503c":"https://italianoperpiacere.com/web/content/1682","3cd8b1b8":"https://italianoperpiacere.com/web/content/1684","63e60973":"https://italianoperpiacere.com/web/content/1685","18775b41":"https://italianoperpiacere.com/web/content/1687","f6acd6dd":"https://italianoperpiacere.com/web/content/1686","eb064d08":"https://italianoperpiacere.com/web/content/1688","a4c11bb1":"https://italianoperpiacere.com/web/content/1689","3b608498":"https://italianoperpiacere.com/web/content/1691","1307d43b":"https://italianoperpiacere.com/web/content/1692","803a6067":"https://italianoperpiacere.com/web/content/1693","2137090c":"https://italianoperpiacere.com/web/content/1696","44dd6b9c":"https://italianoperpiacere.com/web/content/1698","e6d77c7f":"https://italianoperpiacere.com/web/content/1694","fa8082fb":"https://italianoperpiacere.com/web/content/1699","202f38eb":"https://italianoperpiacere.com/web/content/1695","9b8c0008":"https://italianoperpiacere.com/web/content/1697","266ad017":"https://italianoperpiacere.com/web/content/1700","c1700f93":"https://italianoperpiacere.com/web/content/1701","5c08a584":"https://italianoperpiacere.com/web/content/1702","30a46446":"https://italianoperpiacere.com/web/content/1704","929d2557":"https://italianoperpiacere.com/web/content/1703","ed421789":"https://italianoperpiacere.com/web/content/1705","b8ebc7ab":"https://italianoperpiacere.com/web/content/1706","985791bc":"https://italianoperpiacere.com/web/content/1707","c1cc84f5":"https://italianoperpiacere.com/web/content/1708","87445f96":"https://italianoperpiacere.com/web/content/1709","d7806d1e":"https://italianoperpiacere.com/web/content/1710","25e2f906":"https://italianoperpiacere.com/web/content/1711","32bcccb6":"https://italianoperpiacere.com/web/content/1712","1e28de8d":"https://italianoperpiacere.com/web/content/1713","9b127a4e":"https://italianoperpiacere.com/web/content/1714","abcfdb05":"https://italianoperpiacere.com/web/content/1715","cdcc7b0e":"https://italianoperpiacere.com/web/content/1716","bda7dc11":"https://italianoperpiacere.com/web/content/1717","c6fa6d01":"https://italianoperpiacere.com/web/content/1718","95c694f3":"https://italianoperpiacere.com/web/content/1719","d81af5c0":"https://italianoperpiacere.com/web/content/1721","14e7cc62":"https://italianoperpiacere.com/web/content/1722","becb0391":"https://italianoperpiacere.com/web/content/1723","2737b2a0":"https://italianoperpiacere.com/web/content/1725","1c45f1e1":"https://italianoperpiacere.com/web/content/1724","1866d385":"https://italianoperpiacere.com/web/content/1726","ad8141bb":"https://italianoperpiacere.com/web/content/1727","81db4635":"https://italianoperpiacere.com/web/content/1728","62bd07d2":"https://italianoperpiacere.com/web/content/1729","e444f489":"https://italianoperpiacere.com/web/content/1730","d88917de":"https://italianoperpiacere.com/web/content/1731","84a77709":"https://italianoperpiacere.com/web/content/1732","470cdfb2":"https://italianoperpiacere.com/web/content/1733","3b744d98":"https://italianoperpiacere.com/web/content/1734","5b07b7fa":"https://italianoperpiacere.com/web/content/1735","55dcf781":"https://italianoperpiacere.com/web/content/1736","d82ac51a":"https://italianoperpiacere.com/web/content/1737","92a032bd":"https://italianoperpiacere.com/web/content/1738","1b6a264e":"https://italianoperpiacere.com/web/content/1739","df03d88a":"https://italianoperpiacere.com/web/content/1740","015cc3c6":"https://italianoperpiacere.com/web/content/1741","1208feb1":"https://italianoperpiacere.com/web/content/1742","5af97a54":"https://italianoperpiacere.com/web/content/1743","a57ea68d":"https://italianoperpiacere.com/web/content/1744","936b5c50":"https://italianoperpiacere.com/web/content/1745","77e69b74":"https://italianoperpiacere.com/web/content/1746","3e339851":"https://italianoperpiacere.com/web/content/1747","fc87f496":"https://italianoperpiacere.com/web/content/1748","34bf9775":"https://italianoperpiacere.com/web/content/1749","3cdba654":"https://italianoperpiacere.com/web/content/1751","df657ad0":"https://italianoperpiacere.com/web/content/1750","7df5f047":"https://italianoperpiacere.com/web/content/1752","0476e78a":"https://italianoperpiacere.com/web/content/1753","004136d9":"https://italianoperpiacere.com/web/content/1754","b7f678a0":"https://italianoperpiacere.com/web/content/1755","2659fa52":"https://italianoperpiacere.com/web/content/1756","40c225ea":"https://italianoperpiacere.com/web/content/1757","4999a9eb":"https://italianoperpiacere.com/web/content/1758","3c5eef09":"https://italianoperpiacere.com/web/content/1759","4dcfca31":"https://italianoperpiacere.com/web/content/1760","eabedb56":"https://italianoperpiacere.com/web/content/1761","ed465c2a":"https://italianoperpiacere.com/web/content/1762","a7fdd363":"https://italianoperpiacere.com/web/content/1763","5ab7d1f3":"https://italianoperpiacere.com/web/content/1764","69d7dfd2":"https://italianoperpiacere.com/web/content/1765","1eb9a508":"https://italianoperpiacere.com/web/content/1766","163823ba":"https://italianoperpiacere.com/web/content/1767","c845d0b1":"https://italianoperpiacere.com/web/content/1768","a402df3c":"https://italianoperpiacere.com/web/content/1769","419ffd05":"https://italianoperpiacere.com/web/content/1770","c6055a7f":"https://italianoperpiacere.com/web/content/1771","ee1e5b47":"https://italianoperpiacere.com/web/content/1773","94ca6ea1":"https://italianoperpiacere.com/web/content/1774","fffb2458":"https://italianoperpiacere.com/web/content/1775","72e319f6":"https://italianoperpiacere.com/web/content/1776","49b0f73d":"https://italianoperpiacere.com/web/content/1777","0717becb":"https://italianoperpiacere.com/web/content/1778","2ca003f8":"https://italianoperpiacere.com/web/content/1779","4ccc43a9":"https://italianoperpiacere.com/web/content/1780","dc6134ac":"https://italianoperpiacere.com/web/content/1781","86b299ca":"https://italianoperpiacere.com/web/content/1782","f2968bb2":"https://italianoperpiacere.com/web/content/1783","a90d5ea0":"https://italianoperpiacere.com/web/content/1784","024c6a4c":"https://italianoperpiacere.com/web/content/1785","d28f8b68":"https://italianoperpiacere.com/web/content/1787","aa56941b":"https://italianoperpiacere.com/web/content/1788","9e0c57ca":"https://italianoperpiacere.com/web/content/1789","c4979b85":"https://italianoperpiacere.com/web/content/1790","e98727c0":"https://italianoperpiacere.com/web/content/1791","7544e120":"https://italianoperpiacere.com/web/content/1794","2baebb13":"https://italianoperpiacere.com/web/content/1793","dea9b641":"https://italianoperpiacere.com/web/content/1792","d4dd6a26":"https://italianoperpiacere.com/web/content/1795","2541071d":"https://italianoperpiacere.com/web/content/1796","65ffed0a":"https://italianoperpiacere.com/web/content/1797","5036c560":"https://italianoperpiacere.com/web/content/1798","97af351a":"https://italianoperpiacere.com/web/content/1799","a43e64ee":"https://italianoperpiacere.com/web/content/1800","fbe3524e":"https://italianoperpiacere.com/web/content/1802","6fadb46f":"https://italianoperpiacere.com/web/content/1801","e45fb480":"https://italianoperpiacere.com/web/content/1803","bc236443":"https://italianoperpiacere.com/web/content/1804","78f25908":"https://italianoperpiacere.com/web/content/1805","d6022f65":"https://italianoperpiacere.com/web/content/1806","46cb7b97":"https://italianoperpiacere.com/web/content/1807","218a14e8":"https://italianoperpiacere.com/web/content/1808","5237297e":"https://italianoperpiacere.com/web/content/1809","d7dc5436":"https://italianoperpiacere.com/web/content/1810","fdccfcda":"https://italianoperpiacere.com/web/content/1811","edf9d16f":"https://italianoperpiacere.com/web/content/1812","0c5e3374":"https://italianoperpiacere.com/web/content/1813","3becadf4":"https://italianoperpiacere.com/web/content/1814","2450a252":"https://italianoperpiacere.com/web/content/1815","c1255ec7":"https://italianoperpiacere.com/web/content/1816","2eb904d6":"https://italianoperpiacere.com/web/content/1817","56e2705a":"https://italianoperpiacere.com/web/content/1818","2372ed29":"https://italianoperpiacere.com/web/content/1819","4c2964db":"https://italianoperpiacere.com/web/content/1820","6e285cee":"https://italianoperpiacere.com/web/content/1821","6ef3886f":"https://italianoperpiacere.com/web/content/1822","ac228fb6":"https://italianoperpiacere.com/web/content/1823","427c5b75":"https://italianoperpiacere.com/web/content/1824","f5ad8540":"https://italianoperpiacere.com/web/content/1825","b3f612cb":"https://italianoperpiacere.com/web/content/1826","95d629d4":"https://italianoperpiacere.com/web/content/1827","34ada081":"https://italianoperpiacere.com/web/content/1828","ef64c20e":"https://italianoperpiacere.com/web/content/1829","6c5b93e8":"https://italianoperpiacere.com/web/content/1830","132bbb31":"https://italianoperpiacere.com/web/content/1831","0bc7d589":"https://italianoperpiacere.com/web/content/1834","1a68cb5f":"https://italianoperpiacere.com/web/content/1832","481b3add":"https://italianoperpiacere.com/web/content/1833","9e22e919":"https://italianoperpiacere.com/web/content/1835","722b6efc":"https://italianoperpiacere.com/web/content/1836","4a958b81":"https://italianoperpiacere.com/web/content/1837","0d389b12":"https://italianoperpiacere.com/web/content/1838","7620c2cb":"https://italianoperpiacere.com/web/content/1839","b1d04a64":"https://italianoperpiacere.com/web/content/1840","a66b9d0f":"https://italianoperpiacere.com/web/content/1841","73a479ea":"https://italianoperpiacere.com/web/content/1842","9c877ce4":"https://italianoperpiacere.com/web/content/1843","09c1c224":"https://italianoperpiacere.com/web/content/1844","a52b5c47":"https://italianoperpiacere.com/web/content/1845","dd2d77b5":"https://italianoperpiacere.com/web/content/1846","c4b29ee3":"https://italianoperpiacere.com/web/content/1847","789b9fbd":"https://italianoperpiacere.com/web/content/1848","e11668a1":"https://italianoperpiacere.com/web/content/1849","5fe8174d":"https://italianoperpiacere.com/web/content/1850","3dc99283":"https://italianoperpiacere.com/web/content/1851","eb273dbc":"https://italianoperpiacere.com/web/content/1852","4b962946":"https://italianoperpiacere.com/web/content/1853","e2b91004":"https://italianoperpiacere.com/web/content/1855","ab79f9a7":"https://italianoperpiacere.com/web/content/1854","d120411a":"https://italianoperpiacere.com/web/content/1856","6b3864ed":"https://italianoperpiacere.com/web/content/1858","f732e09c":"https://italianoperpiacere.com/web/content/1857","ceb37fb2":"https://italianoperpiacere.com/web/content/1859","4cf52061":"https://italianoperpiacere.com/web/content/1860","bf715484":"https://italianoperpiacere.com/web/content/1861","822997ff":"https://italianoperpiacere.com/web/content/1863","d793291c":"https://italianoperpiacere.com/web/content/1862","e888126b":"https://italianoperpiacere.com/web/content/1864","bb67026c":"https://italianoperpiacere.com/web/content/1865","625c4543":"https://italianoperpiacere.com/web/content/1866","4399143e":"https://italianoperpiacere.com/web/content/1867","064adddd":"https://italianoperpiacere.com/web/content/1868","6f399b0a":"https://italianoperpiacere.com/web/content/1869","3b103f50":"https://italianoperpiacere.com/web/content/1870","dcf90237":"https://italianoperpiacere.com/web/content/1872","624fc175":"https://italianoperpiacere.com/web/content/1871","c5772bb1":"https://italianoperpiacere.com/web/content/1873","8b016034":"https://italianoperpiacere.com/web/content/1874","a5cd91d3":"https://italianoperpiacere.com/web/content/1875","642733c8":"https://italianoperpiacere.com/web/content/1876","d6c171c4":"https://italianoperpiacere.com/web/content/1878","18f64889":"https://italianoperpiacere.com/web/content/1877","75f04bcf":"https://italianoperpiacere.com/web/content/1879","e479c3ff":"https://italianoperpiacere.com/web/content/1880","8a55ad83":"https://italianoperpiacere.com/web/content/1881","b60f665d":"https://italianoperpiacere.com/web/content/1882","797671d6":"https://italianoperpiacere.com/web/content/1883","18b82bcd":"https://italianoperpiacere.com/web/content/1884","c2955888":"https://italianoperpiacere.com/web/content/1885","fbf68dee":"https://italianoperpiacere.com/web/content/1886","b32520e6":"https://italianoperpiacere.com/web/content/1887","087d35c3":"https://italianoperpiacere.com/web/content/1888","7bf17097":"https://italianoperpiacere.com/web/content/1889","b213d47c":"https://italianoperpiacere.com/web/content/1890","e8dd5d37":"https://italianoperpiacere.com/web/content/1891","a72bc901":"https://italianoperpiacere.com/web/content/1892","d2b93022":"https://italianoperpiacere.com/web/content/1894","ede3f7b5":"https://italianoperpiacere.com/web/content/1893","2a2a23a8":"https://italianoperpiacere.com/web/content/1896","6c29e3c0":"https://italianoperpiacere.com/web/content/1895","d2b36e18":"https://italianoperpiacere.com/web/content/1897","15bae672":"https://italianoperpiacere.com/web/content/1898","6bb7d64d":"https://italianoperpiacere.com/web/content/1899","a56d39a3":"https://italianoperpiacere.com/web/content/1901","2c7a4533":"https://italianoperpiacere.com/web/content/1900","e6ffc982":"https://italianoperpiacere.com/web/content/1902","f272f922":"https://italianoperpiacere.com/web/content/1903","548f2d53":"https://italianoperpiacere.com/web/content/1904","c8ebaab4":"https://italianoperpiacere.com/web/content/1905","12d9d065":"https://italianoperpiacere.com/web/content/1906","cf4eaf13":"https://italianoperpiacere.com/web/content/1907","ea56d27f":"https://italianoperpiacere.com/web/content/1908","4e1f2e02":"https://italianoperpiacere.com/web/content/1909","65787fec":"https://italianoperpiacere.com/web/content/1910","bc91f3c4":"https://italianoperpiacere.com/web/content/1911","dee3ba92":"https://italianoperpiacere.com/web/content/1912","92d91b1a":"https://italianoperpiacere.com/web/content/1913","60f182fd":"https://italianoperpiacere.com/web/content/1914","a41ac701":"https://italianoperpiacere.com/web/content/1916","182c6593":"https://italianoperpiacere.com/web/content/1915","f7e956ba":"https://italianoperpiacere.com/web/content/1917","754a1b74":"https://italianoperpiacere.com/web/content/1918","be7fec9d":"https://italianoperpiacere.com/web/content/1919","73bb6d18":"https://italianoperpiacere.com/web/content/1920","ae66619b":"https://italianoperpiacere.com/web/content/1921","9c69d2d0":"https://italianoperpiacere.com/web/content/1922","638357ea":"https://italianoperpiacere.com/web/content/1923","5eeb0276":"https://italianoperpiacere.com/web/content/1924","8cc95370":"https://italianoperpiacere.com/web/content/1925","45e1515f":"https://italianoperpiacere.com/web/content/1926","b01877a6":"https://italianoperpiacere.com/web/content/1930","59f23b8b":"https://italianoperpiacere.com/web/content/1931","7364a2e2":"https://italianoperpiacere.com/web/content/1932","5f17fa53":"https://italianoperpiacere.com/web/content/1933","695619c0":"https://italianoperpiacere.com/web/content/1934","83abce7e":"https://italianoperpiacere.com/web/content/1935","dcf3b41e":"https://italianoperpiacere.com/web/content/1936","8fc0d7c7":"https://italianoperpiacere.com/web/content/1937","46341c52":"https://italianoperpiacere.com/web/content/1938","68df9af4":"https://italianoperpiacere.com/web/content/1939","1964e450":"https://italianoperpiacere.com/web/content/1940","59ce30b8":"https://italianoperpiacere.com/web/content/1941","c1135499":"https://italianoperpiacere.com/web/content/1942","66fb5bda":"https://italianoperpiacere.com/web/content/1943","ae9b8b1e":"https://italianoperpiacere.com/web/content/1944","33e003f0":"https://italianoperpiacere.com/web/content/1945","ed3f913e":"https://italianoperpiacere.com/web/content/1946","fd99b59f":"https://italianoperpiacere.com/web/content/1947","b6f6f8cd":"https://italianoperpiacere.com/web/content/1948","639dca80":"https://italianoperpiacere.com/web/content/1949","08fea238":"https://italianoperpiacere.com/web/content/1950"};
+  function _norm(s){ return String(s).replace(/\s+/g,' ').trim(); }
+  function _hash(s){ var h=0x811c9dc5; for(var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=(h+((h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24)))>>>0; } return ('0000000'+h.toString(16)).slice(-8); }
+  window.__ippKey = function(t,g){ return _hash((g==='m'?'m':'f')+'|'+_norm(t)); };
+  // ── Reproductor único + desbloqueo en el primer gesto (clave para móvil/iOS) ──
+  var SILENT = 'data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
+  var player = new Audio(); player.preload = 'auto';
+  var unlocked = false, playing = false, curEnd = null, curFail = null;
+  function unlock(){
+    if (unlocked) return; unlocked = true;
+    try { player.src = SILENT; var pp = player.play();
+      if (pp && pp.then) pp.then(function(){ try{ player.pause(); player.currentTime=0; }catch(e){} }).catch(function(){ unlocked = false; });
+    } catch(e){ unlocked = false; }
+  }
+  ['pointerdown','touchstart','mousedown','keydown','click'].forEach(function(ev){
+    document.addEventListener(ev, unlock, { capture:true, passive:true });
+  });
+  player.addEventListener('ended', function(){ playing=false; var f=curEnd; curEnd=null; curFail=null; if(f) f(); });
+  player.addEventListener('error', function(){ if(!playing) return; playing=false; var f=curFail||curEnd; curEnd=null; curFail=null; if(f) f(); });
+  window.__ippStopUrl = function(){ try{ player.pause(); }catch(e){} playing=false; curEnd=null; curFail=null; };
+  window.__ippPlayUrl = function(url, onstart, onend, onfail){
+    try{ player.pause(); }catch(e){}
+    curEnd = onend || null; curFail = onfail || null; playing = true;
+    try{ player.src = url; player.currentTime = 0; }catch(e){}
+    if (onstart) { try{ onstart(); }catch(e){} }
+    var pp = player.play();
+    if (pp && pp.catch) pp.catch(function(){ playing=false; var f=curFail; curEnd=null; curFail=null; if(f) f(); });
+  };
+
+  var ss = window.speechSynthesis; if(!ss) return;
+  var _speak = ss.speak.bind(ss), _cancel = ss.cancel.bind(ss);
+  try{ Object.defineProperty(ss,'speaking',{configurable:true,get:function(){ return playing; }}); }catch(e){}
+  ss.cancel = function(){ window.__ippStopUrl(); try{ _cancel(); }catch(e){} };
+  ss.speak = function(u){
+    try{
+      var text = (u && u.text!=null) ? String(u.text) : '';
+      var g = (window.__ippG==='m') ? 'm' : 'f';
+      // busca con el género actual; si no hay (p.ej. "reproducir todo" que no setea género), prueba el otro
+      var url = window.IPP_AUDIO[window.__ippKey(text,g)] || window.IPP_AUDIO[window.__ippKey(text, g==='m'?'f':'m')];
+      if(url){
+        window.__ippPlayUrl(url,
+          function(){ if(u&&typeof u.onstart==='function'){ try{u.onstart();}catch(e){} } },
+          function(){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(e){} } },
+          function(){ try{ _speak(u); }catch(e){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(_){} } } });
+        return;
+      }
+    }catch(e){}
+    try{ _speak(u); }catch(e){}
+  };
+})();
+
+
+  window.ippStop      = ippStop;
+  window.ippRetry     = ippRetry;
+  window.checkExAlfa  = checkExAlfa;
+  window.revealExAlfa = revealExAlfa;
+  window.checkExVF    = checkExVF;
+  window.checkChiInput= checkChiInput;
+  window.checkAllChi  = checkAllChi;
+  window.checkSaluto  = checkSaluto;
+  window.checkSitu    = checkSitu;
+  window.checkAllSitu = checkAllSitu;
+  window.checkNumOpt  = checkNumOpt;
+  window.checkOrden   = checkOrden;
+  window.checkGExpr   = checkGExpr;
+  window.checkAllGExpr= checkAllGExpr;
+
+  var builds = [
+    buildAlfaFull, buildNums, buildEspr,
+    buildExAlfa, buildExVF, buildExChiamarsi,
+    buildExSaluti, buildExSituaciones, buildExNumeri,
+    buildOrden, buildExGExpr
+  ];
+  builds.forEach(function(fn) {
+    try { fn(); } catch(e) { console.warn('[IPP build error]', fn.name, e); }
+  });
+})();
+</script>
+<!-- ===== /BLOQUE Unità 1 — Gramática ===== --></div>
+    </section>
