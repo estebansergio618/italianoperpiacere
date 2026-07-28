@@ -1,0 +1,1556 @@
+<section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(120,166,186,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0;
+    flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.88rem;
+    color: var(--mc-text); line-height: 1.65;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Vocab grid ===== */
+  .ipp-vocab {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-vocab__chip {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: var(--r);
+    padding: 0.95rem 0.75rem 0.85rem;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.35rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__chip:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120,166,186,0.2);
+  }
+  .ipp-vocab__icon {
+    font-size: 1.5rem;
+    color: var(--mc);
+  }
+  .ipp-vocab__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    text-align: center; line-height: 1.3;
+  }
+  .ipp-vocab__es {
+    font-size: 0.74rem; color: #777;
+    text-align: center; line-height: 1.4;
+  }
+  .ipp-vocab__btn {
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--mc-bg);
+    border: 1px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.7rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Frases ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 10px rgba(120,166,186,0.18); }
+  .ipp-frase.spk-m { border-left-color: var(--m-spk); }
+  .ipp-frase__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+  }
+  .ipp-frase.spk-m .ipp-frase__icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.93rem; font-weight: 600;
+    color: var(--mc-text); line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.77rem; color: #888;
+    font-style: italic; line-height: 1.4;
+  }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-frase.spk-m .ipp-frase__btn { border-color: var(--m-spk); color: var(--m-spk); background: var(--m-bg); }
+  .ipp-frase.spk-m .ipp-frase__btn:hover { background: var(--m-spk); color: var(--white); }
+
+  /* ===== Controles "Escuchar todo" / "Detener" ===== */
+  .ipp-seq-intro {
+    background: #e8f5ec;
+    border-left: 3px solid var(--ok-bd);
+    border-radius: 6px;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--ok-tx);
+    line-height: 1.55;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .ipp-seq-intro .ph { color: var(--ok-bd); flex-shrink: 0; margin-top: 2px; font-size: 1rem; }
+  .ipp-seq-intro strong { color: var(--ok-tx); }
+  .ipp-seq-ctrl {
+    display: flex; gap: 0.55rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: var(--cream);
+    border-radius: var(--r);
+  }
+  .ipp-seq-btn {
+    padding: 0.55rem 1.15rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 700;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.18s;
+    border: 2px solid var(--mc);
+  }
+  .ipp-seq-btn--play { background: var(--mc); color: var(--white); }
+  .ipp-seq-btn--play:hover { background: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop { background: transparent; color: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop:hover { background: var(--mc-bg); }
+
+  /* Estado "activo" (línea siendo reproducida en secuencia) */
+  .ipp-frase.is-playing,
+  .ipp-dial__row.is-playing {
+    outline: 2px solid var(--mc);
+    outline-offset: 3px;
+    background: var(--mc-bg);
+    transition: outline 0.25s, background 0.25s;
+  }
+  .ipp-dial__row.is-playing .ipp-dial__bubble {
+    box-shadow: 0 0 0 2px var(--mc);
+  }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-num {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+    cursor: pointer; transition: all 0.2s;
+    position: relative;
+  }
+  .ipp-num:hover {
+    border-color: var(--mc);
+    box-shadow: 0 3px 10px rgba(120,166,186,0.18);
+    transform: translateY(-2px);
+  }
+  .ipp-num__big {
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--mc); display: block;
+    line-height: 1.1;
+  }
+  .ipp-num__it {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--mc-text); font-style: italic;
+    margin: 0.25rem 0 0.15rem;
+  }
+  .ipp-num__note {
+    font-size: 0.68rem; color: var(--mc-dk);
+    line-height: 1.3;
+  }
+
+  /* ===== Días ===== */
+  .ipp-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+  .ipp-day {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.5rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-day:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(120,166,186,0.18);
+  }
+  .ipp-day__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ipp-day__it {
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    display: block;
+  }
+  .ipp-day__es { font-size: 0.7rem; color: #888; margin-top: 0.15rem; }
+
+  /* Día activity */
+  .ipp-day-act {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-day-act__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--mc-text); margin: 0 0 0.5rem;
+  }
+  .ipp-day-act__sub {
+    font-size: 0.8rem; color: #777; margin: 0 0 0.85rem;
+  }
+  .ipp-day-pool { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+  .ipp-day-opt {
+    padding: 0.4rem 0.95rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-text);
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-day-opt:hover { background: var(--mc); color: var(--white); }
+  .ipp-day-opt.selected { background: var(--mc); color: var(--white); opacity: 0.5; cursor: not-allowed; }
+  .ipp-day-zone {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    min-height: 48px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.55rem;
+    margin-bottom: 0.85rem;
+    border: 2px dashed var(--mc-bg);
+  }
+  .ipp-day-tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc); color: var(--white);
+    border-radius: 16px;
+    font-size: 0.82rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-day-tag__close {
+    cursor: pointer; font-size: 0.95rem;
+    line-height: 1; opacity: 0.8;
+  }
+  .ipp-day-tag__close:hover { opacity: 1; }
+
+  /* ===== Diálogo ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+  .ipp-dial__sub {
+    font-size: 0.8rem; color: #888; margin: 0 0 1rem;
+  }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 1rem;
+  }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon {
+    background: var(--m-bg); color: var(--m-spk);
+  }
+  .ipp-dial__bubble {
+    padding: 0.7rem 1rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 85%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.92rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.55;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.76rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.25rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Plurales ===== */
+  .ipp-plurals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .ipp-plural {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.9rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-plural:focus-within { border-color: var(--mc); }
+  .ipp-plural__sing {
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    margin-bottom: 0.45rem;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .ipp-plural__sing .ph { color: var(--mc); font-size: 1.1rem; }
+  .ipp-plural__inp {
+    width: 100%;
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-family: inherit; font-size: 0.88rem;
+    color: var(--black); background: var(--cream);
+    outline: none; transition: border 0.2s;
+  }
+  .ipp-plural__inp:focus { border-color: var(--mc); background: var(--white); }
+  .ipp-plural__inp.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-plural__inp.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-plural__note {
+    font-size: 0.72rem; color: #888;
+    margin-top: 0.35rem; font-style: italic;
+    line-height: 1.4;
+    display: none;
+  }
+  .ipp-plural__note.show { display: block; }
+
+  .ipp-check-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.65rem 1.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer;
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s;
+  }
+  .ipp-check-btn:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.86rem; line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid #c89500; }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+
+  /* ===== Fonética ===== */
+  .ipp-fon-intro {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--mc-bg);
+    margin-bottom: 1rem;
+    font-size: 0.88rem; color: #555;
+    line-height: 1.65;
+  }
+  .ipp-fon-intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    border: 1.5px solid var(--mc-bg);
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+  .ipp-fon-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+    text-align: left;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-fon-table td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-fon-table tr:last-child td { border-bottom: none; }
+  .ipp-fon-table tr:nth-child(even) td { background: #f5fafb; }
+  .ipp-fon-table td:first-child {
+    font-weight: 700; color: var(--mc-text); font-style: italic;
+  }
+  .ipp-fon-table td em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-sound {
+    display: inline-block;
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.15rem 0.65rem;
+    border-radius: 12px;
+    font-weight: 700; font-size: 0.82rem;
+  }
+  .ipp-fon-play {
+    padding: 0.2rem 0.6rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* Fonética: ejercicio botones [k]/[g] o [tʃ]/[dʒ] */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 0.45rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.82rem; color: #777;
+    margin: 0 0 1rem; line-height: 1.55;
+  }
+  .ipp-fonex__list {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-fonex__item {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__score {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 0.95rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-vocab { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-fon-table { font-size: 0.78rem; }
+    .ipp-fon-table th, .ipp-fon-table td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+.ipp-video{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.15);margin:.5rem 0;background:#111;}.ipp-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}.ipp-fon-table td.pro{color:var(--mc-dk);font-weight:600;}
+.ipp-scenario{display:flex;gap:.7rem;align-items:flex-start;background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0 1rem;font-size:.95rem;line-height:1.6;color:var(--mc-text);}.ipp-scenario .ph{color:var(--mc-dk);font-size:1.3rem;flex-shrink:0;}
+.ipp-cultura{background:#fff8e8;border:1px solid #e9d8a6;border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0;font-size:.92rem;line-height:1.6;color:#6b5713;}.ipp-cultura__h{font-weight:700;color:#8a6d0f;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem;}
+.ipp-nota{display:flex;gap:.6rem;align-items:flex-start;background:var(--cream);border-left:3px solid var(--mc);border-radius:8px;padding:.8rem 1rem;margin:.6rem 0 1rem;font-size:.9rem;line-height:1.6;color:var(--mc-text);}.ipp-nota .ph{color:var(--mc-dk);font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
+.q-block{background:#fff;border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}.q-q{font-weight:600;color:var(--mc-text);margin:0 0 .6rem;}
+.q-tag{display:inline-block;background:var(--mc);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;margin-right:.4rem;vertical-align:middle;}
+.q-opts{display:flex;gap:.5rem;flex-wrap:wrap;}.q-opt{border:1.5px solid var(--cream-dk);background:var(--cream);border-radius:8px;padding:.5rem .9rem;font:500 .9rem Outfit;cursor:pointer;}.q-opt:hover{border-color:var(--mc);}.q-opt.ok{background:#d8efe3;border-color:var(--mc);color:var(--mc-dk);}.q-opt.no{background:#f6d9d4;border-color:var(--red);color:var(--red);}
+.f-row{display:flex;gap:.5rem;flex-wrap:wrap;}.f-in{border:1.5px solid var(--cream-dk);border-radius:8px;padding:.5rem .8rem;font:500 .9rem Outfit;min-width:200px;}.f-check{border:0;background:var(--mc);color:#fff;border-radius:8px;padding:.5rem 1rem;font:600 .9rem Outfit;cursor:pointer;}
+.q-fb{margin-top:.6rem;font-size:.88rem;color:var(--mc-text);display:none;}.q-fb.show{display:block;}.q-fb.ok{color:var(--mc-dk);}.q-fb.no{color:var(--red);}.q-fb .ph{vertical-align:-2px;}
+.q-retry{margin-top:.6rem;border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:8px;padding:.4rem .85rem;font:600 .85rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;}.q-retry:hover{background:var(--mc-bg);}
+.ipp-sofia{display:flex;align-items:flex-start;gap:1rem;margin:.3rem 0 1.6rem;}.ipp-sofia__col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.ipp-sofia__avatar{width:56px;height:56px;border-radius:50%;background:var(--mc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 16px rgba(82,142,116,.35);}
+.ipp-sofia__name{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mc-dk);margin-top:.3rem;}
+.ipp-sofia__bubble{background:#fff;border-radius:0 12px 12px 12px;padding:1.1rem 1.35rem;box-shadow:0 3px 14px rgba(0,0,0,.07);font-size:.96rem;line-height:1.75;min-width:0;}
+.ipp-sofia__bubble strong{color:var(--mc-dk);}.ipp-sofia__bubble em{color:var(--red);font-style:italic;}.ipp-sofia__bubble p{margin:0 0 .85rem;}.ipp-sofia__bubble p:last-child{margin-bottom:0;}
+.ipp-task{background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:12px;padding:1.1rem 1.35rem;font-size:.94rem;line-height:1.7;margin-bottom:1.2rem;}
+.ipp-task strong{color:var(--mc-text);}.ipp-task .ph{color:var(--mc-dk);vertical-align:-2px;}.ipp-task__lead{margin:0 0 .85rem;}
+.ipp-task__list{list-style:none;padding:0;margin:0 0 .85rem;display:flex;flex-direction:column;gap:.7rem;}.ipp-task__list li{line-height:1.6;}
+.ipp-task__foot{margin:0;padding-top:.85rem;border-top:1px dashed rgba(82,142,116,.35);color:var(--mc-text);}
+.ipp-card{background:#fff;border-radius:12px;padding:1.3rem 1.6rem;box-shadow:0 3px 14px rgba(0,0,0,.06);margin-bottom:1.5rem;}
+.ipp-card__head{font-size:.93rem;font-weight:600;color:var(--mc-text);margin:0 0 .85rem;display:flex;align-items:center;gap:.5rem;}.ipp-card__head .ph{font-size:1.15rem;flex-shrink:0;}
+.ipp-steps{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}.ipp-step{display:flex;align-items:flex-start;gap:1rem;background:var(--cream);border-radius:12px;padding:1rem 1.15rem;}
+.ipp-step__num{background:var(--mc);color:#fff;font-weight:700;font-size:.85rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-step__txt{font-size:.93rem;line-height:1.65;min-width:0;}.ipp-step__txt strong{color:var(--mc-dk);}
+.ipp-video-note{font-size:.78rem;color:#888;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:.4rem;}
+.ipp-video-note a{color:var(--mc-dk);text-decoration:none;font-weight:600;font-size:.8rem;display:inline-flex;align-items:center;gap:.35rem;}.ipp-video-note a:hover{text-decoration:underline;}
+.ipp-info{background:#f0f6f9;border-left:4px solid #2d5f72;border-radius:12px;padding:1rem 1.3rem;font-size:.9rem;line-height:1.65;color:#2d5f72;margin-top:.75rem;display:flex;align-items:flex-start;gap:.7rem;}.ipp-info .ph{color:#2d5f72;font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+@media (max-width:540px){.ipp-sofia{flex-direction:column;align-items:stretch;gap:.55rem;}.ipp-sofia__col{flex-direction:row;align-items:center;gap:.55rem;align-self:flex-start;}.ipp-sofia__avatar{width:38px;height:38px;font-size:1.15rem;}.ipp-sofia__name{margin-top:0;font-size:.65rem;}.ipp-sofia__bubble{border-radius:12px;padding:1rem 1.15rem;}.ipp-video-note{flex-direction:column;align-items:flex-start;}}
+.ipp-ex{background:#fff;border-radius:12px;padding:1.3rem;margin-bottom:1.1rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}
+.ipp-ex__head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
+.ipp-ex__num{width:36px;height:36px;border-radius:50%;background:var(--mc);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-ex__title{font-weight:700;font-size:1.02rem;color:var(--mc-text);}.ipp-ex__title em{font-style:italic;color:var(--red);}
+.ipp-ex__sub{font-size:.82rem;color:#777;margin-top:.2rem;}.ipp-ex .q-q{margin:.2rem 0 .7rem;}.ipp-ex .q-opts{margin-bottom:0;}
+.ipp-conj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.65rem;margin:.3rem 0;}
+.ipp-conj-item{background:var(--cream);border-radius:8px;padding:.65rem .8rem;}.ipp-conj-item.noi,.ipp-conj-item.voi,.ipp-conj-item.loro{background:var(--mc-bg);}
+.ipp-conj-item__pron{font-size:.75rem;color:#666;font-style:italic;font-weight:700;margin-bottom:.25rem;}
+.ipp-conj-item input{border:1.5px solid var(--cream-dk);border-radius:6px;padding:.35rem .55rem;font-family:inherit;font-size:.88rem;width:100%;background:#fff;color:var(--mc-text);font-style:italic;font-weight:700;outline:none;transition:all .2s;}
+.ipp-conj-item input:focus{border-color:var(--mc);}.ipp-conj-item input.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-conj-item input.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill{border:2px solid var(--cream-dk);border-radius:6px;padding:.3rem .6rem;font-family:inherit;font-size:.9rem;width:150px;background:#fff;color:var(--black);font-style:italic;font-weight:600;transition:all .2s;}
+.ipp-fill:focus{border-color:var(--mc);outline:none;background:var(--mc-bg);}.ipp-fill.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-fill.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill-row{margin-bottom:.7rem;font-size:.94rem;line-height:2.1;}.ipp-fill-row:last-of-type{margin-bottom:0;}.ipp-fill-row em{color:var(--mc-dk);font-style:italic;font-weight:600;}
+.ipp-bank{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 .2rem;padding:.85rem 1rem;background:var(--mc-bg);border-radius:10px;}
+.ipp-bank__hint{flex-basis:100%;font-size:.78rem;color:var(--mc-dk);margin-bottom:.15rem;font-style:italic;}
+.ipp-word{border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:20px;padding:.4rem .95rem;font:600 .9rem Outfit;font-style:italic;cursor:pointer;transition:all .15s;}
+.ipp-word:hover{background:var(--mc);color:#fff;}.ipp-word.armed{background:var(--mc);color:#fff;box-shadow:0 0 0 3px rgba(82,142,116,.28);}
+.ipp-word.used{opacity:.4;pointer-events:none;text-decoration:line-through;}
+.ipp-slot{display:inline-block;min-width:82px;padding:.2rem .55rem;margin:0 .15rem;border:1.5px dashed var(--mc);border-radius:6px;background:var(--cream);color:var(--mc-text);font-style:italic;font-weight:700;text-align:center;cursor:pointer;line-height:1.3;}
+.ipp-slot.filled{background:#fff;border-style:solid;}.ipp-slot.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok-tx);}.ipp-slot.err{background:var(--err-bg);border-color:var(--red);color:var(--err-tx);}</style><div class="ipp-unit"><section class="ipp-section"><div class="ipp-label">Unità 6 · Gramática</div><h2 class="ipp-title">Verbi modali e articoli</h2><p class="ipp-sub">Dovere, potere, volere; preposiciones y artículos un/uno/una.</p></section><section class="ipp-section"><div class="ipp-label">Bloque 1 · Verbi modali</div><h2 class="ipp-title">Dovere, potere, volere</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>Los verbos modales (dovere = deber, potere = poder, volere = querer) van seguidos de un infinitivo o de un sustantivo: «Voglio un caffè».</div></div><p class="ipp-sub">Estudiá la tabla. Tocá el altavoz para escuchar los ejemplos en voz alta.</p><table class="ipp-fon-table"><thead><tr><th>Pronome</th><th>dovere</th><th>potere</th><th>volere</th><th>Esempio</th><th></th></tr></thead><tbody><tr><td>io</td><td>devo</td><td>posso</td><td>voglio</td><td>Voglio un caffè.</td><td><button type="button" class="ipp-fon-play" data-t="Voglio un caffè." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>devi</td><td>puoi</td><td>vuoi</td><td>Puoi pagare?</td><td><button type="button" class="ipp-fon-play" data-t="Puoi pagare?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>lui / lei</td><td>deve</td><td>può</td><td>vuole</td><td>Vuole un cornetto.</td><td><button type="button" class="ipp-fon-play" data-t="Vuole un cornetto." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table></section><section class="ipp-section"><div class="ipp-label">Bloque 2 · Preposizioni di luogo</div><h2 class="ipp-title">da, a, in</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>a (lugar general: a casa, al bar), in (espacios cerrados: in ufficio), da (a lo de alguien: da Marco).</div></div><p class="ipp-sub">Hacé clic en cada ejemplo para escucharlo.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="al bar" onclick="ippPlay(this)"><div class="ipp-vocab__it">al bar</div><div class="ipp-vocab__es">en el bar</div><button type="button" class="ipp-vocab__btn" data-t="al bar" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="a casa" onclick="ippPlay(this)"><div class="ipp-vocab__it">a casa</div><div class="ipp-vocab__es">en casa</div><button type="button" class="ipp-vocab__btn" data-t="a casa" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="in ufficio" onclick="ippPlay(this)"><div class="ipp-vocab__it">in ufficio</div><div class="ipp-vocab__es">en la oficina</div><button type="button" class="ipp-vocab__btn" data-t="in ufficio" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="da Marco" onclick="ippPlay(this)"><div class="ipp-vocab__it">da Marco</div><div class="ipp-vocab__es">en lo de Marco</div><button type="button" class="ipp-vocab__btn" data-t="da Marco" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 3 · Articoli indeterminativi</div><h2 class="ipp-title">un, uno, una, un&#x27;</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>un (masc.), uno (antes de s+consonante, z…), una (fem.), un&#x27; (fem. ante vocal).</div></div><p class="ipp-sub">Hacé clic en cada ejemplo para escucharlo.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="un caffè" onclick="ippPlay(this)"><div class="ipp-vocab__it">un caffè</div><div class="ipp-vocab__es">un café</div><button type="button" class="ipp-vocab__btn" data-t="un caffè" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="uno scontrino" onclick="ippPlay(this)"><div class="ipp-vocab__it">uno scontrino</div><div class="ipp-vocab__es">un ticket</div><button type="button" class="ipp-vocab__btn" data-t="uno scontrino" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="una birra" onclick="ippPlay(this)"><div class="ipp-vocab__it">una birra</div><div class="ipp-vocab__es">una cerveza</div><button type="button" class="ipp-vocab__btn" data-t="una birra" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="un&#x27;acqua" onclick="ippPlay(this)"><div class="ipp-vocab__it">un&#x27;acqua</div><div class="ipp-vocab__es">un agua</div><button type="button" class="ipp-vocab__btn" data-t="un&#x27;acqua" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 4 · Esercizio</div><h2 class="ipp-title">¿Practicamos?</h2><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Coniuga <em>prendere</em></div><div class="ipp-ex__sub">Completá la conjugación completa del presente</div></div></div><div class="ipp-conj-grid"><div class="ipp-conj-item "><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="prendo" placeholder="io…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="prendi" placeholder="tu…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="prende" placeholder="lui / lei…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="prendiamo" placeholder="noi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="prendete" placeholder="voi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="prendono" placeholder="loro…" autocomplete="off" oninput="ippCheck(this)"></div></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Coniuga <em>volere</em></div><div class="ipp-ex__sub">Verbo modal — «querer»</div></div></div><div class="ipp-conj-grid"><div class="ipp-conj-item "><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="voglio" placeholder="io…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="vuoi" placeholder="tu…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="vuole" placeholder="lui / lei…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="vogliamo" placeholder="noi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="volete" placeholder="voi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="vogliono" placeholder="loro…" autocomplete="off" oninput="ippCheck(this)"></div></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">Completá con un / uno / una / un&#x27;</div><div class="ipp-ex__sub">El artículo indeterminado</div></div></div><div class="ipp-fill-row">Prendo <span class="ipp-slot" data-answer="un" onclick="ippSlot(this)"></span> caffè.</div><div class="ipp-fill-row">Vorrei <span class="ipp-slot" data-answer="una" onclick="ippSlot(this)"></span> spremuta.</div><div class="ipp-fill-row"><span class="ipp-slot" data-answer="uno" onclick="ippSlot(this)"></span> zaino è nuovo.</div><div class="ipp-fill-row">Ho <span class="ipp-slot" data-answer="un&#x27;" onclick="ippSlot(this)"></span> amica italiana.</div><div class="ipp-bank"><span class="ipp-bank__hint">Palabras para colocar:</span><button type="button" class="ipp-word" data-w="un&#x27;" onclick="ippWord(this)">un&#x27;</button><button type="button" class="ipp-word" data-w="uno" onclick="ippWord(this)">uno</button><button type="button" class="ipp-word" data-w="una" onclick="ippWord(this)">una</button><button type="button" class="ipp-word" data-w="un" onclick="ippWord(this)">un</button></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">Elegí el verbo modal</div></div></div><p class="q-q">&#x27;Puedo pagar&#x27; = ___ pagare.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="potere → posso." onclick="ippOpt(this)">devo</button><button type="button" class="q-opt" data-ok="1" data-fb="potere → posso." onclick="ippOpt(this)">posso</button><button type="button" class="q-opt" data-ok="0" data-fb="potere → posso." onclick="ippOpt(this)">voglio</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section></div><script>(function(){var MAP={"caff\u00e8": "https://italianoperpiacere.com/web/content/2073", "cappuccino": "https://italianoperpiacere.com/web/content/2072", "cornetto": "https://italianoperpiacere.com/web/content/2071", "panino": "https://italianoperpiacere.com/web/content/2102", "acqua": "https://italianoperpiacere.com/web/content/2075", "t\u00e8": "https://italianoperpiacere.com/web/content/2074", "succo d'arancia": "https://italianoperpiacere.com/web/content/2076", "birra": "https://italianoperpiacere.com/web/content/2077", "vino": "https://italianoperpiacere.com/web/content/2079", "gelato": "https://italianoperpiacere.com/web/content/2078", "espresso": "https://italianoperpiacere.com/web/content/2080", "caff\u00e8 macchiato": "https://italianoperpiacere.com/web/content/2082", "caff\u00e8 lungo": "https://italianoperpiacere.com/web/content/2081", "caff\u00e8 corretto": "https://italianoperpiacere.com/web/content/2083", "la cassa": "https://italianoperpiacere.com/web/content/2085", "il banco": "https://italianoperpiacere.com/web/content/2084", "il tavolo": "https://italianoperpiacere.com/web/content/2086", "lo scontrino": "https://italianoperpiacere.com/web/content/2088", "il conto": "https://italianoperpiacere.com/web/content/2087", "Un caff\u00e8, per favore.": "https://italianoperpiacere.com/web/content/2089", "Vorrei un cornetto.": "https://italianoperpiacere.com/web/content/2090", "Quanto costa?": "https://italianoperpiacere.com/web/content/2091", "Il conto, per favore.": "https://italianoperpiacere.com/web/content/2092", "Prendo un cappuccino.": "https://italianoperpiacere.com/web/content/2093", "Buongiorno! Un caff\u00e8, per favore.": "https://italianoperpiacere.com/web/content/2094", "Subito! Vuole anche un cornetto?": "https://italianoperpiacere.com/web/content/2095", "S\u00ec, grazie. Quanto costa?": "https://italianoperpiacere.com/web/content/2096", "Due euro e cinquanta.": "https://italianoperpiacere.com/web/content/2097", "palla, bello": "https://italianoperpiacere.com/web/content/2098", "nonno, donna": "https://italianoperpiacere.com/web/content/2099", "sette, caff\u00e8": "https://italianoperpiacere.com/web/content/2100", "Voglio un caff\u00e8.": "https://italianoperpiacere.com/web/content/2101", "Puoi pagare?": "https://italianoperpiacere.com/web/content/2103", "Vuole un cornetto.": "https://italianoperpiacere.com/web/content/2104", "al bar": "https://italianoperpiacere.com/web/content/2105", "a casa": "https://italianoperpiacere.com/web/content/2106", "in ufficio": "https://italianoperpiacere.com/web/content/2107", "da Marco": "https://italianoperpiacere.com/web/content/2108", "un caff\u00e8": "https://italianoperpiacere.com/web/content/2109", "uno scontrino": "https://italianoperpiacere.com/web/content/2110", "una birra": "https://italianoperpiacere.com/web/content/2111", "un'acqua": "https://italianoperpiacere.com/web/content/2112", "Ecco a Lei. Grazie!": "https://italianoperpiacere.com/web/content/2188", "Grazie a Lei, buona giornata!": "https://italianoperpiacere.com/web/content/2187", "una spremuta d'arancia": "https://italianoperpiacere.com/web/content/2233", "un caff\u00e8 decaffeinato": "https://italianoperpiacere.com/web/content/2217", "un t\u00e8": "https://italianoperpiacere.com/web/content/2215", "una birra piccola": "https://italianoperpiacere.com/web/content/2216", "un'acqua minerale": "https://italianoperpiacere.com/web/content/2218", "un tramezzino": "https://italianoperpiacere.com/web/content/2219", "il prosciutto crudo": "https://italianoperpiacere.com/web/content/2220", "la mozzarella": "https://italianoperpiacere.com/web/content/2222", "il tiramis\u00f9": "https://italianoperpiacere.com/web/content/2221", "la panna cotta": "https://italianoperpiacere.com/web/content/2223", "un cornetto": "https://italianoperpiacere.com/web/content/2225", "Cosa prendete?": "https://italianoperpiacere.com/web/content/2224", "Io prendo una spremuta d'arancia.": "https://italianoperpiacere.com/web/content/2226", "Per me un tramezzino, per favore.": "https://italianoperpiacere.com/web/content/2227", "Io vorrei un caff\u00e8 decaffeinato.": "https://italianoperpiacere.com/web/content/2228", "Avete il tiramis\u00f9 fatto in casa?": "https://italianoperpiacere.com/web/content/2229", "Quant'\u00e8?": "https://italianoperpiacere.com/web/content/2230", "Buongiorno signori. Allora, cosa prendete?": "https://italianoperpiacere.com/web/content/2231", "Io prendo solo una spremuta d'arancia con arance rosse.": "https://italianoperpiacere.com/web/content/2232", "Per me un tramezzino con prosciutto e mozzarella e una birra piccola.": "https://italianoperpiacere.com/web/content/2234", "Avete il tiramis\u00f9 fatto in casa? Allora un tiramis\u00f9 e anche un t\u00e8.": "https://italianoperpiacere.com/web/content/2235", "Ma hai gi\u00e0 ordinato una spremuta!": "https://italianoperpiacere.com/web/content/2237", "Ho capito\u2026 Allora ripeto. Che confusione!": "https://italianoperpiacere.com/web/content/2236"};var DIAL=["Buongiorno signori. Allora, cosa prendete?", "Io prendo solo una spremuta d'arancia con arance rosse.", "Per me un tramezzino con prosciutto e mozzarella e una birra piccola.", "Avete il tiramis\u00f9 fatto in casa? Allora un tiramis\u00f9 e anche un t\u00e8.", "Ma hai gi\u00e0 ordinato una spremuta!", "Ho capito\u2026 Allora ripeto. Che confusione!"];var SILENT="data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA";var player=window.__ippPlayer||(window.__ippPlayer=new Audio());player.preload='auto';window.__ippUnlocked=window.__ippUnlocked||false;function unlock(){if(window.__ippUnlocked)return;window.__ippUnlocked=true;try{player.src=SILENT;var p=player.play();if(p&&p.then)p.then(function(){try{player.pause();player.currentTime=0;}catch(e){}}).catch(function(){window.__ippUnlocked=false;});}catch(e){window.__ippUnlocked=false;}}function nrm(s){return (s||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9' ]/g,'').replace(/\s+/g,' ');}window.ippPlay=function(el){unlock();var t=(typeof el==='string')?el:(el&&el.getAttribute('data-t'));if(!t||!MAP[t])return;player.onended=null;try{player.pause();}catch(e){}player.src=MAP[t];try{player.currentTime=0;}catch(e){}var p=player.play();if(p&&p.catch)p.catch(function(){});};window.ippPlayAll=function(){unlock();try{player.pause();}catch(e){}var i=0;(function next(){if(i>=DIAL.length){player.onended=null;return;}player.src=MAP[DIAL[i]];try{player.currentTime=0;}catch(e){}i++;player.onended=function(){setTimeout(next,450);};var p=player.play();if(p&&p.catch)p.catch(function(){});})();};window.ippOpt=function(q){var bl=q.closest('.q-block');var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(q.getAttribute('data-ok')==='1'){bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=true;});q.classList.add('ok');fb.innerHTML='<i class="ph ph-check-circle"></i> '+q.getAttribute('data-fb');fb.className='q-fb show ok';}else{q.classList.add('no');q.disabled=true;fb.innerHTML='<i class="ph ph-x-circle"></i> No es esa — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippFill=function(f){var bl=f.closest('.q-block');var inp=document.getElementById(f.getAttribute('data-fi'));var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(nrm(inp.value)===nrm(f.getAttribute('data-ans'))){inp.disabled=true;fb.innerHTML='<i class="ph ph-check-circle"></i> '+(f.getAttribute('data-fb')||'Corretto!');fb.className='q-fb show ok';}else{fb.innerHTML='<i class="ph ph-x-circle"></i> Todavía no — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippReset=function(rt){var bl=rt.closest('.q-block')||rt.closest('.ipp-ex');if(!bl)return;bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=false;b.classList.remove('ok','no');});bl.querySelectorAll('.f-in,input[data-answer]').forEach(function(x){x.value='';x.disabled=false;x.classList.remove('ok','err');});bl.querySelectorAll('.ipp-slot').forEach(function(s){s.textContent='';s.removeAttribute('data-filled');s.classList.remove('filled','ok','err');});bl.querySelectorAll('.ipp-word').forEach(function(x){x.classList.remove('used','armed');});var fb=bl.querySelector('.q-fb');if(fb){fb.className='q-fb';fb.innerHTML='';}rt.style.display='none';};window.ippCheck=function(inp){var ans=inp.getAttribute('data-answer');if(ans===null)return;if(!inp.value.trim()){inp.classList.remove('ok','err');}else if(nrm(inp.value)===nrm(ans)){inp.classList.remove('err');inp.classList.add('ok');}else{inp.classList.remove('ok');inp.classList.add('err');}var cd=inp.closest('.ipp-ex')||inp.closest('.q-block');if(cd){var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('input[data-answer].err')?'inline-flex':'none';}};window.ippWord=function(wb){if(wb.classList.contains('used'))return;var cw=wb.closest('.ipp-ex');var aw=cw.querySelector('.ipp-word.armed');if(aw&&aw!==wb)aw.classList.remove('armed');wb.classList.toggle('armed');};window.ippSlot=function(sl){var cd=sl.closest('.ipp-ex');if(sl.getAttribute('data-filled')){var wv=sl.getAttribute('data-filled');var cs=cd.querySelectorAll('.ipp-word.used');for(var i=0;i<cs.length;i++){if(cs[i].getAttribute('data-w')===wv){cs[i].classList.remove('used');break;}}sl.textContent='';sl.removeAttribute('data-filled');sl.classList.remove('filled','ok','err');}else{var ar=cd.querySelector('.ipp-word.armed');if(ar){var val=ar.getAttribute('data-w');sl.textContent=val;sl.setAttribute('data-filled',val);sl.classList.add('filled');ar.classList.remove('armed');ar.classList.add('used');if(nrm(val)===nrm(sl.getAttribute('data-answer'))){sl.classList.remove('err');sl.classList.add('ok');}else{sl.classList.remove('ok');sl.classList.add('err');}}}var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('.ipp-slot.err')?'inline-flex':'none';};})();</script></template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(120,166,186,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0;
+    flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.88rem;
+    color: var(--mc-text); line-height: 1.65;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Vocab grid ===== */
+  .ipp-vocab {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-vocab__chip {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: var(--r);
+    padding: 0.95rem 0.75rem 0.85rem;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.35rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__chip:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120,166,186,0.2);
+  }
+  .ipp-vocab__icon {
+    font-size: 1.5rem;
+    color: var(--mc);
+  }
+  .ipp-vocab__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    text-align: center; line-height: 1.3;
+  }
+  .ipp-vocab__es {
+    font-size: 0.74rem; color: #777;
+    text-align: center; line-height: 1.4;
+  }
+  .ipp-vocab__btn {
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--mc-bg);
+    border: 1px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.7rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Frases ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 10px rgba(120,166,186,0.18); }
+  .ipp-frase.spk-m { border-left-color: var(--m-spk); }
+  .ipp-frase__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+  }
+  .ipp-frase.spk-m .ipp-frase__icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.93rem; font-weight: 600;
+    color: var(--mc-text); line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.77rem; color: #888;
+    font-style: italic; line-height: 1.4;
+  }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-frase.spk-m .ipp-frase__btn { border-color: var(--m-spk); color: var(--m-spk); background: var(--m-bg); }
+  .ipp-frase.spk-m .ipp-frase__btn:hover { background: var(--m-spk); color: var(--white); }
+
+  /* ===== Controles "Escuchar todo" / "Detener" ===== */
+  .ipp-seq-intro {
+    background: #e8f5ec;
+    border-left: 3px solid var(--ok-bd);
+    border-radius: 6px;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--ok-tx);
+    line-height: 1.55;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .ipp-seq-intro .ph { color: var(--ok-bd); flex-shrink: 0; margin-top: 2px; font-size: 1rem; }
+  .ipp-seq-intro strong { color: var(--ok-tx); }
+  .ipp-seq-ctrl {
+    display: flex; gap: 0.55rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: var(--cream);
+    border-radius: var(--r);
+  }
+  .ipp-seq-btn {
+    padding: 0.55rem 1.15rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 700;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.18s;
+    border: 2px solid var(--mc);
+  }
+  .ipp-seq-btn--play { background: var(--mc); color: var(--white); }
+  .ipp-seq-btn--play:hover { background: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop { background: transparent; color: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop:hover { background: var(--mc-bg); }
+
+  /* Estado "activo" (línea siendo reproducida en secuencia) */
+  .ipp-frase.is-playing,
+  .ipp-dial__row.is-playing {
+    outline: 2px solid var(--mc);
+    outline-offset: 3px;
+    background: var(--mc-bg);
+    transition: outline 0.25s, background 0.25s;
+  }
+  .ipp-dial__row.is-playing .ipp-dial__bubble {
+    box-shadow: 0 0 0 2px var(--mc);
+  }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-num {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+    cursor: pointer; transition: all 0.2s;
+    position: relative;
+  }
+  .ipp-num:hover {
+    border-color: var(--mc);
+    box-shadow: 0 3px 10px rgba(120,166,186,0.18);
+    transform: translateY(-2px);
+  }
+  .ipp-num__big {
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--mc); display: block;
+    line-height: 1.1;
+  }
+  .ipp-num__it {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--mc-text); font-style: italic;
+    margin: 0.25rem 0 0.15rem;
+  }
+  .ipp-num__note {
+    font-size: 0.68rem; color: var(--mc-dk);
+    line-height: 1.3;
+  }
+
+  /* ===== Días ===== */
+  .ipp-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+  .ipp-day {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.5rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-day:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(120,166,186,0.18);
+  }
+  .ipp-day__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ipp-day__it {
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    display: block;
+  }
+  .ipp-day__es { font-size: 0.7rem; color: #888; margin-top: 0.15rem; }
+
+  /* Día activity */
+  .ipp-day-act {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-day-act__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--mc-text); margin: 0 0 0.5rem;
+  }
+  .ipp-day-act__sub {
+    font-size: 0.8rem; color: #777; margin: 0 0 0.85rem;
+  }
+  .ipp-day-pool { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+  .ipp-day-opt {
+    padding: 0.4rem 0.95rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-text);
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-day-opt:hover { background: var(--mc); color: var(--white); }
+  .ipp-day-opt.selected { background: var(--mc); color: var(--white); opacity: 0.5; cursor: not-allowed; }
+  .ipp-day-zone {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    min-height: 48px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.55rem;
+    margin-bottom: 0.85rem;
+    border: 2px dashed var(--mc-bg);
+  }
+  .ipp-day-tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc); color: var(--white);
+    border-radius: 16px;
+    font-size: 0.82rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-day-tag__close {
+    cursor: pointer; font-size: 0.95rem;
+    line-height: 1; opacity: 0.8;
+  }
+  .ipp-day-tag__close:hover { opacity: 1; }
+
+  /* ===== Diálogo ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+  .ipp-dial__sub {
+    font-size: 0.8rem; color: #888; margin: 0 0 1rem;
+  }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 1rem;
+  }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon {
+    background: var(--m-bg); color: var(--m-spk);
+  }
+  .ipp-dial__bubble {
+    padding: 0.7rem 1rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 85%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.92rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.55;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.76rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.25rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Plurales ===== */
+  .ipp-plurals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .ipp-plural {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.9rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-plural:focus-within { border-color: var(--mc); }
+  .ipp-plural__sing {
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    margin-bottom: 0.45rem;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .ipp-plural__sing .ph { color: var(--mc); font-size: 1.1rem; }
+  .ipp-plural__inp {
+    width: 100%;
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-family: inherit; font-size: 0.88rem;
+    color: var(--black); background: var(--cream);
+    outline: none; transition: border 0.2s;
+  }
+  .ipp-plural__inp:focus { border-color: var(--mc); background: var(--white); }
+  .ipp-plural__inp.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-plural__inp.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-plural__note {
+    font-size: 0.72rem; color: #888;
+    margin-top: 0.35rem; font-style: italic;
+    line-height: 1.4;
+    display: none;
+  }
+  .ipp-plural__note.show { display: block; }
+
+  .ipp-check-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.65rem 1.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer;
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s;
+  }
+  .ipp-check-btn:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.86rem; line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid #c89500; }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+
+  /* ===== Fonética ===== */
+  .ipp-fon-intro {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--mc-bg);
+    margin-bottom: 1rem;
+    font-size: 0.88rem; color: #555;
+    line-height: 1.65;
+  }
+  .ipp-fon-intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    border: 1.5px solid var(--mc-bg);
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+  .ipp-fon-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+    text-align: left;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-fon-table td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-fon-table tr:last-child td { border-bottom: none; }
+  .ipp-fon-table tr:nth-child(even) td { background: #f5fafb; }
+  .ipp-fon-table td:first-child {
+    font-weight: 700; color: var(--mc-text); font-style: italic;
+  }
+  .ipp-fon-table td em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-sound {
+    display: inline-block;
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.15rem 0.65rem;
+    border-radius: 12px;
+    font-weight: 700; font-size: 0.82rem;
+  }
+  .ipp-fon-play {
+    padding: 0.2rem 0.6rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* Fonética: ejercicio botones [k]/[g] o [tʃ]/[dʒ] */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 0.45rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.82rem; color: #777;
+    margin: 0 0 1rem; line-height: 1.55;
+  }
+  .ipp-fonex__list {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-fonex__item {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__score {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 0.95rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-vocab { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-fon-table { font-size: 0.78rem; }
+    .ipp-fon-table th, .ipp-fon-table td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+.ipp-video{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.15);margin:.5rem 0;background:#111;}.ipp-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}.ipp-fon-table td.pro{color:var(--mc-dk);font-weight:600;}
+.ipp-scenario{display:flex;gap:.7rem;align-items:flex-start;background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0 1rem;font-size:.95rem;line-height:1.6;color:var(--mc-text);}.ipp-scenario .ph{color:var(--mc-dk);font-size:1.3rem;flex-shrink:0;}
+.ipp-cultura{background:#fff8e8;border:1px solid #e9d8a6;border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0;font-size:.92rem;line-height:1.6;color:#6b5713;}.ipp-cultura__h{font-weight:700;color:#8a6d0f;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem;}
+.ipp-nota{display:flex;gap:.6rem;align-items:flex-start;background:var(--cream);border-left:3px solid var(--mc);border-radius:8px;padding:.8rem 1rem;margin:.6rem 0 1rem;font-size:.9rem;line-height:1.6;color:var(--mc-text);}.ipp-nota .ph{color:var(--mc-dk);font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
+.q-block{background:#fff;border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}.q-q{font-weight:600;color:var(--mc-text);margin:0 0 .6rem;}
+.q-tag{display:inline-block;background:var(--mc);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;margin-right:.4rem;vertical-align:middle;}
+.q-opts{display:flex;gap:.5rem;flex-wrap:wrap;}.q-opt{border:1.5px solid var(--cream-dk);background:var(--cream);border-radius:8px;padding:.5rem .9rem;font:500 .9rem Outfit;cursor:pointer;}.q-opt:hover{border-color:var(--mc);}.q-opt.ok{background:#d8efe3;border-color:var(--mc);color:var(--mc-dk);}.q-opt.no{background:#f6d9d4;border-color:var(--red);color:var(--red);}
+.f-row{display:flex;gap:.5rem;flex-wrap:wrap;}.f-in{border:1.5px solid var(--cream-dk);border-radius:8px;padding:.5rem .8rem;font:500 .9rem Outfit;min-width:200px;}.f-check{border:0;background:var(--mc);color:#fff;border-radius:8px;padding:.5rem 1rem;font:600 .9rem Outfit;cursor:pointer;}
+.q-fb{margin-top:.6rem;font-size:.88rem;color:var(--mc-text);display:none;}.q-fb.show{display:block;}.q-fb.ok{color:var(--mc-dk);}.q-fb.no{color:var(--red);}.q-fb .ph{vertical-align:-2px;}
+.q-retry{margin-top:.6rem;border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:8px;padding:.4rem .85rem;font:600 .85rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;}.q-retry:hover{background:var(--mc-bg);}
+.ipp-sofia{display:flex;align-items:flex-start;gap:1rem;margin:.3rem 0 1.6rem;}.ipp-sofia__col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.ipp-sofia__avatar{width:56px;height:56px;border-radius:50%;background:var(--mc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 16px rgba(82,142,116,.35);}
+.ipp-sofia__name{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mc-dk);margin-top:.3rem;}
+.ipp-sofia__bubble{background:#fff;border-radius:0 12px 12px 12px;padding:1.1rem 1.35rem;box-shadow:0 3px 14px rgba(0,0,0,.07);font-size:.96rem;line-height:1.75;min-width:0;}
+.ipp-sofia__bubble strong{color:var(--mc-dk);}.ipp-sofia__bubble em{color:var(--red);font-style:italic;}.ipp-sofia__bubble p{margin:0 0 .85rem;}.ipp-sofia__bubble p:last-child{margin-bottom:0;}
+.ipp-task{background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:12px;padding:1.1rem 1.35rem;font-size:.94rem;line-height:1.7;margin-bottom:1.2rem;}
+.ipp-task strong{color:var(--mc-text);}.ipp-task .ph{color:var(--mc-dk);vertical-align:-2px;}.ipp-task__lead{margin:0 0 .85rem;}
+.ipp-task__list{list-style:none;padding:0;margin:0 0 .85rem;display:flex;flex-direction:column;gap:.7rem;}.ipp-task__list li{line-height:1.6;}
+.ipp-task__foot{margin:0;padding-top:.85rem;border-top:1px dashed rgba(82,142,116,.35);color:var(--mc-text);}
+.ipp-card{background:#fff;border-radius:12px;padding:1.3rem 1.6rem;box-shadow:0 3px 14px rgba(0,0,0,.06);margin-bottom:1.5rem;}
+.ipp-card__head{font-size:.93rem;font-weight:600;color:var(--mc-text);margin:0 0 .85rem;display:flex;align-items:center;gap:.5rem;}.ipp-card__head .ph{font-size:1.15rem;flex-shrink:0;}
+.ipp-steps{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}.ipp-step{display:flex;align-items:flex-start;gap:1rem;background:var(--cream);border-radius:12px;padding:1rem 1.15rem;}
+.ipp-step__num{background:var(--mc);color:#fff;font-weight:700;font-size:.85rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-step__txt{font-size:.93rem;line-height:1.65;min-width:0;}.ipp-step__txt strong{color:var(--mc-dk);}
+.ipp-video-note{font-size:.78rem;color:#888;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:.4rem;}
+.ipp-video-note a{color:var(--mc-dk);text-decoration:none;font-weight:600;font-size:.8rem;display:inline-flex;align-items:center;gap:.35rem;}.ipp-video-note a:hover{text-decoration:underline;}
+.ipp-info{background:#f0f6f9;border-left:4px solid #2d5f72;border-radius:12px;padding:1rem 1.3rem;font-size:.9rem;line-height:1.65;color:#2d5f72;margin-top:.75rem;display:flex;align-items:flex-start;gap:.7rem;}.ipp-info .ph{color:#2d5f72;font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+@media (max-width:540px){.ipp-sofia{flex-direction:column;align-items:stretch;gap:.55rem;}.ipp-sofia__col{flex-direction:row;align-items:center;gap:.55rem;align-self:flex-start;}.ipp-sofia__avatar{width:38px;height:38px;font-size:1.15rem;}.ipp-sofia__name{margin-top:0;font-size:.65rem;}.ipp-sofia__bubble{border-radius:12px;padding:1rem 1.15rem;}.ipp-video-note{flex-direction:column;align-items:flex-start;}}
+.ipp-ex{background:#fff;border-radius:12px;padding:1.3rem;margin-bottom:1.1rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}
+.ipp-ex__head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
+.ipp-ex__num{width:36px;height:36px;border-radius:50%;background:var(--mc);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-ex__title{font-weight:700;font-size:1.02rem;color:var(--mc-text);}.ipp-ex__title em{font-style:italic;color:var(--red);}
+.ipp-ex__sub{font-size:.82rem;color:#777;margin-top:.2rem;}.ipp-ex .q-q{margin:.2rem 0 .7rem;}.ipp-ex .q-opts{margin-bottom:0;}
+.ipp-conj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.65rem;margin:.3rem 0;}
+.ipp-conj-item{background:var(--cream);border-radius:8px;padding:.65rem .8rem;}.ipp-conj-item.noi,.ipp-conj-item.voi,.ipp-conj-item.loro{background:var(--mc-bg);}
+.ipp-conj-item__pron{font-size:.75rem;color:#666;font-style:italic;font-weight:700;margin-bottom:.25rem;}
+.ipp-conj-item input{border:1.5px solid var(--cream-dk);border-radius:6px;padding:.35rem .55rem;font-family:inherit;font-size:.88rem;width:100%;background:#fff;color:var(--mc-text);font-style:italic;font-weight:700;outline:none;transition:all .2s;}
+.ipp-conj-item input:focus{border-color:var(--mc);}.ipp-conj-item input.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-conj-item input.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill{border:2px solid var(--cream-dk);border-radius:6px;padding:.3rem .6rem;font-family:inherit;font-size:.9rem;width:150px;background:#fff;color:var(--black);font-style:italic;font-weight:600;transition:all .2s;}
+.ipp-fill:focus{border-color:var(--mc);outline:none;background:var(--mc-bg);}.ipp-fill.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-fill.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill-row{margin-bottom:.7rem;font-size:.94rem;line-height:2.1;}.ipp-fill-row:last-of-type{margin-bottom:0;}.ipp-fill-row em{color:var(--mc-dk);font-style:italic;font-weight:600;}
+.ipp-bank{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 .2rem;padding:.85rem 1rem;background:var(--mc-bg);border-radius:10px;}
+.ipp-bank__hint{flex-basis:100%;font-size:.78rem;color:var(--mc-dk);margin-bottom:.15rem;font-style:italic;}
+.ipp-word{border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:20px;padding:.4rem .95rem;font:600 .9rem Outfit;font-style:italic;cursor:pointer;transition:all .15s;}
+.ipp-word:hover{background:var(--mc);color:#fff;}.ipp-word.armed{background:var(--mc);color:#fff;box-shadow:0 0 0 3px rgba(82,142,116,.28);}
+.ipp-word.used{opacity:.4;pointer-events:none;text-decoration:line-through;}
+.ipp-slot{display:inline-block;min-width:82px;padding:.2rem .55rem;margin:0 .15rem;border:1.5px dashed var(--mc);border-radius:6px;background:var(--cream);color:var(--mc-text);font-style:italic;font-weight:700;text-align:center;cursor:pointer;line-height:1.3;}
+.ipp-slot.filled{background:#fff;border-style:solid;}.ipp-slot.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok-tx);}.ipp-slot.err{background:var(--err-bg);border-color:var(--red);color:var(--err-tx);}</style><div class="ipp-unit"><section class="ipp-section"><div class="ipp-label">Unità 6 · Gramática</div><h2 class="ipp-title">Verbi modali e articoli</h2><p class="ipp-sub">Dovere, potere, volere; preposiciones y artículos un/uno/una.</p></section><section class="ipp-section"><div class="ipp-label">Bloque 1 · Verbi modali</div><h2 class="ipp-title">Dovere, potere, volere</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>Los verbos modales (dovere = deber, potere = poder, volere = querer) van seguidos de un infinitivo o de un sustantivo: «Voglio un caffè».</div></div><p class="ipp-sub">Estudiá la tabla. Tocá el altavoz para escuchar los ejemplos en voz alta.</p><table class="ipp-fon-table"><thead><tr><th>Pronome</th><th>dovere</th><th>potere</th><th>volere</th><th>Esempio</th><th></th></tr></thead><tbody><tr><td>io</td><td>devo</td><td>posso</td><td>voglio</td><td>Voglio un caffè.</td><td><button type="button" class="ipp-fon-play" data-t="Voglio un caffè." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>devi</td><td>puoi</td><td>vuoi</td><td>Puoi pagare?</td><td><button type="button" class="ipp-fon-play" data-t="Puoi pagare?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>lui / lei</td><td>deve</td><td>può</td><td>vuole</td><td>Vuole un cornetto.</td><td><button type="button" class="ipp-fon-play" data-t="Vuole un cornetto." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table></section><section class="ipp-section"><div class="ipp-label">Bloque 2 · Preposizioni di luogo</div><h2 class="ipp-title">da, a, in</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>a (lugar general: a casa, al bar), in (espacios cerrados: in ufficio), da (a lo de alguien: da Marco).</div></div><p class="ipp-sub">Hacé clic en cada ejemplo para escucharlo.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="al bar" onclick="ippPlay(this)"><div class="ipp-vocab__it">al bar</div><div class="ipp-vocab__es">en el bar</div><button type="button" class="ipp-vocab__btn" data-t="al bar" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="a casa" onclick="ippPlay(this)"><div class="ipp-vocab__it">a casa</div><div class="ipp-vocab__es">en casa</div><button type="button" class="ipp-vocab__btn" data-t="a casa" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="in ufficio" onclick="ippPlay(this)"><div class="ipp-vocab__it">in ufficio</div><div class="ipp-vocab__es">en la oficina</div><button type="button" class="ipp-vocab__btn" data-t="in ufficio" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="da Marco" onclick="ippPlay(this)"><div class="ipp-vocab__it">da Marco</div><div class="ipp-vocab__es">en lo de Marco</div><button type="button" class="ipp-vocab__btn" data-t="da Marco" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 3 · Articoli indeterminativi</div><h2 class="ipp-title">un, uno, una, un&#x27;</h2><div class="ipp-nota"><i class="ph ph-info"></i><div>un (masc.), uno (antes de s+consonante, z…), una (fem.), un&#x27; (fem. ante vocal).</div></div><p class="ipp-sub">Hacé clic en cada ejemplo para escucharlo.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="un caffè" onclick="ippPlay(this)"><div class="ipp-vocab__it">un caffè</div><div class="ipp-vocab__es">un café</div><button type="button" class="ipp-vocab__btn" data-t="un caffè" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="uno scontrino" onclick="ippPlay(this)"><div class="ipp-vocab__it">uno scontrino</div><div class="ipp-vocab__es">un ticket</div><button type="button" class="ipp-vocab__btn" data-t="uno scontrino" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="una birra" onclick="ippPlay(this)"><div class="ipp-vocab__it">una birra</div><div class="ipp-vocab__es">una cerveza</div><button type="button" class="ipp-vocab__btn" data-t="una birra" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="un&#x27;acqua" onclick="ippPlay(this)"><div class="ipp-vocab__it">un&#x27;acqua</div><div class="ipp-vocab__es">un agua</div><button type="button" class="ipp-vocab__btn" data-t="un&#x27;acqua" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 4 · Esercizio</div><h2 class="ipp-title">¿Practicamos?</h2><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Coniuga <em>prendere</em></div><div class="ipp-ex__sub">Completá la conjugación completa del presente</div></div></div><div class="ipp-conj-grid"><div class="ipp-conj-item "><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="prendo" placeholder="io…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="prendi" placeholder="tu…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="prende" placeholder="lui / lei…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="prendiamo" placeholder="noi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="prendete" placeholder="voi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="prendono" placeholder="loro…" autocomplete="off" oninput="ippCheck(this)"></div></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Coniuga <em>volere</em></div><div class="ipp-ex__sub">Verbo modal — «querer»</div></div></div><div class="ipp-conj-grid"><div class="ipp-conj-item "><div class="ipp-conj-item__pron">io</div><input type="text" data-answer="voglio" placeholder="io…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">tu</div><input type="text" data-answer="vuoi" placeholder="tu…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item "><div class="ipp-conj-item__pron">lui / lei</div><input type="text" data-answer="vuole" placeholder="lui / lei…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item noi"><div class="ipp-conj-item__pron">noi</div><input type="text" data-answer="vogliamo" placeholder="noi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item voi"><div class="ipp-conj-item__pron">voi</div><input type="text" data-answer="volete" placeholder="voi…" autocomplete="off" oninput="ippCheck(this)"></div><div class="ipp-conj-item loro"><div class="ipp-conj-item__pron">loro</div><input type="text" data-answer="vogliono" placeholder="loro…" autocomplete="off" oninput="ippCheck(this)"></div></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">Completá con un / uno / una / un&#x27;</div><div class="ipp-ex__sub">El artículo indeterminado</div></div></div><div class="ipp-fill-row">Prendo <span class="ipp-slot" data-answer="un" onclick="ippSlot(this)"></span> caffè.</div><div class="ipp-fill-row">Vorrei <span class="ipp-slot" data-answer="una" onclick="ippSlot(this)"></span> spremuta.</div><div class="ipp-fill-row"><span class="ipp-slot" data-answer="uno" onclick="ippSlot(this)"></span> zaino è nuovo.</div><div class="ipp-fill-row">Ho <span class="ipp-slot" data-answer="un&#x27;" onclick="ippSlot(this)"></span> amica italiana.</div><div class="ipp-bank"><span class="ipp-bank__hint">Palabras para colocar:</span><button type="button" class="ipp-word" data-w="un&#x27;" onclick="ippWord(this)">un&#x27;</button><button type="button" class="ipp-word" data-w="uno" onclick="ippWord(this)">uno</button><button type="button" class="ipp-word" data-w="una" onclick="ippWord(this)">una</button><button type="button" class="ipp-word" data-w="un" onclick="ippWord(this)">un</button></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">Elegí el verbo modal</div></div></div><p class="q-q">&#x27;Puedo pagar&#x27; = ___ pagare.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="potere → posso." onclick="ippOpt(this)">devo</button><button type="button" class="q-opt" data-ok="1" data-fb="potere → posso." onclick="ippOpt(this)">posso</button><button type="button" class="q-opt" data-ok="0" data-fb="potere → posso." onclick="ippOpt(this)">voglio</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section></div><script>(function(){var MAP={"caff\u00e8": "https://italianoperpiacere.com/web/content/2073", "cappuccino": "https://italianoperpiacere.com/web/content/2072", "cornetto": "https://italianoperpiacere.com/web/content/2071", "panino": "https://italianoperpiacere.com/web/content/2102", "acqua": "https://italianoperpiacere.com/web/content/2075", "t\u00e8": "https://italianoperpiacere.com/web/content/2074", "succo d'arancia": "https://italianoperpiacere.com/web/content/2076", "birra": "https://italianoperpiacere.com/web/content/2077", "vino": "https://italianoperpiacere.com/web/content/2079", "gelato": "https://italianoperpiacere.com/web/content/2078", "espresso": "https://italianoperpiacere.com/web/content/2080", "caff\u00e8 macchiato": "https://italianoperpiacere.com/web/content/2082", "caff\u00e8 lungo": "https://italianoperpiacere.com/web/content/2081", "caff\u00e8 corretto": "https://italianoperpiacere.com/web/content/2083", "la cassa": "https://italianoperpiacere.com/web/content/2085", "il banco": "https://italianoperpiacere.com/web/content/2084", "il tavolo": "https://italianoperpiacere.com/web/content/2086", "lo scontrino": "https://italianoperpiacere.com/web/content/2088", "il conto": "https://italianoperpiacere.com/web/content/2087", "Un caff\u00e8, per favore.": "https://italianoperpiacere.com/web/content/2089", "Vorrei un cornetto.": "https://italianoperpiacere.com/web/content/2090", "Quanto costa?": "https://italianoperpiacere.com/web/content/2091", "Il conto, per favore.": "https://italianoperpiacere.com/web/content/2092", "Prendo un cappuccino.": "https://italianoperpiacere.com/web/content/2093", "Buongiorno! Un caff\u00e8, per favore.": "https://italianoperpiacere.com/web/content/2094", "Subito! Vuole anche un cornetto?": "https://italianoperpiacere.com/web/content/2095", "S\u00ec, grazie. Quanto costa?": "https://italianoperpiacere.com/web/content/2096", "Due euro e cinquanta.": "https://italianoperpiacere.com/web/content/2097", "palla, bello": "https://italianoperpiacere.com/web/content/2098", "nonno, donna": "https://italianoperpiacere.com/web/content/2099", "sette, caff\u00e8": "https://italianoperpiacere.com/web/content/2100", "Voglio un caff\u00e8.": "https://italianoperpiacere.com/web/content/2101", "Puoi pagare?": "https://italianoperpiacere.com/web/content/2103", "Vuole un cornetto.": "https://italianoperpiacere.com/web/content/2104", "al bar": "https://italianoperpiacere.com/web/content/2105", "a casa": "https://italianoperpiacere.com/web/content/2106", "in ufficio": "https://italianoperpiacere.com/web/content/2107", "da Marco": "https://italianoperpiacere.com/web/content/2108", "un caff\u00e8": "https://italianoperpiacere.com/web/content/2109", "uno scontrino": "https://italianoperpiacere.com/web/content/2110", "una birra": "https://italianoperpiacere.com/web/content/2111", "un'acqua": "https://italianoperpiacere.com/web/content/2112", "Ecco a Lei. Grazie!": "https://italianoperpiacere.com/web/content/2188", "Grazie a Lei, buona giornata!": "https://italianoperpiacere.com/web/content/2187", "una spremuta d'arancia": "https://italianoperpiacere.com/web/content/2233", "un caff\u00e8 decaffeinato": "https://italianoperpiacere.com/web/content/2217", "un t\u00e8": "https://italianoperpiacere.com/web/content/2215", "una birra piccola": "https://italianoperpiacere.com/web/content/2216", "un'acqua minerale": "https://italianoperpiacere.com/web/content/2218", "un tramezzino": "https://italianoperpiacere.com/web/content/2219", "il prosciutto crudo": "https://italianoperpiacere.com/web/content/2220", "la mozzarella": "https://italianoperpiacere.com/web/content/2222", "il tiramis\u00f9": "https://italianoperpiacere.com/web/content/2221", "la panna cotta": "https://italianoperpiacere.com/web/content/2223", "un cornetto": "https://italianoperpiacere.com/web/content/2225", "Cosa prendete?": "https://italianoperpiacere.com/web/content/2224", "Io prendo una spremuta d'arancia.": "https://italianoperpiacere.com/web/content/2226", "Per me un tramezzino, per favore.": "https://italianoperpiacere.com/web/content/2227", "Io vorrei un caff\u00e8 decaffeinato.": "https://italianoperpiacere.com/web/content/2228", "Avete il tiramis\u00f9 fatto in casa?": "https://italianoperpiacere.com/web/content/2229", "Quant'\u00e8?": "https://italianoperpiacere.com/web/content/2230", "Buongiorno signori. Allora, cosa prendete?": "https://italianoperpiacere.com/web/content/2231", "Io prendo solo una spremuta d'arancia con arance rosse.": "https://italianoperpiacere.com/web/content/2232", "Per me un tramezzino con prosciutto e mozzarella e una birra piccola.": "https://italianoperpiacere.com/web/content/2234", "Avete il tiramis\u00f9 fatto in casa? Allora un tiramis\u00f9 e anche un t\u00e8.": "https://italianoperpiacere.com/web/content/2235", "Ma hai gi\u00e0 ordinato una spremuta!": "https://italianoperpiacere.com/web/content/2237", "Ho capito\u2026 Allora ripeto. Che confusione!": "https://italianoperpiacere.com/web/content/2236"};var DIAL=["Buongiorno signori. Allora, cosa prendete?", "Io prendo solo una spremuta d'arancia con arance rosse.", "Per me un tramezzino con prosciutto e mozzarella e una birra piccola.", "Avete il tiramis\u00f9 fatto in casa? Allora un tiramis\u00f9 e anche un t\u00e8.", "Ma hai gi\u00e0 ordinato una spremuta!", "Ho capito\u2026 Allora ripeto. Che confusione!"];var SILENT="data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA";var player=window.__ippPlayer||(window.__ippPlayer=new Audio());player.preload='auto';window.__ippUnlocked=window.__ippUnlocked||false;function unlock(){if(window.__ippUnlocked)return;window.__ippUnlocked=true;try{player.src=SILENT;var p=player.play();if(p&&p.then)p.then(function(){try{player.pause();player.currentTime=0;}catch(e){}}).catch(function(){window.__ippUnlocked=false;});}catch(e){window.__ippUnlocked=false;}}function nrm(s){return (s||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9' ]/g,'').replace(/\s+/g,' ');}window.ippPlay=function(el){unlock();var t=(typeof el==='string')?el:(el&&el.getAttribute('data-t'));if(!t||!MAP[t])return;player.onended=null;try{player.pause();}catch(e){}player.src=MAP[t];try{player.currentTime=0;}catch(e){}var p=player.play();if(p&&p.catch)p.catch(function(){});};window.ippPlayAll=function(){unlock();try{player.pause();}catch(e){}var i=0;(function next(){if(i>=DIAL.length){player.onended=null;return;}player.src=MAP[DIAL[i]];try{player.currentTime=0;}catch(e){}i++;player.onended=function(){setTimeout(next,450);};var p=player.play();if(p&&p.catch)p.catch(function(){});})();};window.ippOpt=function(q){var bl=q.closest('.q-block');var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(q.getAttribute('data-ok')==='1'){bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=true;});q.classList.add('ok');fb.innerHTML='<i class="ph ph-check-circle"></i> '+q.getAttribute('data-fb');fb.className='q-fb show ok';}else{q.classList.add('no');q.disabled=true;fb.innerHTML='<i class="ph ph-x-circle"></i> No es esa — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippFill=function(f){var bl=f.closest('.q-block');var inp=document.getElementById(f.getAttribute('data-fi'));var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(nrm(inp.value)===nrm(f.getAttribute('data-ans'))){inp.disabled=true;fb.innerHTML='<i class="ph ph-check-circle"></i> '+(f.getAttribute('data-fb')||'Corretto!');fb.className='q-fb show ok';}else{fb.innerHTML='<i class="ph ph-x-circle"></i> Todavía no — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippReset=function(rt){var bl=rt.closest('.q-block')||rt.closest('.ipp-ex');if(!bl)return;bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=false;b.classList.remove('ok','no');});bl.querySelectorAll('.f-in,input[data-answer]').forEach(function(x){x.value='';x.disabled=false;x.classList.remove('ok','err');});bl.querySelectorAll('.ipp-slot').forEach(function(s){s.textContent='';s.removeAttribute('data-filled');s.classList.remove('filled','ok','err');});bl.querySelectorAll('.ipp-word').forEach(function(x){x.classList.remove('used','armed');});var fb=bl.querySelector('.q-fb');if(fb){fb.className='q-fb';fb.innerHTML='';}rt.style.display='none';};window.ippCheck=function(inp){var ans=inp.getAttribute('data-answer');if(ans===null)return;if(!inp.value.trim()){inp.classList.remove('ok','err');}else if(nrm(inp.value)===nrm(ans)){inp.classList.remove('err');inp.classList.add('ok');}else{inp.classList.remove('ok');inp.classList.add('err');}var cd=inp.closest('.ipp-ex')||inp.closest('.q-block');if(cd){var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('input[data-answer].err')?'inline-flex':'none';}};window.ippWord=function(wb){if(wb.classList.contains('used'))return;var cw=wb.closest('.ipp-ex');var aw=cw.querySelector('.ipp-word.armed');if(aw&&aw!==wb)aw.classList.remove('armed');wb.classList.toggle('armed');};window.ippSlot=function(sl){var cd=sl.closest('.ipp-ex');if(sl.getAttribute('data-filled')){var wv=sl.getAttribute('data-filled');var cs=cd.querySelectorAll('.ipp-word.used');for(var i=0;i<cs.length;i++){if(cs[i].getAttribute('data-w')===wv){cs[i].classList.remove('used');break;}}sl.textContent='';sl.removeAttribute('data-filled');sl.classList.remove('filled','ok','err');}else{var ar=cd.querySelector('.ipp-word.armed');if(ar){var val=ar.getAttribute('data-w');sl.textContent=val;sl.setAttribute('data-filled',val);sl.classList.add('filled');ar.classList.remove('armed');ar.classList.add('used');if(nrm(val)===nrm(sl.getAttribute('data-answer'))){sl.classList.remove('err');sl.classList.add('ok');}else{sl.classList.remove('ok');sl.classList.add('err');}}}var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('.ipp-slot.err')?'inline-flex':'none';};})();</script></div>
+    </section>
