@@ -1,0 +1,774 @@
+<section class="s_embed_code o_colored_level pb0 pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><!-- ===== BLOQUE: Unità 1 — Exploración (Hero + Contenido) ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia (desktop: lado a lado) ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(1.5rem, 4vw, 2rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.5;
+  }
+
+  /* ===== Task box (ahora con lista real) ===== */
+  .ipp-task {
+    background: var(--mc-bg); border-left: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(0.92rem, 2.3vw, 0.94rem);
+    line-height: 1.7; margin-bottom: 1.2rem;
+  }
+  .ipp-task strong { color: var(--mc-text); }
+  .ipp-task .ph { color: var(--mc-dk); vertical-align: -2px; }
+  .ipp-task__lead { margin: 0 0 0.85rem; }
+  .ipp-task__list {
+    list-style: none; padding: 0; margin: 0 0 0.85rem;
+    display: flex; flex-direction: column;
+    gap: 0.7rem;
+  }
+  .ipp-task__list li {
+    padding-left: 0;
+    line-height: 1.6;
+  }
+  .ipp-task__foot {
+    margin: 0;
+    padding-top: 0.85rem;
+    border-top: 1px dashed rgba(82,142,116,0.35);
+    color: var(--mc-text);
+  }
+
+  /* ===== Card + steps ===== */
+  .ipp-card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .ipp-card__head {
+    font-size: clamp(0.88rem, 2.2vw, 0.93rem);
+    font-weight: 600; color: var(--mc-text);
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-card__head .ph { font-size: 1.15rem; flex-shrink: 0; }
+
+  .ipp-steps {
+    display: flex; flex-direction: column;
+    gap: clamp(0.6rem, 1.8vw, 0.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-step {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.7rem, 2.5vw, 1rem);
+    background: var(--cream); border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(0.95rem, 2.8vw, 1.15rem);
+  }
+  .ipp-step__num {
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.85rem;
+    min-width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-step__txt {
+    font-size: clamp(0.92rem, 2.3vw, 0.93rem);
+    line-height: 1.65; min-width: 0;
+  }
+  .ipp-step__txt strong { color: var(--mc-dk); }
+
+  /* ===== Video ===== */
+  .ipp-video {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    border-radius: var(--r); overflow: hidden;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+    margin-bottom: 0.75rem; background: #111;
+  }
+  .ipp-video iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+  .ipp-video-note {
+    font-size: 0.78rem; color: #888;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem;
+  }
+  .ipp-video-note a {
+    color: var(--mc-dk); text-decoration: none; font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-video-note a:hover { text-decoration: underline; }
+
+  /* ===== Info box ===== */
+  .ipp-info {
+    background: #f0f6f9; border-left: 4px solid var(--teal);
+    border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.87rem, 2.2vw, 0.9rem);
+    line-height: 1.65; color: #2d5f72;
+    margin-top: 0.75rem;
+    display: flex; align-items: flex-start; gap: 0.7rem;
+  }
+  .ipp-info .ph {
+    color: var(--teal); font-size: 1.3rem; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ===== MOBILE: Sofia apilada y otros ajustes ===== */
+  @media (max-width: 540px) {
+    .ipp-sofia {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.55rem;
+    }
+    .ipp-sofia__col {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.55rem;
+      align-self: flex-start;
+    }
+    .ipp-sofia__avatar {
+      width: 38px; height: 38px;
+      font-size: 1.15rem;
+    }
+    .ipp-sofia__name {
+      margin-top: 0;
+      font-size: 0.65rem;
+    }
+    .ipp-sofia__bubble {
+      border-radius: var(--r);
+      padding: 1rem 1.15rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .ipp-card { padding: 1rem 0.9rem; }
+    .ipp-step { padding: 0.85rem 0.9rem; gap: 0.65rem; }
+    .ipp-step__num { min-width: 26px; height: 26px; font-size: 0.8rem; }
+    .ipp-task { padding: 0.95rem 1rem; }
+    .ipp-video-note { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-play-circle ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 1 · A1 · Exploración</div>
+    <h1 class="ipp-hero__title">Come ti chiami?</h1>
+    <p class="ipp-hero__subtitle">L'Italia: regioni, arte e cultura</p>
+  </header>
+
+  <!-- ===== CONTENIDO ===== -->
+  <div class="ipp-body">
+
+    <!-- SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p><em>Benvenuti!</em> En esta unidad aprendemos a decir <strong>¿Como te llamás?</strong> — <em>Come ti chiami?</em></p>
+        <p>Pero antes de presentarte, te propongo que conozcas un poco mejor <strong>el país del que todo el mundo quiere ser</strong>.</p>
+        <p>Mirá este video sobre Italia — sus regiones, su arte, su comida, su cultura. Miralo <strong>dos veces</strong> usando los pasos de abajo.</p>
+      </div>
+    </div>
+
+    <!-- ANTES DE MIRAR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Antes de mirar</div>
+      <h2 class="ipp-title">Prima di guardare…</h2>
+      <p class="ipp-sub">Activá lo que ya sabés</p>
+
+      <div class="ipp-task">
+        <p class="ipp-task__lead"><strong>Pensá un momento antes de ver el video:</strong></p>
+        <ul class="ipp-task__list">
+          <li>① ¿Cuántas regiones creés que tiene Italia — más o menos que las provincias de Argentina?</li>
+          <li>② ¿Qué ciudades italianas conocés? ¿Podés nombrar al menos tres?</li>
+          <li>③ ¿Qué asociás con Italia — comida, arte, ciudades, paisajes?</li>
+        </ul>
+      </div>
+
+      <div class="ipp-card">
+        <p class="ipp-card__head"><i class="ph ph-list-checks"></i> Cómo mirar el video</p>
+        <div class="ipp-steps">
+          <div class="ipp-step">
+            <span class="ipp-step__num">1</span>
+            <span class="ipp-step__txt"><strong>Primera vez:</strong> solo mirás y disfrutás. No te preocupes por entender todo — dejate llevar por las imágenes y el sonido del italiano.</span>
+          </div>
+          <div class="ipp-step">
+            <span class="ipp-step__num">2</span>
+            <span class="ipp-step__txt"><strong>Segunda vez:</strong> anotá tantas ciudades o regiones italianas como puedas reconocer. ¿Cuántas aparecen?</span>
+          </div>
+          <div class="ipp-step">
+            <span class="ipp-step__num">3</span>
+            <span class="ipp-step__txt"><strong>Prestá atención a:</strong> ¿Qué comidas mencionan? ¿Qué monumentos aparecen? ¿Cuántas regiones tiene Italia?</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="ipp-section">
+      <div class="ipp-label">El video</div>
+      <h2 class="ipp-title">L'Italia: regioni e cultura</h2>
+      <p class="ipp-sub">~2 minutos · en italiano</p>
+
+      <div class="ipp-video">
+        <iframe src="https://www.youtube.com/embed/xkQpauuTRyc" title="L'Italia: regioni, arte e cultura" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="ipp-video-note">
+        <span>Video: todos los derechos pertenecen a sus autores.</span>
+        <a href="https://youtu.be/xkQpauuTRyc" target="_blank" rel="noopener">
+          <i class="ph ph-arrow-square-out"></i> Ver directamente en YouTube
+        </a>
+      </div>
+
+      <div class="ipp-info">
+        <i class="ph ph-lightbulb"></i>
+        <span>Si el video no carga (puede pasar en redes escolares o al abrir el archivo localmente),
+        usá el link de arriba para verlo en YouTube y después volvé acá para continuar.</span>
+      </div>
+    </section>
+
+    <!-- DESPUÉS DE MIRAR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Después de mirar</div>
+      <h2 class="ipp-title">Dopo il video</h2>
+      <p class="ipp-sub">Reflexioná antes de pasar a Descubrimiento</p>
+
+      <div class="ipp-task">
+        <p class="ipp-task__lead"><strong>Antes de continuar, pensá:</strong></p>
+        <ul class="ipp-task__list">
+          <li>① ¿Cuántas regiones tiene Italia? (la respuesta aparece en los primeros segundos)</li>
+          <li>② ¿Qué monumento famoso de Milano mencionan?</li>
+          <li>③ ¿Qué comida típica asociaron con Nápoles?</li>
+        </ul>
+        <p class="ipp-task__foot">Vas a encontrar las respuestas en la siguiente etapa <i class="ph ph-arrow-down"></i></p>
+      </div>
+    </section>
+
+  </div>
+</div>
+<!-- ===== /BLOQUE Unità 1 — Exploración ===== --></template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><!-- ===== BLOQUE: Unità 1 — Exploración (Hero + Contenido) ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia (desktop: lado a lado) ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(1.5rem, 4vw, 2rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.5;
+  }
+
+  /* ===== Task box (ahora con lista real) ===== */
+  .ipp-task {
+    background: var(--mc-bg); border-left: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(0.92rem, 2.3vw, 0.94rem);
+    line-height: 1.7; margin-bottom: 1.2rem;
+  }
+  .ipp-task strong { color: var(--mc-text); }
+  .ipp-task .ph { color: var(--mc-dk); vertical-align: -2px; }
+  .ipp-task__lead { margin: 0 0 0.85rem; }
+  .ipp-task__list {
+    list-style: none; padding: 0; margin: 0 0 0.85rem;
+    display: flex; flex-direction: column;
+    gap: 0.7rem;
+  }
+  .ipp-task__list li {
+    padding-left: 0;
+    line-height: 1.6;
+  }
+  .ipp-task__foot {
+    margin: 0;
+    padding-top: 0.85rem;
+    border-top: 1px dashed rgba(82,142,116,0.35);
+    color: var(--mc-text);
+  }
+
+  /* ===== Card + steps ===== */
+  .ipp-card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .ipp-card__head {
+    font-size: clamp(0.88rem, 2.2vw, 0.93rem);
+    font-weight: 600; color: var(--mc-text);
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-card__head .ph { font-size: 1.15rem; flex-shrink: 0; }
+
+  .ipp-steps {
+    display: flex; flex-direction: column;
+    gap: clamp(0.6rem, 1.8vw, 0.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-step {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.7rem, 2.5vw, 1rem);
+    background: var(--cream); border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(0.95rem, 2.8vw, 1.15rem);
+  }
+  .ipp-step__num {
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.85rem;
+    min-width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-step__txt {
+    font-size: clamp(0.92rem, 2.3vw, 0.93rem);
+    line-height: 1.65; min-width: 0;
+  }
+  .ipp-step__txt strong { color: var(--mc-dk); }
+
+  /* ===== Video ===== */
+  .ipp-video {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    border-radius: var(--r); overflow: hidden;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+    margin-bottom: 0.75rem; background: #111;
+  }
+  .ipp-video iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+  .ipp-video-note {
+    font-size: 0.78rem; color: #888;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem;
+  }
+  .ipp-video-note a {
+    color: var(--mc-dk); text-decoration: none; font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-video-note a:hover { text-decoration: underline; }
+
+  /* ===== Info box ===== */
+  .ipp-info {
+    background: #f0f6f9; border-left: 4px solid var(--teal);
+    border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.87rem, 2.2vw, 0.9rem);
+    line-height: 1.65; color: #2d5f72;
+    margin-top: 0.75rem;
+    display: flex; align-items: flex-start; gap: 0.7rem;
+  }
+  .ipp-info .ph {
+    color: var(--teal); font-size: 1.3rem; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ===== MOBILE: Sofia apilada y otros ajustes ===== */
+  @media (max-width: 540px) {
+    .ipp-sofia {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.55rem;
+    }
+    .ipp-sofia__col {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.55rem;
+      align-self: flex-start;
+    }
+    .ipp-sofia__avatar {
+      width: 38px; height: 38px;
+      font-size: 1.15rem;
+    }
+    .ipp-sofia__name {
+      margin-top: 0;
+      font-size: 0.65rem;
+    }
+    .ipp-sofia__bubble {
+      border-radius: var(--r);
+      padding: 1rem 1.15rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .ipp-card { padding: 1rem 0.9rem; }
+    .ipp-step { padding: 0.85rem 0.9rem; gap: 0.65rem; }
+    .ipp-step__num { min-width: 26px; height: 26px; font-size: 0.8rem; }
+    .ipp-task { padding: 0.95rem 1rem; }
+    .ipp-video-note { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-play-circle ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 1 · A1 · Exploración</div>
+    <h1 class="ipp-hero__title">Come ti chiami?</h1>
+    <p class="ipp-hero__subtitle">L'Italia: regioni, arte e cultura</p>
+  </header>
+
+  <!-- ===== CONTENIDO ===== -->
+  <div class="ipp-body">
+
+    <!-- SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p><em>Benvenuti!</em> En esta unidad aprendemos a decir <strong>¿Como te llamás?</strong> — <em>Come ti chiami?</em></p>
+        <p>Pero antes de presentarte, te propongo que conozcas un poco mejor <strong>el país del que todo el mundo quiere ser</strong>.</p>
+        <p>Mirá este video sobre Italia — sus regiones, su arte, su comida, su cultura. Miralo <strong>dos veces</strong> usando los pasos de abajo.</p>
+      </div>
+    </div>
+
+    <!-- ANTES DE MIRAR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Antes de mirar</div>
+      <h2 class="ipp-title">Prima di guardare…</h2>
+      <p class="ipp-sub">Activá lo que ya sabés</p>
+
+      <div class="ipp-task">
+        <p class="ipp-task__lead"><strong>Pensá un momento antes de ver el video:</strong></p>
+        <ul class="ipp-task__list">
+          <li>① ¿Cuántas regiones creés que tiene Italia — más o menos que las provincias de Argentina?</li>
+          <li>② ¿Qué ciudades italianas conocés? ¿Podés nombrar al menos tres?</li>
+          <li>③ ¿Qué asociás con Italia — comida, arte, ciudades, paisajes?</li>
+        </ul>
+      </div>
+
+      <div class="ipp-card">
+        <p class="ipp-card__head"><i class="ph ph-list-checks"></i> Cómo mirar el video</p>
+        <div class="ipp-steps">
+          <div class="ipp-step">
+            <span class="ipp-step__num">1</span>
+            <span class="ipp-step__txt"><strong>Primera vez:</strong> solo mirás y disfrutás. No te preocupes por entender todo — dejate llevar por las imágenes y el sonido del italiano.</span>
+          </div>
+          <div class="ipp-step">
+            <span class="ipp-step__num">2</span>
+            <span class="ipp-step__txt"><strong>Segunda vez:</strong> anotá tantas ciudades o regiones italianas como puedas reconocer. ¿Cuántas aparecen?</span>
+          </div>
+          <div class="ipp-step">
+            <span class="ipp-step__num">3</span>
+            <span class="ipp-step__txt"><strong>Prestá atención a:</strong> ¿Qué comidas mencionan? ¿Qué monumentos aparecen? ¿Cuántas regiones tiene Italia?</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="ipp-section">
+      <div class="ipp-label">El video</div>
+      <h2 class="ipp-title">L'Italia: regioni e cultura</h2>
+      <p class="ipp-sub">~2 minutos · en italiano</p>
+
+      <div class="ipp-video">
+        <iframe src="https://www.youtube.com/embed/xkQpauuTRyc" title="L'Italia: regioni, arte e cultura" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="ipp-video-note">
+        <span>Video: todos los derechos pertenecen a sus autores.</span>
+        <a href="https://youtu.be/xkQpauuTRyc" target="_blank" rel="noopener">
+          <i class="ph ph-arrow-square-out"></i> Ver directamente en YouTube
+        </a>
+      </div>
+
+      <div class="ipp-info">
+        <i class="ph ph-lightbulb"></i>
+        <span>Si el video no carga (puede pasar en redes escolares o al abrir el archivo localmente),
+        usá el link de arriba para verlo en YouTube y después volvé acá para continuar.</span>
+      </div>
+    </section>
+
+    <!-- DESPUÉS DE MIRAR -->
+    <section class="ipp-section">
+      <div class="ipp-label">Después de mirar</div>
+      <h2 class="ipp-title">Dopo il video</h2>
+      <p class="ipp-sub">Reflexioná antes de pasar a Descubrimiento</p>
+
+      <div class="ipp-task">
+        <p class="ipp-task__lead"><strong>Antes de continuar, pensá:</strong></p>
+        <ul class="ipp-task__list">
+          <li>① ¿Cuántas regiones tiene Italia? (la respuesta aparece en los primeros segundos)</li>
+          <li>② ¿Qué monumento famoso de Milano mencionan?</li>
+          <li>③ ¿Qué comida típica asociaron con Nápoles?</li>
+        </ul>
+        <p class="ipp-task__foot">Vas a encontrar las respuestas en la siguiente etapa <i class="ph ph-arrow-down"></i></p>
+      </div>
+    </section>
+
+  </div>
+</div>
+<!-- ===== /BLOQUE Unità 1 — Exploración ===== --></div>
+    </section>

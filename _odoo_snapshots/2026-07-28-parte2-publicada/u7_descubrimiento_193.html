@@ -1,0 +1,1574 @@
+<section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(120,166,186,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0;
+    flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.88rem;
+    color: var(--mc-text); line-height: 1.65;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Vocab grid ===== */
+  .ipp-vocab {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-vocab__chip {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: var(--r);
+    padding: 0.95rem 0.75rem 0.85rem;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.35rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__chip:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120,166,186,0.2);
+  }
+  .ipp-vocab__icon {
+    font-size: 1.5rem;
+    color: var(--mc);
+  }
+  .ipp-vocab__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    text-align: center; line-height: 1.3;
+  }
+  .ipp-vocab__es {
+    font-size: 0.74rem; color: #777;
+    text-align: center; line-height: 1.4;
+  }
+  .ipp-vocab__btn {
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--mc-bg);
+    border: 1px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.7rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Frases ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 10px rgba(120,166,186,0.18); }
+  .ipp-frase.spk-m { border-left-color: var(--m-spk); }
+  .ipp-frase__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+  }
+  .ipp-frase.spk-m .ipp-frase__icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.93rem; font-weight: 600;
+    color: var(--mc-text); line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.77rem; color: #888;
+    font-style: italic; line-height: 1.4;
+  }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-frase.spk-m .ipp-frase__btn { border-color: var(--m-spk); color: var(--m-spk); background: var(--m-bg); }
+  .ipp-frase.spk-m .ipp-frase__btn:hover { background: var(--m-spk); color: var(--white); }
+
+  /* ===== Controles "Escuchar todo" / "Detener" ===== */
+  .ipp-seq-intro {
+    background: #e8f5ec;
+    border-left: 3px solid var(--ok-bd);
+    border-radius: 6px;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--ok-tx);
+    line-height: 1.55;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .ipp-seq-intro .ph { color: var(--ok-bd); flex-shrink: 0; margin-top: 2px; font-size: 1rem; }
+  .ipp-seq-intro strong { color: var(--ok-tx); }
+  .ipp-seq-ctrl {
+    display: flex; gap: 0.55rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: var(--cream);
+    border-radius: var(--r);
+  }
+  .ipp-seq-btn {
+    padding: 0.55rem 1.15rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 700;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.18s;
+    border: 2px solid var(--mc);
+  }
+  .ipp-seq-btn--play { background: var(--mc); color: var(--white); }
+  .ipp-seq-btn--play:hover { background: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop { background: transparent; color: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop:hover { background: var(--mc-bg); }
+
+  /* Estado "activo" (línea siendo reproducida en secuencia) */
+  .ipp-frase.is-playing,
+  .ipp-dial__row.is-playing {
+    outline: 2px solid var(--mc);
+    outline-offset: 3px;
+    background: var(--mc-bg);
+    transition: outline 0.25s, background 0.25s;
+  }
+  .ipp-dial__row.is-playing .ipp-dial__bubble {
+    box-shadow: 0 0 0 2px var(--mc);
+  }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-num {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+    cursor: pointer; transition: all 0.2s;
+    position: relative;
+  }
+  .ipp-num:hover {
+    border-color: var(--mc);
+    box-shadow: 0 3px 10px rgba(120,166,186,0.18);
+    transform: translateY(-2px);
+  }
+  .ipp-num__big {
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--mc); display: block;
+    line-height: 1.1;
+  }
+  .ipp-num__it {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--mc-text); font-style: italic;
+    margin: 0.25rem 0 0.15rem;
+  }
+  .ipp-num__note {
+    font-size: 0.68rem; color: var(--mc-dk);
+    line-height: 1.3;
+  }
+
+  /* ===== Días ===== */
+  .ipp-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+  .ipp-day {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.5rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-day:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(120,166,186,0.18);
+  }
+  .ipp-day__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ipp-day__it {
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    display: block;
+  }
+  .ipp-day__es { font-size: 0.7rem; color: #888; margin-top: 0.15rem; }
+
+  /* Día activity */
+  .ipp-day-act {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-day-act__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--mc-text); margin: 0 0 0.5rem;
+  }
+  .ipp-day-act__sub {
+    font-size: 0.8rem; color: #777; margin: 0 0 0.85rem;
+  }
+  .ipp-day-pool { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+  .ipp-day-opt {
+    padding: 0.4rem 0.95rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-text);
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-day-opt:hover { background: var(--mc); color: var(--white); }
+  .ipp-day-opt.selected { background: var(--mc); color: var(--white); opacity: 0.5; cursor: not-allowed; }
+  .ipp-day-zone {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    min-height: 48px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.55rem;
+    margin-bottom: 0.85rem;
+    border: 2px dashed var(--mc-bg);
+  }
+  .ipp-day-tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc); color: var(--white);
+    border-radius: 16px;
+    font-size: 0.82rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-day-tag__close {
+    cursor: pointer; font-size: 0.95rem;
+    line-height: 1; opacity: 0.8;
+  }
+  .ipp-day-tag__close:hover { opacity: 1; }
+
+  /* ===== Diálogo ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+  .ipp-dial__sub {
+    font-size: 0.8rem; color: #888; margin: 0 0 1rem;
+  }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 1rem;
+  }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon {
+    background: var(--m-bg); color: var(--m-spk);
+  }
+  .ipp-dial__bubble {
+    padding: 0.7rem 1rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 85%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.92rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.55;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.76rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.25rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Plurales ===== */
+  .ipp-plurals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .ipp-plural {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.9rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-plural:focus-within { border-color: var(--mc); }
+  .ipp-plural__sing {
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    margin-bottom: 0.45rem;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .ipp-plural__sing .ph { color: var(--mc); font-size: 1.1rem; }
+  .ipp-plural__inp {
+    width: 100%;
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-family: inherit; font-size: 0.88rem;
+    color: var(--black); background: var(--cream);
+    outline: none; transition: border 0.2s;
+  }
+  .ipp-plural__inp:focus { border-color: var(--mc); background: var(--white); }
+  .ipp-plural__inp.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-plural__inp.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-plural__note {
+    font-size: 0.72rem; color: #888;
+    margin-top: 0.35rem; font-style: italic;
+    line-height: 1.4;
+    display: none;
+  }
+  .ipp-plural__note.show { display: block; }
+
+  .ipp-check-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.65rem 1.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer;
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s;
+  }
+  .ipp-check-btn:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.86rem; line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid #c89500; }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+
+  /* ===== Fonética ===== */
+  .ipp-fon-intro {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--mc-bg);
+    margin-bottom: 1rem;
+    font-size: 0.88rem; color: #555;
+    line-height: 1.65;
+  }
+  .ipp-fon-intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    border: 1.5px solid var(--mc-bg);
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+  .ipp-fon-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+    text-align: left;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-fon-table td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-fon-table tr:last-child td { border-bottom: none; }
+  .ipp-fon-table tr:nth-child(even) td { background: #f5fafb; }
+  .ipp-fon-table td:first-child {
+    font-weight: 700; color: var(--mc-text); font-style: italic;
+  }
+  .ipp-fon-table td em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-sound {
+    display: inline-block;
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.15rem 0.65rem;
+    border-radius: 12px;
+    font-weight: 700; font-size: 0.82rem;
+  }
+  .ipp-fon-play {
+    padding: 0.2rem 0.6rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* Fonética: ejercicio botones [k]/[g] o [tʃ]/[dʒ] */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 0.45rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.82rem; color: #777;
+    margin: 0 0 1rem; line-height: 1.55;
+  }
+  .ipp-fonex__list {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-fonex__item {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__score {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 0.95rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-vocab { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-fon-table { font-size: 0.78rem; }
+    .ipp-fon-table th, .ipp-fon-table td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+.ipp-video{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.15);margin:.5rem 0;background:#111;}.ipp-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}.ipp-fon-table td.pro{color:var(--mc-dk);font-weight:600;}
+.ipp-scenario{display:flex;gap:.7rem;align-items:flex-start;background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0 1rem;font-size:.95rem;line-height:1.6;color:var(--mc-text);}.ipp-scenario .ph{color:var(--mc-dk);font-size:1.3rem;flex-shrink:0;}
+.ipp-cultura{background:#fff8e8;border:1px solid #e9d8a6;border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0;font-size:.92rem;line-height:1.6;color:#6b5713;}.ipp-cultura__h{font-weight:700;color:#8a6d0f;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem;}
+.ipp-nota{display:flex;gap:.6rem;align-items:flex-start;background:var(--cream);border-left:3px solid var(--mc);border-radius:8px;padding:.8rem 1rem;margin:.6rem 0 1rem;font-size:.9rem;line-height:1.6;color:var(--mc-text);}.ipp-nota .ph{color:var(--mc-dk);font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
+.q-block{background:#fff;border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}.q-q{font-weight:600;color:var(--mc-text);margin:0 0 .6rem;}
+.q-tag{display:inline-block;background:var(--mc);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;margin-right:.4rem;vertical-align:middle;}
+.q-opts{display:flex;gap:.5rem;flex-wrap:wrap;}.q-opt{border:1.5px solid var(--cream-dk);background:var(--cream);border-radius:8px;padding:.5rem .9rem;font:500 .9rem Outfit;cursor:pointer;}.q-opt:hover{border-color:var(--mc);}.q-opt.ok{background:#d8efe3;border-color:var(--mc);color:var(--mc-dk);}.q-opt.no{background:#f6d9d4;border-color:var(--red);color:var(--red);}
+.f-row{display:flex;gap:.5rem;flex-wrap:wrap;}.f-in{border:1.5px solid var(--cream-dk);border-radius:8px;padding:.5rem .8rem;font:500 .9rem Outfit;min-width:200px;}.f-check{border:0;background:var(--mc);color:#fff;border-radius:8px;padding:.5rem 1rem;font:600 .9rem Outfit;cursor:pointer;}
+.q-fb{margin-top:.6rem;font-size:.88rem;color:var(--mc-text);display:none;}.q-fb.show{display:block;}.q-fb.ok{color:var(--mc-dk);}.q-fb.no{color:var(--red);}.q-fb .ph{vertical-align:-2px;}
+.q-retry{margin-top:.6rem;border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:8px;padding:.4rem .85rem;font:600 .85rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;}.q-retry:hover{background:var(--mc-bg);}
+.ipp-sofia{display:flex;align-items:flex-start;gap:1rem;margin:.3rem 0 1.6rem;}.ipp-sofia__col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.ipp-sofia__avatar{width:56px;height:56px;border-radius:50%;background:var(--mc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 16px rgba(82,142,116,.35);}
+.ipp-sofia__name{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mc-dk);margin-top:.3rem;}
+.ipp-sofia__bubble{background:#fff;border-radius:0 12px 12px 12px;padding:1.1rem 1.35rem;box-shadow:0 3px 14px rgba(0,0,0,.07);font-size:.96rem;line-height:1.75;min-width:0;}
+.ipp-sofia__bubble strong{color:var(--mc-dk);}.ipp-sofia__bubble em{color:var(--red);font-style:italic;}.ipp-sofia__bubble p{margin:0 0 .85rem;}.ipp-sofia__bubble p:last-child{margin-bottom:0;}
+.ipp-task{background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:12px;padding:1.1rem 1.35rem;font-size:.94rem;line-height:1.7;margin-bottom:1.2rem;}
+.ipp-task strong{color:var(--mc-text);}.ipp-task .ph{color:var(--mc-dk);vertical-align:-2px;}.ipp-task__lead{margin:0 0 .85rem;}
+.ipp-task__list{list-style:none;padding:0;margin:0 0 .85rem;display:flex;flex-direction:column;gap:.7rem;}.ipp-task__list li{line-height:1.6;}
+.ipp-task__foot{margin:0;padding-top:.85rem;border-top:1px dashed rgba(82,142,116,.35);color:var(--mc-text);}
+.ipp-card{background:#fff;border-radius:12px;padding:1.3rem 1.6rem;box-shadow:0 3px 14px rgba(0,0,0,.06);margin-bottom:1.5rem;}
+.ipp-card__head{font-size:.93rem;font-weight:600;color:var(--mc-text);margin:0 0 .85rem;display:flex;align-items:center;gap:.5rem;}.ipp-card__head .ph{font-size:1.15rem;flex-shrink:0;}
+.ipp-steps{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}.ipp-step{display:flex;align-items:flex-start;gap:1rem;background:var(--cream);border-radius:12px;padding:1rem 1.15rem;}
+.ipp-step__num{background:var(--mc);color:#fff;font-weight:700;font-size:.85rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-step__txt{font-size:.93rem;line-height:1.65;min-width:0;}.ipp-step__txt strong{color:var(--mc-dk);}
+.ipp-video-note{font-size:.78rem;color:#888;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:.4rem;}
+.ipp-video-note a{color:var(--mc-dk);text-decoration:none;font-weight:600;font-size:.8rem;display:inline-flex;align-items:center;gap:.35rem;}.ipp-video-note a:hover{text-decoration:underline;}
+.ipp-info{background:#f0f6f9;border-left:4px solid #2d5f72;border-radius:12px;padding:1rem 1.3rem;font-size:.9rem;line-height:1.65;color:#2d5f72;margin-top:.75rem;display:flex;align-items:flex-start;gap:.7rem;}.ipp-info .ph{color:#2d5f72;font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+@media (max-width:540px){.ipp-sofia{flex-direction:column;align-items:stretch;gap:.55rem;}.ipp-sofia__col{flex-direction:row;align-items:center;gap:.55rem;align-self:flex-start;}.ipp-sofia__avatar{width:38px;height:38px;font-size:1.15rem;}.ipp-sofia__name{margin-top:0;font-size:.65rem;}.ipp-sofia__bubble{border-radius:12px;padding:1rem 1.15rem;}.ipp-video-note{flex-direction:column;align-items:flex-start;}}
+.ipp-ex{background:#fff;border-radius:12px;padding:1.3rem;margin-bottom:1.1rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}
+.ipp-ex__head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
+.ipp-ex__num{width:36px;height:36px;border-radius:50%;background:var(--mc);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-ex__title{font-weight:700;font-size:1.02rem;color:var(--mc-text);}.ipp-ex__title em{font-style:italic;color:var(--red);}
+.ipp-ex__sub{font-size:.82rem;color:#777;margin-top:.2rem;}.ipp-ex .q-q{margin:.2rem 0 .7rem;}.ipp-ex .q-opts{margin-bottom:0;}
+.ipp-conj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.65rem;margin:.3rem 0;}
+.ipp-conj-item{background:var(--cream);border-radius:8px;padding:.65rem .8rem;}.ipp-conj-item.noi,.ipp-conj-item.voi,.ipp-conj-item.loro{background:var(--mc-bg);}
+.ipp-conj-item__pron{font-size:.75rem;color:#666;font-style:italic;font-weight:700;margin-bottom:.25rem;}
+.ipp-conj-item input{border:1.5px solid var(--cream-dk);border-radius:6px;padding:.35rem .55rem;font-family:inherit;font-size:.88rem;width:100%;background:#fff;color:var(--mc-text);font-style:italic;font-weight:700;outline:none;transition:all .2s;}
+.ipp-conj-item input:focus{border-color:var(--mc);}.ipp-conj-item input.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-conj-item input.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill{border:2px solid var(--cream-dk);border-radius:6px;padding:.3rem .6rem;font-family:inherit;font-size:.9rem;width:150px;background:#fff;color:var(--black);font-style:italic;font-weight:600;transition:all .2s;}
+.ipp-fill:focus{border-color:var(--mc);outline:none;background:var(--mc-bg);}.ipp-fill.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-fill.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill-row{margin-bottom:.7rem;font-size:.94rem;line-height:2.1;}.ipp-fill-row:last-of-type{margin-bottom:0;}.ipp-fill-row em{color:var(--mc-dk);font-style:italic;font-weight:600;}
+.ipp-bank{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 .2rem;padding:.85rem 1rem;background:var(--mc-bg);border-radius:10px;}
+.ipp-bank__hint{flex-basis:100%;font-size:.78rem;color:var(--mc-dk);margin-bottom:.15rem;font-style:italic;}
+.ipp-word{border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:20px;padding:.4rem .95rem;font:600 .9rem Outfit;font-style:italic;cursor:pointer;transition:all .15s;}
+.ipp-word:hover{background:var(--mc);color:#fff;}.ipp-word.armed{background:var(--mc);color:#fff;box-shadow:0 0 0 3px rgba(82,142,116,.28);}
+.ipp-word.used{opacity:.4;pointer-events:none;text-decoration:line-through;}
+.ipp-slot{display:inline-block;min-width:82px;padding:.2rem .55rem;margin:0 .15rem;border:1.5px dashed var(--mc);border-radius:6px;background:var(--cream);color:var(--mc-text);font-style:italic;font-weight:700;text-align:center;cursor:pointer;line-height:1.3;}
+.ipp-slot.filled{background:#fff;border-style:solid;}.ipp-slot.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok-tx);}.ipp-slot.err{background:var(--err-bg);border-color:var(--red);color:var(--err-tx);}
+.ipp-nav{text-align:center;background:var(--mc-bg);border:1px dashed var(--mc);}
+.ipp-nav__txt{margin:0 0 .9rem;font-size:.94rem;color:var(--mc-text);}
+.ipp-nav__btn{border:0;background:var(--mc);color:#fff;border-radius:24px;padding:.7rem 1.5rem;font:600 .95rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 16px rgba(0,0,0,.14);}
+.ipp-nav__btn:hover{background:var(--mc-dk);}
+.ipp-rule{margin-top:1rem;border:1px solid var(--cream-dk);border-radius:10px;background:var(--cream);overflow:hidden;}
+.ipp-rule summary{cursor:pointer;padding:.75rem 1.1rem;font:600 .9rem Outfit;color:var(--mc-dk);display:flex;align-items:center;gap:.5rem;list-style:none;}
+.ipp-rule summary::-webkit-details-marker{display:none;}.ipp-rule summary:hover{background:var(--mc-bg);}
+.ipp-rule__body{padding:0 1.1rem 1rem;font-size:.92rem;line-height:1.7;color:var(--mc-text);border-top:1px solid var(--cream-dk);padding-top:.85rem;}
+.ipp-rule__body strong{color:var(--mc-dk);}.ipp-rule__body em{color:var(--red);font-style:italic;}</style><style>:root{--mc:#7b6ca8;--mc-dk:#61538c;--mc-text:#3f3560;--mc-bg:#efecf7;}</style><div class="ipp-unit"><section class="ipp-section"><div class="ipp-label">Unità 7 · Descubrimiento</div><h2 class="ipp-title">La mia giornata</h2><p class="ipp-sub">La rutina diaria, las horas y los verbos reflexivos.</p><div class="ipp-scenario"><i class="ph ph-map-pin"></i><div>Varias personas cuentan su rutina de la mañana: a qué hora se despiertan, si se levantan enseguida o se quedan un rato en la cama, la ducha, el desayuno… Cada uno tiene sus costumbres. Vas a aprender a contar tu día con los verbos reflexivos.</div></div><div class="ipp-nota"><i class="ph ph-info"></i><div>Para contar tu rutina usás los <strong>verbos reflexivos</strong> (mi sveglio, mi alzo…): la acción «recae» sobre uno mismo. También usás adverbios de frecuencia: <em>sempre</em> (siempre), <em>di solito</em> (normalmente), <em>qualche volta</em> (a veces), <em>spesso</em> (a menudo).</div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 1 · Frasi dal video</div><h2 class="ipp-title"><i class="ph ph-film-reel"></i> La mia giornata — le frasi del video</h2><p class="ipp-sub">Estas frases salen <strong>textualmente del video</strong>. Hacé clic en cada una para escucharla tal como suena.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Io mi sveglio sempre alle sette e mi alzo subito.</div><div class="ipp-vocab__es">Yo me despierto siempre a las siete y me levanto enseguida.</div><button type="button" class="ipp-vocab__btn" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;.</div><div class="ipp-vocab__es">Yo me despierto a las siete y veinte, pero me quedo en la cama un rato más.</div><button type="button" class="ipp-vocab__btn" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Alle sette e mezza faccio la doccia e poi faccio colazione.</div><div class="ipp-vocab__es">A las siete y media me ducho y después desayuno.</div><button type="button" class="ipp-vocab__btn" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Il mercoledì studio un po&#x27;, non sono brava in matematica.</div><div class="ipp-vocab__es">Los miércoles estudio un poco, no soy buena en matemática.</div><button type="button" class="ipp-vocab__btn" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!</div><div class="ipp-vocab__es">¡Yo también hago la tarea a último momento!</div><button type="button" class="ipp-vocab__btn" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Qualche volta non ho tempo e prendo solo un bicchiere di latte.</div><div class="ipp-vocab__es">A veces no tengo tiempo y tomo solo un vaso de leche.</div><button type="button" class="ipp-vocab__btn" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 2 · Vocabolario</div><h2 class="ipp-title">La giornata</h2><p class="ipp-sub">8 acciones de la rutina diaria. Hacé clic en cada tarjeta para escuchar la pronunciación.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="svegliarsi" onclick="ippPlay(this)"><i class="ph ph-alarm ipp-vocab__icon"></i><div class="ipp-vocab__it">svegliarsi</div><div class="ipp-vocab__es">despertarse</div><button type="button" class="ipp-vocab__btn" data-t="svegliarsi" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="alzarsi" onclick="ippPlay(this)"><i class="ph ph-arrow-fat-up ipp-vocab__icon"></i><div class="ipp-vocab__it">alzarsi</div><div class="ipp-vocab__es">levantarse</div><button type="button" class="ipp-vocab__btn" data-t="alzarsi" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare la doccia" onclick="ippPlay(this)"><i class="ph ph-shower ipp-vocab__icon"></i><div class="ipp-vocab__it">fare la doccia</div><div class="ipp-vocab__es">ducharse</div><button type="button" class="ipp-vocab__btn" data-t="fare la doccia" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare colazione" onclick="ippPlay(this)"><i class="ph ph-coffee ipp-vocab__icon"></i><div class="ipp-vocab__it">fare colazione</div><div class="ipp-vocab__es">desayunar</div><button type="button" class="ipp-vocab__btn" data-t="fare colazione" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare ginnastica" onclick="ippPlay(this)"><i class="ph ph-barbell ipp-vocab__icon"></i><div class="ipp-vocab__it">fare ginnastica</div><div class="ipp-vocab__es">hacer gimnasia</div><button type="button" class="ipp-vocab__btn" data-t="fare ginnastica" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="restare a letto" onclick="ippPlay(this)"><i class="ph ph-bed ipp-vocab__icon"></i><div class="ipp-vocab__it">restare a letto</div><div class="ipp-vocab__es">quedarse en la cama</div><button type="button" class="ipp-vocab__btn" data-t="restare a letto" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare i compiti" onclick="ippPlay(this)"><i class="ph ph-book-open ipp-vocab__icon"></i><div class="ipp-vocab__it">fare i compiti</div><div class="ipp-vocab__es">hacer la tarea</div><button type="button" class="ipp-vocab__btn" data-t="fare i compiti" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="andare a scuola" onclick="ippPlay(this)"><i class="ph ph-backpack ipp-vocab__icon"></i><div class="ipp-vocab__it">andare a scuola</div><div class="ipp-vocab__es">ir a la escuela</div><button type="button" class="ipp-vocab__btn" data-t="andare a scuola" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 3 · Vocabolario</div><h2 class="ipp-title">Quando? — la frequenza</h2><p class="ipp-sub">6 expresiones de frecuencia (¿cada cuánto?). Hacé clic en cada tarjeta para escucharla.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="sempre" onclick="ippPlay(this)"><i class="ph ph-infinity ipp-vocab__icon"></i><div class="ipp-vocab__it">sempre</div><div class="ipp-vocab__es">siempre</div><button type="button" class="ipp-vocab__btn" data-t="sempre" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="di solito" onclick="ippPlay(this)"><i class="ph ph-clock ipp-vocab__icon"></i><div class="ipp-vocab__it">di solito</div><div class="ipp-vocab__es">normalmente</div><button type="button" class="ipp-vocab__btn" data-t="di solito" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="qualche volta" onclick="ippPlay(this)"><i class="ph ph-dots-three ipp-vocab__icon"></i><div class="ipp-vocab__it">qualche volta</div><div class="ipp-vocab__es">a veces</div><button type="button" class="ipp-vocab__btn" data-t="qualche volta" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="spesso" onclick="ippPlay(this)"><i class="ph ph-repeat ipp-vocab__icon"></i><div class="ipp-vocab__it">spesso</div><div class="ipp-vocab__es">a menudo</div><button type="button" class="ipp-vocab__btn" data-t="spesso" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="mai" onclick="ippPlay(this)"><i class="ph ph-prohibit ipp-vocab__icon"></i><div class="ipp-vocab__it">mai</div><div class="ipp-vocab__es">nunca</div><button type="button" class="ipp-vocab__btn" data-t="mai" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="subito" onclick="ippPlay(this)"><i class="ph ph-lightning ipp-vocab__icon"></i><div class="ipp-vocab__it">subito</div><div class="ipp-vocab__es">enseguida</div><button type="button" class="ipp-vocab__btn" data-t="subito" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 4 · Comunicazione</div><h2 class="ipp-title">Raccontare la giornata</h2><p class="ipp-sub">Frases para contar tu día. Hacé clic en cada una para escucharla.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="Mi sveglio alle sette." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi sveglio alle sette.</div><div class="ipp-vocab__es">Me despierto a las siete.</div><button type="button" class="ipp-vocab__btn" data-t="Mi sveglio alle sette." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi alzo subito.</div><div class="ipp-vocab__es">Me levanto enseguida.</div><button type="button" class="ipp-vocab__btn" data-t="Mi alzo subito." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Di solito resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Di solito resto a letto ancora un po&#x27;.</div><div class="ipp-vocab__es">Normalmente me quedo un poco más en la cama.</div><button type="button" class="ipp-vocab__btn" data-t="Di solito resto a letto ancora un po&#x27;." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Faccio la doccia e poi faccio colazione.</div><div class="ipp-vocab__es">Me ducho y después desayuno.</div><button type="button" class="ipp-vocab__btn" data-t="Faccio la doccia e poi faccio colazione." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="A che ora ti alzi?" onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">A che ora ti alzi?</div><div class="ipp-vocab__es">¿A qué hora te levantás?</div><button type="button" class="ipp-vocab__btn" data-t="A che ora ti alzi?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 5 · Scoperta</div><h2 class="ipp-title"><i class="ph ph-puzzle-piece"></i> ¿Por qué &lt;em&gt;mi&lt;/em&gt; sveglio y no solo &lt;em&gt;sveglio&lt;/em&gt;?</h2><p class="ipp-sub">Escuchá las frases del video. Todas tienen una palabrita antes del verbo. Fijate si cambia según quién habla.</p><table class="ipp-fon-table"><thead><tr><th>Quién</th><th>Frase</th><th>La palabrita</th><th></th></tr></thead><tbody><tr><td>io</td><td><em>Mi</em> sveglio alle sette.</td><td>mi</td><td><button type="button" class="ipp-fon-play" data-t="Mi sveglio alle sette." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>io</td><td><em>Mi</em> alzo subito.</td><td>mi</td><td><button type="button" class="ipp-fon-play" data-t="Mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>A che ora <em>ti</em> svegli?</td><td>ti</td><td><button type="button" class="ipp-fon-play" data-t="A che ora ti svegli?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>A che ora <em>ti</em> alzi?</td><td>ti</td><td><button type="button" class="ipp-fon-play" data-t="A che ora ti alzi?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>lui / lei</td><td><em>Si</em> sveglia alle otto.</td><td>si</td><td><button type="button" class="ipp-fon-play" data-t="Si sveglia alle otto." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">¿Qué descubriste?</div></div></div><p class="q-q">La palabrita antes del verbo…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">es siempre &lt;em&gt;mi&lt;/em&gt;</button><button type="button" class="q-opt" data-ok="1" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">cambia según quién hace la acción</button><button type="button" class="q-opt" data-ok="0" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">no significa nada</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Completá</div></div></div><p class="q-q">Para preguntar «¿a qué hora te levantás?»: A che ora ___ alzi?</p><div class="f-row"><input class="f-in" id="fii01" placeholder="Escribí en italiano…" autocomplete="off"><button type="button" class="f-check" data-ans="ti" data-fb="&lt;em&gt;A che ora ti alzi?&lt;/em&gt; — con &lt;em&gt;tu&lt;/em&gt; va siempre &lt;em&gt;ti&lt;/em&gt;." data-fi="fii01" onclick="ippFill(this)">Comprobar</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><details class="ipp-rule"><summary><i class="ph ph-lock-simple-open"></i> Ya lo resolví — mostrame la regla</summary><div class="ipp-rule__body">Son los <strong>verbos reflexivos</strong>: la acción vuelve sobre el sujeto. Llevan un pronombre que cambia con la persona: <em>io mi · tu ti · lui/lei si · noi ci · voi vi · loro si</em>. En el infinitivo se ven pegados al final: <em>svegliar<strong>si</strong>, alzar<strong>si</strong></em>.</div></details></section><section class="ipp-section"><div class="ipp-label">Bloque 6 · Scoperta</div><h2 class="ipp-title"><i class="ph ph-puzzle-piece"></i> &lt;em&gt;Sempre&lt;/em&gt;, &lt;em&gt;di solito&lt;/em&gt;, &lt;em&gt;qualche volta&lt;/em&gt;, &lt;em&gt;mai&lt;/em&gt; — ¿dónde se ponen?</h2><p class="ipp-sub">Mirá en qué lugar de la frase aparece cada palabra de frecuencia. No están todas en el mismo sitio.</p><table class="ipp-fon-table"><thead><tr><th>Frecuencia</th><th>Frase del video</th><th>Posición</th><th></th></tr></thead><tbody><tr><td>sempre</td><td>Mi sveglio <em>sempre</em> alle sette.</td><td>después del verbo</td><td><button type="button" class="ipp-fon-play" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>di solito</td><td><em>Di solito</em> resto a letto ancora un po&#x27;.</td><td>al principio</td><td><button type="button" class="ipp-fon-play" data-t="Di solito resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>qualche volta</td><td><em>Qualche volta</em> non ho tempo.</td><td>al principio</td><td><button type="button" class="ipp-fon-play" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>mai</td><td>Non faccio <em>mai</em> colazione.</td><td>después del verbo, con <em>non</em></td><td><button type="button" class="ipp-fon-play" data-t="Non faccio mai colazione." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Ojo con <em>mai</em></div></div></div><p class="q-q">«Nunca desayuno» se dice…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Mai faccio colazione.</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Non faccio mai colazione.</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Faccio mai colazione.</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Vero o falso</div></div></div><p class="q-q"><em>Di solito</em> y <em>qualche volta</em> pueden ir al principio de la frase.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="Sí, y es lo más natural. &lt;em&gt;Sempre&lt;/em&gt; y &lt;em&gt;mai&lt;/em&gt;, en cambio, van pegados al verbo." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="0" data-fb="Sí, y es lo más natural. &lt;em&gt;Sempre&lt;/em&gt; y &lt;em&gt;mai&lt;/em&gt;, en cambio, van pegados al verbo." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><details class="ipp-rule"><summary><i class="ph ph-lock-simple-open"></i> Ya lo resolví — mostrame la regla</summary><div class="ipp-rule__body"><strong>sempre</strong> y <strong>mai</strong> van justo después del verbo (y <em>mai</em> exige <em>non</em>: <em>non… mai</em>). <strong>di solito</strong>, <strong>qualche volta</strong>, <strong>spesso</strong> y <strong>a volte</strong> son más libres: suelen ir al principio.</div></details></section><section class="ipp-section"><div class="ipp-label">Bloque 7 · Dialogo</div><h2 class="ipp-title">La mia giornata</h2><p class="ipp-sub">Escuchá el diálogo del video. Tocá <i class="ph ph-play"></i> en cada línea para oír esa parte, o «Escuchar todo el diálogo» para la conversación completa.</p><div style="margin-bottom:1rem;"><button type="button" class="ipp-dial__playbtn" onclick="ippPlayAll()" style="background:var(--mc);color:#fff;"><i class="ph ph-play-circle"></i> Escuchar todo el diálogo</button></div><div class="ipp-dial"><div class="ipp-dial__row " data-idx="0"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Io mi sveglio sempre alle sette e mi alzo subito.</div><div class="ipp-dial__es">Me despierto siempre a las siete y me levanto enseguida.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="1"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;.</div><div class="ipp-dial__es">Me despierto a las siete y veinte, pero me quedo un rato más en la cama.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row " data-idx="2"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Alle sette e mezza faccio la doccia e poi faccio colazione.</div><div class="ipp-dial__es">A las siete y media me ducho y después desayuno.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="3"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Qualche volta non ho tempo e prendo solo un bicchiere di latte.</div><div class="ipp-dial__es">A veces no tengo tiempo y tomo solo un vaso de leche.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row " data-idx="4"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Il mercoledì studio un po&#x27;, non sono brava in matematica.</div><div class="ipp-dial__es">Los miércoles estudio un poco, no soy buena en matemática.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="5"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!</div><div class="ipp-dial__es">¡Yo también hago la tarea a último momento!</div></div><button type="button" class="ipp-dial__playbtn" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 8 · Curiosità</div><h2 class="ipp-title">La colazione italiana</h2><p class="ipp-sub">Un dato cultural para conocer mejor Italia. No hay que responder nada: solo leelo.</p><div class="ipp-cultura"><div class="ipp-cultura__h"><i class="ph ph-lightbulb"></i> Lo sapevi?</div><div>El desayuno italiano suele ser <strong>dulce y ligero</strong>: un <em>caffè</em> o un <em>cappuccino</em> con un cornetto, o un bicchiere di latte con biscotti. ¡Por la mañana casi nunca se come salado! Y ojo: el cappuccino se toma solo en el desayuno, nunca después de comer.</div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 9 · Fonetica</div><h2 class="ipp-title">I suoni ʎ (gli) e ɲ (gn)</h2><p class="ipp-sub">Dos sonidos que en español no existen como tales. <strong>gli</strong> = [ʎ] y <strong>gn</strong> = [ɲ], muy parecido a la «ñ». Tocá el altavoz y repetí.</p><table class="ipp-fon-table"><thead><tr><th>Sonido</th><th>Descripción</th><th>Ejemplo</th><th></th></tr></thead><tbody><tr><td>gli</td><td><span class="ipp-fon-sound">[ʎ]</span></td><td><em>mi sveglio, la famiglia</em></td><td></td></tr><tr><td>gn</td><td><span class="ipp-fon-sound">[ɲ] como la ñ</span></td><td><em>il bagno, ogni giorno</em></td><td></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>famiglia</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;fami-ʎa&lt;/em&gt;. El grupo &lt;em&gt;gli&lt;/em&gt; suena [ʎ]." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;fami-ʎa&lt;/em&gt;. El grupo &lt;em&gt;gli&lt;/em&gt; suena [ʎ]." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>bagno</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;ba-ɲo&lt;/em&gt;, casi igual que «baño» en español." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;ba-ɲo&lt;/em&gt;, casi igual que «baño» en español." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>mi sveglio</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;sve-ʎo&lt;/em&gt;. Aparece en el verbo central de la unidad." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;sve-ʎo&lt;/em&gt;. Aparece en el verbo central de la unidad." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>ogni giorno</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;o-ɲi&lt;/em&gt;. Y ojo: &lt;em&gt;giorno&lt;/em&gt; empieza con [dʒ], otro sonido." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;o-ɲi&lt;/em&gt;. Y ojo: &lt;em&gt;giorno&lt;/em&gt; empieza con [dʒ], otro sonido." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">5</div><div><div class="ipp-ex__title">Vero o falso</div></div></div><p class="q-q">En <em>gli</em> la <em>g</em> se pronuncia por separado, como en «glaciar».</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="Falso: &lt;em&gt;gli&lt;/em&gt; es un solo sonido, [ʎ]. No se oye la g suelta." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="1" data-fb="Falso: &lt;em&gt;gli&lt;/em&gt; es un solo sonido, [ʎ]. No se oye la g suelta." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section><section class="ipp-section"><div class="ipp-label">Bloque 10 · Frasi utili</div><h2 class="ipp-title"><i class="ph ph-hand-heart"></i> Contar tu rutina</h2><p class="ipp-sub">Estas <strong>no aparecen en el video</strong>, pero se usan todo el tiempo. Suman a lo que ya viste.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="A che ora ti svegli?" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">A che ora ti svegli?</div><div class="ipp-vocab__es">¿A qué hora te despertás?</div><button type="button" class="ipp-vocab__btn" data-t="A che ora ti svegli?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Mi sveglio presto." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi sveglio presto.</div><div class="ipp-vocab__es">Me despierto temprano.</div><button type="button" class="ipp-vocab__btn" data-t="Mi sveglio presto." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Ti svegli tardi?" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Ti svegli tardi?</div><div class="ipp-vocab__es">¿Te despertás tarde?</div><button type="button" class="ipp-vocab__btn" data-t="Ti svegli tardi?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Poi faccio colazione e vado al lavoro." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Poi faccio colazione e vado al lavoro.</div><div class="ipp-vocab__es">Después desayuno y voy al trabajo.</div><button type="button" class="ipp-vocab__btn" data-t="Poi faccio colazione e vado al lavoro." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="La sera guardo la TV." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">La sera guardo la TV.</div><div class="ipp-vocab__es">A la noche mirto la tele.</div><button type="button" class="ipp-vocab__btn" data-t="La sera guardo la TV." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Anch&#x27;io!" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Anch&#x27;io!</div><div class="ipp-vocab__es">¡Yo también!</div><button type="button" class="ipp-vocab__btn" data-t="Anch&#x27;io!" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Neanch&#x27;io." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Neanch&#x27;io.</div><div class="ipp-vocab__es">Yo tampoco.</div><button type="button" class="ipp-vocab__btn" data-t="Neanch&#x27;io." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 11 · Esercizio</div><h2 class="ipp-title">¿Practicamos?</h2><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Completá la rutina</div><div class="ipp-ex__sub">Con el pronombre reflexivo o el artículo</div></div></div><div class="ipp-fill-row">Io <span class="ipp-slot" data-answer="mi" onclick="ippSlot(this)"></span> sveglio alle sette.</div><div class="ipp-fill-row">Lei <span class="ipp-slot" data-answer="si" onclick="ippSlot(this)"></span> alza tardi.</div><div class="ipp-fill-row">Faccio <span class="ipp-slot" data-answer="la" onclick="ippSlot(this)"></span> doccia.</div><div class="ipp-bank"><span class="ipp-bank__hint">Palabras para colocar:</span><button type="button" class="ipp-word" data-w="la" onclick="ippWord(this)">la</button><button type="button" class="ipp-word" data-w="si" onclick="ippWord(this)">si</button><button type="button" class="ipp-word" data-w="mi" onclick="ippWord(this)">mi</button></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Vero o falso</div><div class="ipp-ex__sub">¿Es verdadero o falso?</div></div></div><p class="q-q">&#x27;Mi alzo subito&#x27; significa que me levanto enseguida.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="subito = enseguida." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="0" data-fb="subito = enseguida." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">Traducí al italiano</div></div></div><p class="q-q">Escribí en italiano: «desayunar» (dos palabras).</p><div class="f-row"><input class="f-in" id="fid2" placeholder="Escribí en italiano…" autocomplete="off"><button type="button" class="f-check" data-ans="fare colazione" data-fb="fare colazione." data-fi="fid2" onclick="ippFill(this)">Comprobar</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">Elegí la traducción correcta</div></div></div><p class="q-q">&#x27;qualche volta&#x27; significa…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="qualche volta = a veces." onclick="ippOpt(this)">a veces</button><button type="button" class="q-opt" data-ok="0" data-fb="qualche volta = a veces." onclick="ippOpt(this)">siempre</button><button type="button" class="q-opt" data-ok="0" data-fb="qualche volta = a veces." onclick="ippOpt(this)">nunca</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section><section class="ipp-section ipp-nav"><p class="ipp-nav__txt">Terminaste esta etapa. Cuando quieras, seguí con <strong>Gramática</strong>.</p><button type="button" class="ipp-nav__btn" onclick="ippNext()"><i class="ph ph-book-open-text"></i> Ir a Gramática</button></section></div><script>(function(){var MAP={"svegliarsi": "https://italianoperpiacere.com/web/content/2113", "alzarsi": "https://italianoperpiacere.com/web/content/2114", "fare colazione": "https://italianoperpiacere.com/web/content/2115", "lavarsi": "https://italianoperpiacere.com/web/content/2134", "vestirsi": "https://italianoperpiacere.com/web/content/2116", "andare al lavoro": "https://italianoperpiacere.com/web/content/2117", "pranzare": "https://italianoperpiacere.com/web/content/2118", "cenare": "https://italianoperpiacere.com/web/content/2120", "dormire": "https://italianoperpiacere.com/web/content/2119", "sempre": "https://italianoperpiacere.com/web/content/2121", "spesso": "https://italianoperpiacere.com/web/content/2123", "a volte": "https://italianoperpiacere.com/web/content/2122", "mai": "https://italianoperpiacere.com/web/content/2124", "la mattina": "https://italianoperpiacere.com/web/content/2126", "il pomeriggio": "https://italianoperpiacere.com/web/content/2127", "la sera": "https://italianoperpiacere.com/web/content/2125", "la notte": "https://italianoperpiacere.com/web/content/2128", "Mi sveglio alle sette.": "https://italianoperpiacere.com/web/content/2129", "Di mattina faccio colazione.": "https://italianoperpiacere.com/web/content/2130", "La sera guardo la TV.": "https://italianoperpiacere.com/web/content/2131", "Non faccio mai colazione.": "https://italianoperpiacere.com/web/content/2133", "A che ora ti svegli?": "https://italianoperpiacere.com/web/content/2132", "Mi sveglio alle sette. E tu?": "https://italianoperpiacere.com/web/content/2135", "Io mi alzo alle otto.": "https://italianoperpiacere.com/web/content/2136", "Poi faccio colazione e vado al lavoro.": "https://italianoperpiacere.com/web/content/2140", "Mi sveglio presto.": "https://italianoperpiacere.com/web/content/2137", "Ti svegli tardi?": "https://italianoperpiacere.com/web/content/2138", "Si sveglia alle otto.": "https://italianoperpiacere.com/web/content/2139", "il mio lavoro": "https://italianoperpiacere.com/web/content/2141", "la mia casa": "https://italianoperpiacere.com/web/content/2142", "i miei giorni": "https://italianoperpiacere.com/web/content/2145", "Anch'io!": "https://italianoperpiacere.com/web/content/2143", "Neanch'io.": "https://italianoperpiacere.com/web/content/2144", "Ciao Luca! A che ora ti svegli?": "https://italianoperpiacere.com/web/content/2189", "Io la mattina non faccio mai colazione.": "https://italianoperpiacere.com/web/content/2191", "Davvero? Io la faccio sempre!": "https://italianoperpiacere.com/web/content/2190", "fare la doccia": "https://italianoperpiacere.com/web/content/2238", "fare ginnastica": "https://italianoperpiacere.com/web/content/2239", "restare a letto": "https://italianoperpiacere.com/web/content/2255", "fare i compiti": "https://italianoperpiacere.com/web/content/2240", "andare a scuola": "https://italianoperpiacere.com/web/content/2242", "di solito": "https://italianoperpiacere.com/web/content/2241", "qualche volta": "https://italianoperpiacere.com/web/content/2243", "subito": "https://italianoperpiacere.com/web/content/2245", "Mi alzo subito.": "https://italianoperpiacere.com/web/content/2244", "Di solito resto a letto ancora un po'.": "https://italianoperpiacere.com/web/content/2246", "Faccio la doccia e poi faccio colazione.": "https://italianoperpiacere.com/web/content/2248", "A che ora ti alzi?": "https://italianoperpiacere.com/web/content/2247", "Io mi sveglio sempre alle sette e mi alzo subito.": "https://italianoperpiacere.com/web/content/2249", "Io mi sveglio alle sette e venti, ma resto a letto ancora un po'.": "https://italianoperpiacere.com/web/content/2250", "Alle sette e mezza faccio la doccia e poi faccio colazione.": "https://italianoperpiacere.com/web/content/2251", "Qualche volta non ho tempo e prendo solo un bicchiere di latte.": "https://italianoperpiacere.com/web/content/2252", "Il mercoled\u00ec studio un po', non sono brava in matematica.": "https://italianoperpiacere.com/web/content/2253", "Anch'io faccio i compiti all'ultimo minuto!": "https://italianoperpiacere.com/web/content/2254"};var DIAL=["Io mi sveglio sempre alle sette e mi alzo subito.", "Io mi sveglio alle sette e venti, ma resto a letto ancora un po'.", "Alle sette e mezza faccio la doccia e poi faccio colazione.", "Qualche volta non ho tempo e prendo solo un bicchiere di latte.", "Il mercoled\u00ec studio un po', non sono brava in matematica.", "Anch'io faccio i compiti all'ultimo minuto!"];var SILENT="data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA";var player=window.__ippPlayer||(window.__ippPlayer=new Audio());player.preload='auto';window.__ippUnlocked=window.__ippUnlocked||false;function unlock(){if(window.__ippUnlocked)return;window.__ippUnlocked=true;try{player.src=SILENT;var p=player.play();if(p&&p.then)p.then(function(){try{player.pause();player.currentTime=0;}catch(e){}}).catch(function(){window.__ippUnlocked=false;});}catch(e){window.__ippUnlocked=false;}}function nrm(s){return (s||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9' ]/g,'').replace(/\s+/g,' ');}window.ippPlay=function(el){unlock();var t=(typeof el==='string')?el:(el&&el.getAttribute('data-t'));if(!t||!MAP[t])return;player.onended=null;try{player.pause();}catch(e){}player.src=MAP[t];try{player.currentTime=0;}catch(e){}var p=player.play();if(p&&p.catch)p.catch(function(){});};window.ippPlayAll=function(){unlock();try{player.pause();}catch(e){}var i=0;(function next(){if(i>=DIAL.length){player.onended=null;return;}player.src=MAP[DIAL[i]];try{player.currentTime=0;}catch(e){}i++;player.onended=function(){setTimeout(next,450);};var p=player.play();if(p&&p.catch)p.catch(function(){});})();};window.ippOpt=function(q){var bl=q.closest('.q-block');var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(q.getAttribute('data-ok')==='1'){bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=true;});q.classList.add('ok');fb.innerHTML='<i class="ph ph-check-circle"></i> '+q.getAttribute('data-fb');fb.className='q-fb show ok';}else{q.classList.add('no');q.disabled=true;fb.innerHTML='<i class="ph ph-x-circle"></i> No es esa — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippFill=function(f){var bl=f.closest('.q-block');var inp=document.getElementById(f.getAttribute('data-fi'));var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(nrm(inp.value)===nrm(f.getAttribute('data-ans'))){inp.disabled=true;fb.innerHTML='<i class="ph ph-check-circle"></i> '+(f.getAttribute('data-fb')||'Corretto!');fb.className='q-fb show ok';}else{fb.innerHTML='<i class="ph ph-x-circle"></i> Todavía no — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippReset=function(rt){var bl=rt.closest('.q-block')||rt.closest('.ipp-ex');if(!bl)return;bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=false;b.classList.remove('ok','no');});bl.querySelectorAll('.f-in,input[data-answer]').forEach(function(x){x.value='';x.disabled=false;x.classList.remove('ok','err');});bl.querySelectorAll('.ipp-slot').forEach(function(s){s.textContent='';s.removeAttribute('data-filled');s.classList.remove('filled','ok','err');});bl.querySelectorAll('.ipp-word').forEach(function(x){x.classList.remove('used','armed');});var fb=bl.querySelector('.q-fb');if(fb){fb.className='q-fb';fb.innerHTML='';}rt.style.display='none';};window.ippCheck=function(inp){var ans=inp.getAttribute('data-answer');if(ans===null)return;if(!inp.value.trim()){inp.classList.remove('ok','err');}else if(nrm(inp.value)===nrm(ans)){inp.classList.remove('err');inp.classList.add('ok');}else{inp.classList.remove('ok');inp.classList.add('err');}var cd=inp.closest('.ipp-ex')||inp.closest('.q-block');if(cd){var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('input[data-answer].err')?'inline-flex':'none';}};window.ippWord=function(wb){if(wb.classList.contains('used'))return;var cw=wb.closest('.ipp-ex');var aw=cw.querySelector('.ipp-word.armed');if(aw&&aw!==wb)aw.classList.remove('armed');wb.classList.toggle('armed');};window.ippNext=function(){var S=['a.o_wslides_next_slide','.o_wslides_lesson_nav a[href*="/slides/slide/"]','a[rel=next]','.o_wslides_js_lesson_quiz_next','a.oe_slides_next'];for(var i=0;i<S.length;i++){var el=document.querySelector(S[i]);if(el){el.click();return;}}var links=document.querySelectorAll('a[href*="/slides/slide/"]');if(links.length){links[links.length-1].click();return;}alert('Usá el menú del curso para pasar a la siguiente sección.');};window.ippSlot=function(sl){var cd=sl.closest('.ipp-ex');if(sl.getAttribute('data-filled')){var wv=sl.getAttribute('data-filled');var cs=cd.querySelectorAll('.ipp-word.used');for(var i=0;i<cs.length;i++){if(cs[i].getAttribute('data-w')===wv){cs[i].classList.remove('used');break;}}sl.textContent='';sl.removeAttribute('data-filled');sl.classList.remove('filled','ok','err');}else{var ar=cd.querySelector('.ipp-word.armed');if(ar){var val=ar.getAttribute('data-w');sl.textContent=val;sl.setAttribute('data-filled',val);sl.classList.add('filled');ar.classList.remove('armed');ar.classList.add('used');if(nrm(val)===nrm(sl.getAttribute('data-answer'))){sl.classList.remove('err');sl.classList.add('ok');}else{sl.classList.remove('ok');sl.classList.add('err');}}}var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('.ipp-slot.err')?'inline-flex':'none';};})();</script></template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #78a6ba;
+    --mc-dk:    #5a8ea0;
+    --mc-text:  #2d5f72;
+    --mc-bg:    #e5f1f5;
+    --m-spk:    #3a6080;
+    --m-bg:     #e8f0f5;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.97rem);
+    opacity: 0.9; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(2rem, 5vw, 2.5rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(120,166,186,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-text); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.25rem) clamp(1.1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.92rem, 2.4vw, 0.95rem);
+    line-height: 1.75; min-width: 0;
+    flex: 1;
+  }
+  .ipp-sofia__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .ipp-sofia__bubble p { margin: 0 0 0.65rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+  .ipp-sofia__bubble strong { color: var(--mc-text); }
+  .ipp-sofia__bubble em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2.25rem, 5vw, 3rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); margin: 0 0 0.2rem; line-height: 1.2;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .ipp-title em { color: var(--red); font-style: italic; }
+  .ipp-title .ph { color: var(--mc); font-size: 1.4rem; }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.55;
+  }
+  .ipp-sub em { color: var(--mc-dk); font-style: italic; }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.88rem;
+    color: var(--mc-text); line-height: 1.65;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+
+  /* ===== Vocab grid ===== */
+  .ipp-vocab {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-vocab__chip {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: var(--r);
+    padding: 0.95rem 0.75rem 0.85rem;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.35rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__chip:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120,166,186,0.2);
+  }
+  .ipp-vocab__icon {
+    font-size: 1.5rem;
+    color: var(--mc);
+  }
+  .ipp-vocab__it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    text-align: center; line-height: 1.3;
+  }
+  .ipp-vocab__es {
+    font-size: 0.74rem; color: #777;
+    text-align: center; line-height: 1.4;
+  }
+  .ipp-vocab__btn {
+    margin-top: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    background: var(--mc-bg);
+    border: 1px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.7rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-vocab__btn:hover { background: var(--mc); color: var(--white); }
+
+  /* ===== Frases ===== */
+  .ipp-frases { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ipp-frase {
+    background: var(--white);
+    border-radius: var(--r);
+    border-left: 3px solid var(--mc);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center;
+    gap: 0.85rem; flex-wrap: wrap;
+    transition: box-shadow 0.2s;
+  }
+  .ipp-frase:hover { box-shadow: 0 3px 10px rgba(120,166,186,0.18); }
+  .ipp-frase.spk-m { border-left-color: var(--m-spk); }
+  .ipp-frase__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+  }
+  .ipp-frase.spk-m .ipp-frase__icon { background: var(--m-bg); color: var(--m-spk); }
+  .ipp-frase__text { flex: 1; min-width: 200px; }
+  .ipp-frase__it {
+    font-size: 0.93rem; font-weight: 600;
+    color: var(--mc-text); line-height: 1.4;
+    margin-bottom: 0.2rem;
+  }
+  .ipp-frase__es {
+    font-size: 0.77rem; color: #888;
+    font-style: italic; line-height: 1.4;
+  }
+  .ipp-frase__btn {
+    padding: 0.4rem 0.85rem;
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-dk);
+    font-size: 0.76rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .ipp-frase__btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-frase.spk-m .ipp-frase__btn { border-color: var(--m-spk); color: var(--m-spk); background: var(--m-bg); }
+  .ipp-frase.spk-m .ipp-frase__btn:hover { background: var(--m-spk); color: var(--white); }
+
+  /* ===== Controles "Escuchar todo" / "Detener" ===== */
+  .ipp-seq-intro {
+    background: #e8f5ec;
+    border-left: 3px solid var(--ok-bd);
+    border-radius: 6px;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+    color: var(--ok-tx);
+    line-height: 1.55;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .ipp-seq-intro .ph { color: var(--ok-bd); flex-shrink: 0; margin-top: 2px; font-size: 1rem; }
+  .ipp-seq-intro strong { color: var(--ok-tx); }
+  .ipp-seq-ctrl {
+    display: flex; gap: 0.55rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: var(--cream);
+    border-radius: var(--r);
+  }
+  .ipp-seq-btn {
+    padding: 0.55rem 1.15rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.84rem; font-weight: 700;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.18s;
+    border: 2px solid var(--mc);
+  }
+  .ipp-seq-btn--play { background: var(--mc); color: var(--white); }
+  .ipp-seq-btn--play:hover { background: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop { background: transparent; color: var(--mc-dk); border-color: var(--mc-dk); }
+  .ipp-seq-btn--stop:hover { background: var(--mc-bg); }
+
+  /* Estado "activo" (línea siendo reproducida en secuencia) */
+  .ipp-frase.is-playing,
+  .ipp-dial__row.is-playing {
+    outline: 2px solid var(--mc);
+    outline-offset: 3px;
+    background: var(--mc-bg);
+    transition: outline 0.25s, background 0.25s;
+  }
+  .ipp-dial__row.is-playing .ipp-dial__bubble {
+    box-shadow: 0 0 0 2px var(--mc);
+  }
+
+  /* ===== Números ===== */
+  .ipp-nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.7rem;
+  }
+  .ipp-num {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.7rem;
+    text-align: center;
+    cursor: pointer; transition: all 0.2s;
+    position: relative;
+  }
+  .ipp-num:hover {
+    border-color: var(--mc);
+    box-shadow: 0 3px 10px rgba(120,166,186,0.18);
+    transform: translateY(-2px);
+  }
+  .ipp-num__big {
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--mc); display: block;
+    line-height: 1.1;
+  }
+  .ipp-num__it {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--mc-text); font-style: italic;
+    margin: 0.25rem 0 0.15rem;
+  }
+  .ipp-num__note {
+    font-size: 0.68rem; color: var(--mc-dk);
+    line-height: 1.3;
+  }
+
+  /* ===== Días ===== */
+  .ipp-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.6rem;
+  }
+  .ipp-day {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 2px solid var(--cream-dk);
+    padding: 0.85rem 0.5rem;
+    text-align: center; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-day:hover {
+    border-color: var(--mc);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(120,166,186,0.18);
+  }
+  .ipp-day__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-size: 0.72rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ipp-day__it {
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    display: block;
+  }
+  .ipp-day__es { font-size: 0.7rem; color: #888; margin-top: 0.15rem; }
+
+  /* Día activity */
+  .ipp-day-act {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-day-act__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--mc-text); margin: 0 0 0.5rem;
+  }
+  .ipp-day-act__sub {
+    font-size: 0.8rem; color: #777; margin: 0 0 0.85rem;
+  }
+  .ipp-day-pool { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+  .ipp-day-opt {
+    padding: 0.4rem 0.95rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 20px;
+    color: var(--mc-text);
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-day-opt:hover { background: var(--mc); color: var(--white); }
+  .ipp-day-opt.selected { background: var(--mc); color: var(--white); opacity: 0.5; cursor: not-allowed; }
+  .ipp-day-zone {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    min-height: 48px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 0.55rem;
+    margin-bottom: 0.85rem;
+    border: 2px dashed var(--mc-bg);
+  }
+  .ipp-day-tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc); color: var(--white);
+    border-radius: 16px;
+    font-size: 0.82rem; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-day-tag__close {
+    cursor: pointer; font-size: 0.95rem;
+    line-height: 1; opacity: 0.8;
+  }
+  .ipp-day-tag__close:hover { opacity: 1; }
+
+  /* ===== Diálogo ===== */
+  .ipp-dial {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1.5px solid var(--mc-bg);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-dial__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.05rem; font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+  .ipp-dial__sub {
+    font-size: 0.8rem; color: #888; margin: 0 0 1rem;
+  }
+  .ipp-dial__row {
+    display: flex; flex-direction: column;
+    align-items: flex-start; margin-bottom: 1rem;
+  }
+  .ipp-dial__row.right { align-items: flex-end; }
+  .ipp-dial__spk {
+    display: flex; align-items: center; gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+  .ipp-dial__row.right .ipp-dial__spk { flex-direction: row-reverse; }
+  .ipp-dial__spk-name {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--mc-text);
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-name { color: var(--m-spk); }
+  .ipp-dial__spk-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%; background: var(--mc-bg);
+    color: var(--mc-dk);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .ipp-dial__row.spk-m .ipp-dial__spk-icon {
+    background: var(--m-bg); color: var(--m-spk);
+  }
+  .ipp-dial__bubble {
+    padding: 0.7rem 1rem;
+    background: var(--mc-bg);
+    border-left: 3px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    max-width: 85%; min-width: 0;
+  }
+  .ipp-dial__row.right .ipp-dial__bubble {
+    background: var(--m-bg);
+    border-left: none; border-right: 3px solid var(--m-spk);
+    border-radius: var(--r) 0 var(--r) var(--r);
+  }
+  .ipp-dial__it {
+    font-size: 0.92rem; font-style: italic;
+    font-weight: 600; color: var(--mc-text);
+    line-height: 1.55;
+  }
+  .ipp-dial__row.right .ipp-dial__it { color: var(--m-spk); }
+  .ipp-dial__es {
+    font-size: 0.76rem; color: #888;
+    font-style: italic; line-height: 1.45;
+    margin-top: 0.25rem;
+  }
+  .ipp-dial__playbtn {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 16px;
+    color: var(--mc-dk);
+    font-size: 0.75rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    transition: all 0.2s;
+  }
+  .ipp-dial__playbtn:hover { background: var(--mc-bg); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn { border-color: var(--m-spk); color: var(--m-spk); }
+  .ipp-dial__row.spk-m .ipp-dial__playbtn:hover { background: var(--m-bg); }
+
+  /* ===== Plurales ===== */
+  .ipp-plurals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .ipp-plural {
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1.5px solid var(--cream-dk);
+    padding: 0.9rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .ipp-plural:focus-within { border-color: var(--mc); }
+  .ipp-plural__sing {
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--mc-text); font-style: italic;
+    margin-bottom: 0.45rem;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .ipp-plural__sing .ph { color: var(--mc); font-size: 1.1rem; }
+  .ipp-plural__inp {
+    width: 100%;
+    border: 1.5px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-family: inherit; font-size: 0.88rem;
+    color: var(--black); background: var(--cream);
+    outline: none; transition: border 0.2s;
+  }
+  .ipp-plural__inp:focus { border-color: var(--mc); background: var(--white); }
+  .ipp-plural__inp.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-plural__inp.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+  .ipp-plural__note {
+    font-size: 0.72rem; color: #888;
+    margin-top: 0.35rem; font-style: italic;
+    line-height: 1.4;
+    display: none;
+  }
+  .ipp-plural__note.show { display: block; }
+
+  .ipp-check-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.65rem 1.5rem;
+    font-family: inherit; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer;
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: background 0.2s;
+  }
+  .ipp-check-btn:hover { background: var(--mc-dk); }
+
+  .ipp-fb {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.86rem; line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 4px solid var(--ok-bd); }
+  .ipp-fb.partial { display: block; background: var(--warn-bg); color: var(--warn-tx); border-left: 4px solid #c89500; }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 4px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+
+  /* ===== Fonética ===== */
+  .ipp-fon-intro {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+    border: 1.5px solid var(--mc-bg);
+    margin-bottom: 1rem;
+    font-size: 0.88rem; color: #555;
+    line-height: 1.65;
+  }
+  .ipp-fon-intro em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border-radius: var(--r);
+    overflow: hidden;
+    border: 1.5px solid var(--mc-bg);
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+  }
+  .ipp-fon-table th {
+    background: var(--mc); color: var(--white);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+    text-align: left;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ipp-fon-table td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-fon-table tr:last-child td { border-bottom: none; }
+  .ipp-fon-table tr:nth-child(even) td { background: #f5fafb; }
+  .ipp-fon-table td:first-child {
+    font-weight: 700; color: var(--mc-text); font-style: italic;
+  }
+  .ipp-fon-table td em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-fon-sound {
+    display: inline-block;
+    background: var(--mc-bg); color: var(--mc-text);
+    padding: 0.15rem 0.65rem;
+    border-radius: 12px;
+    font-weight: 700; font-size: 0.82rem;
+  }
+  .ipp-fon-play {
+    padding: 0.2rem 0.6rem;
+    background: var(--white);
+    border: 1.5px solid var(--mc);
+    border-radius: 12px;
+    color: var(--mc-dk);
+    font-size: 0.72rem; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    transition: all 0.2s;
+  }
+  .ipp-fon-play:hover { background: var(--mc); color: var(--white); }
+
+  /* Fonética: ejercicio botones [k]/[g] o [tʃ]/[dʒ] */
+  .ipp-fonex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    border: 1.5px solid var(--mc-bg);
+  }
+  .ipp-fonex__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1rem; font-weight: 700;
+    margin: 0 0 0.45rem;
+  }
+  .ipp-fonex__sub {
+    font-size: 0.82rem; color: #777;
+    margin: 0 0 1rem; line-height: 1.55;
+  }
+  .ipp-fonex__list {
+    display: grid; gap: 0.4rem;
+  }
+  .ipp-fonex__item {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--cream); border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  .ipp-fonex__word {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text); font-size: 0.93rem;
+    flex: 1; min-width: 110px;
+  }
+  .ipp-fonex__btns { display: flex; gap: 0.35rem; }
+  .ipp-fonex__btn {
+    background: var(--white);
+    border: 2px solid var(--cream-dk);
+    border-radius: 16px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .ipp-fonex__btn:hover:not(:disabled) { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fonex__btn:disabled { cursor: default; opacity: 0.55; }
+  .ipp-fonex__btn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); pointer-events: none; }
+  .ipp-fonex__btn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); pointer-events: none; }
+  .ipp-fonex__score {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .ipp-fonex__audio {
+    background: none; border: none;
+    color: var(--mc); cursor: pointer;
+    font-size: 0.95rem; padding: 0.15rem;
+  }
+  .ipp-fonex__audio:hover { color: var(--mc-dk); }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.55rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== Stop fab ===== */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  .ipp-stop-fab .ph { font-size: 1.05rem; }
+
+  /* ===== Divider ===== */
+  .ipp-divider {
+    border: none;
+    border-top: 1px dashed var(--cream-dk);
+    margin: clamp(1.75rem, 4vw, 2.5rem) 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 700px) {
+    .ipp-vocab { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-frase { flex-direction: column; align-items: stretch; }
+    .ipp-frase__btn { align-self: flex-end; }
+    .ipp-fon-table { font-size: 0.78rem; }
+    .ipp-fon-table th, .ipp-fon-table td { padding: 0.5rem 0.55rem; }
+  }
+  @media (max-width: 380px) {
+    .ipp-dial { padding: 1rem 0.9rem; }
+    .ipp-fonex { padding: 0.95rem; }
+  }
+.ipp-video{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.15);margin:.5rem 0;background:#111;}.ipp-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}.ipp-fon-table td.pro{color:var(--mc-dk);font-weight:600;}
+.ipp-scenario{display:flex;gap:.7rem;align-items:flex-start;background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0 1rem;font-size:.95rem;line-height:1.6;color:var(--mc-text);}.ipp-scenario .ph{color:var(--mc-dk);font-size:1.3rem;flex-shrink:0;}
+.ipp-cultura{background:#fff8e8;border:1px solid #e9d8a6;border-radius:10px;padding:1rem 1.2rem;margin:.5rem 0;font-size:.92rem;line-height:1.6;color:#6b5713;}.ipp-cultura__h{font-weight:700;color:#8a6d0f;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem;}
+.ipp-nota{display:flex;gap:.6rem;align-items:flex-start;background:var(--cream);border-left:3px solid var(--mc);border-radius:8px;padding:.8rem 1rem;margin:.6rem 0 1rem;font-size:.9rem;line-height:1.6;color:var(--mc-text);}.ipp-nota .ph{color:var(--mc-dk);font-size:1.1rem;flex-shrink:0;margin-top:.1rem;}
+.q-block{background:#fff;border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}.q-q{font-weight:600;color:var(--mc-text);margin:0 0 .6rem;}
+.q-tag{display:inline-block;background:var(--mc);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.15rem .5rem;border-radius:20px;margin-right:.4rem;vertical-align:middle;}
+.q-opts{display:flex;gap:.5rem;flex-wrap:wrap;}.q-opt{border:1.5px solid var(--cream-dk);background:var(--cream);border-radius:8px;padding:.5rem .9rem;font:500 .9rem Outfit;cursor:pointer;}.q-opt:hover{border-color:var(--mc);}.q-opt.ok{background:#d8efe3;border-color:var(--mc);color:var(--mc-dk);}.q-opt.no{background:#f6d9d4;border-color:var(--red);color:var(--red);}
+.f-row{display:flex;gap:.5rem;flex-wrap:wrap;}.f-in{border:1.5px solid var(--cream-dk);border-radius:8px;padding:.5rem .8rem;font:500 .9rem Outfit;min-width:200px;}.f-check{border:0;background:var(--mc);color:#fff;border-radius:8px;padding:.5rem 1rem;font:600 .9rem Outfit;cursor:pointer;}
+.q-fb{margin-top:.6rem;font-size:.88rem;color:var(--mc-text);display:none;}.q-fb.show{display:block;}.q-fb.ok{color:var(--mc-dk);}.q-fb.no{color:var(--red);}.q-fb .ph{vertical-align:-2px;}
+.q-retry{margin-top:.6rem;border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:8px;padding:.4rem .85rem;font:600 .85rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;}.q-retry:hover{background:var(--mc-bg);}
+.ipp-sofia{display:flex;align-items:flex-start;gap:1rem;margin:.3rem 0 1.6rem;}.ipp-sofia__col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.ipp-sofia__avatar{width:56px;height:56px;border-radius:50%;background:var(--mc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 16px rgba(82,142,116,.35);}
+.ipp-sofia__name{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mc-dk);margin-top:.3rem;}
+.ipp-sofia__bubble{background:#fff;border-radius:0 12px 12px 12px;padding:1.1rem 1.35rem;box-shadow:0 3px 14px rgba(0,0,0,.07);font-size:.96rem;line-height:1.75;min-width:0;}
+.ipp-sofia__bubble strong{color:var(--mc-dk);}.ipp-sofia__bubble em{color:var(--red);font-style:italic;}.ipp-sofia__bubble p{margin:0 0 .85rem;}.ipp-sofia__bubble p:last-child{margin-bottom:0;}
+.ipp-task{background:var(--mc-bg);border-left:4px solid var(--mc);border-radius:12px;padding:1.1rem 1.35rem;font-size:.94rem;line-height:1.7;margin-bottom:1.2rem;}
+.ipp-task strong{color:var(--mc-text);}.ipp-task .ph{color:var(--mc-dk);vertical-align:-2px;}.ipp-task__lead{margin:0 0 .85rem;}
+.ipp-task__list{list-style:none;padding:0;margin:0 0 .85rem;display:flex;flex-direction:column;gap:.7rem;}.ipp-task__list li{line-height:1.6;}
+.ipp-task__foot{margin:0;padding-top:.85rem;border-top:1px dashed rgba(82,142,116,.35);color:var(--mc-text);}
+.ipp-card{background:#fff;border-radius:12px;padding:1.3rem 1.6rem;box-shadow:0 3px 14px rgba(0,0,0,.06);margin-bottom:1.5rem;}
+.ipp-card__head{font-size:.93rem;font-weight:600;color:var(--mc-text);margin:0 0 .85rem;display:flex;align-items:center;gap:.5rem;}.ipp-card__head .ph{font-size:1.15rem;flex-shrink:0;}
+.ipp-steps{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem;}.ipp-step{display:flex;align-items:flex-start;gap:1rem;background:var(--cream);border-radius:12px;padding:1rem 1.15rem;}
+.ipp-step__num{background:var(--mc);color:#fff;font-weight:700;font-size:.85rem;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-step__txt{font-size:.93rem;line-height:1.65;min-width:0;}.ipp-step__txt strong{color:var(--mc-dk);}
+.ipp-video-note{font-size:.78rem;color:#888;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:.4rem;}
+.ipp-video-note a{color:var(--mc-dk);text-decoration:none;font-weight:600;font-size:.8rem;display:inline-flex;align-items:center;gap:.35rem;}.ipp-video-note a:hover{text-decoration:underline;}
+.ipp-info{background:#f0f6f9;border-left:4px solid #2d5f72;border-radius:12px;padding:1rem 1.3rem;font-size:.9rem;line-height:1.65;color:#2d5f72;margin-top:.75rem;display:flex;align-items:flex-start;gap:.7rem;}.ipp-info .ph{color:#2d5f72;font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+@media (max-width:540px){.ipp-sofia{flex-direction:column;align-items:stretch;gap:.55rem;}.ipp-sofia__col{flex-direction:row;align-items:center;gap:.55rem;align-self:flex-start;}.ipp-sofia__avatar{width:38px;height:38px;font-size:1.15rem;}.ipp-sofia__name{margin-top:0;font-size:.65rem;}.ipp-sofia__bubble{border-radius:12px;padding:1rem 1.15rem;}.ipp-video-note{flex-direction:column;align-items:flex-start;}}
+.ipp-ex{background:#fff;border-radius:12px;padding:1.3rem;margin-bottom:1.1rem;box-shadow:0 3px 14px rgba(0,0,0,.06);}
+.ipp-ex__head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;}
+.ipp-ex__num{width:36px;height:36px;border-radius:50%;background:var(--mc);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ipp-ex__title{font-weight:700;font-size:1.02rem;color:var(--mc-text);}.ipp-ex__title em{font-style:italic;color:var(--red);}
+.ipp-ex__sub{font-size:.82rem;color:#777;margin-top:.2rem;}.ipp-ex .q-q{margin:.2rem 0 .7rem;}.ipp-ex .q-opts{margin-bottom:0;}
+.ipp-conj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.65rem;margin:.3rem 0;}
+.ipp-conj-item{background:var(--cream);border-radius:8px;padding:.65rem .8rem;}.ipp-conj-item.noi,.ipp-conj-item.voi,.ipp-conj-item.loro{background:var(--mc-bg);}
+.ipp-conj-item__pron{font-size:.75rem;color:#666;font-style:italic;font-weight:700;margin-bottom:.25rem;}
+.ipp-conj-item input{border:1.5px solid var(--cream-dk);border-radius:6px;padding:.35rem .55rem;font-family:inherit;font-size:.88rem;width:100%;background:#fff;color:var(--mc-text);font-style:italic;font-weight:700;outline:none;transition:all .2s;}
+.ipp-conj-item input:focus{border-color:var(--mc);}.ipp-conj-item input.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-conj-item input.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill{border:2px solid var(--cream-dk);border-radius:6px;padding:.3rem .6rem;font-family:inherit;font-size:.9rem;width:150px;background:#fff;color:var(--black);font-style:italic;font-weight:600;transition:all .2s;}
+.ipp-fill:focus{border-color:var(--mc);outline:none;background:var(--mc-bg);}.ipp-fill.ok{border-color:var(--ok-bd);background:var(--ok-bg);color:var(--ok-tx);}.ipp-fill.err{border-color:var(--red);background:var(--err-bg);color:var(--err-tx);}
+.ipp-fill-row{margin-bottom:.7rem;font-size:.94rem;line-height:2.1;}.ipp-fill-row:last-of-type{margin-bottom:0;}.ipp-fill-row em{color:var(--mc-dk);font-style:italic;font-weight:600;}
+.ipp-bank{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0 .2rem;padding:.85rem 1rem;background:var(--mc-bg);border-radius:10px;}
+.ipp-bank__hint{flex-basis:100%;font-size:.78rem;color:var(--mc-dk);margin-bottom:.15rem;font-style:italic;}
+.ipp-word{border:1.5px solid var(--mc);background:#fff;color:var(--mc-dk);border-radius:20px;padding:.4rem .95rem;font:600 .9rem Outfit;font-style:italic;cursor:pointer;transition:all .15s;}
+.ipp-word:hover{background:var(--mc);color:#fff;}.ipp-word.armed{background:var(--mc);color:#fff;box-shadow:0 0 0 3px rgba(82,142,116,.28);}
+.ipp-word.used{opacity:.4;pointer-events:none;text-decoration:line-through;}
+.ipp-slot{display:inline-block;min-width:82px;padding:.2rem .55rem;margin:0 .15rem;border:1.5px dashed var(--mc);border-radius:6px;background:var(--cream);color:var(--mc-text);font-style:italic;font-weight:700;text-align:center;cursor:pointer;line-height:1.3;}
+.ipp-slot.filled{background:#fff;border-style:solid;}.ipp-slot.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok-tx);}.ipp-slot.err{background:var(--err-bg);border-color:var(--red);color:var(--err-tx);}
+.ipp-nav{text-align:center;background:var(--mc-bg);border:1px dashed var(--mc);}
+.ipp-nav__txt{margin:0 0 .9rem;font-size:.94rem;color:var(--mc-text);}
+.ipp-nav__btn{border:0;background:var(--mc);color:#fff;border-radius:24px;padding:.7rem 1.5rem;font:600 .95rem Outfit;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 16px rgba(0,0,0,.14);}
+.ipp-nav__btn:hover{background:var(--mc-dk);}
+.ipp-rule{margin-top:1rem;border:1px solid var(--cream-dk);border-radius:10px;background:var(--cream);overflow:hidden;}
+.ipp-rule summary{cursor:pointer;padding:.75rem 1.1rem;font:600 .9rem Outfit;color:var(--mc-dk);display:flex;align-items:center;gap:.5rem;list-style:none;}
+.ipp-rule summary::-webkit-details-marker{display:none;}.ipp-rule summary:hover{background:var(--mc-bg);}
+.ipp-rule__body{padding:0 1.1rem 1rem;font-size:.92rem;line-height:1.7;color:var(--mc-text);border-top:1px solid var(--cream-dk);padding-top:.85rem;}
+.ipp-rule__body strong{color:var(--mc-dk);}.ipp-rule__body em{color:var(--red);font-style:italic;}</style><style>:root{--mc:#7b6ca8;--mc-dk:#61538c;--mc-text:#3f3560;--mc-bg:#efecf7;}</style><div class="ipp-unit"><section class="ipp-section"><div class="ipp-label">Unità 7 · Descubrimiento</div><h2 class="ipp-title">La mia giornata</h2><p class="ipp-sub">La rutina diaria, las horas y los verbos reflexivos.</p><div class="ipp-scenario"><i class="ph ph-map-pin"></i><div>Varias personas cuentan su rutina de la mañana: a qué hora se despiertan, si se levantan enseguida o se quedan un rato en la cama, la ducha, el desayuno… Cada uno tiene sus costumbres. Vas a aprender a contar tu día con los verbos reflexivos.</div></div><div class="ipp-nota"><i class="ph ph-info"></i><div>Para contar tu rutina usás los <strong>verbos reflexivos</strong> (mi sveglio, mi alzo…): la acción «recae» sobre uno mismo. También usás adverbios de frecuencia: <em>sempre</em> (siempre), <em>di solito</em> (normalmente), <em>qualche volta</em> (a veces), <em>spesso</em> (a menudo).</div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 1 · Frasi dal video</div><h2 class="ipp-title"><i class="ph ph-film-reel"></i> La mia giornata — le frasi del video</h2><p class="ipp-sub">Estas frases salen <strong>textualmente del video</strong>. Hacé clic en cada una para escucharla tal como suena.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Io mi sveglio sempre alle sette e mi alzo subito.</div><div class="ipp-vocab__es">Yo me despierto siempre a las siete y me levanto enseguida.</div><button type="button" class="ipp-vocab__btn" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;.</div><div class="ipp-vocab__es">Yo me despierto a las siete y veinte, pero me quedo en la cama un rato más.</div><button type="button" class="ipp-vocab__btn" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Alle sette e mezza faccio la doccia e poi faccio colazione.</div><div class="ipp-vocab__es">A las siete y media me ducho y después desayuno.</div><button type="button" class="ipp-vocab__btn" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Il mercoledì studio un po&#x27;, non sono brava in matematica.</div><div class="ipp-vocab__es">Los miércoles estudio un poco, no soy buena en matemática.</div><button type="button" class="ipp-vocab__btn" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!</div><div class="ipp-vocab__es">¡Yo también hago la tarea a último momento!</div><button type="button" class="ipp-vocab__btn" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-quotes ipp-vocab__icon"></i><div class="ipp-vocab__it">Qualche volta non ho tempo e prendo solo un bicchiere di latte.</div><div class="ipp-vocab__es">A veces no tengo tiempo y tomo solo un vaso de leche.</div><button type="button" class="ipp-vocab__btn" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 2 · Vocabolario</div><h2 class="ipp-title">La giornata</h2><p class="ipp-sub">8 acciones de la rutina diaria. Hacé clic en cada tarjeta para escuchar la pronunciación.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="svegliarsi" onclick="ippPlay(this)"><i class="ph ph-alarm ipp-vocab__icon"></i><div class="ipp-vocab__it">svegliarsi</div><div class="ipp-vocab__es">despertarse</div><button type="button" class="ipp-vocab__btn" data-t="svegliarsi" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="alzarsi" onclick="ippPlay(this)"><i class="ph ph-arrow-fat-up ipp-vocab__icon"></i><div class="ipp-vocab__it">alzarsi</div><div class="ipp-vocab__es">levantarse</div><button type="button" class="ipp-vocab__btn" data-t="alzarsi" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare la doccia" onclick="ippPlay(this)"><i class="ph ph-shower ipp-vocab__icon"></i><div class="ipp-vocab__it">fare la doccia</div><div class="ipp-vocab__es">ducharse</div><button type="button" class="ipp-vocab__btn" data-t="fare la doccia" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare colazione" onclick="ippPlay(this)"><i class="ph ph-coffee ipp-vocab__icon"></i><div class="ipp-vocab__it">fare colazione</div><div class="ipp-vocab__es">desayunar</div><button type="button" class="ipp-vocab__btn" data-t="fare colazione" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare ginnastica" onclick="ippPlay(this)"><i class="ph ph-barbell ipp-vocab__icon"></i><div class="ipp-vocab__it">fare ginnastica</div><div class="ipp-vocab__es">hacer gimnasia</div><button type="button" class="ipp-vocab__btn" data-t="fare ginnastica" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="restare a letto" onclick="ippPlay(this)"><i class="ph ph-bed ipp-vocab__icon"></i><div class="ipp-vocab__it">restare a letto</div><div class="ipp-vocab__es">quedarse en la cama</div><button type="button" class="ipp-vocab__btn" data-t="restare a letto" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="fare i compiti" onclick="ippPlay(this)"><i class="ph ph-book-open ipp-vocab__icon"></i><div class="ipp-vocab__it">fare i compiti</div><div class="ipp-vocab__es">hacer la tarea</div><button type="button" class="ipp-vocab__btn" data-t="fare i compiti" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="andare a scuola" onclick="ippPlay(this)"><i class="ph ph-backpack ipp-vocab__icon"></i><div class="ipp-vocab__it">andare a scuola</div><div class="ipp-vocab__es">ir a la escuela</div><button type="button" class="ipp-vocab__btn" data-t="andare a scuola" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 3 · Vocabolario</div><h2 class="ipp-title">Quando? — la frequenza</h2><p class="ipp-sub">6 expresiones de frecuencia (¿cada cuánto?). Hacé clic en cada tarjeta para escucharla.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="sempre" onclick="ippPlay(this)"><i class="ph ph-infinity ipp-vocab__icon"></i><div class="ipp-vocab__it">sempre</div><div class="ipp-vocab__es">siempre</div><button type="button" class="ipp-vocab__btn" data-t="sempre" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="di solito" onclick="ippPlay(this)"><i class="ph ph-clock ipp-vocab__icon"></i><div class="ipp-vocab__it">di solito</div><div class="ipp-vocab__es">normalmente</div><button type="button" class="ipp-vocab__btn" data-t="di solito" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="qualche volta" onclick="ippPlay(this)"><i class="ph ph-dots-three ipp-vocab__icon"></i><div class="ipp-vocab__it">qualche volta</div><div class="ipp-vocab__es">a veces</div><button type="button" class="ipp-vocab__btn" data-t="qualche volta" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="spesso" onclick="ippPlay(this)"><i class="ph ph-repeat ipp-vocab__icon"></i><div class="ipp-vocab__it">spesso</div><div class="ipp-vocab__es">a menudo</div><button type="button" class="ipp-vocab__btn" data-t="spesso" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="mai" onclick="ippPlay(this)"><i class="ph ph-prohibit ipp-vocab__icon"></i><div class="ipp-vocab__it">mai</div><div class="ipp-vocab__es">nunca</div><button type="button" class="ipp-vocab__btn" data-t="mai" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="subito" onclick="ippPlay(this)"><i class="ph ph-lightning ipp-vocab__icon"></i><div class="ipp-vocab__it">subito</div><div class="ipp-vocab__es">enseguida</div><button type="button" class="ipp-vocab__btn" data-t="subito" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 4 · Comunicazione</div><h2 class="ipp-title">Raccontare la giornata</h2><p class="ipp-sub">Frases para contar tu día. Hacé clic en cada una para escucharla.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="Mi sveglio alle sette." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi sveglio alle sette.</div><div class="ipp-vocab__es">Me despierto a las siete.</div><button type="button" class="ipp-vocab__btn" data-t="Mi sveglio alle sette." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi alzo subito.</div><div class="ipp-vocab__es">Me levanto enseguida.</div><button type="button" class="ipp-vocab__btn" data-t="Mi alzo subito." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Di solito resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Di solito resto a letto ancora un po&#x27;.</div><div class="ipp-vocab__es">Normalmente me quedo un poco más en la cama.</div><button type="button" class="ipp-vocab__btn" data-t="Di solito resto a letto ancora un po&#x27;." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">Faccio la doccia e poi faccio colazione.</div><div class="ipp-vocab__es">Me ducho y después desayuno.</div><button type="button" class="ipp-vocab__btn" data-t="Faccio la doccia e poi faccio colazione." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="A che ora ti alzi?" onclick="ippPlay(this)"><i class="ph ph-chat-circle-text ipp-vocab__icon"></i><div class="ipp-vocab__it">A che ora ti alzi?</div><div class="ipp-vocab__es">¿A qué hora te levantás?</div><button type="button" class="ipp-vocab__btn" data-t="A che ora ti alzi?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 5 · Scoperta</div><h2 class="ipp-title"><i class="ph ph-puzzle-piece"></i> ¿Por qué &lt;em&gt;mi&lt;/em&gt; sveglio y no solo &lt;em&gt;sveglio&lt;/em&gt;?</h2><p class="ipp-sub">Escuchá las frases del video. Todas tienen una palabrita antes del verbo. Fijate si cambia según quién habla.</p><table class="ipp-fon-table"><thead><tr><th>Quién</th><th>Frase</th><th>La palabrita</th><th></th></tr></thead><tbody><tr><td>io</td><td><em>Mi</em> sveglio alle sette.</td><td>mi</td><td><button type="button" class="ipp-fon-play" data-t="Mi sveglio alle sette." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>io</td><td><em>Mi</em> alzo subito.</td><td>mi</td><td><button type="button" class="ipp-fon-play" data-t="Mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>A che ora <em>ti</em> svegli?</td><td>ti</td><td><button type="button" class="ipp-fon-play" data-t="A che ora ti svegli?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>tu</td><td>A che ora <em>ti</em> alzi?</td><td>ti</td><td><button type="button" class="ipp-fon-play" data-t="A che ora ti alzi?" onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>lui / lei</td><td><em>Si</em> sveglia alle otto.</td><td>si</td><td><button type="button" class="ipp-fon-play" data-t="Si sveglia alle otto." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">¿Qué descubriste?</div></div></div><p class="q-q">La palabrita antes del verbo…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">es siempre &lt;em&gt;mi&lt;/em&gt;</button><button type="button" class="q-opt" data-ok="1" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">cambia según quién hace la acción</button><button type="button" class="q-opt" data-ok="0" data-fb="Cambia: &lt;em&gt;mi / ti / si&lt;/em&gt;. Marca que la acción vuelve sobre uno mismo." onclick="ippOpt(this)">no significa nada</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Completá</div></div></div><p class="q-q">Para preguntar «¿a qué hora te levantás?»: A che ora ___ alzi?</p><div class="f-row"><input class="f-in" id="fii01" placeholder="Escribí en italiano…" autocomplete="off"><button type="button" class="f-check" data-ans="ti" data-fb="&lt;em&gt;A che ora ti alzi?&lt;/em&gt; — con &lt;em&gt;tu&lt;/em&gt; va siempre &lt;em&gt;ti&lt;/em&gt;." data-fi="fii01" onclick="ippFill(this)">Comprobar</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><details class="ipp-rule"><summary><i class="ph ph-lock-simple-open"></i> Ya lo resolví — mostrame la regla</summary><div class="ipp-rule__body">Son los <strong>verbos reflexivos</strong>: la acción vuelve sobre el sujeto. Llevan un pronombre que cambia con la persona: <em>io mi · tu ti · lui/lei si · noi ci · voi vi · loro si</em>. En el infinitivo se ven pegados al final: <em>svegliar<strong>si</strong>, alzar<strong>si</strong></em>.</div></details></section><section class="ipp-section"><div class="ipp-label">Bloque 6 · Scoperta</div><h2 class="ipp-title"><i class="ph ph-puzzle-piece"></i> &lt;em&gt;Sempre&lt;/em&gt;, &lt;em&gt;di solito&lt;/em&gt;, &lt;em&gt;qualche volta&lt;/em&gt;, &lt;em&gt;mai&lt;/em&gt; — ¿dónde se ponen?</h2><p class="ipp-sub">Mirá en qué lugar de la frase aparece cada palabra de frecuencia. No están todas en el mismo sitio.</p><table class="ipp-fon-table"><thead><tr><th>Frecuencia</th><th>Frase del video</th><th>Posición</th><th></th></tr></thead><tbody><tr><td>sempre</td><td>Mi sveglio <em>sempre</em> alle sette.</td><td>después del verbo</td><td><button type="button" class="ipp-fon-play" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>di solito</td><td><em>Di solito</em> resto a letto ancora un po&#x27;.</td><td>al principio</td><td><button type="button" class="ipp-fon-play" data-t="Di solito resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>qualche volta</td><td><em>Qualche volta</em> non ho tempo.</td><td>al principio</td><td><button type="button" class="ipp-fon-play" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr><tr><td>mai</td><td>Non faccio <em>mai</em> colazione.</td><td>después del verbo, con <em>non</em></td><td><button type="button" class="ipp-fon-play" data-t="Non faccio mai colazione." onclick="ippPlay(this)"><i class="ph ph-speaker-high"></i></button></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Ojo con <em>mai</em></div></div></div><p class="q-q">«Nunca desayuno» se dice…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Mai faccio colazione.</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Non faccio mai colazione.</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;mai&lt;/em&gt; necesita &lt;em&gt;non&lt;/em&gt; antes del verbo. La doble negación acá es obligatoria." onclick="ippOpt(this)">Faccio mai colazione.</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Vero o falso</div></div></div><p class="q-q"><em>Di solito</em> y <em>qualche volta</em> pueden ir al principio de la frase.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="Sí, y es lo más natural. &lt;em&gt;Sempre&lt;/em&gt; y &lt;em&gt;mai&lt;/em&gt;, en cambio, van pegados al verbo." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="0" data-fb="Sí, y es lo más natural. &lt;em&gt;Sempre&lt;/em&gt; y &lt;em&gt;mai&lt;/em&gt;, en cambio, van pegados al verbo." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><details class="ipp-rule"><summary><i class="ph ph-lock-simple-open"></i> Ya lo resolví — mostrame la regla</summary><div class="ipp-rule__body"><strong>sempre</strong> y <strong>mai</strong> van justo después del verbo (y <em>mai</em> exige <em>non</em>: <em>non… mai</em>). <strong>di solito</strong>, <strong>qualche volta</strong>, <strong>spesso</strong> y <strong>a volte</strong> son más libres: suelen ir al principio.</div></details></section><section class="ipp-section"><div class="ipp-label">Bloque 7 · Dialogo</div><h2 class="ipp-title">La mia giornata</h2><p class="ipp-sub">Escuchá el diálogo del video. Tocá <i class="ph ph-play"></i> en cada línea para oír esa parte, o «Escuchar todo el diálogo» para la conversación completa.</p><div style="margin-bottom:1rem;"><button type="button" class="ipp-dial__playbtn" onclick="ippPlayAll()" style="background:var(--mc);color:#fff;"><i class="ph ph-play-circle"></i> Escuchar todo el diálogo</button></div><div class="ipp-dial"><div class="ipp-dial__row " data-idx="0"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Io mi sveglio sempre alle sette e mi alzo subito.</div><div class="ipp-dial__es">Me despierto siempre a las siete y me levanto enseguida.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Io mi sveglio sempre alle sette e mi alzo subito." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="1"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;.</div><div class="ipp-dial__es">Me despierto a las siete y veinte, pero me quedo un rato más en la cama.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Io mi sveglio alle sette e venti, ma resto a letto ancora un po&#x27;." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row " data-idx="2"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Alle sette e mezza faccio la doccia e poi faccio colazione.</div><div class="ipp-dial__es">A las siete y media me ducho y después desayuno.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Alle sette e mezza faccio la doccia e poi faccio colazione." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="3"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Qualche volta non ho tempo e prendo solo un bicchiere di latte.</div><div class="ipp-dial__es">A veces no tengo tiempo y tomo solo un vaso de leche.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Qualche volta non ho tempo e prendo solo un bicchiere di latte." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row " data-idx="4"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user-circle"></i></div><span class="ipp-dial__spk-name">Giulia</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Il mercoledì studio un po&#x27;, non sono brava in matematica.</div><div class="ipp-dial__es">Los miércoles estudio un poco, no soy buena en matemática.</div></div><button type="button" class="ipp-dial__playbtn" data-t="Il mercoledì studio un po&#x27;, non sono brava in matematica." onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div><div class="ipp-dial__row right spk-m" data-idx="5"><div class="ipp-dial__spk"><div class="ipp-dial__spk-icon"><i class="ph ph-user"></i></div><span class="ipp-dial__spk-name">Marco</span></div><div class="ipp-dial__bubble"><div class="ipp-dial__it">Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!</div><div class="ipp-dial__es">¡Yo también hago la tarea a último momento!</div></div><button type="button" class="ipp-dial__playbtn" data-t="Anch&#x27;io faccio i compiti all&#x27;ultimo minuto!" onclick="ippPlay(this)"><i class="ph ph-play"></i> Escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 8 · Curiosità</div><h2 class="ipp-title">La colazione italiana</h2><p class="ipp-sub">Un dato cultural para conocer mejor Italia. No hay que responder nada: solo leelo.</p><div class="ipp-cultura"><div class="ipp-cultura__h"><i class="ph ph-lightbulb"></i> Lo sapevi?</div><div>El desayuno italiano suele ser <strong>dulce y ligero</strong>: un <em>caffè</em> o un <em>cappuccino</em> con un cornetto, o un bicchiere di latte con biscotti. ¡Por la mañana casi nunca se come salado! Y ojo: el cappuccino se toma solo en el desayuno, nunca después de comer.</div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 9 · Fonetica</div><h2 class="ipp-title">I suoni ʎ (gli) e ɲ (gn)</h2><p class="ipp-sub">Dos sonidos que en español no existen como tales. <strong>gli</strong> = [ʎ] y <strong>gn</strong> = [ɲ], muy parecido a la «ñ». Tocá el altavoz y repetí.</p><table class="ipp-fon-table"><thead><tr><th>Sonido</th><th>Descripción</th><th>Ejemplo</th><th></th></tr></thead><tbody><tr><td>gli</td><td><span class="ipp-fon-sound">[ʎ]</span></td><td><em>mi sveglio, la famiglia</em></td><td></td></tr><tr><td>gn</td><td><span class="ipp-fon-sound">[ɲ] como la ñ</span></td><td><em>il bagno, ogni giorno</em></td><td></td></tr></tbody></table><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>famiglia</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;fami-ʎa&lt;/em&gt;. El grupo &lt;em&gt;gli&lt;/em&gt; suena [ʎ]." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;fami-ʎa&lt;/em&gt;. El grupo &lt;em&gt;gli&lt;/em&gt; suena [ʎ]." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>bagno</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;ba-ɲo&lt;/em&gt;, casi igual que «baño» en español." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;ba-ɲo&lt;/em&gt;, casi igual que «baño» en español." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>mi sveglio</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;sve-ʎo&lt;/em&gt;. Aparece en el verbo central de la unidad." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;sve-ʎo&lt;/em&gt;. Aparece en el verbo central de la unidad." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">¿[ʎ] o [ɲ]?</div></div></div><p class="q-q"><em>ogni giorno</em></p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="&lt;em&gt;o-ɲi&lt;/em&gt;. Y ojo: &lt;em&gt;giorno&lt;/em&gt; empieza con [dʒ], otro sonido." onclick="ippOpt(this)">[ʎ] (gli)</button><button type="button" class="q-opt" data-ok="1" data-fb="&lt;em&gt;o-ɲi&lt;/em&gt;. Y ojo: &lt;em&gt;giorno&lt;/em&gt; empieza con [dʒ], otro sonido." onclick="ippOpt(this)">[ɲ] (gn)</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">5</div><div><div class="ipp-ex__title">Vero o falso</div></div></div><p class="q-q">En <em>gli</em> la <em>g</em> se pronuncia por separado, como en «glaciar».</p><div class="q-opts"><button type="button" class="q-opt" data-ok="0" data-fb="Falso: &lt;em&gt;gli&lt;/em&gt; es un solo sonido, [ʎ]. No se oye la g suelta." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="1" data-fb="Falso: &lt;em&gt;gli&lt;/em&gt; es un solo sonido, [ʎ]. No se oye la g suelta." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section><section class="ipp-section"><div class="ipp-label">Bloque 10 · Frasi utili</div><h2 class="ipp-title"><i class="ph ph-hand-heart"></i> Contar tu rutina</h2><p class="ipp-sub">Estas <strong>no aparecen en el video</strong>, pero se usan todo el tiempo. Suman a lo que ya viste.</p><div class="ipp-vocab"><div class="ipp-vocab__chip" data-t="A che ora ti svegli?" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">A che ora ti svegli?</div><div class="ipp-vocab__es">¿A qué hora te despertás?</div><button type="button" class="ipp-vocab__btn" data-t="A che ora ti svegli?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Mi sveglio presto." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Mi sveglio presto.</div><div class="ipp-vocab__es">Me despierto temprano.</div><button type="button" class="ipp-vocab__btn" data-t="Mi sveglio presto." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Ti svegli tardi?" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Ti svegli tardi?</div><div class="ipp-vocab__es">¿Te despertás tarde?</div><button type="button" class="ipp-vocab__btn" data-t="Ti svegli tardi?" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Poi faccio colazione e vado al lavoro." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Poi faccio colazione e vado al lavoro.</div><div class="ipp-vocab__es">Después desayuno y voy al trabajo.</div><button type="button" class="ipp-vocab__btn" data-t="Poi faccio colazione e vado al lavoro." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="La sera guardo la TV." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">La sera guardo la TV.</div><div class="ipp-vocab__es">A la noche mirto la tele.</div><button type="button" class="ipp-vocab__btn" data-t="La sera guardo la TV." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Anch&#x27;io!" onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Anch&#x27;io!</div><div class="ipp-vocab__es">¡Yo también!</div><button type="button" class="ipp-vocab__btn" data-t="Anch&#x27;io!" onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div><div class="ipp-vocab__chip" data-t="Neanch&#x27;io." onclick="ippPlay(this)"><i class="ph ph-chat-teardrop-dots ipp-vocab__icon"></i><div class="ipp-vocab__it">Neanch&#x27;io.</div><div class="ipp-vocab__es">Yo tampoco.</div><button type="button" class="ipp-vocab__btn" data-t="Neanch&#x27;io." onclick="event.stopPropagation();ippPlay(this)"><i class="ph ph-speaker-high"></i> escuchar</button></div></div></section><section class="ipp-section"><div class="ipp-label">Bloque 11 · Esercizio</div><h2 class="ipp-title">¿Practicamos?</h2><div class="ipp-ex"><div class="ipp-ex__head"><div class="ipp-ex__num">1</div><div><div class="ipp-ex__title">Completá la rutina</div><div class="ipp-ex__sub">Con el pronombre reflexivo o el artículo</div></div></div><div class="ipp-fill-row">Io <span class="ipp-slot" data-answer="mi" onclick="ippSlot(this)"></span> sveglio alle sette.</div><div class="ipp-fill-row">Lei <span class="ipp-slot" data-answer="si" onclick="ippSlot(this)"></span> alza tardi.</div><div class="ipp-fill-row">Faccio <span class="ipp-slot" data-answer="la" onclick="ippSlot(this)"></span> doccia.</div><div class="ipp-bank"><span class="ipp-bank__hint">Palabras para colocar:</span><button type="button" class="ipp-word" data-w="la" onclick="ippWord(this)">la</button><button type="button" class="ipp-word" data-w="si" onclick="ippWord(this)">si</button><button type="button" class="ipp-word" data-w="mi" onclick="ippWord(this)">mi</button></div><button type="button" class="q-retry" style="display:none;margin-top:.85rem" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">2</div><div><div class="ipp-ex__title">Vero o falso</div><div class="ipp-ex__sub">¿Es verdadero o falso?</div></div></div><p class="q-q">&#x27;Mi alzo subito&#x27; significa que me levanto enseguida.</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="subito = enseguida." onclick="ippOpt(this)">Vero</button><button type="button" class="q-opt" data-ok="0" data-fb="subito = enseguida." onclick="ippOpt(this)">Falso</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">3</div><div><div class="ipp-ex__title">Traducí al italiano</div></div></div><p class="q-q">Escribí en italiano: «desayunar» (dos palabras).</p><div class="f-row"><input class="f-in" id="fid2" placeholder="Escribí en italiano…" autocomplete="off"><button type="button" class="f-check" data-ans="fare colazione" data-fb="fare colazione." data-fi="fid2" onclick="ippFill(this)">Comprobar</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div><div class="ipp-ex q-block"><div class="ipp-ex__head"><div class="ipp-ex__num">4</div><div><div class="ipp-ex__title">Elegí la traducción correcta</div></div></div><p class="q-q">&#x27;qualche volta&#x27; significa…</p><div class="q-opts"><button type="button" class="q-opt" data-ok="1" data-fb="qualche volta = a veces." onclick="ippOpt(this)">a veces</button><button type="button" class="q-opt" data-ok="0" data-fb="qualche volta = a veces." onclick="ippOpt(this)">siempre</button><button type="button" class="q-opt" data-ok="0" data-fb="qualche volta = a veces." onclick="ippOpt(this)">nunca</button></div><div class="q-fb"></div><button type="button" class="q-retry" style="display:none" onclick="ippReset(this)"><i class="ph ph-arrow-counter-clockwise"></i> Reintentar</button></div></section><section class="ipp-section ipp-nav"><p class="ipp-nav__txt">Terminaste esta etapa. Cuando quieras, seguí con <strong>Gramática</strong>.</p><button type="button" class="ipp-nav__btn" onclick="ippNext()"><i class="ph ph-book-open-text"></i> Ir a Gramática</button></section></div><script>(function(){var MAP={"svegliarsi": "https://italianoperpiacere.com/web/content/2113", "alzarsi": "https://italianoperpiacere.com/web/content/2114", "fare colazione": "https://italianoperpiacere.com/web/content/2115", "lavarsi": "https://italianoperpiacere.com/web/content/2134", "vestirsi": "https://italianoperpiacere.com/web/content/2116", "andare al lavoro": "https://italianoperpiacere.com/web/content/2117", "pranzare": "https://italianoperpiacere.com/web/content/2118", "cenare": "https://italianoperpiacere.com/web/content/2120", "dormire": "https://italianoperpiacere.com/web/content/2119", "sempre": "https://italianoperpiacere.com/web/content/2121", "spesso": "https://italianoperpiacere.com/web/content/2123", "a volte": "https://italianoperpiacere.com/web/content/2122", "mai": "https://italianoperpiacere.com/web/content/2124", "la mattina": "https://italianoperpiacere.com/web/content/2126", "il pomeriggio": "https://italianoperpiacere.com/web/content/2127", "la sera": "https://italianoperpiacere.com/web/content/2125", "la notte": "https://italianoperpiacere.com/web/content/2128", "Mi sveglio alle sette.": "https://italianoperpiacere.com/web/content/2129", "Di mattina faccio colazione.": "https://italianoperpiacere.com/web/content/2130", "La sera guardo la TV.": "https://italianoperpiacere.com/web/content/2131", "Non faccio mai colazione.": "https://italianoperpiacere.com/web/content/2133", "A che ora ti svegli?": "https://italianoperpiacere.com/web/content/2132", "Mi sveglio alle sette. E tu?": "https://italianoperpiacere.com/web/content/2135", "Io mi alzo alle otto.": "https://italianoperpiacere.com/web/content/2136", "Poi faccio colazione e vado al lavoro.": "https://italianoperpiacere.com/web/content/2140", "Mi sveglio presto.": "https://italianoperpiacere.com/web/content/2137", "Ti svegli tardi?": "https://italianoperpiacere.com/web/content/2138", "Si sveglia alle otto.": "https://italianoperpiacere.com/web/content/2139", "il mio lavoro": "https://italianoperpiacere.com/web/content/2141", "la mia casa": "https://italianoperpiacere.com/web/content/2142", "i miei giorni": "https://italianoperpiacere.com/web/content/2145", "Anch'io!": "https://italianoperpiacere.com/web/content/2143", "Neanch'io.": "https://italianoperpiacere.com/web/content/2144", "Ciao Luca! A che ora ti svegli?": "https://italianoperpiacere.com/web/content/2189", "Io la mattina non faccio mai colazione.": "https://italianoperpiacere.com/web/content/2191", "Davvero? Io la faccio sempre!": "https://italianoperpiacere.com/web/content/2190", "fare la doccia": "https://italianoperpiacere.com/web/content/2238", "fare ginnastica": "https://italianoperpiacere.com/web/content/2239", "restare a letto": "https://italianoperpiacere.com/web/content/2255", "fare i compiti": "https://italianoperpiacere.com/web/content/2240", "andare a scuola": "https://italianoperpiacere.com/web/content/2242", "di solito": "https://italianoperpiacere.com/web/content/2241", "qualche volta": "https://italianoperpiacere.com/web/content/2243", "subito": "https://italianoperpiacere.com/web/content/2245", "Mi alzo subito.": "https://italianoperpiacere.com/web/content/2244", "Di solito resto a letto ancora un po'.": "https://italianoperpiacere.com/web/content/2246", "Faccio la doccia e poi faccio colazione.": "https://italianoperpiacere.com/web/content/2248", "A che ora ti alzi?": "https://italianoperpiacere.com/web/content/2247", "Io mi sveglio sempre alle sette e mi alzo subito.": "https://italianoperpiacere.com/web/content/2249", "Io mi sveglio alle sette e venti, ma resto a letto ancora un po'.": "https://italianoperpiacere.com/web/content/2250", "Alle sette e mezza faccio la doccia e poi faccio colazione.": "https://italianoperpiacere.com/web/content/2251", "Qualche volta non ho tempo e prendo solo un bicchiere di latte.": "https://italianoperpiacere.com/web/content/2252", "Il mercoled\u00ec studio un po', non sono brava in matematica.": "https://italianoperpiacere.com/web/content/2253", "Anch'io faccio i compiti all'ultimo minuto!": "https://italianoperpiacere.com/web/content/2254"};var DIAL=["Io mi sveglio sempre alle sette e mi alzo subito.", "Io mi sveglio alle sette e venti, ma resto a letto ancora un po'.", "Alle sette e mezza faccio la doccia e poi faccio colazione.", "Qualche volta non ho tempo e prendo solo un bicchiere di latte.", "Il mercoled\u00ec studio un po', non sono brava in matematica.", "Anch'io faccio i compiti all'ultimo minuto!"];var SILENT="data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA";var player=window.__ippPlayer||(window.__ippPlayer=new Audio());player.preload='auto';window.__ippUnlocked=window.__ippUnlocked||false;function unlock(){if(window.__ippUnlocked)return;window.__ippUnlocked=true;try{player.src=SILENT;var p=player.play();if(p&&p.then)p.then(function(){try{player.pause();player.currentTime=0;}catch(e){}}).catch(function(){window.__ippUnlocked=false;});}catch(e){window.__ippUnlocked=false;}}function nrm(s){return (s||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9' ]/g,'').replace(/\s+/g,' ');}window.ippPlay=function(el){unlock();var t=(typeof el==='string')?el:(el&&el.getAttribute('data-t'));if(!t||!MAP[t])return;player.onended=null;try{player.pause();}catch(e){}player.src=MAP[t];try{player.currentTime=0;}catch(e){}var p=player.play();if(p&&p.catch)p.catch(function(){});};window.ippPlayAll=function(){unlock();try{player.pause();}catch(e){}var i=0;(function next(){if(i>=DIAL.length){player.onended=null;return;}player.src=MAP[DIAL[i]];try{player.currentTime=0;}catch(e){}i++;player.onended=function(){setTimeout(next,450);};var p=player.play();if(p&&p.catch)p.catch(function(){});})();};window.ippOpt=function(q){var bl=q.closest('.q-block');var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(q.getAttribute('data-ok')==='1'){bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=true;});q.classList.add('ok');fb.innerHTML='<i class="ph ph-check-circle"></i> '+q.getAttribute('data-fb');fb.className='q-fb show ok';}else{q.classList.add('no');q.disabled=true;fb.innerHTML='<i class="ph ph-x-circle"></i> No es esa — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippFill=function(f){var bl=f.closest('.q-block');var inp=document.getElementById(f.getAttribute('data-fi'));var fb=bl.querySelector('.q-fb');var rtb=bl.querySelector('.q-retry');if(nrm(inp.value)===nrm(f.getAttribute('data-ans'))){inp.disabled=true;fb.innerHTML='<i class="ph ph-check-circle"></i> '+(f.getAttribute('data-fb')||'Corretto!');fb.className='q-fb show ok';}else{fb.innerHTML='<i class="ph ph-x-circle"></i> Todavía no — podés reintentar.';fb.className='q-fb show no';if(rtb)rtb.style.display='inline-flex';}};window.ippReset=function(rt){var bl=rt.closest('.q-block')||rt.closest('.ipp-ex');if(!bl)return;bl.querySelectorAll('.q-opt').forEach(function(b){b.disabled=false;b.classList.remove('ok','no');});bl.querySelectorAll('.f-in,input[data-answer]').forEach(function(x){x.value='';x.disabled=false;x.classList.remove('ok','err');});bl.querySelectorAll('.ipp-slot').forEach(function(s){s.textContent='';s.removeAttribute('data-filled');s.classList.remove('filled','ok','err');});bl.querySelectorAll('.ipp-word').forEach(function(x){x.classList.remove('used','armed');});var fb=bl.querySelector('.q-fb');if(fb){fb.className='q-fb';fb.innerHTML='';}rt.style.display='none';};window.ippCheck=function(inp){var ans=inp.getAttribute('data-answer');if(ans===null)return;if(!inp.value.trim()){inp.classList.remove('ok','err');}else if(nrm(inp.value)===nrm(ans)){inp.classList.remove('err');inp.classList.add('ok');}else{inp.classList.remove('ok');inp.classList.add('err');}var cd=inp.closest('.ipp-ex')||inp.closest('.q-block');if(cd){var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('input[data-answer].err')?'inline-flex':'none';}};window.ippWord=function(wb){if(wb.classList.contains('used'))return;var cw=wb.closest('.ipp-ex');var aw=cw.querySelector('.ipp-word.armed');if(aw&&aw!==wb)aw.classList.remove('armed');wb.classList.toggle('armed');};window.ippNext=function(){var S=['a.o_wslides_next_slide','.o_wslides_lesson_nav a[href*="/slides/slide/"]','a[rel=next]','.o_wslides_js_lesson_quiz_next','a.oe_slides_next'];for(var i=0;i<S.length;i++){var el=document.querySelector(S[i]);if(el){el.click();return;}}var links=document.querySelectorAll('a[href*="/slides/slide/"]');if(links.length){links[links.length-1].click();return;}alert('Usá el menú del curso para pasar a la siguiente sección.');};window.ippSlot=function(sl){var cd=sl.closest('.ipp-ex');if(sl.getAttribute('data-filled')){var wv=sl.getAttribute('data-filled');var cs=cd.querySelectorAll('.ipp-word.used');for(var i=0;i<cs.length;i++){if(cs[i].getAttribute('data-w')===wv){cs[i].classList.remove('used');break;}}sl.textContent='';sl.removeAttribute('data-filled');sl.classList.remove('filled','ok','err');}else{var ar=cd.querySelector('.ipp-word.armed');if(ar){var val=ar.getAttribute('data-w');sl.textContent=val;sl.setAttribute('data-filled',val);sl.classList.add('filled');ar.classList.remove('armed');ar.classList.add('used');if(nrm(val)===nrm(sl.getAttribute('data-answer'))){sl.classList.remove('err');sl.classList.add('ok');}else{sl.classList.remove('ok');sl.classList.add('err');}}}var rtb=cd.querySelector('.q-retry');if(rtb)rtb.style.display=cd.querySelector('.ipp-slot.err')?'inline-flex':'none';};})();</script></div>
+    </section>
