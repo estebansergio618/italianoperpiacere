@@ -1503,3 +1503,55 @@ builds.forEach(function(fn) {
 } // end guard
 </script>
 <!-- ===== /BLOQUE Unità 3 — Descubrimiento ===== -->
+
+<script>
+/* IPP_WATCHDOG_CONTENIDO */
+(function(){
+  if (window.__ippVigilante) return; window.__ippVigilante = true;
+  /* ids que se vacían a propósito (feedback, resultados, contadores): no se vigilan */
+  var IGNORAR = /fb$|feedback|^res$|result|score|msg|stop|fab|output/i;
+  var copia = {}, restauradas = 0, TOPE = 60;
+
+  function raiz(){ return document.querySelector('.s_embed_code_embedded') || document.body; }
+
+  function guardar(){
+    var els = raiz().querySelectorAll('[id]');
+    for (var i = 0; i < els.length; i++){
+      var el = els[i];
+      if (!el.id || IGNORAR.test(el.id)) continue;
+      if (el.children.length && !copia[el.id]) copia[el.id] = el.innerHTML;
+    }
+  }
+
+  function vacios(){
+    var out = [];
+    for (var id in copia){
+      var el = document.getElementById(id);
+      if (el && el.children.length === 0) out.push(id);
+    }
+    return out;
+  }
+
+  function restaurar(){
+    if (restauradas >= TOPE) return;
+    var v = vacios();
+    /* uno solo vacío = acción del alumno (Reintentar). Dos o más = Odoo borró el bloque. */
+    if (v.length < 2) return;
+    for (var i = 0; i < v.length; i++){
+      var el = document.getElementById(v[i]);
+      if (el){ el.innerHTML = copia[v[i]]; restauradas++; }
+    }
+  }
+
+  function ciclo(){ guardar(); restaurar(); }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ciclo);
+  else ciclo();
+  window.addEventListener('load', ciclo);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) ciclo(); });
+  if (window.MutationObserver){
+    try { new MutationObserver(ciclo).observe(raiz(), {childList:true, subtree:true}); } catch(e){}
+  }
+  var n = 0, reloj = setInterval(function(){ ciclo(); if (++n > 30) clearInterval(reloj); }, 400);
+})();
+</script>

@@ -1576,6 +1576,36 @@ window.IPP_VOICE = window.IPP_VOICE || {
   builds.forEach(function(fn) {
     try { fn(); } catch(e) { console.warn('[IPP build error]', fn.name, e); }
   });
+/* IPP_WATCHDOG_CONTENIDO */
+/* Odoo puede re-inyectar el contenido de este bloque y borrar lo que construyó el
+   script (por eso "hay que refrescar"). Si un contenedor queda vacío, se reconstruye. */
+(function(){
+  var IDS = ["alfaFull", "numGrid", "esprList", "exAlfa", "exVF", "exChiamarsi", "exSaluti", "exSituaciones", "exNumeri", "ordenLines", "exGExpr"];
+  var reconstrucciones = 0;
+  function faltaContenido(){
+    for (var i = 0; i < IDS.length; i++){
+      var el = document.getElementById(IDS[i]);
+      if (el && el.children.length === 0) return true;
+    }
+    return false;
+  }
+  function revisar(){
+    if (reconstrucciones >= 6) return;          /* tope, para no entrar en bucle */
+    if (!faltaContenido()) return;
+    reconstrucciones++;
+    builds.forEach(function(fn){ try { fn(); } catch(e){} });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', revisar);
+  window.addEventListener('load', revisar);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) revisar(); });
+  if (window.MutationObserver){
+    var cont = document.querySelector('.s_embed_code_embedded') || document.body;
+    try { new MutationObserver(revisar).observe(cont, {childList:true, subtree:true}); } catch(e){}
+  }
+  var vueltas = 0;
+  var reloj = setInterval(function(){ revisar(); if (++vueltas > 20) clearInterval(reloj); }, 500);
+})();
+
 })();
 </script>
 <!-- ===== /BLOQUE Unità 1 — Gramática ===== -->

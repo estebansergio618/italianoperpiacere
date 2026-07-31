@@ -1,0 +1,3314 @@
+<section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><!-- ===== BLOQUE: Unità 4 — Gramática · Che ore sono? ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #e5ab07;
+    --mc-dk:    #c8940a;
+    --mc-text:  #7a5500;
+    --mc-bg:    #fdf5e0;
+    --amber-light: #fffae6;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.92; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sección ===== */
+  .ipp-section {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-section__head {
+    display: flex; align-items: center; gap: 0.85rem;
+    margin-bottom: 1rem; padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--mc-bg);
+    flex-wrap: wrap;
+  }
+  .ipp-section__label {
+    width: 38px; height: 38px;
+    background: var(--mc); color: var(--white);
+    border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    line-height: 1.2; margin: 0;
+    font-weight: 700;
+  }
+  .ipp-section__title em { color: var(--red); font-style: italic; }
+  .ipp-section__sub {
+    font-size: 0.8rem; color: #777;
+    margin: 0.15rem 0 0; line-height: 1.5;
+  }
+
+  /* ===== Tablas ===== */
+  .ipp-tbl {
+    width: 100%; border-collapse: collapse;
+    margin: 0.5rem 0;
+    font-size: clamp(0.84rem, 2.1vw, 0.92rem);
+  }
+  .ipp-tbl th {
+    background: var(--mc); color: var(--white);
+    padding: 0.6rem 0.85rem;
+    text-align: left;
+    font-weight: 700; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-tbl td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-tbl tr:last-child td { border-bottom: none; }
+  .ipp-tbl tr:nth-child(even) td { background: var(--cream); }
+  .ipp-tbl tr.highlight td { background: var(--amber-light) !important; }
+  .ipp-tbl tr.highlight .it { color: var(--mc-dk); }
+  .ipp-tbl .it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text);
+  }
+  .ipp-tbl .time {
+    font-weight: 700; color: var(--mc-text);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .ipp-tbl .star::before { content: '⭐ '; }
+  .ipp-tbl .play-btn {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .ipp-tbl .play-btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-tbl em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-tbl strong { color: var(--mc-dk); }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: var(--mc-text); line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-callout strong { color: var(--mc-dk); }
+
+  /* ===== Sub-header (dentro de secciones) ===== */
+  .ipp-subhead {
+    font-size: 0.82rem; font-weight: 700;
+    color: var(--mc-text);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 1.25rem 0 0.55rem;
+  }
+
+  /* ===== Ejercicios card ===== */
+  .ipp-ex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--mc);
+  }
+  .ipp-ex--inline {
+    border-top: none; box-shadow: none;
+    background: var(--cream);
+    margin-top: 1rem; margin-bottom: 0;
+    padding: 1rem 1.15rem;
+  }
+  .ipp-ex__head {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .ipp-ex__num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-ex__title {
+    font-weight: 700;
+    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+    color: var(--mc-text);
+  }
+  .ipp-ex__title em { font-style: italic; color: var(--red); }
+  .ipp-ex__sub {
+    font-size: 0.82rem; color: #777;
+    margin-top: 0.2rem;
+  }
+
+  /* Fill inputs */
+  .ipp-fill {
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    width: 100%; max-width: 280px;
+    transition: all 0.2s;
+    background: var(--white);
+    color: var(--mc-text);
+    font-style: italic; font-weight: 600;
+    outline: none;
+  }
+  .ipp-fill:focus { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fill.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-fill.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+
+  /* MC item */
+  .ipp-mc {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-mc:first-child { padding-top: 0; }
+  .ipp-mc:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-mc__q {
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.2vw, 0.95rem);
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
+    color: var(--mc-text);
+  }
+  .ipp-mc__q em { color: var(--red); font-style: italic; }
+  .ipp-mc__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-mc__opts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .ipp-mcbtn {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    background: var(--cream);
+    font-family: inherit;
+    font-size: 0.83rem; font-weight: 500;
+    cursor: pointer; transition: all 0.18s;
+    color: var(--black);
+  }
+  .ipp-mcbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-mcbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-mcbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); font-weight: 700; }
+  .ipp-mcbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* V/F */
+  .ipp-vf {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-vf:first-child { padding-top: 0; }
+  .ipp-vf:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-vf__stmt {
+    font-size: 0.94rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .ipp-vf__stmt em { color: var(--mc-text); font-style: italic; font-weight: 600; }
+  .ipp-vf__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-vf__btns { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .ipp-vfbtn {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    padding: 0.35rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px; background: var(--cream);
+    font-family: inherit;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-vfbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-vfbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-vfbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-vfbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* Feedback */
+  .ipp-fb {
+    margin-top: 0.6rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.83rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 3px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 3px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+  .ipp-fb strong { font-weight: 700; }
+
+  /* Action buttons */
+  .ipp-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.85rem;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc-dk); }
+
+  /* === Reintentar (botón pequeño que aparece tras responder) === */
+  .ipp-retry-mini {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none;
+    border: 1.5px solid var(--mc);
+    color: var(--mc-dk);
+    border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.6rem; margin-left: 0.55rem;
+    transition: all 0.18s;
+  }
+  .ipp-retry-mini:hover { background: var(--mc-bg); }
+  .ipp-retry-mini .ph { font-size: 0.85rem; }
+
+  /* Sort exercise */
+  .ipp-sort {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed var(--cream-dk);
+  }
+  .ipp-sort:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .ipp-sort__label {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--mc-text); margin-bottom: 0.55rem;
+  }
+  .ipp-sort__pool {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sortbtn {
+    padding: 0.35rem 0.85rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--mc-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-sortbtn:hover:not(.used) { background: var(--mc); color: var(--white); }
+  .ipp-sortbtn.used { opacity: 0.3; pointer-events: none; }
+  .ipp-sort__zone {
+    min-height: 44px;
+    background: var(--cream);
+    border: 2px dashed var(--cream-dk);
+    border-radius: 8px;
+    padding: 0.5rem 0.7rem;
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sort__placed {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer;
+  }
+  .ipp-sort__placed:hover { background: var(--mc-dk); }
+  .ipp-sort__placed::after { content: ' ×'; opacity: 0.7; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg) 0%, var(--cream) 100%);
+    border-top: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.15rem; font-weight: 700;
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.55rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); }
+  .ipp-culture p {
+    font-size: 0.9rem; color: #444;
+    line-height: 1.75; margin: 0 0 0.65rem;
+  }
+  .ipp-culture p:last-child { margin-bottom: 0; }
+  .ipp-culture em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .ipp-tbl { font-size: 0.78rem; }
+    .ipp-tbl th, .ipp-tbl td { padding: 0.45rem 0.55rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-mc__opts { flex-direction: column; align-items: stretch; }
+    .ipp-mcbtn { text-align: left; }
+  }
+</style>
+
+<button class="ipp-stop-fab" id="ippStopFab" onclick="ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-clock-countdown ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 4 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Che ore sono?</h1>
+    <p class="ipp-hero__subtitle">Gramática completa — <em>la hora, los saludos, las preposiciones, los artículos y las conjunciones</em></p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- ════ A — COME SI DICE L'ORA ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">A</div>
+        <div>
+          <h2 class="ipp-section__title">Come si dice <em>l'ora</em> — regla fundamental</h2>
+          <p class="ipp-section__sub">Cómo se dice la hora en italiano</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Italiano</th><th>Español</th><th>Clave</th><th>▶</th></tr>
+        </thead>
+        <tbody id="oraBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Expresiones clave:</strong> <em>in punto / spaccate</em> = en punto exacto · <em>e mezza</em> = y media · <em>e un quarto</em> = y cuarto · <em>meno un quarto</em> = menos cuarto · <em>circa / verso</em> = aproximadamente
+      </div>
+    </section>
+
+    <!-- ════ B — ORARIO 24h vs 12h ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">B</div>
+        <div>
+          <h2 class="ipp-section__title">Orario 24h vs 12h</h2>
+          <p class="ipp-section__sub">Formal (24h) en transporte y oficinas · informal (12h) en la calle</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Formal (24h)</th><th>▶</th><th>Informal (12h)</th><th>▶</th></tr>
+        </thead>
+        <tbody id="confrBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Escribí la hora en italiano</div>
+            <div class="ipp-ex__sub">Hay varias formas válidas para algunas — escribí una</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>Hora</th><th>Tu respuesta</th></tr></thead>
+          <tbody id="scriviBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkScrivi()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+    </section>
+
+    <!-- ════ C — SALUTI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">C</div>
+        <div>
+          <h2 class="ipp-section__title">I saluti della giornata</h2>
+          <p class="ipp-section__sub">Saludos del día — cuándo usar cada uno</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Saludo</th><th>Horario</th><th>Español</th><th>Regla / Atención</th><th>▶</th></tr>
+        </thead>
+        <tbody id="salutiBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ D — PREPOSIZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">D</div>
+        <div>
+          <h2 class="ipp-section__title">Le preposizioni di tempo</h2>
+          <p class="ipp-section__sub">Para situar eventos en el tiempo</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Preposición</th><th>Uso</th><th>Ejemplo italiano</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="prepBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ E — ARTICOLI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">E</div>
+        <div>
+          <h2 class="ipp-section__title">Articoli determinativi e indeterminativi</h2>
+          <p class="ipp-section__sub">Los artículos del italiano en singular</p>
+        </div>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos determinativos — "el / la" (cosa conocida o específica)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos del módulo</th></tr>
+        </thead>
+        <tbody id="detBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo determinativo</div>
+            <div class="ipp-ex__sub">il / lo / l' / la — 12 ítems</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="detExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkDetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos indeterminativos — "un / una" (cosa nueva, no conocida)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos</th></tr>
+        </thead>
+        <tbody id="indetBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Determinativo vs Indeterminativo:</strong><br>
+        <em>Ho una riunione</em> (cualquiera, nueva info) → <strong>indeterminativo</strong> · <em>La riunione è alle tre</em> (esa específica) → <strong>determinativo</strong>
+      </div>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo indeterminativo</div>
+            <div class="ipp-ex__sub">un / uno / una / un' — 12 ítems · ojo con el apóstrofo</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="indetExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkIndetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+        <div class="ipp-callout" style="margin-top: 1rem;">
+          <strong>Regla de oro:</strong> el apóstrofo (<em>un'</em>) <strong>SOLO</strong> se usa con palabras <strong>femeninas</strong> que empiezan con vocal (<em>un'amica</em>). Si es masculino, siempre queda como <em>un</em> (<em>un aeroporto</em>).
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ F — CONGIUNZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">F</div>
+        <div>
+          <h2 class="ipp-section__title">Congiunzioni coordinate</h2>
+          <p class="ipp-section__sub">Las conjunciones que conectan palabras y oraciones</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Conjunción</th><th>Significado</th><th>Ejemplo</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="conjBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Nota: <em>e → ed</em> antes de vocal.</strong> Cuando la palabra siguiente empieza con <em>e</em>, se puede escribir <em>ed</em> para sonar más fluido: <em>«Sono le due ed è tardi»</em>. No es obligatorio pero es frecuente.
+      </div>
+    </section>
+
+    <!-- ════ G — EJERCICIOS ════ -->
+    <section class="ipp-section" style="padding:1rem; background:transparent; box-shadow:none;">
+      <h2 style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-size:clamp(1.5rem,4vw,1.85rem); color:var(--mc-text); margin:0 0 0.85rem; padding-bottom:0.5rem; border-bottom:3px solid var(--mc-bg);">G — Esercizi</h2>
+    </section>
+
+    <!-- Ej 1: Escribe la hora en palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">1</div>
+        <div>
+          <div class="ipp-ex__title">Escribí la hora en palabras</div>
+          <div class="ipp-ex__sub">Completá cómo se dice cada hora en italiano</div>
+        </div>
+      </div>
+      <table class="ipp-tbl">
+        <thead><tr><th>Hora</th><th>Completá</th></tr></thead>
+        <tbody id="ex1Body"></tbody>
+      </table>
+      <button class="ipp-btn" onclick="checkEx1()"><i class="ph ph-check-circle"></i> Verificar</button>
+    </div>
+
+    <!-- Ej 2: ¿Cómo se dice? MC -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">2</div>
+        <div>
+          <div class="ipp-ex__title">¿Cómo se dice?</div>
+          <div class="ipp-ex__sub">Elegí la opción correcta · selección múltiple</div>
+        </div>
+      </div>
+      <div id="ex2"></div>
+    </div>
+
+    <!-- Ej 3: Preposiciones fill -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">3</div>
+        <div>
+          <div class="ipp-ex__title">Completá con la preposición correcta</div>
+          <div class="ipp-ex__sub">Usá: <em>alle · dalle…alle · verso · fino alle · tra</em></div>
+        </div>
+      </div>
+      <div id="ex3"></div>
+    </div>
+
+    <!-- Ej 4: Completa diálogo barzelletta -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">4</div>
+        <div>
+          <div class="ipp-ex__title">Completá el diálogo de la <em>barzelletta</em></div>
+          <div class="ipp-ex__sub">Elegí la palabra correcta para cada espacio</div>
+        </div>
+      </div>
+      <div class="ipp-callout">
+        <strong>Uomo 1:</strong> Mi (1)___, mi sa (2)___ l'ora per favore?<br>
+        <strong>Uomo 2:</strong> Le (3)___.<br>
+        <strong>Uomo 1:</strong> Ma è (4)___?<br>
+        <strong>Uomo 2:</strong> Sì. Grazie.<br>
+        <strong>Uomo 1:</strong> Sono le 7:15 (5)___! Incredibile!
+      </div>
+      <div id="ex4"></div>
+    </div>
+
+    <!-- Ej 5: Saludos -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">5</div>
+        <div>
+          <div class="ipp-ex__title">¿Qué saludo corresponde?</div>
+          <div class="ipp-ex__sub">Son las… ¿qué decís según la situación?</div>
+        </div>
+      </div>
+      <div id="ex5"></div>
+    </div>
+
+    <!-- Ej 6: Ordena palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">6</div>
+        <div>
+          <div class="ipp-ex__title">Ordená las palabras</div>
+          <div class="ipp-ex__sub">Tocá las palabras en orden. Tocá una colocada para quitarla</div>
+        </div>
+      </div>
+      <div id="ex6"></div>
+    </div>
+
+    <!-- Ej 7: Mini diálogo preposiciones -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">7</div>
+        <div>
+          <div class="ipp-ex__title">Mini diálogo — ¿a qué hora?</div>
+          <div class="ipp-ex__sub">Seleccioná la preposición lógica</div>
+        </div>
+      </div>
+      <div id="ex7"></div>
+    </div>
+
+    <!-- Ej 8: V/F reglas -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">8</div>
+        <div>
+          <div class="ipp-ex__title">Vero o Falso — reglas gramaticales</div>
+          <div class="ipp-ex__sub">Poné a prueba tu comprensión de las reglas</div>
+        </div>
+      </div>
+      <div id="ex8"></div>
+    </div>
+
+    <!-- Ej 9: Artículo determinativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">9</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>determinativo</em></div>
+          <div class="ipp-ex__sub">il / lo / l' / la — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex9"></div>
+    </div>
+
+    <!-- Ej 10: Artículo indeterminativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">10</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>indeterminativo</em></div>
+          <div class="ipp-ex__sub">un / uno / una / un' — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex10"></div>
+    </div>
+
+    <!-- ════ CULTURA ════ -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head"><i class="ph ph-globe-hemisphere-west"></i> Cultura italiana — Il <em>campanile</em>: el reloj de todos</h3>
+      <p>Antes de los relojes de pulsera, los italianos usaban los repiques del campanario (<em>rintocchi del campanile</em>) para saber la hora. Cada pueblo tenía su campanario, y las campanas sonaban para marcar los momentos del día: la <em>sveglia al mattino</em>, il <em>pranzo a mezzogiorno</em>, il <em>vespro la sera</em>.</p>
+      <p>En muchos pueblos italianos esta tradición sigue viva. A veces, caminando por un pueblo toscano o umbro, se escucha el campanario dar las <em>«dodici spaccate»</em> al mediodía. ¡Justo como en la <em>barzelletta</em>!</p>
+      <p><strong>Curiosidad:</strong> La palabra <em>campanile</em> viene de <em>campana</em>. ¡El campanario más famoso del mundo es probablemente el de Pisa — la <strong>Torre pendente</strong> (inclinada)!</p>
+      <p><strong>Dato cultural:</strong> Italia tiene una larga tradición oral de <em>barzellette</em> (chistes). Se cuentan en familia, en el bar, en el trabajo. El humor juega con situaciones cotidianas — como pedir la hora — llevadas al absurdo. <em>È un classico!</em></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m4_g__) {
+window.__ipp_m4_g__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) { /*IPP_G*/ try{var _g='f';for(var _i=0;_i<arguments.length;_i++){if(arguments[_i]==='m'||arguments[_i]==='f')_g=arguments[_i];}window.__ippG=_g;}catch(_e){}
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.05;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+
+/* ═══ Normalizar acentos ═══ */
+function _norm(s) {
+  return (s || '').toLowerCase().trim()
+    .replace(/['']/g, "'")
+    .replace(/[àá]/g, 'a').replace(/[éè]/g, 'e')
+    .replace(/[íì]/g, 'i').replace(/[óò]/g, 'o').replace(/[úù]/g, 'u')
+    .replace(/\s+/g, ' ');
+}
+function _esc(s) { return String(s).replace(/'/g, "\\'"); }
+
+/* ═══ DATA ═══ */
+var ORA = [
+  ['1:00',  "È l'una",                       'Es la una',                       '⭐ È (singular) — solo para la 1', false],
+  ['1:15',  "È l'una e un quarto",           'Es la una y cuarto',              '', false],
+  ['1:30',  "È l'una e mezza",               'Es la una y media',               '', false],
+  ['2:00',  'Sono le due',                    'Son las dos',                     'Sono (plural) para el resto', false],
+  ['3:20',  'Sono le tre e venti',            'Son las tres y veinte',           '', false],
+  ['4:45',  'Sono le cinque meno un quarto',  'Son las cinco menos cuarto',      'hora siguiente − <em>meno quarto</em>', false],
+  ['7:15',  'Sono le sette e un quarto',      'Son las siete y cuarto (del video)', '', false],
+  ['10:50', 'Sono le undici meno dieci',      'Son las once menos diez',         '', false],
+  ['12:00', 'È mezzogiorno',                  'Es mediodía / son las doce',      '⭐ Especial — È (singular)', true],
+  ['0:00',  'È mezzanotte',                   'Es medianoche',                   '⭐ Especial — È (singular)', true]
+];
+
+var CONFRONTO = [
+  ['7:15',  'le sette e quindici',         'le sette e un quarto'],
+  ['14:30', 'le quattordici e trenta',     'le due e mezza (del pomeriggio)'],
+  ['16:45', 'le sedici e quarantacinque',  'le cinque meno un quarto'],
+  ['20:45', 'le venti e quarantacinque',   'le nove meno un quarto (di sera)'],
+  ['22:00', 'le ventidue',                 'le dieci di sera']
+];
+
+/* Escribí la hora — multiple answers allowed */
+var SCRIVI = [
+  ['3:40',  ['tre e quaranta', 'le tre e quaranta', 'sono le tre e quaranta', 'quattro meno venti', 'le quattro meno venti']],
+  ['12:00', ['dodici', 'le dodici', 'mezzogiorno', 'è mezzogiorno', 'sono le dodici']],
+  ['8:20',  ['otto e venti', 'le otto e venti', 'sono le otto e venti']],
+  ['7:15',  ['sette e quindici', 'sette e un quarto', 'le sette e un quarto', 'sono le sette e un quarto']],
+  ['2:00',  ['due', 'le due', 'sono le due', 'quattordici', 'le quattordici']],
+  ['9:30',  ['nove e trenta', 'nove e mezza', 'le nove e mezza', 'sono le nove e mezza']]
+];
+
+var SALUTI = [
+  ['Buongiorno!',     '6:00 – 12:00',  'Buenos días',            'Al llegar y al despedirse por la mañana', 'f'],
+  ['Buon pomeriggio!','12:00 – 17:00', 'Buenas tardes',          'Menos común — más formal', 'f'],
+  ['Buonasera!',      '17:00 – 22:00', 'Buenas tardes/noches',   'Al <strong>LLEGAR Y al MARCHARSE</strong> por la tarde. También como despedida al salir de un restaurante de noche.', 'f'],
+  ['Buonanotte!',     '22:00 – 6:00',  'Buenas noches',          '⚠ <strong>EXCLUSIVO</strong> para despedirse antes de dormir. Nunca al llegar.', 'f'],
+  ['Salve!',          'todo el día',   'Hola (formal)',          'Válido a cualquier hora — formal y neutro', 'f']
+];
+
+var PREP = [
+  ['alle',         'a las (hora exacta)',          'Il treno parte alle otto.',                'El tren sale a las ocho.', 'f'],
+  ['verso',        'hacia / alrededor de',         'Arrivo verso le dieci.',                   'Llego hacia las diez.', 'f'],
+  ['fino alle',    'hasta las',                    'Il negozio è aperto fino alle venti.',     'La tienda está abierta hasta las 20:00.', 'f'],
+  ['dalle…alle',   'de… a… (horario)',             'Il museo è aperto dalle nove alle diciotto.', 'El museo está abierto de 9 a 18.', 'f'],
+  ['tra',          'dentro de (futuro)',           "Ci vediamo tra un'ora.",                   'Nos vemos en una hora.', 'f'],
+  ['prima di',     'antes de',                     'Mangio prima delle otto.',                 'Como antes de las ocho.', 'f'],
+  ['dopo',         'después de',                   'Vado al bar dopo il lavoro.',              'Voy al bar después del trabajo.', 'm']
+];
+
+var DET = [
+  ['il', 'Masc. singular — consonante (excepto s+cons., z, gn, ps, x, y)', 'il treno, il bar, il campanile, il caffè'],
+  ['lo', 'Masc. singular — s+cons., z, gn, ps, x, y',                       'lo zaino, lo studente, lo gnocco'],
+  ["l'", 'Masc. o Fem. singular — empieza con vocal (a, e, i, o, u)',       "l'ora, l'amico, l'amica, l'aeroporto"],
+  ['la', 'Fem. singular — consonante',                                       'la piazza, la sera, la metro, la donna']
+];
+
+var DET_EX = [
+  ['sport',     'lo',  's+cons. → lo'],
+  ['foto',      'la',  'fem.'],
+  ['film',      'il',  'masc., consonante'],
+  ['bambino',   'il',  'masc., consonante'],
+  ['amica',     "l'",  'fem. + vocal → elide'],
+  ['soluzione', 'la',  'fem.'],
+  ['casa',      'la',  'fem.'],
+  ['bar',       'il',  'masc., consonante'],
+  ['treno',     'il',  'masc., consonante'],
+  ['aeroporto', "l'",  'masc. + vocal → elide'],
+  ['albergo',   "l'",  'masc. + vocal → elide'],
+  ['colazione', 'la',  'fem.']
+];
+
+var INDET = [
+  ['un',  'Masc. singular — todos excepto s+cons., z, gn',  'un treno, un bar, un caffè, un amico'],
+  ['uno', 'Masc. singular — s+cons., z, gn, ps, x, y',      'uno zaino, uno studente, uno gnocco'],
+  ['una', 'Fem. singular — consonante',                      'una riunione, una sera, una donna, una piazza'],
+  ["un'", 'Fem. singular — empieza con vocal',               "un'ora, un'amica, un'idea, un'estate"]
+];
+
+var INDET_EX = [
+  ['sport',     'uno',  ''],
+  ['foto',      'una',  ''],
+  ['film',      'un',   ''],
+  ['bambino',   'un',   ''],
+  ['amica',     "un'",  "se usa <em>un'</em> con apóstrofo porque es femenino y empieza con vocal"],
+  ['soluzione', 'una',  ''],
+  ['casa',      'una',  ''],
+  ['bar',       'un',   ''],
+  ['treno',     'un',   ''],
+  ['aeroporto', 'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['albergo',   'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['colazione', 'una',  '']
+];
+
+var CONJ = [
+  ['e',     'y — une elementos',     'Sono le tre e un quarto.',                     'Son las tres y cuarto.', 'f'],
+  ['o',     'o — alternativas',      'Arrivi alle otto o alle nove?',                '¿Llegás a las ocho o a las nueve?', 'f'],
+  ['ma',    'pero — contraste',      'Voglio uscire, ma è tardi.',                   'Quiero salir, pero es tarde.', 'm'],
+  ['però',  'sin embargo',           'Il bar è aperto, però la cucina è chiusa.',    'El bar está abierto, sin embargo la cocina está cerrada.', 'f'],
+  ['quindi','entonces / así que',    'È tardi, quindi devo sbrigarmi.',              'Es tarde, así que debo apurarme.', 'm'],
+  ['anche', 'también',               'Vengo anche io alle sette.',                   'Yo también voy a las siete.', 'm']
+];
+
+/* === Datos de los 10 ejercicios H === */
+
+var EX1 = [
+  { hora: '3:00',  prefix: 'Sono le ___',         answers: ['tre', 'le tre', 'sono le tre'],                       pista: '<em>Sono le</em> + número' },
+  { hora: '7:15',  prefix: 'Sono le sette e ___', answers: ['un quarto', 'quindici', 'e un quarto', 'e quindici'], pista: '<em>e un quarto</em> = y cuarto' },
+  { hora: '12:00', prefix: 'È ___',                answers: ['mezzogiorno', 'è mezzogiorno'],                       pista: 'Especial — È mezzogiorno' },
+  { hora: '2:30',  prefix: 'Sono le due e ___',   answers: ['mezza', 'e mezza', 'trenta'],                          pista: '<em>e mezza</em> = y media' },
+  { hora: '9:45',  prefix: 'Sono le dieci meno ___', answers: ['un quarto', 'quindici', 'meno un quarto'],          pista: '<em>meno un quarto</em> = menos cuarto' }
+];
+
+var EX2 = [
+  { q: '¿Cómo se dice "son las 2 y media"?',
+    opts: ['sono le due mezza', 'sono le due e mezza', 'è le due e mezza', 'è due e mezza'],
+    ok:  'sono le due e mezza',
+    fb:  'Plural + <em>e</em> + mezza es la fórmula correcta.' },
+  { q: '¿Cómo se dice "es la una"?',
+    opts: ["è l'una", 'sono le una', 'è la una', "sono l'una"],
+    ok:  "è l'una",
+    fb:  'Singular con elisión: <em>È l\'una</em> (la 1 es la única que usa <em>è</em>).' },
+  { q: '¿Cuál expresa "aproximadamente las 3"?',
+    opts: ['alle tre in punto', 'dalle tre', 'verso le tre', 'fino alle tre'],
+    ok:  'verso le tre',
+    fb:  '<em>Verso</em> = hacia, alrededor de.' }
+];
+
+var EX3 = [
+  { q: '1. Il museo è aperto ___ 9 ___ 17.',
+    opts: ['alle 9 alle 17', 'dalle 9 alle 17', 'tra 9 e 17'],
+    ok:  'dalle 9 alle 17',
+    fb:  '<em>dalle…alle</em> = de…a (rango).' },
+  { q: '2. Il treno parte ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'tra'],
+    ok:  'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta).' },
+  { q: "3. Ci vediamo ___ un'ora. <em>(dentro de una hora)</em>",
+    opts: ['alle', 'verso', 'tra'],
+    ok:  'tra',
+    fb:  '<em>Tra</em> = dentro de (tiempo futuro).' },
+  { q: '4. Arrivo ___ le undici. <em>(aproximadamente las 11)</em>',
+    opts: ['alle', 'verso', 'fino alle'],
+    ok:  'verso',
+    fb:  '<em>Verso</em> indica aproximación.' }
+];
+
+var EX4 = [
+  { q: '(1) Mi ___ <em>(disculpe)</em>',
+    opts: ['scusi', 'sento', 'chiamo'], ok: 'scusi',
+    fb:  '<em>Mi scusi</em> = disculpe (formal).' },
+  { q: "(2) mi sa ___ l'ora <em>(decir)</em>",
+    opts: ['fare', 'dire', 'leggere'], ok: 'dire',
+    fb:  '<em>Dire</em> = decir.' },
+  { q: '(3) Le ___ <em>(5:35)</em>',
+    opts: ['tre e trenta', 'sette e quindici', 'cinque e trentacinque'], ok: 'cinque e trentacinque',
+    fb:  '5:35 = <em>cinque e trentacinque</em>.' },
+  { q: '(4) Ma è ___? <em>(¿está seguro?)</em>',
+    opts: ['sicuro', 'pronto', 'certo'], ok: 'sicuro',
+    fb:  '<em>Sicuro</em> = seguro.' },
+  { q: '(5) Sono le 7:15 ___! <em>(en punto exacto)</em>',
+    opts: ['circa', 'quasi', 'spaccate'], ok: 'spaccate',
+    fb:  '<em>Spaccate</em> = exactas, en punto (italiano coloquial).' }
+];
+
+var EX5 = [
+  { q: 'Son las <strong>9:00</strong> de la mañana. Llegás a la oficina. Decís:',
+    opts: ['Buongiorno!', 'Buonanotte!', 'Buonasera!'], ok: 'Buongiorno!',
+    fb:  '<em>Buongiorno</em> = 6:00–12:00, al llegar por la mañana.' },
+  { q: 'Son las <strong>19:30</strong>. Entrás a un restaurante. Decís:',
+    opts: ['Buongiorno!', 'Buon pomeriggio!', 'Buonasera!'], ok: 'Buonasera!',
+    fb:  '<em>Buonasera</em> = 17:00–22:00, al llegar por la tarde/noche.' },
+  { q: 'Son las <strong>23:00</strong>. Te vas a dormir. Le decís a tu compañero:',
+    opts: ['Buonasera!', 'Buonanotte!', 'Buongiorno!'], ok: 'Buonanotte!',
+    fb:  '⚠ <em>Buonanotte</em> = SOLO para despedirse antes de dormir.' }
+];
+
+var EX6 = [
+  { label: '',
+    pool: ['sono', 'che', 'ore', 'dire', 'mi', 'sa', '?'],
+    answer: ['mi', 'sa', 'dire', 'che', 'ore', 'sono', '?'] },
+  { label: '',
+    pool: ['diciotto', 'aperto', 'nove', 'museo', 'dalle', 'Il', 'alle', 'è'],
+    answer: ['Il', 'museo', 'è', 'aperto', 'dalle', 'nove', 'alle', 'diciotto'] },
+  { label: '',
+    pool: ['alle 11', 'colazione', 'dalle 7', 'la', 'serviamo'],
+    answer: ['serviamo', 'la', 'colazione', 'dalle 7', 'alle 11'] },
+  { label: '',
+    pool: ['otto e trenta', 'apre', 'banca', 'alle', 'la'],
+    answer: ['la', 'banca', 'apre', 'alle', 'otto e trenta'] },
+  { label: '',
+    pool: ['il check-out', 'ora', 'è', 'a', 'che', '?'],
+    answer: ['a', 'che', 'ora', 'è', 'il check-out', '?'] }
+];
+
+var EX7 = [
+  { q: '— A che ora apre la farmacia? — Apre ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'fino alle'], ok: 'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta de apertura).' },
+  { q: '— Fino a che ora servite la colazione? — ___ undici.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'fino alle',
+    fb:  '<em>Fino alle</em> = hasta las.' },
+  { q: '— A che ora arrivi? — Arrivo ___ le tre, non sono sicuro.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'verso',
+    fb:  '<em>Verso</em> = aproximadamente (cuando no es seguro).' },
+  { q: '— Da che ora è la colazione? — È ___ sette.',
+    opts: ['alle', 'dalle', 'verso'], ok: 'dalle',
+    fb:  '<em>Dalle</em> = desde las (inicio del horario).' }
+];
+
+var EX8 = [
+  { stmt: 'Para la 1:00 se dice <em>"Sono l\'una"</em>.',
+    ans: false,
+    fb:  'La forma correcta es <em>"È l\'una"</em> — la 1 usa <em>essere</em> singular.' },
+  { stmt: '<em>"Verso le cinque"</em> significa "alrededor de las 5".',
+    ans: true,
+    fb:  '<em>Verso</em> = hacia / alrededor de. Se usa para horarios aproximados.' },
+  { stmt: '<em>"Buonanotte"</em> se puede usar al llegar a un lugar por la noche.',
+    ans: false,
+    fb:  '<em>Buonanotte</em> es SOLO para despedirse antes de dormir. Para llegar de noche: <em>Buonasera</em>.' },
+  { stmt: 'El horario de 24h se usa en estaciones y aeropuertos.',
+    ans: true,
+    fb:  'El horario de 24h es estándar en transporte, hospitales y oficinas.' },
+  { stmt: '<em>"Spaccate"</em> y <em>"in punto"</em> significan lo mismo: en punto exacto.',
+    ans: true,
+    fb:  'Son sinónimos — ambos expresan exactitud. <em>Spaccate</em> es más coloquial e italiano típico.' }
+];
+
+var EX9 = [
+  { q: '___ treno <em>(el tren — masc., consonante)</em>',
+    opts: ['il treno', 'lo treno', 'la treno'], ok: 'il treno' },
+  { q: '___ ora <em>(la hora — fem., vocal)</em>',
+    opts: ['la ora', 'il ora', "l'ora"], ok: "l'ora" },
+  { q: '___ studente <em>(el estudiante — masc., empieza con st-)</em>',
+    opts: ['il studente', 'lo studente', "l'studente"], ok: 'lo studente' },
+  { q: '___ piazza <em>(la plaza — fem., consonante)</em>',
+    opts: ['la piazza', 'il piazza', "l'piazza"], ok: 'la piazza' },
+  { q: '___ amico <em>(el amigo — masc., vocal)</em>',
+    opts: ['il amico', 'lo amico', "l'amico"], ok: "l'amico" },
+  { q: '___ sera <em>(la tarde — fem., consonante)</em>',
+    opts: ['la sera', 'il sera', "l'sera"], ok: 'la sera' }
+];
+
+var EX10 = [
+  { q: '___ caffè <em>(un café — masc., consonante)</em>',
+    opts: ['un caffè', 'uno caffè', 'una caffè'], ok: 'un caffè' },
+  { q: '___ riunione <em>(una reunión — fem., consonante)</em>',
+    opts: ['un riunione', 'uno riunione', 'una riunione'], ok: 'una riunione' },
+  { q: '___ zaino <em>(una mochila — masc., empieza con z)</em>',
+    opts: ['un zaino', 'uno zaino', 'una zaino'], ok: 'uno zaino' },
+  { q: '___ ora <em>(una hora — fem., vocal)</em>',
+    opts: ['una ora', 'un ora', "un'ora"], ok: "un'ora" },
+  { q: '___ amica <em>(una amiga — fem., vocal)</em>',
+    opts: ["un'amica", 'una amica', 'un amica'], ok: "un'amica" },
+  { q: '___ bar <em>(un bar — masc., consonante)</em>',
+    opts: ['un bar', 'uno bar', 'una bar'], ok: 'un bar' }
+];
+
+/* ═══ BUILDERS ═══ */
+
+function buildOra() {
+  var html = '';
+  ORA.forEach(function(o) {
+    var cls = o[4] ? 'highlight' : '';
+    var clave = o[3] ? '<span class="star">'+o[3].replace('⭐ ','')+'</span>' : '';
+    html += '<tr class="'+cls+'">'+
+              '<td class="time">'+o[0]+'</td>'+
+              '<td class="it">'+o[1]+'</td>'+
+              '<td>'+o[2]+'</td>'+
+              '<td>'+clave+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(o[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('oraBody').innerHTML = html;
+}
+
+function buildConfr() {
+  var html = '';
+  CONFRONTO.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="time">'+c[0]+'</td>'+
+              '<td class="it">'+c[1]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('confrBody').innerHTML = html;
+}
+
+function buildScrivi() {
+  var html = '';
+  SCRIVI.forEach(function(s, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+s[0]+'</td>'+
+              '<td><input class="ipp-fill" type="text" placeholder="escribí…" data-idx="'+i+'"></td>'+
+            '</tr>';
+  });
+  document.getElementById('scriviBody').innerHTML = html;
+}
+
+function buildSaluti() {
+  var html = '';
+  SALUTI.forEach(function(s) {
+    html += '<tr>'+
+              '<td class="it">'+s[0]+'</td>'+
+              '<td>'+s[1]+'</td>'+
+              '<td>'+s[2]+'</td>'+
+              '<td>'+s[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(s[0])+'\',0.85,\''+s[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('salutiBody').innerHTML = html;
+}
+
+function buildPrep() {
+  var html = '';
+  PREP.forEach(function(p) {
+    html += '<tr>'+
+              '<td class="it" style="font-weight:700;">'+p[0]+'</td>'+
+              '<td>'+p[1]+'</td>'+
+              '<td class="it">'+p[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+p[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(p[2])+'\',0.82,\''+p[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('prepBody').innerHTML = html;
+}
+
+function buildDet() {
+  var html = '';
+  DET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('detBody').innerHTML = html;
+}
+
+function buildIndet() {
+  var html = '';
+  INDET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetBody').innerHTML = html;
+}
+
+function buildDetEx() {
+  var html = '';
+  DET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="il">il</option>'+
+                  '<option value="lo">lo</option>'+
+                  "<option value=\"l'\">l'</option>"+
+                  '<option value="la">la</option>'+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('detExBody').innerHTML = html;
+}
+
+function buildIndetEx() {
+  var html = '';
+  INDET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="un">un</option>'+
+                  '<option value="uno">uno</option>'+
+                  '<option value="una">una</option>'+
+                  "<option value=\"un'\">un'</option>"+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetExBody').innerHTML = html;
+}
+
+function buildConj() {
+  var html = '';
+  CONJ.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.1rem;font-weight:700;">'+c[0]+'</td>'+
+              '<td>'+c[1]+'</td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+c[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\''+c[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('conjBody').innerHTML = html;
+}
+
+function buildEx1() {
+  var html = '';
+  EX1.forEach(function(e, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+e.hora+'</td>'+
+              '<td>'+e.prefix.replace('___', '<input class="ipp-fill" type="text" data-idx="'+i+'" placeholder="…">')+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('ex1Body').innerHTML = html;
+}
+
+function buildMC(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-mc" data-idx="'+i+'" data-ok="'+item.ok.replace(/"/g,'&quot;')+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-mc__q"><span class="ipp-mc__num">'+(i+1)+'</span>'+item.q+'</div>'+
+              '<div class="ipp-mc__opts">';
+    item.opts.forEach(function(opt) {
+      html += '<button class="ipp-mcbtn" onclick="pickMC(this)">'+opt+'</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildVF(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-vf" data-idx="'+i+'" data-ans="'+item.ans+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-vf__stmt"><span class="ipp-vf__num">'+(i+1)+'</span>'+item.stmt+'</div>'+
+              '<div class="ipp-vf__btns">'+
+                '<button class="ipp-vfbtn" data-pick="true" onclick="pickVF(this)"><i class="ph ph-check"></i> Verdadero</button>'+
+                '<button class="ipp-vfbtn" data-pick="false" onclick="pickVF(this)"><i class="ph ph-x"></i> Falso</button>'+
+              '</div>'+
+              '<div class="ipp-fb"></div>'+
+            '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildSort(data, containerId) {
+  var html = '';
+  data.forEach(function(s, i) {
+    var labelText = s.label ? (i+1)+'. '+s.label : (i+1)+'.';
+    html += '<div class="ipp-sort" data-idx="'+i+'" data-answer="'+s.answer.join('|')+'">'+
+              '<div class="ipp-sort__label">'+labelText+'</div>'+
+              '<div class="ipp-sort__pool">';
+    s.pool.forEach(function(w) {
+      html += '<button class="ipp-sortbtn" onclick="pickSort(this)">'+w+'</button>';
+    });
+    html += '</div>'+
+            '<div class="ipp-sort__zone"></div>'+
+            '<button class="ipp-btn" onclick="checkSort(this)" style="margin-top:0.4rem;font-size:0.78rem;padding:0.4rem 0.95rem;"><i class="ph ph-check-circle"></i> Verificar</button>'+
+            '<div class="ipp-fb" style="margin-top:0.5rem;"></div>'+
+          '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+/* ═══ INTERACTION ═══ */
+/* Helper: agrega un botón "Reintentar" al container que ejecuta resetFn() */
+function _addRetry(container, resetFn) {
+  var old = container.querySelector(':scope > .ipp-retry-mini');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry-mini';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+function pickMC(btn) {
+  var item = btn.closest('.ipp-mc');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var correct = item.dataset.ok;
+  var pickFb = item.dataset.fb;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+    b.disabled = true;
+    if (b.textContent.trim() === correct && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickVF(btn) {
+  var item = btn.closest('.ipp-vf');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var ans = item.dataset.ans === 'true';
+  var picked = btn.dataset.pick === 'true';
+  var ok = picked === ans;
+  var pickFb = item.dataset.fb;
+  item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+    b.disabled = true;
+    if ((b.dataset.pick === 'true') === ans && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickSort(btn) {
+  if (btn.classList.contains('used')) return;
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  btn.classList.add('used');
+  var placed = document.createElement('span');
+  placed.className = 'ipp-sort__placed';
+  placed.textContent = btn.textContent;
+  placed.dataset.word = btn.textContent;
+  placed.onclick = function() {
+    btn.classList.remove('used');
+    placed.remove();
+  };
+  zone.appendChild(placed);
+}
+
+function checkSort(btn) {
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  var fb = sort.querySelector('.ipp-fb');
+  var answer = sort.dataset.answer.split('|');
+  var placed = Array.from(zone.querySelectorAll('.ipp-sort__placed')).map(function(p) { return p.dataset.word; });
+  var ok = placed.length === answer.length && placed.every(function(w, i) { return w === answer[i]; });
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfecto!</strong> La frase es correcta.';
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> <strong>No exactamente.</strong> Orden correcto: <em>"' + answer.join(' ') + '"</em>.';
+    fb.className = 'ipp-fb err';
+  }
+  _addRetry(sort, function() {
+    zone.innerHTML = '';
+    sort.querySelectorAll('.ipp-sortbtn').forEach(function(b) { b.classList.remove('used'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+/* Inputs check */
+function checkInputs(rows, getAnswers) {
+  var anyEmpty = false;
+  rows.forEach(function(row, i) {
+    var inp = row.querySelector('input.ipp-fill, select.ipp-fill');
+    if (!inp) return;
+    var val = inp.value;
+    inp.classList.remove('ok','err');
+    if (!val || val.trim() === '') { anyEmpty = true; return; }
+    var answers = getAnswers(i);
+    var found = answers.some(function(a) {
+      return _norm(val) === _norm(a);
+    });
+    inp.classList.add(found ? 'ok' : 'err');
+  });
+}
+
+function checkScrivi() {
+  var rows = document.querySelectorAll('#scriviBody tr');
+  checkInputs(rows, function(i) { return SCRIVI[i][1]; });
+  var inlineEx = document.getElementById('scriviBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkEx1() {
+  var rows = document.querySelectorAll('#ex1Body tr');
+  checkInputs(rows, function(i) { return EX1[i].answers; });
+  var ex = document.getElementById('ex1Body').closest('.ipp-ex');
+  _addRetry(ex, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkDetEx() {
+  var rows = document.querySelectorAll('#detExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === DET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('detExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkIndetEx() {
+  var rows = document.querySelectorAll('#indetExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === INDET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('indetExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+
+/*IPP_MP3_SHIM_v3*/
+(function(){
+  if (window.__ippMp3Init) return; window.__ippMp3Init = true;
+  window.IPP_AUDIO = {"53681472":"https://italianoperpiacere.com/web/content/1614","63630357":"https://italianoperpiacere.com/web/content/1690","75290130":"https://italianoperpiacere.com/web/content/1786","78395944":"https://italianoperpiacere.com/web/content/1772","86591899":"https://italianoperpiacere.com/web/content/1633","89080474":"https://italianoperpiacere.com/web/content/1720","95406883":"https://italianoperpiacere.com/web/content/1617","a86fca61":"https://italianoperpiacere.com/web/content/1567","4348cdd3":"https://italianoperpiacere.com/web/content/1566","09ad1c8b":"https://italianoperpiacere.com/web/content/1568","0fa6409c":"https://italianoperpiacere.com/web/content/1569","6cd1646d":"https://italianoperpiacere.com/web/content/1570","e8576a28":"https://italianoperpiacere.com/web/content/1571","3fdd34b1":"https://italianoperpiacere.com/web/content/1572","51e39f0d":"https://italianoperpiacere.com/web/content/1573","a318859d":"https://italianoperpiacere.com/web/content/1574","24a8ee7f":"https://italianoperpiacere.com/web/content/1575","dccf3877":"https://italianoperpiacere.com/web/content/1576","3158fd81":"https://italianoperpiacere.com/web/content/1577","fed85b3c":"https://italianoperpiacere.com/web/content/1578","4870815e":"https://italianoperpiacere.com/web/content/1579","528d9e8c":"https://italianoperpiacere.com/web/content/1580","fee9bdcb":"https://italianoperpiacere.com/web/content/1581","34ba50d0":"https://italianoperpiacere.com/web/content/1582","3c2846f2":"https://italianoperpiacere.com/web/content/1583","6e229311":"https://italianoperpiacere.com/web/content/1584","489a1b10":"https://italianoperpiacere.com/web/content/1585","58b4f894":"https://italianoperpiacere.com/web/content/1586","c4f8871e":"https://italianoperpiacere.com/web/content/1587","11677de4":"https://italianoperpiacere.com/web/content/1588","5d2c43bb":"https://italianoperpiacere.com/web/content/1589","af20d591":"https://italianoperpiacere.com/web/content/1590","90c7edb2":"https://italianoperpiacere.com/web/content/1591","46ae6b6e":"https://italianoperpiacere.com/web/content/1592","59e384ef":"https://italianoperpiacere.com/web/content/1593","60b06410":"https://italianoperpiacere.com/web/content/1594","99ac3e50":"https://italianoperpiacere.com/web/content/1595","73b014fe":"https://italianoperpiacere.com/web/content/1596","35e6a54b":"https://italianoperpiacere.com/web/content/1597","c1198fab":"https://italianoperpiacere.com/web/content/1600","5972c5ef":"https://italianoperpiacere.com/web/content/1598","d476c527":"https://italianoperpiacere.com/web/content/1599","faf5c8ab":"https://italianoperpiacere.com/web/content/1601","a892ed22":"https://italianoperpiacere.com/web/content/1604","cc1c6462":"https://italianoperpiacere.com/web/content/1603","f4332b56":"https://italianoperpiacere.com/web/content/1602","614d2f8f":"https://italianoperpiacere.com/web/content/1606","4a4f3ef4":"https://italianoperpiacere.com/web/content/1605","e830d761":"https://italianoperpiacere.com/web/content/1607","e2a5c5c8":"https://italianoperpiacere.com/web/content/1608","795180ae":"https://italianoperpiacere.com/web/content/1609","2b06b03b":"https://italianoperpiacere.com/web/content/1611","56c77741":"https://italianoperpiacere.com/web/content/1612","0977161f":"https://italianoperpiacere.com/web/content/1610","629bff3f":"https://italianoperpiacere.com/web/content/1615","7cffa02f":"https://italianoperpiacere.com/web/content/1613","7c5dc5f2":"https://italianoperpiacere.com/web/content/1616","f821f079":"https://italianoperpiacere.com/web/content/1618","c5e72407":"https://italianoperpiacere.com/web/content/1620","1b642b02":"https://italianoperpiacere.com/web/content/1619","5ee29bb2":"https://italianoperpiacere.com/web/content/1621","3493c841":"https://italianoperpiacere.com/web/content/1622","97cfff31":"https://italianoperpiacere.com/web/content/1623","bc864dea":"https://italianoperpiacere.com/web/content/1624","568ea28c":"https://italianoperpiacere.com/web/content/1625","1029a385":"https://italianoperpiacere.com/web/content/1626","92f0b447":"https://italianoperpiacere.com/web/content/1628","8d8f4928":"https://italianoperpiacere.com/web/content/1627","eeed7fe5":"https://italianoperpiacere.com/web/content/1629","126065e4":"https://italianoperpiacere.com/web/content/1630","c512a01b":"https://italianoperpiacere.com/web/content/1631","1a7a9ec0":"https://italianoperpiacere.com/web/content/1632","5ab60786":"https://italianoperpiacere.com/web/content/1634","bd12cefe":"https://italianoperpiacere.com/web/content/1635","077e09f1":"https://italianoperpiacere.com/web/content/1636","ae5a7e6e":"https://italianoperpiacere.com/web/content/1637","6e6f2496":"https://italianoperpiacere.com/web/content/1638","fbd3f596":"https://italianoperpiacere.com/web/content/1639","3070e3f2":"https://italianoperpiacere.com/web/content/1640","e4a34598":"https://italianoperpiacere.com/web/content/1641","38ffe613":"https://italianoperpiacere.com/web/content/1642","a7593639":"https://italianoperpiacere.com/web/content/1643","1e3d0c2c":"https://italianoperpiacere.com/web/content/1644","784c7cd9":"https://italianoperpiacere.com/web/content/1645","b2f39625":"https://italianoperpiacere.com/web/content/1647","725a332a":"https://italianoperpiacere.com/web/content/1648","22316e3f":"https://italianoperpiacere.com/web/content/1646","a0a9f745":"https://italianoperpiacere.com/web/content/1650","bd2558c8":"https://italianoperpiacere.com/web/content/1649","aed44cc3":"https://italianoperpiacere.com/web/content/1651","3c36ac3e":"https://italianoperpiacere.com/web/content/1652","ba353236":"https://italianoperpiacere.com/web/content/1653","f3c702ba":"https://italianoperpiacere.com/web/content/1655","5afb877b":"https://italianoperpiacere.com/web/content/1654","0477e27d":"https://italianoperpiacere.com/web/content/1656","fbbacb46":"https://italianoperpiacere.com/web/content/1657","428fa5a2":"https://italianoperpiacere.com/web/content/1658","0bc86086":"https://italianoperpiacere.com/web/content/1659","0e4e36b7":"https://italianoperpiacere.com/web/content/1660","2f9fd2d0":"https://italianoperpiacere.com/web/content/1661","1c488b2c":"https://italianoperpiacere.com/web/content/1662","acd6c47a":"https://italianoperpiacere.com/web/content/1663","9bd6f478":"https://italianoperpiacere.com/web/content/1664","26ae2b10":"https://italianoperpiacere.com/web/content/1665","6d0db316":"https://italianoperpiacere.com/web/content/1666","fa69145c":"https://italianoperpiacere.com/web/content/1667","6b11094a":"https://italianoperpiacere.com/web/content/1668","df283d04":"https://italianoperpiacere.com/web/content/1669","38d0f6c5":"https://italianoperpiacere.com/web/content/1670","ce898da8":"https://italianoperpiacere.com/web/content/1671","5b7c836e":"https://italianoperpiacere.com/web/content/1672","15a028c6":"https://italianoperpiacere.com/web/content/1673","f49e85b0":"https://italianoperpiacere.com/web/content/1674","a8c5543e":"https://italianoperpiacere.com/web/content/1675","91fa62d0":"https://italianoperpiacere.com/web/content/1676","3f1aa1c1":"https://italianoperpiacere.com/web/content/1677","53196dee":"https://italianoperpiacere.com/web/content/1680","f2c464b1":"https://italianoperpiacere.com/web/content/1678","a72e8f2a":"https://italianoperpiacere.com/web/content/1679","b74d5aa6":"https://italianoperpiacere.com/web/content/1681","07f4c121":"https://italianoperpiacere.com/web/content/1683","1177503c":"https://italianoperpiacere.com/web/content/1682","3cd8b1b8":"https://italianoperpiacere.com/web/content/1684","63e60973":"https://italianoperpiacere.com/web/content/1685","18775b41":"https://italianoperpiacere.com/web/content/1687","f6acd6dd":"https://italianoperpiacere.com/web/content/1686","eb064d08":"https://italianoperpiacere.com/web/content/1688","a4c11bb1":"https://italianoperpiacere.com/web/content/1689","3b608498":"https://italianoperpiacere.com/web/content/1691","1307d43b":"https://italianoperpiacere.com/web/content/1692","803a6067":"https://italianoperpiacere.com/web/content/1693","2137090c":"https://italianoperpiacere.com/web/content/1696","44dd6b9c":"https://italianoperpiacere.com/web/content/1698","e6d77c7f":"https://italianoperpiacere.com/web/content/1694","fa8082fb":"https://italianoperpiacere.com/web/content/1699","202f38eb":"https://italianoperpiacere.com/web/content/1695","9b8c0008":"https://italianoperpiacere.com/web/content/1697","266ad017":"https://italianoperpiacere.com/web/content/1700","c1700f93":"https://italianoperpiacere.com/web/content/1701","5c08a584":"https://italianoperpiacere.com/web/content/1702","30a46446":"https://italianoperpiacere.com/web/content/1704","929d2557":"https://italianoperpiacere.com/web/content/1703","ed421789":"https://italianoperpiacere.com/web/content/1705","b8ebc7ab":"https://italianoperpiacere.com/web/content/1706","985791bc":"https://italianoperpiacere.com/web/content/1707","c1cc84f5":"https://italianoperpiacere.com/web/content/1708","87445f96":"https://italianoperpiacere.com/web/content/1709","d7806d1e":"https://italianoperpiacere.com/web/content/1710","25e2f906":"https://italianoperpiacere.com/web/content/1711","32bcccb6":"https://italianoperpiacere.com/web/content/1712","1e28de8d":"https://italianoperpiacere.com/web/content/1713","9b127a4e":"https://italianoperpiacere.com/web/content/1714","abcfdb05":"https://italianoperpiacere.com/web/content/1715","cdcc7b0e":"https://italianoperpiacere.com/web/content/1716","bda7dc11":"https://italianoperpiacere.com/web/content/1717","c6fa6d01":"https://italianoperpiacere.com/web/content/1718","95c694f3":"https://italianoperpiacere.com/web/content/1719","d81af5c0":"https://italianoperpiacere.com/web/content/1721","14e7cc62":"https://italianoperpiacere.com/web/content/1722","becb0391":"https://italianoperpiacere.com/web/content/1723","2737b2a0":"https://italianoperpiacere.com/web/content/1725","1c45f1e1":"https://italianoperpiacere.com/web/content/1724","1866d385":"https://italianoperpiacere.com/web/content/1726","ad8141bb":"https://italianoperpiacere.com/web/content/1727","81db4635":"https://italianoperpiacere.com/web/content/1728","62bd07d2":"https://italianoperpiacere.com/web/content/1729","e444f489":"https://italianoperpiacere.com/web/content/1730","d88917de":"https://italianoperpiacere.com/web/content/1731","84a77709":"https://italianoperpiacere.com/web/content/1732","470cdfb2":"https://italianoperpiacere.com/web/content/1733","3b744d98":"https://italianoperpiacere.com/web/content/1734","5b07b7fa":"https://italianoperpiacere.com/web/content/1735","55dcf781":"https://italianoperpiacere.com/web/content/1736","d82ac51a":"https://italianoperpiacere.com/web/content/1737","92a032bd":"https://italianoperpiacere.com/web/content/1738","1b6a264e":"https://italianoperpiacere.com/web/content/1739","df03d88a":"https://italianoperpiacere.com/web/content/1740","015cc3c6":"https://italianoperpiacere.com/web/content/1741","1208feb1":"https://italianoperpiacere.com/web/content/1742","5af97a54":"https://italianoperpiacere.com/web/content/1743","a57ea68d":"https://italianoperpiacere.com/web/content/1744","936b5c50":"https://italianoperpiacere.com/web/content/1745","77e69b74":"https://italianoperpiacere.com/web/content/1746","3e339851":"https://italianoperpiacere.com/web/content/1747","fc87f496":"https://italianoperpiacere.com/web/content/1748","34bf9775":"https://italianoperpiacere.com/web/content/1749","3cdba654":"https://italianoperpiacere.com/web/content/1751","df657ad0":"https://italianoperpiacere.com/web/content/1750","7df5f047":"https://italianoperpiacere.com/web/content/1752","0476e78a":"https://italianoperpiacere.com/web/content/1753","004136d9":"https://italianoperpiacere.com/web/content/1754","b7f678a0":"https://italianoperpiacere.com/web/content/1755","2659fa52":"https://italianoperpiacere.com/web/content/1756","40c225ea":"https://italianoperpiacere.com/web/content/1757","4999a9eb":"https://italianoperpiacere.com/web/content/1758","3c5eef09":"https://italianoperpiacere.com/web/content/1759","4dcfca31":"https://italianoperpiacere.com/web/content/1760","eabedb56":"https://italianoperpiacere.com/web/content/1761","ed465c2a":"https://italianoperpiacere.com/web/content/1762","a7fdd363":"https://italianoperpiacere.com/web/content/1763","5ab7d1f3":"https://italianoperpiacere.com/web/content/1764","69d7dfd2":"https://italianoperpiacere.com/web/content/1765","1eb9a508":"https://italianoperpiacere.com/web/content/1766","163823ba":"https://italianoperpiacere.com/web/content/1767","c845d0b1":"https://italianoperpiacere.com/web/content/1768","a402df3c":"https://italianoperpiacere.com/web/content/1769","419ffd05":"https://italianoperpiacere.com/web/content/1770","c6055a7f":"https://italianoperpiacere.com/web/content/1771","ee1e5b47":"https://italianoperpiacere.com/web/content/1773","94ca6ea1":"https://italianoperpiacere.com/web/content/1774","fffb2458":"https://italianoperpiacere.com/web/content/1775","72e319f6":"https://italianoperpiacere.com/web/content/1776","49b0f73d":"https://italianoperpiacere.com/web/content/1777","0717becb":"https://italianoperpiacere.com/web/content/1778","2ca003f8":"https://italianoperpiacere.com/web/content/1779","4ccc43a9":"https://italianoperpiacere.com/web/content/1780","dc6134ac":"https://italianoperpiacere.com/web/content/1781","86b299ca":"https://italianoperpiacere.com/web/content/1782","f2968bb2":"https://italianoperpiacere.com/web/content/1783","a90d5ea0":"https://italianoperpiacere.com/web/content/1784","024c6a4c":"https://italianoperpiacere.com/web/content/1785","d28f8b68":"https://italianoperpiacere.com/web/content/1787","aa56941b":"https://italianoperpiacere.com/web/content/1788","9e0c57ca":"https://italianoperpiacere.com/web/content/1789","c4979b85":"https://italianoperpiacere.com/web/content/1790","e98727c0":"https://italianoperpiacere.com/web/content/1791","7544e120":"https://italianoperpiacere.com/web/content/1794","2baebb13":"https://italianoperpiacere.com/web/content/1793","dea9b641":"https://italianoperpiacere.com/web/content/1792","d4dd6a26":"https://italianoperpiacere.com/web/content/1795","2541071d":"https://italianoperpiacere.com/web/content/1796","65ffed0a":"https://italianoperpiacere.com/web/content/1797","5036c560":"https://italianoperpiacere.com/web/content/1798","97af351a":"https://italianoperpiacere.com/web/content/1799","a43e64ee":"https://italianoperpiacere.com/web/content/1800","fbe3524e":"https://italianoperpiacere.com/web/content/1802","6fadb46f":"https://italianoperpiacere.com/web/content/1801","e45fb480":"https://italianoperpiacere.com/web/content/1803","bc236443":"https://italianoperpiacere.com/web/content/1804","78f25908":"https://italianoperpiacere.com/web/content/1805","d6022f65":"https://italianoperpiacere.com/web/content/1806","46cb7b97":"https://italianoperpiacere.com/web/content/1807","218a14e8":"https://italianoperpiacere.com/web/content/1808","5237297e":"https://italianoperpiacere.com/web/content/1809","d7dc5436":"https://italianoperpiacere.com/web/content/1810","fdccfcda":"https://italianoperpiacere.com/web/content/1811","edf9d16f":"https://italianoperpiacere.com/web/content/1812","0c5e3374":"https://italianoperpiacere.com/web/content/1813","3becadf4":"https://italianoperpiacere.com/web/content/1814","2450a252":"https://italianoperpiacere.com/web/content/1815","c1255ec7":"https://italianoperpiacere.com/web/content/1816","2eb904d6":"https://italianoperpiacere.com/web/content/1817","56e2705a":"https://italianoperpiacere.com/web/content/1818","2372ed29":"https://italianoperpiacere.com/web/content/1819","4c2964db":"https://italianoperpiacere.com/web/content/1820","6e285cee":"https://italianoperpiacere.com/web/content/1821","6ef3886f":"https://italianoperpiacere.com/web/content/1822","ac228fb6":"https://italianoperpiacere.com/web/content/1823","427c5b75":"https://italianoperpiacere.com/web/content/1824","f5ad8540":"https://italianoperpiacere.com/web/content/1825","b3f612cb":"https://italianoperpiacere.com/web/content/1826","95d629d4":"https://italianoperpiacere.com/web/content/1827","34ada081":"https://italianoperpiacere.com/web/content/1828","ef64c20e":"https://italianoperpiacere.com/web/content/1829","6c5b93e8":"https://italianoperpiacere.com/web/content/1830","132bbb31":"https://italianoperpiacere.com/web/content/1831","0bc7d589":"https://italianoperpiacere.com/web/content/1834","1a68cb5f":"https://italianoperpiacere.com/web/content/1832","481b3add":"https://italianoperpiacere.com/web/content/1833","9e22e919":"https://italianoperpiacere.com/web/content/1835","722b6efc":"https://italianoperpiacere.com/web/content/1836","4a958b81":"https://italianoperpiacere.com/web/content/1837","0d389b12":"https://italianoperpiacere.com/web/content/1838","7620c2cb":"https://italianoperpiacere.com/web/content/1839","b1d04a64":"https://italianoperpiacere.com/web/content/1840","a66b9d0f":"https://italianoperpiacere.com/web/content/1841","73a479ea":"https://italianoperpiacere.com/web/content/1842","9c877ce4":"https://italianoperpiacere.com/web/content/1843","09c1c224":"https://italianoperpiacere.com/web/content/1844","a52b5c47":"https://italianoperpiacere.com/web/content/1845","dd2d77b5":"https://italianoperpiacere.com/web/content/1846","c4b29ee3":"https://italianoperpiacere.com/web/content/1847","789b9fbd":"https://italianoperpiacere.com/web/content/1848","e11668a1":"https://italianoperpiacere.com/web/content/1849","5fe8174d":"https://italianoperpiacere.com/web/content/1850","3dc99283":"https://italianoperpiacere.com/web/content/1851","eb273dbc":"https://italianoperpiacere.com/web/content/1852","4b962946":"https://italianoperpiacere.com/web/content/1853","e2b91004":"https://italianoperpiacere.com/web/content/1855","ab79f9a7":"https://italianoperpiacere.com/web/content/1854","d120411a":"https://italianoperpiacere.com/web/content/1856","6b3864ed":"https://italianoperpiacere.com/web/content/1858","f732e09c":"https://italianoperpiacere.com/web/content/1857","ceb37fb2":"https://italianoperpiacere.com/web/content/1859","4cf52061":"https://italianoperpiacere.com/web/content/1860","bf715484":"https://italianoperpiacere.com/web/content/1861","822997ff":"https://italianoperpiacere.com/web/content/1863","d793291c":"https://italianoperpiacere.com/web/content/1862","e888126b":"https://italianoperpiacere.com/web/content/1864","bb67026c":"https://italianoperpiacere.com/web/content/1865","625c4543":"https://italianoperpiacere.com/web/content/1866","4399143e":"https://italianoperpiacere.com/web/content/1867","064adddd":"https://italianoperpiacere.com/web/content/1868","6f399b0a":"https://italianoperpiacere.com/web/content/1869","3b103f50":"https://italianoperpiacere.com/web/content/1870","dcf90237":"https://italianoperpiacere.com/web/content/1872","624fc175":"https://italianoperpiacere.com/web/content/1871","c5772bb1":"https://italianoperpiacere.com/web/content/1873","8b016034":"https://italianoperpiacere.com/web/content/1874","a5cd91d3":"https://italianoperpiacere.com/web/content/1875","642733c8":"https://italianoperpiacere.com/web/content/1876","d6c171c4":"https://italianoperpiacere.com/web/content/1878","18f64889":"https://italianoperpiacere.com/web/content/1877","75f04bcf":"https://italianoperpiacere.com/web/content/1879","e479c3ff":"https://italianoperpiacere.com/web/content/1880","8a55ad83":"https://italianoperpiacere.com/web/content/1881","b60f665d":"https://italianoperpiacere.com/web/content/1882","797671d6":"https://italianoperpiacere.com/web/content/1883","18b82bcd":"https://italianoperpiacere.com/web/content/1884","c2955888":"https://italianoperpiacere.com/web/content/1885","fbf68dee":"https://italianoperpiacere.com/web/content/1886","b32520e6":"https://italianoperpiacere.com/web/content/1887","087d35c3":"https://italianoperpiacere.com/web/content/1888","7bf17097":"https://italianoperpiacere.com/web/content/1889","b213d47c":"https://italianoperpiacere.com/web/content/1890","e8dd5d37":"https://italianoperpiacere.com/web/content/1891","a72bc901":"https://italianoperpiacere.com/web/content/1892","d2b93022":"https://italianoperpiacere.com/web/content/1894","ede3f7b5":"https://italianoperpiacere.com/web/content/1893","2a2a23a8":"https://italianoperpiacere.com/web/content/1896","6c29e3c0":"https://italianoperpiacere.com/web/content/1895","d2b36e18":"https://italianoperpiacere.com/web/content/1897","15bae672":"https://italianoperpiacere.com/web/content/1898","6bb7d64d":"https://italianoperpiacere.com/web/content/1899","a56d39a3":"https://italianoperpiacere.com/web/content/1901","2c7a4533":"https://italianoperpiacere.com/web/content/1900","e6ffc982":"https://italianoperpiacere.com/web/content/1902","f272f922":"https://italianoperpiacere.com/web/content/1903","548f2d53":"https://italianoperpiacere.com/web/content/1904","c8ebaab4":"https://italianoperpiacere.com/web/content/1905","12d9d065":"https://italianoperpiacere.com/web/content/1906","cf4eaf13":"https://italianoperpiacere.com/web/content/1907","ea56d27f":"https://italianoperpiacere.com/web/content/1908","4e1f2e02":"https://italianoperpiacere.com/web/content/1909","65787fec":"https://italianoperpiacere.com/web/content/1910","bc91f3c4":"https://italianoperpiacere.com/web/content/1911","dee3ba92":"https://italianoperpiacere.com/web/content/1912","92d91b1a":"https://italianoperpiacere.com/web/content/1913","60f182fd":"https://italianoperpiacere.com/web/content/1914","a41ac701":"https://italianoperpiacere.com/web/content/1916","182c6593":"https://italianoperpiacere.com/web/content/1915","f7e956ba":"https://italianoperpiacere.com/web/content/1917","754a1b74":"https://italianoperpiacere.com/web/content/1918","be7fec9d":"https://italianoperpiacere.com/web/content/1919","73bb6d18":"https://italianoperpiacere.com/web/content/1920","ae66619b":"https://italianoperpiacere.com/web/content/1921","9c69d2d0":"https://italianoperpiacere.com/web/content/1922","638357ea":"https://italianoperpiacere.com/web/content/1923","5eeb0276":"https://italianoperpiacere.com/web/content/1924","8cc95370":"https://italianoperpiacere.com/web/content/1925","45e1515f":"https://italianoperpiacere.com/web/content/1926","b01877a6":"https://italianoperpiacere.com/web/content/1930","59f23b8b":"https://italianoperpiacere.com/web/content/1931","7364a2e2":"https://italianoperpiacere.com/web/content/1932","5f17fa53":"https://italianoperpiacere.com/web/content/1933","695619c0":"https://italianoperpiacere.com/web/content/1934","83abce7e":"https://italianoperpiacere.com/web/content/1935","dcf3b41e":"https://italianoperpiacere.com/web/content/1936","8fc0d7c7":"https://italianoperpiacere.com/web/content/1937","46341c52":"https://italianoperpiacere.com/web/content/1938","68df9af4":"https://italianoperpiacere.com/web/content/1939","1964e450":"https://italianoperpiacere.com/web/content/1940","59ce30b8":"https://italianoperpiacere.com/web/content/1941","c1135499":"https://italianoperpiacere.com/web/content/1942","66fb5bda":"https://italianoperpiacere.com/web/content/1943","ae9b8b1e":"https://italianoperpiacere.com/web/content/1944","33e003f0":"https://italianoperpiacere.com/web/content/1945","ed3f913e":"https://italianoperpiacere.com/web/content/1946","fd99b59f":"https://italianoperpiacere.com/web/content/1947","b6f6f8cd":"https://italianoperpiacere.com/web/content/1948","639dca80":"https://italianoperpiacere.com/web/content/1949","08fea238":"https://italianoperpiacere.com/web/content/1950"};
+  function _norm(s){ return String(s).replace(/\s+/g,' ').trim(); }
+  function _hash(s){ var h=0x811c9dc5; for(var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=(h+((h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24)))>>>0; } return ('0000000'+h.toString(16)).slice(-8); }
+  window.__ippKey = function(t,g){ return _hash((g==='m'?'m':'f')+'|'+_norm(t)); };
+  // ── Reproductor único + desbloqueo en el primer gesto (clave para móvil/iOS) ──
+  var SILENT = 'data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
+  var player = new Audio(); player.preload = 'auto';
+  var unlocked = false, playing = false, curEnd = null, curFail = null;
+  function unlock(){
+    if (unlocked) return; unlocked = true;
+    try { player.src = SILENT; var pp = player.play();
+      if (pp && pp.then) pp.then(function(){ try{ player.pause(); player.currentTime=0; }catch(e){} }).catch(function(){ unlocked = false; });
+    } catch(e){ unlocked = false; }
+  }
+  ['pointerdown','touchstart','mousedown','keydown','click'].forEach(function(ev){
+    document.addEventListener(ev, unlock, { capture:true, passive:true });
+  });
+  player.addEventListener('ended', function(){ playing=false; var f=curEnd; curEnd=null; curFail=null; if(f) f(); });
+  player.addEventListener('error', function(){ if(!playing) return; playing=false; var f=curFail||curEnd; curEnd=null; curFail=null; if(f) f(); });
+  window.__ippStopUrl = function(){ try{ player.pause(); }catch(e){} playing=false; curEnd=null; curFail=null; };
+  window.__ippPlayUrl = function(url, onstart, onend, onfail){
+    try{ player.pause(); }catch(e){}
+    curEnd = onend || null; curFail = onfail || null; playing = true;
+    try{ player.src = url; player.currentTime = 0; }catch(e){}
+    if (onstart) { try{ onstart(); }catch(e){} }
+    var pp = player.play();
+    if (pp && pp.catch) pp.catch(function(){ playing=false; var f=curFail; curEnd=null; curFail=null; if(f) f(); });
+  };
+
+  var ss = window.speechSynthesis; if(!ss) return;
+  var _speak = ss.speak.bind(ss), _cancel = ss.cancel.bind(ss);
+  try{ Object.defineProperty(ss,'speaking',{configurable:true,get:function(){ return playing; }}); }catch(e){}
+  ss.cancel = function(){ window.__ippStopUrl(); try{ _cancel(); }catch(e){} };
+  ss.speak = function(u){
+    try{
+      var text = (u && u.text!=null) ? String(u.text) : '';
+      var g = (window.__ippG==='m') ? 'm' : 'f';
+      // busca con el género actual; si no hay (p.ej. "reproducir todo" que no setea género), prueba el otro
+      var url = window.IPP_AUDIO[window.__ippKey(text,g)] || window.IPP_AUDIO[window.__ippKey(text, g==='m'?'f':'m')];
+      if(url){
+        window.__ippPlayUrl(url,
+          function(){ if(u&&typeof u.onstart==='function'){ try{u.onstart();}catch(e){} } },
+          function(){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(e){} } },
+          function(){ try{ _speak(u); }catch(e){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(_){} } } });
+        return;
+      }
+    }catch(e){}
+    try{ _speak(u); }catch(e){}
+  };
+})();
+
+
+window.ippStop = ippStop;
+window.pickMC = pickMC;
+window.pickVF = pickVF;
+window.pickSort = pickSort;
+window.checkSort = checkSort;
+window.checkScrivi = checkScrivi;
+window.checkEx1 = checkEx1;
+window.checkDetEx = checkDetEx;
+window.checkIndetEx = checkIndetEx;
+
+buildOra();
+buildConfr();
+buildScrivi();
+buildSaluti();
+buildPrep();
+buildDet();
+buildDetEx();
+buildIndet();
+buildIndetEx();
+buildConj();
+buildEx1();
+buildMC(EX2, 'ex2');
+buildMC(EX3, 'ex3');
+buildMC(EX4, 'ex4');
+buildMC(EX5, 'ex5');
+buildSort(EX6, 'ex6');
+buildMC(EX7, 'ex7');
+buildVF(EX8, 'ex8');
+buildMC(EX9, 'ex9');
+buildMC(EX10, 'ex10');
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 4 — Gramática ===== -->
+
+<script>
+/* IPP_WATCHDOG_CONTENIDO */
+(function(){
+  if (window.__ippVigilante) return; window.__ippVigilante = true;
+  /* ids que se vacían a propósito (feedback, resultados, contadores): no se vigilan */
+  var IGNORAR = /fb$|feedback|^res$|result|score|msg|stop|fab|output/i;
+  var copia = {}, restauradas = 0, TOPE = 60;
+
+  function raiz(){ return document.querySelector('.s_embed_code_embedded') || document.body; }
+
+  function guardar(){
+    var els = raiz().querySelectorAll('[id]');
+    for (var i = 0; i < els.length; i++){
+      var el = els[i];
+      if (!el.id || IGNORAR.test(el.id)) continue;
+      if (el.children.length && !copia[el.id]) copia[el.id] = el.innerHTML;
+    }
+  }
+
+  function vacios(){
+    var out = [];
+    for (var id in copia){
+      var el = document.getElementById(id);
+      if (el && el.children.length === 0) out.push(id);
+    }
+    return out;
+  }
+
+  function restaurar(){
+    if (restauradas >= TOPE) return;
+    var v = vacios();
+    /* uno solo vacío = acción del alumno (Reintentar). Dos o más = Odoo borró el bloque. */
+    if (v.length < 2) return;
+    for (var i = 0; i < v.length; i++){
+      var el = document.getElementById(v[i]);
+      if (el){ el.innerHTML = copia[v[i]]; restauradas++; }
+    }
+  }
+
+  function ciclo(){ guardar(); restaurar(); }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ciclo);
+  else ciclo();
+  window.addEventListener('load', ciclo);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) ciclo(); });
+  if (window.MutationObserver){
+    try { new MutationObserver(ciclo).observe(raiz(), {childList:true, subtree:true}); } catch(e){}
+  }
+  var n = 0, reloj = setInterval(function(){ ciclo(); if (++n > 30) clearInterval(reloj); }, 400);
+})();
+</script>
+</template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><!-- ===== BLOQUE: Unità 4 — Gramática · Che ore sono? ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --mc:       #e5ab07;
+    --mc-dk:    #c8940a;
+    --mc-text:  #7a5500;
+    --mc-bg:    #fdf5e0;
+    --amber-light: #fffae6;
+    --green:    #528e74;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --warn-bg:  #fff3cd;
+    --warn-tx:  #856404;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center; color: var(--white);
+    position: relative; overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.08;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none; line-height: 1; color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative; z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic; font-weight: 700;
+    margin: 0 0 0.5rem; color: var(--white);
+    line-height: 1.15; position: relative; z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.92; font-weight: 300; margin: 0;
+    position: relative; z-index: 1; padding: 0 0.5rem;
+  }
+  .ipp-hero__subtitle em { font-style: italic; }
+
+  /* ===== BODY ===== */
+  .ipp-body { padding: clamp(1.5rem, 4vw, 2.25rem) clamp(0.25rem, 2vw, 1rem) 1rem; }
+
+  /* ===== Sección ===== */
+  .ipp-section {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .ipp-section__head {
+    display: flex; align-items: center; gap: 0.85rem;
+    margin-bottom: 1rem; padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--mc-bg);
+    flex-wrap: wrap;
+  }
+  .ipp-section__label {
+    width: 38px; height: 38px;
+    background: var(--mc); color: var(--white);
+    border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    line-height: 1.2; margin: 0;
+    font-weight: 700;
+  }
+  .ipp-section__title em { color: var(--red); font-style: italic; }
+  .ipp-section__sub {
+    font-size: 0.8rem; color: #777;
+    margin: 0.15rem 0 0; line-height: 1.5;
+  }
+
+  /* ===== Tablas ===== */
+  .ipp-tbl {
+    width: 100%; border-collapse: collapse;
+    margin: 0.5rem 0;
+    font-size: clamp(0.84rem, 2.1vw, 0.92rem);
+  }
+  .ipp-tbl th {
+    background: var(--mc); color: var(--white);
+    padding: 0.6rem 0.85rem;
+    text-align: left;
+    font-weight: 700; font-size: 0.76rem;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ipp-tbl td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--cream-dk);
+    vertical-align: middle;
+  }
+  .ipp-tbl tr:last-child td { border-bottom: none; }
+  .ipp-tbl tr:nth-child(even) td { background: var(--cream); }
+  .ipp-tbl tr.highlight td { background: var(--amber-light) !important; }
+  .ipp-tbl tr.highlight .it { color: var(--mc-dk); }
+  .ipp-tbl .it {
+    font-style: italic; font-weight: 700;
+    color: var(--mc-text);
+  }
+  .ipp-tbl .time {
+    font-weight: 700; color: var(--mc-text);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .ipp-tbl .star::before { content: '⭐ '; }
+  .ipp-tbl .play-btn {
+    background: var(--mc-bg);
+    border: 1.5px solid var(--mc);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--mc-dk);
+    cursor: pointer; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .ipp-tbl .play-btn:hover { background: var(--mc); color: var(--white); }
+  .ipp-tbl em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-tbl strong { color: var(--mc-dk); }
+
+  /* ===== Callout ===== */
+  .ipp-callout {
+    background: var(--mc-bg);
+    border-left: 4px solid var(--mc);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 0.85rem 1.15rem;
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    color: var(--mc-text); line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-callout em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-callout strong { color: var(--mc-dk); }
+
+  /* ===== Sub-header (dentro de secciones) ===== */
+  .ipp-subhead {
+    font-size: 0.82rem; font-weight: 700;
+    color: var(--mc-text);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 1.25rem 0 0.55rem;
+  }
+
+  /* ===== Ejercicios card ===== */
+  .ipp-ex {
+    background: var(--white);
+    border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--mc);
+  }
+  .ipp-ex--inline {
+    border-top: none; box-shadow: none;
+    background: var(--cream);
+    margin-top: 1rem; margin-bottom: 0;
+    padding: 1rem 1.15rem;
+  }
+  .ipp-ex__head {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .ipp-ex__num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    font-weight: 700; font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ipp-ex__title {
+    font-weight: 700;
+    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+    color: var(--mc-text);
+  }
+  .ipp-ex__title em { font-style: italic; color: var(--red); }
+  .ipp-ex__sub {
+    font-size: 0.82rem; color: #777;
+    margin-top: 0.2rem;
+  }
+
+  /* Fill inputs */
+  .ipp-fill {
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    width: 100%; max-width: 280px;
+    transition: all 0.2s;
+    background: var(--white);
+    color: var(--mc-text);
+    font-style: italic; font-weight: 600;
+    outline: none;
+  }
+  .ipp-fill:focus { border-color: var(--mc); background: var(--mc-bg); }
+  .ipp-fill.ok { border-color: var(--ok-bd); background: var(--ok-bg); color: var(--ok-tx); }
+  .ipp-fill.err { border-color: var(--red); background: var(--err-bg); color: var(--err-tx); }
+
+  /* MC item */
+  .ipp-mc {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-mc:first-child { padding-top: 0; }
+  .ipp-mc:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-mc__q {
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.2vw, 0.95rem);
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
+    color: var(--mc-text);
+  }
+  .ipp-mc__q em { color: var(--red); font-style: italic; }
+  .ipp-mc__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-mc__opts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .ipp-mcbtn {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px;
+    background: var(--cream);
+    font-family: inherit;
+    font-size: 0.83rem; font-weight: 500;
+    cursor: pointer; transition: all 0.18s;
+    color: var(--black);
+  }
+  .ipp-mcbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-mcbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-mcbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); font-weight: 700; }
+  .ipp-mcbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* V/F */
+  .ipp-vf {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-dk);
+  }
+  .ipp-vf:first-child { padding-top: 0; }
+  .ipp-vf:last-of-type { border-bottom: none; padding-bottom: 0; }
+  .ipp-vf__stmt {
+    font-size: 0.94rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .ipp-vf__stmt em { color: var(--mc-text); font-style: italic; font-weight: 600; }
+  .ipp-vf__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mc-bg); color: var(--mc-text);
+    font-size: 0.74rem; font-weight: 700;
+    margin-right: 0.45rem; vertical-align: -2px;
+  }
+  .ipp-vf__btns { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .ipp-vfbtn {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    padding: 0.35rem 0.95rem;
+    border: 2px solid var(--cream-dk);
+    border-radius: 6px; background: var(--cream);
+    font-family: inherit;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .ipp-vfbtn:hover:not(:disabled) { border-color: var(--mc); }
+  .ipp-vfbtn:disabled { cursor: default; opacity: 0.7; }
+  .ipp-vfbtn.correct { background: var(--ok-bg); border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-vfbtn.wrong { background: var(--err-bg); border-color: var(--red); color: var(--err-tx); }
+
+  /* Feedback */
+  .ipp-fb {
+    margin-top: 0.6rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.83rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .ipp-fb.ok { display: block; background: var(--ok-bg); color: var(--ok-tx); border-left: 3px solid var(--ok-bd); }
+  .ipp-fb.err { display: block; background: var(--err-bg); color: var(--err-tx); border-left: 3px solid var(--red); }
+  .ipp-fb .ph { vertical-align: -2px; margin-right: 3px; }
+  .ipp-fb em { font-style: italic; }
+  .ipp-fb strong { font-weight: 700; }
+
+  /* Action buttons */
+  .ipp-btn {
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: var(--r);
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.85rem;
+    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-btn:hover { background: var(--mc-dk); }
+
+  /* === Reintentar (botón pequeño que aparece tras responder) === */
+  .ipp-retry-mini {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: none;
+    border: 1.5px solid var(--mc);
+    color: var(--mc-dk);
+    border-radius: 16px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.74rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.6rem; margin-left: 0.55rem;
+    transition: all 0.18s;
+  }
+  .ipp-retry-mini:hover { background: var(--mc-bg); }
+  .ipp-retry-mini .ph { font-size: 0.85rem; }
+
+  /* Sort exercise */
+  .ipp-sort {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed var(--cream-dk);
+  }
+  .ipp-sort:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .ipp-sort__label {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--mc-text); margin-bottom: 0.55rem;
+  }
+  .ipp-sort__pool {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sortbtn {
+    padding: 0.35rem 0.85rem;
+    background: var(--mc-bg);
+    border: 2px solid var(--mc);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--mc-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ipp-sortbtn:hover:not(.used) { background: var(--mc); color: var(--white); }
+  .ipp-sortbtn.used { opacity: 0.3; pointer-events: none; }
+  .ipp-sort__zone {
+    min-height: 44px;
+    background: var(--cream);
+    border: 2px dashed var(--cream-dk);
+    border-radius: 8px;
+    padding: 0.5rem 0.7rem;
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .ipp-sort__placed {
+    padding: 0.3rem 0.75rem;
+    background: var(--mc);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 0.82rem; font-weight: 600;
+    cursor: pointer;
+  }
+  .ipp-sort__placed:hover { background: var(--mc-dk); }
+  .ipp-sort__placed::after { content: ' ×'; opacity: 0.7; }
+
+  /* Cultura */
+  .ipp-culture {
+    background: linear-gradient(135deg, var(--mc-bg) 0%, var(--cream) 100%);
+    border-top: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+    margin-top: 1rem;
+  }
+  .ipp-culture__head {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic; color: var(--mc-text);
+    font-size: 1.15rem; font-weight: 700;
+    margin: 0 0 0.85rem;
+    display: flex; align-items: center; gap: 0.55rem;
+  }
+  .ipp-culture__head .ph { color: var(--mc); }
+  .ipp-culture p {
+    font-size: 0.9rem; color: #444;
+    line-height: 1.75; margin: 0 0 0.65rem;
+  }
+  .ipp-culture p:last-child { margin-bottom: 0; }
+  .ipp-culture em { color: var(--mc-dk); font-style: italic; font-weight: 600; }
+  .ipp-culture strong { color: var(--mc-text); }
+
+  /* Stop fab */
+  .ipp-stop-fab {
+    display: none; position: fixed;
+    bottom: 22px; right: 22px; z-index: 9999;
+    background: var(--mc); color: var(--white);
+    border: none; border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    align-items: center; gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .ipp-tbl { font-size: 0.78rem; }
+    .ipp-tbl th, .ipp-tbl td { padding: 0.45rem 0.55rem; }
+  }
+  @media (max-width: 540px) {
+    .ipp-mc__opts { flex-direction: column; align-items: stretch; }
+    .ipp-mcbtn { text-align: left; }
+  }
+</style>
+
+<button class="ipp-stop-fab" id="ippStopFab" onclick="ippStop()">
+  <i class="ph ph-stop-circle"></i> Detener audio
+</button>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-clock-countdown ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 4 · A1 · Gramática</div>
+    <h1 class="ipp-hero__title">Che ore sono?</h1>
+    <p class="ipp-hero__subtitle">Gramática completa — <em>la hora, los saludos, las preposiciones, los artículos y las conjunciones</em></p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- ════ A — COME SI DICE L'ORA ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">A</div>
+        <div>
+          <h2 class="ipp-section__title">Come si dice <em>l'ora</em> — regla fundamental</h2>
+          <p class="ipp-section__sub">Cómo se dice la hora en italiano</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Italiano</th><th>Español</th><th>Clave</th><th>▶</th></tr>
+        </thead>
+        <tbody id="oraBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Expresiones clave:</strong> <em>in punto / spaccate</em> = en punto exacto · <em>e mezza</em> = y media · <em>e un quarto</em> = y cuarto · <em>meno un quarto</em> = menos cuarto · <em>circa / verso</em> = aproximadamente
+      </div>
+    </section>
+
+    <!-- ════ B — ORARIO 24h vs 12h ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">B</div>
+        <div>
+          <h2 class="ipp-section__title">Orario 24h vs 12h</h2>
+          <p class="ipp-section__sub">Formal (24h) en transporte y oficinas · informal (12h) en la calle</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Hora</th><th>Formal (24h)</th><th>▶</th><th>Informal (12h)</th><th>▶</th></tr>
+        </thead>
+        <tbody id="confrBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Escribí la hora en italiano</div>
+            <div class="ipp-ex__sub">Hay varias formas válidas para algunas — escribí una</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>Hora</th><th>Tu respuesta</th></tr></thead>
+          <tbody id="scriviBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkScrivi()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+    </section>
+
+    <!-- ════ C — SALUTI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">C</div>
+        <div>
+          <h2 class="ipp-section__title">I saluti della giornata</h2>
+          <p class="ipp-section__sub">Saludos del día — cuándo usar cada uno</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Saludo</th><th>Horario</th><th>Español</th><th>Regla / Atención</th><th>▶</th></tr>
+        </thead>
+        <tbody id="salutiBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ D — PREPOSIZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">D</div>
+        <div>
+          <h2 class="ipp-section__title">Le preposizioni di tempo</h2>
+          <p class="ipp-section__sub">Para situar eventos en el tiempo</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Preposición</th><th>Uso</th><th>Ejemplo italiano</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="prepBody"></tbody>
+      </table>
+    </section>
+
+    <!-- ════ E — ARTICOLI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">E</div>
+        <div>
+          <h2 class="ipp-section__title">Articoli determinativi e indeterminativi</h2>
+          <p class="ipp-section__sub">Los artículos del italiano en singular</p>
+        </div>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos determinativos — "el / la" (cosa conocida o específica)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos del módulo</th></tr>
+        </thead>
+        <tbody id="detBody"></tbody>
+      </table>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo determinativo</div>
+            <div class="ipp-ex__sub">il / lo / l' / la — 12 ítems</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="detExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkDetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+      </div>
+
+      <h4 class="ipp-subhead">Artículos indeterminativos — "un / una" (cosa nueva, no conocida)</h4>
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Artículo</th><th>Cuándo usarlo</th><th>Ejemplos</th></tr>
+        </thead>
+        <tbody id="indetBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Determinativo vs Indeterminativo:</strong><br>
+        <em>Ho una riunione</em> (cualquiera, nueva info) → <strong>indeterminativo</strong> · <em>La riunione è alle tre</em> (esa específica) → <strong>determinativo</strong>
+      </div>
+
+      <div class="ipp-ex ipp-ex--inline">
+        <div class="ipp-ex__head">
+          <div class="ipp-ex__num"><i class="ph ph-pencil-line"></i></div>
+          <div>
+            <div class="ipp-ex__title">Colocá el artículo indeterminativo</div>
+            <div class="ipp-ex__sub">un / uno / una / un' — 12 ítems · ojo con el apóstrofo</div>
+          </div>
+        </div>
+        <table class="ipp-tbl">
+          <thead><tr><th>#</th><th>Sustantivo</th><th>Artículo</th></tr></thead>
+          <tbody id="indetExBody"></tbody>
+        </table>
+        <button class="ipp-btn" onclick="checkIndetEx()"><i class="ph ph-check-circle"></i> Verificar</button>
+        <div class="ipp-callout" style="margin-top: 1rem;">
+          <strong>Regla de oro:</strong> el apóstrofo (<em>un'</em>) <strong>SOLO</strong> se usa con palabras <strong>femeninas</strong> que empiezan con vocal (<em>un'amica</em>). Si es masculino, siempre queda como <em>un</em> (<em>un aeroporto</em>).
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ F — CONGIUNZIONI ════ -->
+    <section class="ipp-section">
+      <div class="ipp-section__head">
+        <div class="ipp-section__label">F</div>
+        <div>
+          <h2 class="ipp-section__title">Congiunzioni coordinate</h2>
+          <p class="ipp-section__sub">Las conjunciones que conectan palabras y oraciones</p>
+        </div>
+      </div>
+
+      <table class="ipp-tbl">
+        <thead>
+          <tr><th>Conjunción</th><th>Significado</th><th>Ejemplo</th><th>Español</th><th>▶</th></tr>
+        </thead>
+        <tbody id="conjBody"></tbody>
+      </table>
+
+      <div class="ipp-callout">
+        <strong>Nota: <em>e → ed</em> antes de vocal.</strong> Cuando la palabra siguiente empieza con <em>e</em>, se puede escribir <em>ed</em> para sonar más fluido: <em>«Sono le due ed è tardi»</em>. No es obligatorio pero es frecuente.
+      </div>
+    </section>
+
+    <!-- ════ G — EJERCICIOS ════ -->
+    <section class="ipp-section" style="padding:1rem; background:transparent; box-shadow:none;">
+      <h2 style="font-family:'Playfair Display',Georgia,serif; font-style:italic; font-size:clamp(1.5rem,4vw,1.85rem); color:var(--mc-text); margin:0 0 0.85rem; padding-bottom:0.5rem; border-bottom:3px solid var(--mc-bg);">G — Esercizi</h2>
+    </section>
+
+    <!-- Ej 1: Escribe la hora en palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">1</div>
+        <div>
+          <div class="ipp-ex__title">Escribí la hora en palabras</div>
+          <div class="ipp-ex__sub">Completá cómo se dice cada hora en italiano</div>
+        </div>
+      </div>
+      <table class="ipp-tbl">
+        <thead><tr><th>Hora</th><th>Completá</th></tr></thead>
+        <tbody id="ex1Body"></tbody>
+      </table>
+      <button class="ipp-btn" onclick="checkEx1()"><i class="ph ph-check-circle"></i> Verificar</button>
+    </div>
+
+    <!-- Ej 2: ¿Cómo se dice? MC -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">2</div>
+        <div>
+          <div class="ipp-ex__title">¿Cómo se dice?</div>
+          <div class="ipp-ex__sub">Elegí la opción correcta · selección múltiple</div>
+        </div>
+      </div>
+      <div id="ex2"></div>
+    </div>
+
+    <!-- Ej 3: Preposiciones fill -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">3</div>
+        <div>
+          <div class="ipp-ex__title">Completá con la preposición correcta</div>
+          <div class="ipp-ex__sub">Usá: <em>alle · dalle…alle · verso · fino alle · tra</em></div>
+        </div>
+      </div>
+      <div id="ex3"></div>
+    </div>
+
+    <!-- Ej 4: Completa diálogo barzelletta -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">4</div>
+        <div>
+          <div class="ipp-ex__title">Completá el diálogo de la <em>barzelletta</em></div>
+          <div class="ipp-ex__sub">Elegí la palabra correcta para cada espacio</div>
+        </div>
+      </div>
+      <div class="ipp-callout">
+        <strong>Uomo 1:</strong> Mi (1)___, mi sa (2)___ l'ora per favore?<br>
+        <strong>Uomo 2:</strong> Le (3)___.<br>
+        <strong>Uomo 1:</strong> Ma è (4)___?<br>
+        <strong>Uomo 2:</strong> Sì. Grazie.<br>
+        <strong>Uomo 1:</strong> Sono le 7:15 (5)___! Incredibile!
+      </div>
+      <div id="ex4"></div>
+    </div>
+
+    <!-- Ej 5: Saludos -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">5</div>
+        <div>
+          <div class="ipp-ex__title">¿Qué saludo corresponde?</div>
+          <div class="ipp-ex__sub">Son las… ¿qué decís según la situación?</div>
+        </div>
+      </div>
+      <div id="ex5"></div>
+    </div>
+
+    <!-- Ej 6: Ordena palabras -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">6</div>
+        <div>
+          <div class="ipp-ex__title">Ordená las palabras</div>
+          <div class="ipp-ex__sub">Tocá las palabras en orden. Tocá una colocada para quitarla</div>
+        </div>
+      </div>
+      <div id="ex6"></div>
+    </div>
+
+    <!-- Ej 7: Mini diálogo preposiciones -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">7</div>
+        <div>
+          <div class="ipp-ex__title">Mini diálogo — ¿a qué hora?</div>
+          <div class="ipp-ex__sub">Seleccioná la preposición lógica</div>
+        </div>
+      </div>
+      <div id="ex7"></div>
+    </div>
+
+    <!-- Ej 8: V/F reglas -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">8</div>
+        <div>
+          <div class="ipp-ex__title">Vero o Falso — reglas gramaticales</div>
+          <div class="ipp-ex__sub">Poné a prueba tu comprensión de las reglas</div>
+        </div>
+      </div>
+      <div id="ex8"></div>
+    </div>
+
+    <!-- Ej 9: Artículo determinativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">9</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>determinativo</em></div>
+          <div class="ipp-ex__sub">il / lo / l' / la — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex9"></div>
+    </div>
+
+    <!-- Ej 10: Artículo indeterminativo -->
+    <div class="ipp-ex">
+      <div class="ipp-ex__head">
+        <div class="ipp-ex__num">10</div>
+        <div>
+          <div class="ipp-ex__title">Elegí el artículo <em>indeterminativo</em></div>
+          <div class="ipp-ex__sub">un / uno / una / un' — 6 ítems</div>
+        </div>
+      </div>
+      <div id="ex10"></div>
+    </div>
+
+    <!-- ════ CULTURA ════ -->
+    <div class="ipp-culture">
+      <h3 class="ipp-culture__head"><i class="ph ph-globe-hemisphere-west"></i> Cultura italiana — Il <em>campanile</em>: el reloj de todos</h3>
+      <p>Antes de los relojes de pulsera, los italianos usaban los repiques del campanario (<em>rintocchi del campanile</em>) para saber la hora. Cada pueblo tenía su campanario, y las campanas sonaban para marcar los momentos del día: la <em>sveglia al mattino</em>, il <em>pranzo a mezzogiorno</em>, il <em>vespro la sera</em>.</p>
+      <p>En muchos pueblos italianos esta tradición sigue viva. A veces, caminando por un pueblo toscano o umbro, se escucha el campanario dar las <em>«dodici spaccate»</em> al mediodía. ¡Justo como en la <em>barzelletta</em>!</p>
+      <p><strong>Curiosidad:</strong> La palabra <em>campanile</em> viene de <em>campana</em>. ¡El campanario más famoso del mundo es probablemente el de Pisa — la <strong>Torre pendente</strong> (inclinada)!</p>
+      <p><strong>Dato cultural:</strong> Italia tiene una larga tradición oral de <em>barzellette</em> (chistes). Se cuentan en familia, en el bar, en el trabajo. El humor juega con situaciones cotidianas — como pedir la hora — llevadas al absurdo. <em>È un classico!</em></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── IPP Voice Preloader ──
+if (!window.__ippVC) {
+  window.__ippVC = true;
+  window.__ippV = [];
+  if (window.speechSynthesis) {
+    var _ld = function() { var v = speechSynthesis.getVoices(); if (v && v.length) window.__ippV = v; };
+    speechSynthesis.onvoiceschanged = _ld;
+    _ld(); setTimeout(_ld, 100); setTimeout(_ld, 600); setTimeout(_ld, 1500);
+  }
+}
+
+if (!window.__ipp_m4_g__) {
+window.__ipp_m4_g__ = true;
+
+/* ═══ TTS ═══ */
+function ippVoice(gender) {
+  var voices = (window.__ippV && window.__ippV.length) ? window.__ippV : speechSynthesis.getVoices();
+  var itV = voices.filter(function(v) { return v.lang && v.lang.startsWith('it'); });
+  var voice = null;
+  if (gender === 'm') {
+    voice = itV.find(function(v) { return /cosimo|luca|giorgio|male|masc/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return !/elsa|alice|giulia|female|femm/i.test(v.name); });
+  } else {
+    voice = itV.find(function(v) { return /google/i.test(v.name) && /elsa|alice|giulia|female/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /google/i.test(v.name); });
+    if (!voice) voice = itV.find(function(v) { return /elsa|alice|giulia|female|femm/i.test(v.name); });
+  }
+  return voice || (itV.length ? itV[0] : null);
+}
+function ippAudio(text, rate, gender) { /*IPP_G*/ try{var _g='f';for(var _i=0;_i<arguments.length;_i++){if(arguments[_i]==='m'||arguments[_i]==='f')_g=arguments[_i];}window.__ippG=_g;}catch(_e){}
+  rate = (typeof rate === 'number' && isFinite(rate)) ? rate : 0.82;
+  gender = (gender === 'm' || gender === 'f') ? gender : 'f';
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'inline-flex';
+  var utt = new SpeechSynthesisUtterance(String(text));
+  utt.lang = 'it-IT'; utt.rate = rate; utt.pitch = 1.05;
+  var v = ippVoice(gender);
+  if (v) utt.voice = v;
+  utt.onend = function() { if (fab) fab.style.display = 'none'; };
+  utt.onerror = function() { if (fab) fab.style.display = 'none'; };
+  (function(u) { setTimeout(function() { try { speechSynthesis.speak(u); } catch(e) {} }, 60); })(utt);
+}
+function ippStop() {
+  try { window.speechSynthesis.cancel(); } catch(e) {}
+  var fab = document.getElementById('ippStopFab');
+  if (fab) fab.style.display = 'none';
+}
+
+/* ═══ Normalizar acentos ═══ */
+function _norm(s) {
+  return (s || '').toLowerCase().trim()
+    .replace(/['']/g, "'")
+    .replace(/[àá]/g, 'a').replace(/[éè]/g, 'e')
+    .replace(/[íì]/g, 'i').replace(/[óò]/g, 'o').replace(/[úù]/g, 'u')
+    .replace(/\s+/g, ' ');
+}
+function _esc(s) { return String(s).replace(/'/g, "\\'"); }
+
+/* ═══ DATA ═══ */
+var ORA = [
+  ['1:00',  "È l'una",                       'Es la una',                       '⭐ È (singular) — solo para la 1', false],
+  ['1:15',  "È l'una e un quarto",           'Es la una y cuarto',              '', false],
+  ['1:30',  "È l'una e mezza",               'Es la una y media',               '', false],
+  ['2:00',  'Sono le due',                    'Son las dos',                     'Sono (plural) para el resto', false],
+  ['3:20',  'Sono le tre e venti',            'Son las tres y veinte',           '', false],
+  ['4:45',  'Sono le cinque meno un quarto',  'Son las cinco menos cuarto',      'hora siguiente − <em>meno quarto</em>', false],
+  ['7:15',  'Sono le sette e un quarto',      'Son las siete y cuarto (del video)', '', false],
+  ['10:50', 'Sono le undici meno dieci',      'Son las once menos diez',         '', false],
+  ['12:00', 'È mezzogiorno',                  'Es mediodía / son las doce',      '⭐ Especial — È (singular)', true],
+  ['0:00',  'È mezzanotte',                   'Es medianoche',                   '⭐ Especial — È (singular)', true]
+];
+
+var CONFRONTO = [
+  ['7:15',  'le sette e quindici',         'le sette e un quarto'],
+  ['14:30', 'le quattordici e trenta',     'le due e mezza (del pomeriggio)'],
+  ['16:45', 'le sedici e quarantacinque',  'le cinque meno un quarto'],
+  ['20:45', 'le venti e quarantacinque',   'le nove meno un quarto (di sera)'],
+  ['22:00', 'le ventidue',                 'le dieci di sera']
+];
+
+/* Escribí la hora — multiple answers allowed */
+var SCRIVI = [
+  ['3:40',  ['tre e quaranta', 'le tre e quaranta', 'sono le tre e quaranta', 'quattro meno venti', 'le quattro meno venti']],
+  ['12:00', ['dodici', 'le dodici', 'mezzogiorno', 'è mezzogiorno', 'sono le dodici']],
+  ['8:20',  ['otto e venti', 'le otto e venti', 'sono le otto e venti']],
+  ['7:15',  ['sette e quindici', 'sette e un quarto', 'le sette e un quarto', 'sono le sette e un quarto']],
+  ['2:00',  ['due', 'le due', 'sono le due', 'quattordici', 'le quattordici']],
+  ['9:30',  ['nove e trenta', 'nove e mezza', 'le nove e mezza', 'sono le nove e mezza']]
+];
+
+var SALUTI = [
+  ['Buongiorno!',     '6:00 – 12:00',  'Buenos días',            'Al llegar y al despedirse por la mañana', 'f'],
+  ['Buon pomeriggio!','12:00 – 17:00', 'Buenas tardes',          'Menos común — más formal', 'f'],
+  ['Buonasera!',      '17:00 – 22:00', 'Buenas tardes/noches',   'Al <strong>LLEGAR Y al MARCHARSE</strong> por la tarde. También como despedida al salir de un restaurante de noche.', 'f'],
+  ['Buonanotte!',     '22:00 – 6:00',  'Buenas noches',          '⚠ <strong>EXCLUSIVO</strong> para despedirse antes de dormir. Nunca al llegar.', 'f'],
+  ['Salve!',          'todo el día',   'Hola (formal)',          'Válido a cualquier hora — formal y neutro', 'f']
+];
+
+var PREP = [
+  ['alle',         'a las (hora exacta)',          'Il treno parte alle otto.',                'El tren sale a las ocho.', 'f'],
+  ['verso',        'hacia / alrededor de',         'Arrivo verso le dieci.',                   'Llego hacia las diez.', 'f'],
+  ['fino alle',    'hasta las',                    'Il negozio è aperto fino alle venti.',     'La tienda está abierta hasta las 20:00.', 'f'],
+  ['dalle…alle',   'de… a… (horario)',             'Il museo è aperto dalle nove alle diciotto.', 'El museo está abierto de 9 a 18.', 'f'],
+  ['tra',          'dentro de (futuro)',           "Ci vediamo tra un'ora.",                   'Nos vemos en una hora.', 'f'],
+  ['prima di',     'antes de',                     'Mangio prima delle otto.',                 'Como antes de las ocho.', 'f'],
+  ['dopo',         'después de',                   'Vado al bar dopo il lavoro.',              'Voy al bar después del trabajo.', 'm']
+];
+
+var DET = [
+  ['il', 'Masc. singular — consonante (excepto s+cons., z, gn, ps, x, y)', 'il treno, il bar, il campanile, il caffè'],
+  ['lo', 'Masc. singular — s+cons., z, gn, ps, x, y',                       'lo zaino, lo studente, lo gnocco'],
+  ["l'", 'Masc. o Fem. singular — empieza con vocal (a, e, i, o, u)',       "l'ora, l'amico, l'amica, l'aeroporto"],
+  ['la', 'Fem. singular — consonante',                                       'la piazza, la sera, la metro, la donna']
+];
+
+var DET_EX = [
+  ['sport',     'lo',  's+cons. → lo'],
+  ['foto',      'la',  'fem.'],
+  ['film',      'il',  'masc., consonante'],
+  ['bambino',   'il',  'masc., consonante'],
+  ['amica',     "l'",  'fem. + vocal → elide'],
+  ['soluzione', 'la',  'fem.'],
+  ['casa',      'la',  'fem.'],
+  ['bar',       'il',  'masc., consonante'],
+  ['treno',     'il',  'masc., consonante'],
+  ['aeroporto', "l'",  'masc. + vocal → elide'],
+  ['albergo',   "l'",  'masc. + vocal → elide'],
+  ['colazione', 'la',  'fem.']
+];
+
+var INDET = [
+  ['un',  'Masc. singular — todos excepto s+cons., z, gn',  'un treno, un bar, un caffè, un amico'],
+  ['uno', 'Masc. singular — s+cons., z, gn, ps, x, y',      'uno zaino, uno studente, uno gnocco'],
+  ['una', 'Fem. singular — consonante',                      'una riunione, una sera, una donna, una piazza'],
+  ["un'", 'Fem. singular — empieza con vocal',               "un'ora, un'amica, un'idea, un'estate"]
+];
+
+var INDET_EX = [
+  ['sport',     'uno',  ''],
+  ['foto',      'una',  ''],
+  ['film',      'un',   ''],
+  ['bambino',   'un',   ''],
+  ['amica',     "un'",  "se usa <em>un'</em> con apóstrofo porque es femenino y empieza con vocal"],
+  ['soluzione', 'una',  ''],
+  ['casa',      'una',  ''],
+  ['bar',       'un',   ''],
+  ['treno',     'un',   ''],
+  ['aeroporto', 'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['albergo',   'un',   'masculino que empieza con vocal: va <strong>sin</strong> apóstrofo'],
+  ['colazione', 'una',  '']
+];
+
+var CONJ = [
+  ['e',     'y — une elementos',     'Sono le tre e un quarto.',                     'Son las tres y cuarto.', 'f'],
+  ['o',     'o — alternativas',      'Arrivi alle otto o alle nove?',                '¿Llegás a las ocho o a las nueve?', 'f'],
+  ['ma',    'pero — contraste',      'Voglio uscire, ma è tardi.',                   'Quiero salir, pero es tarde.', 'm'],
+  ['però',  'sin embargo',           'Il bar è aperto, però la cucina è chiusa.',    'El bar está abierto, sin embargo la cocina está cerrada.', 'f'],
+  ['quindi','entonces / así que',    'È tardi, quindi devo sbrigarmi.',              'Es tarde, así que debo apurarme.', 'm'],
+  ['anche', 'también',               'Vengo anche io alle sette.',                   'Yo también voy a las siete.', 'm']
+];
+
+/* === Datos de los 10 ejercicios H === */
+
+var EX1 = [
+  { hora: '3:00',  prefix: 'Sono le ___',         answers: ['tre', 'le tre', 'sono le tre'],                       pista: '<em>Sono le</em> + número' },
+  { hora: '7:15',  prefix: 'Sono le sette e ___', answers: ['un quarto', 'quindici', 'e un quarto', 'e quindici'], pista: '<em>e un quarto</em> = y cuarto' },
+  { hora: '12:00', prefix: 'È ___',                answers: ['mezzogiorno', 'è mezzogiorno'],                       pista: 'Especial — È mezzogiorno' },
+  { hora: '2:30',  prefix: 'Sono le due e ___',   answers: ['mezza', 'e mezza', 'trenta'],                          pista: '<em>e mezza</em> = y media' },
+  { hora: '9:45',  prefix: 'Sono le dieci meno ___', answers: ['un quarto', 'quindici', 'meno un quarto'],          pista: '<em>meno un quarto</em> = menos cuarto' }
+];
+
+var EX2 = [
+  { q: '¿Cómo se dice "son las 2 y media"?',
+    opts: ['sono le due mezza', 'sono le due e mezza', 'è le due e mezza', 'è due e mezza'],
+    ok:  'sono le due e mezza',
+    fb:  'Plural + <em>e</em> + mezza es la fórmula correcta.' },
+  { q: '¿Cómo se dice "es la una"?',
+    opts: ["è l'una", 'sono le una', 'è la una', "sono l'una"],
+    ok:  "è l'una",
+    fb:  'Singular con elisión: <em>È l\'una</em> (la 1 es la única que usa <em>è</em>).' },
+  { q: '¿Cuál expresa "aproximadamente las 3"?',
+    opts: ['alle tre in punto', 'dalle tre', 'verso le tre', 'fino alle tre'],
+    ok:  'verso le tre',
+    fb:  '<em>Verso</em> = hacia, alrededor de.' }
+];
+
+var EX3 = [
+  { q: '1. Il museo è aperto ___ 9 ___ 17.',
+    opts: ['alle 9 alle 17', 'dalle 9 alle 17', 'tra 9 e 17'],
+    ok:  'dalle 9 alle 17',
+    fb:  '<em>dalle…alle</em> = de…a (rango).' },
+  { q: '2. Il treno parte ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'tra'],
+    ok:  'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta).' },
+  { q: "3. Ci vediamo ___ un'ora. <em>(dentro de una hora)</em>",
+    opts: ['alle', 'verso', 'tra'],
+    ok:  'tra',
+    fb:  '<em>Tra</em> = dentro de (tiempo futuro).' },
+  { q: '4. Arrivo ___ le undici. <em>(aproximadamente las 11)</em>',
+    opts: ['alle', 'verso', 'fino alle'],
+    ok:  'verso',
+    fb:  '<em>Verso</em> indica aproximación.' }
+];
+
+var EX4 = [
+  { q: '(1) Mi ___ <em>(disculpe)</em>',
+    opts: ['scusi', 'sento', 'chiamo'], ok: 'scusi',
+    fb:  '<em>Mi scusi</em> = disculpe (formal).' },
+  { q: "(2) mi sa ___ l'ora <em>(decir)</em>",
+    opts: ['fare', 'dire', 'leggere'], ok: 'dire',
+    fb:  '<em>Dire</em> = decir.' },
+  { q: '(3) Le ___ <em>(5:35)</em>',
+    opts: ['tre e trenta', 'sette e quindici', 'cinque e trentacinque'], ok: 'cinque e trentacinque',
+    fb:  '5:35 = <em>cinque e trentacinque</em>.' },
+  { q: '(4) Ma è ___? <em>(¿está seguro?)</em>',
+    opts: ['sicuro', 'pronto', 'certo'], ok: 'sicuro',
+    fb:  '<em>Sicuro</em> = seguro.' },
+  { q: '(5) Sono le 7:15 ___! <em>(en punto exacto)</em>',
+    opts: ['circa', 'quasi', 'spaccate'], ok: 'spaccate',
+    fb:  '<em>Spaccate</em> = exactas, en punto (italiano coloquial).' }
+];
+
+var EX5 = [
+  { q: 'Son las <strong>9:00</strong> de la mañana. Llegás a la oficina. Decís:',
+    opts: ['Buongiorno!', 'Buonanotte!', 'Buonasera!'], ok: 'Buongiorno!',
+    fb:  '<em>Buongiorno</em> = 6:00–12:00, al llegar por la mañana.' },
+  { q: 'Son las <strong>19:30</strong>. Entrás a un restaurante. Decís:',
+    opts: ['Buongiorno!', 'Buon pomeriggio!', 'Buonasera!'], ok: 'Buonasera!',
+    fb:  '<em>Buonasera</em> = 17:00–22:00, al llegar por la tarde/noche.' },
+  { q: 'Son las <strong>23:00</strong>. Te vas a dormir. Le decís a tu compañero:',
+    opts: ['Buonasera!', 'Buonanotte!', 'Buongiorno!'], ok: 'Buonanotte!',
+    fb:  '⚠ <em>Buonanotte</em> = SOLO para despedirse antes de dormir.' }
+];
+
+var EX6 = [
+  { label: '',
+    pool: ['sono', 'che', 'ore', 'dire', 'mi', 'sa', '?'],
+    answer: ['mi', 'sa', 'dire', 'che', 'ore', 'sono', '?'] },
+  { label: '',
+    pool: ['diciotto', 'aperto', 'nove', 'museo', 'dalle', 'Il', 'alle', 'è'],
+    answer: ['Il', 'museo', 'è', 'aperto', 'dalle', 'nove', 'alle', 'diciotto'] },
+  { label: '',
+    pool: ['alle 11', 'colazione', 'dalle 7', 'la', 'serviamo'],
+    answer: ['serviamo', 'la', 'colazione', 'dalle 7', 'alle 11'] },
+  { label: '',
+    pool: ['otto e trenta', 'apre', 'banca', 'alle', 'la'],
+    answer: ['la', 'banca', 'apre', 'alle', 'otto e trenta'] },
+  { label: '',
+    pool: ['il check-out', 'ora', 'è', 'a', 'che', '?'],
+    answer: ['a', 'che', 'ora', 'è', 'il check-out', '?'] }
+];
+
+var EX7 = [
+  { q: '— A che ora apre la farmacia? — Apre ___ le otto e mezza.',
+    opts: ['alle', 'dalle', 'fino alle'], ok: 'alle',
+    fb:  '<em>Alle</em> = a las (hora exacta de apertura).' },
+  { q: '— Fino a che ora servite la colazione? — ___ undici.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'fino alle',
+    fb:  '<em>Fino alle</em> = hasta las.' },
+  { q: '— A che ora arrivi? — Arrivo ___ le tre, non sono sicuro.',
+    opts: ['alle', 'verso', 'fino alle'], ok: 'verso',
+    fb:  '<em>Verso</em> = aproximadamente (cuando no es seguro).' },
+  { q: '— Da che ora è la colazione? — È ___ sette.',
+    opts: ['alle', 'dalle', 'verso'], ok: 'dalle',
+    fb:  '<em>Dalle</em> = desde las (inicio del horario).' }
+];
+
+var EX8 = [
+  { stmt: 'Para la 1:00 se dice <em>"Sono l\'una"</em>.',
+    ans: false,
+    fb:  'La forma correcta es <em>"È l\'una"</em> — la 1 usa <em>essere</em> singular.' },
+  { stmt: '<em>"Verso le cinque"</em> significa "alrededor de las 5".',
+    ans: true,
+    fb:  '<em>Verso</em> = hacia / alrededor de. Se usa para horarios aproximados.' },
+  { stmt: '<em>"Buonanotte"</em> se puede usar al llegar a un lugar por la noche.',
+    ans: false,
+    fb:  '<em>Buonanotte</em> es SOLO para despedirse antes de dormir. Para llegar de noche: <em>Buonasera</em>.' },
+  { stmt: 'El horario de 24h se usa en estaciones y aeropuertos.',
+    ans: true,
+    fb:  'El horario de 24h es estándar en transporte, hospitales y oficinas.' },
+  { stmt: '<em>"Spaccate"</em> y <em>"in punto"</em> significan lo mismo: en punto exacto.',
+    ans: true,
+    fb:  'Son sinónimos — ambos expresan exactitud. <em>Spaccate</em> es más coloquial e italiano típico.' }
+];
+
+var EX9 = [
+  { q: '___ treno <em>(el tren — masc., consonante)</em>',
+    opts: ['il treno', 'lo treno', 'la treno'], ok: 'il treno' },
+  { q: '___ ora <em>(la hora — fem., vocal)</em>',
+    opts: ['la ora', 'il ora', "l'ora"], ok: "l'ora" },
+  { q: '___ studente <em>(el estudiante — masc., empieza con st-)</em>',
+    opts: ['il studente', 'lo studente', "l'studente"], ok: 'lo studente' },
+  { q: '___ piazza <em>(la plaza — fem., consonante)</em>',
+    opts: ['la piazza', 'il piazza', "l'piazza"], ok: 'la piazza' },
+  { q: '___ amico <em>(el amigo — masc., vocal)</em>',
+    opts: ['il amico', 'lo amico', "l'amico"], ok: "l'amico" },
+  { q: '___ sera <em>(la tarde — fem., consonante)</em>',
+    opts: ['la sera', 'il sera', "l'sera"], ok: 'la sera' }
+];
+
+var EX10 = [
+  { q: '___ caffè <em>(un café — masc., consonante)</em>',
+    opts: ['un caffè', 'uno caffè', 'una caffè'], ok: 'un caffè' },
+  { q: '___ riunione <em>(una reunión — fem., consonante)</em>',
+    opts: ['un riunione', 'uno riunione', 'una riunione'], ok: 'una riunione' },
+  { q: '___ zaino <em>(una mochila — masc., empieza con z)</em>',
+    opts: ['un zaino', 'uno zaino', 'una zaino'], ok: 'uno zaino' },
+  { q: '___ ora <em>(una hora — fem., vocal)</em>',
+    opts: ['una ora', 'un ora', "un'ora"], ok: "un'ora" },
+  { q: '___ amica <em>(una amiga — fem., vocal)</em>',
+    opts: ["un'amica", 'una amica', 'un amica'], ok: "un'amica" },
+  { q: '___ bar <em>(un bar — masc., consonante)</em>',
+    opts: ['un bar', 'uno bar', 'una bar'], ok: 'un bar' }
+];
+
+/* ═══ BUILDERS ═══ */
+
+function buildOra() {
+  var html = '';
+  ORA.forEach(function(o) {
+    var cls = o[4] ? 'highlight' : '';
+    var clave = o[3] ? '<span class="star">'+o[3].replace('⭐ ','')+'</span>' : '';
+    html += '<tr class="'+cls+'">'+
+              '<td class="time">'+o[0]+'</td>'+
+              '<td class="it">'+o[1]+'</td>'+
+              '<td>'+o[2]+'</td>'+
+              '<td>'+clave+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(o[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('oraBody').innerHTML = html;
+}
+
+function buildConfr() {
+  var html = '';
+  CONFRONTO.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="time">'+c[0]+'</td>'+
+              '<td class="it">'+c[1]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[1])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\'f\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('confrBody').innerHTML = html;
+}
+
+function buildScrivi() {
+  var html = '';
+  SCRIVI.forEach(function(s, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+s[0]+'</td>'+
+              '<td><input class="ipp-fill" type="text" placeholder="escribí…" data-idx="'+i+'"></td>'+
+            '</tr>';
+  });
+  document.getElementById('scriviBody').innerHTML = html;
+}
+
+function buildSaluti() {
+  var html = '';
+  SALUTI.forEach(function(s) {
+    html += '<tr>'+
+              '<td class="it">'+s[0]+'</td>'+
+              '<td>'+s[1]+'</td>'+
+              '<td>'+s[2]+'</td>'+
+              '<td>'+s[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(s[0])+'\',0.85,\''+s[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('salutiBody').innerHTML = html;
+}
+
+function buildPrep() {
+  var html = '';
+  PREP.forEach(function(p) {
+    html += '<tr>'+
+              '<td class="it" style="font-weight:700;">'+p[0]+'</td>'+
+              '<td>'+p[1]+'</td>'+
+              '<td class="it">'+p[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+p[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(p[2])+'\',0.82,\''+p[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('prepBody').innerHTML = html;
+}
+
+function buildDet() {
+  var html = '';
+  DET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('detBody').innerHTML = html;
+}
+
+function buildIndet() {
+  var html = '';
+  INDET.forEach(function(d) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.15rem;font-weight:700;">'+d[0]+'</td>'+
+              '<td>'+d[1]+'</td>'+
+              '<td class="it">'+d[2]+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetBody').innerHTML = html;
+}
+
+function buildDetEx() {
+  var html = '';
+  DET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="il">il</option>'+
+                  '<option value="lo">lo</option>'+
+                  "<option value=\"l'\">l'</option>"+
+                  '<option value="la">la</option>'+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('detExBody').innerHTML = html;
+}
+
+function buildIndetEx() {
+  var html = '';
+  INDET_EX.forEach(function(d, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td style="color:#888;font-weight:700;">'+(i+1)+'</td>'+
+              '<td class="it">'+d[0]+'</td>'+
+              '<td>'+
+                '<select class="ipp-fill" data-idx="'+i+'" data-answer="'+d[1]+'" style="font-style:italic;">'+
+                  '<option value="">—</option>'+
+                  '<option value="un">un</option>'+
+                  '<option value="uno">uno</option>'+
+                  '<option value="una">una</option>'+
+                  "<option value=\"un'\">un'</option>"+
+                '</select>'+
+              '</td>'+
+            '</tr>';
+  });
+  document.getElementById('indetExBody').innerHTML = html;
+}
+
+function buildConj() {
+  var html = '';
+  CONJ.forEach(function(c) {
+    html += '<tr>'+
+              '<td class="it" style="font-size:1.1rem;font-weight:700;">'+c[0]+'</td>'+
+              '<td>'+c[1]+'</td>'+
+              '<td class="it">'+c[2]+'</td>'+
+              '<td style="font-size:0.85rem;color:#555;">'+c[3]+'</td>'+
+              '<td><button class="play-btn" onclick="ippAudio(\''+_esc(c[2])+'\',0.82,\''+c[4]+'\')"><i class="ph ph-play"></i></button></td>'+
+            '</tr>';
+  });
+  document.getElementById('conjBody').innerHTML = html;
+}
+
+function buildEx1() {
+  var html = '';
+  EX1.forEach(function(e, i) {
+    html += '<tr data-idx="'+i+'">'+
+              '<td class="time">'+e.hora+'</td>'+
+              '<td>'+e.prefix.replace('___', '<input class="ipp-fill" type="text" data-idx="'+i+'" placeholder="…">')+'</td>'+
+            '</tr>';
+  });
+  document.getElementById('ex1Body').innerHTML = html;
+}
+
+function buildMC(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-mc" data-idx="'+i+'" data-ok="'+item.ok.replace(/"/g,'&quot;')+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-mc__q"><span class="ipp-mc__num">'+(i+1)+'</span>'+item.q+'</div>'+
+              '<div class="ipp-mc__opts">';
+    item.opts.forEach(function(opt) {
+      html += '<button class="ipp-mcbtn" onclick="pickMC(this)">'+opt+'</button>';
+    });
+    html += '</div><div class="ipp-fb"></div></div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildVF(data, containerId) {
+  var html = '';
+  data.forEach(function(item, i) {
+    html += '<div class="ipp-vf" data-idx="'+i+'" data-ans="'+item.ans+'" data-fb="'+(item.fb||'').replace(/"/g,'&quot;')+'">'+
+              '<div class="ipp-vf__stmt"><span class="ipp-vf__num">'+(i+1)+'</span>'+item.stmt+'</div>'+
+              '<div class="ipp-vf__btns">'+
+                '<button class="ipp-vfbtn" data-pick="true" onclick="pickVF(this)"><i class="ph ph-check"></i> Verdadero</button>'+
+                '<button class="ipp-vfbtn" data-pick="false" onclick="pickVF(this)"><i class="ph ph-x"></i> Falso</button>'+
+              '</div>'+
+              '<div class="ipp-fb"></div>'+
+            '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+function buildSort(data, containerId) {
+  var html = '';
+  data.forEach(function(s, i) {
+    var labelText = s.label ? (i+1)+'. '+s.label : (i+1)+'.';
+    html += '<div class="ipp-sort" data-idx="'+i+'" data-answer="'+s.answer.join('|')+'">'+
+              '<div class="ipp-sort__label">'+labelText+'</div>'+
+              '<div class="ipp-sort__pool">';
+    s.pool.forEach(function(w) {
+      html += '<button class="ipp-sortbtn" onclick="pickSort(this)">'+w+'</button>';
+    });
+    html += '</div>'+
+            '<div class="ipp-sort__zone"></div>'+
+            '<button class="ipp-btn" onclick="checkSort(this)" style="margin-top:0.4rem;font-size:0.78rem;padding:0.4rem 0.95rem;"><i class="ph ph-check-circle"></i> Verificar</button>'+
+            '<div class="ipp-fb" style="margin-top:0.5rem;"></div>'+
+          '</div>';
+  });
+  document.getElementById(containerId).innerHTML = html;
+}
+
+/* ═══ INTERACTION ═══ */
+/* Helper: agrega un botón "Reintentar" al container que ejecuta resetFn() */
+function _addRetry(container, resetFn) {
+  var old = container.querySelector(':scope > .ipp-retry-mini');
+  if (old) old.remove();
+  var b = document.createElement('button');
+  b.className = 'ipp-retry-mini';
+  b.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+  b.onclick = function() { b.remove(); resetFn(); };
+  container.appendChild(b);
+}
+
+function pickMC(btn) {
+  var item = btn.closest('.ipp-mc');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var correct = item.dataset.ok;
+  var pickFb = item.dataset.fb;
+  var picked = btn.textContent.trim();
+  var ok = picked === correct;
+  item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+    b.disabled = true;
+    if (b.textContent.trim() === correct && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-mcbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickVF(btn) {
+  var item = btn.closest('.ipp-vf');
+  if (item.dataset.done) return;
+  item.dataset.done = '1';
+  var idx = parseInt(item.dataset.idx, 10);
+  var ans = item.dataset.ans === 'true';
+  var picked = btn.dataset.pick === 'true';
+  var ok = picked === ans;
+  var pickFb = item.dataset.fb;
+  item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+    b.disabled = true;
+    if ((b.dataset.pick === 'true') === ans && !ok) b.classList.add('correct');
+  });
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  var fb = item.querySelector('.ipp-fb');
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Correcto!</strong> ' + pickFb;
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '';
+    fb.className = 'ipp-fb';
+  }
+  _addRetry(item, function() {
+    delete item.dataset.done;
+    item.querySelectorAll('.ipp-vfbtn').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct','wrong');
+    });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+function pickSort(btn) {
+  if (btn.classList.contains('used')) return;
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  btn.classList.add('used');
+  var placed = document.createElement('span');
+  placed.className = 'ipp-sort__placed';
+  placed.textContent = btn.textContent;
+  placed.dataset.word = btn.textContent;
+  placed.onclick = function() {
+    btn.classList.remove('used');
+    placed.remove();
+  };
+  zone.appendChild(placed);
+}
+
+function checkSort(btn) {
+  var sort = btn.closest('.ipp-sort');
+  var zone = sort.querySelector('.ipp-sort__zone');
+  var fb = sort.querySelector('.ipp-fb');
+  var answer = sort.dataset.answer.split('|');
+  var placed = Array.from(zone.querySelectorAll('.ipp-sort__placed')).map(function(p) { return p.dataset.word; });
+  var ok = placed.length === answer.length && placed.every(function(w, i) { return w === answer[i]; });
+  if (ok) {
+    fb.innerHTML = '<i class="ph ph-check-circle"></i> <strong>¡Perfecto!</strong> La frase es correcta.';
+    fb.className = 'ipp-fb ok';
+  } else {
+    fb.innerHTML = '<i class="ph ph-x-circle"></i> <strong>No exactamente.</strong> Orden correcto: <em>"' + answer.join(' ') + '"</em>.';
+    fb.className = 'ipp-fb err';
+  }
+  _addRetry(sort, function() {
+    zone.innerHTML = '';
+    sort.querySelectorAll('.ipp-sortbtn').forEach(function(b) { b.classList.remove('used'); });
+    fb.innerHTML = ''; fb.className = 'ipp-fb';
+  });
+}
+
+/* Inputs check */
+function checkInputs(rows, getAnswers) {
+  var anyEmpty = false;
+  rows.forEach(function(row, i) {
+    var inp = row.querySelector('input.ipp-fill, select.ipp-fill');
+    if (!inp) return;
+    var val = inp.value;
+    inp.classList.remove('ok','err');
+    if (!val || val.trim() === '') { anyEmpty = true; return; }
+    var answers = getAnswers(i);
+    var found = answers.some(function(a) {
+      return _norm(val) === _norm(a);
+    });
+    inp.classList.add(found ? 'ok' : 'err');
+  });
+}
+
+function checkScrivi() {
+  var rows = document.querySelectorAll('#scriviBody tr');
+  checkInputs(rows, function(i) { return SCRIVI[i][1]; });
+  var inlineEx = document.getElementById('scriviBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkEx1() {
+  var rows = document.querySelectorAll('#ex1Body tr');
+  checkInputs(rows, function(i) { return EX1[i].answers; });
+  var ex = document.getElementById('ex1Body').closest('.ipp-ex');
+  _addRetry(ex, function() {
+    rows.forEach(function(row) {
+      var inp = row.querySelector('input.ipp-fill');
+      if (inp) { inp.value = ''; inp.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkDetEx() {
+  var rows = document.querySelectorAll('#detExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === DET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('detExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+function checkIndetEx() {
+  var rows = document.querySelectorAll('#indetExBody tr');
+  rows.forEach(function(row, i) {
+    var sel = row.querySelector('select.ipp-fill');
+    sel.classList.remove('ok','err');
+    var val = sel.value;
+    if (!val) return;
+    sel.classList.add(val === INDET_EX[i][1] ? 'ok' : 'err');
+  });
+  var inlineEx = document.getElementById('indetExBody').closest('.ipp-ex');
+  _addRetry(inlineEx, function() {
+    rows.forEach(function(row) {
+      var sel = row.querySelector('select.ipp-fill');
+      if (sel) { sel.value = ''; sel.classList.remove('ok','err'); }
+    });
+  });
+}
+
+/* ═══ INIT ═══ */
+window.ippAudio = ippAudio;
+
+/*IPP_MP3_SHIM_v3*/
+(function(){
+  if (window.__ippMp3Init) return; window.__ippMp3Init = true;
+  window.IPP_AUDIO = {"53681472":"https://italianoperpiacere.com/web/content/1614","63630357":"https://italianoperpiacere.com/web/content/1690","75290130":"https://italianoperpiacere.com/web/content/1786","78395944":"https://italianoperpiacere.com/web/content/1772","86591899":"https://italianoperpiacere.com/web/content/1633","89080474":"https://italianoperpiacere.com/web/content/1720","95406883":"https://italianoperpiacere.com/web/content/1617","a86fca61":"https://italianoperpiacere.com/web/content/1567","4348cdd3":"https://italianoperpiacere.com/web/content/1566","09ad1c8b":"https://italianoperpiacere.com/web/content/1568","0fa6409c":"https://italianoperpiacere.com/web/content/1569","6cd1646d":"https://italianoperpiacere.com/web/content/1570","e8576a28":"https://italianoperpiacere.com/web/content/1571","3fdd34b1":"https://italianoperpiacere.com/web/content/1572","51e39f0d":"https://italianoperpiacere.com/web/content/1573","a318859d":"https://italianoperpiacere.com/web/content/1574","24a8ee7f":"https://italianoperpiacere.com/web/content/1575","dccf3877":"https://italianoperpiacere.com/web/content/1576","3158fd81":"https://italianoperpiacere.com/web/content/1577","fed85b3c":"https://italianoperpiacere.com/web/content/1578","4870815e":"https://italianoperpiacere.com/web/content/1579","528d9e8c":"https://italianoperpiacere.com/web/content/1580","fee9bdcb":"https://italianoperpiacere.com/web/content/1581","34ba50d0":"https://italianoperpiacere.com/web/content/1582","3c2846f2":"https://italianoperpiacere.com/web/content/1583","6e229311":"https://italianoperpiacere.com/web/content/1584","489a1b10":"https://italianoperpiacere.com/web/content/1585","58b4f894":"https://italianoperpiacere.com/web/content/1586","c4f8871e":"https://italianoperpiacere.com/web/content/1587","11677de4":"https://italianoperpiacere.com/web/content/1588","5d2c43bb":"https://italianoperpiacere.com/web/content/1589","af20d591":"https://italianoperpiacere.com/web/content/1590","90c7edb2":"https://italianoperpiacere.com/web/content/1591","46ae6b6e":"https://italianoperpiacere.com/web/content/1592","59e384ef":"https://italianoperpiacere.com/web/content/1593","60b06410":"https://italianoperpiacere.com/web/content/1594","99ac3e50":"https://italianoperpiacere.com/web/content/1595","73b014fe":"https://italianoperpiacere.com/web/content/1596","35e6a54b":"https://italianoperpiacere.com/web/content/1597","c1198fab":"https://italianoperpiacere.com/web/content/1600","5972c5ef":"https://italianoperpiacere.com/web/content/1598","d476c527":"https://italianoperpiacere.com/web/content/1599","faf5c8ab":"https://italianoperpiacere.com/web/content/1601","a892ed22":"https://italianoperpiacere.com/web/content/1604","cc1c6462":"https://italianoperpiacere.com/web/content/1603","f4332b56":"https://italianoperpiacere.com/web/content/1602","614d2f8f":"https://italianoperpiacere.com/web/content/1606","4a4f3ef4":"https://italianoperpiacere.com/web/content/1605","e830d761":"https://italianoperpiacere.com/web/content/1607","e2a5c5c8":"https://italianoperpiacere.com/web/content/1608","795180ae":"https://italianoperpiacere.com/web/content/1609","2b06b03b":"https://italianoperpiacere.com/web/content/1611","56c77741":"https://italianoperpiacere.com/web/content/1612","0977161f":"https://italianoperpiacere.com/web/content/1610","629bff3f":"https://italianoperpiacere.com/web/content/1615","7cffa02f":"https://italianoperpiacere.com/web/content/1613","7c5dc5f2":"https://italianoperpiacere.com/web/content/1616","f821f079":"https://italianoperpiacere.com/web/content/1618","c5e72407":"https://italianoperpiacere.com/web/content/1620","1b642b02":"https://italianoperpiacere.com/web/content/1619","5ee29bb2":"https://italianoperpiacere.com/web/content/1621","3493c841":"https://italianoperpiacere.com/web/content/1622","97cfff31":"https://italianoperpiacere.com/web/content/1623","bc864dea":"https://italianoperpiacere.com/web/content/1624","568ea28c":"https://italianoperpiacere.com/web/content/1625","1029a385":"https://italianoperpiacere.com/web/content/1626","92f0b447":"https://italianoperpiacere.com/web/content/1628","8d8f4928":"https://italianoperpiacere.com/web/content/1627","eeed7fe5":"https://italianoperpiacere.com/web/content/1629","126065e4":"https://italianoperpiacere.com/web/content/1630","c512a01b":"https://italianoperpiacere.com/web/content/1631","1a7a9ec0":"https://italianoperpiacere.com/web/content/1632","5ab60786":"https://italianoperpiacere.com/web/content/1634","bd12cefe":"https://italianoperpiacere.com/web/content/1635","077e09f1":"https://italianoperpiacere.com/web/content/1636","ae5a7e6e":"https://italianoperpiacere.com/web/content/1637","6e6f2496":"https://italianoperpiacere.com/web/content/1638","fbd3f596":"https://italianoperpiacere.com/web/content/1639","3070e3f2":"https://italianoperpiacere.com/web/content/1640","e4a34598":"https://italianoperpiacere.com/web/content/1641","38ffe613":"https://italianoperpiacere.com/web/content/1642","a7593639":"https://italianoperpiacere.com/web/content/1643","1e3d0c2c":"https://italianoperpiacere.com/web/content/1644","784c7cd9":"https://italianoperpiacere.com/web/content/1645","b2f39625":"https://italianoperpiacere.com/web/content/1647","725a332a":"https://italianoperpiacere.com/web/content/1648","22316e3f":"https://italianoperpiacere.com/web/content/1646","a0a9f745":"https://italianoperpiacere.com/web/content/1650","bd2558c8":"https://italianoperpiacere.com/web/content/1649","aed44cc3":"https://italianoperpiacere.com/web/content/1651","3c36ac3e":"https://italianoperpiacere.com/web/content/1652","ba353236":"https://italianoperpiacere.com/web/content/1653","f3c702ba":"https://italianoperpiacere.com/web/content/1655","5afb877b":"https://italianoperpiacere.com/web/content/1654","0477e27d":"https://italianoperpiacere.com/web/content/1656","fbbacb46":"https://italianoperpiacere.com/web/content/1657","428fa5a2":"https://italianoperpiacere.com/web/content/1658","0bc86086":"https://italianoperpiacere.com/web/content/1659","0e4e36b7":"https://italianoperpiacere.com/web/content/1660","2f9fd2d0":"https://italianoperpiacere.com/web/content/1661","1c488b2c":"https://italianoperpiacere.com/web/content/1662","acd6c47a":"https://italianoperpiacere.com/web/content/1663","9bd6f478":"https://italianoperpiacere.com/web/content/1664","26ae2b10":"https://italianoperpiacere.com/web/content/1665","6d0db316":"https://italianoperpiacere.com/web/content/1666","fa69145c":"https://italianoperpiacere.com/web/content/1667","6b11094a":"https://italianoperpiacere.com/web/content/1668","df283d04":"https://italianoperpiacere.com/web/content/1669","38d0f6c5":"https://italianoperpiacere.com/web/content/1670","ce898da8":"https://italianoperpiacere.com/web/content/1671","5b7c836e":"https://italianoperpiacere.com/web/content/1672","15a028c6":"https://italianoperpiacere.com/web/content/1673","f49e85b0":"https://italianoperpiacere.com/web/content/1674","a8c5543e":"https://italianoperpiacere.com/web/content/1675","91fa62d0":"https://italianoperpiacere.com/web/content/1676","3f1aa1c1":"https://italianoperpiacere.com/web/content/1677","53196dee":"https://italianoperpiacere.com/web/content/1680","f2c464b1":"https://italianoperpiacere.com/web/content/1678","a72e8f2a":"https://italianoperpiacere.com/web/content/1679","b74d5aa6":"https://italianoperpiacere.com/web/content/1681","07f4c121":"https://italianoperpiacere.com/web/content/1683","1177503c":"https://italianoperpiacere.com/web/content/1682","3cd8b1b8":"https://italianoperpiacere.com/web/content/1684","63e60973":"https://italianoperpiacere.com/web/content/1685","18775b41":"https://italianoperpiacere.com/web/content/1687","f6acd6dd":"https://italianoperpiacere.com/web/content/1686","eb064d08":"https://italianoperpiacere.com/web/content/1688","a4c11bb1":"https://italianoperpiacere.com/web/content/1689","3b608498":"https://italianoperpiacere.com/web/content/1691","1307d43b":"https://italianoperpiacere.com/web/content/1692","803a6067":"https://italianoperpiacere.com/web/content/1693","2137090c":"https://italianoperpiacere.com/web/content/1696","44dd6b9c":"https://italianoperpiacere.com/web/content/1698","e6d77c7f":"https://italianoperpiacere.com/web/content/1694","fa8082fb":"https://italianoperpiacere.com/web/content/1699","202f38eb":"https://italianoperpiacere.com/web/content/1695","9b8c0008":"https://italianoperpiacere.com/web/content/1697","266ad017":"https://italianoperpiacere.com/web/content/1700","c1700f93":"https://italianoperpiacere.com/web/content/1701","5c08a584":"https://italianoperpiacere.com/web/content/1702","30a46446":"https://italianoperpiacere.com/web/content/1704","929d2557":"https://italianoperpiacere.com/web/content/1703","ed421789":"https://italianoperpiacere.com/web/content/1705","b8ebc7ab":"https://italianoperpiacere.com/web/content/1706","985791bc":"https://italianoperpiacere.com/web/content/1707","c1cc84f5":"https://italianoperpiacere.com/web/content/1708","87445f96":"https://italianoperpiacere.com/web/content/1709","d7806d1e":"https://italianoperpiacere.com/web/content/1710","25e2f906":"https://italianoperpiacere.com/web/content/1711","32bcccb6":"https://italianoperpiacere.com/web/content/1712","1e28de8d":"https://italianoperpiacere.com/web/content/1713","9b127a4e":"https://italianoperpiacere.com/web/content/1714","abcfdb05":"https://italianoperpiacere.com/web/content/1715","cdcc7b0e":"https://italianoperpiacere.com/web/content/1716","bda7dc11":"https://italianoperpiacere.com/web/content/1717","c6fa6d01":"https://italianoperpiacere.com/web/content/1718","95c694f3":"https://italianoperpiacere.com/web/content/1719","d81af5c0":"https://italianoperpiacere.com/web/content/1721","14e7cc62":"https://italianoperpiacere.com/web/content/1722","becb0391":"https://italianoperpiacere.com/web/content/1723","2737b2a0":"https://italianoperpiacere.com/web/content/1725","1c45f1e1":"https://italianoperpiacere.com/web/content/1724","1866d385":"https://italianoperpiacere.com/web/content/1726","ad8141bb":"https://italianoperpiacere.com/web/content/1727","81db4635":"https://italianoperpiacere.com/web/content/1728","62bd07d2":"https://italianoperpiacere.com/web/content/1729","e444f489":"https://italianoperpiacere.com/web/content/1730","d88917de":"https://italianoperpiacere.com/web/content/1731","84a77709":"https://italianoperpiacere.com/web/content/1732","470cdfb2":"https://italianoperpiacere.com/web/content/1733","3b744d98":"https://italianoperpiacere.com/web/content/1734","5b07b7fa":"https://italianoperpiacere.com/web/content/1735","55dcf781":"https://italianoperpiacere.com/web/content/1736","d82ac51a":"https://italianoperpiacere.com/web/content/1737","92a032bd":"https://italianoperpiacere.com/web/content/1738","1b6a264e":"https://italianoperpiacere.com/web/content/1739","df03d88a":"https://italianoperpiacere.com/web/content/1740","015cc3c6":"https://italianoperpiacere.com/web/content/1741","1208feb1":"https://italianoperpiacere.com/web/content/1742","5af97a54":"https://italianoperpiacere.com/web/content/1743","a57ea68d":"https://italianoperpiacere.com/web/content/1744","936b5c50":"https://italianoperpiacere.com/web/content/1745","77e69b74":"https://italianoperpiacere.com/web/content/1746","3e339851":"https://italianoperpiacere.com/web/content/1747","fc87f496":"https://italianoperpiacere.com/web/content/1748","34bf9775":"https://italianoperpiacere.com/web/content/1749","3cdba654":"https://italianoperpiacere.com/web/content/1751","df657ad0":"https://italianoperpiacere.com/web/content/1750","7df5f047":"https://italianoperpiacere.com/web/content/1752","0476e78a":"https://italianoperpiacere.com/web/content/1753","004136d9":"https://italianoperpiacere.com/web/content/1754","b7f678a0":"https://italianoperpiacere.com/web/content/1755","2659fa52":"https://italianoperpiacere.com/web/content/1756","40c225ea":"https://italianoperpiacere.com/web/content/1757","4999a9eb":"https://italianoperpiacere.com/web/content/1758","3c5eef09":"https://italianoperpiacere.com/web/content/1759","4dcfca31":"https://italianoperpiacere.com/web/content/1760","eabedb56":"https://italianoperpiacere.com/web/content/1761","ed465c2a":"https://italianoperpiacere.com/web/content/1762","a7fdd363":"https://italianoperpiacere.com/web/content/1763","5ab7d1f3":"https://italianoperpiacere.com/web/content/1764","69d7dfd2":"https://italianoperpiacere.com/web/content/1765","1eb9a508":"https://italianoperpiacere.com/web/content/1766","163823ba":"https://italianoperpiacere.com/web/content/1767","c845d0b1":"https://italianoperpiacere.com/web/content/1768","a402df3c":"https://italianoperpiacere.com/web/content/1769","419ffd05":"https://italianoperpiacere.com/web/content/1770","c6055a7f":"https://italianoperpiacere.com/web/content/1771","ee1e5b47":"https://italianoperpiacere.com/web/content/1773","94ca6ea1":"https://italianoperpiacere.com/web/content/1774","fffb2458":"https://italianoperpiacere.com/web/content/1775","72e319f6":"https://italianoperpiacere.com/web/content/1776","49b0f73d":"https://italianoperpiacere.com/web/content/1777","0717becb":"https://italianoperpiacere.com/web/content/1778","2ca003f8":"https://italianoperpiacere.com/web/content/1779","4ccc43a9":"https://italianoperpiacere.com/web/content/1780","dc6134ac":"https://italianoperpiacere.com/web/content/1781","86b299ca":"https://italianoperpiacere.com/web/content/1782","f2968bb2":"https://italianoperpiacere.com/web/content/1783","a90d5ea0":"https://italianoperpiacere.com/web/content/1784","024c6a4c":"https://italianoperpiacere.com/web/content/1785","d28f8b68":"https://italianoperpiacere.com/web/content/1787","aa56941b":"https://italianoperpiacere.com/web/content/1788","9e0c57ca":"https://italianoperpiacere.com/web/content/1789","c4979b85":"https://italianoperpiacere.com/web/content/1790","e98727c0":"https://italianoperpiacere.com/web/content/1791","7544e120":"https://italianoperpiacere.com/web/content/1794","2baebb13":"https://italianoperpiacere.com/web/content/1793","dea9b641":"https://italianoperpiacere.com/web/content/1792","d4dd6a26":"https://italianoperpiacere.com/web/content/1795","2541071d":"https://italianoperpiacere.com/web/content/1796","65ffed0a":"https://italianoperpiacere.com/web/content/1797","5036c560":"https://italianoperpiacere.com/web/content/1798","97af351a":"https://italianoperpiacere.com/web/content/1799","a43e64ee":"https://italianoperpiacere.com/web/content/1800","fbe3524e":"https://italianoperpiacere.com/web/content/1802","6fadb46f":"https://italianoperpiacere.com/web/content/1801","e45fb480":"https://italianoperpiacere.com/web/content/1803","bc236443":"https://italianoperpiacere.com/web/content/1804","78f25908":"https://italianoperpiacere.com/web/content/1805","d6022f65":"https://italianoperpiacere.com/web/content/1806","46cb7b97":"https://italianoperpiacere.com/web/content/1807","218a14e8":"https://italianoperpiacere.com/web/content/1808","5237297e":"https://italianoperpiacere.com/web/content/1809","d7dc5436":"https://italianoperpiacere.com/web/content/1810","fdccfcda":"https://italianoperpiacere.com/web/content/1811","edf9d16f":"https://italianoperpiacere.com/web/content/1812","0c5e3374":"https://italianoperpiacere.com/web/content/1813","3becadf4":"https://italianoperpiacere.com/web/content/1814","2450a252":"https://italianoperpiacere.com/web/content/1815","c1255ec7":"https://italianoperpiacere.com/web/content/1816","2eb904d6":"https://italianoperpiacere.com/web/content/1817","56e2705a":"https://italianoperpiacere.com/web/content/1818","2372ed29":"https://italianoperpiacere.com/web/content/1819","4c2964db":"https://italianoperpiacere.com/web/content/1820","6e285cee":"https://italianoperpiacere.com/web/content/1821","6ef3886f":"https://italianoperpiacere.com/web/content/1822","ac228fb6":"https://italianoperpiacere.com/web/content/1823","427c5b75":"https://italianoperpiacere.com/web/content/1824","f5ad8540":"https://italianoperpiacere.com/web/content/1825","b3f612cb":"https://italianoperpiacere.com/web/content/1826","95d629d4":"https://italianoperpiacere.com/web/content/1827","34ada081":"https://italianoperpiacere.com/web/content/1828","ef64c20e":"https://italianoperpiacere.com/web/content/1829","6c5b93e8":"https://italianoperpiacere.com/web/content/1830","132bbb31":"https://italianoperpiacere.com/web/content/1831","0bc7d589":"https://italianoperpiacere.com/web/content/1834","1a68cb5f":"https://italianoperpiacere.com/web/content/1832","481b3add":"https://italianoperpiacere.com/web/content/1833","9e22e919":"https://italianoperpiacere.com/web/content/1835","722b6efc":"https://italianoperpiacere.com/web/content/1836","4a958b81":"https://italianoperpiacere.com/web/content/1837","0d389b12":"https://italianoperpiacere.com/web/content/1838","7620c2cb":"https://italianoperpiacere.com/web/content/1839","b1d04a64":"https://italianoperpiacere.com/web/content/1840","a66b9d0f":"https://italianoperpiacere.com/web/content/1841","73a479ea":"https://italianoperpiacere.com/web/content/1842","9c877ce4":"https://italianoperpiacere.com/web/content/1843","09c1c224":"https://italianoperpiacere.com/web/content/1844","a52b5c47":"https://italianoperpiacere.com/web/content/1845","dd2d77b5":"https://italianoperpiacere.com/web/content/1846","c4b29ee3":"https://italianoperpiacere.com/web/content/1847","789b9fbd":"https://italianoperpiacere.com/web/content/1848","e11668a1":"https://italianoperpiacere.com/web/content/1849","5fe8174d":"https://italianoperpiacere.com/web/content/1850","3dc99283":"https://italianoperpiacere.com/web/content/1851","eb273dbc":"https://italianoperpiacere.com/web/content/1852","4b962946":"https://italianoperpiacere.com/web/content/1853","e2b91004":"https://italianoperpiacere.com/web/content/1855","ab79f9a7":"https://italianoperpiacere.com/web/content/1854","d120411a":"https://italianoperpiacere.com/web/content/1856","6b3864ed":"https://italianoperpiacere.com/web/content/1858","f732e09c":"https://italianoperpiacere.com/web/content/1857","ceb37fb2":"https://italianoperpiacere.com/web/content/1859","4cf52061":"https://italianoperpiacere.com/web/content/1860","bf715484":"https://italianoperpiacere.com/web/content/1861","822997ff":"https://italianoperpiacere.com/web/content/1863","d793291c":"https://italianoperpiacere.com/web/content/1862","e888126b":"https://italianoperpiacere.com/web/content/1864","bb67026c":"https://italianoperpiacere.com/web/content/1865","625c4543":"https://italianoperpiacere.com/web/content/1866","4399143e":"https://italianoperpiacere.com/web/content/1867","064adddd":"https://italianoperpiacere.com/web/content/1868","6f399b0a":"https://italianoperpiacere.com/web/content/1869","3b103f50":"https://italianoperpiacere.com/web/content/1870","dcf90237":"https://italianoperpiacere.com/web/content/1872","624fc175":"https://italianoperpiacere.com/web/content/1871","c5772bb1":"https://italianoperpiacere.com/web/content/1873","8b016034":"https://italianoperpiacere.com/web/content/1874","a5cd91d3":"https://italianoperpiacere.com/web/content/1875","642733c8":"https://italianoperpiacere.com/web/content/1876","d6c171c4":"https://italianoperpiacere.com/web/content/1878","18f64889":"https://italianoperpiacere.com/web/content/1877","75f04bcf":"https://italianoperpiacere.com/web/content/1879","e479c3ff":"https://italianoperpiacere.com/web/content/1880","8a55ad83":"https://italianoperpiacere.com/web/content/1881","b60f665d":"https://italianoperpiacere.com/web/content/1882","797671d6":"https://italianoperpiacere.com/web/content/1883","18b82bcd":"https://italianoperpiacere.com/web/content/1884","c2955888":"https://italianoperpiacere.com/web/content/1885","fbf68dee":"https://italianoperpiacere.com/web/content/1886","b32520e6":"https://italianoperpiacere.com/web/content/1887","087d35c3":"https://italianoperpiacere.com/web/content/1888","7bf17097":"https://italianoperpiacere.com/web/content/1889","b213d47c":"https://italianoperpiacere.com/web/content/1890","e8dd5d37":"https://italianoperpiacere.com/web/content/1891","a72bc901":"https://italianoperpiacere.com/web/content/1892","d2b93022":"https://italianoperpiacere.com/web/content/1894","ede3f7b5":"https://italianoperpiacere.com/web/content/1893","2a2a23a8":"https://italianoperpiacere.com/web/content/1896","6c29e3c0":"https://italianoperpiacere.com/web/content/1895","d2b36e18":"https://italianoperpiacere.com/web/content/1897","15bae672":"https://italianoperpiacere.com/web/content/1898","6bb7d64d":"https://italianoperpiacere.com/web/content/1899","a56d39a3":"https://italianoperpiacere.com/web/content/1901","2c7a4533":"https://italianoperpiacere.com/web/content/1900","e6ffc982":"https://italianoperpiacere.com/web/content/1902","f272f922":"https://italianoperpiacere.com/web/content/1903","548f2d53":"https://italianoperpiacere.com/web/content/1904","c8ebaab4":"https://italianoperpiacere.com/web/content/1905","12d9d065":"https://italianoperpiacere.com/web/content/1906","cf4eaf13":"https://italianoperpiacere.com/web/content/1907","ea56d27f":"https://italianoperpiacere.com/web/content/1908","4e1f2e02":"https://italianoperpiacere.com/web/content/1909","65787fec":"https://italianoperpiacere.com/web/content/1910","bc91f3c4":"https://italianoperpiacere.com/web/content/1911","dee3ba92":"https://italianoperpiacere.com/web/content/1912","92d91b1a":"https://italianoperpiacere.com/web/content/1913","60f182fd":"https://italianoperpiacere.com/web/content/1914","a41ac701":"https://italianoperpiacere.com/web/content/1916","182c6593":"https://italianoperpiacere.com/web/content/1915","f7e956ba":"https://italianoperpiacere.com/web/content/1917","754a1b74":"https://italianoperpiacere.com/web/content/1918","be7fec9d":"https://italianoperpiacere.com/web/content/1919","73bb6d18":"https://italianoperpiacere.com/web/content/1920","ae66619b":"https://italianoperpiacere.com/web/content/1921","9c69d2d0":"https://italianoperpiacere.com/web/content/1922","638357ea":"https://italianoperpiacere.com/web/content/1923","5eeb0276":"https://italianoperpiacere.com/web/content/1924","8cc95370":"https://italianoperpiacere.com/web/content/1925","45e1515f":"https://italianoperpiacere.com/web/content/1926","b01877a6":"https://italianoperpiacere.com/web/content/1930","59f23b8b":"https://italianoperpiacere.com/web/content/1931","7364a2e2":"https://italianoperpiacere.com/web/content/1932","5f17fa53":"https://italianoperpiacere.com/web/content/1933","695619c0":"https://italianoperpiacere.com/web/content/1934","83abce7e":"https://italianoperpiacere.com/web/content/1935","dcf3b41e":"https://italianoperpiacere.com/web/content/1936","8fc0d7c7":"https://italianoperpiacere.com/web/content/1937","46341c52":"https://italianoperpiacere.com/web/content/1938","68df9af4":"https://italianoperpiacere.com/web/content/1939","1964e450":"https://italianoperpiacere.com/web/content/1940","59ce30b8":"https://italianoperpiacere.com/web/content/1941","c1135499":"https://italianoperpiacere.com/web/content/1942","66fb5bda":"https://italianoperpiacere.com/web/content/1943","ae9b8b1e":"https://italianoperpiacere.com/web/content/1944","33e003f0":"https://italianoperpiacere.com/web/content/1945","ed3f913e":"https://italianoperpiacere.com/web/content/1946","fd99b59f":"https://italianoperpiacere.com/web/content/1947","b6f6f8cd":"https://italianoperpiacere.com/web/content/1948","639dca80":"https://italianoperpiacere.com/web/content/1949","08fea238":"https://italianoperpiacere.com/web/content/1950"};
+  function _norm(s){ return String(s).replace(/\s+/g,' ').trim(); }
+  function _hash(s){ var h=0x811c9dc5; for(var i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=(h+((h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24)))>>>0; } return ('0000000'+h.toString(16)).slice(-8); }
+  window.__ippKey = function(t,g){ return _hash((g==='m'?'m':'f')+'|'+_norm(t)); };
+  // ── Reproductor único + desbloqueo en el primer gesto (clave para móvil/iOS) ──
+  var SILENT = 'data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
+  var player = new Audio(); player.preload = 'auto';
+  var unlocked = false, playing = false, curEnd = null, curFail = null;
+  function unlock(){
+    if (unlocked) return; unlocked = true;
+    try { player.src = SILENT; var pp = player.play();
+      if (pp && pp.then) pp.then(function(){ try{ player.pause(); player.currentTime=0; }catch(e){} }).catch(function(){ unlocked = false; });
+    } catch(e){ unlocked = false; }
+  }
+  ['pointerdown','touchstart','mousedown','keydown','click'].forEach(function(ev){
+    document.addEventListener(ev, unlock, { capture:true, passive:true });
+  });
+  player.addEventListener('ended', function(){ playing=false; var f=curEnd; curEnd=null; curFail=null; if(f) f(); });
+  player.addEventListener('error', function(){ if(!playing) return; playing=false; var f=curFail||curEnd; curEnd=null; curFail=null; if(f) f(); });
+  window.__ippStopUrl = function(){ try{ player.pause(); }catch(e){} playing=false; curEnd=null; curFail=null; };
+  window.__ippPlayUrl = function(url, onstart, onend, onfail){
+    try{ player.pause(); }catch(e){}
+    curEnd = onend || null; curFail = onfail || null; playing = true;
+    try{ player.src = url; player.currentTime = 0; }catch(e){}
+    if (onstart) { try{ onstart(); }catch(e){} }
+    var pp = player.play();
+    if (pp && pp.catch) pp.catch(function(){ playing=false; var f=curFail; curEnd=null; curFail=null; if(f) f(); });
+  };
+
+  var ss = window.speechSynthesis; if(!ss) return;
+  var _speak = ss.speak.bind(ss), _cancel = ss.cancel.bind(ss);
+  try{ Object.defineProperty(ss,'speaking',{configurable:true,get:function(){ return playing; }}); }catch(e){}
+  ss.cancel = function(){ window.__ippStopUrl(); try{ _cancel(); }catch(e){} };
+  ss.speak = function(u){
+    try{
+      var text = (u && u.text!=null) ? String(u.text) : '';
+      var g = (window.__ippG==='m') ? 'm' : 'f';
+      // busca con el género actual; si no hay (p.ej. "reproducir todo" que no setea género), prueba el otro
+      var url = window.IPP_AUDIO[window.__ippKey(text,g)] || window.IPP_AUDIO[window.__ippKey(text, g==='m'?'f':'m')];
+      if(url){
+        window.__ippPlayUrl(url,
+          function(){ if(u&&typeof u.onstart==='function'){ try{u.onstart();}catch(e){} } },
+          function(){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(e){} } },
+          function(){ try{ _speak(u); }catch(e){ if(u&&typeof u.onend==='function'){ try{u.onend();}catch(_){} } } });
+        return;
+      }
+    }catch(e){}
+    try{ _speak(u); }catch(e){}
+  };
+})();
+
+
+window.ippStop = ippStop;
+window.pickMC = pickMC;
+window.pickVF = pickVF;
+window.pickSort = pickSort;
+window.checkSort = checkSort;
+window.checkScrivi = checkScrivi;
+window.checkEx1 = checkEx1;
+window.checkDetEx = checkDetEx;
+window.checkIndetEx = checkIndetEx;
+
+buildOra();
+buildConfr();
+buildScrivi();
+buildSaluti();
+buildPrep();
+buildDet();
+buildDetEx();
+buildIndet();
+buildIndetEx();
+buildConj();
+buildEx1();
+buildMC(EX2, 'ex2');
+buildMC(EX3, 'ex3');
+buildMC(EX4, 'ex4');
+buildMC(EX5, 'ex5');
+buildSort(EX6, 'ex6');
+buildMC(EX7, 'ex7');
+buildVF(EX8, 'ex8');
+buildMC(EX9, 'ex9');
+buildMC(EX10, 'ex10');
+
+} // end guard
+</script>
+<!-- ===== /BLOQUE Unità 4 — Gramática ===== -->
+
+<script>
+/* IPP_WATCHDOG_CONTENIDO */
+(function(){
+  if (window.__ippVigilante) return; window.__ippVigilante = true;
+  /* ids que se vacían a propósito (feedback, resultados, contadores): no se vigilan */
+  var IGNORAR = /fb$|feedback|^res$|result|score|msg|stop|fab|output/i;
+  var copia = {}, restauradas = 0, TOPE = 60;
+
+  function raiz(){ return document.querySelector('.s_embed_code_embedded') || document.body; }
+
+  function guardar(){
+    var els = raiz().querySelectorAll('[id]');
+    for (var i = 0; i < els.length; i++){
+      var el = els[i];
+      if (!el.id || IGNORAR.test(el.id)) continue;
+      if (el.children.length && !copia[el.id]) copia[el.id] = el.innerHTML;
+    }
+  }
+
+  function vacios(){
+    var out = [];
+    for (var id in copia){
+      var el = document.getElementById(id);
+      if (el && el.children.length === 0) out.push(id);
+    }
+    return out;
+  }
+
+  function restaurar(){
+    if (restauradas >= TOPE) return;
+    var v = vacios();
+    /* uno solo vacío = acción del alumno (Reintentar). Dos o más = Odoo borró el bloque. */
+    if (v.length < 2) return;
+    for (var i = 0; i < v.length; i++){
+      var el = document.getElementById(v[i]);
+      if (el){ el.innerHTML = copia[v[i]]; restauradas++; }
+    }
+  }
+
+  function ciclo(){ guardar(); restaurar(); }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ciclo);
+  else ciclo();
+  window.addEventListener('load', ciclo);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) ciclo(); });
+  if (window.MutationObserver){
+    try { new MutationObserver(ciclo).observe(raiz(), {childList:true, subtree:true}); } catch(e){}
+  }
+  var n = 0, reloj = setInterval(function(){ ciclo(); if (++n > 30) clearInterval(reloj); }, 400);
+})();
+</script>
+</div>
+    </section>

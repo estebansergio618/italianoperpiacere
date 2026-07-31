@@ -1,0 +1,269 @@
+{
+ "label": "2026-07-29-refresh-arreglado-U1-U4",
+ "units": {
+  "1": {
+   "estado": "Parte 1 - congelada",
+   "slides": {
+    "exploracion": {
+     "slide_id": 141,
+     "name": "Exploración",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "19cf239937fb562c",
+     "chars": 28142,
+     "file": "u1_exploracion_141.html"
+    },
+    "descubrimiento": {
+     "slide_id": 142,
+     "name": "Descubrimiento",
+     "write_date": "2026-07-30 23:53:24",
+     "sha256": "585fe5aa2e97fb7e",
+     "chars": 228253,
+     "file": "u1_descubrimiento_142.html"
+    },
+    "gramatica": {
+     "slide_id": 143,
+     "name": " Gramática",
+     "write_date": "2026-07-30 23:53:24",
+     "sha256": "25ad8c215a9255de",
+     "chars": 189757,
+     "file": "u1_gramatica_143.html"
+    },
+    "juegos": {
+     "slide_id": 179,
+     "name": "Juegos",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "4fc17b1ca87c1ea5",
+     "chars": 69953,
+     "file": "u1_juegos_179.html"
+    }
+   }
+  },
+  "2": {
+   "estado": "Parte 1 - congelada",
+   "slides": {
+    "exploracion": {
+     "slide_id": 145,
+     "name": "Exploración",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "25ceaaf0807a47a1",
+     "chars": 50410,
+     "file": "u2_exploracion_145.html"
+    },
+    "descubrimiento": {
+     "slide_id": 146,
+     "name": " Descubrimiento",
+     "write_date": "2026-07-31 00:01:28",
+     "sha256": "83d8b2adea24c50d",
+     "chars": 198417,
+     "file": "u2_descubrimiento_146.html"
+    },
+    "gramatica": {
+     "slide_id": 148,
+     "name": " Gramática",
+     "write_date": "2026-07-31 00:01:28",
+     "sha256": "cb9e2389ee139497",
+     "chars": 204619,
+     "file": "u2_gramatica_148.html"
+    },
+    "juegos": {
+     "slide_id": 180,
+     "name": "Juegos",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "b4cacebda4aab263",
+     "chars": 70043,
+     "file": "u2_juegos_180.html"
+    }
+   }
+  },
+  "3": {
+   "estado": "Parte 1 - congelada",
+   "slides": {
+    "exploracion": {
+     "slide_id": 150,
+     "name": " Exploración",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "09acfdc58ade8405",
+     "chars": 40195,
+     "file": "u3_exploracion_150.html"
+    },
+    "descubrimiento": {
+     "slide_id": 151,
+     "name": " Descubrimiento",
+     "write_date": "2026-07-31 00:01:28",
+     "sha256": "1009df118269da23",
+     "chars": 174179,
+     "file": "u3_descubrimiento_151.html"
+    },
+    "gramatica": {
+     "slide_id": 152,
+     "name": "Gramática",
+     "write_date": "2026-07-31 00:01:29",
+     "sha256": "bdd29788fd28ec58",
+     "chars": 178257,
+     "file": "u3_gramatica_152.html"
+    },
+    "juegos": {
+     "slide_id": 181,
+     "name": "Juegos",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "cc26b63c77f3ff27",
+     "chars": 69977,
+     "file": "u3_juegos_181.html"
+    }
+   }
+  },
+  "4": {
+   "estado": "Parte 1 - congelada",
+   "slides": {
+    "exploracion": {
+     "slide_id": 155,
+     "name": " Exploración",
+     "write_date": "2026-07-28 19:41:03",
+     "sha256": "08c3745c8ecb384d",
+     "chars": 44673,
+     "file": "u4_exploracion_155.html"
+    },
+    "descubrimiento": {
+     "slide_id": 156,
+     "name": " Descubrimiento",
+     "write_date": "2026-07-31 00:01:29",
+     "sha256": "b9c80bbc7320ffd8",
+     "chars": 160145,
+     "file": "u4_descubrimiento_156.html"
+    },
+    "gramatica": {
+     "slide_id": 157,
+     "name": " Gramática",
+     "write_date": "2026-07-31 00:01:29",
+     "sha256": "9194efc5c303f478",
+     "chars": 179631,
+     "file": "u4_gramatica_157.html"
+    },
+    "juegos": {
+     "slide_id": 182,
+     "name": "Juegos",
+     "write_date": "2026-07-28 19:44:33",
+     "sha256": "5e4bbb453281b1cb",
+     "chars": 70077,
+     "file": "u4_juegos_182.html"
+    }
+   }
+  },
+  "5": {
+   "estado": "Parte 2 - sin validar",
+   "slides": {
+    "exploracion": {
+     "slide_id": 184,
+     "name": "Exploración",
+     "write_date": "2026-07-30 20:59:06",
+     "sha256": "6f6e7b4371f0f3a6",
+     "chars": 106465,
+     "file": "u5_exploracion_184.html"
+    },
+    "descubrimiento": {
+     "slide_id": 185,
+     "name": "Descubrimiento",
+     "write_date": "2026-07-30 20:59:07",
+     "sha256": "17eaf61abc47ce71",
+     "chars": 179751,
+     "file": "u5_descubrimiento_185.html"
+    },
+    "gramatica": {
+     "slide_id": 186,
+     "name": "Gramática",
+     "write_date": "2026-07-30 20:59:07",
+     "sha256": "7ee1eb57577b0959",
+     "chars": 145431,
+     "file": "u5_gramatica_186.html"
+    }
+   }
+  },
+  "6": {
+   "estado": "Parte 2 - sin validar",
+   "slides": {
+    "exploracion": {
+     "slide_id": 188,
+     "name": "Exploración",
+     "write_date": "2026-07-30 20:59:07",
+     "sha256": "94ee573a9b7f5cde",
+     "chars": 105809,
+     "file": "u6_exploracion_188.html"
+    },
+    "descubrimiento": {
+     "slide_id": 189,
+     "name": "Descubrimiento",
+     "write_date": "2026-07-30 20:59:07",
+     "sha256": "2cba89077b3e3a2f",
+     "chars": 166753,
+     "file": "u6_descubrimiento_189.html"
+    },
+    "gramatica": {
+     "slide_id": 190,
+     "name": "Gramática",
+     "write_date": "2026-07-30 20:59:07",
+     "sha256": "d242dfbc66d8b9d3",
+     "chars": 144515,
+     "file": "u6_gramatica_190.html"
+    }
+   }
+  },
+  "7": {
+   "estado": "Parte 2 - sin validar",
+   "slides": {
+    "exploracion": {
+     "slide_id": 192,
+     "name": "Exploración",
+     "write_date": "2026-07-30 20:59:09",
+     "sha256": "3f52fbc1e61210f5",
+     "chars": 104703,
+     "file": "u7_exploracion_192.html"
+    },
+    "descubrimiento": {
+     "slide_id": 193,
+     "name": "Descubrimiento",
+     "write_date": "2026-07-30 20:59:09",
+     "sha256": "e85e15b68e20c7d9",
+     "chars": 165089,
+     "file": "u7_descubrimiento_193.html"
+    },
+    "gramatica": {
+     "slide_id": 194,
+     "name": "Gramática",
+     "write_date": "2026-07-30 20:59:09",
+     "sha256": "031497563ff226fb",
+     "chars": 135269,
+     "file": "u7_gramatica_194.html"
+    }
+   }
+  },
+  "8": {
+   "estado": "Parte 2 - sin validar",
+   "slides": {
+    "exploracion": {
+     "slide_id": 196,
+     "name": "Exploración",
+     "write_date": "2026-07-30 20:59:11",
+     "sha256": "01d03322cb5e858e",
+     "chars": 104895,
+     "file": "u8_exploracion_196.html"
+    },
+    "descubrimiento": {
+     "slide_id": 197,
+     "name": "Descubrimiento",
+     "write_date": "2026-07-30 20:59:11",
+     "sha256": "f3d96a24ba98434d",
+     "chars": 161717,
+     "file": "u8_descubrimiento_197.html"
+    },
+    "gramatica": {
+     "slide_id": 198,
+     "name": "Gramática",
+     "write_date": "2026-07-30 20:59:12",
+     "sha256": "232376534940ac3b",
+     "chars": 132267,
+     "file": "u8_gramatica_198.html"
+    }
+   }
+  }
+ }
+}

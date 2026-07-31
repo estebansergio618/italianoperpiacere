@@ -1,0 +1,1277 @@
+<section class="s_embed_code pb64 o_colored_level pt0 text-start" data-snippet="s_embed_code" data-name="Insertar código">
+        <template class="s_embed_code_saved"><!-- ===== BLOQUE: Unità 2 — Exploración ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
+<style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 2.5rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.5;
+  }
+
+  /* ===== Card (Antes de ver) ===== */
+  .ipp-card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 1.2rem;
+  }
+  .ipp-card__head {
+    font-size: clamp(0.92rem, 2.3vw, 0.96rem);
+    font-weight: 600; color: var(--mc-text);
+    margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-card__head .ph { font-size: 1.2rem; color: var(--mc-dk); flex-shrink: 0; }
+  .ipp-card__lead {
+    font-size: clamp(0.88rem, 2.2vw, 0.9rem);
+    color: #555; line-height: 1.55;
+    margin: 0 0 1rem;
+  }
+  .ipp-card__foot {
+    font-size: 0.82rem; color: #888;
+    margin: 0.85rem 0 0; line-height: 1.5;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-card__foot .ph { color: var(--mc); font-size: 1rem; }
+
+  /* ===== Cities grid ===== */
+  .ipp-cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.5rem;
+  }
+  .ipp-city {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.18s;
+    user-select: none;
+  }
+  .ipp-city:hover { border-color: var(--mc); }
+  .ipp-city input {
+    accent-color: var(--mc);
+    width: 16px; height: 16px;
+    cursor: pointer; flex-shrink: 0;
+  }
+  .ipp-city input:checked + span { color: var(--mc-dk); }
+  .ipp-city span {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--mc-text);
+    transition: color 0.18s;
+  }
+  .ipp-city:has(input:checked) {
+    background: var(--mc-bg);
+    border-color: var(--mc);
+  }
+
+  /* ===== Task box (mientras mirás) ===== */
+  .ipp-task {
+    background: var(--mc-bg); border-left: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(0.9rem, 2.3vw, 0.93rem);
+    line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-task strong { color: var(--mc-text); }
+  .ipp-task__lead {
+    margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-task__lead .ph { color: var(--mc-dk); font-size: 1.2rem; }
+  .ipp-task__list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 0.55rem;
+  }
+  .ipp-task__list li { line-height: 1.55; }
+  .ipp-task em { color: var(--red); font-style: italic; }
+
+  /* ===== Video ===== */
+  .ipp-video {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    border-radius: var(--r); overflow: hidden;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+    margin-bottom: 0.75rem; background: #111;
+  }
+  .ipp-video iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+  .ipp-video-note {
+    font-size: 0.78rem; color: #888;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem;
+  }
+  .ipp-video-note a {
+    color: var(--mc-dk); text-decoration: none; font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-video-note a:hover { text-decoration: underline; }
+
+  /* ===== Info box ===== */
+  .ipp-info {
+    background: #f0f6f9; border-left: 4px solid var(--teal);
+    border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    line-height: 1.6; color: #2d5f72;
+    margin: 0.75rem 0 1rem;
+    display: flex; align-items: flex-start; gap: 0.7rem;
+  }
+  .ipp-info .ph {
+    color: var(--teal); font-size: 1.3rem; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ===== Quiz block ===== */
+  .ipp-quiz {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.35rem) clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 0.85rem;
+  }
+  .ipp-quiz__q {
+    margin-bottom: 0.85rem;
+    line-height: 1.55;
+  }
+  .ipp-quiz__num {
+    display: inline-block;
+    color: var(--mc-dk); font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .ipp-quiz__it {
+    font-weight: 600; color: var(--black);
+    font-size: clamp(0.93rem, 2.3vw, 0.96rem);
+  }
+  .ipp-quiz__it em { color: var(--red); font-style: italic; }
+  .ipp-quiz__es {
+    display: block;
+    font-size: 0.83rem; color: #777;
+    font-style: italic; line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+  .ipp-quiz__opts {
+    display: flex; gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+  .ipp-quiz__opts--mc {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .ipp-quiz__fb {
+    font-size: 0.85rem; font-weight: 500;
+    margin-top: 0.7rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    display: none;
+    line-height: 1.55;
+  }
+  .ipp-quiz__fb.ok  { display: block; background: var(--ok-bg);  color: var(--ok-tx); }
+  .ipp-quiz__fb.err { display: block; background: var(--err-bg); color: var(--err-tx); }
+  .ipp-quiz__fb .ph { vertical-align: -2px; margin-right: 2px; }
+
+  /* ===== Opt buttons ===== */
+  .ipp-opt {
+    border: 2px solid var(--cream-dk);
+    background: var(--cream);
+    color: var(--black);
+    border-radius: 8px;
+    padding: 0.55rem 1rem;
+    font-family: inherit;
+    font-size: 0.88rem; font-weight: 600;
+    cursor: pointer; text-align: left;
+    transition: all 0.18s;
+  }
+  .ipp-opt:hover:not(:disabled) {
+    border-color: var(--mc); background: var(--mc-bg);
+  }
+  .ipp-opt:disabled { cursor: default; }
+  .ipp-opt.correct  { background: var(--ok-bg);  border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-opt.wrong    { background: var(--err-bg); border-color: var(--red);   color: var(--err-tx); }
+
+  .ipp-quiz__opts--vf .ipp-opt {
+    flex: 0 1 auto;
+    padding: 0.5rem 1.3rem;
+    border-radius: 24px;
+    text-align: center;
+    min-width: 110px;
+  }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.6rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-cities { grid-template-columns: 1fr 1fr; }
+    .ipp-quiz__opts--vf { flex-direction: column; }
+    .ipp-quiz__opts--vf .ipp-opt { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .ipp-card { padding: 1rem 0.9rem; }
+    .ipp-quiz { padding: 1rem 0.9rem; }
+    .ipp-task { padding: 0.95rem 1rem; }
+    .ipp-video-note { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-buildings ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 2 · A1 · Exploración</div>
+    <h1 class="ipp-hero__title">Di dove sei?</h1>
+    <p class="ipp-hero__subtitle">Antes de empezar, una inmersión real: italianos hablando sobre sus ciudades.</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- INTRO SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p>En este video varios italianos responden una simple pregunta: <em>"¿Cuáles son las ciudades más famosas de Italia?"</em></p>
+        <p>Vas a escuchar nombres de ciudades, monumentos y mucho entusiasmo. No te preocupes si no entendés todo — <strong>observá, escuchá la música del idioma y fijate qué palabras reconocés</strong>.</p>
+      </div>
+    </div>
+
+    <!-- ① IL VIDEO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">Il video: le città italiane</h2>
+      <p class="ipp-sub">Pre-actividad · video · qué observar</p>
+
+      <!-- Pre-activity: ciudades que conocés -->
+      <div class="ipp-card">
+        <p class="ipp-card__head">
+          <i class="ph ph-list-checks"></i>
+          Antes de ver — ¿qué ciudades italianas ya conocés?
+        </p>
+        <p class="ipp-card__lead">Tildá las que ya conocías. Después del video vas a poder tildar más.</p>
+        <div class="ipp-cities">
+          <label class="ipp-city"><input type="checkbox"> <span>Roma</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Venezia</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Milano</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Napoli</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Firenze</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Torino</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Siena</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Palermo</span></label>
+        </div>
+        <p class="ipp-card__foot">
+          <i class="ph ph-map-pin"></i>
+          ¿Cuántas conocés? Aunque sea por nombre, marca el comienzo de tu mapa italiano.
+        </p>
+      </div>
+
+      <!-- Video -->
+      <div class="ipp-video">
+        <iframe src="https://www.youtube.com/embed/s7MBSo0E71o" title="Le città italiane" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="ipp-video-note">
+        <span>Video: todos los derechos pertenecen a sus autores.</span>
+        <a href="https://youtu.be/s7MBSo0E71o" target="_blank" rel="noopener">
+          <i class="ph ph-arrow-square-out"></i> Ver directamente en YouTube
+        </a>
+      </div>
+
+      <div class="ipp-info">
+        <i class="ph ph-lightbulb"></i>
+        <span>Si el video no carga (puede pasar en redes escolares o al abrir el archivo localmente), usá el link de arriba para verlo en YouTube y después volvé acá para continuar.</span>
+      </div>
+
+      <!-- Mientras mirás -->
+      <div class="ipp-task">
+        <p class="ipp-task__lead">
+          <i class="ph ph-eye"></i>
+          <strong>Mientras mirás, prestá atención a:</strong>
+        </p>
+        <ul class="ipp-task__list">
+          <li>① Las ciudades que mencionan — intentá anotarlas.</li>
+          <li>② La expresión <em>"è famosa per…"</em> — es famosa por…</li>
+          <li>③ El ritmo y la música del italiano hablado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ② VERO O FALSO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Vero o Falso</h2>
+      <p class="ipp-sub">¿Qué entendiste? Preguntas basadas en lo que se dice en el video.</p>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! Lo dicen textualmente: «le due città principali sono Venezia e Roma»." data-fb-err="Incorrecto: ¡sí lo dicen en el video! Se menciona expresamente «Venezia e Roma» como las dos ciudades principales.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">1.</span>
+          <span class="ipp-quiz__it">Nel video dicono che le due città principali sono Venezia e Roma.</span>
+          <span class="ipp-quiz__es">(Las dos ciudades principales de Italia son Venezia y Roma.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="F" data-fb-ok="¡Correcto! En Venezia no hay autos. Dicen exactamente «non si trovano automobili»." data-fb-err="Incorrecto: en Venezia no hay autos. Dicen «non si trovano automobili» — no se encuentran autos.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">2.</span>
+          <span class="ipp-quiz__it">Dicono che a Venezia si trovano molte automobili.</span>
+          <span class="ipp-quiz__es">(Dicen que en Venezia se pueden encontrar muchos autos y tráfico.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! «La Scala, il Duomo e la moda» — así describen Milano." data-fb-err="Incorrecto: ¡sí lo mencionan! Describen Milano con «La Scala, il Duomo e la moda».">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">3.</span>
+          <span class="ipp-quiz__it">Milano viene citata come città della moda e del Duomo.</span>
+          <span class="ipp-quiz__es">(Milano es mencionada como la ciudad de la moda y del Duomo.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! «Siena per il Palio» — lo mencionan explícitamente." data-fb-err="Incorrecto: ¡sí lo mencionan! «Siena per il Palio» está explícitamente en el video.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">4.</span>
+          <span class="ipp-quiz__it">Siena è famosa per il Palio, una storica corsa di cavalli.</span>
+          <span class="ipp-quiz__es">(Siena es famosa por el Palio — una histórica carrera de caballos.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+    </section>
+
+    <!-- ③ SCELTA MULTIPLA -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">Scelta multipla</h2>
+      <p class="ipp-sub">Elegí la opción correcta según lo que se dice en el video.</p>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">5.</span>
+          <span class="ipp-quiz__it">Según el video, ¿por qué es famosa Roma?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">A) Por las góndolas y los canales</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! Roma: el Colosseo, Piazza Navona y la capital del antiguo imperio.">B) Por el Colosseo, Piazza Navona y ser la capital</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">C) Por el Palio y la Piazza del Campo</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">D) Por el Duomo y la moda</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">6.</span>
+          <span class="ipp-quiz__it">¿Qué ciudad mencionan como famosa por el tartufo y la Fiera di Alba?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">A) Siena</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">B) Napoli</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! «La zona delle Langhe per via della fiera del tartufo di Alba».">C) La zona delle Langhe (Alba)</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">D) Venezia</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">7.</span>
+          <span class="ipp-quiz__it">¿Qué artistas asocian con Firenze en el video?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">A) Verdi y Puccini</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! «Giotto, Michelangelo e Davì» — los mencionan al hablar de Firenze.">B) Giotto y Michelangelo</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">C) Dante y Leopardi</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">D) Leonardo y Raffaello</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  function ippRetry(container, resetFn) {
+    var old = container.querySelector('.ipp-retry');
+    if (old) old.remove();
+    var btn = document.createElement('button');
+    btn.className = 'ipp-retry';
+    btn.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    btn.onclick = function() { btn.remove(); resetFn(); };
+    container.appendChild(btn);
+  }
+
+  function _lockQuiz(q) {
+    q.dataset.done = '1';
+    q.querySelectorAll('.ipp-opt').forEach(function(b) { b.disabled = true; });
+  }
+  function _resetQuiz(q) {
+    delete q.dataset.done;
+    q.querySelectorAll('.ipp-opt').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct', 'wrong');
+    });
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (fb) { fb.textContent = ''; fb.className = 'ipp-quiz__fb'; }
+  }
+
+  function ippVF(btn) {
+    var q = btn.closest('.ipp-quiz');
+    if (q.dataset.done) return;
+    _lockQuiz(q);
+    var correct = q.dataset.correct;
+    var clicked = btn.dataset.vf;
+    var ok = clicked === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      q.querySelectorAll('.ipp-opt').forEach(function(b) {
+        if (b.dataset.vf === correct) b.classList.add('correct');
+      });
+    }
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + q.dataset.fbOk;
+      fb.className = 'ipp-quiz__fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-quiz__fb';
+    }
+    ippRetry(q, function() { _resetQuiz(q); });
+  }
+
+  function ippMC(btn) {
+    var q = btn.closest('.ipp-quiz');
+    if (q.dataset.done) return;
+    _lockQuiz(q);
+    var ok = btn.dataset.ok === '1';
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      q.querySelectorAll('.ipp-opt[data-ok="1"]').forEach(function(b) { b.classList.add('correct'); });
+    }
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + (btn.dataset.fb || '');
+      fb.className = 'ipp-quiz__fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-quiz__fb';
+    }
+    ippRetry(q, function() { _resetQuiz(q); });
+  }
+
+  window.ippVF = ippVF;
+  window.ippMC = ippMC;
+})();
+</script>
+<!-- ===== /BLOQUE Unità 2 — Exploración ===== --></template>
+        <div class="s_embed_code_embedded o_not_editable container-fluid"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><style>
+  .ipp-unit {
+    --cream:    #e9e6d5;
+    --cream-dk: #ddd9c8;
+    --teal:     #78a6ba;
+    --mc:       #528e74;
+    --mc-dk:    #3d6b58;
+    --mc-text:  #2d4d3c;
+    --mc-bg:    #e4f0e9;
+    --white:    #ffffff;
+    --black:    #1a1a18;
+    --red:      #cc4736;
+    --ok-bg:    #e8f5ec;
+    --ok-bd:    #52a670;
+    --ok-tx:    #1f5c35;
+    --err-bg:   #fdecea;
+    --err-tx:   #7a1f14;
+    --r: 10px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--black);
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ipp-unit *, .ipp-unit *::before, .ipp-unit *::after { box-sizing: border-box; }
+  .ipp-unit .ph { line-height: 1; }
+
+  /* ===== HERO ===== */
+  .ipp-hero {
+    background: linear-gradient(135deg, var(--mc) 0%, var(--mc-dk) 100%);
+    padding: clamp(1.75rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r);
+  }
+  .ipp-hero__bg {
+    position: absolute;
+    font-size: clamp(8rem, 22vw, 18rem);
+    opacity: 0.07;
+    bottom: clamp(-3rem, -5vw, -1.5rem);
+    right: clamp(-2rem, -4vw, -1rem);
+    pointer-events: none;
+    line-height: 1;
+    color: var(--white);
+  }
+  .ipp-hero__badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem clamp(0.85rem, 2.5vw, 1.2rem);
+    border-radius: 20px;
+    margin-bottom: clamp(0.75rem, 2.5vw, 1rem);
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+  .ipp-hero__subtitle {
+    font-size: clamp(0.85rem, 2.3vw, 0.95rem);
+    opacity: 0.85;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+  }
+
+  /* ===== BODY ===== */
+  .ipp-body {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 2vw, 1rem) 1rem;
+  }
+
+  /* ===== Sofia ===== */
+  .ipp-sofia {
+    display: flex; align-items: flex-start;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  .ipp-sofia__col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  }
+  .ipp-sofia__avatar {
+    width: clamp(46px, 11vw, 58px);
+    height: clamp(46px, 11vw, 58px);
+    border-radius: 50%;
+    background: var(--mc); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+    box-shadow: 0 4px 16px rgba(82,142,116,0.35);
+  }
+  .ipp-sofia__name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--mc-dk); margin-top: 0.3rem;
+  }
+  .ipp-sofia__bubble {
+    background: var(--white);
+    border-radius: 0 var(--r) var(--r) var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    font-size: clamp(0.95rem, 2.4vw, 0.96rem);
+    line-height: 1.75;
+    min-width: 0;
+  }
+  .ipp-sofia__bubble strong { color: var(--mc-dk); }
+  .ipp-sofia__bubble em { color: var(--red); font-style: italic; }
+  .ipp-sofia__bubble p { margin: 0 0 0.85rem; }
+  .ipp-sofia__bubble p:last-child { margin-bottom: 0; }
+
+  /* ===== Sección ===== */
+  .ipp-section { margin-bottom: clamp(2rem, 5vw, 2.5rem); }
+  .ipp-label {
+    display: inline-block; background: var(--mc); color: var(--white);
+    font-size: clamp(0.62rem, 1.7vw, 0.68rem);
+    font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.25rem clamp(0.75rem, 2vw, 0.9rem);
+    border-radius: 20px; margin-bottom: 0.6rem;
+  }
+  .ipp-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.35rem, 4.5vw, 1.6rem);
+    font-style: italic; font-weight: 700;
+    color: var(--mc-dk); margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+  .ipp-sub {
+    font-size: clamp(0.82rem, 2vw, 0.86rem);
+    color: #777; margin: 0 0 1.2rem; line-height: 1.5;
+  }
+
+  /* ===== Card (Antes de ver) ===== */
+  .ipp-card {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 1.75rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 1.2rem;
+  }
+  .ipp-card__head {
+    font-size: clamp(0.92rem, 2.3vw, 0.96rem);
+    font-weight: 600; color: var(--mc-text);
+    margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-card__head .ph { font-size: 1.2rem; color: var(--mc-dk); flex-shrink: 0; }
+  .ipp-card__lead {
+    font-size: clamp(0.88rem, 2.2vw, 0.9rem);
+    color: #555; line-height: 1.55;
+    margin: 0 0 1rem;
+  }
+  .ipp-card__foot {
+    font-size: 0.82rem; color: #888;
+    margin: 0.85rem 0 0; line-height: 1.5;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .ipp-card__foot .ph { color: var(--mc); font-size: 1rem; }
+
+  /* ===== Cities grid ===== */
+  .ipp-cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.5rem;
+  }
+  .ipp-city {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--cream); border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.18s;
+    user-select: none;
+  }
+  .ipp-city:hover { border-color: var(--mc); }
+  .ipp-city input {
+    accent-color: var(--mc);
+    width: 16px; height: 16px;
+    cursor: pointer; flex-shrink: 0;
+  }
+  .ipp-city input:checked + span { color: var(--mc-dk); }
+  .ipp-city span {
+    font-size: 0.88rem; font-weight: 600;
+    color: var(--mc-text);
+    transition: color 0.18s;
+  }
+  .ipp-city:has(input:checked) {
+    background: var(--mc-bg);
+    border-color: var(--mc);
+  }
+
+  /* ===== Task box (mientras mirás) ===== */
+  .ipp-task {
+    background: var(--mc-bg); border-left: 4px solid var(--mc);
+    border-radius: var(--r);
+    padding: clamp(1rem, 2.8vw, 1.15rem) clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(0.9rem, 2.3vw, 0.93rem);
+    line-height: 1.7;
+    margin: 1rem 0;
+  }
+  .ipp-task strong { color: var(--mc-text); }
+  .ipp-task__lead {
+    margin: 0 0 0.7rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ipp-task__lead .ph { color: var(--mc-dk); font-size: 1.2rem; }
+  .ipp-task__list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 0.55rem;
+  }
+  .ipp-task__list li { line-height: 1.55; }
+  .ipp-task em { color: var(--red); font-style: italic; }
+
+  /* ===== Video ===== */
+  .ipp-video {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    border-radius: var(--r); overflow: hidden;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.15);
+    margin-bottom: 0.75rem; background: #111;
+  }
+  .ipp-video iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+  .ipp-video-note {
+    font-size: 0.78rem; color: #888;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem;
+  }
+  .ipp-video-note a {
+    color: var(--mc-dk); text-decoration: none; font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .ipp-video-note a:hover { text-decoration: underline; }
+
+  /* ===== Info box ===== */
+  .ipp-info {
+    background: #f0f6f9; border-left: 4px solid var(--teal);
+    border-radius: var(--r);
+    padding: clamp(0.85rem, 2.5vw, 1rem) clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.84rem, 2.1vw, 0.88rem);
+    line-height: 1.6; color: #2d5f72;
+    margin: 0.75rem 0 1rem;
+    display: flex; align-items: flex-start; gap: 0.7rem;
+  }
+  .ipp-info .ph {
+    color: var(--teal); font-size: 1.3rem; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ===== Quiz block ===== */
+  .ipp-quiz {
+    background: var(--white); border-radius: var(--r);
+    padding: clamp(1.1rem, 3vw, 1.35rem) clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    margin-bottom: 0.85rem;
+  }
+  .ipp-quiz__q {
+    margin-bottom: 0.85rem;
+    line-height: 1.55;
+  }
+  .ipp-quiz__num {
+    display: inline-block;
+    color: var(--mc-dk); font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .ipp-quiz__it {
+    font-weight: 600; color: var(--black);
+    font-size: clamp(0.93rem, 2.3vw, 0.96rem);
+  }
+  .ipp-quiz__it em { color: var(--red); font-style: italic; }
+  .ipp-quiz__es {
+    display: block;
+    font-size: 0.83rem; color: #777;
+    font-style: italic; line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+  .ipp-quiz__opts {
+    display: flex; gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+  .ipp-quiz__opts--mc {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .ipp-quiz__fb {
+    font-size: 0.85rem; font-weight: 500;
+    margin-top: 0.7rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    display: none;
+    line-height: 1.55;
+  }
+  .ipp-quiz__fb.ok  { display: block; background: var(--ok-bg);  color: var(--ok-tx); }
+  .ipp-quiz__fb.err { display: block; background: var(--err-bg); color: var(--err-tx); }
+  .ipp-quiz__fb .ph { vertical-align: -2px; margin-right: 2px; }
+
+  /* ===== Opt buttons ===== */
+  .ipp-opt {
+    border: 2px solid var(--cream-dk);
+    background: var(--cream);
+    color: var(--black);
+    border-radius: 8px;
+    padding: 0.55rem 1rem;
+    font-family: inherit;
+    font-size: 0.88rem; font-weight: 600;
+    cursor: pointer; text-align: left;
+    transition: all 0.18s;
+  }
+  .ipp-opt:hover:not(:disabled) {
+    border-color: var(--mc); background: var(--mc-bg);
+  }
+  .ipp-opt:disabled { cursor: default; }
+  .ipp-opt.correct  { background: var(--ok-bg);  border-color: var(--ok-bd); color: var(--ok-tx); }
+  .ipp-opt.wrong    { background: var(--err-bg); border-color: var(--red);   color: var(--err-tx); }
+
+  .ipp-quiz__opts--vf .ipp-opt {
+    flex: 0 1 auto;
+    padding: 0.5rem 1.3rem;
+    border-radius: 24px;
+    text-align: center;
+    min-width: 110px;
+  }
+
+  /* ===== Retry ===== */
+  .ipp-retry {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: none; border: 1.5px solid #c89500;
+    color: #b08200; border-radius: 20px;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.76rem; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    margin-top: 0.6rem;
+    transition: all 0.2s;
+  }
+  .ipp-retry:hover { background: #fdf3d0; color: var(--black); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 540px) {
+    .ipp-sofia { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+    .ipp-sofia__col { flex-direction: row; align-items: center; gap: 0.55rem; align-self: flex-start; }
+    .ipp-sofia__avatar { width: 38px; height: 38px; font-size: 1.15rem; }
+    .ipp-sofia__name { margin-top: 0; font-size: 0.65rem; }
+    .ipp-sofia__bubble { border-radius: var(--r); padding: 1rem 1.15rem; }
+    .ipp-cities { grid-template-columns: 1fr 1fr; }
+    .ipp-quiz__opts--vf { flex-direction: column; }
+    .ipp-quiz__opts--vf .ipp-opt { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .ipp-card { padding: 1rem 0.9rem; }
+    .ipp-quiz { padding: 1rem 0.9rem; }
+    .ipp-task { padding: 0.95rem 1rem; }
+    .ipp-video-note { flex-direction: column; align-items: flex-start; }
+  }
+</style><div class="ipp-unit">
+
+  <!-- ===== HERO ===== -->
+  <header class="ipp-hero">
+    <i class="ph ph-buildings ipp-hero__bg" aria-hidden="true"></i>
+    <div class="ipp-hero__badge">Unità 2 · A1 · Exploración</div>
+    <h1 class="ipp-hero__title">Di dove sei?</h1>
+    <p class="ipp-hero__subtitle">Antes de empezar, una inmersión real: italianos hablando sobre sus ciudades.</p>
+  </header>
+
+  <!-- ===== BODY ===== -->
+  <div class="ipp-body">
+
+    <!-- INTRO SOFIA -->
+    <div class="ipp-sofia">
+      <div class="ipp-sofia__col">
+        <div class="ipp-sofia__avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+        <div class="ipp-sofia__name">Sofia</div>
+      </div>
+      <div class="ipp-sofia__bubble">
+        <p>En este video varios italianos responden una simple pregunta: <em>"¿Cuáles son las ciudades más famosas de Italia?"</em></p>
+        <p>Vas a escuchar nombres de ciudades, monumentos y mucho entusiasmo. No te preocupes si no entendés todo — <strong>observá, escuchá la música del idioma y fijate qué palabras reconocés</strong>.</p>
+      </div>
+    </div>
+
+    <!-- ① IL VIDEO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ①</div>
+      <h2 class="ipp-title">Il video: le città italiane</h2>
+      <p class="ipp-sub">Pre-actividad · video · qué observar</p>
+
+      <!-- Pre-activity: ciudades que conocés -->
+      <div class="ipp-card">
+        <p class="ipp-card__head">
+          <i class="ph ph-list-checks"></i>
+          Antes de ver — ¿qué ciudades italianas ya conocés?
+        </p>
+        <p class="ipp-card__lead">Tildá las que ya conocías. Después del video vas a poder tildar más.</p>
+        <div class="ipp-cities">
+          <label class="ipp-city"><input type="checkbox"> <span>Roma</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Venezia</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Milano</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Napoli</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Firenze</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Torino</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Siena</span></label>
+          <label class="ipp-city"><input type="checkbox"> <span>Palermo</span></label>
+        </div>
+        <p class="ipp-card__foot">
+          <i class="ph ph-map-pin"></i>
+          ¿Cuántas conocés? Aunque sea por nombre, marca el comienzo de tu mapa italiano.
+        </p>
+      </div>
+
+      <!-- Video -->
+      <div class="ipp-video">
+        <iframe src="https://www.youtube.com/embed/s7MBSo0E71o" title="Le città italiane" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="ipp-video-note">
+        <span>Video: todos los derechos pertenecen a sus autores.</span>
+        <a href="https://youtu.be/s7MBSo0E71o" target="_blank" rel="noopener">
+          <i class="ph ph-arrow-square-out"></i> Ver directamente en YouTube
+        </a>
+      </div>
+
+      <div class="ipp-info">
+        <i class="ph ph-lightbulb"></i>
+        <span>Si el video no carga (puede pasar en redes escolares o al abrir el archivo localmente), usá el link de arriba para verlo en YouTube y después volvé acá para continuar.</span>
+      </div>
+
+      <!-- Mientras mirás -->
+      <div class="ipp-task">
+        <p class="ipp-task__lead">
+          <i class="ph ph-eye"></i>
+          <strong>Mientras mirás, prestá atención a:</strong>
+        </p>
+        <ul class="ipp-task__list">
+          <li>① Las ciudades que mencionan — intentá anotarlas.</li>
+          <li>② La expresión <em>"è famosa per…"</em> — es famosa por…</li>
+          <li>③ El ritmo y la música del italiano hablado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ② VERO O FALSO -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ②</div>
+      <h2 class="ipp-title">Vero o Falso</h2>
+      <p class="ipp-sub">¿Qué entendiste? Preguntas basadas en lo que se dice en el video.</p>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! Lo dicen textualmente: «le due città principali sono Venezia e Roma»." data-fb-err="Incorrecto: ¡sí lo dicen en el video! Se menciona expresamente «Venezia e Roma» como las dos ciudades principales.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">1.</span>
+          <span class="ipp-quiz__it">Nel video dicono che le due città principali sono Venezia e Roma.</span>
+          <span class="ipp-quiz__es">(Las dos ciudades principales de Italia son Venezia y Roma.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="F" data-fb-ok="¡Correcto! En Venezia no hay autos. Dicen exactamente «non si trovano automobili»." data-fb-err="Incorrecto: en Venezia no hay autos. Dicen «non si trovano automobili» — no se encuentran autos.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">2.</span>
+          <span class="ipp-quiz__it">Dicono che a Venezia si trovano molte automobili.</span>
+          <span class="ipp-quiz__es">(Dicen que en Venezia se pueden encontrar muchos autos y tráfico.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! «La Scala, il Duomo e la moda» — así describen Milano." data-fb-err="Incorrecto: ¡sí lo mencionan! Describen Milano con «La Scala, il Duomo e la moda».">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">3.</span>
+          <span class="ipp-quiz__it">Milano viene citata come città della moda e del Duomo.</span>
+          <span class="ipp-quiz__es">(Milano es mencionada como la ciudad de la moda y del Duomo.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz" data-correct="V" data-fb-ok="¡Correcto! «Siena per il Palio» — lo mencionan explícitamente." data-fb-err="Incorrecto: ¡sí lo mencionan! «Siena per il Palio» está explícitamente en el video.">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">4.</span>
+          <span class="ipp-quiz__it">Siena è famosa per il Palio, una storica corsa di cavalli.</span>
+          <span class="ipp-quiz__es">(Siena es famosa por el Palio — una histórica carrera de caballos.)</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--vf">
+          <button class="ipp-opt" data-vf="V" onclick="ippVF(this)">V — Verdadero</button>
+          <button class="ipp-opt" data-vf="F" onclick="ippVF(this)">F — Falso</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+    </section>
+
+    <!-- ③ SCELTA MULTIPLA -->
+    <section class="ipp-section">
+      <div class="ipp-label">Bloque ③</div>
+      <h2 class="ipp-title">Scelta multipla</h2>
+      <p class="ipp-sub">Elegí la opción correcta según lo que se dice en el video.</p>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">5.</span>
+          <span class="ipp-quiz__it">Según el video, ¿por qué es famosa Roma?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">A) Por las góndolas y los canales</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! Roma: el Colosseo, Piazza Navona y la capital del antiguo imperio.">B) Por el Colosseo, Piazza Navona y ser la capital</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">C) Por el Palio y la Piazza del Campo</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es el Colosseo, Piazza Navona y la capital de Italia.">D) Por el Duomo y la moda</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">6.</span>
+          <span class="ipp-quiz__it">¿Qué ciudad mencionan como famosa por el tartufo y la Fiera di Alba?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">A) Siena</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">B) Napoli</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! «La zona delle Langhe per via della fiera del tartufo di Alba».">C) La zona delle Langhe (Alba)</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta es Langhe / Alba — la zona piamontesa famosa por el tartufo.">D) Venezia</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+
+      <div class="ipp-quiz">
+        <div class="ipp-quiz__q">
+          <span class="ipp-quiz__num">7.</span>
+          <span class="ipp-quiz__it">¿Qué artistas asocian con Firenze en el video?</span>
+        </div>
+        <div class="ipp-quiz__opts ipp-quiz__opts--mc">
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">A) Verdi y Puccini</button>
+          <button class="ipp-opt" data-ok="1" onclick="ippMC(this)" data-fb="¡Correcto! «Giotto, Michelangelo e Davì» — los mencionan al hablar de Firenze.">B) Giotto y Michelangelo</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">C) Dante y Leopardi</button>
+          <button class="ipp-opt" onclick="ippMC(this)" data-fb="La respuesta correcta es Giotto y Michelangelo.">D) Leonardo y Raffaello</button>
+        </div>
+        <div class="ipp-quiz__fb"></div>
+      </div>
+    </section>
+
+  </div>
+</div><script>
+(function() {
+  function ippRetry(container, resetFn) {
+    var old = container.querySelector('.ipp-retry');
+    if (old) old.remove();
+    var btn = document.createElement('button');
+    btn.className = 'ipp-retry';
+    btn.innerHTML = '<i class="ph ph-arrow-counter-clockwise"></i> Reintentar';
+    btn.onclick = function() { btn.remove(); resetFn(); };
+    container.appendChild(btn);
+  }
+
+  function _lockQuiz(q) {
+    q.dataset.done = '1';
+    q.querySelectorAll('.ipp-opt').forEach(function(b) { b.disabled = true; });
+  }
+  function _resetQuiz(q) {
+    delete q.dataset.done;
+    q.querySelectorAll('.ipp-opt').forEach(function(b) {
+      b.disabled = false;
+      b.classList.remove('correct', 'wrong');
+    });
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (fb) { fb.textContent = ''; fb.className = 'ipp-quiz__fb'; }
+  }
+
+  function ippVF(btn) {
+    var q = btn.closest('.ipp-quiz');
+    if (q.dataset.done) return;
+    _lockQuiz(q);
+    var correct = q.dataset.correct;
+    var clicked = btn.dataset.vf;
+    var ok = clicked === correct;
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      q.querySelectorAll('.ipp-opt').forEach(function(b) {
+        if (b.dataset.vf === correct) b.classList.add('correct');
+      });
+    }
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + q.dataset.fbOk;
+      fb.className = 'ipp-quiz__fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-quiz__fb';
+    }
+    ippRetry(q, function() { _resetQuiz(q); });
+  }
+
+  function ippMC(btn) {
+    var q = btn.closest('.ipp-quiz');
+    if (q.dataset.done) return;
+    _lockQuiz(q);
+    var ok = btn.dataset.ok === '1';
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if (!ok) {
+      q.querySelectorAll('.ipp-opt[data-ok="1"]').forEach(function(b) { b.classList.add('correct'); });
+    }
+    var fb = q.querySelector('.ipp-quiz__fb');
+    if (ok) {
+      fb.innerHTML = '<i class="ph ph-check-circle"></i> ' + (btn.dataset.fb || '');
+      fb.className = 'ipp-quiz__fb ok';
+    } else {
+      fb.innerHTML = '';
+      fb.className = 'ipp-quiz__fb';
+    }
+    ippRetry(q, function() { _resetQuiz(q); });
+  }
+
+  window.ippVF = ippVF;
+  window.ippMC = ippMC;
+})();
+</script></div>
+    </section>
